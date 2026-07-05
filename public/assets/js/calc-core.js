@@ -307,7 +307,7 @@ function showToast(msg) {
 
 function shareUrl() {
   if (navigator.share) {
-    navigator.share({ title: document.title, url: window.location.href });
+    navigator.share({ title: document.title, url: window.location.href }).catch(function(){});
   } else {
     copyUrl();
   }
@@ -315,15 +315,19 @@ function shareUrl() {
 
 function copyUrl() {
   var url = window.location.href;
-  if (navigator.clipboard) {
-    navigator.clipboard.writeText(url).then(function () { showToast(t('common.copied')); });
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(url).then(function () { showToast(t('common.copied')); }).catch(function(){ copyUrlFallback(url); });
   } else {
-    var ta = document.createElement('textarea');
-    ta.value = url; ta.style.position = 'fixed'; ta.style.left = '-9999px';
-    document.body.appendChild(ta); ta.select();
-    try { document.execCommand('copy'); showToast(t('common.copied')); } catch (e) {}
-    document.body.removeChild(ta);
+    copyUrlFallback(url);
   }
+}
+
+function copyUrlFallback(url) {
+  var ta = document.createElement('textarea');
+  ta.value = url; ta.style.position = 'fixed'; ta.style.left = '-9999px';
+  document.body.appendChild(ta); ta.select();
+  try { document.execCommand('copy'); showToast(t('common.copied')); } catch (e) {}
+  document.body.removeChild(ta);
 }
 
 function initTooltips() {
