@@ -4,14 +4,15 @@
 
 | Resource | Choice | Cost | Why |
 |----------|--------|------|-----|
-| Primary domain | `desicalc.in` | ₹800/yr (~$10) | .in builds India trust, ₹.in domain signals local tool |
+| Primary domain | `desicalc.pages.dev` | $0 | Cloudflare Pages default subdomain. Custom domain deferred until real traffic arrives |
 | SSL | Auto via Cloudflare | $0 | Universal SSL |
 | CDN | Cloudflare global edge (330+ nodes) | $0 | Included with Pages |
 | DNS | Cloudflare DNS | $0 | Fastest DNS propagation |
 
-### Registration
-- Registrar: **Cloudflare Registrar** (at cost, no markup) or **Namecheap** (if CF not available for .in)
-- If CF Registrar doesn't support `.in` — use Namecheap, point NS to Cloudflare
+### Future: Custom Domain
+- Buy `desicalc.in` (₹800/yr, ~$10) when daily visitors exceed 500
+- Registrar: Cloudflare Registrar or Namecheap
+- Point NS to Cloudflare, add as custom domain in Pages
 
 ---
 
@@ -21,31 +22,8 @@
 
 ```toml
 name = "desicalc"
-compatibility_date = "2026-07-01"
-
-[build]
-command = "echo 'static site - no build required'"
-output_dir = "public"
-
-[env.production]
-routes = [
-  { pattern = "desicalc.in", zone_id = "ZONE_ID_HERE" }
-]
-
-[[redirects]]
-from = "/tools/income-tax"
-to = "/tools/income-tax.html"
-status = 200
-
-[[redirects]]
-from = "/tools/stamp-duty"
-to = "/tools/stamp-duty.html"
-status = 200
-
-[[redirects]]
-from = "/tools/rto-tax"
-to = "/tools/rto-tax.html"
-status = 200
+type = "pages"
+pages_build_output_dir = "./public"
 ```
 
 ### Step-by-Step Setup
@@ -58,39 +36,19 @@ status = 200
    - Build output: `public`
    - Root directory: (leave blank)
 5. Deploy
-6. Add custom domain: `desicalc.in`
-7. Enable HTTPS enforcement
+6. Project assigned `desicalc.pages.dev` automatically
+7. Enable HTTPS enforcement (on by default)
 
 ### `public/_headers` (Security & SEO)
 
 ```
 /*
-  X-Frame-Options: DENY
-  X-Content-Type-Options: nosniff
-  Referrer-Policy: strict-origin-when-cross-origin
-
-# Calculators
-https://desicalc.in/tools/*
-  Link: </assets/css/style.css>; rel=preload; as=style
-  Link: </assets/js/calc-core.js>; rel=preload; as=script
-
-# Static assets - long cache
-/assets/*
-  Cache-Control: public, max-age=31536000, immutable
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://data527.click https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; img-src 'self' https: data:; connect-src 'self' https://data527.click; frame-src 'self' https://data527.click
 ```
 
 ### `public/_redirects`
 
-```
-/tools/income-tax      /tools/income-tax.html      200
-/tools/stamp-duty      /tools/stamp-duty.html       200
-/tools/rto-tax         /tools/rto-tax.html          200
-/comparisons/*         /comparisons/:splat.html     200
-
-# Programmatic state pages
-/programmatic/stamp-duty/:state   /tools/stamp-duty.html?state=:state  200
-/programmatic/rto-tax/:state      /tools/rto-tax.html?state=:state       200
-```
+(Empty — Cloudflare Pages auto-serves `foo.html` at `/foo` for static sites. Redirects may be added later for SEO.)
 
 ---
 
@@ -104,7 +62,7 @@ main ─────┬─────── feature/income-tax ───── 
           ├──── feature/rto-tax ──────────── merge ──→ deploy
 ```
 
-- `main`: Always deployable. Pushes auto-deploy to `desicalc.in`
+- `main`: Always deployable. Pushes auto-deploy to `desicalc.pages.dev`
 - Feature branches: Preview deploys via Cloudflare Pages (unique URL per branch)
 - No PR gates needed for solo founder (can skip)
 - Commit messages: `feat: add income tax calculator logic`, `fix: 87A rebate threshold`
@@ -138,7 +96,7 @@ If traffic exceeds Cloudflare Pages free tier limits (unlikely — 500 builds & 
 | Traffic analytics | Cloudflare Web Analytics | Free, privacy-first, no JS required |
 | Uptime | Cloudflare Pages status | Automatic |
 | Errors | Browser console (ad-hoc) | No error tracking needed for static site |
-| Ad revenue | PropellerAds dashboard | Real-time stats |
+| Ad revenue | Adsterra dashboard | Real-time stats |
 | Search performance | Google Search Console | Free, essential for SEO |
 | Core Web Vitals | CrUX via GSC | Free, monthly report |
 

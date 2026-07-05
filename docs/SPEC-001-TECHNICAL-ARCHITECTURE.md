@@ -3,27 +3,20 @@
 ## Stack Overview
 
 ```
-desicalc.in
+desicalc.pages.dev
 ├── cloudflare-pages          # Hosting, edge CDN, unlimited bandwidth
 ├── vanilla-js                # Zero framework — no build step, no deps
 │   └── progressive-enhancement  # Works JS-off (static forms), enhanced JS-on
 ├── tailwind-css (CDN)        # Utility-first, fast prototyping
-├── cloudflare-workers        # Edge functions for ad header injection, redirects
-├── propellerads              # Primary ad network (no min traffic, instant)
+├── adsterra                  # Primary ad network (no min traffic, instant)
 └── cloudflare-analytics      # Free, privacy-first, no GA dependency
 ```
 
 ### Why Vanilla JS + Tailwind CDN
 - **Zero build step** — edit HTML, push git, Cloudflare auto-deploys
 - **No npm/webpack/vite** — reduces perceived complexity, no dependency audit
-- **PWA via workbox** (injected at build via Cloudflare Pages plugin) — offline cache for calculators
-- **Tailwind via CDN** — `https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4` — no purge needed for prototype
-
-### Why Cloudflare Workers (optional but recommended)
-- Inject PropellerAds header scripts without touching HTML body
-- Handle redirects: `desicalc.in/tools/income-tax` → `desicalc.in/tools/income-tax.html`
-- Edge caching for static assets
-- Zero cost (100K requests/day free tier)
+- **PWA via custom service worker** — offline cache for calculators
+- **Tailwind via CDN** — `https://cdn.tailwindcss.com` — no purge needed for prototype
 
 ---
 
@@ -59,13 +52,13 @@ desicalc/
 │   │       ├── state-rates.js   # 28-state stamp duty + RTO rate table
 │   │       └── lang-en.js       # English UI strings
 │   │       └── lang-hi.js       # Hinglish UI strings
-│   ├── service-worker.js         # PWA offline cache
+│   ├── sw.js                     # PWA offline cache (service worker)
 │   ├── manifest.json             # Web app manifest
 │   ├── sitemap.xml               # Full site XML sitemap
-│   └── robots.txt
-├── workers/
-│   └── _routes.js               # CF Workers routing (optional)
-├── wrangler.toml                 # Cloudflare Workers config
+│   ├── robots.txt
+│   ├── _headers                  # Security headers (CSP)
+│   └── _redirects
+├── wrangler.toml                 # Cloudflare Pages config
 ├── package.json                  # Metadata only (no deps)
 ├── .gitignore
 └── README.md
@@ -117,7 +110,7 @@ Each tool is a self-contained HTML file. State is managed via:
 | `localStorage` key `desicalc_incometax_last` | Restore last inputs on return | Forever |
 | `sessionStorage` key `desicalc_incometax_ad_closed` | Ad dismiss state | Tab session |
 
-URL pattern: `desicalc.in/tools/income-tax?regime=new&income=1200000&age=30`
+URL pattern: `desicalc.pages.dev/tools/income-tax?regime=new&income=1200000&age=30`
 → On page load, parse params. If absent, check localStorage. If absent, use defaults.
 
 ---
@@ -150,8 +143,8 @@ Lookup key in lang-{en,hi}.js → replace innerText
 
 | Feature | Implementation |
 |---------|---------------|
-| Service Worker | Cloudflare Pages auto-generates via `_headers` + `_redirects` + SW inject |
-| Cache Strategy | Stale-while-revalidate for assets, Network-first for HTML |
+| Service Worker | Custom `sw.js` registered at runtime |
+| Cache Strategy | Cache-first for assets, network-first for HTML |
 | Offline | Full calculator logic works offline after first visit |
 | Installable | `manifest.json` with `display: standalone`, `icons/192` |
 

@@ -54,7 +54,7 @@
 ### Page Types (all 100+ URLs by launch +90 days)
 
 ```
-desicalc.in/
+desicalc.pages.dev/
 ├── /                                    # Home: grid of tools, search, featured
 ├── /tools/income-tax                    # Single tool page
 ├── /tools/stamp-duty                    # Single tool page
@@ -105,7 +105,7 @@ Each `programmatic/stamp-duty/{state}.html` follows template:
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
       "name": "Stamp Duty Calculator Maharashtra",
-      "url": "https://desicalc.in/tools/stamp-duty?state=maharashtra",
+      "url": "https://desicalc.pages.dev/tools/stamp-duty?state=maharashtra",
       "applicationCategory": "FinanceApplication",
       "operatingSystem": "All"
     }
@@ -141,7 +141,7 @@ Each state page has 500+ words unique content (rate tables, how-to, FAQ). Genera
   "@context": "https://schema.org",
   "@type": ["WebApplication", "SoftwareApplication"],
   "name": "Income Tax Calculator India 2026",
-  "url": "https://desicalc.in/tools/income-tax",
+  "url": "https://desicalc.pages.dev/tools/income-tax",
   "applicationCategory": "FinanceApplication",
   "operatingSystem": "All",
   "browserRequirements": "JavaScript",
@@ -197,9 +197,9 @@ Each state page has 500+ words unique content (rate tables, how-to, FAQ). Genera
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://desicalc.in" },
-    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://desicalc.in/tools" },
-    { "@type": "ListItem", "position": 3, "name": "Income Tax Calculator", "item": "https://desicalc.in/tools/income-tax" }
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://desicalc.pages.dev" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://desicalc.pages.dev/tools" },
+    { "@type": "ListItem", "position": 3, "name": "Income Tax Calculator", "item": "https://desicalc.pages.dev/tools/income-tax" }
   ]
 }
 ```
@@ -227,9 +227,9 @@ Each state page has 500+ words unique content (rate tables, how-to, FAQ). Genera
 ```html
 <meta property="og:title" content="Income Tax Calculator India 2026 | DesiCalc" />
 <meta property="og:description" content="Free income tax calculator. Compare Old vs New regime. See exactly how much tax you pay with 87A rebate, surcharge, and cess. No login." />
-<meta property="og:url" content="https://desicalc.in/tools/income-tax" />
+<meta property="og:url" content="https://desicalc.pages.dev/tools/income-tax" />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="https://desicalc.in/assets/img/og-tax-calculator.png" />
+<meta property="og:image" content="https://desicalc.pages.dev/assets/img/og-tax-calculator.png" />
 <meta name="twitter:card" content="summary_large_image" />
 ```
 
@@ -266,17 +266,17 @@ Each state page has 500+ words unique content (rate tables, how-to, FAQ). Genera
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Core tool pages -->
-  <url><loc>https://desicalc.in/tools/income-tax</loc><priority>1.0</priority></url>
-  <url><loc>https://desicalc.in/tools/stamp-duty</loc><priority>1.0</priority></url>
-  <url><loc>https://desicalc.in/tools/rto-tax</loc><priority>1.0</priority></url>
+  <url><loc>https://desicalc.pages.dev/tools/income-tax</loc><priority>1.0</priority></url>
+  <url><loc>https://desicalc.pages.dev/tools/stamp-duty</loc><priority>1.0</priority></url>
+  <url><loc>https://desicalc.pages.dev/tools/rto-tax</loc><priority>1.0</priority></url>
 
   <!-- Comparison pages -->
-  <url><loc>https://desicalc.in/comparisons/old-vs-new-tax-regime</loc><priority>0.8</priority></url>
-  <url><loc>https://desicalc.in/comparisons/stamp-duty-rates-all-states</loc><priority>0.8</priority></url>
+  <url><loc>https://desicalc.pages.dev/comparisons/old-vs-new-tax-regime</loc><priority>0.8</priority></url>
+  <url><loc>https://desicalc.pages.dev/comparisons/stamp-duty-rates-all-states</loc><priority>0.8</priority></url>
 
   <!-- Programmatic state pages -->
-  <url><loc>https://desicalc.in/programmatic/stamp-duty/maharashtra</loc><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/programmatic/stamp-duty/karnataka</loc><priority>0.7</priority></url>
+  <url><loc>https://desicalc.pages.dev/programmatic/stamp-duty/maharashtra</loc><priority>0.7</priority></url>
+  <url><loc>https://desicalc.pages.dev/programmatic/stamp-duty/karnataka</loc><priority>0.7</priority></url>
   <!-- ... 54 more -->
 </urlset>
 ```
