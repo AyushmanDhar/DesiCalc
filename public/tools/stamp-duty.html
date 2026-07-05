@@ -114,11 +114,11 @@
             </select>
           </div>
           <div>
-            <label for="propertyValue" data-i18n="stamp.label.value">Property Value (₹)</label>
+            <label for="propertyValue"><span data-i18n="stamp.label.value">Property Value (₹)</span> <span class="tooltip-trigger" data-tooltip="Agreement value or circle rate — whichever is higher">?</span></label>
             <input type="text" id="propertyValue" inputmode="numeric" value="5000000" oninput="calcStamp()">
           </div>
           <div>
-            <label for="gender" data-i18n="stamp.label.gender">Gender / Ownership</label>
+            <label for="gender"><span data-i18n="stamp.label.gender">Gender / Ownership</span> <span class="tooltip-trigger" data-tooltip="Many states offer lower stamp duty for female buyers">?</span></label>
             <select id="gender" onchange="calcStamp()">
               <option value="male" data-i18n="stamp.gender.male">Male</option>
               <option value="female" data-i18n="stamp.gender.female">Female</option>
@@ -155,6 +155,10 @@
       <div>
         <div class="ad-slot-sidebar-top mb-4" data-ad-slot="sidebar_top_stamp_duty"></div>
 
+        <div class="flex gap-2 mb-3">
+          <button class="btn btn-outline btn-sm flex-1" onclick="shareUrl()" data-i18n="common.share">Share</button>
+          <button class="btn btn-outline btn-sm flex-1" onclick="copyUrl()" data-i18n="common.copy">Copy Link</button>
+        </div>
         <div id="resultBox" class="result-card fade-in" aria-live="polite">
           <div class="result-row"><span class="result-label" data-i18n="stamp.result.sdRate">Stamp Duty Rate</span><span class="result-value" id="rSdRate">0%</span></div>
           <div class="result-row"><span class="result-label" data-i18n="stamp.result.sd">Stamp Duty</span><span class="result-value" id="rSd">₹0</span></div>
@@ -207,6 +211,7 @@
       <a href="../index" data-i18n="footer.about">About</a>
       <a href="#" data-i18n="footer.privacy">Privacy</a>
       <a href="#" data-i18n="footer.contact">Contact</a>
+      <button class="btn btn-outline btn-sm" onclick="shareUrl()" data-i18n="common.share">Share</button>
     </div>
   </footer>
 
@@ -249,12 +254,15 @@
       flashValue(rEff);
       staggerReveal('resultBox');
 
+      syncUrlParams({ state: state, propertyValue: value, gender: gender, propertyType: type, location: location, isFirstTime: firstTime });
       saveLastInputs('stampduty', { state: state, value: value, gender: gender, type: type, location: location, firstTime: firstTime });
     }
 
     populateStates();
     initLang();
     initScrollReveal();
+    initTooltips();
+    initOnboarding();
     document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
       btn.addEventListener('click', function() {
         document.querySelectorAll('[data-lang-btn]').forEach(function(b) { b.classList.remove('active'); });
@@ -266,7 +274,9 @@
         b.classList.toggle('active', b.getAttribute('data-lang-btn') === getLang());
       });
     });
+    applyUrlParams();
     calcStamp();
+
   </script>
 </body>
 </html>

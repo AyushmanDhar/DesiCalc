@@ -242,7 +242,7 @@ Every ad slot wrapper has fixed `min-height` to prevent Cumulative Layout Shift:
 .ad-slot-inter-field { min-height: 250px; }
 ```
 
-Ad containers marked with `data-ad-slot` class. JS injects PropellerAds code into each slot container.
+Ad containers marked with `data-ad-slot` attribute. JS injects Adsterra `<ins>` tags and loads `data527.click/js/responsive.js`.
 
 ---
 

@@ -2,13 +2,14 @@
 
 Indian tax, stamp duty, and RTO road tax calculators. No login. No data leaves your device. No build step.
 
-**Live at [desicalc.in](https://desicalc.in)**
+**Live at [desicalc.pages.dev](https://desicalc.pages.dev)** (custom domain deferred until real traffic)
+**Develop branch**: [develop.desicalc.pages.dev](https://develop.desicalc.pages.dev)
 
 ## Tools
 
-- [Income Tax Calculator](https://desicalc.in/tools/income-tax.html) — FY 2026-27, Old vs New regime
-- [Stamp Duty Calculator](https://desicalc.in/tools/stamp-duty.html) — All 28 states
-- [RTO Tax Calculator](https://desicalc.in/tools/rto-tax.html) — All states, all vehicle types
+- [Income Tax Calculator](https://desicalc.pages.dev/tools/income-tax.html) — FY 2026-27, Old vs New regime
+- [Stamp Duty Calculator](https://desicalc.pages.dev/tools/stamp-duty.html) — All 28 states
+- [RTO Tax Calculator](https://desicalc.pages.dev/tools/rto-tax.html) — All states, all vehicle types
 
 ## Features
 
@@ -24,6 +25,7 @@ Indian tax, stamp duty, and RTO road tax calculators. No login. No data leaves y
 |-------|--------|
 | Hosting | Cloudflare Pages (global edge CDN) |
 | Frontend | Vanilla JS + Tailwind CSS (CDN) |
+| Ad network | Adsterra (via `data527.click`) |
 | PWA | Custom service worker, cache-first for assets, network-first for pages |
 | i18n | Client-side JSON-based translation |
 | Deployment | Git push → Cloudflare auto-deploy |
@@ -42,10 +44,10 @@ public/
 │   │   └── style.css
 │   ├── js/                 # calc-core, i18n, state-rates, slabs, ad
 │   └── img/                # Open Graph images
-├── tools/                  # Calculator pages
+├── tools/                  # Calculator pages (income-tax, stamp-duty, rto-tax)
 ├── guides/                 # How-to articles
 ├── comparisons/            # Side-by-side comparisons
-└── programmatic/           # State-specific deep pages
+└── programmatic/           # State-specific deep pages (28 states each for stamp-duty + rto-tax)
 ```
 
 ## Development

@@ -57,3 +57,17 @@ label { display: block; font-size: 0.875rem; font-weight: 500; color: #78716C; m
 .scroll-entrance { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease-out, transform 0.5s ease-out; }
 .scroll-entrance.visible { opacity: 1; transform: translateY(0); }
 .tool-card:focus-within { box-shadow: 0 0 0 3px rgba(217,119,6,0.15); }
+.tooltip-popup { position: fixed; background: #1C1917; color: #fff; padding: 0.375rem 0.75rem; border-radius: 0.375rem; font-size: 0.8125rem; max-width: 260px; pointer-events: none; opacity: 0; transform: translateX(-50%) translateY(-4px); transition: opacity 0.15s, transform 0.15s; z-index: 200; white-space: normal; line-height: 1.4; }
+.tooltip-popup.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+.tooltip-trigger { display: inline-flex; align-items: center; justify-content: center; width: 1rem; height: 1rem; border-radius: 50%; background: #E7E5E4; color: #78716C; font-size: 0.625rem; font-weight: 700; cursor: help; margin-left: 0.25rem; vertical-align: middle; transition: background 0.15s, color 0.15s; }
+.tooltip-trigger:hover { background: #D97706; color: #fff; }
+.onboarding-overlay { position: fixed; inset: 0; background: rgba(28,25,23,0.6); display: flex; align-items: center; justify-content: center; z-index: 300; opacity: 0; transition: opacity 0.3s; backdrop-filter: blur(2px); pointer-events: none; }
+.onboarding-overlay.active { opacity: 1; pointer-events: auto; }
+.onboarding-card { background: #fff; border-radius: 1rem; padding: 2rem; max-width: 360px; width: 90%; text-align: center; box-shadow: 0 16px 48px rgba(0,0,0,0.2); position: relative; animation: fadeIn 0.3s ease; pointer-events: auto; }
+.onboarding-close { position: absolute; top: 0.75rem; right: 0.75rem; background: none; border: none; font-size: 1.5rem; color: #A8A29E; cursor: pointer; line-height: 1; padding: 0.25rem; }
+.onboarding-close:hover { color: #1C1917; }
+.onboarding-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
+.onboarding-title { font-size: 1.125rem; font-weight: 700; color: #1C1917; margin-bottom: 1rem; }
+.onboarding-list { text-align: left; list-style: none; padding: 0; margin: 0 0 1.25rem; }
+.onboarding-list li { padding: 0.5rem 0; border-bottom: 1px solid #F5F5F4; font-size: 0.875rem; color: #57534E; display: flex; gap: 0.5rem; align-items: flex-start; }
+.onboarding-list li::before { content: '✓'; color: #059669; font-weight: 700; flex-shrink: 0; }

@@ -103,6 +103,35 @@ function deserializeParams() {
   return out;
 }
 
+function syncUrlParams(obj) {
+  var params = serializeParams(obj);
+  var url = window.location.pathname + (params ? '?' + params : '');
+  history.replaceState(null, '', url);
+}
+
+function applyUrlParams() {
+  var params = deserializeParams();
+  var keys = Object.keys(params);
+  if (keys.length === 0) return false;
+  for (var k in params) {
+    var el = document.getElementById(k);
+    if (!el) {
+      var radio = document.querySelector('input[name="' + k + '"][value="' + params[k] + '"]');
+      if (radio) { radio.checked = true; }
+      continue;
+    }
+    if (el.type === 'checkbox') {
+      el.checked = params[k] === 'true';
+    } else if (el.type === 'radio') {
+      var radios = document.querySelectorAll('input[name="' + el.name + '"]');
+      radios.forEach(function(r) { if (r.value === params[k]) r.checked = true; });
+    } else {
+      el.value = params[k];
+    }
+  }
+  return true;
+}
+
 function saveLastInputs(toolKey, data) {
   try {
     localStorage.setItem('desicalc_' + toolKey + '_last', JSON.stringify(data));
@@ -274,6 +303,92 @@ function showToast(msg) {
   el.classList.add('show');
   clearTimeout(el._timer);
   el._timer = setTimeout(function() { el.classList.remove('show'); }, 2500);
+}
+
+function shareUrl() {
+  if (navigator.share) {
+    navigator.share({ title: document.title, url: window.location.href }).catch(function(){});
+  } else {
+    copyUrl();
+  }
+}
+
+function copyUrl() {
+  var url = window.location.href;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(url).then(function () { showToast(t('common.copied')); }).catch(function(){ copyUrlFallback(url); });
+  } else {
+    copyUrlFallback(url);
+  }
+}
+
+function copyUrlFallback(url) {
+  var ta = document.createElement('textarea');
+  ta.value = url; ta.style.position = 'fixed'; ta.style.left = '-9999px';
+  document.body.appendChild(ta); ta.select();
+  try { document.execCommand('copy'); showToast(t('common.copied')); } catch (e) {}
+  document.body.removeChild(ta);
+}
+
+function initTooltips() {
+  document.addEventListener('mouseover', function (e) {
+    var trigger = e.target.closest('[data-tooltip]');
+    if (!trigger) { hideTooltip(); return; }
+    var text = trigger.getAttribute('data-tooltip');
+    if (!text) return;
+    var tip = document.getElementById('tooltip-el');
+    if (!tip) {
+      tip = document.createElement('div');
+      tip.id = 'tooltip-el';
+      tip.className = 'tooltip-popup';
+      document.body.appendChild(tip);
+    }
+    tip.textContent = text;
+    var rect = trigger.getBoundingClientRect();
+    var top = rect.bottom + 6;
+    var left = rect.left + rect.width / 2;
+    tip.style.top = top + 'px';
+    tip.style.left = left + 'px';
+    tip.classList.add('show');
+  });
+  document.addEventListener('mouseout', function (e) {
+    if (e.target.closest('[data-tooltip]')) hideTooltip();
+  });
+}
+
+function hideTooltip() {
+  var tip = document.getElementById('tooltip-el');
+  if (tip) tip.classList.remove('show');
+}
+
+function initOnboarding() {
+  var key = 'desicalc_onboarded_v1';
+  try {
+    if (localStorage.getItem(key)) return;
+    localStorage.setItem(key, '1');
+  } catch (e) { return; }
+  var overlay = document.createElement('div');
+  overlay.id = 'onboarding-overlay';
+  overlay.className = 'onboarding-overlay';
+  overlay.innerHTML =
+    '<div class="onboarding-card">' +
+    '<button class="onboarding-close" onclick="dismissOnboarding()" aria-label="Close">&times;</button>' +
+    '<div class="onboarding-icon">🧮</div>' +
+    '<h3 class="onboarding-title">' + t('onboarding.title') + '</h3>' +
+    '<ul class="onboarding-list">' +
+    '<li>' + t('onboarding.step1') + '</li>' +
+    '<li>' + t('onboarding.step2') + '</li>' +
+    '<li>' + t('onboarding.step3') + '</li>' +
+    '</ul>' +
+    '<button class="btn btn-primary" onclick="dismissOnboarding()">' + t('onboarding.cta') + '</button>' +
+    '</div>';
+  document.body.appendChild(overlay);
+  setTimeout(function () { overlay.classList.add('active'); }, 100);
+}
+
+function dismissOnboarding() {
+  var overlay = document.getElementById('onboarding-overlay');
+  if (overlay) { overlay.classList.remove('active'); setTimeout(function () { overlay.remove(); }, 300); }
 }
 
 document.addEventListener('input', function(e) {
