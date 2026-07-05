@@ -61,9 +61,9 @@ label { display: block; font-size: 0.875rem; font-weight: 500; color: #78716C; m
 .tooltip-popup.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 .tooltip-trigger { display: inline-flex; align-items: center; justify-content: center; width: 1rem; height: 1rem; border-radius: 50%; background: #E7E5E4; color: #78716C; font-size: 0.625rem; font-weight: 700; cursor: help; margin-left: 0.25rem; vertical-align: middle; transition: background 0.15s, color 0.15s; }
 .tooltip-trigger:hover { background: #D97706; color: #fff; }
-.onboarding-overlay { position: fixed; inset: 0; background: rgba(28,25,23,0.6); display: flex; align-items: center; justify-content: center; z-index: 300; opacity: 0; transition: opacity 0.3s; backdrop-filter: blur(2px); }
-.onboarding-overlay.active { opacity: 1; }
-.onboarding-card { background: #fff; border-radius: 1rem; padding: 2rem; max-width: 360px; width: 90%; text-align: center; box-shadow: 0 16px 48px rgba(0,0,0,0.2); position: relative; animation: fadeIn 0.3s ease; }
+.onboarding-overlay { position: fixed; inset: 0; background: rgba(28,25,23,0.6); display: flex; align-items: center; justify-content: center; z-index: 300; opacity: 0; transition: opacity 0.3s; backdrop-filter: blur(2px); pointer-events: none; }
+.onboarding-overlay.active { opacity: 1; pointer-events: auto; }
+.onboarding-card { background: #fff; border-radius: 1rem; padding: 2rem; max-width: 360px; width: 90%; text-align: center; box-shadow: 0 16px 48px rgba(0,0,0,0.2); position: relative; animation: fadeIn 0.3s ease; pointer-events: auto; }
 .onboarding-close { position: absolute; top: 0.75rem; right: 0.75rem; background: none; border: none; font-size: 1.5rem; color: #A8A29E; cursor: pointer; line-height: 1; padding: 0.25rem; }
 .onboarding-close:hover { color: #1C1917; }
 .onboarding-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
