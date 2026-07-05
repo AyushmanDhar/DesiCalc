@@ -140,6 +140,7 @@
       <a href="#" data-i18n="footer.about">About</a>
       <a href="#" data-i18n="footer.privacy">Privacy</a>
       <a href="#" data-i18n="footer.contact">Contact</a>
+      <button class="btn btn-outline btn-sm" onclick="shareUrl()" data-i18n="common.share">Share</button>
     </div>
   </footer>
 
@@ -148,6 +149,8 @@
   <script>
     initLang();
     initScrollReveal();
+    initTooltips();
+    initOnboarding();
     document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
       btn.addEventListener('click', function() {
         document.querySelectorAll('[data-lang-btn]').forEach(function(b) { b.classList.remove('active'); });

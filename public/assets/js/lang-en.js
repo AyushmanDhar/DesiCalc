@@ -146,4 +146,10 @@ window.DESICALC_LANG = {
   'rto.faq.a2': 'Most states offer full or partial road tax exemption for electric vehicles to promote green mobility.',
   'rto.faq.q3': 'What is HSRP?',
   'rto.faq.a3': 'High Security Registration Plate is mandatory tamper-proof number plate. Cost: ₹400-₹600 for new vehicles.',
+
+  'onboarding.title': 'Welcome to DesiCalc',
+  'onboarding.step1': 'Fill in your numbers — results update instantly',
+  'onboarding.step2': 'Compare Old vs New tax regime side-by-side',
+  'onboarding.step3': 'Share results with your CA or family',
+  'onboarding.cta': 'Got it, start calculating!',
 };

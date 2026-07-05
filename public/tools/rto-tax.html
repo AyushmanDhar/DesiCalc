@@ -132,11 +132,11 @@
             </select>
           </div>
           <div>
-            <label for="exShowroomPrice" data-i18n="rto.label.price">Ex-Showroom Price (₹)</label>
+            <label for="exShowroomPrice"><span data-i18n="rto.label.price">Ex-Showroom Price (₹)</span> <span class="tooltip-trigger" data-tooltip="Price before RTO, insurance, and dealer charges">?</span></label>
             <input type="text" id="exShowroomPrice" inputmode="numeric" value="1000000" oninput="calcRTOForm()">
           </div>
           <div>
-            <label for="engineCC" data-i18n="rto.label.engine">Engine Capacity (CC)</label>
+            <label for="engineCC"><span data-i18n="rto.label.engine">Engine Capacity (CC)</span> <span class="tooltip-trigger" data-tooltip="Higher engine capacity often means higher road tax">?</span></label>
             <input type="text" id="engineCC" inputmode="numeric" value="1500" oninput="calcRTOForm()">
           </div>
           <div>
@@ -160,6 +160,10 @@
       <div>
         <div class="ad-slot-sidebar-top mb-4" data-ad-slot="sidebar_top_rto_tax"></div>
 
+        <div class="flex gap-2 mb-3">
+          <button class="btn btn-outline btn-sm flex-1" onclick="shareUrl()" data-i18n="common.share">Share</button>
+          <button class="btn btn-outline btn-sm flex-1" onclick="copyUrl()" data-i18n="common.copy">Copy Link</button>
+        </div>
         <div id="resultBox" class="result-card fade-in" aria-live="polite">
           <div class="result-row"><span class="result-label" data-i18n="rto.result.lifeTax">One-Time Road Tax</span><span class="result-value" id="rLifeTax">₹0</span></div>
           <div class="result-row"><span class="result-label" data-i18n="rto.result.regFee">Registration Fee</span><span class="result-value" id="rRegFee">₹0</span></div>
@@ -211,6 +215,7 @@
       <a href="../index" data-i18n="footer.about">About</a>
       <a href="#" data-i18n="footer.privacy">Privacy</a>
       <a href="#" data-i18n="footer.contact">Contact</a>
+      <button class="btn btn-outline btn-sm" onclick="shareUrl()" data-i18n="common.share">Share</button>
     </div>
   </footer>
 
@@ -261,6 +266,8 @@
     populateStates();
     initLang();
     initScrollReveal();
+    initTooltips();
+    initOnboarding();
     document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
       btn.addEventListener('click', function() {
         document.querySelectorAll('[data-lang-btn]').forEach(function(b) { b.classList.remove('active'); });
