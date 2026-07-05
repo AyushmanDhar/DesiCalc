@@ -16,7 +16,7 @@ window.DESICALC_LANG = {
   'home.cta': 'Ab ganana karein',
   'home.resources.title': 'Guide aur tulnaayein',
 
-  'header.back': 'Waapas',
+  'header.back': '← Waapas',
   'header.lang.en': 'EN',
   'header.lang.hi': 'Hing',
 

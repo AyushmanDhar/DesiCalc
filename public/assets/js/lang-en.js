@@ -16,7 +16,7 @@ window.DESICALC_LANG = {
   'home.cta': 'Calculate Now',
   'home.resources.title': 'Guides & Comparisons',
 
-  'header.back': 'Back',
+  'header.back': '← Back',
   'header.lang.en': 'EN',
   'header.lang.hi': 'Hing',
 
