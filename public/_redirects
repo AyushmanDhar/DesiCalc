@@ -1,0 +1,14 @@
+# Tool redirects
+/tools/income-tax /tools/income-tax.html 200
+/tools/stamp-duty /tools/stamp-duty.html 200
+/tools/rto-tax /tools/rto-tax.html 200
+
+# Programmatic state pages
+/programmatic/stamp-duty/:state /tools/stamp-duty.html?state=:state 200
+/programmatic/rto-tax/:state /tools/rto-tax.html?state=:state 200
+
+# Comparison pages
+/comparisons/* /comparisons/:splat.html 200
+
+# Custom 404
+/* /404.html 404

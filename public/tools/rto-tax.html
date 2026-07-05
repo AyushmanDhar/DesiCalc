@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="rto.title">RTO Tax Calculator — DesiCalc</title>
+  <meta name="description" content="Calculate RTO road tax and registration charges for all Indian states. Car, bike, EV, commercial. State-wise rates updated.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚗</text></svg>">
+  <link rel="canonical" href="https://desicalc.in/tools/rto-tax">
+  <meta property="og:title" content="RTO Tax Calculator — DesiCalc">
+  <meta property="og:description" content="Calculate RTO road tax and registration charges for all Indian states. Car, bike, EV, commercial. State-wise rates updated.">
+  <meta property="og:url" content="https://desicalc.in/tools/rto-tax">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://desicalc.in/assets/img/og-rto-tax.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["WebApplication", "SoftwareApplication"],
+    "name": "RTO Tax Calculator India 2026",
+    "url": "https://desicalc.in/tools/rto-tax",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "JavaScript",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+    "description": "Free RTO road tax calculator for all Indian states. Calculate one-time tax, registration fee, HSRP for car, bike, EV, commercial vehicles.",
+    "featureList": [
+      "All States Road Tax Rates",
+      "Car, Bike, EV, Commercial",
+      "Used Vehicle Transfer",
+      "HSRP Fee Calculation",
+      "On-Road Price Breakdown"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is RTO road tax?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Road tax is one-time tax paid to state RTO when registering vehicle. Rate varies by state, vehicle type, and fuel."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are EVs exempt from road tax?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most states offer full or partial road tax exemption for electric vehicles to promote green mobility."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is HSRP?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "High Security Registration Plate is mandatory tamper-proof number plate. Cost: ₹400-₹600 for new vehicles."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://desicalc.in" },
+      { "@type": "ListItem", "position": 2, "name": "RTO Tax Calculator", "item": "https://desicalc.in/tools/rto-tax" }
+    ]
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/calc-core.js"></script>
+  <script src="../assets/js/state-rates.js"></script>
+  <script src="../assets/js/lang-en.js"></script>
+  <script src="../assets/js/ad.js"></script>
+</head>
+<body>
+  <a href="#calc-form" class="sr-only focus:not-sr-only focus:absolute focus:p-2 focus:bg-white focus:z-50">Skip to calculator</a>
+
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
+    <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="../index.html" class="text-sm text-stone-500 hover:text-stone-900 no-underline" data-i18n="header.back">← Back</a>
+        <a href="../index.html" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
+      </div>
+      <div class="lang-toggle" role="group" aria-label="Language toggle">
+        <button onclick="setLang('en')" class="active" data-lang-btn="en" data-i18n="header.lang.en">EN</button>
+        <button onclick="setLang('hi')" data-lang-btn="hi" data-i18n="header.lang.hi">हिं</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="max-w-5xl mx-auto px-4 py-6">
+    <div class="two-col">
+      <div>
+        <h1 class="text-2xl sm:text-3xl font-bold text-stone-900 mb-1" data-i18n="rto.title">RTO Tax Calculator</h1>
+        <p class="text-stone-500 text-sm mb-6" data-i18n="rto.subtitle">Calculate road tax & registration charges for any state</p>
+
+        <form id="calc-form" onsubmit="return false" class="space-y-4">
+          <div>
+            <label for="state" data-i18n="rto.label.state">Select State</label>
+            <select id="state" onchange="calcRTOForm()">
+            </select>
+          </div>
+          <div>
+            <label for="vehicleType" data-i18n="rto.label.vehicle">Vehicle Type</label>
+            <select id="vehicleType" onchange="calcRTOForm()">
+              <option value="private_car" data-i18n="rto.vehicle.private_car">Private Car</option>
+              <option value="commercial" data-i18n="rto.vehicle.commercial">Commercial Vehicle</option>
+              <option value="two_wheeler" data-i18n="rto.vehicle.two_wheeler">Two Wheeler</option>
+              <option value="ev" data-i18n="rto.vehicle.ev">Electric Vehicle</option>
+            </select>
+          </div>
+          <div>
+            <label for="fuelType" data-i18n="rto.label.fuel">Fuel Type</label>
+            <select id="fuelType" onchange="calcRTOForm()">
+              <option value="petrol" data-i18n="rto.fuel.petrol">Petrol</option>
+              <option value="diesel" data-i18n="rto.fuel.diesel">Diesel</option>
+              <option value="cng" data-i18n="rto.fuel.cng">CNG</option>
+              <option value="ev" data-i18n="rto.fuel.ev">Electric</option>
+            </select>
+          </div>
+          <div>
+            <label for="exShowroomPrice" data-i18n="rto.label.price">Ex-Showroom Price (₹)</label>
+            <input type="text" id="exShowroomPrice" inputmode="numeric" value="1000000" oninput="calcRTOForm()">
+          </div>
+          <div>
+            <label for="engineCC" data-i18n="rto.label.engine">Engine Capacity (CC)</label>
+            <input type="text" id="engineCC" inputmode="numeric" value="1500" oninput="calcRTOForm()">
+          </div>
+          <div>
+            <label for="seats" data-i18n="rto.label.seats">Seating Capacity</label>
+            <input type="text" id="seats" inputmode="numeric" value="5" oninput="calcRTOForm()">
+          </div>
+          <div>
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" id="isUsed" onchange="calcRTOForm()">
+              <span data-i18n="rto.label.used">Used Vehicle?</span>
+            </label>
+          </div>
+          <div id="usedAgeGroup" style="display:none">
+            <label for="vehicleAge" data-i18n="rto.label.age">Vehicle Age (years)</label>
+            <input type="text" id="vehicleAge" inputmode="numeric" value="5" oninput="calcRTOForm()">
+          </div>
+
+        </form>
+      </div>
+
+      <div>
+        <div class="ad-slot-sidebar-top mb-4" data-ad-slot="sidebar_top_rto_tax"></div>
+
+        <div id="resultBox" class="result-card fade-in" aria-live="polite">
+          <div class="result-row"><span class="result-label" data-i18n="rto.result.lifeTax">One-Time Road Tax</span><span class="result-value" id="rLifeTax">₹0</span></div>
+          <div class="result-row"><span class="result-label" data-i18n="rto.result.regFee">Registration Fee</span><span class="result-value" id="rRegFee">₹0</span></div>
+          <div class="result-row"><span class="result-label" data-i18n="rto.result.hsrp">HSRP Fee</span><span class="result-value" id="rHsrp">₹0</span></div>
+          <div class="result-row total"><span class="result-label" data-i18n="rto.result.total">Total On-Road Cost</span><span class="result-value" id="rTotal">₹0</span></div>
+          <div class="result-row"><span class="result-label" data-i18n="rto.result.effective">Effective Tax Rate</span><span class="result-value" id="rEffective">0.00%</span></div>
+        </div>
+
+        <div class="ad-slot-in-content mt-4" data-ad-slot="in_content_rto_tax"></div>
+      </div>
+    </div>
+
+    <section class="mt-10">
+      <h2 class="text-lg font-bold mb-3">Related Pages</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <a href="../comparisons/ev-vs-petrol-road-tax.html" class="card text-sm hover:shadow-md transition-shadow no-underline">
+          <span class="font-semibold text-stone-900">EV vs Petrol Road Tax</span>
+          <span class="text-stone-500 block">Which saves more?</span>
+        </a>
+        <a href="../guides/how-to-register-new-car-rto.html" class="card text-sm hover:shadow-md transition-shadow no-underline">
+          <span class="font-semibold text-stone-900">How to Register New Car</span>
+          <span class="text-stone-500 block">RTO registration process</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="mt-10 max-w-2xl">
+      <h2 class="text-lg font-bold mb-3" data-i18n="rto.faq.title">FAQs</h2>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span data-i18n="rto.faq.q1">What is RTO road tax?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer" data-i18n="rto.faq.a1">Road tax is one-time tax paid to state RTO when registering vehicle. Rate varies by state, vehicle type, and fuel.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span data-i18n="rto.faq.q2">Are EVs exempt from road tax?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer" data-i18n="rto.faq.a2">Most states offer full or partial road tax exemption for electric vehicles to promote green mobility.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span data-i18n="rto.faq.q3">What is HSRP?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer" data-i18n="rto.faq.a3">High Security Registration Plate is mandatory tamper-proof number plate. Cost: ₹400-₹600 for new vehicles.</div>
+      </div>
+    </section>
+  </div>
+
+  <section class="ad-slot-footer mb-4" data-ad-slot="footer_main">
+  </section>
+
+  <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
+    <div class="max-w-5xl mx-auto px-4 flex justify-center gap-6">
+      <a href="../index.html" data-i18n="footer.about">About</a>
+      <a href="#" data-i18n="footer.privacy">Privacy</a>
+      <a href="#" data-i18n="footer.contact">Contact</a>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast"></div>
+
+  <script>
+    function getVal(id) { return parseFloat(document.getElementById(id).value.replace(/,/g, '')) || 0; }
+    function setText(id, val) { document.getElementById(id).innerText = val; }
+
+    function populateStates() {
+      var sel = document.getElementById('state');
+      getStateList().forEach(function(s) {
+        var opt = document.createElement('option');
+        opt.value = s.id;
+        opt.textContent = s.name;
+        sel.appendChild(opt);
+      });
+    }
+
+    function calcRTOForm() {
+      var state = document.getElementById('state').value;
+      var vehicleType = document.getElementById('vehicleType').value;
+      var fuelType = document.getElementById('fuelType').value;
+      var price = getVal('exShowroomPrice');
+      var engineCC = getVal('engineCC');
+      var seats = getVal('seats');
+      var isUsed = document.getElementById('isUsed').checked;
+      var age = getVal('vehicleAge');
+
+      var usedAgeGroup = document.getElementById('usedAgeGroup');
+      usedAgeGroup.style.display = isUsed ? 'block' : 'none';
+
+      var result = calcRTO(state, vehicleType, fuelType, price, engineCC, isUsed, age, seats);
+      if (!result) return;
+
+      animateValue(document.getElementById('rLifeTax'), result.lifeTax);
+      animateValue(document.getElementById('rRegFee'), result.registrationFee);
+      animateValue(document.getElementById('rHsrp'), result.hsrpFee);
+      animateValue(document.getElementById('rTotal'), result.totalOnRoadDelta);
+      var rEff = document.getElementById('rEffective');
+      rEff.innerText = formatPercent(result.effectiveTaxRate);
+      flashValue(rEff);
+      staggerReveal('resultBox');
+
+      saveLastInputs('rtotax', { state: state, vehicleType: vehicleType, fuelType: fuelType, price: price, engineCC: engineCC, seats: seats, isUsed: isUsed, age: age });
+    }
+
+    populateStates();
+    initLang();
+    initScrollReveal();
+    document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('[data-lang-btn]').forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+      });
+    });
+    onLangChange(function() {
+      document.querySelectorAll('[data-lang-btn]').forEach(function(b) {
+        b.classList.toggle('active', b.getAttribute('data-lang-btn') === getLang());
+      });
+    });
+    calcRTOForm();
+  </script>
+</body>
+</html>

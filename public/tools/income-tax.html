@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="tax.title">Income Tax Calculator FY 2026-27 — DesiCalc</title>
+  <meta name="description" content="Calculate income tax for FY 2026-27. Compare Old vs New regime. Updated for Budget 2026. Free, no login.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💰</text></svg>">
+  <link rel="canonical" href="https://desicalc.in/tools/income-tax">
+  <meta property="og:title" content="Income Tax Calculator FY 2026-27 — DesiCalc">
+  <meta property="og:description" content="Calculate income tax for FY 2026-27. Compare Old vs New regime. Updated for Budget 2026. Free, no login.">
+  <meta property="og:url" content="https://desicalc.in/tools/income-tax">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://desicalc.in/assets/img/og-tax-calculator.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["WebApplication", "SoftwareApplication"],
+    "name": "Income Tax Calculator India 2026",
+    "url": "https://desicalc.in/tools/income-tax",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "JavaScript",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+    "description": "Free Income Tax Calculator for India FY 2026-27. Compare Old vs New tax regime. Calculate tax, surcharge, cess, 87A rebate instantly.",
+    "featureList": [
+      "Old vs New Regime Comparison",
+      "Section 87A Rebate",
+      "Surcharge Calculation",
+      "Health & Education Cess 4%",
+      "HRA Exemption",
+      "80C, 80D, 80CCD Deductions"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What income is tax-free in new regime?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Under new regime, no tax up to ₹12L net taxable income due to 87A rebate and ₹75K standard deduction. Effective tax-free salary: up to ₹12.75L."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is old regime better with home loan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Old regime allows up to ₹2L home loan interest deduction under Section 24(b). If you pay significant interest, old regime may be better."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is 87A rebate calculated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "87A rebate reduces tax to zero if net taxable income ≤ ₹12L (new regime) or ≤ ₹5L (old regime). Max rebate: ₹60K (new) / ₹12.5K (old)."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://desicalc.in" },
+      { "@type": "ListItem", "position": 2, "name": "Income Tax Calculator", "item": "https://desicalc.in/tools/income-tax" }
+    ]
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/calc-core.js"></script>
+  <script src="../assets/js/slabs-2026.js"></script>
+  <script src="../assets/js/lang-en.js"></script>
+  <script src="../assets/js/ad.js"></script>
+</head>
+<body>
+  <a href="#calc-form" class="sr-only focus:not-sr-only focus:absolute focus:p-2 focus:bg-white focus:z-50">Skip to calculator</a>
+
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
+    <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="../index.html" class="text-sm text-stone-500 hover:text-stone-900 no-underline" data-i18n="header.back">← Back</a>
+        <a href="../index.html" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
+      </div>
+      <div class="lang-toggle" role="group" aria-label="Language toggle">
+        <button onclick="setLang('en')" class="active" data-lang-btn="en" data-i18n="header.lang.en">EN</button>
+        <button onclick="setLang('hi')" data-lang-btn="hi" data-i18n="header.lang.hi">हिं</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="max-w-5xl mx-auto px-4 py-6">
+    <div class="two-col">
+      <div>
+        <h1 class="text-2xl sm:text-3xl font-bold text-stone-900 mb-1" data-i18n="tax.title">Income Tax Calculator</h1>
+        <p class="text-stone-500 text-sm mb-6" data-i18n="tax.subtitle">FY 2026-27 | Compare Old vs New Regime</p>
+
+        <form id="calc-form" onsubmit="return false" class="space-y-4">
+          <div>
+            <div class="section-title" data-i18n="tax.section.income">Income</div>
+            <div class="space-y-3">
+              <div>
+                <label for="incomeSalary" data-i18n="tax.label.salary">Salary Income (₹)</label>
+                <input type="text" id="incomeSalary" inputmode="numeric" value="1200000" oninput="calcTax()">
+              </div>
+              <div>
+                <label for="incomeOther" data-i18n="tax.label.other">Other Income (₹)</label>
+                <input type="text" id="incomeOther" inputmode="numeric" value="0" oninput="calcTax()">
+              </div>
+              <div>
+                <label for="incomeBusiness" data-i18n="tax.label.business">Business Income (₹)</label>
+                <input type="text" id="incomeBusiness" inputmode="numeric" value="0" oninput="calcTax()">
+              </div>
+              <div>
+                <label for="ltcg" data-i18n="tax.label.ltcg">LTCG (₹)</label>
+                <input type="text" id="ltcg" inputmode="numeric" value="0" oninput="calcTax()">
+              </div>
+              <div>
+                <label for="stcg" data-i18n="tax.label.stcg">STCG (₹)</label>
+                <input type="text" id="stcg" inputmode="numeric" value="0" oninput="calcTax()">
+              </div>
+              <div>
+                <label for="age" data-i18n="tax.label.age">Your Age</label>
+                <input type="text" id="age" inputmode="numeric" value="30" oninput="calcTax()">
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="section-title" data-i18n="tax.section.regime">Select Regime</div>
+            <div class="flex gap-4">
+              <label class="flex items-center gap-2 cursor-pointer">
+                <input type="radio" name="regime" value="new" checked onchange="calcTax()">
+                <span data-i18n="tax.label.regime.new">New Regime (default)</span>
+              </label>
+              <label class="flex items-center gap-2 cursor-pointer">
+                <input type="radio" name="regime" value="old" onchange="calcTax()">
+                <span data-i18n="tax.label.regime.old">Old Regime</span>
+              </label>
+            </div>
+          </div>
+
+          <div id="oldDeductions" class="space-y-3" style="display:none">
+            <div class="section-title" data-i18n="tax.section.deductions">Deductions (Old Regime)</div>
+            <div>
+              <label for="deductions80C" data-i18n="tax.label.deductions80c">80C Investments (₹)</label>
+              <input type="text" id="deductions80C" inputmode="numeric" value="0" oninput="calcTax()">
+            </div>
+            <div>
+              <label for="deductions80D" data-i18n="tax.label.deductions80d">80D Health Insurance (₹)</label>
+              <input type="text" id="deductions80D" inputmode="numeric" value="0" oninput="calcTax()">
+            </div>
+            <div>
+              <label for="deductions80CCD" data-i18n="tax.label.deductions80ccd">80CCD(1B) NPS (₹)</label>
+              <input type="text" id="deductions80CCD" inputmode="numeric" value="0" oninput="calcTax()">
+            </div>
+            <div>
+              <label for="homeLoanInterest" data-i18n="tax.label.homeLoan">Home Loan Interest (₹)</label>
+              <input type="text" id="homeLoanInterest" inputmode="numeric" value="0" oninput="calcTax()">
+            </div>
+            <div>
+              <button type="button" class="btn btn-outline btn-sm w-full" onclick="toggleHRA(this)" data-i18n="tax.hra.show">Show HRA</button>
+              <div id="hraSection" style="display:none" class="space-y-3 mt-3">
+                <div>
+                  <label for="hraActual" data-i18n="tax.label.hraActual">HRA Received (₹)</label>
+                  <input type="text" id="hraActual" inputmode="numeric" value="0" oninput="calcTax()">
+                </div>
+                <div>
+                  <label for="hraRent" data-i18n="tax.label.hraRent">Rent Paid (₹)</label>
+                  <input type="text" id="hraRent" inputmode="numeric" value="0" oninput="calcTax()">
+                </div>
+                <div>
+                  <label for="hraBasic" data-i18n="tax.label.hraBasic">Basic Salary (₹)</label>
+                  <input type="text" id="hraBasic" inputmode="numeric" value="0" oninput="calcTax()">
+                </div>
+                <div>
+                  <label for="hraDA" data-i18n="tax.label.hraDA">Dearness Allowance (₹)</label>
+                  <input type="text" id="hraDA" inputmode="numeric" value="0" oninput="calcTax()">
+                </div>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" id="hraMetro" onchange="calcTax()">
+                  <span data-i18n="tax.label.hraMetro">Metro City</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+      <div>
+        <div class="ad-slot-sidebar-top mb-4" data-ad-slot="sidebar_top_income_tax"></div>
+
+        <div id="resultBox" class="result-card fade-in" aria-live="polite">
+          <div id="rComparison" class="mb-3 p-2 bg-amber-50 rounded text-sm text-center font-medium" style="display:none"></div>
+          <div class="result-row"><span class="result-label" data-i18n="tax.result.gross">Gross Total Income</span><span class="result-value" id="rGross">₹0</span></div>
+          <div class="result-row"><span class="result-label" data-i18n="tax.result.sd">Standard Deduction</span><span class="result-value" id="rSD">₹0</span></div>
+          <div class="result-row"><span class="result-label" data-i18n="tax.result.net">Net Taxable Income</span><span class="result-value" id="rNetTaxable">₹0</span></div>
+          <div class="result-row"><span class="result-label" data-i18n="tax.result.deductions">Deductions</span><span class="result-value" id="rDeductions">₹0</span></div>
+          <div class="result-row"><span class="result-label" data-i18n="tax.result.tax">Tax Before Rebate</span><span class="result-value" id="rTax">₹0</span></div>
+          <div class="result-row"><span class="result-label" data-i18n="tax.result.stcgTax">Equity STCG Tax (20%)</span><span class="result-value" id="rStcgTax">₹0</span></div>
+          <div class="result-row"><span class="result-label" data-i18n="tax.result.ltcgTax">Equity LTCG Tax (12.5%)</span><span class="result-value" id="rLtcgTax">₹0</span></div>
+          <div class="result-row"><span class="result-label" data-i18n="tax.result.rebate">87A Rebate</span><span class="result-value" id="rRebate">₹0</span></div>
+          <div class="result-row"><span class="result-label" data-i18n="tax.result.marginalRelief">Marginal Relief</span><span class="result-value" id="rMarginalRelief">₹0</span></div>
+          <div class="result-row"><span class="result-label" data-i18n="tax.result.surcharge">Surcharge</span><span class="result-value" id="rSurcharge">₹0</span></div>
+          <div class="result-row"><span class="result-label" data-i18n="tax.result.cess">Health & Education Cess</span><span class="result-value" id="rCess">₹0</span></div>
+          <div class="result-row total"><span class="result-label" data-i18n="tax.result.total">Total Tax Payable</span><span class="result-value" id="rTotalTax">₹0</span></div>
+          <div class="result-row"><span class="result-label" data-i18n="tax.result.effective">Effective Tax Rate</span><span class="result-value" id="rEffective">0.00%</span></div>
+        </div>
+
+        <div class="ad-slot-in-content mt-4" data-ad-slot="in_content_income_tax"></div>
+      </div>
+    </div>
+
+    <section class="mt-10">
+      <h2 class="text-lg font-bold mb-3">Related Pages</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <a href="../comparisons/old-vs-new-tax-regime.html" class="card text-sm hover:shadow-md transition-shadow no-underline">
+          <span class="font-semibold text-stone-900">Old vs New Tax Regime</span>
+          <span class="text-stone-500 block">Which regime saves more?</span>
+        </a>
+        <a href="../guides/how-to-file-itr-2026.html" class="card text-sm hover:shadow-md transition-shadow no-underline">
+          <span class="font-semibold text-stone-900">How to File ITR 2026</span>
+          <span class="text-stone-500 block">Step-by-step filing guide</span>
+        </a>
+        <a href="../guides/section-87a-rebate-explained.html" class="card text-sm hover:shadow-md transition-shadow no-underline">
+          <span class="font-semibold text-stone-900">Section 87A Rebate Guide</span>
+          <span class="text-stone-500 block">Tax-free income up to ₹12L</span>
+        </a>
+        <a href="../guides/capital-gains-tax-changes-2026.html" class="card text-sm hover:shadow-md transition-shadow no-underline">
+          <span class="font-semibold text-stone-900">Capital Gains Tax 2026</span>
+          <span class="text-stone-500 block">New LTCG/STCG rules</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="mt-10 max-w-2xl">
+      <h2 class="text-lg font-bold mb-3" data-i18n="tax.faq.title">FAQs</h2>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span data-i18n="tax.faq.q1">What income is tax-free in new regime?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer" data-i18n="tax.faq.a1">Under new regime, no tax up to ₹12L net taxable income due to 87A rebate and ₹75K standard deduction. Effective tax-free salary: up to ₹12.75L.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span data-i18n="tax.faq.q2">Is old regime better with home loan?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer" data-i18n="tax.faq.a2">Old regime allows up to ₹2L home loan interest deduction under Section 24(b). If you pay significant interest, old regime may be better.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span data-i18n="tax.faq.q3">How is 87A rebate calculated?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer" data-i18n="tax.faq.a3">87A rebate reduces tax to zero if net taxable income ≤ ₹12L (new regime) or ≤ ₹5L (old regime). Max rebate: ₹60K (new) / ₹12.5K (old).</div>
+      </div>
+    </section>
+  </div>
+
+  <section class="ad-slot-footer mb-4" data-ad-slot="footer_main">
+  </section>
+
+  <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
+    <div class="max-w-5xl mx-auto px-4 flex justify-center gap-6">
+      <a href="../index.html" data-i18n="footer.about">About</a>
+      <a href="#" data-i18n="footer.privacy">Privacy</a>
+      <a href="#" data-i18n="footer.contact">Contact</a>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast"></div>
+
+  <script>
+    function getVal(id) { return parseFloat(document.getElementById(id).value.replace(/,/g, '')) || 0; }
+    function getChecked(id) { return document.getElementById(id).checked; }
+    function setText(id, val) { document.getElementById(id).innerText = val; }
+
+    function toggleHRA(btn) {
+      var section = document.getElementById('hraSection');
+      var isHidden = section.style.display === 'none';
+      section.style.display = isHidden ? 'block' : 'none';
+      btn.innerText = isHidden ? 'Hide HRA' : 'Show HRA';
+      btn.setAttribute('data-i18n', isHidden ? 'tax.hra.hide' : 'tax.hra.show');
+    }
+
+    function calcTax() {
+      var regime = document.querySelector('input[name="regime"]:checked').value;
+      var showOld = document.getElementById('oldDeductions');
+      showOld.style.display = regime === 'old' ? 'block' : 'none';
+
+      var inputs = {
+        age: getVal('age'),
+        incomeSalary: getVal('incomeSalary'),
+        incomeOther: getVal('incomeOther'),
+        incomeBusiness: getVal('incomeBusiness'),
+        capitalGainsLTCG: getVal('ltcg'),
+        capitalGainsSTCG: getVal('stcg'),
+        deductions80C: getVal('deductions80C'),
+        deductions80D: getVal('deductions80D'),
+        deductions80CCD: getVal('deductions80CCD'),
+        homeLoanInterest: getVal('homeLoanInterest'),
+        hraActual: getVal('hraActual'),
+        hraRent: getVal('hraRent'),
+        hraBasic: getVal('hraBasic'),
+        hraDA: getVal('hraDA'),
+        hraMetro: getChecked('hraMetro'),
+      };
+
+      var resultNew = calcIncomeTax({ ...inputs, regime: 'new' });
+      var resultOld = calcIncomeTax({ ...inputs, regime: 'old' });
+      var result = regime === 'new' ? resultNew : resultOld;
+      var other = regime === 'new' ? resultOld : resultNew;
+
+      animateValue(document.getElementById('rGross'), result.grossTotalIncome);
+      animateValue(document.getElementById('rSD'), result.standardDeduction);
+      animateValue(document.getElementById('rNetTaxable'), result.netTaxableIncome);
+      animateValue(document.getElementById('rDeductions'), result.totalDeductions);
+      animateValue(document.getElementById('rTax'), result.taxBeforeRebate);
+      animateValue(document.getElementById('rStcgTax'), result.stcgTax);
+      animateValue(document.getElementById('rLtcgTax'), result.ltcgTax);
+      animateValue(document.getElementById('rRebate'), result.rebate87A);
+      animateValue(document.getElementById('rMarginalRelief'), result.marginalRelief);
+      animateValue(document.getElementById('rSurcharge'), result.surcharge);
+      animateValue(document.getElementById('rCess'), result.healthCess);
+      animateValue(document.getElementById('rTotalTax'), result.totalTax);
+      var rEff = document.getElementById('rEffective');
+      rEff.innerText = formatPercent(result.effectiveRate);
+      flashValue(rEff);
+
+      var cmp = document.getElementById('rComparison');
+      var diff = resultNew.totalTax - resultOld.totalTax;
+      if (diff > 0) {
+        cmp.innerHTML = 'New Regime: <strong>' + formatINR(resultNew.totalTax) + '</strong> | Old Regime: <strong>' + formatINR(resultOld.totalTax) + '</strong> | Old Regime saves <strong>' + formatINR(diff) + '</strong>';
+        cmp.style.display = 'block';
+      } else if (diff < 0) {
+        cmp.innerHTML = 'New Regime: <strong>' + formatINR(resultNew.totalTax) + '</strong> | Old Regime: <strong>' + formatINR(resultOld.totalTax) + '</strong> | New Regime saves <strong>' + formatINR(Math.abs(diff)) + '</strong>';
+        cmp.style.display = 'block';
+      } else {
+        cmp.style.display = 'none';
+      }
+
+      staggerReveal('resultBox');
+      saveLastInputs('incometax', inputs);
+    }
+
+    initLang();
+    initScrollReveal();
+    document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('[data-lang-btn]').forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+      });
+    });
+    onLangChange(function() {
+      document.querySelectorAll('[data-lang-btn]').forEach(function(b) {
+        b.classList.toggle('active', b.getAttribute('data-lang-btn') === getLang());
+      });
+    });
+    calcTax();
+  </script>
+</body>
+</html>

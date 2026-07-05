@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="home.title">DesiCalc — Free Indian Calculators</title>
+  <meta name="description" content="Free Indian tax calculators. Income Tax FY 2026-27, Stamp Duty all 28 states, RTO Road Tax. No login. Instant results.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧮</text></svg>">
+  <link rel="canonical" href="https://desicalc.in/">
+  <meta property="og:title" content="DesiCalc — Free Indian Calculators">
+  <meta property="og:description" content="Free Indian tax calculators. Income Tax FY 2026-27, Stamp Duty all 28 states, RTO Road Tax. No login. Instant results.">
+  <meta property="og:url" content="https://desicalc.in/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://desicalc.in/assets/img/og-home.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "DesiCalc",
+    "url": "https://desicalc.in",
+    "description": "Free Indian tax calculators. Income Tax FY 2026-27, Stamp Duty all 28 states, RTO Road Tax."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://desicalc.in" }
+    ]
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/calc-core.js"></script>
+  <script src="assets/js/lang-en.js"></script>
+  <script src="assets/js/ad.js"></script>
+</head>
+<body>
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:p-2 focus:bg-white focus:z-50">Skip to content</a>
+
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
+    <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
+      <a href="/" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
+      <div class="lang-toggle" role="group" aria-label="Language toggle">
+        <button onclick="setLang('en')" class="active" data-lang-btn="en" data-i18n="header.lang.en">EN</button>
+        <button onclick="setLang('hi')" data-lang-btn="hi" data-i18n="header.lang.hi">हिं</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="max-w-5xl mx-auto px-4 py-8">
+    <section class="text-center mb-10 scroll-entrance">
+      <h1 class="text-3xl sm:text-4xl font-bold text-stone-900 mb-3" data-i18n="home.h1">Free Indian Calculators</h1>
+      <p class="text-lg text-stone-500" data-i18n="home.subtitle">No login. Just calculate.</p>
+    </section>
+
+    <section class="tool-grid mb-12 scroll-entrance">
+      <div class="tool-card text-center">
+        <div class="text-4xl mb-3">💰</div>
+        <h2 class="text-lg font-bold mb-1" data-i18n="home.tax.title">Income Tax Calculator</h2>
+        <p class="text-sm text-stone-500 mb-4" data-i18n="home.tax.desc">FY 2026-27 — Old vs New regime</p>
+        <a href="tools/income-tax.html" class="btn btn-primary" data-i18n="home.cta">Calculate Now</a>
+      </div>
+      <div class="tool-card text-center">
+        <div class="text-4xl mb-3">🏠</div>
+        <h2 class="text-lg font-bold mb-1" data-i18n="home.stamp.title">Stamp Duty Calculator</h2>
+        <p class="text-sm text-stone-500 mb-4" data-i18n="home.stamp.desc">All 28 states</p>
+        <a href="tools/stamp-duty.html" class="btn btn-primary" data-i18n="home.cta">Calculate Now</a>
+      </div>
+      <div class="tool-card text-center">
+        <div class="text-4xl mb-3">🚗</div>
+        <h2 class="text-lg font-bold mb-1" data-i18n="home.rto.title">RTO Tax Calculator</h2>
+        <p class="text-sm text-stone-500 mb-4" data-i18n="home.rto.desc">All states, all vehicle types</p>
+        <a href="tools/rto-tax.html" class="btn btn-primary" data-i18n="home.cta">Calculate Now</a>
+      </div>
+    </section>
+
+    <section class="ad-slot-in-content mb-8" data-ad-slot="in_content_home">
+    </section>
+
+    <section class="mb-12 scroll-entrance">
+      <h2 class="text-xl font-bold mb-4 text-center" data-i18n="home.resources.title">Guides & Comparisons</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="comparisons/old-vs-new-tax-regime.html" class="card text-center hover:shadow-md transition-shadow no-underline">
+          <div class="font-semibold text-stone-900">Old vs New Tax Regime</div>
+          <div class="text-sm text-stone-500">Which regime saves more? Compare side-by-side</div>
+        </a>
+        <a href="comparisons/stamp-duty-rates-all-states.html" class="card text-center hover:shadow-md transition-shadow no-underline">
+          <div class="font-semibold text-stone-900">Stamp Duty All States</div>
+          <div class="text-sm text-stone-500">Rate comparison across 28 states</div>
+        </a>
+        <a href="comparisons/ev-vs-petrol-road-tax.html" class="card text-center hover:shadow-md transition-shadow no-underline">
+          <div class="font-semibold text-stone-900">EV vs Petrol Road Tax</div>
+          <div class="text-sm text-stone-500">Which saves more on road tax?</div>
+        </a>
+        <a href="guides/how-to-file-itr-2026.html" class="card text-center hover:shadow-md transition-shadow no-underline">
+          <div class="font-semibold text-stone-900">How to File ITR 2026</div>
+          <div class="text-sm text-stone-500">Step-by-step ITR filing guide</div>
+        </a>
+        <a href="guides/how-to-calculate-stamp-duty.html" class="card text-center hover:shadow-md transition-shadow no-underline">
+          <div class="font-semibold text-stone-900">How to Calculate Stamp Duty</div>
+          <div class="text-sm text-stone-500">Property registration explained</div>
+        </a>
+        <a href="guides/how-to-register-new-car-rto.html" class="card text-center hover:shadow-md transition-shadow no-underline">
+          <div class="font-semibold text-stone-900">How to Register New Car</div>
+          <div class="text-sm text-stone-500">RTO registration process</div>
+        </a>
+        <a href="guides/section-87a-rebate-explained.html" class="card text-center hover:shadow-md transition-shadow no-underline">
+          <div class="font-semibold text-stone-900">Section 87A Rebate Guide</div>
+          <div class="text-sm text-stone-500">Tax-free income up to ₹12L explained</div>
+        </a>
+        <a href="guides/capital-gains-tax-changes-2026.html" class="card text-center hover:shadow-md transition-shadow no-underline">
+          <div class="font-semibold text-stone-900">Capital Gains Tax 2026</div>
+          <div class="text-sm text-stone-500">New LTCG/STCG rules explained</div>
+        </a>
+      </div>
+    </section>
+
+    <section class="max-w-2xl mx-auto text-center mb-12 scroll-entrance">
+      <h2 class="text-xl font-bold mb-4" data-i18n="home.why.title">Why DesiCalc?</h2>
+      <ul class="text-left space-y-2 text-stone-600">
+        <li class="flex items-start gap-2"><span class="text-emerald-600 mt-0.5">✓</span> <span data-i18n="home.why.accurate">Accurate FY 2026-27 rates</span></li>
+        <li class="flex items-start gap-2"><span class="text-emerald-600 mt-0.5">✓</span> <span data-i18n="home.why.updated">Updated for Budget 2026</span></li>
+        <li class="flex items-start gap-2"><span class="text-emerald-600 mt-0.5">✓</span> <span data-i18n="home.why.private">Private — no data leaves your device</span></li>
+        <li class="flex items-start gap-2"><span class="text-emerald-600 mt-0.5">✓</span> <span data-i18n="home.why.free">Free forever</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <section class="ad-slot-footer mb-4" data-ad-slot="footer_main">
+  </section>
+
+  <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
+    <div class="max-w-5xl mx-auto px-4 flex justify-center gap-6">
+      <a href="#" data-i18n="footer.about">About</a>
+      <a href="#" data-i18n="footer.privacy">Privacy</a>
+      <a href="#" data-i18n="footer.contact">Contact</a>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast"></div>
+
+  <script>
+    initLang();
+    initScrollReveal();
+    document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('[data-lang-btn]').forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+      });
+    });
+    onLangChange(function() {
+      document.querySelectorAll('[data-lang-btn]').forEach(function(b) {
+        b.classList.toggle('active', b.getAttribute('data-lang-btn') === getLang());
+      });
+    });
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
+</body>
+</html>
