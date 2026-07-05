@@ -9,10 +9,10 @@ const STATIC_ASSETS = [
   '/assets/js/slabs-2026.js',
   '/assets/js/state-rates.js',
   '/assets/js/ad.js',
-  '/assets/img/og-home.jpg',
-  '/assets/img/og-tax-calculator.jpg',
-  '/assets/img/og-stamp-duty.jpg',
-  '/assets/img/og-rto-tax.jpg'
+  '/assets/img/og-home.png',
+  '/assets/img/og-tax-calculator.png',
+  '/assets/img/og-stamp-duty.png',
+  '/assets/img/og-rto-tax.png'
 ]
 
 self.addEventListener('install', event => {
