@@ -1,6 +1,4 @@
 name = "desicalc"
-type = "pages"
-pages_build_output_dir = "public"
 
 [env.production]
 routes = ["*desicalc.in/*"]
