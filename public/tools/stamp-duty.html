@@ -254,6 +254,7 @@
       flashValue(rEff);
       staggerReveal('resultBox');
 
+      syncUrlParams({ state: state, propertyValue: value, gender: gender, propertyType: type, location: location, isFirstTime: firstTime });
       saveLastInputs('stampduty', { state: state, value: value, gender: gender, type: type, location: location, firstTime: firstTime });
     }
 
@@ -273,7 +274,9 @@
         b.classList.toggle('active', b.getAttribute('data-lang-btn') === getLang());
       });
     });
+    applyUrlParams();
     calcStamp();
+
   </script>
 </body>
 </html>

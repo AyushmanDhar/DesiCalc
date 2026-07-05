@@ -352,6 +352,7 @@
       }
 
       staggerReveal('resultBox');
+      syncUrlParams({ ...inputs, regime: regime });
       saveLastInputs('incometax', inputs);
     }
 
@@ -370,6 +371,7 @@
         b.classList.toggle('active', b.getAttribute('data-lang-btn') === getLang());
       });
     });
+    applyUrlParams();
     calcTax();
   </script>
 </body>

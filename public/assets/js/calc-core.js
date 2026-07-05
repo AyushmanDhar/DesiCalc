@@ -103,6 +103,35 @@ function deserializeParams() {
   return out;
 }
 
+function syncUrlParams(obj) {
+  var params = serializeParams(obj);
+  var url = window.location.pathname + (params ? '?' + params : '');
+  history.replaceState(null, '', url);
+}
+
+function applyUrlParams() {
+  var params = deserializeParams();
+  var keys = Object.keys(params);
+  if (keys.length === 0) return false;
+  for (var k in params) {
+    var el = document.getElementById(k);
+    if (!el) {
+      var radio = document.querySelector('input[name="' + k + '"][value="' + params[k] + '"]');
+      if (radio) { radio.checked = true; }
+      continue;
+    }
+    if (el.type === 'checkbox') {
+      el.checked = params[k] === 'true';
+    } else if (el.type === 'radio') {
+      var radios = document.querySelectorAll('input[name="' + el.name + '"]');
+      radios.forEach(function(r) { if (r.value === params[k]) r.checked = true; });
+    } else {
+      el.value = params[k];
+    }
+  }
+  return true;
+}
+
 function saveLastInputs(toolKey, data) {
   try {
     localStorage.setItem('desicalc_' + toolKey + '_last', JSON.stringify(data));

@@ -260,6 +260,7 @@
       flashValue(rEff);
       staggerReveal('resultBox');
 
+      syncUrlParams({ state: state, vehicleType: vehicleType, fuelType: fuelType, exShowroomPrice: price, engineCC: engineCC, seats: seats, isUsed: isUsed, vehicleAge: age });
       saveLastInputs('rtotax', { state: state, vehicleType: vehicleType, fuelType: fuelType, price: price, engineCC: engineCC, seats: seats, isUsed: isUsed, age: age });
     }
 
@@ -279,7 +280,9 @@
         b.classList.toggle('active', b.getAttribute('data-lang-btn') === getLang());
       });
     });
+    applyUrlParams();
     calcRTOForm();
+
   </script>
 </body>
 </html>
