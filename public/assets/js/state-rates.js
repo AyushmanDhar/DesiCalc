@@ -61,7 +61,7 @@ const STAMP_DUTY_RATES = {
   karnataka: {
     name: 'Karnataka',
     rate: { male: 5, female: 5, joint_ff: 5, joint_mm: 5, joint_mf: 5 },
-    registration: { rate: 1, cap: null },
+    registration: { rate: 2, cap: null },
     stampDutySurcharge: { rate: 10, type: 'percent_of_sd' },
   },
   kerala: {
@@ -124,10 +124,9 @@ const STAMP_DUTY_RATES = {
   },
   tamilnadu: {
     name: 'Tamil Nadu',
-    rate: { male: 7, female: 6, joint_ff: 6, joint_mm: 7, joint_mf: 6.5 },
+    rate: { male: 7, female: 7, joint_ff: 7, joint_mm: 7, joint_mf: 7 },
     registration: { rate: 4, cap: null },
     registrationWomen: { rate: 3, maxPropertyValue: 1000000 },
-    surcharge: { rate: 2, type: 'percent_of_sd' },
   },
   telangana: {
     name: 'Telangana',
@@ -377,7 +376,12 @@ const RTO_RATES = {
     ],
     registrationFee: 600,
     hsrpFee: 400,
-    evExemption: { lifeTax: 'partial', evRate: 4, registration: false },
+    evExemption: { lifeTax: 'slabbed', registration: false },
+	evSlabs: [
+	  { min: 0,        max: 1000000,  rate: 5  },
+	  { min: 1000001,  max: 2500000,  rate: 8  },
+	  { min: 2500001,  max: Infinity, rate: 10 },
+	],
     cesses: [
       { type: 'percent', rate: 11, label: 'Infra & Road Safety Cess' },
       { type: 'fixed', amount: 1000, label: 'Transport Workers Cess' },
