@@ -1,2 +1,2 @@
 /*
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://data527.click; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdn.jsdelivr.net; img-src 'self' https: data:; connect-src 'self' https://data527.click; frame-src 'self' https://data527.click
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://data527.click https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; img-src 'self' https: data:; connect-src 'self' https://data527.click; frame-src 'self' https://data527.click
