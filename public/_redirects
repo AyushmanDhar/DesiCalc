@@ -1,0 +1,2 @@
+# Redirect old Cloudflare Pages subdomain to custom domain
+https://desicalc.pages.dev/* https://desicalc.in/:splat 301!
