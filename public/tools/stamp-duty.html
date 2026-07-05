@@ -96,7 +96,7 @@
       </div>
       <div class="lang-toggle" role="group" aria-label="Language toggle">
         <button onclick="setLang('en')" class="active" data-lang-btn="en" data-i18n="header.lang.en">EN</button>
-        <button onclick="setLang('hi')" data-lang-btn="hi" data-i18n="header.lang.hi">हिं</button>
+        <button onclick="setLang('hi')" data-lang-btn="hi" data-i18n="header.lang.hi">Hing</button>
       </div>
     </div>
   </header>
@@ -128,14 +128,6 @@
             </select>
           </div>
           <div>
-            <label for="propertyType" data-i18n="stamp.label.type">Property Type</label>
-            <select id="propertyType" onchange="calcStamp()">
-              <option value="residential" data-i18n="stamp.type.residential">Residential</option>
-              <option value="commercial" data-i18n="stamp.type.commercial">Commercial</option>
-              <option value="industrial" data-i18n="stamp.type.industrial">Industrial</option>
-            </select>
-          </div>
-          <div>
             <label for="location" data-i18n="stamp.label.location">Location</label>
             <select id="location" onchange="calcStamp()">
               <option value="urban" data-i18n="stamp.location.urban">Urban</option>
@@ -149,6 +141,10 @@
             </label>
           </div>
 
+          <div class="flex gap-2 pt-2">
+            <button type="button" class="btn btn-primary flex-1" onclick="calcStamp()" data-i18n="common.calculate">Calculate</button>
+            <button type="button" class="btn btn-outline flex-1" onclick="resetForm()" data-i18n="common.reset">Reset</button>
+          </div>
         </form>
       </div>
 
@@ -159,11 +155,14 @@
           <button class="btn btn-outline btn-sm flex-1" onclick="shareUrl()" data-i18n="common.share">Share</button>
           <button class="btn btn-outline btn-sm flex-1" onclick="copyUrl()" data-i18n="common.copy">Copy Link</button>
         </div>
+        <h2 class="text-base font-bold mb-2" data-i18n="common.result">Result</h2>
         <div id="resultBox" class="result-card fade-in" aria-live="polite">
           <div class="result-row"><span class="result-label" data-i18n="stamp.result.sdRate">Stamp Duty Rate</span><span class="result-value" id="rSdRate">0%</span></div>
+          <div class="result-row"><span class="result-label" data-i18n="stamp.result.regRate">Registration Rate</span><span class="result-value" id="rRegRate">0%</span></div>
           <div class="result-row"><span class="result-label" data-i18n="stamp.result.sd">Stamp Duty</span><span class="result-value" id="rSd">₹0</span></div>
           <div class="result-row"><span class="result-label" data-i18n="stamp.result.reg">Registration Charges</span><span class="result-value" id="rReg">₹0</span></div>
           <div class="result-row"><span class="result-label" data-i18n="stamp.result.cess">Cess / Surcharge</span><span class="result-value" id="rCess">₹0</span></div>
+          <div class="result-row"><span class="result-label" data-i18n="stamp.result.other">Other Charges</span><span class="result-value" id="rOther">₹0</span></div>
           <div class="result-row total"><span class="result-label" data-i18n="stamp.result.total">Total Cost</span><span class="result-value" id="rTotal">₹0</span></div>
           <div class="result-row"><span class="result-label" data-i18n="stamp.result.effective">Effective Rate</span><span class="result-value" id="rEffective">0.00%</span></div>
         </div>
@@ -235,27 +234,32 @@
       var state = document.getElementById('state').value;
       var value = getVal('propertyValue');
       var gender = document.getElementById('gender').value;
-      var type = document.getElementById('propertyType').value;
       var location = document.getElementById('location').value;
       var firstTime = document.getElementById('isFirstTime').checked;
 
-      var result = calcStampDuty(state, value, gender, type, location, firstTime);
+      var result = calcStampDuty(state, value, gender, location, firstTime);
       if (!result) return;
 
       var rSdRate = document.getElementById('rSdRate');
       rSdRate.innerText = result.stampDutyRate + '%';
       flashValue(rSdRate);
+      var rRegRate = document.getElementById('rRegRate');
+      rRegRate.innerText = result.registrationRate + '%';
+      flashValue(rRegRate);
       animateValue(document.getElementById('rSd'), result.stampDutyAmount);
       animateValue(document.getElementById('rReg'), result.registrationAmount);
       animateValue(document.getElementById('rCess'), result.cessAmount);
+      var rOther = document.getElementById('rOther');
+      animateValue(rOther, result.otherCharges);
+      rOther.parentElement.style.display = result.otherCharges > 0 ? '' : 'none';
       animateValue(document.getElementById('rTotal'), result.totalCharges);
       var rEff = document.getElementById('rEffective');
       rEff.innerText = formatPercent(result.effectiveRate);
       flashValue(rEff);
       staggerReveal('resultBox');
 
-      syncUrlParams({ state: state, propertyValue: value, gender: gender, propertyType: type, location: location, isFirstTime: firstTime });
-      saveLastInputs('stampduty', { state: state, value: value, gender: gender, type: type, location: location, firstTime: firstTime });
+      syncUrlParams({ state: state, propertyValue: value, gender: gender, location: location, isFirstTime: firstTime });
+      saveLastInputs('stampduty', { state: state, value: value, gender: gender, location: location, firstTime: firstTime });
     }
 
     populateStates();
@@ -274,6 +278,13 @@
         b.classList.toggle('active', b.getAttribute('data-lang-btn') === getLang());
       });
     });
+    function resetForm() {
+      document.getElementById('propertyValue').value = '5000000';
+      document.getElementById('gender').value = 'male';
+      document.getElementById('location').value = 'urban';
+      document.getElementById('isFirstTime').checked = false;
+      calcStamp();
+    }
     applyUrlParams();
     calcStamp();
 

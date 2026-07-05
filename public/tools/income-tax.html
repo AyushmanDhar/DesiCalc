@@ -97,7 +97,7 @@
       </div>
       <div class="lang-toggle" role="group" aria-label="Language toggle">
         <button onclick="setLang('en')" class="active" data-lang-btn="en" data-i18n="header.lang.en">EN</button>
-        <button onclick="setLang('hi')" data-lang-btn="hi" data-i18n="header.lang.hi">हिं</button>
+        <button onclick="setLang('hi')" data-lang-btn="hi" data-i18n="header.lang.hi">Hing</button>
       </div>
     </div>
   </header>
@@ -172,6 +172,7 @@
               <input type="text" id="homeLoanInterest" inputmode="numeric" value="0" oninput="calcTax()">
             </div>
             <div>
+              <div class="section-title" data-i18n="tax.hra.title">HRA Details</div>
               <button type="button" class="btn btn-outline btn-sm w-full" onclick="toggleHRA(this)" data-i18n="tax.hra.show">Show HRA</button>
               <div id="hraSection" style="display:none" class="space-y-3 mt-3">
                 <div>
@@ -198,6 +199,10 @@
             </div>
           </div>
 
+          <div class="flex gap-2 pt-2">
+            <button type="button" class="btn btn-primary flex-1" onclick="calcTax()" data-i18n="common.calculate">Calculate</button>
+            <button type="button" class="btn btn-outline flex-1" onclick="resetForm()" data-i18n="common.reset">Reset</button>
+          </div>
         </form>
       </div>
 
@@ -208,8 +213,10 @@
           <button class="btn btn-outline btn-sm flex-1" onclick="shareUrl()" data-i18n="common.share">Share</button>
           <button class="btn btn-outline btn-sm flex-1" onclick="copyUrl()" data-i18n="common.copy">Copy Link</button>
         </div>
+        <h2 class="text-base font-bold mb-2" data-i18n="common.result">Result</h2>
         <div id="resultBox" class="result-card fade-in" aria-live="polite">
           <div id="rComparison" class="mb-3 p-2 bg-amber-50 rounded text-sm text-center font-medium" style="display:none"></div>
+          <div id="rRecommend" class="mb-3 p-2 bg-emerald-50 rounded text-sm text-center font-medium" style="display:none"></div>
           <div class="result-row"><span class="result-label" data-i18n="tax.result.gross">Gross Total Income</span><span class="result-value" id="rGross">₹0</span></div>
           <div class="result-row"><span class="result-label" data-i18n="tax.result.sd">Standard Deduction</span><span class="result-value" id="rSD">₹0</span></div>
           <div class="result-row"><span class="result-label" data-i18n="tax.result.net">Net Taxable Income</span><span class="result-value" id="rNetTaxable">₹0</span></div>
@@ -341,14 +348,21 @@
 
       var cmp = document.getElementById('rComparison');
       var diff = resultNew.totalTax - resultOld.totalTax;
+      var rNew = t('tax.result.regime.new'), rOld = t('tax.result.regime.old');
       if (diff > 0) {
-        cmp.innerHTML = 'New Regime: <strong>' + formatINR(resultNew.totalTax) + '</strong> | Old Regime: <strong>' + formatINR(resultOld.totalTax) + '</strong> | Old Regime saves <strong>' + formatINR(diff) + '</strong>';
+        cmp.innerHTML = rNew + ': <strong>' + formatINR(resultNew.totalTax) + '</strong> | ' + rOld + ': <strong>' + formatINR(resultOld.totalTax) + '</strong> | ' + rOld + ' ' + t('tax.result.save') + ' <strong>' + formatINR(diff) + '</strong>';
         cmp.style.display = 'block';
       } else if (diff < 0) {
-        cmp.innerHTML = 'New Regime: <strong>' + formatINR(resultNew.totalTax) + '</strong> | Old Regime: <strong>' + formatINR(resultOld.totalTax) + '</strong> | New Regime saves <strong>' + formatINR(Math.abs(diff)) + '</strong>';
+        cmp.innerHTML = rNew + ': <strong>' + formatINR(resultNew.totalTax) + '</strong> | ' + rOld + ': <strong>' + formatINR(resultOld.totalTax) + '</strong> | ' + rNew + ' ' + t('tax.result.save') + ' <strong>' + formatINR(Math.abs(diff)) + '</strong>';
         cmp.style.display = 'block';
       } else {
         cmp.style.display = 'none';
+      }
+      var recommend = document.getElementById('rRecommend');
+      if (recommend) {
+        if (diff > 0) recommend.innerHTML = '🏆 ' + t('tax.result.recommend') + ': ' + rOld;
+        else if (diff < 0) recommend.innerHTML = '🏆 ' + t('tax.result.recommend') + ': ' + rNew;
+        else recommend.style.display = 'none';
       }
 
       staggerReveal('resultBox');
@@ -371,6 +385,28 @@
         b.classList.toggle('active', b.getAttribute('data-lang-btn') === getLang());
       });
     });
+    function resetForm() {
+      document.getElementById('incomeSalary').value = '1200000';
+      document.getElementById('incomeOther').value = '0';
+      document.getElementById('incomeBusiness').value = '0';
+      document.getElementById('ltcg').value = '0';
+      document.getElementById('stcg').value = '0';
+      document.getElementById('age').value = '30';
+      document.querySelector('input[name="regime"][value="new"]').checked = true;
+      document.getElementById('deductions80C').value = '0';
+      document.getElementById('deductions80D').value = '0';
+      document.getElementById('deductions80CCD').value = '0';
+      document.getElementById('homeLoanInterest').value = '0';
+      document.getElementById('hraActual').value = '0';
+      document.getElementById('hraRent').value = '0';
+      document.getElementById('hraBasic').value = '0';
+      document.getElementById('hraDA').value = '0';
+      document.getElementById('hraMetro').checked = false;
+      document.getElementById('hraSection').style.display = 'none';
+      document.getElementById('oldDeductions').style.display = 'none';
+      document.querySelector('[data-i18n="tax.hra.show"]').innerText = t('tax.hra.show');
+      calcTax();
+    }
     applyUrlParams();
     calcTax();
   </script>
