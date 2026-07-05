@@ -63,7 +63,3 @@ Contributions welcome! Open an issue or submit a PR.
 - Add or update state-wise rates in `public/assets/js/state-rates.js`
 - Add translations in `public/assets/js/lang-en.js` / `lang-hi.js`
 - Calculator logic lives in `public/assets/js/calc-core.js`
-
-## License
-
-MIT
