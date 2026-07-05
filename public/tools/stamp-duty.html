@@ -128,14 +128,6 @@
             </select>
           </div>
           <div>
-            <label for="propertyType" data-i18n="stamp.label.type">Property Type</label>
-            <select id="propertyType" onchange="calcStamp()">
-              <option value="residential" data-i18n="stamp.type.residential">Residential</option>
-              <option value="commercial" data-i18n="stamp.type.commercial">Commercial</option>
-              <option value="industrial" data-i18n="stamp.type.industrial">Industrial</option>
-            </select>
-          </div>
-          <div>
             <label for="location" data-i18n="stamp.label.location">Location</label>
             <select id="location" onchange="calcStamp()">
               <option value="urban" data-i18n="stamp.location.urban">Urban</option>
@@ -242,11 +234,10 @@
       var state = document.getElementById('state').value;
       var value = getVal('propertyValue');
       var gender = document.getElementById('gender').value;
-      var type = document.getElementById('propertyType').value;
       var location = document.getElementById('location').value;
       var firstTime = document.getElementById('isFirstTime').checked;
 
-      var result = calcStampDuty(state, value, gender, type, location, firstTime);
+      var result = calcStampDuty(state, value, gender, location, firstTime);
       if (!result) return;
 
       var rSdRate = document.getElementById('rSdRate');
@@ -267,8 +258,8 @@
       flashValue(rEff);
       staggerReveal('resultBox');
 
-      syncUrlParams({ state: state, propertyValue: value, gender: gender, propertyType: type, location: location, isFirstTime: firstTime });
-      saveLastInputs('stampduty', { state: state, value: value, gender: gender, type: type, location: location, firstTime: firstTime });
+      syncUrlParams({ state: state, propertyValue: value, gender: gender, location: location, isFirstTime: firstTime });
+      saveLastInputs('stampduty', { state: state, value: value, gender: gender, location: location, firstTime: firstTime });
     }
 
     populateStates();
@@ -290,7 +281,6 @@
     function resetForm() {
       document.getElementById('propertyValue').value = '5000000';
       document.getElementById('gender').value = 'male';
-      document.getElementById('propertyType').value = 'residential';
       document.getElementById('location').value = 'urban';
       document.getElementById('isFirstTime').checked = false;
       calcStamp();

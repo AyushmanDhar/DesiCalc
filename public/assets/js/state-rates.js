@@ -28,7 +28,7 @@ const STAMP_DUTY_RATES = {
     name: 'Delhi',
     rate: { male: 6, female: 4, joint_ff: 4, joint_mm: 6, joint_mf: 5 },
     registration: { rate: 1, cap: null },
-    firstTimeRebate: { male: 1, female: 1 },
+    firstTimeRebate: { female: 1 },
   },
   goa: {
     name: 'Goa',
@@ -79,8 +79,8 @@ const STAMP_DUTY_RATES = {
     name: 'Maharashtra',
     rate: { male: 6, female: 5, joint_ff: 5, joint_mm: 6, joint_mf: 5 },
     registration: { rate: 1, cap: 30000 },
-    metroCess: { rate: 1, applies: ['mumbai'] },
-    lbc: { rate: 1, applies: ['pune', 'thane', 'nagpur'] },
+    metroCess: { rate: 1 },
+    lbc: { rate: 1 },
   },
   manipur: {
     name: 'Manipur',
@@ -179,8 +179,17 @@ const RTO_RATES = {
     hsrpFee: 400,
     evExemption: { lifeTax: 'full', registration: false },
     cesses: [
-      { type: 'percent', rate: 10, label: 'Safety Cess' },
+      { type: 'percent', rate: 10, fuel: 'petrol', label: 'Safety Cess' },
+	  { type: 'percent', rate: 10, fuel: 'diesel', label: 'Safety Cess' },
     ],
+    commercial: {
+      brackets: [
+        { minSeats: 1, maxSeats: 6, type: 'one_time', amount: 5000 },
+        { minSeats: 7, maxSeats: 12, type: 'per_seat', rate: 2000, period: 'year' },
+        { minSeats: 13, maxSeats: 30, type: 'per_seat', rate: 3000, period: 'year' },
+        { minSeats: 31, maxSeats: Infinity, type: 'per_seat', rate: 4000, period: 'year' },
+      ],
+    },
   },
   arunachalpradesh: {
     name: 'Arunachal Pradesh',
@@ -189,6 +198,13 @@ const RTO_RATES = {
     registrationFee: 600,
     hsrpFee: 400,
     evExemption: { lifeTax: 'full', registration: false },
+    commercial: {
+      brackets: [
+        { minSeats: 1, maxSeats: 6, type: 'one_time', amount: 4000 },
+        { minSeats: 7, maxSeats: 12, type: 'per_seat', rate: 1200, period: 'year' },
+        { minSeats: 13, maxSeats: Infinity, type: 'per_seat', rate: 2000, period: 'year' },
+      ],
+    },
   },
   assam: {
     name: 'Assam',
@@ -197,6 +213,13 @@ const RTO_RATES = {
     registrationFee: 600,
     hsrpFee: 400,
     evExemption: { lifeTax: 'full', registration: false },
+    commercial: {
+      brackets: [
+        { minSeats: 1, maxSeats: 6, type: 'one_time', amount: 4500 },
+        { minSeats: 7, maxSeats: 12, type: 'per_seat', rate: 1500, period: 'year' },
+        { minSeats: 13, maxSeats: Infinity, type: 'per_seat', rate: 2500, period: 'year' },
+      ],
+    },
   },
   bihar: {
     name: 'Bihar',
@@ -205,6 +228,13 @@ const RTO_RATES = {
     registrationFee: 600,
     hsrpFee: 400,
     evExemption: { lifeTax: 'full', registration: false },
+    commercial: {
+      brackets: [
+        { minSeats: 1, maxSeats: 6, type: 'one_time', amount: 5000 },
+        { minSeats: 7, maxSeats: 12, type: 'per_seat', rate: 2000, period: 'year' },
+        { minSeats: 13, maxSeats: Infinity, type: 'per_seat', rate: 3000, period: 'year' },
+      ],
+    },
   },
   chhattisgarh: {
     name: 'Chhattisgarh',
@@ -213,6 +243,13 @@ const RTO_RATES = {
     registrationFee: 600,
     hsrpFee: 400,
     evExemption: { lifeTax: 'full', registration: false },
+    commercial: {
+      brackets: [
+        { minSeats: 1, maxSeats: 6, type: 'one_time', amount: 3500 },
+        { minSeats: 7, maxSeats: 12, type: 'per_seat', rate: 1200, period: 'year' },
+        { minSeats: 13, maxSeats: Infinity, type: 'per_seat', rate: 2000, period: 'year' },
+      ],
+    },
   },
   delhi: {
     name: 'Delhi',
@@ -237,6 +274,14 @@ const RTO_RATES = {
     registrationFee: 600,
     hsrpFee: 400,
     evExemption: { lifeTax: 'full', registration: false },
+    commercial: {
+      brackets: [
+        { minSeats: 1, maxSeats: 4, type: 'one_time', amount: 5000 },
+        { minSeats: 5, maxSeats: 6, type: 'one_time', amount: 8000 },
+        { minSeats: 7, maxSeats: 12, type: 'per_seat', rate: 2000, period: 'year' },
+        { minSeats: 13, maxSeats: Infinity, type: 'per_seat', rate: 2000, period: 'year' },
+      ],
+    },
   },
   goa: {
     name: 'Goa',
@@ -245,6 +290,13 @@ const RTO_RATES = {
     registrationFee: 600,
     hsrpFee: 400,
     evExemption: { lifeTax: 'full', registration: false },
+    commercial: {
+      brackets: [
+        { minSeats: 1, maxSeats: 6, type: 'one_time', amount: 4000 },
+        { minSeats: 7, maxSeats: 12, type: 'per_seat', rate: 1500, period: 'year' },
+        { minSeats: 13, maxSeats: Infinity, type: 'per_seat', rate: 2500, period: 'year' },
+      ],
+    },
   },
   gujarat: {
     name: 'Gujarat',
@@ -253,6 +305,15 @@ const RTO_RATES = {
     registrationFee: 600,
     hsrpFee: 400,
     evExemption: { lifeTax: 'partial', evRate: 1, registration: false },
+    commercial: {
+      brackets: [
+        { minSeats: 1, maxSeats: 3, type: 'one_time', amount: 3000 },
+        { minSeats: 4, maxSeats: 6, type: 'per_seat', rate: 1000, period: 'year' },
+        { minSeats: 7, maxSeats: 12, type: 'per_seat', rate: 1500, period: 'year' },
+        { minSeats: 13, maxSeats: 20, type: 'per_seat', rate: 2000, period: 'year' },
+        { minSeats: 21, maxSeats: Infinity, type: 'per_seat', rate: 2500, period: 'year' },
+      ],
+    },
   },
   haryana: {
     name: 'Haryana',
@@ -265,6 +326,15 @@ const RTO_RATES = {
     registrationFee: 600,
     hsrpFee: 400,
     evExemption: { lifeTax: 'concession', concessionPercent: 75, registration: false },
+    commercial: {
+      brackets: [
+		{ minSeats: 1, maxSeats: 3, type: 'one_time', amount: 3000 },
+        { minSeats: 4, maxSeats: 6, type: 'one_time', amount: 5000 },
+        { minSeats: 7, maxSeats: 12, type: 'per_seat', rate: 2000, period: 'quarter' },
+        { minSeats: 13, maxSeats: 30, type: 'per_seat', rate: 3000, period: 'quarter' },
+        { minSeats: 31, maxSeats: Infinity, type: 'per_seat', rate: 4000, period: 'quarter' },
+      ],
+    },
   },
   himachalpradesh: {
     name: 'Himachal Pradesh',
@@ -273,6 +343,13 @@ const RTO_RATES = {
     registrationFee: 600,
     hsrpFee: 400,
     evExemption: { lifeTax: 'full', registration: false },
+    commercial: {
+      brackets: [
+        { minSeats: 1, maxSeats: 6, type: 'one_time', amount: 3500 },
+        { minSeats: 7, maxSeats: 12, type: 'per_seat', rate: 1000, period: 'year' },
+        { minSeats: 13, maxSeats: Infinity, type: 'per_seat', rate: 1800, period: 'year' },
+      ],
+    },
   },
   jharkhand: {
     name: 'Jharkhand',
@@ -281,6 +358,13 @@ const RTO_RATES = {
     registrationFee: 600,
     hsrpFee: 400,
     evExemption: { lifeTax: 'full', registration: false },
+    commercial: {
+      brackets: [
+        { minSeats: 1, maxSeats: 6, type: 'one_time', amount: 4000 },
+        { minSeats: 7, maxSeats: 12, type: 'per_seat', rate: 1500, period: 'year' },
+        { minSeats: 13, maxSeats: Infinity, type: 'per_seat', rate: 2500, period: 'year' },
+      ],
+    },
   },
   karnataka: {
     name: 'Karnataka',
@@ -298,6 +382,14 @@ const RTO_RATES = {
       { type: 'percent', rate: 11, label: 'Infra & Road Safety Cess' },
       { type: 'fixed', amount: 1000, label: 'Transport Workers Cess' },
     ],
+    commercial: {
+      brackets: [
+        { minSeats: 1, maxSeats: 3, type: 'one_time', amount: 2500 },
+        { minSeats: 4, maxSeats: 12, type: 'per_seat', rate: 1500, period: 'quarter' },
+        { minSeats: 13, maxSeats: 20, type: 'per_seat', rate: 1500, period: 'quarter' },
+        { minSeats: 21, maxSeats: Infinity, type: 'per_seat', rate: 1500, period: 'quarter' },
+      ],
+    },
   },
   kerala: {
     name: 'Kerala',
@@ -319,6 +411,15 @@ const RTO_RATES = {
       { min: 2000001, max: 4000000, rate: 10 },
       { min: 4000001, max: Infinity, rate: 15 },
     ],
+    commercial: {
+      brackets: [
+        { minSeats: 1, maxSeats: 3, type: 'one_time', amount: 3000 },
+        { minSeats: 4, maxSeats: 5, type: 'per_seat', rate: 300, period: 'quarter' },
+        { minSeats: 6, maxSeats: 12, type: 'per_seat', rate: 400, period: 'quarter' },
+        { minSeats: 13, maxSeats: 20, type: 'per_seat', rate: 500, period: 'quarter' },
+        { minSeats: 21, maxSeats: Infinity, type: 'per_seat', rate: 600, period: 'quarter' },
+      ],
+    },
   },
   madhyapradesh: {
     name: 'Madhya Pradesh',
@@ -337,8 +438,16 @@ const RTO_RATES = {
     },
     registrationFee: 600,
     hsrpFee: 400,
-    evExemption: { lifeTax: 'none' },
+    evExemption: { lifeTax: 'full', evPriceCap: 2000000, registration: false },
     taxModel: 'quarterly',
+    commercial: {
+      brackets: [
+        { minSeats: 1, maxSeats: 6, type: 'one_time', amount: 4000 },
+        { minSeats: 7, maxSeats: 12, type: 'per_seat', rate: 1200, period: 'year' },
+        { minSeats: 13, maxSeats: 32, type: 'per_seat', rate: 2000, period: 'year' },
+        { minSeats: 33, maxSeats: Infinity, type: 'per_seat', rate: 3000, period: 'year' },
+      ],
+    },
   },
   maharashtra: {
     name: 'Maharashtra',
@@ -367,6 +476,16 @@ const RTO_RATES = {
     cesses: [
       { type: 'percent', rate: 2, fuel: 'diesel', label: 'Diesel Cess' },
     ],
+    commercial: {
+      brackets: [
+		{ minSeats: 1, maxSeats: 2, type: 'one_time', amount: 2500 },
+        { minSeats: 3, maxSeats: 4, type: 'one_time', amount: 3850 },
+        { minSeats: 5, maxSeats: 6, type: 'one_time', amount: 7150 },
+        { minSeats: 7, maxSeats: 12, type: 'per_seat', rate: 1700, period: 'year' },
+        { minSeats: 13, maxSeats: 24, type: 'per_seat', rate: 3000, period: 'year' },
+        { minSeats: 25, maxSeats: Infinity, type: 'per_seat', rate: 5000, period: 'year' },
+      ],
+    },
   },
   manipur: {
     name: 'Manipur',
@@ -375,6 +494,13 @@ const RTO_RATES = {
     registrationFee: 600,
     hsrpFee: 400,
     evExemption: { lifeTax: 'full', registration: false },
+    commercial: {
+      brackets: [
+        { minSeats: 1, maxSeats: 6, type: 'one_time', amount: 3000 },
+        { minSeats: 7, maxSeats: 12, type: 'per_seat', rate: 1000, period: 'year' },
+        { minSeats: 13, maxSeats: Infinity, type: 'per_seat', rate: 1800, period: 'year' },
+      ],
+    },
   },
   meghalaya: {
     name: 'Meghalaya',
@@ -383,6 +509,13 @@ const RTO_RATES = {
     registrationFee: 600,
     hsrpFee: 400,
     evExemption: { lifeTax: 'full', registration: false },
+    commercial: {
+      brackets: [
+        { minSeats: 1, maxSeats: 6, type: 'one_time', amount: 4000 },
+        { minSeats: 7, maxSeats: 12, type: 'per_seat', rate: 1400, period: 'year' },
+        { minSeats: 13, maxSeats: Infinity, type: 'per_seat', rate: 2200, period: 'year' },
+      ],
+    },
   },
   mizoram: {
     name: 'Mizoram',
@@ -391,6 +524,13 @@ const RTO_RATES = {
     registrationFee: 600,
     hsrpFee: 400,
     evExemption: { lifeTax: 'full', registration: false },
+    commercial: {
+      brackets: [
+        { minSeats: 1, maxSeats: 6, type: 'one_time', amount: 3000 },
+        { minSeats: 7, maxSeats: 12, type: 'per_seat', rate: 1000, period: 'year' },
+        { minSeats: 13, maxSeats: Infinity, type: 'per_seat', rate: 1800, period: 'year' },
+      ],
+    },
   },
   nagaland: {
     name: 'Nagaland',
@@ -399,6 +539,13 @@ const RTO_RATES = {
     registrationFee: 600,
     hsrpFee: 400,
     evExemption: { lifeTax: 'full', registration: false },
+    commercial: {
+      brackets: [
+        { minSeats: 1, maxSeats: 6, type: 'one_time', amount: 3500 },
+        { minSeats: 7, maxSeats: 12, type: 'per_seat', rate: 1200, period: 'year' },
+        { minSeats: 13, maxSeats: Infinity, type: 'per_seat', rate: 2000, period: 'year' },
+      ],
+    },
   },
   odisha: {
     name: 'Odisha',
@@ -407,6 +554,13 @@ const RTO_RATES = {
     registrationFee: 600,
     hsrpFee: 400,
     evExemption: { lifeTax: 'full', registration: false },
+    commercial: {
+      brackets: [
+        { minSeats: 1, maxSeats: 6, type: 'one_time', amount: 4000 },
+        { minSeats: 7, maxSeats: 12, type: 'per_seat', rate: 1500, period: 'year' },
+        { minSeats: 13, maxSeats: Infinity, type: 'per_seat', rate: 2500, period: 'year' },
+      ],
+    },
   },
   punjab: {
     name: 'Punjab',
@@ -415,6 +569,15 @@ const RTO_RATES = {
     registrationFee: 600,
     hsrpFee: 400,
     evExemption: { lifeTax: 'full', registration: false },
+    commercial: {
+      brackets: [
+		{ minSeats: 1, maxSeats: 3, type: 'one_time', amount: 3000 },
+        { minSeats: 4, maxSeats: 6, type: 'one_time', amount: 5000 },
+        { minSeats: 7, maxSeats: 12, type: 'per_seat', rate: 2000, period: 'quarter' },
+        { minSeats: 13, maxSeats: 30, type: 'per_seat', rate: 3000, period: 'quarter' },
+        { minSeats: 31, maxSeats: Infinity, type: 'per_seat', rate: 4000, period: 'quarter' },
+      ],
+    },
   },
   rajasthan: {
     name: 'Rajasthan',
@@ -423,6 +586,14 @@ const RTO_RATES = {
     registrationFee: 600,
     hsrpFee: 400,
     evExemption: { lifeTax: 'full', registration: false },
+    commercial: {
+      brackets: [
+        { minSeats: 1, maxSeats: 6, type: 'per_seat', rate: 150, period: 'month' },
+        { minSeats: 7, maxSeats: 12, type: 'per_seat', rate: 200, period: 'month' },
+        { minSeats: 13, maxSeats: 30, type: 'per_seat', rate: 250, period: 'month' },
+        { minSeats: 31, maxSeats: Infinity, type: 'per_seat', rate: 300, period: 'month' },
+      ],
+    },
   },
   sikkim: {
     name: 'Sikkim',
@@ -431,6 +602,13 @@ const RTO_RATES = {
     registrationFee: 600,
     hsrpFee: 400,
     evExemption: { lifeTax: 'full', registration: false },
+    commercial: {
+      brackets: [
+        { minSeats: 1, maxSeats: 6, type: 'one_time', amount: 3000 },
+        { minSeats: 7, maxSeats: 12, type: 'per_seat', rate: 1000, period: 'year' },
+        { minSeats: 13, maxSeats: Infinity, type: 'per_seat', rate: 1800, period: 'year' },
+      ],
+    },
   },
   tamilnadu: {
     name: 'Tamil Nadu',
@@ -444,6 +622,15 @@ const RTO_RATES = {
     registrationFee: 600,
     hsrpFee: 400,
     evExemption: { lifeTax: 'full', registration: false },
+    commercial: {
+      brackets: [
+        { minSeats: 1, maxSeats: 4, type: 'one_time', amount: 3000 },
+        { minSeats: 5, maxSeats: 7, type: 'per_seat', rate: 200, period: 'quarter' },
+        { minSeats: 8, maxSeats: 13, type: 'per_seat', rate: 200, period: 'quarter' },
+        { minSeats: 14, maxSeats: 35, type: 'per_seat', rate: 400, period: 'quarter' },
+        { minSeats: 36, maxSeats: Infinity, type: 'per_seat', rate: 500, period: 'quarter' },
+      ],
+    },
   },
   telangana: {
     name: 'Telangana',
@@ -460,6 +647,14 @@ const RTO_RATES = {
     cesses: [
       { type: 'fixed', amount: 5000, label: 'Road Safety Cess' },
     ],
+    commercial: {
+      brackets: [
+        { minSeats: 1, maxSeats: 6, type: 'one_time', amount: 5000 },
+        { minSeats: 7, maxSeats: 12, type: 'per_seat', rate: 2000, period: 'year' },
+        { minSeats: 13, maxSeats: 30, type: 'per_seat', rate: 3000, period: 'year' },
+        { minSeats: 31, maxSeats: Infinity, type: 'per_seat', rate: 4000, period: 'year' },
+      ],
+    },
   },
   tripura: {
     name: 'Tripura',
@@ -468,6 +663,13 @@ const RTO_RATES = {
     registrationFee: 600,
     hsrpFee: 400,
     evExemption: { lifeTax: 'full', registration: false },
+    commercial: {
+      brackets: [
+        { minSeats: 1, maxSeats: 6, type: 'one_time', amount: 3000 },
+        { minSeats: 7, maxSeats: 12, type: 'per_seat', rate: 1000, period: 'year' },
+        { minSeats: 13, maxSeats: Infinity, type: 'per_seat', rate: 1800, period: 'year' },
+      ],
+    },
   },
   uttarpradesh: {
     name: 'Uttar Pradesh',
@@ -479,6 +681,15 @@ const RTO_RATES = {
     registrationFee: 600,
     hsrpFee: 400,
     evExemption: { lifeTax: 'full', registration: false },
+    commercial: {
+      brackets: [
+        { minSeats: 1, maxSeats: 3, type: 'one_time', amount: 2000 },
+        { minSeats: 4, maxSeats: 6, type: 'per_seat', rate: 3000, period: 'quarter' },
+        { minSeats: 7, maxSeats: 12, type: 'per_seat', rate: 6000, period: 'quarter' },
+        { minSeats: 13, maxSeats: 32, type: 'per_seat', rate: 10000, period: 'quarter' },
+        { minSeats: 33, maxSeats: Infinity, type: 'per_seat', rate: 15000, period: 'quarter' },
+      ],
+    },
   },
   uttarakhand: {
     name: 'Uttarakhand',
@@ -487,6 +698,13 @@ const RTO_RATES = {
     registrationFee: 600,
     hsrpFee: 400,
     evExemption: { lifeTax: 'full', registration: false },
+    commercial: {
+      brackets: [
+        { minSeats: 1, maxSeats: 6, type: 'one_time', amount: 3500 },
+        { minSeats: 7, maxSeats: 12, type: 'per_seat', rate: 1200, period: 'year' },
+        { minSeats: 13, maxSeats: Infinity, type: 'per_seat', rate: 2000, period: 'year' },
+      ],
+    },
   },
   westbengal: {
     name: 'West Bengal',
@@ -495,10 +713,20 @@ const RTO_RATES = {
     registrationFee: 600,
     hsrpFee: 400,
     evExemption: { lifeTax: 'full', registration: false },
+    commercial: {
+      brackets: [
+		{ minSeats: 1, maxSeats: 2, type: 'one_time', amount: 2500 },
+        { minSeats: 3, maxSeats: 4, type: 'one_time', amount: 4000 },
+        { minSeats: 5, maxSeats: 6, type: 'one_time', amount: 7000 },
+        { minSeats: 7, maxSeats: 12, type: 'per_seat', rate: 1200, period: 'year' },
+        { minSeats: 13, maxSeats: 26, type: 'per_seat', rate: 1800, period: 'year' },
+        { minSeats: 27, maxSeats: 50, type: 'per_seat', rate: 2500, period: 'year' },
+      ],
+    },
   },
 };
 
-function calcStampDuty(state, propertyValue, gender, propertyType, location, isFirstTime) {
+function calcStampDuty(state, propertyValue, gender, location, isFirstTime) {
   const s = STAMP_DUTY_RATES[state];
   if (!s) return null;
 
@@ -565,12 +793,43 @@ function calcRTO(state, vehicleType, fuelType, exShowroomPrice, engineCC, isUsed
   const s = RTO_RATES[state];
   if (!s) return null;
   const isEV = fuelType === 'ev' || vehicleType === 'ev';
+  const isCommercial = vehicleType === 'commercial';
   let lifeTax = 0;
   let taxRate = 0;
   let cessTotal = 0;
+  let annualTax = 0;
+  let commercialPeriod = null;
+  let calculated = false;
+
+  // ---- Commercial vehicle: seating-based tax ----
+  if (isCommercial && s.commercial && s.commercial.brackets) {
+    const bracket = s.commercial.brackets.find(b => seats >= b.minSeats && seats <= b.maxSeats);
+    if (bracket) {
+      if (bracket.type === 'one_time') {
+        lifeTax = bracket.amount;
+        commercialPeriod = 'lifetime';
+      } else if (bracket.type === 'per_seat') {
+        const perSeatAmount = bracket.rate * seats;
+        if (bracket.period === 'lifetime' || !bracket.period) {
+          lifeTax = perSeatAmount;
+        } else if (bracket.period === 'year') {
+          annualTax = perSeatAmount;
+          lifeTax = 0;
+        } else if (bracket.period === 'quarter') {
+          annualTax = perSeatAmount * 4;
+          lifeTax = 0;
+        } else if (bracket.period === 'month') {
+          annualTax = perSeatAmount * 12;
+          lifeTax = 0;
+        }
+        commercialPeriod = bracket.period || 'lifetime';
+      }
+      calculated = true;
+    }
+  }
 
   // ---- Determine tax based on EV status and type ----
-  if (isEV && s.evExemption) {
+  if (!calculated && isEV && s.evExemption) {
     if (s.evExemption.lifeTax === 'full') {
       lifeTax = 0;
     } else if (s.evExemption.lifeTax === 'partial') {
@@ -590,11 +849,11 @@ function calcRTO(state, vehicleType, fuelType, exShowroomPrice, engineCC, isUsed
       }
       lifeTax = exShowroomPrice * taxRate / 100;
     }
+    calculated = true;
   }
 
-  // If EV already handled (lifeTax > 0 or explicitly 0 by full exemption), skip standard calc.
-  // For EV with lifeTax === 'none' or no evExemption, fall through to standard calc.
-  if (!isEV || (s.evExemption && s.evExemption.lifeTax === 'none') || (!s.evExemption)) {
+  // ---- Standard calculation (non-commercial, non-EV) ----
+  if (!calculated) {
     if (s.type === 'slab_percent') {
       taxRate = resolveRate(s, fuelType, exShowroomPrice);
       lifeTax = exShowroomPrice * taxRate / 100;
@@ -610,40 +869,45 @@ function calcRTO(state, vehicleType, fuelType, exShowroomPrice, engineCC, isUsed
       lifeTax = exShowroomPrice * 0.05;
     } else if (s.type === 'pre_gst_percent') {
       taxRate = s.rate || 0;
-      const preGstPrice = exShowroomPrice / 1.28;
+      const gstRate = exShowroomPrice > 1000000 ? 1.28 : 1.18;
+	  const preGstPrice = exShowroomPrice / gstRate;
       lifeTax = preGstPrice * taxRate / 100;
     }
   }
 
-  // ---- Cesses ----
-  if (s.cesses) {
-    for (const cess of s.cesses) {
-      if (cess.fuel && cess.fuel !== fuelType) continue;
-      if (cess.type === 'percent') {
-        cessTotal += lifeTax * cess.rate / 100;
-      } else if (cess.type === 'fixed') {
-        cessTotal += cess.amount;
+  // ---- Commercial path complete - skip cesses, surcharge, cap ----
+  if (!isCommercial) {
+    if (s.cesses) {
+      for (const cess of s.cesses) {
+        if (cess.fuel && cess.fuel !== fuelType) continue;
+        if (cess.type === 'percent') {
+          cessTotal += lifeTax * cess.rate / 100;
+        } else if (cess.type === 'fixed') {
+          cessTotal += cess.amount;
+        }
       }
     }
-  }
-  lifeTax += cessTotal;
+    lifeTax += cessTotal;
 
-  // ---- Used vehicle surcharge ----
-  if (isUsed && s.usedVehicleSurcharge) {
-    lifeTax += lifeTax * s.usedVehicleSurcharge / 100;
-  }
+    if (isUsed && s.usedVehicleSurcharge) {
+      lifeTax += lifeTax * s.usedVehicleSurcharge / 100;
+    }
 
-  // ---- Tax cap ----
-  if (s.taxCap) lifeTax = Math.min(lifeTax, s.taxCap);
+    if (s.taxCap) lifeTax = Math.min(lifeTax, s.taxCap);
+  }
 
   const hsrpFee = s.hsrpFee || 500;
   const registrationFee = s.registrationFee || 600;
 
+  const taxModel = isCommercial
+    ? (commercialPeriod === 'lifetime' ? 'lifetime' : (commercialPeriod || 'lifetime'))
+    : (s.taxModel || 'lifetime');
+
   return {
     lifeTax: Math.round(lifeTax),
     taxRate,
-    annualTax: s.taxModel === 'quarterly' ? Math.round(lifeTax * 4) : 0,
-    taxModel: s.taxModel || 'lifetime',
+    annualTax: isCommercial ? Math.round(annualTax) : (s.taxModel === 'quarterly' ? Math.round(lifeTax * 4) : 0),
+    taxModel,
     registrationFee,
     hsrpFee,
     cessTotal: Math.round(cessTotal),

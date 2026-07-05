@@ -294,9 +294,28 @@ const RTO_RATES = {
 }
 ```
 
+### Commercial Vehicle Seating-Based Tax
+
+Each state defines `commercial.brackets` in RTO_RATES. Each bracket has:
+- `minSeats`, `maxSeats`: seating range
+- `type`: `'one_time'` (flat fee) or `'per_seat'` (rate * seats)
+- `period`: `'lifetime' | 'year' | 'quarter' | 'month'` (default lifetime for per_seat)
+- `amount`: flat fee for one_time brackets
+- `rate`: per-seat rate for per_seat brackets
+
+Logic in `calcRTO()`: if `vehicleType === 'commercial'`, find matching bracket by seat count:
+- `one_time` type → `lifeTax = amount` (one-time lump sum)
+- `per_seat` type with `period: 'lifetime'` → `lifeTax = rate * seats`
+- `per_seat` type with `period: 'year'` → `annualTax = rate * seats`, `lifeTax = 0`
+- `per_seat` type with `period: 'quarter'` → `annualTax = rate * seats * 4`, `lifeTax = 0`
+- `per_seat` type with `period: 'month'` → `annualTax = rate * seats * 12`, `lifeTax = 0`
+
+Commercial path skips EV exemption, standard rate slabs, cesses, used surcharge, and tax cap entirely. Registration and HSRP fees still apply as standard fees.
+
 ### Calculation Order
 
 ```
+0. if vehicleType === 'commercial' → commercial seating-based tax (skip rest)
 1. if fuelType === 'ev' && RTO_RATES[state].evExemption.lifeTax === 'full' → lifeTax = 0
 2. else apply rate structure:
    a. slab_percent: find applicable slab → lifeTax = price * rate / 100
