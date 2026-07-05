@@ -3,6 +3,7 @@ const STAMP_DUTY_RATES = {
     name: 'Andhra Pradesh',
     rate: { male: 5, female: 4, joint_ff: 4, joint_mm: 5, joint_mf: 4.5 },
     registration: { rate: 1, cap: null },
+	transferDuty: { rate: 1.5 },
   },
   arunachalpradesh: {
     name: 'Arunachal Pradesh',
@@ -11,7 +12,7 @@ const STAMP_DUTY_RATES = {
   },
   assam: {
     name: 'Assam',
-    rate: { male: 5, female: 4, joint_ff: 4, joint_mm: 5, joint_mf: 4.5 },
+    rate: {male: 8.25, female: 8.25, joint_ff: 8.25, joint_mm: 8.25, joint_mf: 8.25,},
     registration: { rate: 1, cap: null },
   },
   bihar: {
@@ -60,13 +61,18 @@ const STAMP_DUTY_RATES = {
   },
   karnataka: {
     name: 'Karnataka',
-    rate: { male: 5, female: 5, joint_ff: 5, joint_mm: 5, joint_mf: 5 },
+    rate: null,
+	rateSlabs: [
+	  { min: 0, max: 2000000, rate: 2 },
+	  { min: 2000001, max: 4500000, rate: 3 },
+	  { min: 4500001, max: Infinity, rate: 5 },
+  ],
     registration: { rate: 2, cap: null },
     stampDutySurcharge: { rate: 10, type: 'percent_of_sd' },
   },
   kerala: {
     name: 'Kerala',
-    rate: { male: 6, female: 5, joint_ff: 5, joint_mm: 6, joint_mf: 5.5 },
+    rate: { male: 8, female: 8, joint_ff: 8, joint_mm: 8, joint_mf: 8 },
     registration: { rate: 1, cap: null },
     surcharge: { rate: 2, type: 'percent_of_sd' },
   },
@@ -737,12 +743,33 @@ function calcStampDuty(state, propertyValue, gender, location, isFirstTime) {
   let rate;
 
   if (s.rateSlabs) {
-    const slabs = (location && s.rateSlabs[location]) ? s.rateSlabs[location] : (s.rateSlabs.default || s.rateSlabs.urban);
+    let slabs;
+
+    // State-wide slab array (e.g. Karnataka)
+    if (Array.isArray(s.rateSlabs)) {
+      slabs = s.rateSlabs;
+    }
+    // Location-based slabs (e.g. West Bengal)
+    else {
+      slabs =
+        (location && s.rateSlabs[location]) ||
+        s.rateSlabs.default ||
+        s.rateSlabs.urban;
+    }
+
+    if (!slabs) {
+      return null;
+    }
+
     for (const slab of slabs) {
       if (propertyValue >= slab.min && propertyValue <= slab.max) {
         rate = slab.rate;
         break;
       }
+    }
+
+    if (rate == null) {
+      return null;
     }
   } else {
     let rateData = s.rate;
@@ -760,6 +787,7 @@ function calcStampDuty(state, propertyValue, gender, location, isFirstTime) {
   const sdAmount = propertyValue * rate / 100;
   const regRate = s.registration.rate || 1;
   let regAmount = propertyValue * regRate / 100;
+  const transferAmount = s.transferDuty ? propertyValue * s.transferDuty.rate / 100 : 0;
   if (s.registration.cap) regAmount = Math.min(regAmount, s.registration.cap);
 
   if (s.registrationWomen && gender === 'female' && (!s.registrationWomen.maxPropertyValue || propertyValue <= s.registrationWomen.maxPropertyValue)) {
@@ -780,13 +808,14 @@ function calcStampDuty(state, propertyValue, gender, location, isFirstTime) {
     cessAmount += sdAmount * s.lbc.rate / 100;
   }
 
-  const total = sdAmount + regAmount + cessAmount + (s.otherCharges || 0);
+  const total = sdAmount + regAmount + transferAmount + cessAmount + (s.otherCharges || 0);
   return {
     stampDutyRate: rate,
     registrationRate: regRate,
     stampDutyAmount: Math.round(sdAmount),
     registrationAmount: Math.round(regAmount),
     cessAmount: Math.round(cessAmount),
+    transferDutyAmount: Math.round(transferAmount),
     otherCharges: s.otherCharges || 0,
     totalCharges: Math.round(total),
     effectiveRate: propertyValue > 0 ? (total / propertyValue * 100) : 0,
