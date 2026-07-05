@@ -1,5 +1,5 @@
-const CACHE_STATIC = 'desicalc-static-v1'
-const CACHE_PAGES = 'desicalc-pages-v1'
+const CACHE_STATIC = 'desicalc-static-v2'
+const CACHE_PAGES = 'desicalc-pages-v2'
 
 const STATIC_ASSETS = [
   '/assets/css/style.css',
