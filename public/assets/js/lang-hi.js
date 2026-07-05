@@ -14,6 +14,7 @@ window.DESICALC_LANG = {
   'home.why.private': 'प्राइवेट — आपका डेटा कहीं नहीं जाता',
   'home.why.free': 'हमेशा मुफ्त',
   'home.cta': 'अब गणना करें',
+  'home.resources.title': 'गाइड और तुलनाएं',
 
   'header.back': 'वापस',
   'header.lang.en': 'EN',

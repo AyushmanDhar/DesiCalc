@@ -154,6 +154,10 @@
             <input type="text" id="vehicleAge" inputmode="numeric" value="5" oninput="calcRTOForm()">
           </div>
 
+          <div class="flex gap-2 pt-2">
+            <button type="button" class="btn btn-primary flex-1" onclick="calcRTOForm()" data-i18n="common.calculate">Calculate</button>
+            <button type="button" class="btn btn-outline flex-1" onclick="resetForm()" data-i18n="common.reset">Reset</button>
+          </div>
         </form>
       </div>
 
@@ -164,8 +168,10 @@
           <button class="btn btn-outline btn-sm flex-1" onclick="shareUrl()" data-i18n="common.share">Share</button>
           <button class="btn btn-outline btn-sm flex-1" onclick="copyUrl()" data-i18n="common.copy">Copy Link</button>
         </div>
+        <h2 class="text-base font-bold mb-2" data-i18n="common.result">Result</h2>
         <div id="resultBox" class="result-card fade-in" aria-live="polite">
           <div class="result-row"><span class="result-label" data-i18n="rto.result.lifeTax">One-Time Road Tax</span><span class="result-value" id="rLifeTax">₹0</span></div>
+          <div class="result-row"><span class="result-label" data-i18n="rto.result.annualTax">Annual Tax</span><span class="result-value" id="rAnnualTax">₹0</span></div>
           <div class="result-row"><span class="result-label" data-i18n="rto.result.regFee">Registration Fee</span><span class="result-value" id="rRegFee">₹0</span></div>
           <div class="result-row"><span class="result-label" data-i18n="rto.result.hsrp">HSRP Fee</span><span class="result-value" id="rHsrp">₹0</span></div>
           <div class="result-row total"><span class="result-label" data-i18n="rto.result.total">Total On-Road Cost</span><span class="result-value" id="rTotal">₹0</span></div>
@@ -252,6 +258,9 @@
       if (!result) return;
 
       animateValue(document.getElementById('rLifeTax'), result.lifeTax);
+      var rAnnualTax = document.getElementById('rAnnualTax');
+      animateValue(rAnnualTax, result.annualTax);
+      rAnnualTax.parentElement.style.display = result.annualTax > 0 ? '' : 'none';
       animateValue(document.getElementById('rRegFee'), result.registrationFee);
       animateValue(document.getElementById('rHsrp'), result.hsrpFee);
       animateValue(document.getElementById('rTotal'), result.totalOnRoadDelta);
@@ -280,6 +289,18 @@
         b.classList.toggle('active', b.getAttribute('data-lang-btn') === getLang());
       });
     });
+    function resetForm() {
+      document.getElementById('state').selectedIndex = 0;
+      document.getElementById('vehicleType').value = 'private_car';
+      document.getElementById('fuelType').value = 'petrol';
+      document.getElementById('exShowroomPrice').value = '1000000';
+      document.getElementById('engineCC').value = '1500';
+      document.getElementById('seats').value = '5';
+      document.getElementById('isUsed').checked = false;
+      document.getElementById('usedAgeGroup').style.display = 'none';
+      document.getElementById('vehicleAge').value = '5';
+      calcRTOForm();
+    }
     applyUrlParams();
     calcRTOForm();
 

@@ -14,6 +14,7 @@ window.DESICALC_LANG = {
   'home.why.private': 'Private — no data leaves your device',
   'home.why.free': 'Free forever',
   'home.cta': 'Calculate Now',
+  'home.resources.title': 'Guides & Comparisons',
 
   'header.back': 'Back',
   'header.lang.en': 'EN',
