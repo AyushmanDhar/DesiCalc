@@ -18,7 +18,7 @@ window.DESICALC_LANG = {
 
   'header.back': 'Back',
   'header.lang.en': 'EN',
-  'header.lang.hi': 'हिं',
+  'header.lang.hi': 'Hing',
 
   'common.calculate': 'Calculate',
   'common.result': 'Result',

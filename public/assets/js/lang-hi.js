@@ -18,7 +18,7 @@ window.DESICALC_LANG = {
 
   'header.back': 'वापस',
   'header.lang.en': 'EN',
-  'header.lang.hi': 'हिं',
+  'header.lang.hi': 'Hing',
 
   'common.calculate': 'गणना करें',
   'common.result': 'परिणाम',
