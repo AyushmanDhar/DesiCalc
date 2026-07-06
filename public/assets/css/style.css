@@ -27,7 +27,7 @@ label { display: block; font-size: 0.875rem; font-weight: 500; color: #78716C; m
 @keyframes fadeIn { from { opacity: 0; transform: translateY(0.25rem); } to { opacity: 1; transform: translateY(0); } }
 .faq-item { border-bottom: 1px solid #E7E5E4; }
 .faq-question { width: 100%; text-align: left; padding: 0.75rem 0; background: none; border: none; cursor: pointer; font-weight: 500; color: #1C1917; font-size: 0.9375rem; display: flex; justify-content: space-between; align-items: center; }
-.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s cubic-bezier(0.4,0,0.2,1); color: #78716C; font-size: 0.875rem; line-height: 1.625; }
+.faq-answer { max-height: 0; overflow: hidden; padding-bottom: 0; transition: max-height 0.3s cubic-bezier(0.4,0,0.2,1), padding-bottom 0.3s cubic-bezier(0.4,0,0.2,1); color: #78716C; font-size: 0.875rem; line-height: 1.625; }
 .faq-answer.open { padding-bottom: 0.75rem; }
 .tool-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
 @media (min-width: 640px) { .tool-grid { grid-template-columns: repeat(2, 1fr); } }
