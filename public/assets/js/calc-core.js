@@ -362,6 +362,7 @@ function hideTooltip() {
 }
 
 function initOnboarding() {
+  if (/bot|crawl|spider|slurp|googlebot|bing|duckduckgo|yandex/i.test(navigator.userAgent)) return;
   var key = 'desicalc_onboarded_v1';
   try {
     if (localStorage.getItem(key)) return;
