@@ -12,7 +12,9 @@ const STATIC_ASSETS = [
   '/assets/img/og-home.png',
   '/assets/img/og-tax-calculator.png',
   '/assets/img/og-stamp-duty.png',
-  '/assets/img/og-rto-tax.png'
+  '/assets/img/og-rto-tax.png',
+  '/favicon.ico',
+  '/assets/img/favicon.svg'
 ]
 
 self.addEventListener('install', event => {
