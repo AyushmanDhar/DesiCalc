@@ -1,4 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect width="100" height="100" rx="16" fill="#d97706"/>
-  <text x="50" y="72" font-family="Arial,sans-serif" font-size="60" font-weight="bold" fill="white" text-anchor="middle">DC</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 196 48" width="196" height="48">
+  <text
+    x="0"
+    y="44"
+    font-family="'Arial Black', Arial, sans-serif"
+    font-weight="900"
+    font-size="44"
+    textLength="196"
+    lengthAdjust="spacingAndGlyphs"
+  ><tspan fill="#1c1917">Desi</tspan><tspan fill="#d97706">Calc</tspan></text>
 </svg>
