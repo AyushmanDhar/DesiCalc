@@ -1,6 +1,2 @@
 name = "desicalc"
-type = "pages"
 pages_build_output_dir = "./public"
-
-[build]
-command = "npm ci && npm run build"
