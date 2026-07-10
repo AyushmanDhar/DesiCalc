@@ -4,15 +4,16 @@
 
 | Resource | Choice | Cost | Why |
 |----------|--------|------|-----|
-| Primary domain | `desicalc.pages.dev` | $0 | Cloudflare Pages default subdomain. Custom domain deferred until real traffic arrives |
+| Primary domain | `desicalc.in` | ₹800/yr | Custom domain (Cloudflare Pages) |
 | SSL | Auto via Cloudflare | $0 | Universal SSL |
 | CDN | Cloudflare global edge (330+ nodes) | $0 | Included with Pages |
 | DNS | Cloudflare DNS | $0 | Fastest DNS propagation |
 
-### Future: Custom Domain
-- Buy `desicalc.in` (₹800/yr, ~$10) when daily visitors exceed 500
-- Registrar: Cloudflare Registrar or Namecheap
-- Point NS to Cloudflare, add as custom domain in Pages
+### Active: Custom Domain
+- Primary domain: `desicalc.in` active on Cloudflare Pages
+- `_redirects`: `https://desicalc.pages.dev/*` → `https://desicalc.in/:splat` 301
+- SSL via Cloudflare Universal SSL (auto)
+- DNS via Cloudflare DNS
 
 ---
 
@@ -38,6 +39,8 @@ pages_build_output_dir = "./public"
 5. Deploy
 6. Project assigned `desicalc.pages.dev` automatically
 7. Enable HTTPS enforcement (on by default)
+8. Add `desicalc.in` as custom domain in Cloudflare Pages → Custom domains
+9. Verify `_redirects` 301s `desicalc.pages.dev` → `desicalc.in`
 
 ### `public/_headers` (Security & SEO)
 
@@ -47,8 +50,6 @@ pages_build_output_dir = "./public"
 ```
 
 ### `public/_redirects`
-
-(Empty — Cloudflare Pages auto-serves `foo.html` at `/foo` for static sites. Redirects may be added later for SEO.)
 
 ---
 
@@ -62,7 +63,7 @@ main ─────┬─────── feature/income-tax ───── 
           ├──── feature/rto-tax ──────────── merge ──→ deploy
 ```
 
-- `main`: Always deployable. Pushes auto-deploy to `desicalc.pages.dev`
+- `main`: Always deployable. Pushes auto-deploy to `desicalc.in`
 - Feature branches: Preview deploys via Cloudflare Pages (unique URL per branch)
 - No PR gates needed for solo founder (can skip)
 - Commit messages: `feat: add income tax calculator logic`, `fix: 87A rebate threshold`

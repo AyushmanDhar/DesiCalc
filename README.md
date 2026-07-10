@@ -2,14 +2,14 @@
 
 Indian tax, stamp duty, and RTO road tax calculators. No login. No data leaves your device. No build step.
 
-**Live at [desicalc.pages.dev](https://desicalc.pages.dev)** (custom domain deferred until real traffic)
-**Develop branch**: [develop.desicalc.pages.dev](https://develop.desicalc.pages.dev)
+**Live at [desicalc.in](https://desicalc.in)**
+**Develop branch**: [develop.desicalc.in](https://develop.desicalc.in)
 
 ## Tools
 
-- [Income Tax Calculator](https://desicalc.pages.dev/tools/income-tax.html) — FY 2026-27, Old vs New regime
-- [Stamp Duty Calculator](https://desicalc.pages.dev/tools/stamp-duty.html) — All 28 states
-- [RTO Tax Calculator](https://desicalc.pages.dev/tools/rto-tax.html) — All states, all vehicle types
+- [Income Tax Calculator](https://desicalc.in/tools/income-tax) — FY 2026-27, Old vs New regime
+- [Stamp Duty Calculator](https://desicalc.in/tools/stamp-duty) — All 28 states
+- [RTO Tax Calculator](https://desicalc.in/tools/rto-tax) — All states, all vehicle types
 
 ## Features
 
