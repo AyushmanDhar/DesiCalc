@@ -98,10 +98,6 @@
         <a href="../" class="text-sm text-stone-500 hover:text-stone-900 no-underline" data-i18n="header.back">← Back</a>
         <a href="../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
       </div>
-      <div class="lang-toggle" role="group" aria-label="Language toggle">
-        <button onclick="setLang('en')" class="active" data-lang-btn="en">EN</button>
-        <button onclick="setLang('hi')" data-lang-btn="hi">Hing</button>
-      </div>
     </div>
   </header>
   <main id="main-content" class="max-w-4xl mx-auto px-4 py-8">
@@ -283,9 +279,7 @@
   <div id="toast" class="toast"></div>
   <script>
     function toggleFaq(btn) { btn.classList.toggle('open'); var answer = btn.nextElementSibling; var isOpen = answer.classList.contains('open'); answer.classList.toggle('open'); answer.style.maxHeight = isOpen ? null : answer.scrollHeight + 'px'; }
-    initLang(); initScrollReveal();
-    document.querySelectorAll('[data-lang-btn]').forEach(function(btn) { btn.addEventListener('click', function() { document.querySelectorAll('[data-lang-btn]').forEach(function(b) { b.classList.remove('active'); }); this.classList.add('active'); }); });
-    onLangChange(function() { document.querySelectorAll('[data-lang-btn]').forEach(function(b) { b.classList.toggle('active', b.getAttribute('data-lang-btn') === getLang()); }); });
+    initScrollReveal();
   </script>
   <script src="../assets/js/ad.js"></script>
 </body>
