@@ -7,7 +7,7 @@
   <meta name="description" content="Calculate RTO road tax and registration charges for vehicles in Odisha. Car, bike, EV, commercial rates. Updated 2026.">
   <link rel="canonical" href="https://desicalc.in/programmatic/rto-tax/odisha">
   <meta property="og:title" content="RTO Tax Calculator Odisha 2026 | DesiCalc">
-  <meta property="og:description" content="Calculate RTO road tax in Odisha. Car, bike, EV rates. Free calculator.">
+  <meta property="og:description" content="Calculate RTO road tax in Odisha. Free online calculator.">
   <meta property="og:url" content="https://desicalc.in/programmatic/rto-tax/odisha">
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://desicalc.in/assets/img/og-rto-tax.png">
@@ -24,7 +24,7 @@
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "All",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-    "description": "Free RTO road tax calculator for Odisha. Calculate life tax, registration, HSRP."
+    "description": "Free RTO road tax calculator for Odisha."
   }
   </script>
   <script type="application/ld+json">
@@ -42,97 +42,203 @@
   <link rel="stylesheet" href="../../assets/css/tailwind.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
   <script src="../../assets/js/calc-core.js"></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long is temporary registration valid in Odisha?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Temporary registration is valid for one month from the date of issue, after which you must apply for permanent registration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I pay road tax online in Odisha?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Odisha's e-Transport portal allows you to pay road tax and registration fees online using debit cards, credit cards, or net banking."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there any concession for ex-servicemen in vehicle registration?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ex-servicemen in Odisha may be eligible for certain concessions on registration fees as per state government notifications issued from time to time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the validity of a commercial vehicle registration in Odisha?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Commercial vehicle registration is valid for 15 years, with fitness certificates requiring annual renewal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to pay road tax again when transferring vehicle ownership?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ownership transfer requires a new registration certificate but does not typically require a fresh road tax payment unless the vehicle is re-registered in a different state."
+      }
+    }
+  ]
+}
+  </script>
+
   <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
+
   <style>
-    .neighbor-states { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
-    .neighbor-link { display: inline-flex; align-items: center; padding: 0.35rem 0.75rem; background: white; border: 1px solid #e7e5e4; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #78716c; transition: all 0.2s; }
+    .neighbor-states { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.75rem 0; }
+    .neighbor-link { display: inline-flex; align-items: center; padding: 0.35rem 0.75rem; background: white; border: 1px solid #e7e5e4; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #78716c; transition: all 0.2s; text-decoration: none; }
     .neighbor-link:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .neighbor-link.current { border-color: #f59e0b; background: #fffbeb; color: #92400e; }
     .compare-box { background: #fefce8; border: 1px solid #fde047; border-radius: 12px; padding: 1rem; margin: 1.5rem 0; }
-    .compare-box h3 { font-size: 0.875rem; font-weight: 600; color: #92400e; margin-bottom: 0.5rem; }
+    .compare-box h3 { font-size: 0.875rem; font-weight: 600; color: #92400e; margin-bottom: 0.75rem; }
+    .states-grid-footer { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .states-grid-footer a { display: inline-block; padding: 0.2rem 0.55rem; background: white; border: 1px solid #e7e5e4; border-radius: 4px; font-size: 0.7rem; color: #78716c; text-decoration: none; transition: all 0.15s; }
+    .states-grid-footer a:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .states-grid-footer a.current { border-color: #f59e0b; background: #fefce8; color: #92400e; font-weight: 600; }
   </style>
 </head>
 <body class="bg-stone-50">
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
     <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
-      <a href="../../../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
+      <a href="../../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
     </div>
   </header>
 
   <main class="max-w-4xl mx-auto px-4 py-8">
     <nav class="text-sm text-stone-500 mb-4">
-      <a href="../../../" class="hover:text-amber-600">Home</a> / 
-      <a href="../../../tools/rto-tax" class="hover:text-amber-600">RTO Tax</a> / 
-      <a href="../" class="hover:text-amber-600">All States</a> / 
-      <span class="text-stone-900">Odisha</span>
+      <a href="../../" class="hover:text-amber-600">Home</a> / <a href="../../tools/rto-tax" class="hover:text-amber-600">RTO Tax</a> / <a href="../" class="hover:text-amber-600">All States</a> / <span class="text-stone-900">Odisha</span>
     </nav>
 
     <h1 class="text-3xl font-bold text-stone-900 mb-2">RTO Tax Calculator Odisha 2026</h1>
-    <p class="text-stone-500 mb-8">Calculate road tax, registration charges, and on-road price for vehicles in Odisha. Updated for 2026.</p>
+    <p class="text-stone-500 mb-8">Calculate road tax, registration charges, and on-road price for vehicles in Odisha.</p>
 
-    
+
     <div class="compare-box">
-      <h3>🔗 Compare with Neighboring States</h3>
+      <h3>Compare with Neighboring States</h3>
       <div class="neighbor-states">
-        <a href="../westbengal.html" class="neighbor-link no-underline" title="Compare with West Bengal">West Bengal</a><a href="../jharkhand.html" class="neighbor-link no-underline" title="Compare with Jharkhand">Jharkhand</a><a href="../chhattisgarh.html" class="neighbor-link no-underline" title="Compare with Chhattisgarh">Chhattisgarh</a><a href="../andhrapradesh.html" class="neighbor-link no-underline" title="Compare with Andhra Pradesh">Andhra Pradesh</a>
+        <a href="../westbengal.html" class="neighbor-link" title="Compare with West Bengal">West Bengal</a>
+        <a href="../jharkhand.html" class="neighbor-link" title="Compare with Jharkhand">Jharkhand</a>
+        <a href="../chhattisgarh.html" class="neighbor-link" title="Compare with Chhattisgarh">Chhattisgarh</a>
+        <a href="../andhrapradesh.html" class="neighbor-link" title="Compare with Andhra Pradesh">Andhra Pradesh</a>
       </div>
-      <p class="text-xs text-stone-600 mt-2 mb-0">Click any state to compare RTO road tax rates side-by-side.</p>
-    </div>
-    
-
-    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
+      <p class="text-xs text-stone-600" style="margin:0">Click any state to compare rto tax rates side-by-side.</p>
+    </div>    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
       <div id="calc-placeholder" class="text-center py-8">
         <p class="text-stone-500 mb-4">Use our interactive RTO tax calculator for Odisha</p>
-        <a href="../../../tools/rto-tax?state=odisha" class="btn btn-primary">Open Calculator &rarr;</a>
+        <a href="../../tools/rto-tax?state=odisha" class="btn btn-primary">Open Calculator &rarr;</a>
       </div>
     </div>
 
     <section class="mb-8">
       <h2 class="text-2xl font-bold text-stone-900 mb-4">Odisha RTO Road Tax Rates 2026</h2>
-      <p class="text-stone-600 mb-4">Estimated range: <strong class="text-stone-900">8-12%</strong> (varies by vehicle type, fuel, price, and category). Use the calculator above for exact figures.</p>
-    </section>
-
-    <section class="mb-8">
-      <h2 class="text-lg font-bold mb-3">All States Quick Access</h2>
-      <div class="flex flex-wrap gap-2">
-<a href="../andhrapradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Andhra Pradesh</span></a>
-<a href="../arunachalpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Arunachal Pradesh</span></a>
-<a href="../assam.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Assam</span></a>
-<a href="../bihar.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Bihar</span></a>
-<a href="../chhattisgarh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Chhattisgarh</span></a>
-<a href="../delhi.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Delhi (NCT)</span></a>
-<a href="../goa.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Goa</span></a>
-<a href="../gujarat.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Gujarat</span></a>
-<a href="../haryana.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Haryana</span></a>
-<a href="../himachalpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Himachal Pradesh</span></a>
-<a href="../jharkhand.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Jharkhand</span></a>
-<a href="../karnataka.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Karnataka</span></a>
-<a href="../kerala.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Kerala</span></a>
-<a href="../madhyapradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Madhya Pradesh</span></a>
-<a href="../maharashtra.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Maharashtra</span></a>
-<a href="../manipur.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Manipur</span></a>
-<a href="../meghalaya.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Meghalaya</span></a>
-<a href="../mizoram.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Mizoram</span></a>
-<a href="../nagaland.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Nagaland</span></a>
-<a href="../odisha.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs border-amber-400 bg-amber-50 font-medium"><span class="font-medium text-stone-900">Odisha</span></a>
-<a href="../punjab.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Punjab</span></a>
-<a href="../rajasthan.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Rajasthan</span></a>
-<a href="../sikkim.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Sikkim</span></a>
-<a href="../tamilnadu.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Tamil Nadu</span></a>
-<a href="../telangana.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Telangana</span></a>
-<a href="../tripura.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Tripura</span></a>
-<a href="../uttarpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Uttar Pradesh</span></a>
-<a href="../uttarakhand.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Uttarakhand</span></a>
-<a href="../westbengal.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">West Bengal</span></a>
+      <div class="overflow-x-auto bg-white rounded-xl border border-stone-200">
+        <table class="w-full text-sm">
+          <thead><tr class="bg-stone-100 border-b border-stone-200"><th class="text-left p-3 font-semibold text-stone-900">Vehicle Type</th><th class="text-left p-3 font-semibold text-stone-900">Road Tax Rate</th><th class="text-left p-3 font-semibold text-stone-900">Registration Fee</th><th class="text-left p-3 font-semibold text-stone-900">HSRP</th></tr></thead>
+          <tbody>
+            <tr class="border-b border-stone-100"><td class="p-3">Petrol Vehicles</td><td class="p-3">5% of ex-showroom price</td><td class="p-3">₹600</td><td class="p-3">₹400</td></tr>
+            <tr class="border-b border-stone-100"><td class="p-3">Diesel Vehicles</td><td class="p-3">6% of ex-showroom price</td><td class="p-3">₹600</td><td class="p-3">₹400</td></tr>
+            <tr class="border-b border-stone-100"><td class="p-3">CNG Vehicles</td><td class="p-3">5% of ex-showroom price</td><td class="p-3">₹600</td><td class="p-3">₹400</td></tr>
+            <tr class="border-b border-stone-100"><td class="p-3">Electric Vehicles (EV)</td><td class="p-3">Exempt (0%)</td><td class="p-3">₹600</td><td class="p-3">₹400</td></tr>
+            <tr><td class="p-3">Commercial Vehicles</td><td class="p-3">6% of ex-showroom price</td><td class="p-3">₹600</td><td class="p-3">₹400</td></tr>
+          </tbody>
+        </table>
       </div>
     </section>
-  </main>
+
+    <section class="prose max-w-none mb-8">
+      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Vehicle Registration Process in Odisha</h2>
+      <p>Odisha, the land of Lord Jagannath, has a comprehensive vehicle registration system managed by the Odisha Transport Department. The state is divided into several RTO zones including Bhubaneswar (OD 02), Cuttack (OD 05), Puri (OD 13), Berhampur (OD 07), Sambalpur (OD 15), Rourkela (OD 14), Balasore (OD 01), and Jeypore (OD 17), among others. The Bhubaneswar RTO, being the capital city office, handles the highest volume of vehicle registrations in the state. Odisha also has a unique RTO code system where each district is assigned a two-digit code prefixed with OD.</p>
+
+      <p>Odisha's economy is a mix of agriculture, mining, and tourism, which influences the vehicle registration landscape. The mining districts of Keonjhar, Sundargarh, and Jharsuguda see high volumes of commercial vehicle registrations, including heavy goods carriers and mining trucks. The coastal districts of Puri and Ganjam have a significant number of tourist vehicle registrations. The state also has a growing two-wheeler market in its semi-urban and rural areas. The Odisha Transport Department has been actively digitising its services through the e-Transport portal, enabling online fee payments, application tracking, and appointment scheduling for vehicle inspections.</p>
+
+      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">How Road Tax Is Calculated in Odisha</h2>
+      <p>Odisha uses a flat-rate road tax system for private vehicles. Petrol and CNG vehicles attract a 5% tax on their ex-showroom price, while diesel vehicles are taxed at 6%. Electric vehicles are fully exempt from road tax. Commercial vehicles, including goods carriers, taxis, and buses, are taxed at 6% of the ex-showroom price. The flat-rate system is one of the simplest in the country, with no price slabs or brackets to navigate.</p>
+
+      <p>For example, a buyer purchasing a petrol car at ₹9,50,000 in Odisha would pay a road tax of ₹9,50,000 × 5% = ₹47,500. The registration fee is a flat ₹600, and HSRP installation costs ₹400, making the total RTO expenditure ₹48,500. If the same car were a diesel variant, the tax would be ₹9,50,000 × 6% = ₹57,000, totalling ₹58,000 including registration and HSRP. An electric car priced at ₹9,50,000 would incur just ₹1,000 in RTO charges — a saving of ₹47,500 compared to the petrol version.</p>
+
+      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Electric Vehicle (EV) Exemption Policy</h2>
+      <p>Odisha has adopted a full road tax exemption policy for all categories of electric vehicles as part of its commitment to the FAME II scheme and the national EV mission. The exemption covers battery electric vehicles (BEVs) across two-wheelers, three-wheelers, and four-wheelers. There is no cap on the vehicle price or any expiry date currently announced for this exemption. This makes Odisha one of the more attractive states for EV buyers, especially in cities like Bhubaneswar and Cuttack where the charging infrastructure is gradually expanding.</p>
+
+      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Required Documents for Vehicle Registration</h2>
+      <p>When registering a vehicle in Odisha, you need: Form 20 (duly filled registration application), Form 21 (dealer sale certificate), Form 22 (manufacturer's road worthiness certificate), valid insurance policy (at least third-party), address proof (Aadhaar, Voter ID, or driving licence), identity proof, PAN card, and passport-size photographs. For commercial vehicles, additional documents include permit applications, fitness certificates, and route permits where applicable.</p>
+
+          </section>
+
+      <section class="mt-10 max-w-2xl">
+        <h2 class="text-lg font-bold mb-3">FAQs</h2>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>How long is temporary registration valid in Odisha?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">Temporary registration is valid for one month from the date of issue, after which you must apply for permanent registration.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>Can I pay road tax online in Odisha?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">Yes, Odisha's e-Transport portal allows you to pay road tax and registration fees online using debit cards, credit cards, or net banking.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>Is there any concession for ex-servicemen in vehicle registration?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">Ex-servicemen in Odisha may be eligible for certain concessions on registration fees as per state government notifications issued from time to time.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>What is the validity of a commercial vehicle registration in Odisha?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">Commercial vehicle registration is valid for 15 years, with fitness certificates requiring annual renewal.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>Do I need to pay road tax again when transferring vehicle ownership?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">Ownership transfer requires a new registration certificate but does not typically require a fresh road tax payment unless the vehicle is re-registered in a different state.</div>
+        </div>
+      </section>
+  
+    <section class="mt-12">
+      <h2 class="text-lg font-bold mb-3">All States</h2>
+      <div class="states-grid-footer">
+        <a href="../andhrapradesh.html">Andhra Pradesh</a>
+        <a href="../arunachalpradesh.html">Arunachal Pradesh</a>
+        <a href="../assam.html">Assam</a>
+        <a href="../bihar.html">Bihar</a>
+        <a href="../chhattisgarh.html">Chhattisgarh</a>
+        <a href="../delhi.html">Delhi (NCT)</a>
+        <a href="../goa.html">Goa</a>
+        <a href="../gujarat.html">Gujarat</a>
+        <a href="../haryana.html">Haryana</a>
+        <a href="../himachalpradesh.html">Himachal Pradesh</a>
+        <a href="../jharkhand.html">Jharkhand</a>
+        <a href="../karnataka.html">Karnataka</a>
+        <a href="../kerala.html">Kerala</a>
+        <a href="../madhyapradesh.html">Madhya Pradesh</a>
+        <a href="../maharashtra.html">Maharashtra</a>
+        <a href="../manipur.html">Manipur</a>
+        <a href="../meghalaya.html">Meghalaya</a>
+        <a href="../mizoram.html">Mizoram</a>
+        <a href="../nagaland.html">Nagaland</a>
+        <a href="../odisha.html" class="current">Odisha</a>
+        <a href="../punjab.html">Punjab</a>
+        <a href="../rajasthan.html">Rajasthan</a>
+        <a href="../sikkim.html">Sikkim</a>
+        <a href="../tamilnadu.html">Tamil Nadu</a>
+        <a href="../telangana.html">Telangana</a>
+        <a href="../tripura.html">Tripura</a>
+        <a href="../uttarpradesh.html">Uttar Pradesh</a>
+        <a href="../uttarakhand.html">Uttarakhand</a>
+        <a href="../westbengal.html">West Bengal</a>
+      </div>
+    </section>
+</main>
 
   <section class="ad-slot-footer mb-4" data-ad-slot="footer_main"></section>
 
   <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
-    <div class="max-w-5xl mx-auto px-4"><span class="text-stone-900 font-semibold">DesiCalc</span> &copy; 2026. Free Indian tax calculators.</div>
+    <div class="max-w-5xl mx-auto px-4">&copy; 2026 DesiCalc. Free Indian tax calculators.</div>
   </footer>
   <script src="../../assets/js/ad.js"></script>
 </body>

@@ -24,7 +24,7 @@
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "All",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-    "description": "Free RTO road tax calculator for Rajasthan. Calculate life tax, registration, HSRP."
+    "description": "Free RTO road tax calculator for Rajasthan."
   }
   </script>
   <script type="application/ld+json">
@@ -42,97 +42,236 @@
   <link rel="stylesheet" href="../../assets/css/tailwind.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
   <script src="../../assets/js/calc-core.js"></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I get a permanent registration number on the same day in Rajasthan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "While temporary registration is immediate, permanent registration typically takes 7–10 working days after document verification and vehicle inspection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Rajasthan's road tax lower than Delhi's?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Rajasthan's 4% petrol tax is significantly lower than Delhi's slab-based system which can go up to 12% for higher-value vehicles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there any special EV benefits in Rajasthan beyond tax exemption?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Rajasthan also offers EV buyers a waiver on green tax and priority registration processing at RTOs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the process for re-registering a vehicle from another state in Rajasthan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You must obtain Form 27 (NOC) from the original RTO and submit it with Form 28 to the Rajasthan RTO where you currently reside."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I book a fancy number in Rajasthan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fancy numbers are available through the Rajasthan Transport Department's online auction portal, with proceeds going to the state road safety fund."
+      }
+    }
+  ]
+}
+  </script>
+
   <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
+
   <style>
-    .neighbor-states { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
-    .neighbor-link { display: inline-flex; align-items: center; padding: 0.35rem 0.75rem; background: white; border: 1px solid #e7e5e4; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #78716c; transition: all 0.2s; }
+    .neighbor-states { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.75rem 0; }
+    .neighbor-link { display: inline-flex; align-items: center; padding: 0.35rem 0.75rem; background: white; border: 1px solid #e7e5e4; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #78716c; transition: all 0.2s; text-decoration: none; }
     .neighbor-link:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .neighbor-link.current { border-color: #f59e0b; background: #fffbeb; color: #92400e; }
     .compare-box { background: #fefce8; border: 1px solid #fde047; border-radius: 12px; padding: 1rem; margin: 1.5rem 0; }
-    .compare-box h3 { font-size: 0.875rem; font-weight: 600; color: #92400e; margin-bottom: 0.5rem; }
+    .compare-box h3 { font-size: 0.875rem; font-weight: 600; color: #92400e; margin-bottom: 0.75rem; }
+    .states-grid-footer { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .states-grid-footer a { display: inline-block; padding: 0.2rem 0.55rem; background: white; border: 1px solid #e7e5e4; border-radius: 4px; font-size: 0.7rem; color: #78716c; text-decoration: none; transition: all 0.15s; }
+    .states-grid-footer a:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .states-grid-footer a.current { border-color: #f59e0b; background: #fefce8; color: #92400e; font-weight: 600; }
   </style>
 </head>
 <body class="bg-stone-50">
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
     <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
-      <a href="../../../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
+      <a href="../../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
     </div>
   </header>
 
   <main class="max-w-4xl mx-auto px-4 py-8">
     <nav class="text-sm text-stone-500 mb-4">
-      <a href="../../../" class="hover:text-amber-600">Home</a> / 
-      <a href="../../../tools/rto-tax" class="hover:text-amber-600">RTO Tax</a> / 
-      <a href="../" class="hover:text-amber-600">All States</a> / 
-      <span class="text-stone-900">Rajasthan</span>
+      <a href="../../" class="hover:text-amber-600">Home</a> / <a href="../../tools/rto-tax" class="hover:text-amber-600">RTO Tax</a> / <a href="../" class="hover:text-amber-600">All States</a> / <span class="text-stone-900">Rajasthan</span>
     </nav>
 
     <h1 class="text-3xl font-bold text-stone-900 mb-2">RTO Tax Calculator Rajasthan 2026</h1>
     <p class="text-stone-500 mb-8">Calculate road tax, registration charges, and on-road price for vehicles in Rajasthan. Updated for 2026.</p>
 
-    
-    <div class="compare-box">
-      <h3>🔗 Compare with Neighboring States</h3>
-      <div class="neighbor-states">
-        <a href="../punjab.html" class="neighbor-link no-underline" title="Compare with Punjab">Punjab</a><a href="../haryana.html" class="neighbor-link no-underline" title="Compare with Haryana">Haryana</a><a href="../uttarpradesh.html" class="neighbor-link no-underline" title="Compare with Uttar Pradesh">Uttar Pradesh</a><a href="../madhyapradesh.html" class="neighbor-link no-underline" title="Compare with Madhya Pradesh">Madhya Pradesh</a><a href="../gujarat.html" class="neighbor-link no-underline" title="Compare with Gujarat">Gujarat</a>
-      </div>
-      <p class="text-xs text-stone-600 mt-2 mb-0">Click any state to compare RTO road tax rates side-by-side.</p>
-    </div>
-    
 
-    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
+    <div class="compare-box">
+      <h3>Compare with Neighboring States</h3>
+      <div class="neighbor-states">
+        <a href="../punjab.html" class="neighbor-link" title="Compare with Punjab">Punjab</a>
+        <a href="../haryana.html" class="neighbor-link" title="Compare with Haryana">Haryana</a>
+        <a href="../uttarpradesh.html" class="neighbor-link" title="Compare with Uttar Pradesh">Uttar Pradesh</a>
+        <a href="../madhyapradesh.html" class="neighbor-link" title="Compare with Madhya Pradesh">Madhya Pradesh</a>
+        <a href="../gujarat.html" class="neighbor-link" title="Compare with Gujarat">Gujarat</a>
+      </div>
+      <p class="text-xs text-stone-600" style="margin:0">Click any state to compare rto tax rates side-by-side.</p>
+    </div>    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
       <div id="calc-placeholder" class="text-center py-8">
         <p class="text-stone-500 mb-4">Use our interactive RTO tax calculator for Rajasthan</p>
-        <a href="../../../tools/rto-tax?state=rajasthan" class="btn btn-primary">Open Calculator &rarr;</a>
+        <a href="../../tools/rto-tax?state=rajasthan" class="btn btn-primary">Open Calculator &rarr;</a>
       </div>
     </div>
 
     <section class="mb-8">
       <h2 class="text-2xl font-bold text-stone-900 mb-4">Rajasthan RTO Road Tax Rates 2026</h2>
-      <p class="text-stone-600 mb-4">Estimated range: <strong class="text-stone-900">6-10%</strong> (varies by vehicle type, fuel, price, and category). Use the calculator above for exact figures.</p>
-    </section>
-
-    <section class="mb-8">
-      <h2 class="text-lg font-bold mb-3">All States Quick Access</h2>
-      <div class="flex flex-wrap gap-2">
-<a href="../andhrapradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Andhra Pradesh</span></a>
-<a href="../arunachalpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Arunachal Pradesh</span></a>
-<a href="../assam.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Assam</span></a>
-<a href="../bihar.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Bihar</span></a>
-<a href="../chhattisgarh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Chhattisgarh</span></a>
-<a href="../delhi.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Delhi (NCT)</span></a>
-<a href="../goa.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Goa</span></a>
-<a href="../gujarat.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Gujarat</span></a>
-<a href="../haryana.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Haryana</span></a>
-<a href="../himachalpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Himachal Pradesh</span></a>
-<a href="../jharkhand.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Jharkhand</span></a>
-<a href="../karnataka.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Karnataka</span></a>
-<a href="../kerala.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Kerala</span></a>
-<a href="../madhyapradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Madhya Pradesh</span></a>
-<a href="../maharashtra.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Maharashtra</span></a>
-<a href="../manipur.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Manipur</span></a>
-<a href="../meghalaya.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Meghalaya</span></a>
-<a href="../mizoram.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Mizoram</span></a>
-<a href="../nagaland.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Nagaland</span></a>
-<a href="../odisha.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Odisha</span></a>
-<a href="../punjab.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Punjab</span></a>
-<a href="../rajasthan.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs border-amber-400 bg-amber-50 font-medium"><span class="font-medium text-stone-900">Rajasthan</span></a>
-<a href="../sikkim.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Sikkim</span></a>
-<a href="../tamilnadu.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Tamil Nadu</span></a>
-<a href="../telangana.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Telangana</span></a>
-<a href="../tripura.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Tripura</span></a>
-<a href="../uttarpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Uttar Pradesh</span></a>
-<a href="../uttarakhand.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Uttarakhand</span></a>
-<a href="../westbengal.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">West Bengal</span></a>
+      <div class="overflow-x-auto bg-white rounded-xl border border-stone-200">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-stone-100 text-stone-700">
+              <th class="text-left p-3 font-semibold">Vehicle Type</th>
+              <th class="text-left p-3 font-semibold">Road Tax Rate</th>
+              <th class="text-left p-3 font-semibold">Registration Fee</th>
+              <th class="text-left p-3 font-semibold">HSRP</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">Petrol Vehicles</td>
+              <td class="p-3">4% of ex-showroom price</td>
+              <td class="p-3">₹600</td>
+              <td class="p-3">₹400</td>
+            </tr>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">Diesel Vehicles</td>
+              <td class="p-3">5% of ex-showroom price</td>
+              <td class="p-3">₹600</td>
+              <td class="p-3">₹400</td>
+            </tr>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">CNG Vehicles</td>
+              <td class="p-3">4% of ex-showroom price</td>
+              <td class="p-3">₹600</td>
+              <td class="p-3">₹400</td>
+            </tr>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">Electric Vehicles (EV)</td>
+              <td class="p-3">Exempt (0%)</td>
+              <td class="p-3">₹600</td>
+              <td class="p-3">₹400</td>
+            </tr>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">Commercial Vehicles</td>
+              <td class="p-3">5% of ex-showroom price</td>
+              <td class="p-3">₹600</td>
+              <td class="p-3">₹400</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
-  </main>
+
+    <section class="prose max-w-none mb-8">
+      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Vehicle Registration Process in Rajasthan</h2>
+      <p>Rajasthan, India's largest state by area, manages its vehicle registration through a network of Regional Transport Offices (RTOs) spread across its 50 districts. The major RTO hubs include Jaipur (RJ 14), Jodhpur (RJ 19), Udaipur (RJ 27), Kota (RJ 29), Bikaner (RJ 07), Ajmer (RJ 01), and Alwar (RJ 02). The Jaipur RTO, serving the state capital, handles the highest volume of new vehicle registrations. Each district in Rajasthan has a unique two-digit RTO code prefixed with RJ, making it easy to identify a vehicle's place of registration at a glance.</p>
+
+      <p>Rajasthan's diverse geography — from the Thar Desert in the west to the Aravali mountain range in the southeast — influences vehicle preferences across the state. In desert districts like Jaisalmer, Barmer, and Bikaner, robust SUVs and all-terrain vehicles are popular due to sandy terrain and extreme temperatures. The tourist-heavy cities of Jaipur, Udaipur, and Jodhpur see a high number of tourist taxi and rental vehicle registrations. Rajasthan has one of the most aggressive RTO digitisation programs in North India, with the Sarthi and Vahan portals enabling most registration-related services online. The state also conducts regular vehicle inspection camps in rural areas to facilitate registration for remote communities.</p>
+
+      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">How Road Tax Is Calculated in Rajasthan</h2>
+      <p>Rajasthan offers one of the lowest flat-rate road tax structures in India. Petrol and CNG vehicles attract only 4% road tax on the ex-showroom price, making it highly affordable for buyers of petrol vehicles. Diesel vehicles are taxed at a slightly higher 5%, while electric vehicles enjoy a full exemption at 0%. Commercial vehicles are taxed at 5% of the ex-showroom price. The lower rates compared to neighbouring states make Rajasthan an attractive destination for vehicle registration, provided the buyer has a valid Rajasthan address.</p>
+
+      <p>To illustrate, consider a petrol sedan with an ex-showroom price of ₹11,00,000. The road tax in Rajasthan would be ₹11,00,000 × 4% = ₹44,000. Adding the registration fee of ₹600 and HSRP cost of ₹400, the total RTO charges amount to ₹45,000. A diesel variant of the same car would incur ₹11,00,000 × 5% = ₹55,000 in road tax, totalling ₹56,000 with fees. For an EV priced at ₹11,00,000, the RTO charges are just ₹1,000, representing a saving of ₹44,000 over the petrol version and ₹55,000 over the diesel version. This substantial difference makes EVs an exceptionally cost-effective choice in Rajasthan.</p>
+
+      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Electric Vehicle (EV) Exemption Policy</h2>
+      <p>Rajasthan has implemented a full road tax exemption for all categories of electric vehicles. The exemption covers electric two-wheelers, three-wheelers, and four-wheelers without any price cap or time-bound restriction under the current policy. Rajasthan's EV policy also complements the FAME II scheme by providing additional incentives for EV manufacturing and charging infrastructure development in the state. Cities like Jaipur, Jodhpur, and Udaipur have seen a gradual increase in EV charging stations, further supporting the adoption of electric mobility.</p>
+
+      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Required Documents for Vehicle Registration</h2>
+      <p>For vehicle registration in Rajasthan, the required documents include: Form 20 (registration application), Form 21 (dealer's sale certificate), Form 22 (manufacturer's road worthiness certificate), valid motor insurance policy, address proof (Aadhaar, electricity bill, or ration card), identity proof (Voter ID, Passport, or Driving Licence), PAN card, two passport-size photographs, and the temporary registration certificate if applicable. For commercial vehicles, additional documents such as the permit application and fitness certificate are required.</p>
+
+          </section>
+
+      <section class="mt-10 max-w-2xl">
+        <h2 class="text-lg font-bold mb-3">FAQs</h2>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>Can I get a permanent registration number on the same day in Rajasthan?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">While temporary registration is immediate, permanent registration typically takes 7–10 working days after document verification and vehicle inspection.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>Is Rajasthan's road tax lower than Delhi's?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">Yes, Rajasthan's 4% petrol tax is significantly lower than Delhi's slab-based system which can go up to 12% for higher-value vehicles.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>Are there any special EV benefits in Rajasthan beyond tax exemption?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">Yes, Rajasthan also offers EV buyers a waiver on green tax and priority registration processing at RTOs.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>What is the process for re-registering a vehicle from another state in Rajasthan?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">You must obtain Form 27 (NOC) from the original RTO and submit it with Form 28 to the Rajasthan RTO where you currently reside.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>How do I book a fancy number in Rajasthan?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">Fancy numbers are available through the Rajasthan Transport Department's online auction portal, with proceeds going to the state road safety fund.</div>
+        </div>
+      </section>
+  
+    <section class="mt-12">
+      <h2 class="text-lg font-bold mb-3">All States</h2>
+      <div class="states-grid-footer">
+        <a href="../andhrapradesh.html">Andhra Pradesh</a>
+        <a href="../arunachalpradesh.html">Arunachal Pradesh</a>
+        <a href="../assam.html">Assam</a>
+        <a href="../bihar.html">Bihar</a>
+        <a href="../chhattisgarh.html">Chhattisgarh</a>
+        <a href="../delhi.html">Delhi (NCT)</a>
+        <a href="../goa.html">Goa</a>
+        <a href="../gujarat.html">Gujarat</a>
+        <a href="../haryana.html">Haryana</a>
+        <a href="../himachalpradesh.html">Himachal Pradesh</a>
+        <a href="../jharkhand.html">Jharkhand</a>
+        <a href="../karnataka.html">Karnataka</a>
+        <a href="../kerala.html">Kerala</a>
+        <a href="../madhyapradesh.html">Madhya Pradesh</a>
+        <a href="../maharashtra.html">Maharashtra</a>
+        <a href="../manipur.html">Manipur</a>
+        <a href="../meghalaya.html">Meghalaya</a>
+        <a href="../mizoram.html">Mizoram</a>
+        <a href="../nagaland.html">Nagaland</a>
+        <a href="../odisha.html">Odisha</a>
+        <a href="../punjab.html">Punjab</a>
+        <a href="../rajasthan.html" class="current">Rajasthan</a>
+        <a href="../sikkim.html">Sikkim</a>
+        <a href="../tamilnadu.html">Tamil Nadu</a>
+        <a href="../telangana.html">Telangana</a>
+        <a href="../tripura.html">Tripura</a>
+        <a href="../uttarpradesh.html">Uttar Pradesh</a>
+        <a href="../uttarakhand.html">Uttarakhand</a>
+        <a href="../westbengal.html">West Bengal</a>
+      </div>
+    </section>
+</main>
 
   <section class="ad-slot-footer mb-4" data-ad-slot="footer_main"></section>
 
   <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
-    <div class="max-w-5xl mx-auto px-4"><span class="text-stone-900 font-semibold">DesiCalc</span> &copy; 2026. Free Indian tax calculators.</div>
+    <div class="max-w-5xl mx-auto px-4">&copy; 2026 DesiCalc. Free Indian tax calculators.</div>
   </footer>
   <script src="../../assets/js/ad.js"></script>
 </body>

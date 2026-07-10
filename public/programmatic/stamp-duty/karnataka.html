@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stamp Duty Calculator Karnataka 2026 | DesiCalc</title>
-  <meta name="description" content="Calculate stamp duty and registration charges for property in Karnataka. Male 5%, Female 5%, Joint 5%. Registration 1% (+10% cess). Free calculator.">
+  <meta name="description" content="Calculate stamp duty and registration charges for property in Karnataka. Flat 5% stamp duty all genders. 10% surcharge on SD amount. Free calculator.">
   <link rel="canonical" href="https://desicalc.in/programmatic/stamp-duty/karnataka">
   <meta property="og:title" content="Stamp Duty Calculator Karnataka 2026 | DesiCalc">
-  <meta property="og:description" content="Calculate stamp duty in Karnataka. Male 5%, Female 5%, Joint 5%. Free online calculator.">
+  <meta property="og:description" content="Calculate stamp duty in Karnataka. Flat 5% all genders. 10% surcharge on SD. Bengaluru same rates. Free online calculator.">
   <meta property="og:url" content="https://desicalc.in/programmatic/stamp-duty/karnataka">
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://desicalc.in/assets/img/og-stamp-duty.png">
@@ -24,7 +24,7 @@
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "All",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-    "description": "Free stamp duty calculator for Karnataka property registration. Calculate stamp duty rates, registration charges, female concession, circle rate."
+    "description": "Free stamp duty calculator for Karnataka property registration. Flat 5% stamp duty, 10% surcharge, no gender concession."
   }
   </script>
   <script type="application/ld+json">
@@ -42,49 +42,103 @@
   <link rel="stylesheet" href="../../assets/css/tailwind.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
   <script src="../../assets/js/calc-core.js"></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is there any stamp duty concession for women in Karnataka?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, Karnataka does not offer any gender-based concession on stamp duty. The rate is a uniform 5% for all buyers irrespective of gender. This is one of the few Indian states where female buyers do not receive any preferential rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the stamp duty surcharge in Karnataka?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Karnataka levies a surcharge of 10% of the stamp duty amount. For a property value of Rs 50 lakhs, the stamp duty is Rs 2.5 lakhs (5%) and the surcharge is Rs 25,000 (10% of Rs 2.5 lakhs). The effective stamp duty cost is 5.5% including the surcharge."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are guidance values in Bengaluru and how are they determined?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Guidance values (also called ready reckoner rates) in Bengaluru are determined by the Department of Stamps and Registration. These values are based on location, infrastructure, land use, and market trends. BBMP wards are used as the basic unit for guidance value determination. The values are revised periodically and are available on the Kaveri portal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I verify property title in Karnataka?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Property title can be verified by obtaining an encumbrance certificate from the Sub-Registrar office, checking the khata records at the BBMP or municipal office, and reviewing the chain of sale deeds. Online verification is available through the Kaveri portal for properties registered after digitisation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between khata and title deed in Karnataka?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Khata is a revenue record maintained by the municipal authority (BBMP in Bengaluru) that identifies the property for tax purposes. The title deed is the legal document that proves ownership. Both are required for property transactions. The khata must be transferred to the buyer's name after purchase for property tax payment and utilities connection."
+      }
+    }
+  ]
+}
+  </script>
+
   <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
+
   <style>
-    .neighbor-states { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
-    .neighbor-link { display: inline-flex; align-items: center; padding: 0.35rem 0.75rem; background: white; border: 1px solid #e7e5e4; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #78716c; transition: all 0.2s; }
+    .neighbor-states { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.75rem 0; }
+    .neighbor-link { display: inline-flex; align-items: center; padding: 0.35rem 0.75rem; background: white; border: 1px solid #e7e5e4; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #78716c; transition: all 0.2s; text-decoration: none; }
     .neighbor-link:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .neighbor-link.current { border-color: #f59e0b; background: #fffbeb; color: #92400e; }
     .compare-box { background: #fefce8; border: 1px solid #fde047; border-radius: 12px; padding: 1rem; margin: 1.5rem 0; }
-    .compare-box h3 { font-size: 0.875rem; font-weight: 600; color: #92400e; margin-bottom: 0.5rem; }
+    .compare-box h3 { font-size: 0.875rem; font-weight: 600; color: #92400e; margin-bottom: 0.75rem; }
+    .states-grid-footer { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .states-grid-footer a { display: inline-block; padding: 0.2rem 0.55rem; background: white; border: 1px solid #e7e5e4; border-radius: 4px; font-size: 0.7rem; color: #78716c; text-decoration: none; transition: all 0.15s; }
+    .states-grid-footer a:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .states-grid-footer a.current { border-color: #f59e0b; background: #fefce8; color: #92400e; font-weight: 600; }
   </style>
 </head>
 <body class="bg-stone-50">
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
     <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
-      <a href="../../../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
+      <a href="../../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
     </div>
   </header>
 
   <main class="max-w-4xl mx-auto px-4 py-8">
     <nav class="text-sm text-stone-500 mb-4">
-      <a href="../../../" class="hover:text-amber-600">Home</a> / 
-      <a href="../../../tools/stamp-duty" class="hover:text-amber-600">Stamp Duty</a> / 
-      <a href="../" class="hover:text-amber-600">All States</a> / 
-      <span class="text-stone-900">Karnataka</span>
+      <a href="../../" class="hover:text-amber-600">Home</a> / <a href="../../tools/stamp-duty" class="hover:text-amber-600">Stamp Duty</a> / <a href="../" class="hover:text-amber-600">All States</a> / <span class="text-stone-900">Karnataka</span>
     </nav>
 
     <h1 class="text-3xl font-bold text-stone-900 mb-2">Stamp Duty Calculator Karnataka 2026</h1>
     <p class="text-stone-500 mb-8">Calculate property registration charges, stamp duty rates, and total cost for buying property in Karnataka. Updated for 2026.</p>
 
-    
-    <div class="compare-box">
-      <h3>🔗 Compare with Neighboring States</h3>
-      <div class="neighbor-states">
-        <a href="../maharashtra.html" class="neighbor-link no-underline" title="Compare with Maharashtra">Maharashtra</a><a href="../goa.html" class="neighbor-link no-underline" title="Compare with Goa">Goa</a><a href="../kerala.html" class="neighbor-link no-underline" title="Compare with Kerala">Kerala</a><a href="../tamilnadu.html" class="neighbor-link no-underline" title="Compare with Tamil Nadu">Tamil Nadu</a><a href="../andhrapradesh.html" class="neighbor-link no-underline" title="Compare with Andhra Pradesh">Andhra Pradesh</a><a href="../telangana.html" class="neighbor-link no-underline" title="Compare with Telangana">Telangana</a>
-      </div>
-      <p class="text-xs text-stone-600 mt-2 mb-0">Click any state to compare stamp duty rates side-by-side.</p>
-    </div>
-    
 
-    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
+    <div class="compare-box">
+      <h3>Compare with Neighboring States</h3>
+      <div class="neighbor-states">
+        <a href="../maharashtra.html" class="neighbor-link" title="Compare with Maharashtra">Maharashtra</a>
+        <a href="../goa.html" class="neighbor-link" title="Compare with Goa">Goa</a>
+        <a href="../kerala.html" class="neighbor-link" title="Compare with Kerala">Kerala</a>
+        <a href="../tamilnadu.html" class="neighbor-link" title="Compare with Tamil Nadu">Tamil Nadu</a>
+        <a href="../andhrapradesh.html" class="neighbor-link" title="Compare with Andhra Pradesh">Andhra Pradesh</a>
+        <a href="../telangana.html" class="neighbor-link" title="Compare with Telangana">Telangana</a>
+      </div>
+      <p class="text-xs text-stone-600" style="margin:0">Click any state to compare stamp duty rates side-by-side.</p>
+    </div>    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
       <div id="calc-placeholder" class="text-center py-8">
         <p class="text-stone-500 mb-4">Use our interactive calculator for Karnataka</p>
-        <a href="../../../tools/stamp-duty?state=karnataka" class="btn btn-primary">Open Calculator</a>
+        <a href="../../tools/stamp-duty?state=karnataka" class="btn btn-primary">Open Calculator</a>
       </div>
     </div>
 
@@ -96,6 +150,7 @@
             <tr class="bg-stone-100 border-b border-stone-200">
               <th class="text-left p-3 font-semibold text-stone-900">Category</th>
               <th class="text-left p-3 font-semibold text-stone-900">Stamp Duty Rate</th>
+              <th class="text-left p-3 font-semibold text-stone-900">SD Surcharge (10%)</th>
               <th class="text-left p-3 font-semibold text-stone-900">Registration Charge</th>
               <th class="text-left p-3 font-semibold text-stone-900">Total Cost</th>
             </tr>
@@ -104,73 +159,125 @@
             <tr class="border-b border-stone-100">
               <td class="p-3 text-stone-900">Male (individual)</td>
               <td class="p-3 text-stone-900">5%</td>
-              <td class="p-3 text-stone-900">1% (+10% cess)</td>
-              <td class="p-3 text-stone-900 font-medium">7%</td>
+              <td class="p-3 text-stone-900">0.5%</td>
+              <td class="p-3 text-stone-900">1%</td>
+              <td class="p-3 text-stone-900">6.5%</td>
             </tr>
             <tr class="border-b border-stone-100">
               <td class="p-3 text-stone-900">Female (individual)</td>
               <td class="p-3 text-stone-900">5%</td>
-              <td class="p-3 text-stone-900">1% (+10% cess)</td>
-              <td class="p-3 text-stone-900 font-medium">6%</td>
+              <td class="p-3 text-stone-900">0.5%</td>
+              <td class="p-3 text-stone-900">1%</td>
+              <td class="p-3 text-stone-900">6.5%</td>
             </tr>
             <tr class="border-b border-stone-100">
-              <td class="p-3 text-stone-900">Joint - Both Female</td>
+              <td class="p-3 text-stone-900">Joint - Any combination</td>
               <td class="p-3 text-stone-900">5%</td>
-              <td class="p-3 text-stone-900">1% (+10% cess)</td>
-              <td class="p-3 text-stone-900 font-medium">6%</td>
-            </tr>
-            <tr class="border-b border-stone-100">
-              <td class="p-3 text-stone-900">Joint - Both Male</td>
-              <td class="p-3 text-stone-900">5%</td>
-              <td class="p-3 text-stone-900">1% (+10% cess)</td>
-              <td class="p-3 text-stone-900 font-medium">6%</td>
-            </tr>
-            <tr class="border-b border-stone-100">
-              <td class="p-3 text-stone-900">Joint - Male + Female</td>
-              <td class="p-3 text-stone-900">5%</td>
-              <td class="p-3 text-stone-900">1% (+10% cess)</td>
-              <td class="p-3 text-stone-900 font-medium">6%</td>
+              <td class="p-3 text-stone-900">0.5%</td>
+              <td class="p-3 text-stone-900">1%</td>
+              <td class="p-3 text-stone-900">6.5%</td>
             </tr>
           </tbody>
         </table>
       </div>
+      <p class="text-xs text-stone-500 mt-2 px-3">Karnataka has a uniform 5% stamp duty rate for all genders with an additional 10% surcharge on the stamp duty amount. No gender concession. Bengaluru follows same rates.</p>
     </section>
 
-    <section class="mb-8">
-      <h2 class="text-lg font-bold mb-3">All States Quick Access</h2>
-      <div class="flex flex-wrap gap-2">
-<a href="../andhrapradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Andhra Pradesh</span></a>
-<a href="../arunachalpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Arunachal Pradesh</span></a>
-<a href="../assam.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Assam</span></a>
-<a href="../bihar.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Bihar</span></a>
-<a href="../chhattisgarh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Chhattisgarh</span></a>
-<a href="../delhi.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Delhi (NCT)</span></a>
-<a href="../goa.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Goa</span></a>
-<a href="../gujarat.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Gujarat</span></a>
-<a href="../haryana.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Haryana</span></a>
-<a href="../himachalpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Himachal Pradesh</span></a>
-<a href="../jharkhand.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Jharkhand</span></a>
-<a href="../karnataka.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs border-amber-400 bg-amber-50 font-medium"><span class="font-medium text-stone-900">Karnataka</span></a>
-<a href="../kerala.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Kerala</span></a>
-<a href="../madhyapradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Madhya Pradesh</span></a>
-<a href="../maharashtra.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Maharashtra</span></a>
-<a href="../manipur.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Manipur</span></a>
-<a href="../meghalaya.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Meghalaya</span></a>
-<a href="../mizoram.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Mizoram</span></a>
-<a href="../nagaland.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Nagaland</span></a>
-<a href="../odisha.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Odisha</span></a>
-<a href="../punjab.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Punjab</span></a>
-<a href="../rajasthan.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Rajasthan</span></a>
-<a href="../sikkim.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Sikkim</span></a>
-<a href="../tamilnadu.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Tamil Nadu</span></a>
-<a href="../telangana.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Telangana</span></a>
-<a href="../tripura.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Tripura</span></a>
-<a href="../uttarpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Uttar Pradesh</span></a>
-<a href="../uttarakhand.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Uttarakhand</span></a>
-<a href="../westbengal.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">West Bengal</span></a>
+    <section class="prose max-w-none mb-8">
+      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Overview of Real Estate in Karnataka</h2>
+      <p>Karnataka has one of India's most dynamic real estate markets, led by Bengaluru, the country's IT capital and one of the fastest-growing metropolitan cities in the world. Bengaluru's real estate market is characterised by high demand, significant price appreciation, and a thriving commercial office sector that absorbs millions of square feet annually. The city's real estate landscape spans from ultra-luxury villas in locations like Sadashivanagar and Koramangala to affordable apartments in emerging areas like Sarjapur Road, Devanahalli, and North Bengaluru.</p>
+      <p>Bengaluru is divided into several micro markets each with distinct characteristics. East Bengaluru (Whitefield, Brookfield, Hoodi) is a major IT corridor with high demand from tech professionals. South Bengaluru (JP Nagar, BTM Layout, Electronic City) offers a mix of residential and commercial properties. North Bengaluru (Yelahanka, Hebbal, Yeshwanthpur) has emerged as a growth corridor driven by the Kempegowda International Airport and the development of new business parks. West Bengaluru (Rajajinagar, Vijayanagar, Kengeri) offers relatively affordable options with good social infrastructure.</p>
+      <p>Beyond Bengaluru, other important real estate markets in Karnataka include Mysuru (a cultural and IT hub), Mangaluru (a coastal commercial centre), Hubballi-Dharwad (twin cities in North Karnataka), Belagavi, and Udupi. The Karnataka government has announced several infrastructure projects including the Bengaluru Metro expansion, the Bengaluru Suburban Railway, and the development of new industrial corridors that are expected to boost real estate activity across the state.</p>
+
+      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">How Stamp Duty is Calculated in Karnataka</h2>
+      <p>Stamp duty in Karnataka is calculated on the higher of the transaction value or the ready reckoner rate (guidance value) as determined by the state government's stamp duty department. Karnataka has a uniform stamp duty rate of 5% for all categories of buyers, regardless of gender. There is no gender-based concession in the state.</p>
+      <p>Additionally, Karnataka levies a stamp duty surcharge of 10% of the stamp duty amount. This effectively increases the stamp duty cost to 5.5% of the property value (5% base + 0.5% surcharge). Registration charges are 1% of the property value with no upper cap. The total cost for property registration in Karnataka is 6.5% of the property value.</p>
+      <p>The guidance values in Karnataka are determined by the Department of Stamps and Registration and are revised periodically. These values vary significantly across different localities within Bengaluru. For instance, prime localities like Sadashivanagar, Malleswaram, and Indiranagar have high guidance values, while peripheral areas have relatively lower values. The guidance value serves as the floor for property valuation, and transactions below this value attract scrutiny from the department.</p>
+
+      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Property Registration Process in Karnataka</h2>
+      <p>The registration process in Karnataka is managed through the Kaveri Online Services portal. Here are the steps:</p>
+      <ul>
+        <li><strong>Step 1:</strong> Prepare the sale deed and get it drafted by a registered document writer. Upload the draft deed on the Kaveri portal for approval.</li>
+        <li><strong>Step 2:</strong> Pay stamp duty online through the Kaveri portal. E-stamping is integrated into the system and payment can be made via net banking, debit card, or credit card.</li>
+        <li><strong>Step 3:</strong> Book an appointment at the Sub-Registrar office through the Kaveri portal. The system provides available date and time slots.</li>
+        <li><strong>Step 4:</strong> Visit the Sub-Registrar office on the scheduled date. Both parties must be present with original documents and two witnesses. Biometric data and photographs are captured.</li>
+        <li><strong>Step 5:</strong> The Sub-Registrar verifies the deed and supporting documents. After verification, the deed is registered and the registered document is made available on the Kaveri portal.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Documents Required</h2>
+      <ul>
+        <li>Sale deed printed on e-stamp paper (generated from Kaveri portal)</li>
+        <li>Previous title documents (chain of ownership for 13 years minimum)</li>
+        <li>Encumbrance certificate (Form 15E)</li>
+        <li>Property tax paid receipts and latest tax paid certificate</li>
+        <li>Khata certificate and Khata extract from BBMP or municipal authority</li>
+        <li>Aadhaar card and PAN card</li>
+        <li>Passport-size photographs</li>
+        <li>Two witnesses with valid ID proof</li>
+        <li>NOC from the apartment association (if applicable)</li>
+      </ul>
+
+          </section>
+
+      <section class="mt-10 max-w-2xl">
+        <h2 class="text-lg font-bold mb-3">FAQs</h2>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>Is there any stamp duty concession for women in Karnataka?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">No, Karnataka does not offer any gender-based concession on stamp duty. The rate is a uniform 5% for all buyers irrespective of gender. This is one of the few Indian states where female buyers do not receive any preferential rate.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>What is the stamp duty surcharge in Karnataka?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">Karnataka levies a surcharge of 10% of the stamp duty amount. For a property value of Rs 50 lakhs, the stamp duty is Rs 2.5 lakhs (5%) and the surcharge is Rs 25,000 (10% of Rs 2.5 lakhs). The effective stamp duty cost is 5.5% including the surcharge.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>What are guidance values in Bengaluru and how are they determined?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">Guidance values (also called ready reckoner rates) in Bengaluru are determined by the Department of Stamps and Registration. These values are based on location, infrastructure, land use, and market trends. BBMP wards are used as the basic unit for guidance value determination. The values are revised periodically and are available on the Kaveri portal.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>How can I verify property title in Karnataka?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">Property title can be verified by obtaining an encumbrance certificate from the Sub-Registrar office, checking the khata records at the BBMP or municipal office, and reviewing the chain of sale deeds. Online verification is available through the Kaveri portal for properties registered after digitisation.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>What is the difference between khata and title deed in Karnataka?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">Khata is a revenue record maintained by the municipal authority (BBMP in Bengaluru) that identifies the property for tax purposes. The title deed is the legal document that proves ownership. Both are required for property transactions. The khata must be transferred to the buyer's name after purchase for property tax payment and utilities connection.</div>
+        </div>
+      </section>
+  
+    <section class="mt-12">
+      <h2 class="text-lg font-bold mb-3">All States</h2>
+      <div class="states-grid-footer">
+        <a href="../andhrapradesh.html">Andhra Pradesh</a>
+        <a href="../arunachalpradesh.html">Arunachal Pradesh</a>
+        <a href="../assam.html">Assam</a>
+        <a href="../bihar.html">Bihar</a>
+        <a href="../chhattisgarh.html">Chhattisgarh</a>
+        <a href="../delhi.html">Delhi (NCT)</a>
+        <a href="../goa.html">Goa</a>
+        <a href="../gujarat.html">Gujarat</a>
+        <a href="../haryana.html">Haryana</a>
+        <a href="../himachalpradesh.html">Himachal Pradesh</a>
+        <a href="../jharkhand.html">Jharkhand</a>
+        <a href="../karnataka.html" class="current">Karnataka</a>
+        <a href="../kerala.html">Kerala</a>
+        <a href="../madhyapradesh.html">Madhya Pradesh</a>
+        <a href="../maharashtra.html">Maharashtra</a>
+        <a href="../manipur.html">Manipur</a>
+        <a href="../meghalaya.html">Meghalaya</a>
+        <a href="../mizoram.html">Mizoram</a>
+        <a href="../nagaland.html">Nagaland</a>
+        <a href="../odisha.html">Odisha</a>
+        <a href="../punjab.html">Punjab</a>
+        <a href="../rajasthan.html">Rajasthan</a>
+        <a href="../sikkim.html">Sikkim</a>
+        <a href="../tamilnadu.html">Tamil Nadu</a>
+        <a href="../telangana.html">Telangana</a>
+        <a href="../tripura.html">Tripura</a>
+        <a href="../uttarpradesh.html">Uttar Pradesh</a>
+        <a href="../uttarakhand.html">Uttarakhand</a>
+        <a href="../westbengal.html">West Bengal</a>
       </div>
     </section>
-  </main>
+</main>
 
   <section class="ad-slot-footer mb-4" data-ad-slot="footer_main"></section>
 

@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stamp Duty Calculator Gujarat 2026 | DesiCalc</title>
-  <meta name="description" content="Calculate stamp duty and registration charges for property in Gujarat. Male 4.9%, Female 4.9%, Joint 4.9%. Registration 1%. Free calculator.">
+  <meta name="description" content="Calculate stamp duty and registration charges for property in Gujarat. Flat 4.9% stamp duty for all genders. Lowest stamp duty in India. Free calculator.">
   <link rel="canonical" href="https://desicalc.in/programmatic/stamp-duty/gujarat">
   <meta property="og:title" content="Stamp Duty Calculator Gujarat 2026 | DesiCalc">
-  <meta property="og:description" content="Calculate stamp duty in Gujarat. Male 4.9%, Female 4.9%, Joint 4.9%. Free online calculator.">
+  <meta property="og:description" content="Calculate stamp duty in Gujarat. Flat 4.9% stamp duty all genders. Lowest in India. Free online calculator.">
   <meta property="og:url" content="https://desicalc.in/programmatic/stamp-duty/gujarat">
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://desicalc.in/assets/img/og-stamp-duty.png">
@@ -24,7 +24,7 @@
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "All",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-    "description": "Free stamp duty calculator for Gujarat property registration. Calculate stamp duty rates, registration charges, female concession, circle rate."
+    "description": "Free stamp duty calculator for Gujarat property registration. Lowest stamp duty in India at 4.9% flat rate for all genders."
   }
   </script>
   <script type="application/ld+json">
@@ -42,49 +42,100 @@
   <link rel="stylesheet" href="../../assets/css/tailwind.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
   <script src="../../assets/js/calc-core.js"></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why is Gujarat's stamp duty the lowest in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gujarat has a flat 4.9% stamp duty rate, the lowest among all Indian states. The government maintains this low rate to encourage formal property registration, reduce black money transactions, and promote the real estate sector. The policy has been successful in increasing registration volumes and improving revenue collection despite the lower rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there any stamp duty concession for women in Gujarat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, Gujarat does not offer any gender-based concession on stamp duty. The rate is a flat 4.9% for all buyers regardless of gender. This uniform approach simplifies the calculation but means female buyers do not receive any additional benefit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are jantri rates in Gujarat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jantri rates are the government-determined minimum values for property transactions in Gujarat. These rates are published by the Revenue Department and vary by location, land use, and property type. Stamp duty is calculated on the higher of the transaction value or the jantri rate. Jantri rates are the Gujarat equivalent of circle rates in other states."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I check jantri rates online in Gujarat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jantri rates can be checked online through the IGRS Gujarat portal (igrs.gujarat.gov.in). The portal provides a search tool where you can enter the village/town name, survey number, and other details to find the applicable rate. The portal also provides historical jantri data for reference."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there any additional surcharge on stamp duty in Gujarat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, Gujarat does not levy any additional surcharge, cess, or local body tax on stamp duty. The total cost is simply 4.9% stamp duty plus 1% registration charges, totalling 5.9% of the property value. This makes Gujarat one of the most transparent and cost-effective states for property registration."
+      }
+    }
+  ]
+}
+  </script>
+
   <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
+
   <style>
-    .neighbor-states { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
-    .neighbor-link { display: inline-flex; align-items: center; padding: 0.35rem 0.75rem; background: white; border: 1px solid #e7e5e4; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #78716c; transition: all 0.2s; }
+    .neighbor-states { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.75rem 0; }
+    .neighbor-link { display: inline-flex; align-items: center; padding: 0.35rem 0.75rem; background: white; border: 1px solid #e7e5e4; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #78716c; transition: all 0.2s; text-decoration: none; }
     .neighbor-link:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .neighbor-link.current { border-color: #f59e0b; background: #fffbeb; color: #92400e; }
     .compare-box { background: #fefce8; border: 1px solid #fde047; border-radius: 12px; padding: 1rem; margin: 1.5rem 0; }
-    .compare-box h3 { font-size: 0.875rem; font-weight: 600; color: #92400e; margin-bottom: 0.5rem; }
+    .compare-box h3 { font-size: 0.875rem; font-weight: 600; color: #92400e; margin-bottom: 0.75rem; }
+    .states-grid-footer { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .states-grid-footer a { display: inline-block; padding: 0.2rem 0.55rem; background: white; border: 1px solid #e7e5e4; border-radius: 4px; font-size: 0.7rem; color: #78716c; text-decoration: none; transition: all 0.15s; }
+    .states-grid-footer a:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .states-grid-footer a.current { border-color: #f59e0b; background: #fefce8; color: #92400e; font-weight: 600; }
   </style>
 </head>
 <body class="bg-stone-50">
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
     <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
-      <a href="../../../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
+      <a href="../../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
     </div>
   </header>
 
   <main class="max-w-4xl mx-auto px-4 py-8">
     <nav class="text-sm text-stone-500 mb-4">
-      <a href="../../../" class="hover:text-amber-600">Home</a> / 
-      <a href="../../../tools/stamp-duty" class="hover:text-amber-600">Stamp Duty</a> / 
-      <a href="../" class="hover:text-amber-600">All States</a> / 
-      <span class="text-stone-900">Gujarat</span>
+      <a href="../../" class="hover:text-amber-600">Home</a> / <a href="../../tools/stamp-duty" class="hover:text-amber-600">Stamp Duty</a> / <a href="../" class="hover:text-amber-600">All States</a> / <span class="text-stone-900">Gujarat</span>
     </nav>
 
     <h1 class="text-3xl font-bold text-stone-900 mb-2">Stamp Duty Calculator Gujarat 2026</h1>
     <p class="text-stone-500 mb-8">Calculate property registration charges, stamp duty rates, and total cost for buying property in Gujarat. Updated for 2026.</p>
 
-    
-    <div class="compare-box">
-      <h3>🔗 Compare with Neighboring States</h3>
-      <div class="neighbor-states">
-        <a href="../rajasthan.html" class="neighbor-link no-underline" title="Compare with Rajasthan">Rajasthan</a><a href="../madhyapradesh.html" class="neighbor-link no-underline" title="Compare with Madhya Pradesh">Madhya Pradesh</a><a href="../maharashtra.html" class="neighbor-link no-underline" title="Compare with Maharashtra">Maharashtra</a>
-      </div>
-      <p class="text-xs text-stone-600 mt-2 mb-0">Click any state to compare stamp duty rates side-by-side.</p>
-    </div>
-    
 
-    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
+    <div class="compare-box">
+      <h3>Compare with Neighboring States</h3>
+      <div class="neighbor-states">
+        <a href="../rajasthan.html" class="neighbor-link" title="Compare with Rajasthan">Rajasthan</a>
+        <a href="../madhyapradesh.html" class="neighbor-link" title="Compare with Madhya Pradesh">Madhya Pradesh</a>
+        <a href="../maharashtra.html" class="neighbor-link" title="Compare with Maharashtra">Maharashtra</a>
+      </div>
+      <p class="text-xs text-stone-600" style="margin:0">Click any state to compare stamp duty rates side-by-side.</p>
+    </div>    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
       <div id="calc-placeholder" class="text-center py-8">
         <p class="text-stone-500 mb-4">Use our interactive calculator for Gujarat</p>
-        <a href="../../../tools/stamp-duty?state=gujarat" class="btn btn-primary">Open Calculator</a>
+        <a href="../../tools/stamp-duty?state=gujarat" class="btn btn-primary">Open Calculator</a>
       </div>
     </div>
 
@@ -105,72 +156,121 @@
               <td class="p-3 text-stone-900">Male (individual)</td>
               <td class="p-3 text-stone-900">4.9%</td>
               <td class="p-3 text-stone-900">1%</td>
-              <td class="p-3 text-stone-900 font-medium">6.9%</td>
+              <td class="p-3 text-stone-900">5.9%</td>
             </tr>
             <tr class="border-b border-stone-100">
               <td class="p-3 text-stone-900">Female (individual)</td>
               <td class="p-3 text-stone-900">4.9%</td>
               <td class="p-3 text-stone-900">1%</td>
-              <td class="p-3 text-stone-900 font-medium">5.9%</td>
+              <td class="p-3 text-stone-900">5.9%</td>
             </tr>
             <tr class="border-b border-stone-100">
-              <td class="p-3 text-stone-900">Joint - Both Female</td>
+              <td class="p-3 text-stone-900">Joint - Any combination</td>
               <td class="p-3 text-stone-900">4.9%</td>
               <td class="p-3 text-stone-900">1%</td>
-              <td class="p-3 text-stone-900 font-medium">5.9%</td>
-            </tr>
-            <tr class="border-b border-stone-100">
-              <td class="p-3 text-stone-900">Joint - Both Male</td>
-              <td class="p-3 text-stone-900">4.9%</td>
-              <td class="p-3 text-stone-900">1%</td>
-              <td class="p-3 text-stone-900 font-medium">5.9%</td>
-            </tr>
-            <tr class="border-b border-stone-100">
-              <td class="p-3 text-stone-900">Joint - Male + Female</td>
-              <td class="p-3 text-stone-900">4.9%</td>
-              <td class="p-3 text-stone-900">1%</td>
-              <td class="p-3 text-stone-900 font-medium">5.9%</td>
+              <td class="p-3 text-stone-900">5.9%</td>
             </tr>
           </tbody>
         </table>
       </div>
+      <p class="text-xs text-stone-500 mt-2 px-3">Gujarat has the lowest stamp duty rate in India at a flat 4.9% for all genders. No gender-based concessions.</p>
     </section>
 
-    <section class="mb-8">
-      <h2 class="text-lg font-bold mb-3">All States Quick Access</h2>
-      <div class="flex flex-wrap gap-2">
-<a href="../andhrapradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Andhra Pradesh</span></a>
-<a href="../arunachalpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Arunachal Pradesh</span></a>
-<a href="../assam.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Assam</span></a>
-<a href="../bihar.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Bihar</span></a>
-<a href="../chhattisgarh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Chhattisgarh</span></a>
-<a href="../delhi.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Delhi (NCT)</span></a>
-<a href="../goa.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Goa</span></a>
-<a href="../gujarat.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs border-amber-400 bg-amber-50 font-medium"><span class="font-medium text-stone-900">Gujarat</span></a>
-<a href="../haryana.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Haryana</span></a>
-<a href="../himachalpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Himachal Pradesh</span></a>
-<a href="../jharkhand.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Jharkhand</span></a>
-<a href="../karnataka.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Karnataka</span></a>
-<a href="../kerala.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Kerala</span></a>
-<a href="../madhyapradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Madhya Pradesh</span></a>
-<a href="../maharashtra.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Maharashtra</span></a>
-<a href="../manipur.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Manipur</span></a>
-<a href="../meghalaya.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Meghalaya</span></a>
-<a href="../mizoram.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Mizoram</span></a>
-<a href="../nagaland.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Nagaland</span></a>
-<a href="../odisha.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Odisha</span></a>
-<a href="../punjab.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Punjab</span></a>
-<a href="../rajasthan.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Rajasthan</span></a>
-<a href="../sikkim.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Sikkim</span></a>
-<a href="../tamilnadu.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Tamil Nadu</span></a>
-<a href="../telangana.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Telangana</span></a>
-<a href="../tripura.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Tripura</span></a>
-<a href="../uttarpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Uttar Pradesh</span></a>
-<a href="../uttarakhand.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Uttarakhand</span></a>
-<a href="../westbengal.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">West Bengal</span></a>
+    <section class="prose max-w-none mb-8">
+      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Overview of Real Estate in Gujarat</h2>
+      <p>Gujarat has one of India's most vibrant real estate markets, driven by robust industrial growth, urbanisation, and infrastructure development. The state's property market is dominated by Ahmedabad, the largest city and commercial hub, followed by Surat, Vadodara, Rajkot, Bhavnagar, and Jamnagar. Gandhinagar, the state capital, has its own distinct real estate character as a planned administrative city.</p>
+      <p>Ahmedabad, a UNESCO World Heritage City, offers a wide spectrum of property options from premium bungalows in Satellite, Bodakdev, and SG Highway areas to affordable housing in vast tracts of the city's western and eastern peripheries. The Ahmedabad Metro and the Sardar Patel Ring Road have opened up new areas for residential development. Surat, India's diamond and textile capital, has a thriving real estate market with high demand for both residential and commercial properties. Areas like Vesu, Pal, Adajan, and City Light are premium residential destinations. Vadodara, the cultural capital of Gujarat, has a steady real estate market driven by the presence of GSFC, IPCL, and other industrial units. Rajkot, the newest district headquarters and a growing industrial city is also witnessing rapid real estate development.</p>
+      <p>Gujarat offers the lowest stamp duty rate in India at 4.9% for all categories of buyers, without any gender-based differentiation. This has been a policy initiative by the state government to promote the formalisation of property transactions and reduce the incentive for undervaluation. The uniform rate simplifies the calculation and makes Gujarat an attractive destination for property investment. The Gujarat government's proactive approach to ease of doing business extends to its property registration system, which is largely digitised.</p>
+
+      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">How Stamp Duty is Calculated in Gujarat</h2>
+      <p>Stamp duty in Gujarat is a flat 4.9% for all categories of buyers, regardless of gender. This is the lowest stamp duty rate among all Indian states. Registration charges are 1% of the property value with no upper cap. The total transaction cost for property purchase in Gujarat is 5.9% of the property value, making it one of the most cost-effective states for property registration.</p>
+      <p>The calculation is based on the higher of the agreement value or the jantri rate (circle rate) as determined by the state government. Gujarat has a well-established jantri system where rates are published for every village, town, and city locality. The jantri rates are revised periodically, typically every 2-3 years. The Gujarat Revenue Department maintains an online portal where buyers can check the applicable jantri rates for any property location.</p>
+      <p>Gujarat does not have any gender-based concessions, surcharges, or additional cess on stamp duty. The flat rate applies uniformly across all cities including Ahmedabad, Surat, Vadodara, Rajkot, and Gandhinagar. This simplicity is a key advantage of the Gujarat stamp duty system.</p>
+
+      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Property Registration Process in Gujarat</h2>
+      <p>The registration process in Gujarat is managed through the IGRS Gujarat (e-Dhara) portal. Here are the steps:</p>
+      <ul>
+        <li><strong>Step 1:</strong> Draft the sale deed with the assistance of a registered document writer. The deed must be submitted online through the IGRS portal.</li>
+        <li><strong>Step 2:</strong> Pay stamp duty online through the e-stamping portal at authorised banks (SBI, PNB, Axis Bank, etc.). The e-stamp certificate serves as proof of payment.</li>
+        <li><strong>Step 3:</strong> Schedule an appointment at the Sub-Registrar office through the online portal. Same-day and next-day slots are often available.</li>
+        <li><strong>Step 4:</strong> Both parties appear at the Sub-Registrar office with original documents and two witnesses. Biometric verification and photographs are taken.</li>
+        <li><strong>Step 5:</strong> The Sub-Registrar verifies the deed and supporting documents. Upon satisfaction, the deed is registered. The registered document is digitally signed and accessible online.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Documents Required</h2>
+      <ul>
+        <li>Sale deed (original and copies)</li>
+        <li>Jantri rate receipt (if applicable)</li>
+        <li>Previous title documents (30 years chain)</li>
+        <li>Encumbrance certificate</li>
+        <li>Property tax receipts and non-encumbrance certificate from municipal corporation</li>
+        <li>Aadhaar card and PAN card</li>
+        <li>Passport-size photographs</li>
+        <li>Two witnesses with identity proof</li>
+        <li>NOC from society or developer</li>
+      </ul>
+
+          </section>
+
+      <section class="mt-10 max-w-2xl">
+        <h2 class="text-lg font-bold mb-3">FAQs</h2>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>Why is Gujarat's stamp duty the lowest in India?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">Gujarat has a flat 4.9% stamp duty rate, the lowest among all Indian states. The government maintains this low rate to encourage formal property registration, reduce black money transactions, and promote the real estate sector. The policy has been successful in increasing registration volumes and improving revenue collection despite the lower rate.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>Is there any stamp duty concession for women in Gujarat?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">No, Gujarat does not offer any gender-based concession on stamp duty. The rate is a flat 4.9% for all buyers regardless of gender. This uniform approach simplifies the calculation but means female buyers do not receive any additional benefit.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>What are jantri rates in Gujarat?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">Jantri rates are the government-determined minimum values for property transactions in Gujarat. These rates are published by the Revenue Department and vary by location, land use, and property type. Stamp duty is calculated on the higher of the transaction value or the jantri rate. Jantri rates are the Gujarat equivalent of circle rates in other states.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>How can I check jantri rates online in Gujarat?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">Jantri rates can be checked online through the IGRS Gujarat portal (igrs.gujarat.gov.in). The portal provides a search tool where you can enter the village/town name, survey number, and other details to find the applicable rate. The portal also provides historical jantri data for reference.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>Is there any additional surcharge on stamp duty in Gujarat?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">No, Gujarat does not levy any additional surcharge, cess, or local body tax on stamp duty. The total cost is simply 4.9% stamp duty plus 1% registration charges, totalling 5.9% of the property value. This makes Gujarat one of the most transparent and cost-effective states for property registration.</div>
+        </div>
+      </section>
+  
+    <section class="mt-12">
+      <h2 class="text-lg font-bold mb-3">All States</h2>
+      <div class="states-grid-footer">
+        <a href="../andhrapradesh.html">Andhra Pradesh</a>
+        <a href="../arunachalpradesh.html">Arunachal Pradesh</a>
+        <a href="../assam.html">Assam</a>
+        <a href="../bihar.html">Bihar</a>
+        <a href="../chhattisgarh.html">Chhattisgarh</a>
+        <a href="../delhi.html">Delhi (NCT)</a>
+        <a href="../goa.html">Goa</a>
+        <a href="../gujarat.html" class="current">Gujarat</a>
+        <a href="../haryana.html">Haryana</a>
+        <a href="../himachalpradesh.html">Himachal Pradesh</a>
+        <a href="../jharkhand.html">Jharkhand</a>
+        <a href="../karnataka.html">Karnataka</a>
+        <a href="../kerala.html">Kerala</a>
+        <a href="../madhyapradesh.html">Madhya Pradesh</a>
+        <a href="../maharashtra.html">Maharashtra</a>
+        <a href="../manipur.html">Manipur</a>
+        <a href="../meghalaya.html">Meghalaya</a>
+        <a href="../mizoram.html">Mizoram</a>
+        <a href="../nagaland.html">Nagaland</a>
+        <a href="../odisha.html">Odisha</a>
+        <a href="../punjab.html">Punjab</a>
+        <a href="../rajasthan.html">Rajasthan</a>
+        <a href="../sikkim.html">Sikkim</a>
+        <a href="../tamilnadu.html">Tamil Nadu</a>
+        <a href="../telangana.html">Telangana</a>
+        <a href="../tripura.html">Tripura</a>
+        <a href="../uttarpradesh.html">Uttar Pradesh</a>
+        <a href="../uttarakhand.html">Uttarakhand</a>
+        <a href="../westbengal.html">West Bengal</a>
       </div>
     </section>
-  </main>
+</main>
 
   <section class="ad-slot-footer mb-4" data-ad-slot="footer_main"></section>
 
