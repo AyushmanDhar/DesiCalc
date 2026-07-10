@@ -294,10 +294,41 @@ function toggleFaq(btn) {
   }
 }
 
+function initGreeting() {
+  var el = document.getElementById('greeting');
+  if (!el) return;
+  var h = new Date().getHours();
+  var text = '';
+  if (h >= 5 && h < 12) { text = '🌅 ' + (window.DESICALC_LANG && window.DESICALC_LANG['greeting.morning'] ? window.DESICALC_LANG['greeting.morning'] : 'Good morning'); }
+  else if (h >= 12 && h < 17) { text = '☀️ ' + (window.DESICALC_LANG && window.DESICALC_LANG['greeting.afternoon'] ? window.DESICALC_LANG['greeting.afternoon'] : 'Good afternoon'); }
+  else if (h >= 17 && h < 21) { text = '🌅 ' + (window.DESICALC_LANG && window.DESICALC_LANG['greeting.evening'] ? window.DESICALC_LANG['greeting.evening'] : 'Good evening'); }
+  else { text = '🌙 ' + (window.DESICALC_LANG && window.DESICALC_LANG['greeting.night'] ? window.DESICALC_LANG['greeting.night'] : 'Good night'); }
+  el.textContent = text;
+}
+
+function initBackToTop() {
+  var btn = document.getElementById('backToTop');
+  if (!btn) return;
+  var ticking = false;
+  function onScroll() {
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        btn.classList.toggle('visible', window.scrollY > 350);
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  btn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
 function showToast(msg) {
   var el = document.getElementById('toast');
   if (!el) return;
-  el.textContent = msg;
+  el.textContent = '✨ ' + msg;
   el.classList.remove('show');
   void el.offsetWidth;
   el.classList.add('show');

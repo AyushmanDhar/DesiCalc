@@ -182,4 +182,9 @@ window.DESICALC_LANG = {
   'onboarding.step2': 'Purani vs Nai tax vyavastha ki tulna karein',
   'onboarding.step3': 'Apne CA ya parivaar ke saath parinaam share karein',
   'onboarding.cta': 'Samajh gaye, ganana shuru karein!',
+
+  'greeting.morning': 'Shubh prabhat',
+  'greeting.afternoon': 'Shubh dopahar',
+  'greeting.evening': 'Shubh sandhya',
+  'greeting.night': 'Shubh ratri',
 };

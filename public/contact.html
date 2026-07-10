@@ -26,6 +26,7 @@
       <div class="flex items-center gap-3">
         <a href="./" class="text-sm text-stone-500 hover:text-stone-900 no-underline" data-i18n="header.back">← Back</a>
         <a href="./" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
+        <span id="greeting" class="greeting-text hidden sm:inline" aria-live="polite"></span>
       </div>
       <div class="lang-toggle" role="group" aria-label="Language toggle">
         <button onclick="setLang('en')" class="active" data-lang-btn="en">EN</button>
@@ -65,9 +66,14 @@
     </div>
   </footer>
 
+  <div id="toast" class="toast"></div>
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
   <script>
     initLang();
     initScrollReveal();
+    initGreeting();
+    initBackToTop();
     document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
       btn.addEventListener('click', function() {
         document.querySelectorAll('[data-lang-btn]').forEach(function(b) { b.classList.remove('active'); });

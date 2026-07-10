@@ -182,4 +182,9 @@ window.DESICALC_LANG = {
   'onboarding.step2': 'Compare Old vs New tax regime side-by-side',
   'onboarding.step3': 'Share results with your CA or family',
   'onboarding.cta': 'Got it, start calculating!',
+
+  'greeting.morning': 'Good morning',
+  'greeting.afternoon': 'Good afternoon',
+  'greeting.evening': 'Good evening',
+  'greeting.night': 'Good night',
 };

@@ -18,6 +18,7 @@ Indian tax, stamp duty, and RTO road tax calculators. No login. No data leaves y
 - **Dual language** — English and Hindi with client-side toggle
 - **Mobile-first** — responsive layout with Tailwind CSS
 - **Privacy-first** — zero tracking cookies, no data collection
+- **Tasteful whimsy** — time-based greetings, animated result counters, subtle card hover effects, back-to-top button
 
 ## Stack
 
