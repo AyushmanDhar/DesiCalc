@@ -34,220 +34,105 @@
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://desicalc.in" },
       { "@type": "ListItem", "position": 2, "name": "RTO Tax Calculator", "item": "https://desicalc.in/tools/rto-tax" },
-      { "@type": "ListItem", "position": 3, "name": "Gujarat", "item": "https://desicalc.in/programmatic/rto-tax/gujarat" }
+      { "@type": "ListItem", "position": 3, "name": "All States", "item": "https://desicalc.in/programmatic/rto-tax/" },
+      { "@type": "ListItem", "position": 4, "name": "Gujarat", "item": "https://desicalc.in/programmatic/rto-tax/gujarat" }
     ]
   }
   </script>
   <link rel="stylesheet" href="../../assets/css/tailwind.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
   <script src="../../assets/js/calc-core.js"></script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the RTO code for Gujarat?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Gujarat uses the GJ prefix. Major codes include GJ-01 (Ahmedabad), GJ-02 (Mehsana), GJ-03 (Rajkot), GJ-04 (Bhavnagar), GJ-05 (Surat), GJ-06 (Vadodara), GJ-07 (Kutch), GJ-08 (Kheda), GJ-09 (Sabarkantha), GJ-10 (Jamnagar), GJ-18 (Gandhinagar), and GJ-27 (Ahmedabad West)."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How is road tax calculated in Gujarat?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Gujarat calculates road tax on the pre-GST (ex-tax) price of the vehicle at a flat 6%. This means the taxable amount is the ex-showroom price minus the GST component. For a ₹10 lakh car, the effective tax is about ₹46,875 compared to ₹60,000 if calculated on the full price."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Are EVs fully exempt from road tax in Gujarat?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No, EVs in Gujarat are not fully exempt. They are charged a reduced rate of 1% on the pre-GST price, which is significantly lower than the 6% for ICE vehicles but not zero. This is different from most other states that offer 100% EV exemption."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the HSRP cost in Gujarat?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "HSRP in Gujarat costs ₹400 for four-wheelers and ₹200 for two-wheelers. These are mandatory for all new registrations and come with a chromium hologram and laser-etched code."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I register a vehicle in Gujarat if I live in another state?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You need a valid Gujarat address proof to register a vehicle in the state. If you have a second home or business in Gujarat, you can use that address. However, registering a vehicle in Gujarat while primarily residing elsewhere may raise compliance issues."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the penalty for late registration in Gujarat?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Late registration in Gujarat attracts a penalty of ₹300 per month beyond the 30-day window, with a maximum cap of ₹5,000. Additionally, driving an unregistered vehicle is a separate offence with fines up to ₹5,000 under Section 39 of the MV Act."
-      }
-    }
-  ]
-}
-  </script>
-
   <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
+  <style>
+    .neighbor-states { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+    .neighbor-link { display: inline-flex; align-items: center; padding: 0.35rem 0.75rem; background: white; border: 1px solid #e7e5e4; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #78716c; transition: all 0.2s; }
+    .neighbor-link:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .compare-box { background: #fefce8; border: 1px solid #fde047; border-radius: 12px; padding: 1rem; margin: 1.5rem 0; }
+    .compare-box h3 { font-size: 0.875rem; font-weight: 600; color: #92400e; margin-bottom: 0.5rem; }
+  </style>
 </head>
 <body class="bg-stone-50">
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
     <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
-      <a href="../../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
+      <a href="../../../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
     </div>
   </header>
 
   <main class="max-w-4xl mx-auto px-4 py-8">
     <nav class="text-sm text-stone-500 mb-4">
-      <a href="../../" class="hover:text-amber-600">Home</a> / <a href="../../tools/rto-tax" class="hover:text-amber-600">RTO Tax</a> / <span class="text-stone-900">Gujarat</span>
+      <a href="../../../" class="hover:text-amber-600">Home</a> / 
+      <a href="../../../tools/rto-tax" class="hover:text-amber-600">RTO Tax</a> / 
+      <a href="../" class="hover:text-amber-600">All States</a> / 
+      <span class="text-stone-900">Gujarat</span>
     </nav>
 
     <h1 class="text-3xl font-bold text-stone-900 mb-2">RTO Tax Calculator Gujarat 2026</h1>
     <p class="text-stone-500 mb-8">Calculate road tax, registration charges, and on-road price for vehicles in Gujarat. Updated for 2026.</p>
 
+    
+    <div class="compare-box">
+      <h3>🔗 Compare with Neighboring States</h3>
+      <div class="neighbor-states">
+        <a href="../rajasthan.html" class="neighbor-link no-underline" title="Compare with Rajasthan">Rajasthan</a><a href="../madhyapradesh.html" class="neighbor-link no-underline" title="Compare with Madhya Pradesh">Madhya Pradesh</a><a href="../maharashtra.html" class="neighbor-link no-underline" title="Compare with Maharashtra">Maharashtra</a>
+      </div>
+      <p class="text-xs text-stone-600 mt-2 mb-0">Click any state to compare RTO road tax rates side-by-side.</p>
+    </div>
+    
+
     <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
       <div id="calc-placeholder" class="text-center py-8">
         <p class="text-stone-500 mb-4">Use our interactive RTO tax calculator for Gujarat</p>
-        <a href="../../tools/rto-tax?state=gujarat" class="btn btn-primary">Open Calculator &rarr;</a>
+        <a href="../../../tools/rto-tax?state=gujarat" class="btn btn-primary">Open Calculator &rarr;</a>
       </div>
     </div>
 
     <section class="mb-8">
       <h2 class="text-2xl font-bold text-stone-900 mb-4">Gujarat RTO Road Tax Rates 2026</h2>
-      <div class="overflow-x-auto bg-white rounded-xl border border-stone-200">
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="bg-stone-100 text-stone-700">
-              <th class="text-left p-3 font-semibold">Vehicle Type</th>
-              <th class="text-left p-3 font-semibold">Tax Rate</th>
-              <th class="text-left p-3 font-semibold">Registration Fee</th>
-              <th class="text-left p-3 font-semibold">HSRP Charge</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-t border-stone-200">
-              <td class="p-3">Petrol Car (Pre-GST)</td>
-              <td class="p-3">6%</td>
-              <td class="p-3">₹600</td>
-              <td class="p-3">₹400</td>
-            </tr>
-            <tr class="border-t border-stone-200">
-              <td class="p-3">Diesel Car (Pre-GST)</td>
-              <td class="p-3">6%</td>
-              <td class="p-3">₹600</td>
-              <td class="p-3">₹400</td>
-            </tr>
-            <tr class="border-t border-stone-200">
-              <td class="p-3">CNG Car (Pre-GST)</td>
-              <td class="p-3">6%</td>
-              <td class="p-3">₹600</td>
-              <td class="p-3">₹400</td>
-            </tr>
-            <tr class="border-t border-stone-200">
-              <td class="p-3">Electric Vehicle (EV)</td>
-              <td class="p-3">1% (Partial)</td>
-              <td class="p-3">₹600</td>
-              <td class="p-3">₹400</td>
-            </tr>
-            <tr class="border-t border-stone-200">
-              <td class="p-3">Two-Wheeler Petrol</td>
-              <td class="p-3">5%</td>
-              <td class="p-3">₹300</td>
-              <td class="p-3">₹200</td>
-            </tr>
-            <tr class="border-t border-stone-200">
-              <td class="p-3">Two-Wheeler EV</td>
-              <td class="p-3">1%</td>
-              <td class="p-3">₹300</td>
-              <td class="p-3">₹200</td>
-            </tr>
-            <tr class="border-t border-stone-200">
-              <td class="p-3">Commercial Vehicle</td>
-              <td class="p-3">7%</td>
-              <td class="p-3">₹1,000</td>
-              <td class="p-3">₹400</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <p class="text-stone-600 mb-4">Estimated range: <strong class="text-stone-900">6-9%</strong> (varies by vehicle type, fuel, price, and category). Use the calculator above for exact figures.</p>
     </section>
 
-    <section class="prose max-w-none mb-8">
-      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Vehicle Registration Process in Gujarat</h2>
-      <p>Gujarat's vehicle registration is managed by the Gujarat Transport Department with a well-organised network of RTO offices across the state including Ahmedabad (GJ-01), Gandhinagar (GJ-18), Vadodara (GJ-06), Surat (GJ-05), Rajkot (GJ-03), Bhavnagar (GJ-04), and Jamnagar (GJ-10). The state follows the Central Motor Vehicle Rules with tax regulations under the Gujarat Motor Vehicles Taxation Act.</p>
-      <p>The registration process in Gujarat is streamlined through the VAHAN portal. Upon purchasing a new vehicle, the dealer issues temporary registration valid for 30 days. You then visit the RTO for permanent registration. Gujarat RTOs are known for efficient service with most processes available online including appointment booking, fee payment, and document upload. Physical verification of the vehicle is conducted at the RTO premises before the registration number in GJ-XX-XXXX format is allotted.</p>
-
-      <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Required Documents for Registration</h3>
-      <ul>
-        <li>Form 20 (Application for Registration)</li>
-        <li>Form 21 (Sale Certificate from Dealership)</li>
-        <li>Form 22 (Manufacturer's Roadworthiness Certificate)</li>
-        <li>Valid Insurance Certificate (minimum 1 year)</li>
-        <li>Address Proof (Aadhaar, Voter ID, Passport, Utility Bill)</li>
-        <li>Identity Proof (Aadhaar, PAN, Driving Licence)</li>
-        <li>Original Vehicle Invoice and Delivery Note</li>
-        <li>PUC Certificate</li>
-        <li>HSRP booking receipt</li>
-        <li>Passport-size photographs (2 copies)</li>
-      </ul>
-
-      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Road Tax Calculation in Gujarat</h2>
-      <p>Gujarat follows a unique pre-GST road tax calculation method. The tax is calculated on the pre-GST (pre-tax) price of the vehicle at a flat rate of 6%. This means the taxable value excludes the GST component, making Gujarat's effective tax rate slightly lower than the nominal 6% when compared on an ex-showroom basis. This pre-GST calculation applies to petrol, diesel, and CNG vehicles uniformly.</p>
-      <p>For example, if a car has an ex-showroom price of ₹10 lakh (including 28% GST), the pre-GST price would be approximately ₹7.81 lakh. The road tax at 6% would be ₹46,875 rather than ₹60,000 on the full ex-showroom price. This unique calculation method makes Gujarat comparatively affordable. For a ₹20 lakh car, the pre-GST price is about ₹15.63 lakh, and the tax at 6% is ₹93,750.</p>
-
-      <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">EV Policy in Gujarat</h3>
-      <p>Gujarat offers a partial road tax exemption for electric vehicles. Unlike many states that offer 100% exemption, Gujarat charges a reduced rate of 1% for EVs. This is still significantly lower than the 6% rate for ICE vehicles. The Gujarat EV Policy 2021 aims to promote EV manufacturing and adoption, leveraging the state's strong automotive manufacturing ecosystem, especially the Sanand and Mandal industrial clusters where major EV manufacturers have set up plants.</p>
-
-      <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Two-Wheeler Taxation</h3>
-      <p>Two-wheelers in Gujarat are taxed at 5% of the pre-GST price for petrol models and 1% for electric two-wheelers. Registration fee is ₹300 and HSRP is ₹200. Gujarat has one of the highest two-wheeler densities in India, with cities like Ahmedabad, Surat, and Vadodara having millions of registered two-wheelers.</p>
-
-          </section>
-
-      <section class="mt-10 max-w-2xl">
-        <h2 class="text-lg font-bold mb-3">FAQs</h2>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>What is the RTO code for Gujarat?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">Gujarat uses the GJ prefix. Major codes include GJ-01 (Ahmedabad), GJ-02 (Mehsana), GJ-03 (Rajkot), GJ-04 (Bhavnagar), GJ-05 (Surat), GJ-06 (Vadodara), GJ-07 (Kutch), GJ-08 (Kheda), GJ-09 (Sabarkantha), GJ-10 (Jamnagar), GJ-18 (Gandhinagar), and GJ-27 (Ahmedabad West).</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>How is road tax calculated in Gujarat?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">Gujarat calculates road tax on the pre-GST (ex-tax) price of the vehicle at a flat 6%. This means the taxable amount is the ex-showroom price minus the GST component. For a ₹10 lakh car, the effective tax is about ₹46,875 compared to ₹60,000 if calculated on the full price.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>Are EVs fully exempt from road tax in Gujarat?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">No, EVs in Gujarat are not fully exempt. They are charged a reduced rate of 1% on the pre-GST price, which is significantly lower than the 6% for ICE vehicles but not zero. This is different from most other states that offer 100% EV exemption.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>What is the HSRP cost in Gujarat?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">HSRP in Gujarat costs ₹400 for four-wheelers and ₹200 for two-wheelers. These are mandatory for all new registrations and come with a chromium hologram and laser-etched code.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>Can I register a vehicle in Gujarat if I live in another state?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">You need a valid Gujarat address proof to register a vehicle in the state. If you have a second home or business in Gujarat, you can use that address. However, registering a vehicle in Gujarat while primarily residing elsewhere may raise compliance issues.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>What is the penalty for late registration in Gujarat?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">Late registration in Gujarat attracts a penalty of ₹300 per month beyond the 30-day window, with a maximum cap of ₹5,000. Additionally, driving an unregistered vehicle is a separate offence with fines up to ₹5,000 under Section 39 of the MV Act.</div>
-        </div>
-      </section>
+    <section class="mb-8">
+      <h2 class="text-lg font-bold mb-3">All States Quick Access</h2>
+      <div class="flex flex-wrap gap-2">
+<a href="../andhrapradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Andhra Pradesh</span></a>
+<a href="../arunachalpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Arunachal Pradesh</span></a>
+<a href="../assam.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Assam</span></a>
+<a href="../bihar.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Bihar</span></a>
+<a href="../chhattisgarh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Chhattisgarh</span></a>
+<a href="../delhi.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Delhi (NCT)</span></a>
+<a href="../goa.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Goa</span></a>
+<a href="../gujarat.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs border-amber-400 bg-amber-50 font-medium"><span class="font-medium text-stone-900">Gujarat</span></a>
+<a href="../haryana.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Haryana</span></a>
+<a href="../himachalpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Himachal Pradesh</span></a>
+<a href="../jharkhand.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Jharkhand</span></a>
+<a href="../karnataka.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Karnataka</span></a>
+<a href="../kerala.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Kerala</span></a>
+<a href="../madhyapradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Madhya Pradesh</span></a>
+<a href="../maharashtra.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Maharashtra</span></a>
+<a href="../manipur.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Manipur</span></a>
+<a href="../meghalaya.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Meghalaya</span></a>
+<a href="../mizoram.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Mizoram</span></a>
+<a href="../nagaland.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Nagaland</span></a>
+<a href="../odisha.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Odisha</span></a>
+<a href="../punjab.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Punjab</span></a>
+<a href="../rajasthan.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Rajasthan</span></a>
+<a href="../sikkim.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Sikkim</span></a>
+<a href="../tamilnadu.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Tamil Nadu</span></a>
+<a href="../telangana.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Telangana</span></a>
+<a href="../tripura.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Tripura</span></a>
+<a href="../uttarpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Uttar Pradesh</span></a>
+<a href="../uttarakhand.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Uttarakhand</span></a>
+<a href="../westbengal.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">West Bengal</span></a>
+      </div>
+    </section>
   </main>
 
   <section class="ad-slot-footer mb-4" data-ad-slot="footer_main"></section>
 
   <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
-    <div class="max-w-5xl mx-auto px-4">&copy; 2026 DesiCalc. Free Indian tax calculators.</div>
+    <div class="max-w-5xl mx-auto px-4"><span class="text-stone-900 font-semibold">DesiCalc</span> &copy; 2026. Free Indian tax calculators.</div>
   </footer>
   <script src="../../assets/js/ad.js"></script>
 </body>

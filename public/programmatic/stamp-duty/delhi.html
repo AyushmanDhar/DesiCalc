@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stamp Duty Calculator Delhi 2026 | DesiCalc</title>
-  <meta name="description" content="Calculate stamp duty and registration charges for property in Delhi. Male 6%, Female 4%, Joint 4-6%. First-time buyer rebate 1%. Best female concession in India.">
+  <title>Stamp Duty Calculator Delhi (NCT) 2026 | DesiCalc</title>
+  <meta name="description" content="Calculate stamp duty and registration charges for property in Delhi (NCT). Male 6%, Female 4%, Joint 5%. Registration 1%. Free calculator.">
   <link rel="canonical" href="https://desicalc.in/programmatic/stamp-duty/delhi">
-  <meta property="og:title" content="Stamp Duty Calculator Delhi 2026 | DesiCalc">
-  <meta property="og:description" content="Calculate stamp duty in Delhi. Male 6%, Female 4%, Joint 4-6%. First-time buyer rebate 1%. Best female concession in India.">
+  <meta property="og:title" content="Stamp Duty Calculator Delhi (NCT) 2026 | DesiCalc">
+  <meta property="og:description" content="Calculate stamp duty in Delhi (NCT). Male 6%, Female 4%, Joint 5%. Free online calculator.">
   <meta property="og:url" content="https://desicalc.in/programmatic/stamp-duty/delhi">
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://desicalc.in/assets/img/og-stamp-duty.png">
@@ -19,12 +19,12 @@
   {
     "@context": "https://schema.org",
     "@type": ["WebApplication", "SoftwareApplication"],
-    "name": "Stamp Duty Calculator Delhi",
+    "name": "Stamp Duty Calculator Delhi (NCT)",
     "url": "https://desicalc.in/tools/stamp-duty?state=delhi",
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "All",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-    "description": "Free stamp duty calculator for Delhi property registration. Calculate stamp duty rates, female concession, first-time buyer rebate, circle rates."
+    "description": "Free stamp duty calculator for Delhi (NCT) property registration. Calculate stamp duty rates, registration charges, female concession, circle rate."
   }
   </script>
   <script type="application/ld+json">
@@ -34,90 +34,62 @@
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://desicalc.in" },
       { "@type": "ListItem", "position": 2, "name": "Stamp Duty Calculator", "item": "https://desicalc.in/tools/stamp-duty" },
-      { "@type": "ListItem", "position": 3, "name": "Delhi", "item": "https://desicalc.in/programmatic/stamp-duty/delhi" }
+      { "@type": "ListItem", "position": 3, "name": "All States", "item": "https://desicalc.in/programmatic/stamp-duty/" },
+      { "@type": "ListItem", "position": 4, "name": "Delhi (NCT)", "item": "https://desicalc.in/programmatic/stamp-duty/delhi" }
     ]
   }
   </script>
   <link rel="stylesheet" href="../../assets/css/tailwind.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
   <script src="../../assets/js/calc-core.js"></script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the maximum female concession in Delhi?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Delhi offers the highest female concession in India at 2%. Female buyers pay 4% stamp duty instead of 6%. Combined with the first-time buyer rebate of 1%, a female first-time buyer pays only 3% stamp duty the lowest in any Indian metro."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the first-time buyer scheme in Delhi?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The Delhi government offers a 1% rebate on stamp duty for first-time homebuyers. This is applicable to both male and female buyers who have not previously owned a residential property in Delhi. The rebate is available for residential properties only."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How are circle rates determined in Delhi?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Circle rates in Delhi are determined by the Revenue Department based on the category of the colony. Delhi colonies are classified into categories A, B, C, D, E, F, G, and H based on location and amenities. Category A colonies (like Defence Colony, Greater Kailash) have the highest rates, while Category H has the lowest."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the additional stamp duty surcharge in Delhi?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Delhi does not levy any additional surcharge or cess on stamp duty. The total cost includes only stamp duty (3-6% depending on buyer category) and registration charges (1%). This makes Delhi's cost structure relatively straightforward compared to states like Maharashtra."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I register a property without a lawyer in Delhi?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "While not mandatory, it is highly recommended to engage a lawyer for title verification and deed drafting. The Sub-Registrar office requires the deed to be drafted in a specific format, and professional legal assistance ensures compliance with all requirements."
-      }
-    }
-  ]
-}
-  </script>
-
   <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
+  <style>
+    .neighbor-states { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+    .neighbor-link { display: inline-flex; align-items: center; padding: 0.35rem 0.75rem; background: white; border: 1px solid #e7e5e4; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #78716c; transition: all 0.2s; }
+    .neighbor-link:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .compare-box { background: #fefce8; border: 1px solid #fde047; border-radius: 12px; padding: 1rem; margin: 1.5rem 0; }
+    .compare-box h3 { font-size: 0.875rem; font-weight: 600; color: #92400e; margin-bottom: 0.5rem; }
+  </style>
 </head>
 <body class="bg-stone-50">
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
     <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
-      <a href="../../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
+      <a href="../../../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
     </div>
   </header>
 
   <main class="max-w-4xl mx-auto px-4 py-8">
     <nav class="text-sm text-stone-500 mb-4">
-      <a href="../../" class="hover:text-amber-600">Home</a> / <a href="../../tools/stamp-duty" class="hover:text-amber-600">Stamp Duty</a> / <span class="text-stone-900">Delhi</span>
+      <a href="../../../" class="hover:text-amber-600">Home</a> / 
+      <a href="../../../tools/stamp-duty" class="hover:text-amber-600">Stamp Duty</a> / 
+      <a href="../" class="hover:text-amber-600">All States</a> / 
+      <span class="text-stone-900">Delhi (NCT)</span>
     </nav>
 
-    <h1 class="text-3xl font-bold text-stone-900 mb-2">Stamp Duty Calculator Delhi 2026</h1>
-    <p class="text-stone-500 mb-8">Calculate property registration charges, stamp duty rates, and total cost for buying property in Delhi. Updated for 2026.</p>
+    <h1 class="text-3xl font-bold text-stone-900 mb-2">Stamp Duty Calculator Delhi (NCT) 2026</h1>
+    <p class="text-stone-500 mb-8">Calculate property registration charges, stamp duty rates, and total cost for buying property in Delhi (NCT). Updated for 2026.</p>
+
+    
+    <div class="compare-box">
+      <h3>🔗 Compare with Neighboring States</h3>
+      <div class="neighbor-states">
+        <a href="../haryana.html" class="neighbor-link no-underline" title="Compare with Haryana">Haryana</a><a href="../uttarpradesh.html" class="neighbor-link no-underline" title="Compare with Uttar Pradesh">Uttar Pradesh</a>
+      </div>
+      <p class="text-xs text-stone-600 mt-2 mb-0">Click any state to compare stamp duty rates side-by-side.</p>
+    </div>
+    
 
     <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
       <div id="calc-placeholder" class="text-center py-8">
-        <p class="text-stone-500 mb-4">Use our interactive calculator for Delhi</p>
-        <a href="../../tools/stamp-duty?state=delhi" class="btn btn-primary">Open Calculator</a>
+        <p class="text-stone-500 mb-4">Use our interactive calculator for Delhi (NCT)</p>
+        <a href="../../../tools/stamp-duty?state=delhi" class="btn btn-primary">Open Calculator</a>
       </div>
     </div>
 
     <section class="mb-8">
-      <h2 class="text-2xl font-bold text-stone-900 mb-4">Delhi Stamp Duty Rates 2026</h2>
+      <h2 class="text-2xl font-bold text-stone-900 mb-4">Delhi (NCT) Stamp Duty Rates 2026</h2>
       <div class="overflow-x-auto bg-white rounded-xl border border-stone-200">
         <table class="w-full text-sm">
           <thead>
@@ -133,109 +105,71 @@
               <td class="p-3 text-stone-900">Male (individual)</td>
               <td class="p-3 text-stone-900">6%</td>
               <td class="p-3 text-stone-900">1%</td>
-              <td class="p-3 text-stone-900">7%</td>
+              <td class="p-3 text-stone-900 font-medium">8%</td>
             </tr>
             <tr class="border-b border-stone-100">
               <td class="p-3 text-stone-900">Female (individual)</td>
               <td class="p-3 text-stone-900">4%</td>
               <td class="p-3 text-stone-900">1%</td>
-              <td class="p-3 text-stone-900">5%</td>
+              <td class="p-3 text-stone-900 font-medium">5%</td>
             </tr>
             <tr class="border-b border-stone-100">
               <td class="p-3 text-stone-900">Joint - Both Female</td>
-              <td class="p-3 text-stone-900">4%</td>
-              <td class="p-3 text-stone-900">1%</td>
               <td class="p-3 text-stone-900">5%</td>
+              <td class="p-3 text-stone-900">1%</td>
+              <td class="p-3 text-stone-900 font-medium">6%</td>
             </tr>
             <tr class="border-b border-stone-100">
               <td class="p-3 text-stone-900">Joint - Both Male</td>
               <td class="p-3 text-stone-900">6%</td>
               <td class="p-3 text-stone-900">1%</td>
-              <td class="p-3 text-stone-900">7%</td>
+              <td class="p-3 text-stone-900 font-medium">7%</td>
             </tr>
             <tr class="border-b border-stone-100">
               <td class="p-3 text-stone-900">Joint - Male + Female</td>
               <td class="p-3 text-stone-900">5%</td>
               <td class="p-3 text-stone-900">1%</td>
-              <td class="p-3 text-stone-900">6%</td>
-            </tr>
-            <tr class="border-b border-stone-100 bg-amber-50">
-              <td class="p-3 text-stone-900">First-time buyer (male)</td>
-              <td class="p-3 text-stone-900">5%</td>
-              <td class="p-3 text-stone-900">1%</td>
-              <td class="p-3 text-stone-900">6%</td>
-            </tr>
-            <tr class="border-b border-stone-100 bg-amber-50">
-              <td class="p-3 text-stone-900">First-time buyer (female)</td>
-              <td class="p-3 text-stone-900">3%</td>
-              <td class="p-3 text-stone-900">1%</td>
-              <td class="p-3 text-stone-900">4%</td>
+              <td class="p-3 text-stone-900 font-medium">6%</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p class="text-xs text-stone-500 mt-2 px-3">First-time buyer rebate: 1% off stamp duty for both genders. Female concession: 2% (best in India).</p>
     </section>
 
-    <section class="prose max-w-none mb-8">
-      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Overview of Real Estate in Delhi</h2>
-      <p>Delhi, the national capital, represents one of India's most dynamic and expensive real estate markets. The city is divided into multiple zones including South Delhi, West Delhi, North Delhi, East Delhi, Central Delhi, and New Delhi, each with distinct property characteristics. South Delhi, with areas like Defence Colony, Greater Kailash, Hauz Khas, and Saket, commands premium prices. West Delhi localities such as Janakpuri, Rajouri Garden, and Punjabi Bagh offer mid-range to premium options. North Delhi (model town, Kamla Nagar) and East Delhi (Preet Vihar, Patparganj) provide relatively more affordable options.</p>
-      <p>Delhi's real estate is governed by the Delhi Development Authority (DDA), which is the primary land-owning agency. The DDA has developed numerous residential colonies and continues to launch housing schemes. The Delhi Master Plan guides urban development and zoning regulations. Property prices in Delhi are among the highest in India, with prime South Delhi localities commanding prices upwards of Rs 20,000-40,000 per square foot. The Delhi Metro has significantly impacted property values, with areas near metro stations commanding substantial premiums.</p>
-      <p>The circle rates in Delhi are determined by the Delhi government's Revenue Department and are revised periodically. These rates serve as the minimum valuation for property transactions. Currently, Delhi has some of the highest circle rates in the country, particularly in Category A and B colonies. The Delhi stamp duty structure is notable for offering the highest female concession (2%) in India, making it significantly cheaper for women to register property in the capital.</p>
-
-      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">How Stamp Duty is Calculated in Delhi</h2>
-      <p>Stamp duty in Delhi is calculated on the higher of the agreement value or the circle rate. Delhi offers a substantial 2% concession for female buyers, the most generous in India. The standard rates are 6% for male buyers and 4% for female buyers. Joint ownership rates vary: both female owners pay 4%, both male owners pay 6%, and mixed-gender joint ownership attracts 5%.</p>
-      <p>Additionally, Delhi offers a first-time buyer rebate of 1% for both genders. This means a male first-time buyer pays 5% stamp duty, while a female first-time buyer pays just 3% the lowest effective rate in any Indian metro. Registration charges are 1% of the property value with no cap. The total cost for a female first-time buyer is just 4% of the property value, making Delhi an attractive market for women homebuyers.</p>
-      <p>The Delhi government has also introduced a rebate on stamp duty for properties registered through the DDA housing scheme, further reducing the cost of homeownership in the capital.</p>
-
-      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Property Registration Process in Delhi</h2>
-      <p>The registration process in Delhi is managed through the Delhi government's Revenue Department. Here are the steps:</p>
-      <ul>
-        <li><strong>Step 1:</strong> Prepare the sale deed and get it drafted by a registered deed writer or advocate.</li>
-        <li><strong>Step 2:</strong> Pay stamp duty online through the Delhi e-stamping portal or at designated bank branches. E-stamping is mandatory for properties above a certain threshold.</li>
-        <li><strong>Step 3:</strong> Book an appointment at the Sub-Registrar office through the online portal. Same-day appointments may be available based on slots.</li>
-        <li><strong>Step 4:</strong> Appear at the Sub-Registrar office with all original documents. Both parties must be present with two witnesses. Biometric verification and photography are conducted.</li>
-        <li><strong>Step 5:</strong> The deed is registered after verification. The registered document is digitally signed and can be downloaded from the portal.</li>
-      </ul>
-
-      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Documents Required</h2>
-      <ul>
-        <li>Sale deed on e-stamp certificate</li>
-        <li>Previous title documents</li>
-        <li>Encumbrance certificate</li>
-        <li>Property tax receipts and house tax clearance</li>
-        <li>Aadhaar card and PAN card</li>
-        <li>Passport-size photographs</li>
-        <li>Two witnesses with identity proof</li>
-        <li>NOC from the society or DDA (if applicable)</li>
-        <li>No dues certificate from the concerned authorities</li>
-      </ul>
-
-          </section>
-
-      <section class="mt-10 max-w-2xl">
-        <h2 class="text-lg font-bold mb-3">FAQs</h2>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>What is the maximum female concession in Delhi?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">Delhi offers the highest female concession in India at 2%. Female buyers pay 4% stamp duty instead of 6%. Combined with the first-time buyer rebate of 1%, a female first-time buyer pays only 3% stamp duty the lowest in any Indian metro.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>What is the first-time buyer scheme in Delhi?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">The Delhi government offers a 1% rebate on stamp duty for first-time homebuyers. This is applicable to both male and female buyers who have not previously owned a residential property in Delhi. The rebate is available for residential properties only.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>How are circle rates determined in Delhi?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">Circle rates in Delhi are determined by the Revenue Department based on the category of the colony. Delhi colonies are classified into categories A, B, C, D, E, F, G, and H based on location and amenities. Category A colonies (like Defence Colony, Greater Kailash) have the highest rates, while Category H has the lowest.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>What is the additional stamp duty surcharge in Delhi?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">Delhi does not levy any additional surcharge or cess on stamp duty. The total cost includes only stamp duty (3-6% depending on buyer category) and registration charges (1%). This makes Delhi's cost structure relatively straightforward compared to states like Maharashtra.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>Can I register a property without a lawyer in Delhi?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">While not mandatory, it is highly recommended to engage a lawyer for title verification and deed drafting. The Sub-Registrar office requires the deed to be drafted in a specific format, and professional legal assistance ensures compliance with all requirements.</div>
-        </div>
-      </section>
+    <section class="mb-8">
+      <h2 class="text-lg font-bold mb-3">All States Quick Access</h2>
+      <div class="flex flex-wrap gap-2">
+<a href="../andhrapradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Andhra Pradesh</span></a>
+<a href="../arunachalpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Arunachal Pradesh</span></a>
+<a href="../assam.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Assam</span></a>
+<a href="../bihar.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Bihar</span></a>
+<a href="../chhattisgarh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Chhattisgarh</span></a>
+<a href="../delhi.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs border-amber-400 bg-amber-50 font-medium"><span class="font-medium text-stone-900">Delhi (NCT)</span></a>
+<a href="../goa.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Goa</span></a>
+<a href="../gujarat.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Gujarat</span></a>
+<a href="../haryana.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Haryana</span></a>
+<a href="../himachalpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Himachal Pradesh</span></a>
+<a href="../jharkhand.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Jharkhand</span></a>
+<a href="../karnataka.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Karnataka</span></a>
+<a href="../kerala.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Kerala</span></a>
+<a href="../madhyapradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Madhya Pradesh</span></a>
+<a href="../maharashtra.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Maharashtra</span></a>
+<a href="../manipur.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Manipur</span></a>
+<a href="../meghalaya.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Meghalaya</span></a>
+<a href="../mizoram.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Mizoram</span></a>
+<a href="../nagaland.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Nagaland</span></a>
+<a href="../odisha.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Odisha</span></a>
+<a href="../punjab.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Punjab</span></a>
+<a href="../rajasthan.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Rajasthan</span></a>
+<a href="../sikkim.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Sikkim</span></a>
+<a href="../tamilnadu.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Tamil Nadu</span></a>
+<a href="../telangana.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Telangana</span></a>
+<a href="../tripura.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Tripura</span></a>
+<a href="../uttarpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Uttar Pradesh</span></a>
+<a href="../uttarakhand.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Uttarakhand</span></a>
+<a href="../westbengal.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">West Bengal</span></a>
+      </div>
+    </section>
   </main>
 
   <section class="ad-slot-footer mb-4" data-ad-slot="footer_main"></section>

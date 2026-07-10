@@ -34,276 +34,105 @@
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://desicalc.in" },
       { "@type": "ListItem", "position": 2, "name": "RTO Tax Calculator", "item": "https://desicalc.in/tools/rto-tax" },
-      { "@type": "ListItem", "position": 3, "name": "Maharashtra", "item": "https://desicalc.in/programmatic/rto-tax/maharashtra" }
+      { "@type": "ListItem", "position": 3, "name": "All States", "item": "https://desicalc.in/programmatic/rto-tax/" },
+      { "@type": "ListItem", "position": 4, "name": "Maharashtra", "item": "https://desicalc.in/programmatic/rto-tax/maharashtra" }
     ]
   }
   </script>
   <link rel="stylesheet" href="../../assets/css/tailwind.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
   <script src="../../assets/js/calc-core.js"></script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the RTO code for Maharashtra?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Maharashtra uses the MH prefix. Key codes include MH-01 (Mumbai South), MH-02 (Mumbai West), MH-03 (Mumbai East), MH-04 (Mumbai Central), MH-05 (Thane), MH-06 (Thane Rural), MH-08 (Kolhapur), MH-12 (Pune), MH-14 (Pune Rural), MH-15 (Nashik), MH-20 (Aurangabad), MH-31 (Nagpur), MH-40 (Nagpur Rural), MH-43 (Navi Mumbai), MH-46 (Mumbai North), MH-47 (Mumbai North West), and MH-48 (Mumbai North East)."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much is road tax for a ₹10 lakh car in Maharashtra?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "For a ₹10 lakh petrol car, road tax is 11% (₹1,10,000). For a diesel car, it is 13% (₹1,30,000) plus 2% Diesel Cess (₹20,000), totalling ₹1,50,000. For a CNG car, it is 8% (₹80,000)."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the Diesel Cess in Maharashtra?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Maharashtra levies an additional 2% Diesel Cess on diesel vehicles to discourage dieselisation and address air pollution concerns. This is on top of the standard road tax rate. The cess applies to all diesel four-wheelers."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Are EVs exempt from road tax in Maharashtra?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, electric vehicles are fully exempt from road tax in Maharashtra under the state EV Policy. This applies to all categories of EVs for first registration. The policy has been a key driver of EV adoption in Mumbai, Pune, and other cities."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the tax cap in Maharashtra?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Maharashtra has a maximum road tax cap of ₹30 lakh for any vehicle. This means even if the calculated tax exceeds ₹30 lakh, you only pay ₹30 lakh. This cap primarily benefits buyers of ultra-luxury vehicles priced above approximately ₹2.3 crore."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I register a vehicle in Maharashtra with a different state address?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No, you need a valid Maharashtra address proof to register a vehicle in the state. However, if you have a rented accommodation or second home in Maharashtra, you can use that address for registration. Many people working in Mumbai and Pune register vehicles using their rental agreement as address proof."
-      }
-    }
-  ]
-}
-  </script>
-
   <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
+  <style>
+    .neighbor-states { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+    .neighbor-link { display: inline-flex; align-items: center; padding: 0.35rem 0.75rem; background: white; border: 1px solid #e7e5e4; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #78716c; transition: all 0.2s; }
+    .neighbor-link:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .compare-box { background: #fefce8; border: 1px solid #fde047; border-radius: 12px; padding: 1rem; margin: 1.5rem 0; }
+    .compare-box h3 { font-size: 0.875rem; font-weight: 600; color: #92400e; margin-bottom: 0.5rem; }
+  </style>
 </head>
 <body class="bg-stone-50">
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
     <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
-      <a href="../../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
+      <a href="../../../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
     </div>
   </header>
 
   <main class="max-w-4xl mx-auto px-4 py-8">
     <nav class="text-sm text-stone-500 mb-4">
-      <a href="../../" class="hover:text-amber-600">Home</a> / <a href="../../tools/rto-tax" class="hover:text-amber-600">RTO Tax</a> / <span class="text-stone-900">Maharashtra</span>
+      <a href="../../../" class="hover:text-amber-600">Home</a> / 
+      <a href="../../../tools/rto-tax" class="hover:text-amber-600">RTO Tax</a> / 
+      <a href="../" class="hover:text-amber-600">All States</a> / 
+      <span class="text-stone-900">Maharashtra</span>
     </nav>
 
     <h1 class="text-3xl font-bold text-stone-900 mb-2">RTO Tax Calculator Maharashtra 2026</h1>
     <p class="text-stone-500 mb-8">Calculate road tax, registration charges, and on-road price for vehicles in Maharashtra. Updated for 2026.</p>
 
+    
+    <div class="compare-box">
+      <h3>🔗 Compare with Neighboring States</h3>
+      <div class="neighbor-states">
+        <a href="../gujarat.html" class="neighbor-link no-underline" title="Compare with Gujarat">Gujarat</a><a href="../madhyapradesh.html" class="neighbor-link no-underline" title="Compare with Madhya Pradesh">Madhya Pradesh</a><a href="../chhattisgarh.html" class="neighbor-link no-underline" title="Compare with Chhattisgarh">Chhattisgarh</a><a href="../telangana.html" class="neighbor-link no-underline" title="Compare with Telangana">Telangana</a><a href="../karnataka.html" class="neighbor-link no-underline" title="Compare with Karnataka">Karnataka</a><a href="../goa.html" class="neighbor-link no-underline" title="Compare with Goa">Goa</a>
+      </div>
+      <p class="text-xs text-stone-600 mt-2 mb-0">Click any state to compare RTO road tax rates side-by-side.</p>
+    </div>
+    
+
     <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
       <div id="calc-placeholder" class="text-center py-8">
         <p class="text-stone-500 mb-4">Use our interactive RTO tax calculator for Maharashtra</p>
-        <a href="../../tools/rto-tax?state=maharashtra" class="btn btn-primary">Open Calculator &rarr;</a>
+        <a href="../../../tools/rto-tax?state=maharashtra" class="btn btn-primary">Open Calculator &rarr;</a>
       </div>
     </div>
 
     <section class="mb-8">
       <h2 class="text-2xl font-bold text-stone-900 mb-4">Maharashtra RTO Road Tax Rates 2026</h2>
-      <div class="overflow-x-auto bg-white rounded-xl border border-stone-200">
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="bg-stone-100 text-stone-700">
-              <th class="text-left p-3 font-semibold">Vehicle Type</th>
-              <th class="text-left p-3 font-semibold">Price Range</th>
-              <th class="text-left p-3 font-semibold">Tax Rate</th>
-              <th class="text-left p-3 font-semibold">Diesel Cess</th>
-              <th class="text-left p-3 font-semibold">Reg Fee</th>
-              <th class="text-left p-3 font-semibold">HSRP</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-t border-stone-200">
-              <td class="p-3">Petrol</td>
-              <td class="p-3">0-₹10 Lakh</td>
-              <td class="p-3">11%</td>
-              <td class="p-3">N/A</td>
-              <td class="p-3">₹600</td>
-              <td class="p-3">₹400</td>
-            </tr>
-            <tr class="border-t border-stone-200">
-              <td class="p-3">Petrol</td>
-              <td class="p-3">₹10-20 Lakh</td>
-              <td class="p-3">12%</td>
-              <td class="p-3">N/A</td>
-              <td class="p-3">₹600</td>
-              <td class="p-3">₹400</td>
-            </tr>
-            <tr class="border-t border-stone-200">
-              <td class="p-3">Petrol</td>
-              <td class="p-3">&gt; ₹20 Lakh</td>
-              <td class="p-3">13%</td>
-              <td class="p-3">N/A</td>
-              <td class="p-3">₹600</td>
-              <td class="p-3">₹400</td>
-            </tr>
-            <tr class="border-t border-stone-200">
-              <td class="p-3">Diesel</td>
-              <td class="p-3">0-₹10 Lakh</td>
-              <td class="p-3">13%</td>
-              <td class="p-3">+2%</td>
-              <td class="p-3">₹600</td>
-              <td class="p-3">₹400</td>
-            </tr>
-            <tr class="border-t border-stone-200">
-              <td class="p-3">Diesel</td>
-              <td class="p-3">₹10-20 Lakh</td>
-              <td class="p-3">14%</td>
-              <td class="p-3">+2%</td>
-              <td class="p-3">₹600</td>
-              <td class="p-3">₹400</td>
-            </tr>
-            <tr class="border-t border-stone-200">
-              <td class="p-3">Diesel</td>
-              <td class="p-3">&gt; ₹20 Lakh</td>
-              <td class="p-3">15%</td>
-              <td class="p-3">+2%</td>
-              <td class="p-3">₹600</td>
-              <td class="p-3">₹400</td>
-            </tr>
-            <tr class="border-t border-stone-200">
-              <td class="p-3">CNG</td>
-              <td class="p-3">0-₹10 Lakh</td>
-              <td class="p-3">8%</td>
-              <td class="p-3">N/A</td>
-              <td class="p-3">₹600</td>
-              <td class="p-3">₹400</td>
-            </tr>
-            <tr class="border-t border-stone-200">
-              <td class="p-3">CNG</td>
-              <td class="p-3">₹10-20 Lakh</td>
-              <td class="p-3">9%</td>
-              <td class="p-3">N/A</td>
-              <td class="p-3">₹600</td>
-              <td class="p-3">₹400</td>
-            </tr>
-            <tr class="border-t border-stone-200">
-              <td class="p-3">CNG</td>
-              <td class="p-3">&gt; ₹20 Lakh</td>
-              <td class="p-3">10%</td>
-              <td class="p-3">N/A</td>
-              <td class="p-3">₹600</td>
-              <td class="p-3">₹400</td>
-            </tr>
-            <tr class="border-t border-stone-200">
-              <td class="p-3">Electric Vehicle (EV)</td>
-              <td class="p-3">All Prices</td>
-              <td class="p-3">0% (Exempt)</td>
-              <td class="p-3">N/A</td>
-              <td class="p-3">₹600</td>
-              <td class="p-3">₹400</td>
-            </tr>
-            <tr class="border-t border-stone-200">
-              <td class="p-3">Two-Wheeler &le; ₹2 Lakh</td>
-              <td class="p-3">All</td>
-              <td class="p-3">6%</td>
-              <td class="p-3">N/A</td>
-              <td class="p-3">₹300</td>
-              <td class="p-3">₹200</td>
-            </tr>
-            <tr class="border-t border-stone-200">
-              <td class="p-3">Two-Wheeler &gt; ₹2 Lakh</td>
-              <td class="p-3">All</td>
-              <td class="p-3">8%</td>
-              <td class="p-3">N/A</td>
-              <td class="p-3">₹300</td>
-              <td class="p-3">₹200</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <p class="text-stone-600 mb-4">Estimated range: <strong class="text-stone-900">11-15%</strong> (varies by vehicle type, fuel, price, and category). Use the calculator above for exact figures.</p>
     </section>
 
-    <section class="prose max-w-none mb-8">
-      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Vehicle Registration Process in Maharashtra</h2>
-      <p>Maharashtra's vehicle registration is managed by the Maharashtra Transport Department with the largest RTO network in India. Major RTOs include Mumbai (MH-01 to MH-04, MH-46, MH-47, MH-48), Pune (MH-12, MH-14), Thane (MH-05, MH-06), Navi Mumbai (MH-43), Nashik (MH-15), Nagpur (MH-31, MH-40), Aurangabad (MH-20), and Kolhapur (MH-08). Mumbai alone has multiple RTO zones due to the city's massive vehicle population.</p>
-      <p>The registration process follows the VAHAN portal framework. New vehicle buyers receive temporary registration from the dealer valid for 30 days. For permanent registration, you must submit Form 20 and supporting documents at the RTO. Given the high vehicle density in Mumbai and Pune, RTO appointments can have waiting periods. The RTO conducts physical verification before issuing a registration number in MH-XX-XXXX format. Maharashtra has implemented smart card RCs and online services extensively.</p>
-
-      <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Required Documents for Registration</h3>
-      <ul>
-        <li>Form 20 (duly filled application form)</li>
-        <li>Form 21 (Sale Certificate from Authorised Dealer)</li>
-        <li>Form 22 (Manufacturer's Roadworthiness Certificate)</li>
-        <li>Valid Insurance Policy (minimum 1 year third-party)</li>
-        <li>Address Proof (Aadhaar, Voter ID, Rent Agreement, Utility Bill)</li>
-        <li>Identity Proof (Aadhaar, PAN, Passport)</li>
-        <li>Original Vehicle Invoice and Delivery Challan</li>
-        <li>PUC Certificate</li>
-        <li>HSRP receipt</li>
-        <li>Passport-size photographs (2 copies)</li>
-      </ul>
-
-      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Road Tax Calculation in Maharashtra</h2>
-      <p>Maharashtra uses a slab-based road tax system with different rates for petrol, diesel, and CNG vehicles. Petrol vehicles are taxed at 11% (0-10L), 12% (10-20L), and 13% (>20L). Diesel vehicles attract higher rates of 13%, 14%, and 15% respectively plus an additional 2% Diesel Cess. CNG vehicles enjoy lower rates of 8%, 9%, and 10% making them the most affordable fuel option for registration. Maharashtra also has a tax cap of ₹30 lakh, meaning the maximum road tax payable is capped at ₹30 lakh regardless of vehicle value.</p>
-      <p>For example, an ₹8 lakh petrol car in Maharashtra costs ₹88,000 in road tax (11%). A ₹15 lakh diesel SUV costs ₹2,10,000 (14%) plus 2% Diesel Cess (₹30,000), totalling ₹2,40,000. A ₹50 lakh petrol car costs ₹6,50,000 (13%) — without the cap, this would be higher. The ₹30 lakh tax cap benefits buyers of ultra-luxury vehicles above ₹2.3 crore.</p>
-
-      <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">EV Exemption in Maharashtra</h3>
-      <p>Maharashtra offers full road tax exemption for electric vehicles under the Maharashtra EV Policy 2021. This represents significant savings — for a ₹15 lakh EV, the saving compared to a petrol car is over ₹1.8 lakh. The state has been aggressive in promoting EVs, with Maharashtra being the largest EV market in India after Delhi. The exemption applies to all EV categories including cars, two-wheelers, three-wheelers, and commercial EVs. Mumbai has seen rapid adoption of EV taxis and electric two-wheelers.</p>
-
-      <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Two-Wheeler Taxation</h3>
-      <p>Two-wheelers in Maharashtra are taxed at 6% for models up to ₹2 lakh and 8% for premium models above ₹2 lakh. Registration fee is ₹300 and HSRP is ₹200. Electric two-wheelers are fully exempt from road tax. Maharashtra has one of the highest two-wheeler populations in India, with Mumbai and Pune having millions of registered two-wheelers.</p>
-
-          </section>
-
-      <section class="mt-10 max-w-2xl">
-        <h2 class="text-lg font-bold mb-3">FAQs</h2>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>What is the RTO code for Maharashtra?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">Maharashtra uses the MH prefix. Key codes include MH-01 (Mumbai South), MH-02 (Mumbai West), MH-03 (Mumbai East), MH-04 (Mumbai Central), MH-05 (Thane), MH-06 (Thane Rural), MH-08 (Kolhapur), MH-12 (Pune), MH-14 (Pune Rural), MH-15 (Nashik), MH-20 (Aurangabad), MH-31 (Nagpur), MH-40 (Nagpur Rural), MH-43 (Navi Mumbai), MH-46 (Mumbai North), MH-47 (Mumbai North West), and MH-48 (Mumbai North East).</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>How much is road tax for a ₹10 lakh car in Maharashtra?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">For a ₹10 lakh petrol car, road tax is 11% (₹1,10,000). For a diesel car, it is 13% (₹1,30,000) plus 2% Diesel Cess (₹20,000), totalling ₹1,50,000. For a CNG car, it is 8% (₹80,000).</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>What is the Diesel Cess in Maharashtra?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">Maharashtra levies an additional 2% Diesel Cess on diesel vehicles to discourage dieselisation and address air pollution concerns. This is on top of the standard road tax rate. The cess applies to all diesel four-wheelers.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>Are EVs exempt from road tax in Maharashtra?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">Yes, electric vehicles are fully exempt from road tax in Maharashtra under the state EV Policy. This applies to all categories of EVs for first registration. The policy has been a key driver of EV adoption in Mumbai, Pune, and other cities.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>What is the tax cap in Maharashtra?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">Maharashtra has a maximum road tax cap of ₹30 lakh for any vehicle. This means even if the calculated tax exceeds ₹30 lakh, you only pay ₹30 lakh. This cap primarily benefits buyers of ultra-luxury vehicles priced above approximately ₹2.3 crore.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>Can I register a vehicle in Maharashtra with a different state address?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">No, you need a valid Maharashtra address proof to register a vehicle in the state. However, if you have a rented accommodation or second home in Maharashtra, you can use that address for registration. Many people working in Mumbai and Pune register vehicles using their rental agreement as address proof.</div>
-        </div>
-      </section>
+    <section class="mb-8">
+      <h2 class="text-lg font-bold mb-3">All States Quick Access</h2>
+      <div class="flex flex-wrap gap-2">
+<a href="../andhrapradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Andhra Pradesh</span></a>
+<a href="../arunachalpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Arunachal Pradesh</span></a>
+<a href="../assam.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Assam</span></a>
+<a href="../bihar.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Bihar</span></a>
+<a href="../chhattisgarh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Chhattisgarh</span></a>
+<a href="../delhi.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Delhi (NCT)</span></a>
+<a href="../goa.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Goa</span></a>
+<a href="../gujarat.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Gujarat</span></a>
+<a href="../haryana.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Haryana</span></a>
+<a href="../himachalpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Himachal Pradesh</span></a>
+<a href="../jharkhand.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Jharkhand</span></a>
+<a href="../karnataka.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Karnataka</span></a>
+<a href="../kerala.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Kerala</span></a>
+<a href="../madhyapradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Madhya Pradesh</span></a>
+<a href="../maharashtra.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs border-amber-400 bg-amber-50 font-medium"><span class="font-medium text-stone-900">Maharashtra</span></a>
+<a href="../manipur.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Manipur</span></a>
+<a href="../meghalaya.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Meghalaya</span></a>
+<a href="../mizoram.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Mizoram</span></a>
+<a href="../nagaland.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Nagaland</span></a>
+<a href="../odisha.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Odisha</span></a>
+<a href="../punjab.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Punjab</span></a>
+<a href="../rajasthan.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Rajasthan</span></a>
+<a href="../sikkim.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Sikkim</span></a>
+<a href="../tamilnadu.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Tamil Nadu</span></a>
+<a href="../telangana.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Telangana</span></a>
+<a href="../tripura.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Tripura</span></a>
+<a href="../uttarpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Uttar Pradesh</span></a>
+<a href="../uttarakhand.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Uttarakhand</span></a>
+<a href="../westbengal.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">West Bengal</span></a>
+      </div>
+    </section>
   </main>
 
   <section class="ad-slot-footer mb-4" data-ad-slot="footer_main"></section>
 
   <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
-    <div class="max-w-5xl mx-auto px-4">&copy; 2026 DesiCalc. Free Indian tax calculators.</div>
+    <div class="max-w-5xl mx-auto px-4"><span class="text-stone-900 font-semibold">DesiCalc</span> &copy; 2026. Free Indian tax calculators.</div>
   </footer>
   <script src="../../assets/js/ad.js"></script>
 </body>

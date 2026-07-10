@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stamp Duty Calculator Madhya Pradesh 2026 | DesiCalc</title>
-  <meta name="description" content="Calculate stamp duty and registration charges for property in Madhya Pradesh. Male 5%, Female 4%, Joint 4-5%. Free calculator.">
+  <meta name="description" content="Calculate stamp duty and registration charges for property in Madhya Pradesh. Male 6%, Female 5%, Joint 5.5%. Registration 1%. Free calculator.">
   <link rel="canonical" href="https://desicalc.in/programmatic/stamp-duty/madhyapradesh">
   <meta property="og:title" content="Stamp Duty Calculator Madhya Pradesh 2026 | DesiCalc">
-  <meta property="og:description" content="Calculate stamp duty in Madhya Pradesh. Male 5%, Female 4%, Joint 4-5%. Free online calculator.">
+  <meta property="og:description" content="Calculate stamp duty in Madhya Pradesh. Male 6%, Female 5%, Joint 5.5%. Free online calculator.">
   <meta property="og:url" content="https://desicalc.in/programmatic/stamp-duty/madhyapradesh">
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://desicalc.in/assets/img/og-stamp-duty.png">
@@ -24,7 +24,7 @@
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "All",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-    "description": "Free stamp duty calculator for Madhya Pradesh property registration. Calculate stamp duty rates, female concession, circle rate."
+    "description": "Free stamp duty calculator for Madhya Pradesh property registration. Calculate stamp duty rates, registration charges, female concession, circle rate."
   }
   </script>
   <script type="application/ld+json">
@@ -34,85 +34,57 @@
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://desicalc.in" },
       { "@type": "ListItem", "position": 2, "name": "Stamp Duty Calculator", "item": "https://desicalc.in/tools/stamp-duty" },
-      { "@type": "ListItem", "position": 3, "name": "Madhya Pradesh", "item": "https://desicalc.in/programmatic/stamp-duty/madhyapradesh" }
+      { "@type": "ListItem", "position": 3, "name": "All States", "item": "https://desicalc.in/programmatic/stamp-duty/" },
+      { "@type": "ListItem", "position": 4, "name": "Madhya Pradesh", "item": "https://desicalc.in/programmatic/stamp-duty/madhyapradesh" }
     ]
   }
   </script>
   <link rel="stylesheet" href="../../assets/css/tailwind.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
   <script src="../../assets/js/calc-core.js"></script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the stamp duty rate for women in Madhya Pradesh?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Women in Madhya Pradesh pay 4% stamp duty, which is 1% lower than the 5% rate for men. This concession is available for individual female buyers and joint ownership where all owners are women."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What are the circle rates in Indore and Bhopal?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Circle rates (collector guideline rates) in Indore vary by locality, with premium areas like Vijay Nagar, Scheme 54, and AB Road having higher rates. In Bhopal, areas like Arera Colony, MP Nagar, and Shyamla Hills have high rates. The rates are available at the respective collector offices and online through the IGRS MP portal."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is e-stamping available in Madhya Pradesh?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, e-stamping is widely available and is the preferred method for stamp duty payment in Madhya Pradesh. E-stamp certificates can be obtained from authorised banks including SBI, PNB, and Axis Bank. The e-stamping system is integrated with the IGRS portal for seamless registration."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What additional costs apply when buying property in Madhya Pradesh?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Besides stamp duty and registration charges, buyers should budget for legal fees, document writer charges, encumbrance certificate fees, mutation charges, and GST on under-construction properties. These typically add 1-2% to the total cost."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How can I verify property ownership in Madhya Pradesh?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Property ownership can be verified by obtaining an encumbrance certificate from the Sub-Registrar office, checking land records (Jamabandi/Khasra) at the tehsil office, and reviewing the chain of sale deeds. Online verification is available through the IGRS MP portal for registered properties."
-      }
-    }
-  ]
-}
-  </script>
-
   <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
+  <style>
+    .neighbor-states { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+    .neighbor-link { display: inline-flex; align-items: center; padding: 0.35rem 0.75rem; background: white; border: 1px solid #e7e5e4; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #78716c; transition: all 0.2s; }
+    .neighbor-link:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .compare-box { background: #fefce8; border: 1px solid #fde047; border-radius: 12px; padding: 1rem; margin: 1.5rem 0; }
+    .compare-box h3 { font-size: 0.875rem; font-weight: 600; color: #92400e; margin-bottom: 0.5rem; }
+  </style>
 </head>
 <body class="bg-stone-50">
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
     <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
-      <a href="../../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
+      <a href="../../../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
     </div>
   </header>
 
   <main class="max-w-4xl mx-auto px-4 py-8">
     <nav class="text-sm text-stone-500 mb-4">
-      <a href="../../" class="hover:text-amber-600">Home</a> / <a href="../../tools/stamp-duty" class="hover:text-amber-600">Stamp Duty</a> / <span class="text-stone-900">Madhya Pradesh</span>
+      <a href="../../../" class="hover:text-amber-600">Home</a> / 
+      <a href="../../../tools/stamp-duty" class="hover:text-amber-600">Stamp Duty</a> / 
+      <a href="../" class="hover:text-amber-600">All States</a> / 
+      <span class="text-stone-900">Madhya Pradesh</span>
     </nav>
 
     <h1 class="text-3xl font-bold text-stone-900 mb-2">Stamp Duty Calculator Madhya Pradesh 2026</h1>
     <p class="text-stone-500 mb-8">Calculate property registration charges, stamp duty rates, and total cost for buying property in Madhya Pradesh. Updated for 2026.</p>
 
+    
+    <div class="compare-box">
+      <h3>🔗 Compare with Neighboring States</h3>
+      <div class="neighbor-states">
+        <a href="../rajasthan.html" class="neighbor-link no-underline" title="Compare with Rajasthan">Rajasthan</a><a href="../uttarpradesh.html" class="neighbor-link no-underline" title="Compare with Uttar Pradesh">Uttar Pradesh</a><a href="../chhattisgarh.html" class="neighbor-link no-underline" title="Compare with Chhattisgarh">Chhattisgarh</a><a href="../maharashtra.html" class="neighbor-link no-underline" title="Compare with Maharashtra">Maharashtra</a><a href="../gujarat.html" class="neighbor-link no-underline" title="Compare with Gujarat">Gujarat</a>
+      </div>
+      <p class="text-xs text-stone-600 mt-2 mb-0">Click any state to compare stamp duty rates side-by-side.</p>
+    </div>
+    
+
     <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
       <div id="calc-placeholder" class="text-center py-8">
         <p class="text-stone-500 mb-4">Use our interactive calculator for Madhya Pradesh</p>
-        <a href="../../tools/stamp-duty?state=madhyapradesh" class="btn btn-primary">Open Calculator</a>
+        <a href="../../../tools/stamp-duty?state=madhyapradesh" class="btn btn-primary">Open Calculator</a>
       </div>
     </div>
 
@@ -131,97 +103,73 @@
           <tbody>
             <tr class="border-b border-stone-100">
               <td class="p-3 text-stone-900">Male (individual)</td>
-              <td class="p-3 text-stone-900">5%</td>
-              <td class="p-3 text-stone-900">1%</td>
               <td class="p-3 text-stone-900">6%</td>
+              <td class="p-3 text-stone-900">1%</td>
+              <td class="p-3 text-stone-900 font-medium">8%</td>
             </tr>
             <tr class="border-b border-stone-100">
               <td class="p-3 text-stone-900">Female (individual)</td>
-              <td class="p-3 text-stone-900">4%</td>
-              <td class="p-3 text-stone-900">1%</td>
               <td class="p-3 text-stone-900">5%</td>
+              <td class="p-3 text-stone-900">1%</td>
+              <td class="p-3 text-stone-900 font-medium">6%</td>
             </tr>
             <tr class="border-b border-stone-100">
               <td class="p-3 text-stone-900">Joint - Both Female</td>
-              <td class="p-3 text-stone-900">4%</td>
+              <td class="p-3 text-stone-900">5.5%</td>
               <td class="p-3 text-stone-900">1%</td>
-              <td class="p-3 text-stone-900">5%</td>
+              <td class="p-3 text-stone-900 font-medium">6.5%</td>
             </tr>
             <tr class="border-b border-stone-100">
               <td class="p-3 text-stone-900">Joint - Both Male</td>
-              <td class="p-3 text-stone-900">5%</td>
-              <td class="p-3 text-stone-900">1%</td>
               <td class="p-3 text-stone-900">6%</td>
+              <td class="p-3 text-stone-900">1%</td>
+              <td class="p-3 text-stone-900 font-medium">7%</td>
             </tr>
             <tr class="border-b border-stone-100">
               <td class="p-3 text-stone-900">Joint - Male + Female</td>
-              <td class="p-3 text-stone-900">4.5%</td>
-              <td class="p-3 text-stone-900">1%</td>
               <td class="p-3 text-stone-900">5.5%</td>
+              <td class="p-3 text-stone-900">1%</td>
+              <td class="p-3 text-stone-900 font-medium">6.5%</td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <section class="prose max-w-none mb-8">
-      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Overview of Real Estate in Madhya Pradesh</h2>
-      <p>Madhya Pradesh, the heart of India, has a diverse real estate market spanning its capital Bhopal, the industrial and commercial hub Indore, and other cities like Jabalpur, Gwalior, Ujjain, and Sagar. The state has witnessed significant infrastructure development and urbanisation, driving steady growth in the real estate sector. Indore, the largest city in Madhya Pradesh and a leading commercial centre, has one of the most dynamic real estate markets in central India.</p>
-      <p>Indore, often ranked as one of India's cleanest cities, has a thriving real estate market with areas like Vijay Nagar, Scheme 54, AB Road, Nipania, and Sukhliya witnessing high demand. The city's IT sector growth, educational institutions (including IIT Indore and IIM Indore), and industrial development have created robust housing demand. Indore's real estate offers options ranging from premium apartments in Vijay Nagar to affordable housing in the city's expanding peripheral areas. The Indore Metro project and the development of the Indore IT Park are expected to further boost property values.</p>
-      <p>Bhopal, the state capital, has a well-planned real estate market with localities like Arera Colony, MP Nagar, Shyamla Hills, and the newly developed Bairagarh and Kolar Road areas. The Bhopal Metro and the development of the Bhopal Industrial Area are driving growth. Jabalpur, a major administrative and military centre, has a steady market, while Gwalior, with its historical and educational significance, offers good investment potential. Ujjain, an important religious centre, sees seasonal demand spikes due to the Kumbh Mela and other religious events.</p>
-
-      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">How Stamp Duty is Calculated in Madhya Pradesh</h2>
-      <p>Stamp duty in Madhya Pradesh is calculated on the higher of the agreement value or the collector guideline rate (circle rate) prescribed by the state government. Madhya Pradesh offers a 1% concession for female buyers. Male buyers pay 5% stamp duty, female buyers pay 4%, and mixed-gender joint ownership attracts 4.5%. Joint ownership with both females is charged at 4%, while both males pay 5%. Registration charges are 1% of the property value with no upper cap.</p>
-      <p>The collector guideline rates in Madhya Pradesh are determined district-wise by the collector's office and vary by locality, land use, and classification. Indore and Bhopal have the highest guideline rates in the state. The rates are revised periodically and serve as the minimum floor for property valuation. Madhya Pradesh does not levy any additional surcharge or cess on stamp duty, making the cost structure relatively straightforward.</p>
-
-      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Property Registration Process in Madhya Pradesh</h2>
-      <p>The registration process in Madhya Pradesh is managed through the IGRS Madhya Pradesh portal. Here are the steps:</p>
-      <ul>
-        <li><strong>Step 1:</strong> Prepare the sale deed with a registered document writer. The deed draft is submitted online through the IGRS portal.</li>
-        <li><strong>Step 2:</strong> Pay stamp duty through e-stamping at authorised banks or online through the portal. The e-stamp certificate serves as proof.</li>
-        <li><strong>Step 3:</strong> Book an appointment at the Sub-Registrar office through the online portal. Available slots can be viewed and selected.</li>
-        <li><strong>Step 4:</strong> Both parties appear at the Sub-Registrar office with original documents and two witnesses. Biometric verification and photographs are taken.</li>
-        <li><strong>Step 5:</strong> The Sub-Registrar verifies the deed and supporting documents. Upon satisfaction, the deed is registered and the registered copy is provided.</li>
-      </ul>
-
-      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Documents Required</h2>
-      <ul>
-        <li>Sale deed on e-stamp paper</li>
-        <li>Previous title documents (chain of ownership)</li>
-        <li>Encumbrance certificate</li>
-        <li>Jamabandi or land record certificate</li>
-        <li>Mutation certificate</li>
-        <li>Property tax receipts</li>
-        <li>Aadhaar card and PAN card</li>
-        <li>Passport-size photographs</li>
-        <li>Two witnesses with identity proof</li>
-      </ul>
-
-          </section>
-
-      <section class="mt-10 max-w-2xl">
-        <h2 class="text-lg font-bold mb-3">FAQs</h2>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>What is the stamp duty rate for women in Madhya Pradesh?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">Women in Madhya Pradesh pay 4% stamp duty, which is 1% lower than the 5% rate for men. This concession is available for individual female buyers and joint ownership where all owners are women.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>What are the circle rates in Indore and Bhopal?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">Circle rates (collector guideline rates) in Indore vary by locality, with premium areas like Vijay Nagar, Scheme 54, and AB Road having higher rates. In Bhopal, areas like Arera Colony, MP Nagar, and Shyamla Hills have high rates. The rates are available at the respective collector offices and online through the IGRS MP portal.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>Is e-stamping available in Madhya Pradesh?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">Yes, e-stamping is widely available and is the preferred method for stamp duty payment in Madhya Pradesh. E-stamp certificates can be obtained from authorised banks including SBI, PNB, and Axis Bank. The e-stamping system is integrated with the IGRS portal for seamless registration.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>What additional costs apply when buying property in Madhya Pradesh?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">Besides stamp duty and registration charges, buyers should budget for legal fees, document writer charges, encumbrance certificate fees, mutation charges, and GST on under-construction properties. These typically add 1-2% to the total cost.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>How can I verify property ownership in Madhya Pradesh?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">Property ownership can be verified by obtaining an encumbrance certificate from the Sub-Registrar office, checking land records (Jamabandi/Khasra) at the tehsil office, and reviewing the chain of sale deeds. Online verification is available through the IGRS MP portal for registered properties.</div>
-        </div>
-      </section>
+    <section class="mb-8">
+      <h2 class="text-lg font-bold mb-3">All States Quick Access</h2>
+      <div class="flex flex-wrap gap-2">
+<a href="../andhrapradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Andhra Pradesh</span></a>
+<a href="../arunachalpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Arunachal Pradesh</span></a>
+<a href="../assam.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Assam</span></a>
+<a href="../bihar.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Bihar</span></a>
+<a href="../chhattisgarh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Chhattisgarh</span></a>
+<a href="../delhi.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Delhi (NCT)</span></a>
+<a href="../goa.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Goa</span></a>
+<a href="../gujarat.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Gujarat</span></a>
+<a href="../haryana.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Haryana</span></a>
+<a href="../himachalpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Himachal Pradesh</span></a>
+<a href="../jharkhand.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Jharkhand</span></a>
+<a href="../karnataka.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Karnataka</span></a>
+<a href="../kerala.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Kerala</span></a>
+<a href="../madhyapradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs border-amber-400 bg-amber-50 font-medium"><span class="font-medium text-stone-900">Madhya Pradesh</span></a>
+<a href="../maharashtra.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Maharashtra</span></a>
+<a href="../manipur.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Manipur</span></a>
+<a href="../meghalaya.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Meghalaya</span></a>
+<a href="../mizoram.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Mizoram</span></a>
+<a href="../nagaland.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Nagaland</span></a>
+<a href="../odisha.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Odisha</span></a>
+<a href="../punjab.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Punjab</span></a>
+<a href="../rajasthan.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Rajasthan</span></a>
+<a href="../sikkim.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Sikkim</span></a>
+<a href="../tamilnadu.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Tamil Nadu</span></a>
+<a href="../telangana.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Telangana</span></a>
+<a href="../tripura.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Tripura</span></a>
+<a href="../uttarpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Uttar Pradesh</span></a>
+<a href="../uttarakhand.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Uttarakhand</span></a>
+<a href="../westbengal.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">West Bengal</span></a>
+      </div>
+    </section>
   </main>
 
   <section class="ad-slot-footer mb-4" data-ad-slot="footer_main"></section>

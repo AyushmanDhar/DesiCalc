@@ -34,268 +34,105 @@
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://desicalc.in" },
       { "@type": "ListItem", "position": 2, "name": "RTO Tax Calculator", "item": "https://desicalc.in/tools/rto-tax" },
-      { "@type": "ListItem", "position": 3, "name": "Madhya Pradesh", "item": "https://desicalc.in/programmatic/rto-tax/madhyapradesh" }
+      { "@type": "ListItem", "position": 3, "name": "All States", "item": "https://desicalc.in/programmatic/rto-tax/" },
+      { "@type": "ListItem", "position": 4, "name": "Madhya Pradesh", "item": "https://desicalc.in/programmatic/rto-tax/madhyapradesh" }
     ]
   }
   </script>
   <link rel="stylesheet" href="../../assets/css/tailwind.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
   <script src="../../assets/js/calc-core.js"></script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the RTO code for Madhya Pradesh?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Madhya Pradesh uses the MP prefix. Major codes include MP-01 (Bhopal Rural), MP-02 (Bhopal Urban), MP-03 (Bhopal), MP-04 (Bhopal Northern), MP-05 (Bhopal), MP-06 (Bina), MP-07 (Gwalior), MP-08 (Guna), MP-09 (Indore), MP-10 (Indore West), MP-11 (Khandwa), MP-12 (Ratlam), MP-13 (Ujjain), MP-14 (Mandsaur), MP-15 (Sagar), MP-16 (Damoh), MP-17 (Rewa), MP-18 (Satna), MP-19 (Shahdol), and MP-20 (Jabalpur)."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much is road tax for a ₹10 lakh car in MP?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "For a ₹10 lakh petrol car in MP, road tax is 8% (₹80,000). For a diesel car, it is 10% (₹1,00,000). Registration (₹600) and HSRP (₹400) are additional."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does MP have a quarterly tax system?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, MP offers a quarterly tax payment option though the one-time lump sum payment is also available and more commonly used. The quarterly option can be advantageous for those who want to spread out the cost."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Are EVs exempt from road tax in Madhya Pradesh?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No, Madhya Pradesh does not offer any road tax exemption for EVs. They are taxed at the same rates as petrol vehicles. This is uncommon among Indian states, most of which offer at least partial EV tax benefits."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the road tax for used vehicle transfer in MP?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "For transferring a used vehicle to MP from another state, the road tax is calculated on the depreciated value using the applicable slab rates. The quarterly option is also available for used vehicle tax payments."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is HSRP mandatory in Madhya Pradesh?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, HSRP is mandatory for all new vehicle registrations in MP. The cost is ₹400 for four-wheelers and ₹200 for two-wheelers. These plates are available at authorised HSRP centres across the state."
-      }
-    }
-  ]
-}
-  </script>
-
   <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
+  <style>
+    .neighbor-states { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+    .neighbor-link { display: inline-flex; align-items: center; padding: 0.35rem 0.75rem; background: white; border: 1px solid #e7e5e4; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #78716c; transition: all 0.2s; }
+    .neighbor-link:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .compare-box { background: #fefce8; border: 1px solid #fde047; border-radius: 12px; padding: 1rem; margin: 1.5rem 0; }
+    .compare-box h3 { font-size: 0.875rem; font-weight: 600; color: #92400e; margin-bottom: 0.5rem; }
+  </style>
 </head>
 <body class="bg-stone-50">
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
     <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
-      <a href="../../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
+      <a href="../../../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
     </div>
   </header>
 
   <main class="max-w-4xl mx-auto px-4 py-8">
     <nav class="text-sm text-stone-500 mb-4">
-      <a href="../../" class="hover:text-amber-600">Home</a> / <a href="../../tools/rto-tax" class="hover:text-amber-600">RTO Tax</a> / <span class="text-stone-900">Madhya Pradesh</span>
+      <a href="../../../" class="hover:text-amber-600">Home</a> / 
+      <a href="../../../tools/rto-tax" class="hover:text-amber-600">RTO Tax</a> / 
+      <a href="../" class="hover:text-amber-600">All States</a> / 
+      <span class="text-stone-900">Madhya Pradesh</span>
     </nav>
 
     <h1 class="text-3xl font-bold text-stone-900 mb-2">RTO Tax Calculator Madhya Pradesh 2026</h1>
     <p class="text-stone-500 mb-8">Calculate road tax, registration charges, and on-road price for vehicles in Madhya Pradesh. Updated for 2026.</p>
 
+    
+    <div class="compare-box">
+      <h3>🔗 Compare with Neighboring States</h3>
+      <div class="neighbor-states">
+        <a href="../rajasthan.html" class="neighbor-link no-underline" title="Compare with Rajasthan">Rajasthan</a><a href="../uttarpradesh.html" class="neighbor-link no-underline" title="Compare with Uttar Pradesh">Uttar Pradesh</a><a href="../chhattisgarh.html" class="neighbor-link no-underline" title="Compare with Chhattisgarh">Chhattisgarh</a><a href="../maharashtra.html" class="neighbor-link no-underline" title="Compare with Maharashtra">Maharashtra</a><a href="../gujarat.html" class="neighbor-link no-underline" title="Compare with Gujarat">Gujarat</a>
+      </div>
+      <p class="text-xs text-stone-600 mt-2 mb-0">Click any state to compare RTO road tax rates side-by-side.</p>
+    </div>
+    
+
     <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
       <div id="calc-placeholder" class="text-center py-8">
         <p class="text-stone-500 mb-4">Use our interactive RTO tax calculator for Madhya Pradesh</p>
-        <a href="../../tools/rto-tax?state=madhyapradesh" class="btn btn-primary">Open Calculator &rarr;</a>
+        <a href="../../../tools/rto-tax?state=madhyapradesh" class="btn btn-primary">Open Calculator &rarr;</a>
       </div>
     </div>
 
     <section class="mb-8">
       <h2 class="text-2xl font-bold text-stone-900 mb-4">Madhya Pradesh RTO Road Tax Rates 2026</h2>
-      <div class="overflow-x-auto bg-white rounded-xl border border-stone-200">
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="bg-stone-100 text-stone-700">
-              <th class="text-left p-3 font-semibold">Vehicle Type</th>
-              <th class="text-left p-3 font-semibold">Price Range</th>
-              <th class="text-left p-3 font-semibold">Tax Rate</th>
-              <th class="text-left p-3 font-semibold">Payment Mode</th>
-              <th class="text-left p-3 font-semibold">Reg Fee</th>
-              <th class="text-left p-3 font-semibold">HSRP</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-t border-stone-200">
-              <td class="p-3">Petrol</td>
-              <td class="p-3">0-₹10 Lakh</td>
-              <td class="p-3">8%</td>
-              <td class="p-3">Quarterly</td>
-              <td class="p-3">₹600</td>
-              <td class="p-3">₹400</td>
-            </tr>
-            <tr class="border-t border-stone-200">
-              <td class="p-3">Petrol</td>
-              <td class="p-3">₹10-20 Lakh</td>
-              <td class="p-3">10%</td>
-              <td class="p-3">Quarterly</td>
-              <td class="p-3">₹600</td>
-              <td class="p-3">₹400</td>
-            </tr>
-            <tr class="border-t border-stone-200">
-              <td class="p-3">Petrol</td>
-              <td class="p-3">&gt; ₹20 Lakh</td>
-              <td class="p-3">14%</td>
-              <td class="p-3">Quarterly</td>
-              <td class="p-3">₹600</td>
-              <td class="p-3">₹400</td>
-            </tr>
-            <tr class="border-t border-stone-200">
-              <td class="p-3">Diesel</td>
-              <td class="p-3">0-₹10 Lakh</td>
-              <td class="p-3">10%</td>
-              <td class="p-3">Quarterly</td>
-              <td class="p-3">₹600</td>
-              <td class="p-3">₹400</td>
-            </tr>
-            <tr class="border-t border-stone-200">
-              <td class="p-3">Diesel</td>
-              <td class="p-3">₹10-20 Lakh</td>
-              <td class="p-3">12%</td>
-              <td class="p-3">Quarterly</td>
-              <td class="p-3">₹600</td>
-              <td class="p-3">₹400</td>
-            </tr>
-            <tr class="border-t border-stone-200">
-              <td class="p-3">Diesel</td>
-              <td class="p-3">&gt; ₹20 Lakh</td>
-              <td class="p-3">16%</td>
-              <td class="p-3">Quarterly</td>
-              <td class="p-3">₹600</td>
-              <td class="p-3">₹400</td>
-            </tr>
-            <tr class="border-t border-stone-200">
-              <td class="p-3">CNG</td>
-              <td class="p-3">0-₹10 Lakh</td>
-              <td class="p-3">8%</td>
-              <td class="p-3">Quarterly</td>
-              <td class="p-3">₹600</td>
-              <td class="p-3">₹400</td>
-            </tr>
-            <tr class="border-t border-stone-200">
-              <td class="p-3">CNG</td>
-              <td class="p-3">₹10-20 Lakh</td>
-              <td class="p-3">10%</td>
-              <td class="p-3">Quarterly</td>
-              <td class="p-3">₹600</td>
-              <td class="p-3">₹400</td>
-            </tr>
-            <tr class="border-t border-stone-200">
-              <td class="p-3">CNG</td>
-              <td class="p-3">&gt; ₹20 Lakh</td>
-              <td class="p-3">14%</td>
-              <td class="p-3">Quarterly</td>
-              <td class="p-3">₹600</td>
-              <td class="p-3">₹400</td>
-            </tr>
-            <tr class="border-t border-stone-200">
-              <td class="p-3">Electric Vehicle (EV)</td>
-              <td class="p-3">All Prices</td>
-              <td class="p-3">Standard Rates</td>
-              <td class="p-3">Quarterly</td>
-              <td class="p-3">₹600</td>
-              <td class="p-3">₹400</td>
-            </tr>
-            <tr class="border-t border-stone-200">
-              <td class="p-3">Two-Wheeler</td>
-              <td class="p-3">All Prices</td>
-              <td class="p-3">6%</td>
-              <td class="p-3">Quarterly</td>
-              <td class="p-3">₹300</td>
-              <td class="p-3">₹200</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <p class="text-stone-600 mb-4">Estimated range: <strong class="text-stone-900">8-12%</strong> (varies by vehicle type, fuel, price, and category). Use the calculator above for exact figures.</p>
     </section>
 
-    <section class="prose max-w-none mb-8">
-      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Vehicle Registration Process in Madhya Pradesh</h2>
-      <p>Madhya Pradesh vehicle registration is managed by the MP Transport Department with RTO offices across all districts. Major RTOs include Bhopal (MP-04), Indore (MP-09), Jabalpur (MP-20), Gwalior (MP-07), Ujjain (MP-13), Sagar (MP-15), Rewa (MP-17), Guna (MP-08), Chhindwara (MP-17), and Ratlam (MP-12). The state follows the Central Motor Vehicle Rules with taxation under the MP Motor Vehicles Taxation Act.</p>
-      <p>One unique aspect of Madhya Pradesh is its quarterly tax payment model. Unlike most states where road tax is paid as a one-time lump sum at registration, MP offers a quarterly payment option. This can be advantageous for buyers who prefer lower upfront costs, though the total payment over the vehicle's life may be higher due to periodic collection charges. The registration process otherwise follows the standard VAHAN framework with dealer-assisted temporary registration followed by permanent registration at the RTO.</p>
-
-      <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Required Documents for Registration</h3>
-      <ul>
-        <li>Form 20 (Vehicle Registration Application)</li>
-        <li>Form 21 (Sale Certificate from Dealer)</li>
-        <li>Form 22 (Roadworthiness Certificate from Manufacturer)</li>
-        <li>Valid Insurance Certificate (Third-party or Comprehensive)</li>
-        <li>Address Proof (Aadhaar, Voter ID, Passport, Electricity Bill)</li>
-        <li>Identity Proof (Aadhaar, PAN, Driving Licence)</li>
-        <li>Original Vehicle Invoice and Delivery Note</li>
-        <li>PUC Certificate</li>
-        <li>HSRP booking receipt</li>
-        <li>Passport-size photographs (2 copies)</li>
-      </ul>
-
-      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Road Tax Calculation in Madhya Pradesh</h2>
-      <p>Madhya Pradesh uses a slab-based road tax system with different rates for petrol and diesel vehicles. Petrol and CNG vehicles are taxed at 8% for vehicles up to ₹10 lakh, 10% for ₹10-20 lakh, and 14% for above ₹20 lakh. Diesel vehicles face higher rates of 10%, 12%, and 16% respectively across the same slabs.</p>
-      <p>For example, an ₹8 lakh petrol car in MP costs ₹64,000 in road tax (8%). A ₹12 lakh diesel SUV costs ₹1,44,000 (12%). A ₹30 lakh diesel luxury car attracts 16% tax (₹4,80,000). The quarterly payment model means you can pay these amounts in instalments rather than upfront, though most dealers and buyers still prefer the one-time payment option at registration.</p>
-
-      <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">EV Policy in Madhya Pradesh</h3>
-      <p>Madhya Pradesh does not offer any special road tax exemption for electric vehicles. EVs are taxed at the standard rates applicable to petrol vehicles of the same price range. This makes MP one of the few states without EV tax incentives. However, the central government's FAME II subsidies still apply to EV purchases in MP. The state has been slower in adopting EV-friendly policies compared to other states.</p>
-
-      <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Quarterly Tax Model</h3>
-      <p>MP's unique quarterly tax system allows vehicle owners to pay road tax in quarterly instalments rather than a lump sum. While this reduces the upfront cost at registration, the total tax over 15 years can be higher due to administrative charges. Most buyers opt for the one-time payment option available at the time of registration, which offers a slight discount compared to the cumulative quarterly payments.</p>
-
-          </section>
-
-      <section class="mt-10 max-w-2xl">
-        <h2 class="text-lg font-bold mb-3">FAQs</h2>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>What is the RTO code for Madhya Pradesh?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">Madhya Pradesh uses the MP prefix. Major codes include MP-01 (Bhopal Rural), MP-02 (Bhopal Urban), MP-03 (Bhopal), MP-04 (Bhopal Northern), MP-05 (Bhopal), MP-06 (Bina), MP-07 (Gwalior), MP-08 (Guna), MP-09 (Indore), MP-10 (Indore West), MP-11 (Khandwa), MP-12 (Ratlam), MP-13 (Ujjain), MP-14 (Mandsaur), MP-15 (Sagar), MP-16 (Damoh), MP-17 (Rewa), MP-18 (Satna), MP-19 (Shahdol), and MP-20 (Jabalpur).</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>How much is road tax for a ₹10 lakh car in MP?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">For a ₹10 lakh petrol car in MP, road tax is 8% (₹80,000). For a diesel car, it is 10% (₹1,00,000). Registration (₹600) and HSRP (₹400) are additional.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>Does MP have a quarterly tax system?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">Yes, MP offers a quarterly tax payment option though the one-time lump sum payment is also available and more commonly used. The quarterly option can be advantageous for those who want to spread out the cost.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>Are EVs exempt from road tax in Madhya Pradesh?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">No, Madhya Pradesh does not offer any road tax exemption for EVs. They are taxed at the same rates as petrol vehicles. This is uncommon among Indian states, most of which offer at least partial EV tax benefits.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>What is the road tax for used vehicle transfer in MP?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">For transferring a used vehicle to MP from another state, the road tax is calculated on the depreciated value using the applicable slab rates. The quarterly option is also available for used vehicle tax payments.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>Is HSRP mandatory in Madhya Pradesh?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">Yes, HSRP is mandatory for all new vehicle registrations in MP. The cost is ₹400 for four-wheelers and ₹200 for two-wheelers. These plates are available at authorised HSRP centres across the state.</div>
-        </div>
-      </section>
+    <section class="mb-8">
+      <h2 class="text-lg font-bold mb-3">All States Quick Access</h2>
+      <div class="flex flex-wrap gap-2">
+<a href="../andhrapradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Andhra Pradesh</span></a>
+<a href="../arunachalpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Arunachal Pradesh</span></a>
+<a href="../assam.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Assam</span></a>
+<a href="../bihar.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Bihar</span></a>
+<a href="../chhattisgarh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Chhattisgarh</span></a>
+<a href="../delhi.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Delhi (NCT)</span></a>
+<a href="../goa.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Goa</span></a>
+<a href="../gujarat.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Gujarat</span></a>
+<a href="../haryana.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Haryana</span></a>
+<a href="../himachalpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Himachal Pradesh</span></a>
+<a href="../jharkhand.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Jharkhand</span></a>
+<a href="../karnataka.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Karnataka</span></a>
+<a href="../kerala.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Kerala</span></a>
+<a href="../madhyapradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs border-amber-400 bg-amber-50 font-medium"><span class="font-medium text-stone-900">Madhya Pradesh</span></a>
+<a href="../maharashtra.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Maharashtra</span></a>
+<a href="../manipur.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Manipur</span></a>
+<a href="../meghalaya.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Meghalaya</span></a>
+<a href="../mizoram.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Mizoram</span></a>
+<a href="../nagaland.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Nagaland</span></a>
+<a href="../odisha.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Odisha</span></a>
+<a href="../punjab.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Punjab</span></a>
+<a href="../rajasthan.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Rajasthan</span></a>
+<a href="../sikkim.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Sikkim</span></a>
+<a href="../tamilnadu.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Tamil Nadu</span></a>
+<a href="../telangana.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Telangana</span></a>
+<a href="../tripura.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Tripura</span></a>
+<a href="../uttarpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Uttar Pradesh</span></a>
+<a href="../uttarakhand.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Uttarakhand</span></a>
+<a href="../westbengal.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">West Bengal</span></a>
+      </div>
+    </section>
   </main>
 
   <section class="ad-slot-footer mb-4" data-ad-slot="footer_main"></section>
 
   <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
-    <div class="max-w-5xl mx-auto px-4">&copy; 2026 DesiCalc. Free Indian tax calculators.</div>
+    <div class="max-w-5xl mx-auto px-4"><span class="text-stone-900 font-semibold">DesiCalc</span> &copy; 2026. Free Indian tax calculators.</div>
   </footer>
   <script src="../../assets/js/ad.js"></script>
 </body>
