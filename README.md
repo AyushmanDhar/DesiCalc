@@ -1,6 +1,6 @@
 # DesiCalc — Free Indian Calculators
 
-Indian tax, stamp duty, and RTO road tax calculators. No login. No data leaves your device. No build step.
+Indian tax, stamp duty, and RTO road tax calculators. No login. No data leaves your device.
 
 **Live at [desicalc.in](https://desicalc.in)**
 **Develop branch**: [develop.desicalc.in](https://develop.desicalc.in)
@@ -24,7 +24,7 @@ Indian tax, stamp duty, and RTO road tax calculators. No login. No data leaves y
 | Layer | Choice |
 |-------|--------|
 | Hosting | Cloudflare Pages (global edge CDN) |
-| Frontend | Vanilla JS + Tailwind CSS (CDN) |
+| Frontend | Vanilla JS + Tailwind CSS (build-time) |
 | Ad network | Adsterra (via `data527.click`) |
 | PWA | Custom service worker, cache-first for assets, network-first for pages |
 | i18n | Client-side JSON-based translation |
@@ -41,22 +41,35 @@ public/
 ├── _redirects
 ├── assets/
 │   ├── css/
-│   │   └── style.css
+│   │   ├── style.css       # Hand-written custom styles
+│   │   └── tailwind.css    # Generated (purged Tailwind utilities)
 │   ├── js/                 # calc-core, i18n, state-rates, slabs, ad
 │   └── img/                # Open Graph images
 ├── tools/                  # Calculator pages (income-tax, stamp-duty, rto-tax)
 ├── guides/                 # How-to articles
 ├── comparisons/            # Side-by-side comparisons
 └── programmatic/           # State-specific deep pages (28 states each for stamp-duty + rto-tax)
+src/
+└── tailwind.css            # Tailwind source (input)
+tailwind.config.js          # Tailwind content paths
+package.json                # Dependencies & build scripts
+wrangler.toml               # Cloudflare Pages config
 ```
 
 ## Development
 
-No build step. Edit files in `public/` and serve locally:
-
 ```bash
+# Install dependencies (first time only)
+npm ci
+
+# Build Tailwind CSS
+npm run build
+
+# Serve locally
 npx serve public
 ```
+
+To auto-rebuild on file changes, run `npm run dev` (watches for changes) in a separate terminal.
 
 ## Contributing
 
