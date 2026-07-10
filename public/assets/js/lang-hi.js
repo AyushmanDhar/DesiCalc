@@ -20,7 +20,6 @@ window.DESICALC_LANG = {
   'header.lang.en': 'EN',
   'header.lang.hi': 'Hing',
 
-  'common.calculate': 'Ganana karein',
   'common.result': 'Parinaam',
   'common.loading': 'Load ho raha hai...',
   'common.reset': 'Reset',

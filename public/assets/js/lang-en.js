@@ -20,7 +20,6 @@ window.DESICALC_LANG = {
   'header.lang.en': 'EN',
   'header.lang.hi': 'Hing',
 
-  'common.calculate': 'Calculate',
   'common.result': 'Result',
   'common.loading': 'Loading...',
   'common.reset': 'Reset',
