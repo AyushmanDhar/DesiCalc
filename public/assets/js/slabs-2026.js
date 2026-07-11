@@ -122,6 +122,9 @@ function calcIncomeTax(inputs) {
 
   const sd = (inputs.incomeSalary > 0) ? STANDARD_DEDUCTION[regime] : 0;
 
+  // 80CCD(2) employer NPS contribution — allowed in both regimes (up to 14% of basic+DA)
+  const employerNpsDeduction = inputs.employerNps || 0;
+
   let deductions = 0;
   if (regime === 'old') {
     deductions += Math.min(inputs.deductions80C || 0, 150000);
@@ -143,8 +146,8 @@ function calcIncomeTax(inputs) {
     }
   }
 
-  const regularIncome = Math.max(0, grossTotalIncome - equityLtcg - equityStcg - sd - deductions);
-  const totalIncome = grossTotalIncome - sd - deductions;
+  const regularIncome = Math.max(0, grossTotalIncome - equityLtcg - equityStcg - sd - deductions - employerNpsDeduction);
+  const totalIncome = grossTotalIncome - sd - deductions - employerNpsDeduction;
 
   let taxBeforeRebate = calcTaxSlabs(regularIncome, regime, age);
 
@@ -179,7 +182,8 @@ function calcIncomeTax(inputs) {
     grossTotalIncome,
     standardDeduction: sd,
     netTaxableIncome: Math.round(totalIncome),
-    totalDeductions: deductions,
+    totalDeductions: deductions + employerNpsDeduction,
+    employerNpsDeduction,
     taxBeforeRebate: Math.round(taxBeforeRebate),
     rebate87A: Math.round(rebate87A),
     marginalRelief: Math.round(marginalRelief),
