@@ -375,9 +375,15 @@ function initTooltips() {
       document.body.appendChild(tip);
     }
     tip.textContent = text;
+    tip.style.maxWidth = '';
     var rect = trigger.getBoundingClientRect();
     var top = rect.bottom + 6;
     var left = rect.left + rect.width / 2;
+    var pw = tip.offsetWidth || 260;
+    var gap = 8;
+    var maxPw = window.innerWidth - gap * 2;
+    if (pw > maxPw) { pw = maxPw; tip.style.maxWidth = maxPw + 'px'; }
+    left = Math.max(pw / 2 + gap, Math.min(left, window.innerWidth - pw / 2 - gap));
     tip.style.top = top + 'px';
     tip.style.left = left + 'px';
     tip.classList.add('show');
