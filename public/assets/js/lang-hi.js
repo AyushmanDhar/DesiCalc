@@ -48,6 +48,7 @@ window.DESICALC_LANG = {
   'tax.label.deductions80c': '80C Nivesh (₹)',
   'tax.label.deductions80d': '80D Swasthya Bima (₹)',
   'tax.label.deductions80ccd': '80CCD(1B) NPS (₹)',
+  'tax.label.employerNps': 'Employer NPS 80CCD(2) (₹)',
   'tax.label.homeLoan': 'Home Loan byaaj (₹)',
   'tax.result.gross': 'Kul sakal aay',
   'tax.result.sd': 'Standard Deduction',
