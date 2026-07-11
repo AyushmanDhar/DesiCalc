@@ -48,6 +48,7 @@ window.DESICALC_LANG = {
   'tax.label.deductions80c': '80C Investments (₹)',
   'tax.label.deductions80d': '80D Health Insurance (₹)',
   'tax.label.deductions80ccd': '80CCD(1B) NPS (₹)',
+  'tax.label.employerNps': 'Employer NPS 80CCD(2) (₹)',
   'tax.label.homeLoan': 'Home Loan Interest (₹)',
   'tax.result.gross': 'Gross Total Income',
   'tax.result.sd': 'Standard Deduction',

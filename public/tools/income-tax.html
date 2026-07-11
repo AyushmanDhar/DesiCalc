@@ -127,6 +127,10 @@
                 <input type="text" id="incomeBusiness" inputmode="numeric" value="0" oninput="calcTax()">
               </div>
               <div>
+                <label for="employerNps"><span data-i18n="tax.label.employerNps">Employer NPS 80CCD(2) (₹)</span> <span class="tooltip-trigger" data-tooltip="Employer's NPS contribution (14% of basic+DA max). Tax-free in both regimes.">?</span></label>
+                <input type="text" id="employerNps" inputmode="numeric" value="0" oninput="calcTax()">
+              </div>
+              <div>
                 <label for="ltcg" data-i18n="tax.label.ltcg">LTCG (₹)</label>
                 <input type="text" id="ltcg" inputmode="numeric" value="0" oninput="calcTax()">
               </div>
@@ -313,6 +317,7 @@
         incomeSalary: getVal('incomeSalary'),
         incomeOther: getVal('incomeOther'),
         incomeBusiness: getVal('incomeBusiness'),
+        employerNps: getVal('employerNps'),
         capitalGainsLTCG: getVal('ltcg'),
         capitalGainsSTCG: getVal('stcg'),
         deductions80C: getVal('deductions80C'),
@@ -390,6 +395,7 @@
       document.getElementById('incomeSalary').value = '1200000';
       document.getElementById('incomeOther').value = '0';
       document.getElementById('incomeBusiness').value = '0';
+      document.getElementById('employerNps').value = '0';
       document.getElementById('ltcg').value = '0';
       document.getElementById('stcg').value = '0';
       document.getElementById('age').value = '30';
