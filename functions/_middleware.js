@@ -2,11 +2,15 @@ export async function onRequest(context) {
   const { request, next } = context;
   const accept = request.headers.get('Accept') || '';
 
+  const url = new URL(request.url);
+  if (url.pathname.startsWith('/mcp')) {
+    return next();
+  }
+
   if (!accept.includes('text/markdown')) {
     return next();
   }
 
-  const url = new URL(request.url);
   const path = url.pathname;
 
   const skipExts = new Set([

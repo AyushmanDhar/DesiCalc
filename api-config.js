@@ -1,5 +1,16 @@
 // Central registry of all DesiCalc APIs
 // Add new APIs here, then run: npm run generate-discovery
+const MCP = {
+  name: 'in.desicalc/calculators',
+  version: '1.0.0',
+  description: 'Indian tax & financial calculators — stamp duty, RTO tax, income tax. Provides structured JSON API responses for agent consumption.',
+  title: 'DesiCalc Calculators',
+  websiteUrl: 'https://desicalc.in',
+  serverCardUrl: 'https://desicalc.in/mcp/server-card',
+  remoteUrl: 'https://desicalc.in/mcp',
+  supportedProtocolVersions: ['2025-03-26'],
+};
+
 const APIS = [
   {
     id: 'stampDuty',
@@ -85,4 +96,4 @@ const APIS = [
   }
 ];
 
-module.exports = { APIS };
+module.exports = { APIS, MCP };
