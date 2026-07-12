@@ -5,10 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-i18n="home.title">DesiCalc — Free Indian Calculators</title>
   <meta name="description" content="Free Indian tax calculators. Income Tax FY 2026-27, Stamp Duty all 28 states, RTO Road Tax. No login. Instant results.">
-  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
-  <link rel="icon" href="/favicon.ico" sizes="48x48">
-  <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
-  <link rel="canonical" href="https://desicalc.in/">
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="DesiCalc" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="canonical" href="https://desicalc.in/" />
+  <link rel="alternate" hreflang="en" href="https://desicalc.in/" />
+  <link rel="alternate" hreflang="x-default" href="https://desicalc.in/" />
   <meta property="og:title" content="DesiCalc — Free Indian Calculators">
   <meta property="og:description" content="Free Indian tax calculators. Income Tax FY 2026-27, Stamp Duty all 28 states, RTO Road Tax. No login. Instant results.">
   <meta property="og:url" content="https://desicalc.in/">
@@ -36,8 +41,9 @@
     ]
   }
   </script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/tailwind.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/common.js"></script>
   <script src="assets/js/calc-core.js"></script>
   <script src="assets/js/lang-en.js"></script>
   <script src="assets/js/ad.js"></script>
@@ -48,6 +54,7 @@
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
     <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
       <a href="/" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
+      <span id="greeting" class="greeting-text hidden sm:inline ml-2" aria-live="polite"></span>
       <div class="lang-toggle" role="group" aria-label="Language toggle">
         <button onclick="setLang('en')" class="active" data-lang-btn="en" data-i18n="header.lang.en">EN</button>
         <button onclick="setLang('hi')" data-lang-btn="hi" data-i18n="header.lang.hi">Hing</button>
@@ -123,6 +130,20 @@
       </div>
     </section>
 
+    <section class="mb-12 scroll-entrance">
+      <h2 class="text-xl font-bold mb-4 text-center">All State Pages</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md mx-auto">
+        <a href="programmatic/stamp-duty/" class="card text-center hover:shadow-md transition-shadow no-underline border-l-4 border-amber-500">
+          <div class="font-semibold text-stone-900">🏠 Stamp Duty — All 28 States</div>
+          <div class="text-sm text-stone-500">Browse state-wise stamp duty calculators & rates</div>
+        </a>
+        <a href="programmatic/rto-tax/" class="card text-center hover:shadow-md transition-shadow no-underline border-l-4 border-emerald-500">
+          <div class="font-semibold text-stone-900">🚗 RTO Tax — All 28 States</div>
+          <div class="text-sm text-stone-500">Browse state-wise RTO road tax calculators & rates</div>
+        </a>
+      </div>
+    </section>
+
     <section class="max-w-2xl mx-auto text-center mb-12 scroll-entrance">
       <h2 class="text-xl font-bold mb-4" data-i18n="home.why.title">Why DesiCalc?</h2>
       <ul class="text-left space-y-2 text-stone-600">
@@ -142,7 +163,7 @@
   </section>
 
   <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
-    <div class="max-w-5xl mx-auto px-4 flex justify-center gap-6">
+    <div class="max-w-5xl mx-auto px-4 flex justify-center gap-x-6 gap-y-2 flex-wrap">
       <a href="about" data-i18n="footer.about">About</a>
       <a href="privacy" data-i18n="footer.privacy">Privacy</a>
       <a href="contact" data-i18n="footer.contact">Contact</a>
@@ -150,12 +171,15 @@
   </footer>
 
   <div id="toast" class="toast"></div>
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
 
   <script>
     initLang();
     initScrollReveal();
     initTooltips();
     initOnboarding();
+    initGreeting();
+    initBackToTop();
     document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
       btn.addEventListener('click', function() {
         document.querySelectorAll('[data-lang-btn]').forEach(function(b) { b.classList.remove('active'); });

@@ -3,7 +3,7 @@
 ## Stack Overview
 
 ```
-desicalc.pages.dev
+desicalc.in
 ├── cloudflare-pages          # Hosting, edge CDN, unlimited bandwidth
 ├── vanilla-js                # Zero framework — no build step, no deps
 │   └── progressive-enhancement  # Works JS-off (static forms), enhanced JS-on
@@ -53,7 +53,7 @@ desicalc/
 │   │       └── lang-en.js       # English UI strings
 │   │       └── lang-hi.js       # Hinglish UI strings
 │   ├── sw.js                     # PWA offline cache (service worker)
-│   ├── manifest.json             # Web app manifest
+│   ├── site.webmanifest          # Web app manifest (PWA)
 │   ├── sitemap.xml               # Full site XML sitemap
 │   ├── robots.txt
 │   ├── _headers                  # Security headers (CSP)
@@ -110,7 +110,7 @@ Each tool is a self-contained HTML file. State is managed via:
 | `localStorage` key `desicalc_incometax_last` | Restore last inputs on return | Forever |
 | `sessionStorage` key `desicalc_incometax_ad_closed` | Ad dismiss state | Tab session |
 
-URL pattern: `desicalc.pages.dev/tools/income-tax?regime=new&income=1200000&age=30`
+URL pattern: `desicalc.in/tools/income-tax?regime=new&income=1200000&age=30`
 → On page load, parse params. If absent, check localStorage. If absent, use defaults.
 
 ---
@@ -146,7 +146,7 @@ Lookup key in lang-{en,hi}.js → replace innerText
 | Service Worker | Custom `sw.js` registered at runtime |
 | Cache Strategy | Cache-first for assets, network-first for HTML |
 | Offline | Full calculator logic works offline after first visit |
-| Installable | `manifest.json` with `display: standalone`, `icons/192` |
+| Installable | `site.webmanifest` with `display: standalone`, `icons/192` |
 
 ---
 

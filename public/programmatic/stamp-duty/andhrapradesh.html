@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stamp Duty Calculator Andhra Pradesh 2026 | DesiCalc</title>
   <meta name="description" content="Calculate stamp duty and registration charges for property in Andhra Pradesh. Male 5%, Female 4%, Joint FF 4%, Joint MM 5%, Joint MF 4.5%. Free calculator.">
-  <link rel="canonical" href="https://desicalc.in/programmatic/stamp-duty/andhrapradesh">
+  <link rel="canonical" href="https://desicalc.in/programmatic/stamp-duty/andhrapradesh" />
+  <link rel="alternate" hreflang="en" href="https://desicalc.in/programmatic/stamp-duty/andhrapradesh" />
+  <link rel="alternate" hreflang="x-default" href="https://desicalc.in/programmatic/stamp-duty/andhrapradesh" />
   <meta property="og:title" content="Stamp Duty Calculator Andhra Pradesh 2026 | DesiCalc">
   <meta property="og:description" content="Calculate stamp duty in Andhra Pradesh. Male 5%, Female 4%, Joint 4-5%. Free online calculator.">
   <meta property="og:url" content="https://desicalc.in/programmatic/stamp-duty/andhrapradesh">
@@ -34,16 +36,83 @@
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://desicalc.in" },
       { "@type": "ListItem", "position": 2, "name": "Stamp Duty Calculator", "item": "https://desicalc.in/tools/stamp-duty" },
-      { "@type": "ListItem", "position": 3, "name": "Andhra Pradesh", "item": "https://desicalc.in/programmatic/stamp-duty/andhrapradesh" }
+      { "@type": "ListItem", "position": 3, "name": "All States", "item": "https://desicalc.in/programmatic/stamp-duty/" },
+      { "@type": "ListItem", "position": 4, "name": "Andhra Pradesh", "item": "https://desicalc.in/programmatic/stamp-duty/andhrapradesh" }
     ]
   }
   </script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
+  <script src="../../assets/js/common.js"></script>
   <script src="../../assets/js/calc-core.js"></script>
-  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
-  <link rel="icon" href="/favicon.ico" sizes="48x48">
-  <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is there any concession on stamp duty for women in Andhra Pradesh?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, female buyers get a 1% concession on stamp duty. Women pay 4% stamp duty compared to 5% for men. This applies to both individual female buyers and joint ownership where both buyers are female."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the circle rate in Amaravati and how does it affect stamp duty?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The circle rate in Amaravati varies by sector and location within the capital region. Stamp duty is calculated on the higher of the agreement value or the circle rate. Buyers should check the latest circle rate schedule from the IGRS Andhra Pradesh website before finalising the transaction."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to register a property in Andhra Pradesh?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With the CARD online system, the entire process from payment to registration typically takes 3-7 working days. The actual registration at the Sub-Registrar office takes about 2-3 hours on the appointed day."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I pay stamp duty online in Andhra Pradesh?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, stamp duty can be paid online through the CARD portal or through authorised bank branches. The online system provides instant acknowledgment and allows you to book registration slots digitally."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there any surcharge or additional cess applicable in Andhra Pradesh?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Currently, Andhra Pradesh does not levy any additional surcharge or cess beyond the standard stamp duty and registration charges. The total cost is the sum of stamp duty (4-5%) and registration fee (1%)."
+      }
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="DesiCalc" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <style>
+    .neighbor-states { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.75rem 0; }
+    .neighbor-link { display: inline-flex; align-items: center; padding: 0.35rem 0.75rem; background: white; border: 1px solid #e7e5e4; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #78716c; transition: all 0.2s; text-decoration: none; }
+    .neighbor-link:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .neighbor-link.current { border-color: #f59e0b; background: #fffbeb; color: #92400e; }
+    .compare-box { background: #fefce8; border: 1px solid #fde047; border-radius: 12px; padding: 1rem; margin: 1.5rem 0; }
+    .compare-box h2 { font-size: 0.875rem; font-weight: 600; color: #92400e; margin-bottom: 0.75rem; }
+    .states-grid-footer { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .states-grid-footer a { display: inline-block; padding: 0.2rem 0.55rem; background: white; border: 1px solid #e7e5e4; border-radius: 4px; font-size: 0.7rem; color: #78716c; text-decoration: none; transition: all 0.15s; }
+    .states-grid-footer a:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .states-grid-footer a.current { border-color: #f59e0b; background: #fefce8; color: #92400e; font-weight: 600; }
+  </style>
 </head>
 <body class="bg-stone-50">
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
@@ -54,13 +123,23 @@
 
   <main class="max-w-4xl mx-auto px-4 py-8">
     <nav class="text-sm text-stone-500 mb-4">
-      <a href="../../" class="hover:text-amber-600">Home</a> / <a href="../../tools/stamp-duty" class="hover:text-amber-600">Stamp Duty</a> / <span class="text-stone-900">Andhra Pradesh</span>
+      <a href="../../" class="hover:text-amber-600">Home</a> / <a href="../../tools/stamp-duty" class="hover:text-amber-600">Stamp Duty</a> / <a href="../" class="hover:text-amber-600">All States</a> / <span class="text-stone-900">Andhra Pradesh</span>
     </nav>
 
     <h1 class="text-3xl font-bold text-stone-900 mb-2">Stamp Duty Calculator Andhra Pradesh 2026</h1>
     <p class="text-stone-500 mb-8">Calculate property registration charges, stamp duty rates, and total cost for buying property in Andhra Pradesh. Updated for 2026.</p>
 
-    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
+
+    <div class="compare-box">
+      <h2>Check neighboring state rates</h2>
+      <div class="neighbor-states">
+        <a href="telangana" class="neighbor-link">Telangana</a>
+        <a href="tamilnadu" class="neighbor-link">Tamil Nadu</a>
+        <a href="karnataka" class="neighbor-link">Karnataka</a>
+        <a href="odisha" class="neighbor-link">Odisha</a>
+        <a href="chhattisgarh" class="neighbor-link">Chhattisgarh</a>
+      </div>
+    </div>    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
       <div id="calc-placeholder" class="text-center py-8">
         <p class="text-stone-500 mb-4">Use our interactive calculator for Andhra Pradesh</p>
         <a href="../../tools/stamp-duty?state=andhrapradesh" class="btn btn-primary">Open Calculator</a>
@@ -174,7 +253,42 @@
           <div class="faq-answer">Currently, Andhra Pradesh does not levy any additional surcharge or cess beyond the standard stamp duty and registration charges. The total cost is the sum of stamp duty (4-5%) and registration fee (1%).</div>
         </div>
       </section>
-  </main>
+  
+    <section class="mt-12">
+      <h2 class="text-lg font-bold mb-3">All States</h2>
+      <div class="states-grid-footer">
+        <a href="andhrapradesh" class="current">Andhra Pradesh</a>
+        <a href="arunachalpradesh">Arunachal Pradesh</a>
+        <a href="assam">Assam</a>
+        <a href="bihar">Bihar</a>
+        <a href="chhattisgarh">Chhattisgarh</a>
+        <a href="delhi">Delhi (NCT)</a>
+        <a href="goa">Goa</a>
+        <a href="gujarat">Gujarat</a>
+        <a href="haryana">Haryana</a>
+        <a href="himachalpradesh">Himachal Pradesh</a>
+        <a href="jharkhand">Jharkhand</a>
+        <a href="karnataka">Karnataka</a>
+        <a href="kerala">Kerala</a>
+        <a href="madhyapradesh">Madhya Pradesh</a>
+        <a href="maharashtra">Maharashtra</a>
+        <a href="manipur">Manipur</a>
+        <a href="meghalaya">Meghalaya</a>
+        <a href="mizoram">Mizoram</a>
+        <a href="nagaland">Nagaland</a>
+        <a href="odisha">Odisha</a>
+        <a href="punjab">Punjab</a>
+        <a href="rajasthan">Rajasthan</a>
+        <a href="sikkim">Sikkim</a>
+        <a href="tamilnadu">Tamil Nadu</a>
+        <a href="telangana">Telangana</a>
+        <a href="tripura">Tripura</a>
+        <a href="uttarpradesh">Uttar Pradesh</a>
+        <a href="uttarakhand">Uttarakhand</a>
+        <a href="westbengal">West Bengal</a>
+      </div>
+    </section>
+</main>
 
   <section class="ad-slot-footer mb-4" data-ad-slot="footer_main"></section>
 

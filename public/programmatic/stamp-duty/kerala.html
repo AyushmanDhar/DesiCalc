@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stamp Duty Calculator Kerala 2026 | DesiCalc</title>
   <meta name="description" content="Calculate stamp duty and registration charges for property in Kerala. Male 6%, Female 5%, Joint 5-6%. Surcharge 2% of SD. Free calculator.">
-  <link rel="canonical" href="https://desicalc.in/programmatic/stamp-duty/kerala">
+  <link rel="canonical" href="https://desicalc.in/programmatic/stamp-duty/kerala" />
+  <link rel="alternate" hreflang="en" href="https://desicalc.in/programmatic/stamp-duty/kerala" />
+  <link rel="alternate" hreflang="x-default" href="https://desicalc.in/programmatic/stamp-duty/kerala" />
   <meta property="og:title" content="Stamp Duty Calculator Kerala 2026 | DesiCalc">
   <meta property="og:description" content="Calculate stamp duty in Kerala. Male 6%, Female 5%, Joint 5-6%. Surcharge 2% of SD amount. Free online calculator.">
   <meta property="og:url" content="https://desicalc.in/programmatic/stamp-duty/kerala">
@@ -34,16 +36,83 @@
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://desicalc.in" },
       { "@type": "ListItem", "position": 2, "name": "Stamp Duty Calculator", "item": "https://desicalc.in/tools/stamp-duty" },
-      { "@type": "ListItem", "position": 3, "name": "Kerala", "item": "https://desicalc.in/programmatic/stamp-duty/kerala" }
+      { "@type": "ListItem", "position": 3, "name": "All States", "item": "https://desicalc.in/programmatic/stamp-duty/" },
+      { "@type": "ListItem", "position": 4, "name": "Kerala", "item": "https://desicalc.in/programmatic/stamp-duty/kerala" }
     ]
   }
   </script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
+  <script src="../../assets/js/common.js"></script>
   <script src="../../assets/js/calc-core.js"></script>
-  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
-  <link rel="icon" href="/favicon.ico" sizes="48x48">
-  <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the stamp duty surcharge in Kerala?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kerala levies a surcharge of 2% on the stamp duty amount. For example, if the stamp duty is Rs 3 lakhs (6% on Rs 50 lakhs property), the surcharge would be Rs 6,000 (2% of Rs 3 lakhs). This surcharge is in addition to the base stamp duty and registration charges."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much stamp duty does a woman pay in Kerala?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Women in Kerala pay 5% stamp duty compared to 6% for men. Including the surcharge (0.10% effective), the total stamp duty cost for a female buyer is approximately 5.10% of the property value plus registration charges of 1%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the fair value of property in Kerala?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fair value is the government-determined minimum value for property transactions in Kerala, similar to circle rates in other states. These values are determined by the Revenue Department and vary by location. Stamp duty is calculated on the higher of the transaction value or the fair value."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there any restrictions on NRI property purchase in Kerala?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "NRIs can purchase residential and commercial property in Kerala subject to FEMA regulations. However, agricultural land, plantation property, and farmhouses cannot be purchased by NRIs without RBI approval. NRIs should also ensure compliance with the Kerala Land Reforms Act for land ceiling limits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I check land records in Kerala?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Land records in Kerala can be checked online through the Revenue Department's e-Rekha portal. The portal provides access to basic tax register, land data, and property details. For title verification, obtaining a possession certificate from the Village Officer and an encumbrance certificate from the Sub-Registrar office is recommended."
+      }
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="DesiCalc" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <style>
+    .neighbor-states { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.75rem 0; }
+    .neighbor-link { display: inline-flex; align-items: center; padding: 0.35rem 0.75rem; background: white; border: 1px solid #e7e5e4; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #78716c; transition: all 0.2s; text-decoration: none; }
+    .neighbor-link:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .neighbor-link.current { border-color: #f59e0b; background: #fffbeb; color: #92400e; }
+    .compare-box { background: #fefce8; border: 1px solid #fde047; border-radius: 12px; padding: 1rem; margin: 1.5rem 0; }
+    .compare-box h2 { font-size: 0.875rem; font-weight: 600; color: #92400e; margin-bottom: 0.75rem; }
+    .states-grid-footer { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .states-grid-footer a { display: inline-block; padding: 0.2rem 0.55rem; background: white; border: 1px solid #e7e5e4; border-radius: 4px; font-size: 0.7rem; color: #78716c; text-decoration: none; transition: all 0.15s; }
+    .states-grid-footer a:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .states-grid-footer a.current { border-color: #f59e0b; background: #fefce8; color: #92400e; font-weight: 600; }
+  </style>
 </head>
 <body class="bg-stone-50">
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
@@ -54,13 +123,20 @@
 
   <main class="max-w-4xl mx-auto px-4 py-8">
     <nav class="text-sm text-stone-500 mb-4">
-      <a href="../../" class="hover:text-amber-600">Home</a> / <a href="../../tools/stamp-duty" class="hover:text-amber-600">Stamp Duty</a> / <span class="text-stone-900">Kerala</span>
+      <a href="../../" class="hover:text-amber-600">Home</a> / <a href="../../tools/stamp-duty" class="hover:text-amber-600">Stamp Duty</a> / <a href="../" class="hover:text-amber-600">All States</a> / <span class="text-stone-900">Kerala</span>
     </nav>
 
     <h1 class="text-3xl font-bold text-stone-900 mb-2">Stamp Duty Calculator Kerala 2026</h1>
     <p class="text-stone-500 mb-8">Calculate property registration charges, stamp duty rates, and total cost for buying property in Kerala. Updated for 2026.</p>
 
-    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
+
+    <div class="compare-box">
+      <h2>Check neighboring state rates</h2>
+      <div class="neighbor-states">
+        <a href="karnataka" class="neighbor-link">Karnataka</a>
+        <a href="tamilnadu" class="neighbor-link">Tamil Nadu</a>
+      </div>
+    </div>    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
       <div id="calc-placeholder" class="text-center py-8">
         <p class="text-stone-500 mb-4">Use our interactive calculator for Kerala</p>
         <a href="../../tools/stamp-duty?state=kerala" class="btn btn-primary">Open Calculator</a>
@@ -179,7 +255,42 @@
           <div class="faq-answer">Land records in Kerala can be checked online through the Revenue Department's e-Rekha portal. The portal provides access to basic tax register, land data, and property details. For title verification, obtaining a possession certificate from the Village Officer and an encumbrance certificate from the Sub-Registrar office is recommended.</div>
         </div>
       </section>
-  </main>
+  
+    <section class="mt-12">
+      <h2 class="text-lg font-bold mb-3">All States</h2>
+      <div class="states-grid-footer">
+        <a href="andhrapradesh">Andhra Pradesh</a>
+        <a href="arunachalpradesh">Arunachal Pradesh</a>
+        <a href="assam">Assam</a>
+        <a href="bihar">Bihar</a>
+        <a href="chhattisgarh">Chhattisgarh</a>
+        <a href="delhi">Delhi (NCT)</a>
+        <a href="goa">Goa</a>
+        <a href="gujarat">Gujarat</a>
+        <a href="haryana">Haryana</a>
+        <a href="himachalpradesh">Himachal Pradesh</a>
+        <a href="jharkhand">Jharkhand</a>
+        <a href="karnataka">Karnataka</a>
+        <a href="kerala" class="current">Kerala</a>
+        <a href="madhyapradesh">Madhya Pradesh</a>
+        <a href="maharashtra">Maharashtra</a>
+        <a href="manipur">Manipur</a>
+        <a href="meghalaya">Meghalaya</a>
+        <a href="mizoram">Mizoram</a>
+        <a href="nagaland">Nagaland</a>
+        <a href="odisha">Odisha</a>
+        <a href="punjab">Punjab</a>
+        <a href="rajasthan">Rajasthan</a>
+        <a href="sikkim">Sikkim</a>
+        <a href="tamilnadu">Tamil Nadu</a>
+        <a href="telangana">Telangana</a>
+        <a href="tripura">Tripura</a>
+        <a href="uttarpradesh">Uttar Pradesh</a>
+        <a href="uttarakhand">Uttarakhand</a>
+        <a href="westbengal">West Bengal</a>
+      </div>
+    </section>
+</main>
 
   <section class="ad-slot-footer mb-4" data-ad-slot="footer_main"></section>
 

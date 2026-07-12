@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stamp Duty Rates in India 2026: All 28 States Comparison | DesiCalc</title>
   <meta name="description" content="Complete stamp duty rates comparison across all 28 Indian states. See male, female, joint ownership rates, registration charges, and concessions. Updated 2026.">
-  <link rel="canonical" href="https://desicalc.in/comparisons/stamp-duty-rates-all-states">
+  <link rel="canonical" href="https://desicalc.in/comparisons/stamp-duty-rates-all-states" />
+  <link rel="alternate" hreflang="en" href="https://desicalc.in/comparisons/stamp-duty-rates-all-states" />
+  <link rel="alternate" hreflang="x-default" href="https://desicalc.in/comparisons/stamp-duty-rates-all-states" />
   <meta property="og:title" content="Stamp Duty Rates in India 2026: All 28 States Comparison | DesiCalc">
   <meta property="og:description" content="Complete stamp duty rates comparison across all 28 Indian states. See male, female, joint ownership rates, registration charges, and concessions. Updated 2026.">
   <meta property="og:url" content="https://desicalc.in/comparisons/stamp-duty-rates-all-states">
@@ -35,12 +37,15 @@
     ]
   }
   </script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/tailwind.css">
   <link rel="stylesheet" href="../assets/css/style.css">
-  <script src="../assets/js/calc-core.js"></script>
-  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
-  <link rel="icon" href="/favicon.ico" sizes="48x48">
-  <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
+  <script src="../assets/js/common.js"></script>
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="DesiCalc" />
+  <link rel="manifest" href="/site.webmanifest" />
 </head>
 <body class="bg-stone-50">
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
@@ -48,10 +53,7 @@
       <div class="flex items-center gap-3">
         <a href="../" class="text-sm text-stone-500 hover:text-stone-900 no-underline" data-i18n="header.back">← Back</a>
         <a href="../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
-      </div>
-      <div class="lang-toggle" role="group" aria-label="Language toggle">
-        <button onclick="setLang('en')" class="active" data-lang-btn="en">EN</button>
-        <button onclick="setLang('hi')" data-lang-btn="hi">Hing</button>
+        <span id="greeting" class="greeting-text hidden sm:inline" aria-live="polite"></span>
       </div>
     </div>
   </header>
@@ -295,6 +297,12 @@
   <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
     <div class="max-w-5xl mx-auto px-4"><span class="text-stone-900 font-semibold">DesiCalc</span> &copy; 2026. Free Indian tax calculators.</div>
   </footer>
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+  <script>
+    initGreeting();
+    initBackToTop();
+  </script>
   <script src="../assets/js/ad.js"></script>
 </body>
 </html>

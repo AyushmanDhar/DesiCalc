@@ -225,9 +225,13 @@ On tap:
 | Input changed | Result card slide-up + opacity | 200ms ease |
 | Regime switch | Cross-fade results card | 250ms ease |
 | Language toggle | Toast "Language changed" slide-down | 3s display |
-| Copy/share URL | Tooltip "Link copied!" | 1.5s |
+| Copy/share URL | `✨ Copied!` toast with pop-in bounce + sparkle prefix | 2.5s |
 | Ad load | Placeholder skeleton | Instant no-CLS container |
 | New visitor | Brief tooltip "Try typing your salary" | 5s delay, auto-dismiss |
+| Tool card hover | Spring bounce (`translateY(-4px) scale(1.02)`) + emoji wiggle | 0.3s ease |
+| Result value update | Animated counter (ease-out cubic) + amber flash | 220ms |
+| Scroll deep | Back-to-top button fades in at 350px scroll | 0.3s ease |
+| Page load | Time-based greeting fades in header (morning/afternoon/evening/night with emoji) | 0.8s ease 0.5s delay |
 
 ---
 
@@ -256,5 +260,6 @@ Ad containers marked with `data-ad-slot` attribute. JS injects Adsterra `<ins>` 
 | aria-live region | Result card gets `aria-live="polite"` |
 | Skip navigation | "Skip to calculator" link at top |
 | Touch targets | Min 44×44px for all taps |
-| Reduced motion | `prefers-reduced-motion` → disable animations |
-| Screen reader | All results text-based, not image-dependent |
+| Reduced motion | `prefers-reduced-motion` → disable all animations, gradient fallback to solid bg, no emoji wiggle, no toast pop, no card spring |
+| Screen reader | All results text-based, not image-dependent. Greeting uses `aria-live="polite"` |
+| Scroll-to-top | `aria-label="Back to top"` on floating button |

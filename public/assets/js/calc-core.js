@@ -1,41 +1,9 @@
-function formatINR(n) {
-  if (n == null || isNaN(n)) return '₹0';
-  let num = Math.round(n);
-  let str = num.toString();
-  let last3 = str.slice(-3);
-  let rest = str.slice(0, -3);
-  if (rest) {
-    rest = rest.replace(/\B(?=(\d{2})+(?!\d))/g, ',');
-    return '₹' + rest + ',' + last3;
-  }
-  return '₹' + last3;
-}
-
 function formatPercent(n) {
   return (n || 0).toFixed(2) + '%';
 }
 
 function clamp(v, min, max) {
   return Math.min(Math.max(v, min), max);
-}
-
-function debounce(fn, delay) {
-  let timer;
-  return function (...args) {
-    clearTimeout(timer);
-    timer = setTimeout(() => fn.apply(this, args), delay);
-  };
-}
-
-function throttle(fn, limit) {
-  let waiting = false;
-  return function (...args) {
-    if (!waiting) {
-      fn.apply(this, args);
-      waiting = true;
-      setTimeout(() => { waiting = false; }, limit);
-    }
-  };
 }
 
 const STATE_LIST = [
@@ -145,72 +113,6 @@ function loadLastInputs(toolKey) {
   } catch (e) { return null; }
 }
 
-let _currentLang = 'en';
-const _langCallbacks = [];
-
-function t(key) {
-  const map = window['DESICALC_LANG'] || {};
-  return map[key] || key;
-}
-
-function setLang(lang) {
-  _currentLang = lang;
-  try { localStorage.setItem('desicalc_lang', lang); } catch (e) {}
-  document.documentElement.setAttribute('data-lang', lang);
-  loadLangFile(lang);
-}
-
-function getLang() {
-  return _currentLang;
-}
-
-function loadLangFile(lang) {
-  const scriptId = 'desicalc-lang-script';
-  const old = document.getElementById(scriptId);
-  if (old) old.remove();
-  const s = document.createElement('script');
-  s.id = scriptId;
-  var path = window.location.pathname;
-  var prefix = '';
-  if (/\/tools\/|\/guides\/|\/comparisons\//.test(path)) {
-    prefix = '../';
-  } else if (/\/programmatic\//.test(path)) {
-    prefix = '../../';
-  }
-  s.src = prefix + 'assets/js/lang-' + lang + '.js';
-  s.onload = () => {
-    applyI18n();
-    _langCallbacks.forEach(cb => cb(lang));
-  };
-  document.head.appendChild(s);
-}
-
-function applyI18n() {
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    const val = t(key);
-    if (val !== key) {
-      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-        el.setAttribute('placeholder', val);
-      } else {
-        el.innerHTML = val;
-      }
-    }
-  });
-}
-
-function onLangChange(cb) {
-  _langCallbacks.push(cb);
-}
-
-function initLang() {
-  try {
-    const saved = localStorage.getItem('desicalc_lang');
-    if (saved === 'hi' || saved === 'en') _currentLang = saved;
-  } catch (e) {}
-  setLang(_currentLang);
-}
-
 function debouncedInput(el, cb, delay) {
   delay = delay || 300;
   el.addEventListener('input', debounce(function () {
@@ -269,35 +171,10 @@ function staggerReveal(containerId) {
   }, 30);
 }
 
-function initScrollReveal() {
-  if ('IntersectionObserver' in window) {
-    var obs = new IntersectionObserver(function(entries) {
-      entries.forEach(function(e) {
-        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.scroll-entrance').forEach(function(el) { obs.observe(el); });
-  } else {
-    document.querySelectorAll('.scroll-entrance').forEach(function(el) { el.classList.add('visible'); });
-  }
-}
-
-function toggleFaq(btn) {
-  btn.classList.toggle('open');
-  var answer = btn.nextElementSibling;
-  if (btn.classList.contains('open')) {
-    answer.style.maxHeight = answer.scrollHeight + 'px';
-    answer.classList.add('open');
-  } else {
-    answer.style.maxHeight = '0px';
-    answer.classList.remove('open');
-  }
-}
-
 function showToast(msg) {
   var el = document.getElementById('toast');
   if (!el) return;
-  el.textContent = msg;
+  el.textContent = '✨ ' + msg;
   el.classList.remove('show');
   void el.offsetWidth;
   el.classList.add('show');
@@ -330,37 +207,6 @@ function copyUrlFallback(url) {
   document.body.removeChild(ta);
 }
 
-function initTooltips() {
-  document.addEventListener('mouseover', function (e) {
-    var trigger = e.target.closest('[data-tooltip]');
-    if (!trigger) { hideTooltip(); return; }
-    var text = trigger.getAttribute('data-tooltip');
-    if (!text) return;
-    var tip = document.getElementById('tooltip-el');
-    if (!tip) {
-      tip = document.createElement('div');
-      tip.id = 'tooltip-el';
-      tip.className = 'tooltip-popup';
-      document.body.appendChild(tip);
-    }
-    tip.textContent = text;
-    var rect = trigger.getBoundingClientRect();
-    var top = rect.bottom + 6;
-    var left = rect.left + rect.width / 2;
-    tip.style.top = top + 'px';
-    tip.style.left = left + 'px';
-    tip.classList.add('show');
-  });
-  document.addEventListener('mouseout', function (e) {
-    if (e.target.closest('[data-tooltip]')) hideTooltip();
-  });
-}
-
-function hideTooltip() {
-  var tip = document.getElementById('tooltip-el');
-  if (tip) tip.classList.remove('show');
-}
-
 function initOnboarding() {
   if (/bot|crawl|spider|slurp|googlebot|bing|duckduckgo|yandex/i.test(navigator.userAgent)) return;
   var key = 'desicalc_onboarded_v1';
@@ -391,11 +237,3 @@ function dismissOnboarding() {
   var overlay = document.getElementById('onboarding-overlay');
   if (overlay) { overlay.classList.remove('active'); setTimeout(function () { overlay.remove(); }, 300); }
 }
-
-document.addEventListener('input', function(e) {
-  if (e.target.getAttribute('inputmode') === 'numeric') {
-    var val = e.target.value;
-    var sanitized = val.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');
-    if (sanitized !== val) e.target.value = sanitized;
-  }
-});

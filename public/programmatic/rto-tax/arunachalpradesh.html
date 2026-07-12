@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RTO Tax Calculator Arunachal Pradesh 2026 | DesiCalc</title>
   <meta name="description" content="Calculate RTO road tax and registration charges for vehicles in Arunachal Pradesh. Car, bike, EV, commercial rates. Updated 2026.">
-  <link rel="canonical" href="https://desicalc.in/programmatic/rto-tax/arunachalpradesh">
+  <link rel="canonical" href="https://desicalc.in/programmatic/rto-tax/arunachalpradesh" />
+  <link rel="alternate" hreflang="en" href="https://desicalc.in/programmatic/rto-tax/arunachalpradesh" />
+  <link rel="alternate" hreflang="x-default" href="https://desicalc.in/programmatic/rto-tax/arunachalpradesh" />
   <meta property="og:title" content="RTO Tax Calculator Arunachal Pradesh 2026 | DesiCalc">
   <meta property="og:description" content="Calculate RTO road tax in Arunachal Pradesh. Car, bike, EV rates. Free calculator.">
   <meta property="og:url" content="https://desicalc.in/programmatic/rto-tax/arunachalpradesh">
@@ -34,16 +36,91 @@
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://desicalc.in" },
       { "@type": "ListItem", "position": 2, "name": "RTO Tax Calculator", "item": "https://desicalc.in/tools/rto-tax" },
-      { "@type": "ListItem", "position": 3, "name": "Arunachal Pradesh", "item": "https://desicalc.in/programmatic/rto-tax/arunachalpradesh" }
+      { "@type": "ListItem", "position": 3, "name": "All States", "item": "https://desicalc.in/programmatic/rto-tax/" },
+      { "@type": "ListItem", "position": 4, "name": "Arunachal Pradesh", "item": "https://desicalc.in/programmatic/rto-tax/arunachalpradesh" }
     ]
   }
   </script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
+  <script src="../../assets/js/common.js"></script>
   <script src="../../assets/js/calc-core.js"></script>
-  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
-  <link rel="icon" href="/favicon.ico" sizes="48x48">
-  <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the RTO code for Arunachal Pradesh?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The vehicle registration code for Arunachal Pradesh is AR. Major RTO codes include AR-01 (Itanagar), AR-02 (Naharlagun), AR-03 (Pasighat), AR-04 (Tawang), AR-05 (Ziro), and AR-06 (Bomdila)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is road tax in Arunachal Pradesh cheaper than other states?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Arunachal Pradesh has among the lowest road tax rates in India. At a flat 5% for petrol cars and 6% for diesel, it is significantly cheaper than states like Karnataka (13-18%), Maharashtra (11-13%), or Kerala (10-20%). For a ₹15 lakh car, the difference can exceed ₹1 lakh."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are electric vehicles fully exempt from tax in Arunachal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, EVs are fully exempt from road tax in Arunachal Pradesh. This applies to both private and commercial electric vehicles during first registration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the registration fee for a two-wheeler in AP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For Arunachal Pradesh (AR registration), two-wheeler registration costs ₹300 plus ₹200 for HSRP number plates. The road tax is 4% of the ex-showroom price."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I transfer my vehicle registration from another state to Arunachal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can transfer a vehicle to Arunachal Pradesh if you move there permanently. You need Form 27 (NOC), Form 28 (certificate from original RTO), and proof of residence. Tax is recalculated on depreciated value as per AR rates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does vehicle registration take in Arunachal Pradesh?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Permanent registration in Arunachal Pradesh typically takes 7-15 working days after document submission. Temporary registration from the dealer is valid for 30 days, giving you sufficient time to complete the process."
+      }
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="DesiCalc" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <style>
+    .neighbor-states { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.75rem 0; }
+    .neighbor-link { display: inline-flex; align-items: center; padding: 0.35rem 0.75rem; background: white; border: 1px solid #e7e5e4; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #78716c; transition: all 0.2s; text-decoration: none; }
+    .neighbor-link:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .neighbor-link.current { border-color: #f59e0b; background: #fffbeb; color: #92400e; }
+    .compare-box { background: #fefce8; border: 1px solid #fde047; border-radius: 12px; padding: 1rem; margin: 1.5rem 0; }
+    .compare-box h2 { font-size: 0.875rem; font-weight: 600; color: #92400e; margin-bottom: 0.75rem; }
+    .states-grid-footer { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .states-grid-footer a { display: inline-block; padding: 0.2rem 0.55rem; background: white; border: 1px solid #e7e5e4; border-radius: 4px; font-size: 0.7rem; color: #78716c; text-decoration: none; transition: all 0.15s; }
+    .states-grid-footer a:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .states-grid-footer a.current { border-color: #f59e0b; background: #fefce8; color: #92400e; font-weight: 600; }
+  </style>
 </head>
 <body class="bg-stone-50">
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
@@ -54,13 +131,20 @@
 
   <main class="max-w-4xl mx-auto px-4 py-8">
     <nav class="text-sm text-stone-500 mb-4">
-      <a href="../../" class="hover:text-amber-600">Home</a> / <a href="../../tools/rto-tax" class="hover:text-amber-600">RTO Tax</a> / <span class="text-stone-900">Arunachal Pradesh</span>
+      <a href="../../" class="hover:text-amber-600">Home</a> / <a href="../../tools/rto-tax" class="hover:text-amber-600">RTO Tax</a> / <a href="../" class="hover:text-amber-600">All States</a> / <span class="text-stone-900">Arunachal Pradesh</span>
     </nav>
 
     <h1 class="text-3xl font-bold text-stone-900 mb-2">RTO Tax Calculator Arunachal Pradesh 2026</h1>
     <p class="text-stone-500 mb-8">Calculate road tax, registration charges, and on-road price for vehicles in Arunachal Pradesh. Updated for 2026.</p>
 
-    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
+
+    <div class="compare-box">
+      <h2>Check neighboring state rates</h2>
+      <div class="neighbor-states">
+        <a href="assam" class="neighbor-link">Assam</a>
+        <a href="nagaland" class="neighbor-link">Nagaland</a>
+      </div>
+    </div>    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
       <div id="calc-placeholder" class="text-center py-8">
         <p class="text-stone-500 mb-4">Use our interactive RTO tax calculator for Arunachal Pradesh</p>
         <a href="../../tools/rto-tax?state=arunachalpradesh" class="btn btn-primary">Open Calculator &rarr;</a>
@@ -178,7 +262,42 @@
           <div class="faq-answer">Permanent registration in Arunachal Pradesh typically takes 7-15 working days after document submission. Temporary registration from the dealer is valid for 30 days, giving you sufficient time to complete the process.</div>
         </div>
       </section>
-  </main>
+  
+    <section class="mt-12">
+      <h2 class="text-lg font-bold mb-3">All States</h2>
+      <div class="states-grid-footer">
+        <a href="andhrapradesh">Andhra Pradesh</a>
+        <a href="arunachalpradesh" class="current">Arunachal Pradesh</a>
+        <a href="assam">Assam</a>
+        <a href="bihar">Bihar</a>
+        <a href="chhattisgarh">Chhattisgarh</a>
+        <a href="delhi">Delhi (NCT)</a>
+        <a href="goa">Goa</a>
+        <a href="gujarat">Gujarat</a>
+        <a href="haryana">Haryana</a>
+        <a href="himachalpradesh">Himachal Pradesh</a>
+        <a href="jharkhand">Jharkhand</a>
+        <a href="karnataka">Karnataka</a>
+        <a href="kerala">Kerala</a>
+        <a href="madhyapradesh">Madhya Pradesh</a>
+        <a href="maharashtra">Maharashtra</a>
+        <a href="manipur">Manipur</a>
+        <a href="meghalaya">Meghalaya</a>
+        <a href="mizoram">Mizoram</a>
+        <a href="nagaland">Nagaland</a>
+        <a href="odisha">Odisha</a>
+        <a href="punjab">Punjab</a>
+        <a href="rajasthan">Rajasthan</a>
+        <a href="sikkim">Sikkim</a>
+        <a href="tamilnadu">Tamil Nadu</a>
+        <a href="telangana">Telangana</a>
+        <a href="tripura">Tripura</a>
+        <a href="uttarpradesh">Uttar Pradesh</a>
+        <a href="uttarakhand">Uttarakhand</a>
+        <a href="westbengal">West Bengal</a>
+      </div>
+    </section>
+</main>
 
   <section class="ad-slot-footer mb-4" data-ad-slot="footer_main"></section>
 

@@ -5,10 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-i18n="stamp.title">Stamp Duty Calculator — DesiCalc</title>
   <meta name="description" content="Calculate stamp duty and registration charges for all 28 Indian states. Female concession, circle rate, first-time buyer benefits.">
-  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
-  <link rel="icon" href="/favicon.ico" sizes="48x48">
-  <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
-  <link rel="canonical" href="https://desicalc.in/tools/stamp-duty">
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="DesiCalc" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="canonical" href="https://desicalc.in/tools/stamp-duty" />
+  <link rel="alternate" hreflang="en" href="https://desicalc.in/tools/stamp-duty" />
+  <link rel="alternate" hreflang="x-default" href="https://desicalc.in/tools/stamp-duty" />
   <meta property="og:title" content="Stamp Duty Calculator — DesiCalc">
   <meta property="og:description" content="Calculate stamp duty and registration charges for all 28 Indian states. Female concession, circle rate, first-time buyer benefits.">
   <meta property="og:url" content="https://desicalc.in/tools/stamp-duty">
@@ -80,8 +85,9 @@
     ]
   }
   </script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/tailwind.css">
   <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/common.js"></script>
   <script src="../assets/js/calc-core.js"></script>
   <script src="../assets/js/state-rates.js"></script>
   <script src="../assets/js/lang-en.js"></script>
@@ -95,6 +101,7 @@
       <div class="flex items-center gap-3">
         <a href="../" class="text-sm text-stone-500 hover:text-stone-900 no-underline" data-i18n="header.back">← Back</a>
         <a href="../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
+        <span id="greeting" class="greeting-text hidden sm:inline" aria-live="polite"></span>
       </div>
       <div class="lang-toggle" role="group" aria-label="Language toggle">
         <button onclick="setLang('en')" class="active" data-lang-btn="en" data-i18n="header.lang.en">EN</button>
@@ -144,7 +151,6 @@
           </div>
 
           <div class="flex gap-2 pt-2">
-            <button type="button" class="btn btn-primary flex-1" onclick="calcStamp()" data-i18n="common.calculate">Calculate</button>
             <button type="button" class="btn btn-outline flex-1" onclick="resetForm()" data-i18n="common.reset">Reset</button>
           </div>
         </form>
@@ -176,6 +182,10 @@
     <section class="mt-10">
       <h2 class="text-lg font-bold mb-3">Related Pages</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <a href="../programmatic/stamp-duty/" class="card text-sm hover:shadow-md transition-shadow no-underline border-l-4 border-amber-500">
+          <span class="font-semibold text-stone-900">All 28 States Index</span>
+          <span class="text-stone-500 block">Browse all state calculators & rates</span>
+        </a>
         <a href="../comparisons/stamp-duty-rates-all-states" class="card text-sm hover:shadow-md transition-shadow no-underline">
           <span class="font-semibold text-stone-900">Stamp Duty All States Comparison</span>
           <span class="text-stone-500 block">Compare rates across 28 states</span>
@@ -208,7 +218,7 @@
   </section>
 
   <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
-    <div class="max-w-5xl mx-auto px-4 flex justify-center gap-6">
+    <div class="max-w-5xl mx-auto px-4 flex justify-center gap-x-6 gap-y-2 flex-wrap">
       <a href="../about" data-i18n="footer.about">About</a>
       <a href="../privacy" data-i18n="footer.privacy">Privacy</a>
       <a href="../contact" data-i18n="footer.contact">Contact</a>
@@ -216,6 +226,7 @@
   </footer>
 
   <div id="toast" class="toast"></div>
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
 
   <script>
     function getVal(id) { return parseFloat(document.getElementById(id).value.replace(/,/g, '')) || 0; }
@@ -268,6 +279,8 @@
     initScrollReveal();
     initTooltips();
     initOnboarding();
+    initGreeting();
+    initBackToTop();
     document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
       btn.addEventListener('click', function() {
         document.querySelectorAll('[data-lang-btn]').forEach(function(b) { b.classList.remove('active'); });

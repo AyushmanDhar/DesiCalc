@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stamp Duty Calculator Gujarat 2026 | DesiCalc</title>
   <meta name="description" content="Calculate stamp duty and registration charges for property in Gujarat. Flat 4.9% stamp duty for all genders. Lowest stamp duty in India. Free calculator.">
-  <link rel="canonical" href="https://desicalc.in/programmatic/stamp-duty/gujarat">
+  <link rel="canonical" href="https://desicalc.in/programmatic/stamp-duty/gujarat" />
+  <link rel="alternate" hreflang="en" href="https://desicalc.in/programmatic/stamp-duty/gujarat" />
+  <link rel="alternate" hreflang="x-default" href="https://desicalc.in/programmatic/stamp-duty/gujarat" />
   <meta property="og:title" content="Stamp Duty Calculator Gujarat 2026 | DesiCalc">
   <meta property="og:description" content="Calculate stamp duty in Gujarat. Flat 4.9% stamp duty all genders. Lowest in India. Free online calculator.">
   <meta property="og:url" content="https://desicalc.in/programmatic/stamp-duty/gujarat">
@@ -34,16 +36,83 @@
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://desicalc.in" },
       { "@type": "ListItem", "position": 2, "name": "Stamp Duty Calculator", "item": "https://desicalc.in/tools/stamp-duty" },
-      { "@type": "ListItem", "position": 3, "name": "Gujarat", "item": "https://desicalc.in/programmatic/stamp-duty/gujarat" }
+      { "@type": "ListItem", "position": 3, "name": "All States", "item": "https://desicalc.in/programmatic/stamp-duty/" },
+      { "@type": "ListItem", "position": 4, "name": "Gujarat", "item": "https://desicalc.in/programmatic/stamp-duty/gujarat" }
     ]
   }
   </script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
+  <script src="../../assets/js/common.js"></script>
   <script src="../../assets/js/calc-core.js"></script>
-  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
-  <link rel="icon" href="/favicon.ico" sizes="48x48">
-  <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why is Gujarat's stamp duty the lowest in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gujarat has a flat 4.9% stamp duty rate, the lowest among all Indian states. The government maintains this low rate to encourage formal property registration, reduce black money transactions, and promote the real estate sector. The policy has been successful in increasing registration volumes and improving revenue collection despite the lower rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there any stamp duty concession for women in Gujarat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, Gujarat does not offer any gender-based concession on stamp duty. The rate is a flat 4.9% for all buyers regardless of gender. This uniform approach simplifies the calculation but means female buyers do not receive any additional benefit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are jantri rates in Gujarat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jantri rates are the government-determined minimum values for property transactions in Gujarat. These rates are published by the Revenue Department and vary by location, land use, and property type. Stamp duty is calculated on the higher of the transaction value or the jantri rate. Jantri rates are the Gujarat equivalent of circle rates in other states."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I check jantri rates online in Gujarat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jantri rates can be checked online through the IGRS Gujarat portal (igrs.gujarat.gov.in). The portal provides a search tool where you can enter the village/town name, survey number, and other details to find the applicable rate. The portal also provides historical jantri data for reference."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there any additional surcharge on stamp duty in Gujarat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, Gujarat does not levy any additional surcharge, cess, or local body tax on stamp duty. The total cost is simply 4.9% stamp duty plus 1% registration charges, totalling 5.9% of the property value. This makes Gujarat one of the most transparent and cost-effective states for property registration."
+      }
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="DesiCalc" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <style>
+    .neighbor-states { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.75rem 0; }
+    .neighbor-link { display: inline-flex; align-items: center; padding: 0.35rem 0.75rem; background: white; border: 1px solid #e7e5e4; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #78716c; transition: all 0.2s; text-decoration: none; }
+    .neighbor-link:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .neighbor-link.current { border-color: #f59e0b; background: #fffbeb; color: #92400e; }
+    .compare-box { background: #fefce8; border: 1px solid #fde047; border-radius: 12px; padding: 1rem; margin: 1.5rem 0; }
+    .compare-box h2 { font-size: 0.875rem; font-weight: 600; color: #92400e; margin-bottom: 0.75rem; }
+    .states-grid-footer { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .states-grid-footer a { display: inline-block; padding: 0.2rem 0.55rem; background: white; border: 1px solid #e7e5e4; border-radius: 4px; font-size: 0.7rem; color: #78716c; text-decoration: none; transition: all 0.15s; }
+    .states-grid-footer a:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .states-grid-footer a.current { border-color: #f59e0b; background: #fefce8; color: #92400e; font-weight: 600; }
+  </style>
 </head>
 <body class="bg-stone-50">
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
@@ -54,13 +123,21 @@
 
   <main class="max-w-4xl mx-auto px-4 py-8">
     <nav class="text-sm text-stone-500 mb-4">
-      <a href="../../" class="hover:text-amber-600">Home</a> / <a href="../../tools/stamp-duty" class="hover:text-amber-600">Stamp Duty</a> / <span class="text-stone-900">Gujarat</span>
+      <a href="../../" class="hover:text-amber-600">Home</a> / <a href="../../tools/stamp-duty" class="hover:text-amber-600">Stamp Duty</a> / <a href="../" class="hover:text-amber-600">All States</a> / <span class="text-stone-900">Gujarat</span>
     </nav>
 
     <h1 class="text-3xl font-bold text-stone-900 mb-2">Stamp Duty Calculator Gujarat 2026</h1>
     <p class="text-stone-500 mb-8">Calculate property registration charges, stamp duty rates, and total cost for buying property in Gujarat. Updated for 2026.</p>
 
-    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
+
+    <div class="compare-box">
+      <h2>Check neighboring state rates</h2>
+      <div class="neighbor-states">
+        <a href="rajasthan" class="neighbor-link">Rajasthan</a>
+        <a href="madhyapradesh" class="neighbor-link">Madhya Pradesh</a>
+        <a href="maharashtra" class="neighbor-link">Maharashtra</a>
+      </div>
+    </div>    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
       <div id="calc-placeholder" class="text-center py-8">
         <p class="text-stone-500 mb-4">Use our interactive calculator for Gujarat</p>
         <a href="../../tools/stamp-duty?state=gujarat" class="btn btn-primary">Open Calculator</a>
@@ -163,7 +240,42 @@
           <div class="faq-answer">No, Gujarat does not levy any additional surcharge, cess, or local body tax on stamp duty. The total cost is simply 4.9% stamp duty plus 1% registration charges, totalling 5.9% of the property value. This makes Gujarat one of the most transparent and cost-effective states for property registration.</div>
         </div>
       </section>
-  </main>
+  
+    <section class="mt-12">
+      <h2 class="text-lg font-bold mb-3">All States</h2>
+      <div class="states-grid-footer">
+        <a href="andhrapradesh">Andhra Pradesh</a>
+        <a href="arunachalpradesh">Arunachal Pradesh</a>
+        <a href="assam">Assam</a>
+        <a href="bihar">Bihar</a>
+        <a href="chhattisgarh">Chhattisgarh</a>
+        <a href="delhi">Delhi (NCT)</a>
+        <a href="goa">Goa</a>
+        <a href="gujarat" class="current">Gujarat</a>
+        <a href="haryana">Haryana</a>
+        <a href="himachalpradesh">Himachal Pradesh</a>
+        <a href="jharkhand">Jharkhand</a>
+        <a href="karnataka">Karnataka</a>
+        <a href="kerala">Kerala</a>
+        <a href="madhyapradesh">Madhya Pradesh</a>
+        <a href="maharashtra">Maharashtra</a>
+        <a href="manipur">Manipur</a>
+        <a href="meghalaya">Meghalaya</a>
+        <a href="mizoram">Mizoram</a>
+        <a href="nagaland">Nagaland</a>
+        <a href="odisha">Odisha</a>
+        <a href="punjab">Punjab</a>
+        <a href="rajasthan">Rajasthan</a>
+        <a href="sikkim">Sikkim</a>
+        <a href="tamilnadu">Tamil Nadu</a>
+        <a href="telangana">Telangana</a>
+        <a href="tripura">Tripura</a>
+        <a href="uttarpradesh">Uttar Pradesh</a>
+        <a href="uttarakhand">Uttarakhand</a>
+        <a href="westbengal">West Bengal</a>
+      </div>
+    </section>
+</main>
 
   <section class="ad-slot-footer mb-4" data-ad-slot="footer_main"></section>
 

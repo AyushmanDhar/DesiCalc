@@ -1,0 +1,12 @@
+{
+  "name": "desicalc",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/tailwind.css -o ./public/assets/css/tailwind.css --minify",
+    "dev": "npx tailwindcss -i ./src/tailwind.css -o ./public/assets/css/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Capital Gains Tax Changes 2026: LTCG, STCG, Indexation | DesiCalc</title>
   <meta name="description" content="Complete guide to capital gains tax changes effective from July 2024 (Finance Act 2024): LTCG at 12.5%, STCG at 20%, indexation removal, holding period changes. Updated for FY 2026-27.">
-  <link rel="canonical" href="https://desicalc.in/guides/capital-gains-tax-changes-2026">
+  <link rel="canonical" href="https://desicalc.in/guides/capital-gains-tax-changes-2026" />
+  <link rel="alternate" hreflang="en" href="https://desicalc.in/guides/capital-gains-tax-changes-2026" />
+  <link rel="alternate" hreflang="x-default" href="https://desicalc.in/guides/capital-gains-tax-changes-2026" />
   <meta property="og:title" content="Capital Gains Tax Changes 2026: LTCG, STCG, Indexation | DesiCalc">
   <meta property="og:description" content="Understand capital gains tax changes for 2026. LTCG at 12.5%, STCG at 20%, indexation removal, holding period changes. Complete guide with examples.">
   <meta property="og:url" content="https://desicalc.in/guides/capital-gains-tax-changes-2026">
   <meta property="og:type" content="article">
-  <meta property="og:image" content="https://desicalc.in/assets/img/og-home.png">
+  <meta property="og:image" content="https://desicalc.in/assets/img/og-capital-gains-tax-2026.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -85,10 +87,13 @@
   </script>
   <link rel="stylesheet" href="../assets/css/tailwind.css">
   <link rel="stylesheet" href="../assets/css/style.css">
-  <script src="../assets/js/calc-core.js"></script>
-  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
-  <link rel="icon" href="/favicon.ico" sizes="48x48">
-  <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
+  <script src="../assets/js/common.js"></script>
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="DesiCalc" />
+  <link rel="manifest" href="/site.webmanifest" />
 </head>
 <body class="bg-stone-50">
   <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:p-2 focus:bg-white focus:z-50">Skip to content</a>
@@ -97,6 +102,7 @@
       <div class="flex items-center gap-3">
         <a href="../" class="text-sm text-stone-500 hover:text-stone-900 no-underline" data-i18n="header.back">← Back</a>
         <a href="../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
+        <span id="greeting" class="greeting-text hidden sm:inline" aria-live="polite"></span>
       </div>
     </div>
   </header>
@@ -270,16 +276,19 @@
   </main>
   <section class="ad-slot-footer mb-4" data-ad-slot="footer_main"></section>
   <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
-    <div class="max-w-5xl mx-auto px-4 flex justify-center gap-6">
+    <div class="max-w-5xl mx-auto px-4 flex justify-center gap-x-6 gap-y-2 flex-wrap">
       <a href="../about">About</a>
       <a href="../privacy">Privacy</a>
       <a href="../contact">Contact</a>
     </div>
   </footer>
   <div id="toast" class="toast"></div>
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
   <script>
-    function toggleFaq(btn) { btn.classList.toggle('open'); var answer = btn.nextElementSibling; var isOpen = answer.classList.contains('open'); answer.classList.toggle('open'); answer.style.maxHeight = isOpen ? null : answer.scrollHeight + 'px'; }
     initScrollReveal();
+    initGreeting();
+    initBackToTop();
   </script>
   <script src="../assets/js/ad.js"></script>
 </body>

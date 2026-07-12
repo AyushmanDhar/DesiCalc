@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How to File ITR for FY 2026-27: Step-by-Step Guide | DesiCalc</title>
   <meta name="description" content="Complete guide to file Income Tax Return for FY 2026-27. Step-by-step process, ITR forms, documents required, deadlines, and common mistakes. Updated for new regime.">
-  <link rel="canonical" href="https://desicalc.in/guides/how-to-file-itr-2026">
+  <link rel="canonical" href="https://desicalc.in/guides/how-to-file-itr-2026" />
+  <link rel="alternate" hreflang="en" href="https://desicalc.in/guides/how-to-file-itr-2026" />
+  <link rel="alternate" hreflang="x-default" href="https://desicalc.in/guides/how-to-file-itr-2026" />
   <meta property="og:title" content="How to File ITR for FY 2026-27: Step-by-Step Guide | DesiCalc">
   <meta property="og:description" content="Complete guide to file Income Tax Return for FY 2026-27. Step-by-step process, ITR forms, documents required, deadlines, and common mistakes. Updated for new regime.">
   <meta property="og:url" content="https://desicalc.in/guides/how-to-file-itr-2026">
   <meta property="og:type" content="article">
-  <meta property="og:image" content="https://desicalc.in/assets/img/og-home.png">
+  <meta property="og:image" content="https://desicalc.in/assets/img/og-how-to-file-itr-2026.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -83,12 +85,15 @@
     ]
   }
   </script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/tailwind.css">
   <link rel="stylesheet" href="../assets/css/style.css">
-  <script src="../assets/js/calc-core.js"></script>
-  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
-  <link rel="icon" href="/favicon.ico" sizes="48x48">
-  <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
+  <script src="../assets/js/common.js"></script>
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="DesiCalc" />
+  <link rel="manifest" href="/site.webmanifest" />
 </head>
 <body class="bg-stone-50">
   <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:p-2 focus:bg-white focus:z-50">Skip to content</a>
@@ -98,10 +103,7 @@
       <div class="flex items-center gap-3">
         <a href="../" class="text-sm text-stone-500 hover:text-stone-900 no-underline" data-i18n="header.back">← Back</a>
         <a href="../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
-      </div>
-      <div class="lang-toggle" role="group" aria-label="Language toggle">
-        <button onclick="setLang('en')" class="active" data-lang-btn="en">EN</button>
-        <button onclick="setLang('hi')" data-lang-btn="hi">Hing</button>
+        <span id="greeting" class="greeting-text hidden sm:inline" aria-live="polite"></span>
       </div>
     </div>
   </header>
@@ -159,13 +161,14 @@
       <tbody>
         <tr><td class="border border-stone-300 px-3 py-2">80C</td><td class="border border-stone-300 px-3 py-2">PPF, ELSS, PF, life insurance, tuition fees, etc.</td><td class="border border-stone-300 px-3 py-2">₹1,50,000</td></tr>
         <tr><td class="border border-stone-300 px-3 py-2">80D</td><td class="border border-stone-300 px-3 py-2">Health insurance premium (self + family + parents)</td><td class="border border-stone-300 px-3 py-2">₹25,000 to ₹1,00,000</td></tr>
-        <tr><td class="border border-stone-300 px-3 py-2">80CCD(1B)</td><td class="border border-stone-300 px-3 py-2">NPS Tier I additional contribution</td><td class="border border-stone-300 px-3 py-2">₹50,000</td></tr>
+        <tr><td class="border border-stone-300 px-3 py-2">80CCD(1B)</td><td class="border border-stone-300 px-3 py-2">NPS Tier I additional self-contribution</td><td class="border border-stone-300 px-3 py-2">₹50,000</td></tr>
+        <tr><td class="border border-stone-300 px-3 py-2">80CCD(2)</td><td class="border border-stone-300 px-3 py-2">Employer NPS contribution (14% of basic+DA max)</td><td class="border border-stone-300 px-3 py-2">Available in both regimes</td></tr>
         <tr><td class="border border-stone-300 px-3 py-2">24(b)</td><td class="border border-stone-300 px-3 py-2">Home loan interest deduction (self-occupied)</td><td class="border border-stone-300 px-3 py-2">₹2,00,000</td></tr>
         <tr><td class="border border-stone-300 px-3 py-2">80E</td><td class="border border-stone-300 px-3 py-2">Interest on education loan</td><td class="border border-stone-300 px-3 py-2">No limit (for 8 years)</td></tr>
         <tr><td class="border border-stone-300 px-3 py-2">80G</td><td class="border border-stone-300 px-3 py-2">Donations to charitable institutions</td><td class="border border-stone-300 px-3 py-2">50% or 100% of donation amount</td></tr>
       </tbody>
     </table>
-    <p class="text-stone-600 mb-6">Under the new regime (FY 2026-27), the only significant deduction available is the standard deduction of ₹75,000 for salaried employees and the family pension deduction. Most other deductions do not apply.</p>
+    <p class="text-stone-600 mb-6">Under the new regime (FY 2026-27), most deductions do not apply. However, <strong>employer NPS contribution under Section 80CCD(2) (up to 14% of basic + DA) is allowed in both regimes</strong>, along with the standard deduction of ₹75,000 for salaried employees and the family pension deduction.</p>
 
     <h3 class="text-xl font-bold text-stone-900 mt-8 mb-3">Step 8: Verify Tax Paid and TDS</h3>
     <p class="text-stone-600 mb-4">The portal pre-fills your TDS data from Form 26AS and AIS (Annual Information Statement). Cross-verify the amounts. If any TDS is missing, contact your deductor to file a corrected TDS return. Enter any advance tax or self-assessment tax paid during the year.</p>
@@ -209,7 +212,7 @@
     <p class="text-stone-600 mb-4">Having all documents ready before you start filing saves time and prevents errors. Here is a comprehensive checklist:</p>
     <div class="grid md:grid-cols-2 gap-4 mb-6">
       <div class="bg-white p-4 rounded-lg border border-stone-200">
-        <h4 class="font-bold text-stone-900 mb-2">Employment & Salary</h4>
+        <h3 class="font-bold text-stone-900 mb-2">Employment & Salary</h3>
         <ul class="list-disc list-inside text-stone-600 text-sm space-y-1">
           <li>Form 16 (Part A & Part B) from employer</li>
           <li>Salary slips (Apr 2026 to Mar 2027)</li>
@@ -219,18 +222,19 @@
         </ul>
       </div>
       <div class="bg-white p-4 rounded-lg border border-stone-200">
-        <h4 class="font-bold text-stone-900 mb-2">Investment Proofs</h4>
+        <h3 class="font-bold text-stone-900 mb-2">Investment Proofs</h3>
         <ul class="list-disc list-inside text-stone-600 text-sm space-y-1">
           <li>PPF passbook / statement</li>
           <li>ELSS fund investment statement</li>
           <li>Life insurance premium receipts</li>
           <li>Tuition fee receipts (for children)</li>
-          <li>NPS Tier I contribution (80CCD)</li>
+          <li>NPS self-contribution (80CCD(1) + 80CCD(1B))</li>
+          <li>Employer NPS contribution certificate (80CCD(2))</li>
           <li>Fixed deposit / tax-saver FD receipts</li>
         </ul>
       </div>
       <div class="bg-white p-4 rounded-lg border border-stone-200">
-        <h4 class="font-bold text-stone-900 mb-2">Bank & Interest</h4>
+        <h3 class="font-bold text-stone-900 mb-2">Bank & Interest</h3>
         <ul class="list-disc list-inside text-stone-600 text-sm space-y-1">
           <li>Savings account interest certificates</li>
           <li>Fixed deposit interest statements</li>
@@ -239,7 +243,7 @@
         </ul>
       </div>
       <div class="bg-white p-4 rounded-lg border border-stone-200">
-        <h4 class="font-bold text-stone-900 mb-2">Property & Others</h4>
+        <h3 class="font-bold text-stone-900 mb-2">Property & Others</h3>
         <ul class="list-disc list-inside text-stone-600 text-sm space-y-1">
           <li>Home loan interest certificate (Section 24)</li>
           <li>Property tax receipts for rented property</li>
@@ -292,7 +296,7 @@
       <li><strong>Tax slabs:</strong> 0-4L (nil), 4-8L (5%), 8-12L (10%), 12-16L (15%), 16-20L (20%), 20-24L (25%), above 24L (30%).</li>
       <li><strong>Standard deduction:</strong> ₹75,000 for salaried employees.</li>
       <li><strong>87A rebate:</strong> Max ₹60,000. Effectively zero tax up to ₹12 lakh net taxable income (₹12.75 lakh including standard deduction).</li>
-      <li><strong>Limited deductions:</strong> Only standard deduction, family pension deduction, and employer's PF contribution allowed.</li>
+      <li><strong>Limited deductions:</strong> Only standard deduction, family pension deduction, employer's PF contribution, and employer NPS 80CCD(2) (14% of basic+DA) allowed.</li>
     </ul>
 
     <h3 class="text-xl font-bold text-stone-900 mt-6 mb-3">Old Regime (Optional)</h3>
@@ -300,7 +304,7 @@
       <li><strong>Tax slabs:</strong> 0-2.5L (nil), 2.5-5L (5%), 5-10L (20%), above 10L (30%). Surcharge applies for income above ₹50L.</li>
       <li><strong>Standard deduction:</strong> ₹50,000 for salaried employees.</li>
       <li><strong>87A rebate:</strong> Max ₹12,500. Effectively zero tax up to ₹5 lakh net taxable income.</li>
-      <li><strong>Full deductions:</strong> 80C (₹1.5L), 80D (₹25K-₹1L), home loan interest (₹2L), HRA exemption, and many more.</li>
+      <li><strong>Full deductions:</strong> 80C (₹1.5L), 80D (₹25K-₹1L), home loan interest (₹2L), HRA exemption, NPS 80CCD(1B) (₹50K), employer NPS 80CCD(2), and many more.</li>
     </ul>
 
     <p class="text-stone-600 mb-6"><strong>Rule of thumb:</strong> If your total deductions (80C + 80D + home loan interest + HRA) exceed ₹3.75 lakh, the old regime is likely better. For most others, especially those with income between ₹7.5 lakh and ₹25 lakh and limited deductions, the new regime will result in lower tax. Use the <a href="../tools/income-tax" class="text-amber-600 underline">DesiCalc Income Tax Calculator</a> to compute exact tax liability under both regimes.</p>
@@ -311,7 +315,7 @@
       <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)"><span>What is the last date to file ITR for FY 2026-27?</span><span class="faq-icon">+</span></button><div class="faq-answer">The due date for individual taxpayers is July 31, 2026. For taxpayers requiring audit, it is October 31, 2026, and for transfer pricing cases, November 30, 2026. Belated returns can be filed until December 31, 2027 with a late fee.</div></div>
       <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)"><span>Which ITR form should a salaried employee use?</span><span class="faq-icon">+</span></button><div class="faq-answer">Salaried employees with income up to ₹50 lakh, from one house property, and no capital gains should use ITR-1 (Sahaj). If they have capital gains, foreign assets, or income above ₹50 lakh, they must use ITR-2.</div></div>
       <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)"><span>Can I switch between old and new regime while filing ITR?</span><span class="faq-icon">+</span></button><div class="faq-answer">Yes, for FY 2026-27, salaried individuals can switch between old and new regime while filing their ITR. However, the choice of regime for the year is exercised at the time of filing. Business owners opting for new regime under Section 115BAC cannot switch back to old regime once chosen.</div></div>
-      <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)"><span>What documents are needed to file ITR?</span><span class="faq-icon">+</span></button><div class="faq-answer">Form 16 from employer, Form 16A/16B/16C for TDS on other income, bank statements, interest certificates, investment proofs (80C, 80D, 80CCD), home loan certificate, capital gains statements, Aadhaar, and PAN card.</div></div>
+      <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)"><span>What documents are needed to file ITR?</span><span class="faq-icon">+</span></button><div class="faq-answer">Form 16 from employer, Form 16A/16B/16C for TDS on other income, bank statements, interest certificates, investment proofs (80C, 80D, 80CCD(1), 80CCD(1B)), employer NPS contribution certificate (80CCD(2)), home loan certificate, capital gains statements, Aadhaar, and PAN card.</div></div>
       <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)"><span>Is filing ITR mandatory if my income is below the taxable limit?</span><span class="faq-icon">+</span></button><div class="faq-answer">ITR filing is mandatory if your gross total income exceeds the basic exemption limit of ₹3 lakh (new regime) or ₹2.5 lakh (old regime), even if your taxable income after deductions is below the limit. Filing is also required if you have foreign assets, high-value transactions, or want to claim a refund.</div></div>
       <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)"><span>How to file ITR online for free?</span><span class="faq-icon">+</span></button><div class="faq-answer">You can file ITR online for free on the Income Tax Department portal at incometax.gov.in. The portal offers a free e-filing utility. You can also use DesiCalc's income tax calculator to estimate your tax before filing.</div></div>
       <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)"><span>What is the penalty for filing ITR late?</span><span class="faq-icon">+</span></button><div class="faq-answer">Under Section 234F, a late fee of ₹5,000 is levied if ITR is filed after the due date but before December 31, and ₹10,000 if filed after December 31. For taxpayers with total income up to ₹5 lakh, the maximum late fee is ₹1,000.</div></div>
@@ -331,7 +335,7 @@
   <section class="ad-slot-footer mb-4" data-ad-slot="footer_main"></section>
 
   <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
-    <div class="max-w-5xl mx-auto px-4 flex justify-center gap-6">
+    <div class="max-w-5xl mx-auto px-4 flex justify-center gap-x-6 gap-y-2 flex-wrap">
       <a href="../about">About</a>
       <a href="../privacy">Privacy</a>
       <a href="../contact">Contact</a>
@@ -339,28 +343,12 @@
   </footer>
 
   <div id="toast" class="toast"></div>
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
 
   <script>
-    function toggleFaq(btn) {
-      btn.classList.toggle('open');
-      var answer = btn.nextElementSibling;
-      var isOpen = answer.classList.contains('open');
-      answer.classList.toggle('open');
-      answer.style.maxHeight = isOpen ? null : answer.scrollHeight + 'px';
-    }
-    initLang();
     initScrollReveal();
-    document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        document.querySelectorAll('[data-lang-btn]').forEach(function(b) { b.classList.remove('active'); });
-        this.classList.add('active');
-      });
-    });
-    onLangChange(function() {
-      document.querySelectorAll('[data-lang-btn]').forEach(function(b) {
-        b.classList.toggle('active', b.getAttribute('data-lang-btn') === getLang());
-      });
-    });
+    initGreeting();
+    initBackToTop();
   </script>
   <script src="../assets/js/ad.js"></script>
 </body>

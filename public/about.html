@@ -5,18 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About — DesiCalc</title>
   <meta name="description" content="About DesiCalc — free Indian financial calculators for stamp duty, RTO road tax, and income tax. No login, no data collection, instant results.">
-  <link rel="canonical" href="https://desicalc.in/about">
+  <link rel="canonical" href="https://desicalc.in/about" />
+  <link rel="alternate" hreflang="en" href="https://desicalc.in/about" />
+  <link rel="alternate" hreflang="x-default" href="https://desicalc.in/about" />
   <meta property="og:title" content="About — DesiCalc">
   <meta property="og:description" content="Free Indian financial calculators. No login. No data collection. Instant results.">
   <meta property="og:url" content="https://desicalc.in/about">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/tailwind.css">
   <link rel="stylesheet" href="assets/css/style.css">
-  <script src="assets/js/calc-core.js"></script>
-  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
-  <link rel="icon" href="/favicon.ico" sizes="48x48">
-  <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
+  <script src="assets/js/common.js"></script>
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="DesiCalc" />
+  <link rel="manifest" href="/site.webmanifest" />
 </head>
 <body class="bg-stone-50">
   <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:p-2 focus:bg-white focus:z-50">Skip to content</a>
@@ -24,35 +29,40 @@
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
     <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <a href="./" class="text-sm text-stone-500 hover:text-stone-900 no-underline">← Back</a>
+        <a href="./" class="text-sm text-stone-500 hover:text-stone-900 no-underline" data-i18n="header.back">← Back</a>
         <a href="./" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
+        <span id="greeting" class="greeting-text hidden sm:inline" aria-live="polite"></span>
+      </div>
+      <div class="lang-toggle" role="group" aria-label="Language toggle">
+        <button onclick="setLang('en')" class="active" data-lang-btn="en">EN</button>
+        <button onclick="setLang('hi')" data-lang-btn="hi">Hing</button>
       </div>
     </div>
   </header>
 
   <main id="main-content" class="max-w-3xl mx-auto px-4 py-12">
-    <h1 class="text-3xl font-bold text-stone-900 mb-6">About DesiCalc</h1>
+    <h1 class="text-3xl font-bold text-stone-900 mb-6" data-i18n="about.title">About DesiCalc</h1>
 
     <div class="prose prose-stone max-w-none">
-      <p class="text-lg text-stone-600 leading-relaxed mb-6">
+      <p class="text-lg text-stone-600 leading-relaxed mb-6" data-i18n="about.desc">
         DesiCalc provides free, accurate financial calculators for Indian taxpayers and property buyers. No registration, no data upload — everything runs in your browser.
       </p>
 
-      <h2 class="text-xl font-bold text-stone-900 mt-8 mb-3">What We Offer</h2>
+      <h2 class="text-xl font-bold text-stone-900 mt-8 mb-3" data-i18n="about.offer.title">What We Offer</h2>
       <ul class="space-y-2 text-stone-600">
-        <li><strong>Stamp Duty Calculator</strong> — Calculate property registration charges for all 28 states including female concession, circle rate, and first-time buyer benefits.</li>
-        <li><strong>RTO Road Tax Calculator</strong> — Compute vehicle registration tax for all states with accurate state-wise rates.</li>
-        <li><strong>Income Tax Calculator</strong> — Estimate your tax under old and new regime for FY 2026-27.</li>
-        <li><strong>Guides & Comparisons</strong> — Detailed guides on ITR filing, stamp duty, RTO registration, and tax regime comparisons.</li>
+        <li data-i18n="about.offer.stamp"><strong>Stamp Duty Calculator</strong> — Calculate property registration charges for all 28 states including female concession, circle rate, and first-time buyer benefits.</li>
+        <li data-i18n="about.offer.rto"><strong>RTO Road Tax Calculator</strong> — Compute vehicle registration tax for all states with accurate state-wise rates.</li>
+        <li data-i18n="about.offer.tax"><strong>Income Tax Calculator</strong> — Estimate your tax under old and new regime for FY 2026-27.</li>
+        <li data-i18n="about.offer.guides"><strong>Guides & Comparisons</strong> — Detailed guides on ITR filing, stamp duty, RTO registration, and tax regime comparisons.</li>
       </ul>
 
-      <h2 class="text-xl font-bold text-stone-900 mt-8 mb-3">Data Sources</h2>
-      <p class="text-stone-600 leading-relaxed">
+      <h2 class="text-xl font-bold text-stone-900 mt-8 mb-3" data-i18n="about.sources.title">Data Sources</h2>
+      <p class="text-stone-600 leading-relaxed" data-i18n="about.sources.desc">
         All tax rates are sourced from respective state government publications, transport department notifications, and the Income Tax Department of India. Rates are updated for FY 2026-27. State stamp duty and RTO tax rates are verified against official government sources.
       </p>
 
-      <h2 class="text-xl font-bold text-stone-900 mt-8 mb-3">Disclaimer</h2>
-      <p class="text-stone-600 leading-relaxed">
+      <h2 class="text-xl font-bold text-stone-900 mt-8 mb-3" data-i18n="about.disclaimer.title">Disclaimer</h2>
+      <p class="text-stone-600 leading-relaxed" data-i18n="about.disclaimer.desc">
         The calculations provided are indicative and for reference only. Actual tax liability may vary based on specific circumstances, local circle rates, and government notifications. Please verify with your CA, tax consultant, or relevant government authority before making financial decisions.
       </p>
 
@@ -60,16 +70,32 @@
   </main>
 
   <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
-    <div class="max-w-5xl mx-auto px-4 flex justify-center gap-6">
-      <a href="about" class="text-amber-600">About</a>
-      <a href="privacy">Privacy</a>
-      <a href="contact">Contact</a>
+    <div class="max-w-5xl mx-auto px-4 flex justify-center gap-x-6 gap-y-2 flex-wrap">
+      <a href="about" class="text-amber-600" data-i18n="footer.about">About</a>
+      <a href="privacy" data-i18n="footer.privacy">Privacy</a>
+      <a href="contact" data-i18n="footer.contact">Contact</a>
     </div>
   </footer>
+
+  <div id="toast" class="toast"></div>
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
 
   <script>
     initLang();
     initScrollReveal();
+    initGreeting();
+    initBackToTop();
+    document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('[data-lang-btn]').forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+      });
+    });
+    onLangChange(function() {
+      document.querySelectorAll('[data-lang-btn]').forEach(function(b) {
+        b.classList.toggle('active', b.getAttribute('data-lang-btn') === getLang());
+      });
+    });
   </script>
   <script src="assets/js/ad.js"></script>
 </body>

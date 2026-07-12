@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RTO Tax Calculator Delhi 2026 | DesiCalc</title>
   <meta name="description" content="Calculate RTO road tax and registration charges for vehicles in Delhi. Car, bike, EV, commercial rates. Updated 2026.">
-  <link rel="canonical" href="https://desicalc.in/programmatic/rto-tax/delhi">
+  <link rel="canonical" href="https://desicalc.in/programmatic/rto-tax/delhi" />
+  <link rel="alternate" hreflang="en" href="https://desicalc.in/programmatic/rto-tax/delhi" />
+  <link rel="alternate" hreflang="x-default" href="https://desicalc.in/programmatic/rto-tax/delhi" />
   <meta property="og:title" content="RTO Tax Calculator Delhi 2026 | DesiCalc">
   <meta property="og:description" content="Calculate RTO road tax in Delhi. Car, bike, EV rates. Free calculator.">
   <meta property="og:url" content="https://desicalc.in/programmatic/rto-tax/delhi">
@@ -38,12 +40,86 @@
     ]
   }
   </script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
+  <script src="../../assets/js/common.js"></script>
   <script src="../../assets/js/calc-core.js"></script>
-  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
-  <link rel="icon" href="/favicon.ico" sizes="48x48">
-  <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the RTO code for Delhi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Delhi uses the DL prefix. Major RTO codes include DL-1 (Central), DL-2 (East), DL-3 (New Delhi), DL-4 (North), DL-5 (South), DL-6 (West), DL-7 (North-West), DL-8 (South-West), DL-9 (Shahdara), and DL-10 (Southeast)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much is road tax for a ₹10 lakh car in Delhi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a ₹10 lakh petrol car, road tax is 7% (₹70,000). For a diesel car, it is 8.75% (₹87,500). For a CNG car, it is 7% (₹70,000). EVs are exempt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is diesel tax higher in Delhi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Diesel vehicles are taxed at a higher rate in Delhi to discourage their use due to higher particulate matter and NOx emissions. The Delhi government has implemented several measures including a ban on diesel vehicles older than 10 years and higher road tax rates for new diesel vehicles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are EVs completely tax-free in Delhi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, EVs are completely exempt from road tax in Delhi. Additionally, the Delhi government offers purchase incentives making EVs significantly cheaper than their ICE counterparts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the colour-coded sticker system in Delhi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Delhi RTO issues colour-coded stickers for vehicles — blue for petrol/CNG and orange for diesel. These stickers help enforcement agencies identify fuel types for implementing odd-even schemes and other pollution control measures. The stickers are mandatory and affixed on the windshield."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a 10-year-old diesel car be driven in Delhi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, diesel vehicles older than 10 years and petrol vehicles older than 15 years cannot be driven in Delhi as per the National Green Tribunal (NGT) order. Such vehicles must be scrapped or moved to another state. The Delhi RTO deregisters these vehicles automatically."
+      }
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="DesiCalc" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <style>
+    .neighbor-states { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.75rem 0; }
+    .neighbor-link { display: inline-flex; align-items: center; padding: 0.35rem 0.75rem; background: white; border: 1px solid #e7e5e4; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #78716c; transition: all 0.2s; text-decoration: none; }
+    .neighbor-link:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .neighbor-link.current { border-color: #f59e0b; background: #fffbeb; color: #92400e; }
+    .compare-box { background: #fefce8; border: 1px solid #fde047; border-radius: 12px; padding: 1rem; margin: 1.5rem 0; }
+    .compare-box h2 { font-size: 0.875rem; font-weight: 600; color: #92400e; margin-bottom: 0.75rem; }
+    .states-grid-footer { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .states-grid-footer a { display: inline-block; padding: 0.2rem 0.55rem; background: white; border: 1px solid #e7e5e4; border-radius: 4px; font-size: 0.7rem; color: #78716c; text-decoration: none; transition: all 0.15s; }
+    .states-grid-footer a:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .states-grid-footer a.current { border-color: #f59e0b; background: #fefce8; color: #92400e; font-weight: 600; }
+  </style>
 </head>
 <body class="bg-stone-50">
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
@@ -60,7 +136,14 @@
     <h1 class="text-3xl font-bold text-stone-900 mb-2">RTO Tax Calculator Delhi 2026</h1>
     <p class="text-stone-500 mb-8">Calculate road tax, registration charges, and on-road price for vehicles in Delhi. Updated for 2026.</p>
 
-    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
+
+    <div class="compare-box">
+      <h2>Check neighboring state rates</h2>
+      <div class="neighbor-states">
+        <a href="haryana" class="neighbor-link">Haryana</a>
+        <a href="uttarpradesh" class="neighbor-link">Uttar Pradesh</a>
+      </div>
+    </div>    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
       <div id="calc-placeholder" class="text-center py-8">
         <p class="text-stone-500 mb-4">Use our interactive RTO tax calculator for Delhi</p>
         <a href="../../tools/rto-tax?state=delhi" class="btn btn-primary">Open Calculator &rarr;</a>
@@ -208,7 +291,42 @@
           <div class="faq-answer">No, diesel vehicles older than 10 years and petrol vehicles older than 15 years cannot be driven in Delhi as per the National Green Tribunal (NGT) order. Such vehicles must be scrapped or moved to another state. The Delhi RTO deregisters these vehicles automatically.</div>
         </div>
       </section>
-  </main>
+  
+    <section class="mt-12">
+      <h2 class="text-lg font-bold mb-3">All States</h2>
+      <div class="states-grid-footer">
+        <a href="andhrapradesh">Andhra Pradesh</a>
+        <a href="arunachalpradesh">Arunachal Pradesh</a>
+        <a href="assam">Assam</a>
+        <a href="bihar">Bihar</a>
+        <a href="chhattisgarh">Chhattisgarh</a>
+        <a href="delhi" class="current">Delhi (NCT)</a>
+        <a href="goa">Goa</a>
+        <a href="gujarat">Gujarat</a>
+        <a href="haryana">Haryana</a>
+        <a href="himachalpradesh">Himachal Pradesh</a>
+        <a href="jharkhand">Jharkhand</a>
+        <a href="karnataka">Karnataka</a>
+        <a href="kerala">Kerala</a>
+        <a href="madhyapradesh">Madhya Pradesh</a>
+        <a href="maharashtra">Maharashtra</a>
+        <a href="manipur">Manipur</a>
+        <a href="meghalaya">Meghalaya</a>
+        <a href="mizoram">Mizoram</a>
+        <a href="nagaland">Nagaland</a>
+        <a href="odisha">Odisha</a>
+        <a href="punjab">Punjab</a>
+        <a href="rajasthan">Rajasthan</a>
+        <a href="sikkim">Sikkim</a>
+        <a href="tamilnadu">Tamil Nadu</a>
+        <a href="telangana">Telangana</a>
+        <a href="tripura">Tripura</a>
+        <a href="uttarpradesh">Uttar Pradesh</a>
+        <a href="uttarakhand">Uttarakhand</a>
+        <a href="westbengal">West Bengal</a>
+      </div>
+    </section>
+</main>
 
   <section class="ad-slot-footer mb-4" data-ad-slot="footer_main"></section>
 

@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RTO Tax Calculator Assam 2026 | DesiCalc</title>
   <meta name="description" content="Calculate RTO road tax and registration charges for vehicles in Assam. Car, bike, EV, commercial rates. Updated 2026.">
-  <link rel="canonical" href="https://desicalc.in/programmatic/rto-tax/assam">
+  <link rel="canonical" href="https://desicalc.in/programmatic/rto-tax/assam" />
+  <link rel="alternate" hreflang="en" href="https://desicalc.in/programmatic/rto-tax/assam" />
+  <link rel="alternate" hreflang="x-default" href="https://desicalc.in/programmatic/rto-tax/assam" />
   <meta property="og:title" content="RTO Tax Calculator Assam 2026 | DesiCalc">
   <meta property="og:description" content="Calculate RTO road tax in Assam. Car, bike, EV rates. Free calculator.">
   <meta property="og:url" content="https://desicalc.in/programmatic/rto-tax/assam">
@@ -34,16 +36,91 @@
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://desicalc.in" },
       { "@type": "ListItem", "position": 2, "name": "RTO Tax Calculator", "item": "https://desicalc.in/tools/rto-tax" },
-      { "@type": "ListItem", "position": 3, "name": "Assam", "item": "https://desicalc.in/programmatic/rto-tax/assam" }
+      { "@type": "ListItem", "position": 3, "name": "All States", "item": "https://desicalc.in/programmatic/rto-tax/" },
+      { "@type": "ListItem", "position": 4, "name": "Assam", "item": "https://desicalc.in/programmatic/rto-tax/assam" }
     ]
   }
   </script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
+  <script src="../../assets/js/common.js"></script>
   <script src="../../assets/js/calc-core.js"></script>
-  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
-  <link rel="icon" href="/favicon.ico" sizes="48x48">
-  <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the RTO code for Assam?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Assam uses the AS prefix. Major RTO codes include AS-01 (Guwahati East), AS-02 (Guwahati West), AS-03 (Nagaon), AS-04 (Jorhat), AS-05 (Dibrugarh), AS-06 (Silchar), AS-07 (Tezpur), AS-08 (Tinsukia), and AS-09 (Barpeta)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much is road tax for a ₹10 lakh car in Assam?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a ₹10 lakh petrol car in Assam, the road tax is 5% amounting to ₹50,000. For a diesel variant, it would be 6% amounting to ₹60,000. Registration fee (₹600) and HSRP (₹400) are additional."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are EVs exempt from road tax in Assam?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, electric vehicles are fully exempt from road tax in Assam under the state's EV policy. This applies to all EV categories for first registration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the penalty for late vehicle registration in Assam?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you fail to register your vehicle within 30 days of purchase in Assam, a late fee of ₹300 per month is levied, capped at ₹5,000. Additionally, you may face fines if caught driving an unregistered vehicle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get a fancy number plate in Assam RTO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Assam RTO offers fancy or VIP registration numbers through an online auction process on the VAHAN portal. Prices vary based on the number's desirability, starting from ₹10,000 for basic combinations and going up to several lakhs for premium numbers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is HSRP mandatory in Assam?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, High-Security Registration Plates are mandatory for all vehicles registered in Assam. The cost is ₹400 for four-wheelers and ₹200 for two-wheelers. HSRP includes a chromium-based hologram and a laser-etched unique identification number."
+      }
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="DesiCalc" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <style>
+    .neighbor-states { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.75rem 0; }
+    .neighbor-link { display: inline-flex; align-items: center; padding: 0.35rem 0.75rem; background: white; border: 1px solid #e7e5e4; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #78716c; transition: all 0.2s; text-decoration: none; }
+    .neighbor-link:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .neighbor-link.current { border-color: #f59e0b; background: #fffbeb; color: #92400e; }
+    .compare-box { background: #fefce8; border: 1px solid #fde047; border-radius: 12px; padding: 1rem; margin: 1.5rem 0; }
+    .compare-box h2 { font-size: 0.875rem; font-weight: 600; color: #92400e; margin-bottom: 0.75rem; }
+    .states-grid-footer { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .states-grid-footer a { display: inline-block; padding: 0.2rem 0.55rem; background: white; border: 1px solid #e7e5e4; border-radius: 4px; font-size: 0.7rem; color: #78716c; text-decoration: none; transition: all 0.15s; }
+    .states-grid-footer a:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .states-grid-footer a.current { border-color: #f59e0b; background: #fefce8; color: #92400e; font-weight: 600; }
+  </style>
 </head>
 <body class="bg-stone-50">
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
@@ -54,13 +131,25 @@
 
   <main class="max-w-4xl mx-auto px-4 py-8">
     <nav class="text-sm text-stone-500 mb-4">
-      <a href="../../" class="hover:text-amber-600">Home</a> / <a href="../../tools/rto-tax" class="hover:text-amber-600">RTO Tax</a> / <span class="text-stone-900">Assam</span>
+      <a href="../../" class="hover:text-amber-600">Home</a> / <a href="../../tools/rto-tax" class="hover:text-amber-600">RTO Tax</a> / <a href="../" class="hover:text-amber-600">All States</a> / <span class="text-stone-900">Assam</span>
     </nav>
 
     <h1 class="text-3xl font-bold text-stone-900 mb-2">RTO Tax Calculator Assam 2026</h1>
     <p class="text-stone-500 mb-8">Calculate road tax, registration charges, and on-road price for vehicles in Assam. Updated for 2026.</p>
 
-    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
+
+    <div class="compare-box">
+      <h2>Check neighboring state rates</h2>
+      <div class="neighbor-states">
+        <a href="arunachalpradesh" class="neighbor-link">Arunachal Pradesh</a>
+        <a href="nagaland" class="neighbor-link">Nagaland</a>
+        <a href="manipur" class="neighbor-link">Manipur</a>
+        <a href="mizoram" class="neighbor-link">Mizoram</a>
+        <a href="tripura" class="neighbor-link">Tripura</a>
+        <a href="meghalaya" class="neighbor-link">Meghalaya</a>
+        <a href="westbengal" class="neighbor-link">West Bengal</a>
+      </div>
+    </div>    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
       <div id="calc-placeholder" class="text-center py-8">
         <p class="text-stone-500 mb-4">Use our interactive RTO tax calculator for Assam</p>
         <a href="../../tools/rto-tax?state=assam" class="btn btn-primary">Open Calculator &rarr;</a>
@@ -185,7 +274,42 @@
           <div class="faq-answer">Yes, High-Security Registration Plates are mandatory for all vehicles registered in Assam. The cost is ₹400 for four-wheelers and ₹200 for two-wheelers. HSRP includes a chromium-based hologram and a laser-etched unique identification number.</div>
         </div>
       </section>
-  </main>
+  
+    <section class="mt-12">
+      <h2 class="text-lg font-bold mb-3">All States</h2>
+      <div class="states-grid-footer">
+        <a href="andhrapradesh">Andhra Pradesh</a>
+        <a href="arunachalpradesh">Arunachal Pradesh</a>
+        <a href="assam" class="current">Assam</a>
+        <a href="bihar">Bihar</a>
+        <a href="chhattisgarh">Chhattisgarh</a>
+        <a href="delhi">Delhi (NCT)</a>
+        <a href="goa">Goa</a>
+        <a href="gujarat">Gujarat</a>
+        <a href="haryana">Haryana</a>
+        <a href="himachalpradesh">Himachal Pradesh</a>
+        <a href="jharkhand">Jharkhand</a>
+        <a href="karnataka">Karnataka</a>
+        <a href="kerala">Kerala</a>
+        <a href="madhyapradesh">Madhya Pradesh</a>
+        <a href="maharashtra">Maharashtra</a>
+        <a href="manipur">Manipur</a>
+        <a href="meghalaya">Meghalaya</a>
+        <a href="mizoram">Mizoram</a>
+        <a href="nagaland">Nagaland</a>
+        <a href="odisha">Odisha</a>
+        <a href="punjab">Punjab</a>
+        <a href="rajasthan">Rajasthan</a>
+        <a href="sikkim">Sikkim</a>
+        <a href="tamilnadu">Tamil Nadu</a>
+        <a href="telangana">Telangana</a>
+        <a href="tripura">Tripura</a>
+        <a href="uttarpradesh">Uttar Pradesh</a>
+        <a href="uttarakhand">Uttarakhand</a>
+        <a href="westbengal">West Bengal</a>
+      </div>
+    </section>
+</main>
 
   <section class="ad-slot-footer mb-4" data-ad-slot="footer_main"></section>
 

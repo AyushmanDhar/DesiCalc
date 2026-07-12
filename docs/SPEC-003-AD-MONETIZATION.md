@@ -20,7 +20,7 @@
 ### Adsterra Onboarding (completed)
 
 1. Registered at Adsterra
-2. Site URL: `desicalc.pages.dev`
+2. Site URL: `desicalc.in`
 3. Site category: "Finance/Tools"
 4. Added `data527.click` to Cloudflare `_headers` CSP allowlist
 5. Got placement IDs for each ad unit. 6 ad slots created.

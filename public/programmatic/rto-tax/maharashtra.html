@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RTO Tax Calculator Maharashtra 2026 | DesiCalc</title>
   <meta name="description" content="Calculate RTO road tax and registration charges for vehicles in Maharashtra. Car, bike, EV, commercial rates. Updated 2026.">
-  <link rel="canonical" href="https://desicalc.in/programmatic/rto-tax/maharashtra">
+  <link rel="canonical" href="https://desicalc.in/programmatic/rto-tax/maharashtra" />
+  <link rel="alternate" hreflang="en" href="https://desicalc.in/programmatic/rto-tax/maharashtra" />
+  <link rel="alternate" hreflang="x-default" href="https://desicalc.in/programmatic/rto-tax/maharashtra" />
   <meta property="og:title" content="RTO Tax Calculator Maharashtra 2026 | DesiCalc">
   <meta property="og:description" content="Calculate RTO road tax in Maharashtra. Car, bike, EV rates. Free calculator.">
   <meta property="og:url" content="https://desicalc.in/programmatic/rto-tax/maharashtra">
@@ -34,16 +36,91 @@
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://desicalc.in" },
       { "@type": "ListItem", "position": 2, "name": "RTO Tax Calculator", "item": "https://desicalc.in/tools/rto-tax" },
-      { "@type": "ListItem", "position": 3, "name": "Maharashtra", "item": "https://desicalc.in/programmatic/rto-tax/maharashtra" }
+      { "@type": "ListItem", "position": 3, "name": "All States", "item": "https://desicalc.in/programmatic/rto-tax/" },
+      { "@type": "ListItem", "position": 4, "name": "Maharashtra", "item": "https://desicalc.in/programmatic/rto-tax/maharashtra" }
     ]
   }
   </script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
+  <script src="../../assets/js/common.js"></script>
   <script src="../../assets/js/calc-core.js"></script>
-  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
-  <link rel="icon" href="/favicon.ico" sizes="48x48">
-  <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the RTO code for Maharashtra?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Maharashtra uses the MH prefix. Key codes include MH-01 (Mumbai South), MH-02 (Mumbai West), MH-03 (Mumbai East), MH-04 (Mumbai Central), MH-05 (Thane), MH-06 (Thane Rural), MH-08 (Kolhapur), MH-12 (Pune), MH-14 (Pune Rural), MH-15 (Nashik), MH-20 (Aurangabad), MH-31 (Nagpur), MH-40 (Nagpur Rural), MH-43 (Navi Mumbai), MH-46 (Mumbai North), MH-47 (Mumbai North West), and MH-48 (Mumbai North East)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much is road tax for a ₹10 lakh car in Maharashtra?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a ₹10 lakh petrol car, road tax is 11% (₹1,10,000). For a diesel car, it is 13% (₹1,30,000) plus 2% Diesel Cess (₹20,000), totalling ₹1,50,000. For a CNG car, it is 8% (₹80,000)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Diesel Cess in Maharashtra?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Maharashtra levies an additional 2% Diesel Cess on diesel vehicles to discourage dieselisation and address air pollution concerns. This is on top of the standard road tax rate. The cess applies to all diesel four-wheelers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are EVs exempt from road tax in Maharashtra?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, electric vehicles are fully exempt from road tax in Maharashtra under the state EV Policy. This applies to all categories of EVs for first registration. The policy has been a key driver of EV adoption in Mumbai, Pune, and other cities."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the tax cap in Maharashtra?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Maharashtra has a maximum road tax cap of ₹30 lakh for any vehicle. This means even if the calculated tax exceeds ₹30 lakh, you only pay ₹30 lakh. This cap primarily benefits buyers of ultra-luxury vehicles priced above approximately ₹2.3 crore."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I register a vehicle in Maharashtra with a different state address?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, you need a valid Maharashtra address proof to register a vehicle in the state. However, if you have a rented accommodation or second home in Maharashtra, you can use that address for registration. Many people working in Mumbai and Pune register vehicles using their rental agreement as address proof."
+      }
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="DesiCalc" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <style>
+    .neighbor-states { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.75rem 0; }
+    .neighbor-link { display: inline-flex; align-items: center; padding: 0.35rem 0.75rem; background: white; border: 1px solid #e7e5e4; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #78716c; transition: all 0.2s; text-decoration: none; }
+    .neighbor-link:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .neighbor-link.current { border-color: #f59e0b; background: #fffbeb; color: #92400e; }
+    .compare-box { background: #fefce8; border: 1px solid #fde047; border-radius: 12px; padding: 1rem; margin: 1.5rem 0; }
+    .compare-box h2 { font-size: 0.875rem; font-weight: 600; color: #92400e; margin-bottom: 0.75rem; }
+    .states-grid-footer { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .states-grid-footer a { display: inline-block; padding: 0.2rem 0.55rem; background: white; border: 1px solid #e7e5e4; border-radius: 4px; font-size: 0.7rem; color: #78716c; text-decoration: none; transition: all 0.15s; }
+    .states-grid-footer a:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .states-grid-footer a.current { border-color: #f59e0b; background: #fefce8; color: #92400e; font-weight: 600; }
+  </style>
 </head>
 <body class="bg-stone-50">
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
@@ -54,13 +131,24 @@
 
   <main class="max-w-4xl mx-auto px-4 py-8">
     <nav class="text-sm text-stone-500 mb-4">
-      <a href="../../" class="hover:text-amber-600">Home</a> / <a href="../../tools/rto-tax" class="hover:text-amber-600">RTO Tax</a> / <span class="text-stone-900">Maharashtra</span>
+      <a href="../../" class="hover:text-amber-600">Home</a> / <a href="../../tools/rto-tax" class="hover:text-amber-600">RTO Tax</a> / <a href="../" class="hover:text-amber-600">All States</a> / <span class="text-stone-900">Maharashtra</span>
     </nav>
 
     <h1 class="text-3xl font-bold text-stone-900 mb-2">RTO Tax Calculator Maharashtra 2026</h1>
     <p class="text-stone-500 mb-8">Calculate road tax, registration charges, and on-road price for vehicles in Maharashtra. Updated for 2026.</p>
 
-    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
+
+    <div class="compare-box">
+      <h2>Check neighboring state rates</h2>
+      <div class="neighbor-states">
+        <a href="gujarat" class="neighbor-link">Gujarat</a>
+        <a href="madhyapradesh" class="neighbor-link">Madhya Pradesh</a>
+        <a href="chhattisgarh" class="neighbor-link">Chhattisgarh</a>
+        <a href="telangana" class="neighbor-link">Telangana</a>
+        <a href="karnataka" class="neighbor-link">Karnataka</a>
+        <a href="goa" class="neighbor-link">Goa</a>
+      </div>
+    </div>    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
       <div id="calc-placeholder" class="text-center py-8">
         <p class="text-stone-500 mb-4">Use our interactive RTO tax calculator for Maharashtra</p>
         <a href="../../tools/rto-tax?state=maharashtra" class="btn btn-primary">Open Calculator &rarr;</a>
@@ -241,7 +329,42 @@
           <div class="faq-answer">No, you need a valid Maharashtra address proof to register a vehicle in the state. However, if you have a rented accommodation or second home in Maharashtra, you can use that address for registration. Many people working in Mumbai and Pune register vehicles using their rental agreement as address proof.</div>
         </div>
       </section>
-  </main>
+  
+    <section class="mt-12">
+      <h2 class="text-lg font-bold mb-3">All States</h2>
+      <div class="states-grid-footer">
+        <a href="andhrapradesh">Andhra Pradesh</a>
+        <a href="arunachalpradesh">Arunachal Pradesh</a>
+        <a href="assam">Assam</a>
+        <a href="bihar">Bihar</a>
+        <a href="chhattisgarh">Chhattisgarh</a>
+        <a href="delhi">Delhi (NCT)</a>
+        <a href="goa">Goa</a>
+        <a href="gujarat">Gujarat</a>
+        <a href="haryana">Haryana</a>
+        <a href="himachalpradesh">Himachal Pradesh</a>
+        <a href="jharkhand">Jharkhand</a>
+        <a href="karnataka">Karnataka</a>
+        <a href="kerala">Kerala</a>
+        <a href="madhyapradesh">Madhya Pradesh</a>
+        <a href="maharashtra" class="current">Maharashtra</a>
+        <a href="manipur">Manipur</a>
+        <a href="meghalaya">Meghalaya</a>
+        <a href="mizoram">Mizoram</a>
+        <a href="nagaland">Nagaland</a>
+        <a href="odisha">Odisha</a>
+        <a href="punjab">Punjab</a>
+        <a href="rajasthan">Rajasthan</a>
+        <a href="sikkim">Sikkim</a>
+        <a href="tamilnadu">Tamil Nadu</a>
+        <a href="telangana">Telangana</a>
+        <a href="tripura">Tripura</a>
+        <a href="uttarpradesh">Uttar Pradesh</a>
+        <a href="uttarakhand">Uttarakhand</a>
+        <a href="westbengal">West Bengal</a>
+      </div>
+    </section>
+</main>
 
   <section class="ad-slot-footer mb-4" data-ad-slot="footer_main"></section>
 
