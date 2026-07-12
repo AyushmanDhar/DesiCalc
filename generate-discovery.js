@@ -98,10 +98,19 @@ fs.writeFileSync(mcpCatalogPath, generateMCPCatalog());
 console.log('Generated .well-known/mcp/catalog.json');
 
 // Write MCP server card
-const mcpPublicDir = path.join(PUBLIC_DIR, 'mcp');
-if (!fs.existsSync(mcpPublicDir)) fs.mkdirSync(mcpPublicDir, { recursive: true });
-const serverCardPath = path.join(mcpPublicDir, 'server-card');
+const mcpPubDir = path.join(PUBLIC_DIR, 'mcp');
+if (!fs.existsSync(mcpPubDir)) fs.mkdirSync(mcpPubDir, { recursive: true });
+const serverCardPath = path.join(mcpPubDir, 'server-card');
 fs.writeFileSync(serverCardPath, generateMCPServerCard());
 console.log('Generated mcp/server-card');
+
+// Also write to .well-known for discovery
+const mcpSrvPath = path.join(mcpPubDir, 'server-card.json');
+fs.writeFileSync(mcpSrvPath, generateMCPServerCard());
+console.log('Generated mcp/server-card.json');
+
+// Also place directly at .well-known/mcp/server-card.json for compatibility
+fs.writeFileSync(path.join(mcpDir, 'server-card.json'), generateMCPServerCard());
+console.log('Generated .well-known/mcp/server-card.json');
 
 console.log('Done! Run `npm run generate-discovery` after adding new APIs to api-config.js.');
