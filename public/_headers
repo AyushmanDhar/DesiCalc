@@ -14,7 +14,17 @@
   Content-Type: application/json
   Cache-Control: public, max-age=3600
 
+/.well-known/mcp/server-card.json
+  Access-Control-Allow-Origin: *
+  Content-Type: application/mcp-server-card+json
+  Cache-Control: public, max-age=3600
+
 /mcp/server-card
+  Access-Control-Allow-Origin: *
+  Content-Type: application/mcp-server-card+json
+  Cache-Control: public, max-age=3600
+
+/mcp/server-card.json
   Access-Control-Allow-Origin: *
   Content-Type: application/mcp-server-card+json
   Cache-Control: public, max-age=3600
