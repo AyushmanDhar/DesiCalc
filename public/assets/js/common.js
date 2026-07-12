@@ -133,9 +133,19 @@ function initGreeting() {
   el.textContent = text;
 }
 
+var _backToTopInitialized = false;
 function initBackToTop() {
+  if (_backToTopInitialized) return;
+  _backToTopInitialized = true;
   var btn = document.getElementById('backToTop');
-  if (!btn) return;
+  if (!btn) {
+    btn = document.createElement('button');
+    btn.id = 'backToTop';
+    btn.className = 'back-to-top';
+    btn.setAttribute('aria-label', 'Back to top');
+    btn.textContent = '\u2191';
+    document.body.appendChild(btn);
+  }
   var ticking = false;
   function onScroll() {
     if (!ticking) {
@@ -196,3 +206,9 @@ document.addEventListener('input', function(e) {
     if (sanitized !== val) e.target.value = sanitized;
   }
 });
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initBackToTop);
+} else {
+  initBackToTop();
+}
