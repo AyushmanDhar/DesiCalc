@@ -74,7 +74,6 @@ ${STATES.map((state, i) => `      { "@type": "ListItem", "position": ${i + 1}, "
   </script>
   <link rel="stylesheet" href="../../assets/css/tailwind.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
-  <script src="../../assets/js/common.js"></script>
   <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
@@ -144,8 +143,6 @@ ${statesHtml}
   <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
     <div class="max-w-5xl mx-auto px-4"><span class="text-stone-900 font-semibold">DesiCalc</span> &copy; 2026. Free Indian tax calculators.</div>
   </footer>
-  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
-  <script>initBackToTop();</script>
   <script src="../../../assets/js/ad.js"></script>
 </body>
 </html>`;
@@ -201,7 +198,6 @@ ${STATES.map((state, i) => `      { "@type": "ListItem", "position": ${i + 1}, "
   </script>
   <link rel="stylesheet" href="../../assets/css/tailwind.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
-  <script src="../../assets/js/common.js"></script>
   <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
@@ -257,8 +253,6 @@ ${statesHtml}
   <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
     <div class="max-w-5xl mx-auto px-4"><span class="text-stone-900 font-semibold">DesiCalc</span> &copy; 2026. Free Indian tax calculators.</div>
   </footer>
-  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
-  <script>initBackToTop();</script>
   <script src="../../../assets/js/ad.js"></script>
 </body>
 </html>`;
@@ -318,7 +312,6 @@ function generateStampDutyStatePage(slug) {
   </script>
   <link rel="stylesheet" href="../../assets/css/tailwind.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
-  <script src="../../assets/js/common.js"></script>
   <script src="../../assets/js/calc-core.js"></script>
   <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -427,8 +420,6 @@ ${STATES.map(s => `<a href="../${s.slug}.html" class="inline-flex items-center g
   <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
     <div class="max-w-5xl mx-auto px-4"><span class="text-stone-900 font-semibold">DesiCalc</span> &copy; 2026. Free Indian tax calculators.</div>
   </footer>
-  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
-  <script>initBackToTop();</script>
   <script src="../../assets/js/ad.js"></script>
 </body>
 </html>`;
@@ -488,7 +479,6 @@ function generateRTOStatePage(slug) {
   </script>
   <link rel="stylesheet" href="../../assets/css/tailwind.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
-  <script src="../../assets/js/common.js"></script>
   <script src="../../assets/js/calc-core.js"></script>
   <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -554,8 +544,6 @@ ${STATES.map(s => `<a href="../${s.slug}.html" class="inline-flex items-center g
   <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
     <div class="max-w-5xl mx-auto px-4"><span class="text-stone-900 font-semibold">DesiCalc</span> &copy; 2026. Free Indian tax calculators.</div>
   </footer>
-  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
-  <script>initBackToTop();</script>
   <script src="../../assets/js/ad.js"></script>
 </body>
 </html>`;
