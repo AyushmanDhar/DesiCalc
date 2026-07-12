@@ -74,19 +74,19 @@ function convert(html, baseUrl) {
   }
 
   s = s.replace(/<!DOCTYPE[^>]*>/gi, '');
-  s = s.replace(/<!--[\s\S]*?-->/g, '');
+  s = s.replace(/<!--[\s\S]*?-->/gi, '');
   s = s.replace(/<head[\s\S]*?<\/head>/gi, '');
-  s = s.replace(/<(script|style|noscript)[^>]*>[\s\S]*?<\/\1>/gi, '');
-  s = s.replace(/<(header|footer|nav|aside)[^>]*>[\s\S]*?<\/\1>/gi, '');
+  while (s !== (s = s.replace(/<(script|style|noscript)[\s\S]*?<\/\1>/gi, ''))) {}
+  s = s.replace(/<(header|footer|nav|aside)[\s\S]*?<\/\1>/gi, '');
   s = s.replace(
-    /<section[^>]*data-ad-slot[^>]*>[\s\S]*?<\/section>/gi,
+    /<section[\s\S]*?data-ad-slot[\s\S]*?>[\s\S]*?<\/section>/gi,
     '',
   );
   s = s.replace(
-    /<(div|button|span)[^>]*class="[^"]*(?:toast|sr-only|back-to-top|faq-icon)[^"]*"[^>]*>[\s\S]*?<\/\1>/gi,
+    /<(div|span|button)[^>]*class="[^"]*(?:toast|sr-only|back-to-top|faq-icon)[^"]*"[^>]*>[\s\S]*?<\/\1>/gi,
     '',
   );
-  s = s.replace(/\son\w+="[^"]*"/gi, '');
+  s = s.replace(/ (?:onclick|onload|onerror|onfocus|onblur|onmouseover|onmouseout|onsubmit|onchange|onkeyup|onkeydown|onkeypress|ondblclick|onresize)="[^"]*"/gi, '');
   s = s.replace(/<link[^>]*>/gi, '');
   s = s.replace(/<meta[^>]*>/gi, '');
 
@@ -228,11 +228,12 @@ function convertPre(html) {
       const code = inner
         .replace(/<code[^>]*>/gi, '')
         .replace(/<\/code>/gi, '')
-        .replace(/&amp;/g, '&')
         .replace(/&lt;/g, '<')
         .replace(/&gt;/g, '>')
         .replace(/&quot;/g, '"')
-        .replace(/&#39;/g, "'");
+        .replace(/&#39;/g, "'")
+        .replace(/&amp;/g, '&')
+        .replace(/&#(\d+);/g, (_, c) => String.fromCharCode(c));
       return '\n```\n' + code.trim() + '\n```\n';
     },
   );
@@ -313,13 +314,13 @@ function convertInline(html, baseUrl) {
 
   s = stripTags(s);
 
-  s = s.replace(/&amp;/g, '&');
   s = s.replace(/&lt;/g, '<');
   s = s.replace(/&gt;/g, '>');
   s = s.replace(/&quot;/g, '"');
   s = s.replace(/&#39;/g, "'");
   s = s.replace(/&nbsp;/g, ' ');
   s = s.replace(/&#(\d+);/g, (_, c) => String.fromCharCode(c));
+  s = s.replace(/&amp;/g, '&');
 
   s = s.replace(/[ \t]+/g, ' ');
   s = s.replace(/\n{3,}/g, '\n\n');
