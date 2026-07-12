@@ -37,7 +37,7 @@ Indian tax, stamp duty, and RTO road tax calculators. No login. No data leaves y
 public/
 ├── index.html              # Home page
 ├── sw.js                   # Service worker (offline caching)
-├── manifest.json           # PWA manifest
+├── site.webmanifest        # PWA manifest
 ├── _headers                # Security headers (CSP)
 ├── _redirects
 ├── assets/
