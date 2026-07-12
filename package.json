@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "node generate-programmatic.js && npx tailwindcss -i ./src/tailwind.css -o ./public/assets/css/tailwind.css --minify",
+    "build": "npx tailwindcss -i ./src/tailwind.css -o ./public/assets/css/tailwind.css --minify",
     "dev": "npx tailwindcss -i ./src/tailwind.css -o ./public/assets/css/tailwind.css --watch",
     "generate-discovery": "node generate-discovery.js"
   },
