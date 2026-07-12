@@ -63,7 +63,7 @@ function convert(html, baseUrl) {
   if (descMatch) frontmatter.description = descMatch[1].trim();
 
   const jl = s.matchAll(
-    /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi,
+    /<script[\s\S]*?type=["']application\/ld\+json["'][\s\S]*?>([\s\S]*?)<\/script>/gi,
   );
   for (const m of jl) {
     try {
@@ -74,7 +74,7 @@ function convert(html, baseUrl) {
   }
 
   s = s.replace(/<!DOCTYPE[^>]*>/gi, '');
-  s = s.replace(/<!--[\s\S]*?-->/gi, '');
+  while (s !== (s = s.replace(/<!--[\s\S]*?-->/gi, ''))) {}
   s = s.replace(/<head[\s\S]*?<\/head>/gi, '');
   while (s !== (s = s.replace(/<(script|style|noscript)[\s\S]*?<\/\1>/gi, ''))) {}
   s = s.replace(/<(header|footer|nav|aside)[\s\S]*?<\/\1>/gi, '');
@@ -83,10 +83,12 @@ function convert(html, baseUrl) {
     '',
   );
   s = s.replace(
-    /<(div|span|button)[^>]*class="[^"]*(?:toast|sr-only|back-to-top|faq-icon)[^"]*"[^>]*>[\s\S]*?<\/\1>/gi,
+    /<(div|span|button)[\s\S]*?class="[^"]*(?:toast|sr-only|back-to-top|faq-icon)[^"]*"[\s\S]*?>[\s\S]*?<\/\1>/gi,
     '',
   );
-  s = s.replace(/ (?:onclick|onload|onerror|onfocus|onblur|onmouseover|onmouseout|onsubmit|onchange|onkeyup|onkeydown|onkeypress|ondblclick|onresize)="[^"]*"/gi, '');
+  while (s !== (s = s.replace(/[\s]on\w+\s*=\s*"[^"]*"/gi, ''))) {}
+  while (s !== (s = s.replace(/[\s]on\w+\s*=\s*'[^']*'/gi, ''))) {}
+  while (s !== (s = s.replace(/[\s]on\w+\s*=\s*\S+/gi, ''))) {}
   s = s.replace(/<link[^>]*>/gi, '');
   s = s.replace(/<meta[^>]*>/gi, '');
 
@@ -94,10 +96,10 @@ function convert(html, baseUrl) {
   const body = s.match(/<body[^>]*>([\s\S]*)<\/body>/i);
   let content = main ? main[1] : body ? body[1] : s;
 
-  content = content.replace(
-    /<script[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi,
+  while (content !== (content = content.replace(
+    /<script[\s\S]*?type=["']application\/ld\+json["'][\s\S]*?>[\s\S]*?<\/script>/gi,
     '',
-  );
+  ))) {}
 
   let md = '';
 
@@ -137,12 +139,10 @@ function convertTables(html) {
         const cellRegex = /<t[dh][^>]*>([\s\S]*?)<\/t[dh]>/gi;
         let cellMatch;
         while ((cellMatch = cellRegex.exec(trMatch[1])) !== null) {
-          cells.push(
-            cellMatch[1]
-              .replace(/<[^>]+>/g, '')
-              .replace(/\s+/g, ' ')
-              .trim(),
-          );
+          let cellText = cellMatch[1];
+          cellText = stripTags(cellText);
+          cellText = cellText.replace(/\s+/g, ' ').trim();
+          cells.push(cellText);
         }
         rows.push(cells);
       }
@@ -169,7 +169,9 @@ function convertLists(html) {
       const liRegex = /<li[^>]*>([\s\S]*?)<\/li>/gi;
       let m;
       while ((m = liRegex.exec(inner)) !== null) {
-        const text = m[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+        let text = m[1];
+        text = stripTags(text);
+        text = text.replace(/\s+/g, ' ').trim();
         if (text) result += '- ' + text + '\n';
       }
       return result;
@@ -184,7 +186,9 @@ function convertLists(html) {
       const liRegex = /<li[^>]*>([\s\S]*?)<\/li>/gi;
       let m;
       while ((m = liRegex.exec(inner)) !== null) {
-        const text = m[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+        let text = m[1];
+        text = stripTags(text);
+        text = text.replace(/\s+/g, ' ').trim();
         if (text) result += idx + '. ' + text + '\n';
         idx++;
       }
@@ -207,14 +211,16 @@ function convertFaqs(html) {
       );
       let result = '\n';
       if (qMatch) {
-        result +=
-          '**' +
-          qMatch[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim() +
-          '**\n\n';
+        let qText = qMatch[1];
+        qText = stripTags(qText);
+        qText = qText.replace(/\s+/g, ' ').trim();
+        result += '**' + qText + '**\n\n';
       }
       if (aMatch) {
-        result +=
-          aMatch[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim() + '\n';
+        let aText = aMatch[1];
+        aText = stripTags(aText);
+        aText = aText.replace(/\s+/g, ' ').trim();
+        result += aText + '\n';
       }
       return result;
     },
@@ -331,5 +337,7 @@ function convertInline(html, baseUrl) {
 }
 
 function stripTags(s) {
-  return s.replace(/<[^>]*>/g, '');
+  while (true) { let r = s; s = s.replace(/<[^>]*>/gi, ''); if (s === r) break; }
+  return s;
 }
+
