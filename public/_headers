@@ -4,6 +4,11 @@
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   Vary: Accept
 
+/.well-known/api-catalog
+  Access-Control-Allow-Origin: *
+  Content-Type: application/linkset+json
+  Cache-Control: public, max-age=3600
+
 /.well-known/*
   Access-Control-Allow-Origin: *
   Content-Type: application/json

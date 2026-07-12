@@ -1,0 +1,67 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://desicalc.in/programmatic/stamp-duty/{state}",
+      "service-desc": [
+        {
+          "href": "https://desicalc.in/openapi/stamp-duty.json",
+          "type": "application/vnd.oai.openapi+json;version=3.0"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://desicalc.in/tools/stamp-duty",
+          "type": "text/html"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://desicalc.in/.well-known/api-catalog",
+          "type": "application/linkset+json"
+        }
+      ]
+    },
+    {
+      "anchor": "https://desicalc.in/programmatic/rto-tax/{state}",
+      "service-desc": [
+        {
+          "href": "https://desicalc.in/openapi/rto-tax.json",
+          "type": "application/vnd.oai.openapi+json;version=3.0"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://desicalc.in/tools/rto-tax",
+          "type": "text/html"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://desicalc.in/.well-known/api-catalog",
+          "type": "application/linkset+json"
+        }
+      ]
+    },
+    {
+      "anchor": "https://desicalc.in/tools/income-tax",
+      "service-desc": [
+        {
+          "href": "https://desicalc.in/openapi/income-tax.json",
+          "type": "application/vnd.oai.openapi+json;version=3.0"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://desicalc.in/tools/income-tax",
+          "type": "text/html"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://desicalc.in/.well-known/api-catalog",
+          "type": "application/linkset+json"
+        }
+      ]
+    }
+  ]
+}

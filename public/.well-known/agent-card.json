@@ -13,20 +13,51 @@
       "inputSchema": {
         "type": "object",
         "properties": {
-          "state": { "type": "string", "description": "Indian state ID (e.g. karnataka, maharashtra)" },
-          "propertyValue": { "type": "number", "description": "Property value in INR" },
-          "propertyType": { "type": "string", "enum": ["residential", "commercial"], "default": "residential" },
-          "gender": { "type": "string", "enum": ["male", "female", "joint"], "default": "male" }
+          "state": {
+            "type": "string",
+            "description": "Indian state ID (e.g. karnataka, maharashtra)"
+          },
+          "propertyValue": {
+            "type": "number",
+            "description": "Property value in INR"
+          },
+          "propertyType": {
+            "type": "string",
+            "enum": [
+              "residential",
+              "commercial"
+            ],
+            "default": "residential"
+          },
+          "gender": {
+            "type": "string",
+            "enum": [
+              "male",
+              "female",
+              "joint"
+            ],
+            "default": "male"
+          }
         }
       },
       "outputSchema": {
         "type": "object",
         "properties": {
-          "stampDuty": { "type": "number" },
-          "registration": { "type": "number" },
-          "total": { "type": "number" },
-          "stampDutyRate": { "type": "number" },
-          "registrationRate": { "type": "number" }
+          "stampDuty": {
+            "type": "number"
+          },
+          "registration": {
+            "type": "number"
+          },
+          "total": {
+            "type": "number"
+          },
+          "stampDutyRate": {
+            "type": "number"
+          },
+          "registrationRate": {
+            "type": "number"
+          }
         }
       }
     },
@@ -37,19 +68,50 @@
       "inputSchema": {
         "type": "object",
         "properties": {
-          "state": { "type": "string", "description": "Indian state ID (e.g. karnataka, maharashtra)" },
-          "vehiclePrice": { "type": "number", "description": "Ex-showroom price in INR" },
-          "fuelType": { "type": "string", "enum": ["petrol", "diesel", "electric", "cng"], "default": "petrol" },
-          "vehicleType": { "type": "string", "enum": ["car", "bike", "scooter"], "default": "car" }
+          "state": {
+            "type": "string",
+            "description": "Indian state ID (e.g. karnataka, maharashtra)"
+          },
+          "vehiclePrice": {
+            "type": "number",
+            "description": "Ex-showroom price in INR"
+          },
+          "fuelType": {
+            "type": "string",
+            "enum": [
+              "petrol",
+              "diesel",
+              "electric",
+              "cng"
+            ],
+            "default": "petrol"
+          },
+          "vehicleType": {
+            "type": "string",
+            "enum": [
+              "car",
+              "bike",
+              "scooter"
+            ],
+            "default": "car"
+          }
         }
       },
       "outputSchema": {
         "type": "object",
         "properties": {
-          "roadTax": { "type": "number" },
-          "registrationFees": { "type": "number" },
-          "total": { "type": "number" },
-          "taxRate": { "type": "number" }
+          "roadTax": {
+            "type": "number"
+          },
+          "registrationFees": {
+            "type": "number"
+          },
+          "total": {
+            "type": "number"
+          },
+          "taxRate": {
+            "type": "number"
+          }
         }
       }
     },
@@ -60,22 +122,57 @@
       "inputSchema": {
         "type": "object",
         "properties": {
-          "income": { "type": "number", "description": "Annual income in INR" },
-          "regime": { "type": "string", "enum": ["old", "new"], "default": "new" },
-          "age": { "type": "number", "description": "Age in years" },
-          "section80c": { "type": "number", "description": "Section 80C deductions in INR", "default": 0 },
-          "section80d": { "type": "number", "description": "Section 80D deductions in INR", "default": 0 },
-          "hra": { "type": "number", "description": "HRA claimed in INR", "default": 0 }
+          "income": {
+            "type": "number",
+            "description": "Annual income in INR"
+          },
+          "regime": {
+            "type": "string",
+            "enum": [
+              "old",
+              "new"
+            ],
+            "default": "new"
+          },
+          "age": {
+            "type": "number",
+            "description": "Age in years"
+          },
+          "section80c": {
+            "type": "number",
+            "description": "Section 80C deductions in INR",
+            "default": 0
+          },
+          "section80d": {
+            "type": "number",
+            "description": "Section 80D deductions in INR",
+            "default": 0
+          },
+          "hra": {
+            "type": "number",
+            "description": "HRA claimed in INR",
+            "default": 0
+          }
         }
       },
       "outputSchema": {
         "type": "object",
         "properties": {
-          "taxableIncome": { "type": "number" },
-          "taxAmount": { "type": "number" },
-          "cessAmount": { "type": "number" },
-          "totalTax": { "type": "number" },
-          "effectiveRate": { "type": "number" }
+          "taxableIncome": {
+            "type": "number"
+          },
+          "taxAmount": {
+            "type": "number"
+          },
+          "cessAmount": {
+            "type": "number"
+          },
+          "totalTax": {
+            "type": "number"
+          },
+          "effectiveRate": {
+            "type": "number"
+          }
         }
       }
     }

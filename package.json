@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "build": "npx tailwindcss -i ./src/tailwind.css -o ./public/assets/css/tailwind.css --minify",
-    "dev": "npx tailwindcss -i ./src/tailwind.css -o ./public/assets/css/tailwind.css --watch"
+    "dev": "npx tailwindcss -i ./src/tailwind.css -o ./public/assets/css/tailwind.css --watch",
+    "generate-discovery": "node generate-discovery.js"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.17"
