@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/v1/server-card.schema.json",
+  "name": "in.desicalc/calculators",
+  "version": "1.0.0",
+  "description": "Indian tax & financial calculators — stamp duty, RTO tax, income tax. Provides structured JSON API responses for agent consumption.",
+  "title": "DesiCalc Calculators",
+  "websiteUrl": "https://desicalc.in",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://desicalc.in/mcp",
+      "supportedProtocolVersions": [
+        "2025-03-26"
+      ]
+    }
+  ]
+}

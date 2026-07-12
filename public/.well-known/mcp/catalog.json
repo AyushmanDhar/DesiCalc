@@ -1,0 +1,11 @@
+{
+  "specVersion": "draft",
+  "entries": [
+    {
+      "identifier": "urn:air:desicalc.in:calculators",
+      "displayName": "DesiCalc Calculators",
+      "mediaType": "application/mcp-server-card+json",
+      "url": "https://desicalc.in/mcp/server-card"
+    }
+  ]
+}
