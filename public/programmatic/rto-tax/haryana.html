@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RTO Tax Calculator Haryana 2026 | DesiCalc</title>
   <meta name="description" content="Calculate RTO road tax and registration charges for vehicles in Haryana. Car, bike, EV, commercial rates. Updated 2026.">
-  <link rel="canonical" href="https://desicalc.in/programmatic/rto-tax/haryana">
+  <link rel="canonical" href="https://desicalc.in/programmatic/rto-tax/haryana" />
+  <link rel="alternate" hreflang="en" href="https://desicalc.in/programmatic/rto-tax/haryana" />
+  <link rel="alternate" hreflang="x-default" href="https://desicalc.in/programmatic/rto-tax/haryana" />
   <meta property="og:title" content="RTO Tax Calculator Haryana 2026 | DesiCalc">
   <meta property="og:description" content="Calculate RTO road tax in Haryana. Car, bike, EV rates. Free calculator.">
   <meta property="og:url" content="https://desicalc.in/programmatic/rto-tax/haryana">
@@ -20,7 +22,7 @@
     "@context": "https://schema.org",
     "@type": ["WebApplication", "SoftwareApplication"],
     "name": "RTO Tax Calculator Haryana",
-    "url": "https://desicalc.in/tools/rto-tax?state=haryana",
+    "url": "https://desicalc.in/programmatic/rto-tax/haryana",
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "All",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
@@ -39,100 +41,307 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="/assets/css/tailwind.css">
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <script src="/assets/js/calc-core.js"></script>
-  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
-  <link rel="icon" href="/favicon.ico" sizes="48x48">
-  <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <script src="../../assets/js/common.js"></script>
+  <script src="../../assets/js/calc-core.js"></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the RTO code for Haryana?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Haryana uses the HR prefix. Major codes include HR-01 (Ambala), HR-03 (Panchkula), HR-05 (Karnal), HR-10 (Rohtak), HR-11 (Sonipat), HR-14 (Jind), HR-20 (Hisar), HR-26 (Panipat), HR-51 (Faridabad), HR-55 (Gurugram), and HR-68 (Rewari)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much is road tax for a ₹10 lakh car in Haryana?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a ₹10 lakh car in Haryana, the road tax is 8% amounting to ₹80,000. This applies to all fuel types. Registration (₹600) and HSRP (₹400) are additional."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are EVs fully exempt in Haryana?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, EVs in Haryana receive a 75% concession on road tax, meaning you pay 25% of the standard rate. This is still a significant saving but not a full exemption like in Delhi or Maharashtra."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the colour-coded sticker required in Haryana NCR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, vehicles registered in NCR districts of Haryana (Gurugram, Faridabad, Sonipat, etc.) must affix colour-coded stickers — blue for petrol/CNG and orange for diesel. This is part of the NCR pollution control measures."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get a Haryana registration if I live in Delhi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Technically, you need a Haryana address to register a vehicle there. However, many people with properties or businesses in both states choose to register in Haryana due to lower tax rates compared to Delhi's diesel rates. You must have valid Haryana address proof."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the road tax for used vehicle transfer in Haryana?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For transferring a used vehicle to Haryana from another state, road tax is calculated on the depreciated value of the vehicle as per Haryana's slab rates. Depreciation is calculated based on the age of the vehicle using standard ICRA depreciation rates."
+      }
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="DesiCalc" />
+  <link rel="manifest" href="/site.webmanifest" />
+
   <style>
-    .neighbor-states { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
-    .neighbor-link { display: inline-flex; align-items: center; padding: 0.35rem 0.75rem; background: white; border: 1px solid #e7e5e4; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #78716c; transition: all 0.2s; }
+    .neighbor-states { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.75rem 0; }
+    .neighbor-link { display: inline-flex; align-items: center; padding: 0.35rem 0.75rem; background: white; border: 1px solid #e7e5e4; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #78716c; transition: all 0.2s; text-decoration: none; }
     .neighbor-link:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .neighbor-link.current { border-color: #f59e0b; background: #fffbeb; color: #92400e; }
     .compare-box { background: #fefce8; border: 1px solid #fde047; border-radius: 12px; padding: 1rem; margin: 1.5rem 0; }
-    .compare-box h3 { font-size: 0.875rem; font-weight: 600; color: #92400e; margin-bottom: 0.5rem; }
+    .compare-box h2 { font-size: 0.875rem; font-weight: 600; color: #92400e; margin-bottom: 0.75rem; }
+    .states-grid-footer { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .states-grid-footer a { display: inline-block; padding: 0.2rem 0.55rem; background: white; border: 1px solid #e7e5e4; border-radius: 4px; font-size: 0.7rem; color: #78716c; text-decoration: none; transition: all 0.15s; }
+    .states-grid-footer a:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .states-grid-footer a.current { border-color: #f59e0b; background: #fefce8; color: #92400e; font-weight: 600; }
   </style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2207525036040634"
+     crossorigin="anonymous"></script>
 </head>
 <body class="bg-stone-50">
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
     <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
-      <a href="../../../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
+      <a href="../../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
     </div>
   </header>
 
   <main class="max-w-4xl mx-auto px-4 py-8">
     <nav class="text-sm text-stone-500 mb-4">
-      <a href="../../../" class="hover:text-amber-600">Home</a> / 
-      <a href="../../../tools/rto-tax" class="hover:text-amber-600">RTO Tax</a> / 
-      <a href="../" class="hover:text-amber-600">All States</a> / 
-      <span class="text-stone-900">Haryana</span>
+      <a href="../../" class="hover:text-amber-600">Home</a> / <a href="../../tools/rto-tax" class="hover:text-amber-600">RTO Tax</a> / <a href="../" class="hover:text-amber-600">All States</a> / <span class="text-stone-900">Haryana</span>
     </nav>
 
     <h1 class="text-3xl font-bold text-stone-900 mb-2">RTO Tax Calculator Haryana 2026</h1>
     <p class="text-stone-500 mb-8">Calculate road tax, registration charges, and on-road price for vehicles in Haryana. Updated for 2026.</p>
 
-    
-    <div class="compare-box">
-      <h3>🔗 Compare with Neighboring States</h3>
-      <div class="neighbor-states">
-        <a href="../punjab.html" class="neighbor-link no-underline" title="Compare with Punjab">Punjab</a><a href="../himachalpradesh.html" class="neighbor-link no-underline" title="Compare with Himachal Pradesh">Himachal Pradesh</a><a href="../uttarpradesh.html" class="neighbor-link no-underline" title="Compare with Uttar Pradesh">Uttar Pradesh</a><a href="../rajasthan.html" class="neighbor-link no-underline" title="Compare with Rajasthan">Rajasthan</a><a href="../delhi.html" class="neighbor-link no-underline" title="Compare with Delhi (NCT)">Delhi (NCT)</a>
-      </div>
-      <p class="text-xs text-stone-600 mt-2 mb-0">Click any state to compare RTO road tax rates side-by-side.</p>
-    </div>
-    
 
-    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
-      <div id="calc-placeholder" class="text-center py-8">
-        <p class="text-stone-500 mb-4">Use our interactive RTO tax calculator for Haryana</p>
-        <a href="../../../tools/rto-tax?state=haryana" class="btn btn-primary">Open Calculator &rarr;</a>
+    <div class="compare-box">
+      <h2>Check neighboring state rates</h2>
+      <div class="neighbor-states">
+        <a href="punjab" class="neighbor-link">Punjab</a>
+        <a href="himachalpradesh" class="neighbor-link">Himachal Pradesh</a>
+        <a href="uttarpradesh" class="neighbor-link">Uttar Pradesh</a>
+        <a href="rajasthan" class="neighbor-link">Rajasthan</a>
+        <a href="delhi" class="neighbor-link">Delhi (NCT)</a>
       </div>
     </div>
 
     <section class="mb-8">
       <h2 class="text-2xl font-bold text-stone-900 mb-4">Haryana RTO Road Tax Rates 2026</h2>
-      <p class="text-stone-600 mb-4">Estimated range: <strong class="text-stone-900">8-10%</strong> (varies by vehicle type, fuel, price, and category). Use the calculator above for exact figures.</p>
-    </section>
-
-    <section class="mb-8">
-      <h2 class="text-lg font-bold mb-3">All States Quick Access</h2>
-      <div class="flex flex-wrap gap-2">
-<a href="../andhrapradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Andhra Pradesh</span></a>
-<a href="../arunachalpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Arunachal Pradesh</span></a>
-<a href="../assam.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Assam</span></a>
-<a href="../bihar.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Bihar</span></a>
-<a href="../chhattisgarh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Chhattisgarh</span></a>
-<a href="../delhi.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Delhi (NCT)</span></a>
-<a href="../goa.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Goa</span></a>
-<a href="../gujarat.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Gujarat</span></a>
-<a href="../haryana.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs border-amber-400 bg-amber-50 font-medium"><span class="font-medium text-stone-900">Haryana</span></a>
-<a href="../himachalpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Himachal Pradesh</span></a>
-<a href="../jharkhand.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Jharkhand</span></a>
-<a href="../karnataka.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Karnataka</span></a>
-<a href="../kerala.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Kerala</span></a>
-<a href="../madhyapradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Madhya Pradesh</span></a>
-<a href="../maharashtra.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Maharashtra</span></a>
-<a href="../manipur.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Manipur</span></a>
-<a href="../meghalaya.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Meghalaya</span></a>
-<a href="../mizoram.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Mizoram</span></a>
-<a href="../nagaland.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Nagaland</span></a>
-<a href="../odisha.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Odisha</span></a>
-<a href="../punjab.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Punjab</span></a>
-<a href="../rajasthan.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Rajasthan</span></a>
-<a href="../sikkim.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Sikkim</span></a>
-<a href="../tamilnadu.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Tamil Nadu</span></a>
-<a href="../telangana.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Telangana</span></a>
-<a href="../tripura.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Tripura</span></a>
-<a href="../uttarpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Uttar Pradesh</span></a>
-<a href="../uttarakhand.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Uttarakhand</span></a>
-<a href="../westbengal.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">West Bengal</span></a>
+      <div class="overflow-x-auto bg-white rounded-xl border border-stone-200">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-stone-100 text-stone-700">
+              <th class="text-left p-3 font-semibold">Vehicle Type</th>
+              <th class="text-left p-3 font-semibold">Price Range</th>
+              <th class="text-left p-3 font-semibold">Tax Rate</th>
+              <th class="text-left p-3 font-semibold">Reg Fee</th>
+              <th class="text-left p-3 font-semibold">HSRP</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">Petrol/CNG/Petrol Hybrid</td>
+              <td class="p-3">0-₹6 Lakh</td>
+              <td class="p-3">5%</td>
+              <td class="p-3">₹600</td>
+              <td class="p-3">₹400</td>
+            </tr>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">Petrol/CNG/Petrol Hybrid</td>
+              <td class="p-3">₹6-20 Lakh</td>
+              <td class="p-3">8%</td>
+              <td class="p-3">₹600</td>
+              <td class="p-3">₹400</td>
+            </tr>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">Petrol/CNG/Petrol Hybrid</td>
+              <td class="p-3">&gt; ₹20 Lakh</td>
+              <td class="p-3">10%</td>
+              <td class="p-3">₹600</td>
+              <td class="p-3">₹400</td>
+            </tr>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">Diesel</td>
+              <td class="p-3">0-₹6 Lakh</td>
+              <td class="p-3">5%</td>
+              <td class="p-3">₹600</td>
+              <td class="p-3">₹400</td>
+            </tr>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">Diesel</td>
+              <td class="p-3">₹6-20 Lakh</td>
+              <td class="p-3">8%</td>
+              <td class="p-3">₹600</td>
+              <td class="p-3">₹400</td>
+            </tr>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">Diesel</td>
+              <td class="p-3">&gt; ₹20 Lakh</td>
+              <td class="p-3">10%</td>
+              <td class="p-3">₹600</td>
+              <td class="p-3">₹400</td>
+            </tr>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">Electric Vehicle (EV)</td>
+              <td class="p-3">All Prices</td>
+              <td class="p-3">75% Concession</td>
+              <td class="p-3">₹600</td>
+              <td class="p-3">₹400</td>
+            </tr>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">Two-Wheeler &le; ₹2 Lakh</td>
+              <td class="p-3">All</td>
+              <td class="p-3">4%</td>
+              <td class="p-3">₹300</td>
+              <td class="p-3">₹200</td>
+            </tr>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">Two-Wheeler &gt; ₹2 Lakh</td>
+              <td class="p-3">All</td>
+              <td class="p-3">6%</td>
+              <td class="p-3">₹300</td>
+              <td class="p-3">₹200</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
-  </main>
 
-  <section class="ad-slot-footer mb-4" data-ad-slot="footer_main"></section>
+    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
+      <div id="calc-placeholder" class="text-center py-8">
+        <p class="text-stone-500 mb-4">Use our interactive RTO tax calculator for Haryana</p>
+        <a href="../../tools/rto-tax?state=haryana" class="btn btn-primary">Open Calculator &rarr;</a>
+      </div>
+    </div>
+
+    <section class="prose max-w-none mb-8">
+      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Vehicle Registration Process in Haryana</h2>
+      <p>Haryana's vehicle registration is managed by the Haryana Transport Department with RTO offices across all districts including Gurugram (HR-55), Faridabad (HR-51), Panchkula (HR-03), Ambala (HR-01), Karnal (HR-05), Rohtak (HR-10), Hisar (HR-20), and Sonipat (HR-11). Gurugram and Faridabad, being part of the NCR, have additional regulations aligned with Delhi's pollution control measures.</p>
+      <p>The registration process in Haryana follows the national VAHAN framework. New vehicle buyers receive temporary registration from the dealer valid for 30 days. Permanent registration requires submitting Form 20 along with supporting documents at the RTO. Haryana RTOs have implemented online appointment systems to reduce waiting times. Upon verification, a registration number in HR-XX-XXXX format is issued. Vehicles in NCR districts must also comply with the colour-coded sticker system similar to Delhi.</p>
+
+      <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Required Documents for Registration</h3>
+      <ul>
+        <li>Form 20 (duly filled application form)</li>
+        <li>Form 21 (Sale Certificate from authorised dealer)</li>
+        <li>Form 22 (Certificate of Roadworthiness)</li>
+        <li>Insurance Certificate (Third-party or Comprehensive)</li>
+        <li>Address Proof (Aadhaar, Voter ID, Passport, Utility Bill)</li>
+        <li>Identity Proof (Aadhaar, PAN, Driving Licence)</li>
+        <li>Original Invoice and Delivery Challan</li>
+        <li>PUC Certificate</li>
+        <li>HSRP booking receipt</li>
+        <li>Passport-size photographs (2 copies)</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Road Tax Calculation in Haryana</h2>
+      <p>Haryana uses a slab-based road tax system with three price brackets. Vehicles priced up to ₹6 lakh are taxed at 5%, those between ₹6-20 lakh at 8%, and vehicles above ₹20 lakh at 10%. The rates are uniform across petrol, diesel, and CNG vehicles. This slab structure makes Haryana moderately priced for vehicle registration, falling between low-tax states like Goa and high-tax states like Karnataka.</p>
+      <p>For example, a ₹5 lakh car in Haryana costs ₹25,000 in road tax (5%). An ₹8 lakh car costs ₹64,000 (8%). A luxury vehicle priced at ₹30 lakh attracts ₹3,00,000 in tax (10%). The 8% slab covering ₹6-20 lakh covers the vast majority of mainstream cars sold in Haryana, making it the most commonly applicable rate.</p>
+
+      <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">EV Concession in Haryana</h3>
+      <p>Haryana offers a 75% concession on road tax for electric vehicles. Unlike states that offer full exemption, Haryana charges 25% of the applicable road tax for EVs. For example, if a petrol car would normally attract ₹80,000 in road tax, an EV at the same price would pay only ₹20,000. This significant concession is part of the Haryana EV Policy, which also includes incentives for EV manufacturing in the state's industrial belt.</p>
+
+      <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Two-Wheeler Taxation</h3>
+      <p>Two-wheelers in Haryana are taxed at 4% for models under ₹2 lakh and 6% for premium models above ₹2 lakh. Registration fee is ₹300 and HSRP is ₹200. Haryana has a high density of two-wheelers, especially in NCR towns where they serve as convenient commuter vehicles.</p>
+
+          </section>
+
+      <section class="mt-10 max-w-2xl">
+        <h2 class="text-lg font-bold mb-3">FAQs</h2>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>What is the RTO code for Haryana?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">Haryana uses the HR prefix. Major codes include HR-01 (Ambala), HR-03 (Panchkula), HR-05 (Karnal), HR-10 (Rohtak), HR-11 (Sonipat), HR-14 (Jind), HR-20 (Hisar), HR-26 (Panipat), HR-51 (Faridabad), HR-55 (Gurugram), and HR-68 (Rewari).</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>How much is road tax for a ₹10 lakh car in Haryana?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">For a ₹10 lakh car in Haryana, the road tax is 8% amounting to ₹80,000. This applies to all fuel types. Registration (₹600) and HSRP (₹400) are additional.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>Are EVs fully exempt in Haryana?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">No, EVs in Haryana receive a 75% concession on road tax, meaning you pay 25% of the standard rate. This is still a significant saving but not a full exemption like in Delhi or Maharashtra.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>Is the colour-coded sticker required in Haryana NCR?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">Yes, vehicles registered in NCR districts of Haryana (Gurugram, Faridabad, Sonipat, etc.) must affix colour-coded stickers — blue for petrol/CNG and orange for diesel. This is part of the NCR pollution control measures.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>Can I get a Haryana registration if I live in Delhi?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">Technically, you need a Haryana address to register a vehicle there. However, many people with properties or businesses in both states choose to register in Haryana due to lower tax rates compared to Delhi's diesel rates. You must have valid Haryana address proof.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>What is the road tax for used vehicle transfer in Haryana?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">For transferring a used vehicle to Haryana from another state, road tax is calculated on the depreciated value of the vehicle as per Haryana's slab rates. Depreciation is calculated based on the age of the vehicle using standard ICRA depreciation rates.</div>
+        </div>
+      </section>
+  
+    <section class="mt-12">
+      <h2 class="text-lg font-bold mb-3">All States</h2>
+      <div class="states-grid-footer">
+        <a href="andhrapradesh">Andhra Pradesh</a>
+        <a href="arunachalpradesh">Arunachal Pradesh</a>
+        <a href="assam">Assam</a>
+        <a href="bihar">Bihar</a>
+        <a href="chhattisgarh">Chhattisgarh</a>
+        <a href="delhi">Delhi (NCT)</a>
+        <a href="goa">Goa</a>
+        <a href="gujarat">Gujarat</a>
+        <a href="haryana" class="current">Haryana</a>
+        <a href="himachalpradesh">Himachal Pradesh</a>
+        <a href="jharkhand">Jharkhand</a>
+        <a href="karnataka">Karnataka</a>
+        <a href="kerala">Kerala</a>
+        <a href="madhyapradesh">Madhya Pradesh</a>
+        <a href="maharashtra">Maharashtra</a>
+        <a href="manipur">Manipur</a>
+        <a href="meghalaya">Meghalaya</a>
+        <a href="mizoram">Mizoram</a>
+        <a href="nagaland">Nagaland</a>
+        <a href="odisha">Odisha</a>
+        <a href="punjab">Punjab</a>
+        <a href="rajasthan">Rajasthan</a>
+        <a href="sikkim">Sikkim</a>
+        <a href="tamilnadu">Tamil Nadu</a>
+        <a href="telangana">Telangana</a>
+        <a href="tripura">Tripura</a>
+        <a href="uttarpradesh">Uttar Pradesh</a>
+        <a href="uttarakhand">Uttarakhand</a>
+        <a href="westbengal">West Bengal</a>
+      </div>
+    </section>
+</main>
+
+  <ins class="adsbygoogle ad-slot-footer mb-4" style="display:block;min-height:90px" data-ad-client="ca-pub-2207525036040634" data-ad-slot="4037844123" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
   <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
-    <div class="max-w-5xl mx-auto px-4"><span class="text-stone-900 font-semibold">DesiCalc</span> &copy; 2026. Free Indian tax calculators.</div>
+    <div class="max-w-5xl mx-auto px-4">&copy; 2026 DesiCalc. Free Indian tax calculators.</div>
   </footer>
+  <script src="../../assets/js/ad.js"></script>
 </body>
 </html>
