@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stamp Duty Calculator Telangana 2026 | DesiCalc</title>
-  <meta name="description" content="Calculate stamp duty and registration charges for property in Telangana. Male 6%, Female 5%, Joint 5.5%. Registration 1%. Free calculator.">
-  <link rel="canonical" href="https://desicalc.in/programmatic/stamp-duty/telangana">
+  <meta name="description" content="Calculate stamp duty and registration charges for property in Telangana. Male 5%, Female 4%, Joint 4-5%, Reg 1%. Updated 2026 rates. Free calculator.">
+  <link rel="canonical" href="https://desicalc.in/programmatic/stamp-duty/telangana" />
+  <link rel="alternate" hreflang="en" href="https://desicalc.in/programmatic/stamp-duty/telangana" />
+  <link rel="alternate" hreflang="x-default" href="https://desicalc.in/programmatic/stamp-duty/telangana" />
   <meta property="og:title" content="Stamp Duty Calculator Telangana 2026 | DesiCalc">
-  <meta property="og:description" content="Calculate stamp duty in Telangana. Male 6%, Female 5%, Joint 5.5%. Free online calculator.">
+  <meta property="og:description" content="Calculate stamp duty in Telangana. Male 5%, Female 4%, Joint 4-5%, Reg 1%. Free online calculator.">
   <meta property="og:url" content="https://desicalc.in/programmatic/stamp-duty/telangana">
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://desicalc.in/assets/img/og-stamp-duty.png">
@@ -20,11 +22,11 @@
     "@context": "https://schema.org",
     "@type": ["WebApplication", "SoftwareApplication"],
     "name": "Stamp Duty Calculator Telangana",
-    "url": "https://desicalc.in/programmatic/stamp-duty/telangana",
+    "url": "https://desicalc.in/tools/stamp-duty?state=telangana",
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "All",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-    "description": "Free stamp duty calculator for Telangana property registration. Calculate stamp duty rates, registration charges, female concession, circle rate."
+    "description": "Free stamp duty calculator for Telangana property registration."
   }
   </script>
   <script type="application/ld+json">
@@ -41,50 +43,106 @@
   </script>
   <link rel="stylesheet" href="../../assets/css/tailwind.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
+  <script src="../../assets/js/common.js"></script>
   <script src="../../assets/js/calc-core.js"></script>
-  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
-  <link rel="icon" href="/favicon.ico" sizes="48x48">
-  <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does Telangana's Dharani portal simplify property registration?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Dharani portal is an integrated land records management system that combines registration, mutation, and land record maintenance into a single platform. It provides a transparent and efficient process where buyers can verify land titles, check encumbrances, pay stamp duty, and track registration status online. The system has significantly reduced fraudulent transactions and title disputes in Telangana."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the stamp duty rate for women in Telangana?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Women in Telangana pay a reduced stamp duty of 4% compared to 5% for men. This 1% concession is applicable to sole female ownership and joint ownership where all co-owners are female. Mixed-gender joint ownership is charged at 4.5%. On a Rs 60 lakh property, a woman saves Rs 60,000 compared to a male buyer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the market value (guideline value) in Telangana?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The market value, also known as the guideline value or circle rate, is the minimum value set by the Telangana government for property transactions in different areas. It is updated periodically and varies by location, property type, and land use. Stamp duty is calculated on the higher of the market value or the actual sale consideration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there any additional charges in Telangana beyond stamp duty and registration?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, Telangana does not impose any additional surcharges or cesses on property registration. The total cost is simply the applicable stamp duty rate plus the 1% registration fee. This makes Telangana one of the most cost-effective states for property registration among major Indian states."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I complete the entire property registration online in Telangana?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Telangana has one of the most advanced online property registration systems in India. While online appointment scheduling, stamp duty payment, and document verification can be done online, physical presence at the Sub-Registrar office is still required for the final registration and biometric verification. The Dharani portal allows you to track the status of your application throughout the process."
+      }
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="DesiCalc" />
+  <link rel="manifest" href="/site.webmanifest" />
+
   <style>
-    .neighbor-states { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
-    .neighbor-link { display: inline-flex; align-items: center; padding: 0.35rem 0.75rem; background: white; border: 1px solid #e7e5e4; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #78716c; transition: all 0.2s; }
+    .neighbor-states { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.75rem 0; }
+    .neighbor-link { display: inline-flex; align-items: center; padding: 0.35rem 0.75rem; background: white; border: 1px solid #e7e5e4; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #78716c; transition: all 0.2s; text-decoration: none; }
     .neighbor-link:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .neighbor-link.current { border-color: #f59e0b; background: #fffbeb; color: #92400e; }
     .compare-box { background: #fefce8; border: 1px solid #fde047; border-radius: 12px; padding: 1rem; margin: 1.5rem 0; }
-    .compare-box h3 { font-size: 0.875rem; font-weight: 600; color: #92400e; margin-bottom: 0.5rem; }
+    .compare-box h2 { font-size: 0.875rem; font-weight: 600; color: #92400e; margin-bottom: 0.75rem; }
+    .states-grid-footer { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .states-grid-footer a { display: inline-block; padding: 0.2rem 0.55rem; background: white; border: 1px solid #e7e5e4; border-radius: 4px; font-size: 0.7rem; color: #78716c; text-decoration: none; transition: all 0.15s; }
+    .states-grid-footer a:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .states-grid-footer a.current { border-color: #f59e0b; background: #fefce8; color: #92400e; font-weight: 600; }
   </style>
 </head>
 <body class="bg-stone-50">
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
     <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
-      <a href="../../../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
+      <a href="../../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
     </div>
   </header>
 
   <main class="max-w-4xl mx-auto px-4 py-8">
     <nav class="text-sm text-stone-500 mb-4">
-      <a href="../../../" class="hover:text-amber-600">Home</a> / 
-      <a href="../../../tools/stamp-duty" class="hover:text-amber-600">Stamp Duty</a> / 
-      <a href="../" class="hover:text-amber-600">All States</a> / 
-      <span class="text-stone-900">Telangana</span>
+      <a href="../../" class="hover:text-amber-600">Home</a> / <a href="../../tools/stamp-duty" class="hover:text-amber-600">Stamp Duty</a> / <a href="../" class="hover:text-amber-600">All States</a> / <span class="text-stone-900">Telangana</span>
     </nav>
 
     <h1 class="text-3xl font-bold text-stone-900 mb-2">Stamp Duty Calculator Telangana 2026</h1>
     <p class="text-stone-500 mb-8">Calculate property registration charges, stamp duty rates, and total cost for buying property in Telangana. Updated for 2026.</p>
 
-    
-    <div class="compare-box">
-      <h3>🔗 Compare with Neighboring States</h3>
-      <div class="neighbor-states">
-        <a href="../andhrapradesh.html" class="neighbor-link no-underline" title="Compare with Andhra Pradesh">Andhra Pradesh</a><a href="../karnataka.html" class="neighbor-link no-underline" title="Compare with Karnataka">Karnataka</a><a href="../maharashtra.html" class="neighbor-link no-underline" title="Compare with Maharashtra">Maharashtra</a><a href="../chhattisgarh.html" class="neighbor-link no-underline" title="Compare with Chhattisgarh">Chhattisgarh</a><a href="../odisha.html" class="neighbor-link no-underline" title="Compare with Odisha">Odisha</a>
-      </div>
-      <p class="text-xs text-stone-600 mt-2 mb-0">Click any state to compare stamp duty rates side-by-side.</p>
-    </div>
-    
 
-    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
+    <div class="compare-box">
+      <h2>Check neighboring state rates</h2>
+      <div class="neighbor-states">
+        <a href="andhrapradesh" class="neighbor-link">Andhra Pradesh</a>
+        <a href="karnataka" class="neighbor-link">Karnataka</a>
+        <a href="maharashtra" class="neighbor-link">Maharashtra</a>
+        <a href="chhattisgarh" class="neighbor-link">Chhattisgarh</a>
+        <a href="odisha" class="neighbor-link">Odisha</a>
+      </div>
+    </div>    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
       <div id="calc-placeholder" class="text-center py-8">
         <p class="text-stone-500 mb-4">Use our interactive calculator for Telangana</p>
-        <a href="../../../tools/stamp-duty?state=telangana" class="btn btn-primary">Open Calculator</a>
+        <a href="../../tools/stamp-duty?state=telangana" class="btn btn-primary">Open Calculator →</a>
       </div>
     </div>
 
@@ -94,83 +152,132 @@
         <table class="w-full text-sm">
           <thead>
             <tr class="bg-stone-100 border-b border-stone-200">
-              <th class="text-left p-3 font-semibold text-stone-900">Category</th>
-              <th class="text-left p-3 font-semibold text-stone-900">Stamp Duty Rate</th>
-              <th class="text-left p-3 font-semibold text-stone-900">Registration Charge</th>
-              <th class="text-left p-3 font-semibold text-stone-900">Total Cost</th>
+              <th class="p-3 font-semibold text-stone-900">Category</th>
+              <th class="p-3 font-semibold text-stone-900">Stamp Duty Rate</th>
+              <th class="p-3 font-semibold text-stone-900">Registration Charge</th>
+              <th class="p-3 font-semibold text-stone-900">Total Cost</th>
             </tr>
           </thead>
           <tbody>
-            <tr class="border-b border-stone-100">
-              <td class="p-3 text-stone-900">Male (individual)</td>
-              <td class="p-3 text-stone-900">6%</td>
-              <td class="p-3 text-stone-900">1%</td>
-              <td class="p-3 text-stone-900 font-medium">8%</td>
+            <tr class="border-b border-stone-200">
+              <td class="p-3">Male</td>
+              <td class="p-3">5%</td>
+              <td class="p-3">1%</td>
+              <td class="p-3">6%</td>
             </tr>
-            <tr class="border-b border-stone-100">
-              <td class="p-3 text-stone-900">Female (individual)</td>
-              <td class="p-3 text-stone-900">5%</td>
-              <td class="p-3 text-stone-900">1%</td>
-              <td class="p-3 text-stone-900 font-medium">6%</td>
+            <tr class="border-b border-stone-200">
+              <td class="p-3">Female</td>
+              <td class="p-3">4%</td>
+              <td class="p-3">1%</td>
+              <td class="p-3">5%</td>
             </tr>
-            <tr class="border-b border-stone-100">
-              <td class="p-3 text-stone-900">Joint - Both Female</td>
-              <td class="p-3 text-stone-900">5.5%</td>
-              <td class="p-3 text-stone-900">1%</td>
-              <td class="p-3 text-stone-900 font-medium">6.5%</td>
+            <tr class="border-b border-stone-200">
+              <td class="p-3">Joint (Both Female)</td>
+              <td class="p-3">4%</td>
+              <td class="p-3">1%</td>
+              <td class="p-3">5%</td>
             </tr>
-            <tr class="border-b border-stone-100">
-              <td class="p-3 text-stone-900">Joint - Both Male</td>
-              <td class="p-3 text-stone-900">6%</td>
-              <td class="p-3 text-stone-900">1%</td>
-              <td class="p-3 text-stone-900 font-medium">7%</td>
+            <tr class="border-b border-stone-200">
+              <td class="p-3">Joint (Both Male)</td>
+              <td class="p-3">5%</td>
+              <td class="p-3">1%</td>
+              <td class="p-3">6%</td>
             </tr>
-            <tr class="border-b border-stone-100">
-              <td class="p-3 text-stone-900">Joint - Male + Female</td>
-              <td class="p-3 text-stone-900">5.5%</td>
-              <td class="p-3 text-stone-900">1%</td>
-              <td class="p-3 text-stone-900 font-medium">6.5%</td>
+            <tr class="border-b border-stone-200">
+              <td class="p-3">Joint (Male + Female)</td>
+              <td class="p-3">4.5%</td>
+              <td class="p-3">1%</td>
+              <td class="p-3">5.5%</td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <section class="mb-8">
-      <h2 class="text-lg font-bold mb-3">All States Quick Access</h2>
-      <div class="flex flex-wrap gap-2">
-<a href="../andhrapradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Andhra Pradesh</span></a>
-<a href="../arunachalpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Arunachal Pradesh</span></a>
-<a href="../assam.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Assam</span></a>
-<a href="../bihar.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Bihar</span></a>
-<a href="../chhattisgarh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Chhattisgarh</span></a>
-<a href="../delhi.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Delhi (NCT)</span></a>
-<a href="../goa.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Goa</span></a>
-<a href="../gujarat.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Gujarat</span></a>
-<a href="../haryana.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Haryana</span></a>
-<a href="../himachalpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Himachal Pradesh</span></a>
-<a href="../jharkhand.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Jharkhand</span></a>
-<a href="../karnataka.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Karnataka</span></a>
-<a href="../kerala.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Kerala</span></a>
-<a href="../madhyapradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Madhya Pradesh</span></a>
-<a href="../maharashtra.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Maharashtra</span></a>
-<a href="../manipur.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Manipur</span></a>
-<a href="../meghalaya.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Meghalaya</span></a>
-<a href="../mizoram.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Mizoram</span></a>
-<a href="../nagaland.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Nagaland</span></a>
-<a href="../odisha.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Odisha</span></a>
-<a href="../punjab.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Punjab</span></a>
-<a href="../rajasthan.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Rajasthan</span></a>
-<a href="../sikkim.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Sikkim</span></a>
-<a href="../tamilnadu.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Tamil Nadu</span></a>
-<a href="../telangana.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs border-amber-400 bg-amber-50 font-medium"><span class="font-medium text-stone-900">Telangana</span></a>
-<a href="../tripura.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Tripura</span></a>
-<a href="../uttarpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Uttar Pradesh</span></a>
-<a href="../uttarakhand.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Uttarakhand</span></a>
-<a href="../westbengal.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">West Bengal</span></a>
+    <section class="prose max-w-none mb-8">
+      <h2 class="text-2xl font-bold text-stone-900">Telangana Property Market Overview</h2>
+      <p>Telangana, India's youngest state formed in 2014, has a rapidly growing real estate market centered around its capital Hyderabad, which is one of India's premier IT and pharmaceutical hubs. Hyderabad's real estate market has seen explosive growth, particularly in areas like HITEC City, Gachibowli, Madhapur, and the western corridor. The city is known for its affordable property prices compared to other metro cities like Mumbai, Delhi, and Bengaluru, while offering excellent infrastructure and connectivity. Other emerging cities in Telangana include Warangal, Nizamabad, and Karimnagar. The Telangana government has been proactive in real estate reforms, including the Dharani portal for integrated land management.</p>
+
+      <h2 class="text-2xl font-bold text-stone-900">How Stamp Duty is Calculated in Telangana</h2>
+      <p>Stamp duty in Telangana is calculated on the higher of the market value (guideline value) or the actual sale consideration. The state offers a 1% concession for women, with female buyers paying 4% compared to 5% for men. Joint ownership rates range from 4% to 5% based on gender composition. A 1% registration fee applies. Telangana does not levy additional surcharges on property registration. The total cost is the sum of stamp duty and registration fee, making Telangana one of the more affordable states for property registration. The state also has a relatively low stamp duty rate for a metro region, contributing to Hyderabad's attractiveness for property investment.</p>
+
+      <h2 class="text-2xl font-bold text-stone-900">Property Registration Process in Telangana</h2>
+      <p>Telangana has implemented a fully integrated online system for property registration through the Dharani portal and the MeeSeva platform. The process begins with online payment of stamp duty through e-stamping or franking. The parties appear at the Sub-Registrar office for the registration, where biometric verification is conducted. Telangana's Dharani platform integrates land records, registration, and mutation into a single system, significantly reducing the time and complexity of property transactions. The entire process, including mutation, can be completed within 7 to 14 working days. The state has also implemented the use of e-signatures for certain documents to reduce paperwork.</p>
+
+      <h2 class="text-2xl font-bold text-stone-900">Required Documents for Registration</h2>
+      <ul>
+        <li>Sale deed on e-stamp paper</li>
+        <li>Previous title deed and ownership chain documents</li>
+        <li>Encumbrance certificate for the last 13 years</li>
+        <li>Patta passbook or Dharani record of rights</li>
+        <li>Latest tax receipts and dues clearance</li>
+        <li>Approved layout or building plan</li>
+        <li>Aadhaar card, PAN card, and Voter ID of all parties</li>
+        <li>Passport-size photographs</li>
+        <li>NOC from the relevant authority if required</li>
+      </ul>
+
+          </section>
+
+      <section class="mt-10 max-w-2xl">
+        <h2 class="text-lg font-bold mb-3">FAQs</h2>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>How does Telangana's Dharani portal simplify property registration?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">The Dharani portal is an integrated land records management system that combines registration, mutation, and land record maintenance into a single platform. It provides a transparent and efficient process where buyers can verify land titles, check encumbrances, pay stamp duty, and track registration status online. The system has significantly reduced fraudulent transactions and title disputes in Telangana.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>What is the stamp duty rate for women in Telangana?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">Women in Telangana pay a reduced stamp duty of 4% compared to 5% for men. This 1% concession is applicable to sole female ownership and joint ownership where all co-owners are female. Mixed-gender joint ownership is charged at 4.5%. On a Rs 60 lakh property, a woman saves Rs 60,000 compared to a male buyer.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>What is the market value (guideline value) in Telangana?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">The market value, also known as the guideline value or circle rate, is the minimum value set by the Telangana government for property transactions in different areas. It is updated periodically and varies by location, property type, and land use. Stamp duty is calculated on the higher of the market value or the actual sale consideration.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>Are there any additional charges in Telangana beyond stamp duty and registration?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">No, Telangana does not impose any additional surcharges or cesses on property registration. The total cost is simply the applicable stamp duty rate plus the 1% registration fee. This makes Telangana one of the most cost-effective states for property registration among major Indian states.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>Can I complete the entire property registration online in Telangana?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">Telangana has one of the most advanced online property registration systems in India. While online appointment scheduling, stamp duty payment, and document verification can be done online, physical presence at the Sub-Registrar office is still required for the final registration and biometric verification. The Dharani portal allows you to track the status of your application throughout the process.</div>
+        </div>
+      </section>
+  
+    <section class="mt-12">
+      <h2 class="text-lg font-bold mb-3">All States</h2>
+      <div class="states-grid-footer">
+        <a href="andhrapradesh">Andhra Pradesh</a>
+        <a href="arunachalpradesh">Arunachal Pradesh</a>
+        <a href="assam">Assam</a>
+        <a href="bihar">Bihar</a>
+        <a href="chhattisgarh">Chhattisgarh</a>
+        <a href="delhi">Delhi (NCT)</a>
+        <a href="goa">Goa</a>
+        <a href="gujarat">Gujarat</a>
+        <a href="haryana">Haryana</a>
+        <a href="himachalpradesh">Himachal Pradesh</a>
+        <a href="jharkhand">Jharkhand</a>
+        <a href="karnataka">Karnataka</a>
+        <a href="kerala">Kerala</a>
+        <a href="madhyapradesh">Madhya Pradesh</a>
+        <a href="maharashtra">Maharashtra</a>
+        <a href="manipur">Manipur</a>
+        <a href="meghalaya">Meghalaya</a>
+        <a href="mizoram">Mizoram</a>
+        <a href="nagaland">Nagaland</a>
+        <a href="odisha">Odisha</a>
+        <a href="punjab">Punjab</a>
+        <a href="rajasthan">Rajasthan</a>
+        <a href="sikkim">Sikkim</a>
+        <a href="tamilnadu">Tamil Nadu</a>
+        <a href="telangana" class="current">Telangana</a>
+        <a href="tripura">Tripura</a>
+        <a href="uttarpradesh">Uttar Pradesh</a>
+        <a href="uttarakhand">Uttarakhand</a>
+        <a href="westbengal">West Bengal</a>
       </div>
     </section>
-  </main>
+</main>
 
   <section class="ad-slot-footer mb-4" data-ad-slot="footer_main"></section>
 
