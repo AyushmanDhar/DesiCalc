@@ -8,7 +8,6 @@ const STATIC_ASSETS = [
   '/assets/js/lang-hi.js',
   '/assets/js/slabs-2026.js',
   '/assets/js/state-rates.js',
-  '/assets/js/ad.js',
   '/assets/img/og-home.png',
   '/assets/img/og-tax-calculator.png',
   '/assets/img/og-stamp-duty.png',
