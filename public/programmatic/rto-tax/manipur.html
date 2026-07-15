@@ -5,11 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RTO Tax Calculator Manipur 2026 | DesiCalc</title>
   <meta name="description" content="Calculate RTO road tax and registration charges for vehicles in Manipur. Car, bike, EV, commercial rates. Updated 2026.">
-  <link rel="canonical" href="https://desicalc.in/programmatic/rto-tax/manipur" />
-  <link rel="alternate" hreflang="en" href="https://desicalc.in/programmatic/rto-tax/manipur" />
-  <link rel="alternate" hreflang="x-default" href="https://desicalc.in/programmatic/rto-tax/manipur" />
+  <link rel="canonical" href="https://desicalc.in/programmatic/rto-tax/manipur">
   <meta property="og:title" content="RTO Tax Calculator Manipur 2026 | DesiCalc">
-  <meta property="og:description" content="Calculate RTO road tax in Manipur. Free online calculator.">
+  <meta property="og:description" content="Calculate RTO road tax in Manipur. Car, bike, EV rates. Free calculator.">
   <meta property="og:url" content="https://desicalc.in/programmatic/rto-tax/manipur">
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://desicalc.in/assets/img/og-rto-tax.png">
@@ -22,11 +20,11 @@
     "@context": "https://schema.org",
     "@type": ["WebApplication", "SoftwareApplication"],
     "name": "RTO Tax Calculator Manipur",
-    "url": "https://desicalc.in/tools/rto-tax?state=manipur",
+    "url": "https://desicalc.in/programmatic/rto-tax/manipur",
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "All",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-    "description": "Free RTO road tax calculator for Manipur."
+    "description": "Free RTO road tax calculator for Manipur. Calculate life tax, registration, HSRP."
   }
   </script>
   <script type="application/ld+json">
@@ -43,206 +41,98 @@
   </script>
   <link rel="stylesheet" href="../../assets/css/tailwind.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
-  <script src="../../assets/js/common.js"></script>
   <script src="../../assets/js/calc-core.js"></script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Can I get a permanent registration number immediately in Manipur?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No, temporary registration is valid for one month. Permanent registration is issued after the RTO verifies all documents and completes the vehicle inspection."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is road tax refundable if I sell my vehicle?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Road tax paid in Manipur is generally non-refundable and non-transferable, though the vehicle can be re-registered in a new owner's name with a fresh tax payment as applicable."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do electric vehicles need to pay any road tax?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No, EVs are fully exempt from road tax in Manipur as of 2026. Only the registration fee and HSRP charges apply."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the validity of registration in Manipur?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Private vehicle registration is valid for 15 years from the date of issue. After that, renewal is required every five years."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Are there any concessions for hill area vehicles?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Currently, there are no special concessions for hill area vehicles in Manipur. All vehicles are taxed at the same flat rate regardless of the district of registration."
-      }
-    }
-  ]
-}
-  </script>
-
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-title" content="DesiCalc" />
-  <link rel="manifest" href="/site.webmanifest" />
-
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
   <style>
-    .neighbor-states { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.75rem 0; }
-    .neighbor-link { display: inline-flex; align-items: center; padding: 0.35rem 0.75rem; background: white; border: 1px solid #e7e5e4; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #78716c; transition: all 0.2s; text-decoration: none; }
+    .neighbor-states { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+    .neighbor-link { display: inline-flex; align-items: center; padding: 0.35rem 0.75rem; background: white; border: 1px solid #e7e5e4; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #78716c; transition: all 0.2s; }
     .neighbor-link:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
-    .neighbor-link.current { border-color: #f59e0b; background: #fffbeb; color: #92400e; }
     .compare-box { background: #fefce8; border: 1px solid #fde047; border-radius: 12px; padding: 1rem; margin: 1.5rem 0; }
-    .compare-box h2 { font-size: 0.875rem; font-weight: 600; color: #92400e; margin-bottom: 0.75rem; }
-    .states-grid-footer { display: flex; flex-wrap: wrap; gap: 0.35rem; }
-    .states-grid-footer a { display: inline-block; padding: 0.2rem 0.55rem; background: white; border: 1px solid #e7e5e4; border-radius: 4px; font-size: 0.7rem; color: #78716c; text-decoration: none; transition: all 0.15s; }
-    .states-grid-footer a:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
-    .states-grid-footer a.current { border-color: #f59e0b; background: #fefce8; color: #92400e; font-weight: 600; }
+    .compare-box h3 { font-size: 0.875rem; font-weight: 600; color: #92400e; margin-bottom: 0.5rem; }
   </style>
 </head>
 <body class="bg-stone-50">
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
     <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
-      <a href="../../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
+      <a href="../../../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
     </div>
   </header>
 
   <main class="max-w-4xl mx-auto px-4 py-8">
     <nav class="text-sm text-stone-500 mb-4">
-      <a href="../../" class="hover:text-amber-600">Home</a> / <a href="../../tools/rto-tax" class="hover:text-amber-600">RTO Tax</a> / <a href="../" class="hover:text-amber-600">All States</a> / <span class="text-stone-900">Manipur</span>
+      <a href="../../../" class="hover:text-amber-600">Home</a> / 
+      <a href="../../../tools/rto-tax" class="hover:text-amber-600">RTO Tax</a> / 
+      <a href="../" class="hover:text-amber-600">All States</a> / 
+      <span class="text-stone-900">Manipur</span>
     </nav>
 
     <h1 class="text-3xl font-bold text-stone-900 mb-2">RTO Tax Calculator Manipur 2026</h1>
-    <p class="text-stone-500 mb-8">Calculate road tax, registration charges, and on-road price for vehicles in Manipur.</p>
+    <p class="text-stone-500 mb-8">Calculate road tax, registration charges, and on-road price for vehicles in Manipur. Updated for 2026.</p>
 
-
+    
     <div class="compare-box">
-      <h2>Check neighboring state rates</h2>
+      <h3>🔗 Compare with Neighboring States</h3>
       <div class="neighbor-states">
-        <a href="assam" class="neighbor-link">Assam</a>
-        <a href="nagaland" class="neighbor-link">Nagaland</a>
-        <a href="mizoram" class="neighbor-link">Mizoram</a>
+        <a href="../assam.html" class="neighbor-link no-underline" title="Compare with Assam">Assam</a><a href="../nagaland.html" class="neighbor-link no-underline" title="Compare with Nagaland">Nagaland</a><a href="../mizoram.html" class="neighbor-link no-underline" title="Compare with Mizoram">Mizoram</a>
       </div>
-    </div>    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
+      <p class="text-xs text-stone-600 mt-2 mb-0">Click any state to compare RTO road tax rates side-by-side.</p>
+    </div>
+    
+
+    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
       <div id="calc-placeholder" class="text-center py-8">
         <p class="text-stone-500 mb-4">Use our interactive RTO tax calculator for Manipur</p>
-        <a href="../../tools/rto-tax?state=manipur" class="btn btn-primary">Open Calculator &rarr;</a>
+        <a href="../../../tools/rto-tax?state=manipur" class="btn btn-primary">Open Calculator &rarr;</a>
       </div>
     </div>
 
     <section class="mb-8">
       <h2 class="text-2xl font-bold text-stone-900 mb-4">Manipur RTO Road Tax Rates 2026</h2>
-      <div class="overflow-x-auto bg-white rounded-xl border border-stone-200">
-        <table class="w-full text-sm">
-          <thead><tr class="bg-stone-100 border-b border-stone-200"><th class="text-left p-3 font-semibold text-stone-900">Vehicle Type</th><th class="text-left p-3 font-semibold text-stone-900">Road Tax Rate</th><th class="text-left p-3 font-semibold text-stone-900">Registration Fee</th><th class="text-left p-3 font-semibold text-stone-900">HSRP</th></tr></thead>
-          <tbody>
-            <tr class="border-b border-stone-100"><td class="p-3">Petrol Vehicles</td><td class="p-3">5% of ex-showroom price</td><td class="p-3">₹600</td><td class="p-3">₹400</td></tr>
-            <tr class="border-b border-stone-100"><td class="p-3">Diesel Vehicles</td><td class="p-3">6% of ex-showroom price</td><td class="p-3">₹600</td><td class="p-3">₹400</td></tr>
-            <tr class="border-b border-stone-100"><td class="p-3">CNG Vehicles</td><td class="p-3">5% of ex-showroom price</td><td class="p-3">₹600</td><td class="p-3">₹400</td></tr>
-            <tr class="border-b border-stone-100"><td class="p-3">Electric Vehicles (EV)</td><td class="p-3">Exempt (0%)</td><td class="p-3">₹600</td><td class="p-3">₹400</td></tr>
-            <tr><td class="p-3">Commercial Vehicles</td><td class="p-3">6% of ex-showroom price</td><td class="p-3">₹600</td><td class="p-3">₹400</td></tr>
-          </tbody>
-        </table>
-      </div>
+      <p class="text-stone-600 mb-4">Estimated range: <strong class="text-stone-900">6-8%</strong> (varies by vehicle type, fuel, price, and category). Use the calculator above for exact figures.</p>
     </section>
 
-    <section class="prose max-w-none mb-8">
-      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Vehicle Registration Process in Manipur</h2>
-      <p>Manipur, the jewel of northeast India, has its vehicle registration system managed by the Manipur Transport Department under the Motor Vehicles Act, 1988. The state has Regional Transport Offices (RTOs) located in Imphal, Bishnupur, Thoubal, Churachandpur, Senapati, Ukhrul, Tamenglong, and Chandel. The Imphal RTO handles the highest volume of registrations given the state capital's concentrated population. Vehicle owners in Manipur must register their vehicles at the RTO within their jurisdiction, typically within seven days of purchase. The process involves submitting Form 20 along with supporting documents, undergoing a vehicle inspection conducted by the Motor Vehicle Inspector (MVI), and paying the applicable road tax and registration fees at the designated treasury or through the online portal.</p>
-
-      <p>Manipur's unique geography — encompassing the Imphal valley and surrounding hill districts — influences vehicle preferences significantly. In the valley regions, passenger cars and two-wheelers dominate, while in hill districts like Ukhrul and Tamenglong, SUVs and rugged vehicles are preferred due to challenging road conditions. All new vehicles in Manipur must also be fitted with High-Security Registration Plates (HSRP), which cost ₹400 and are mandatory across the state. The HSRP installation is typically done at the dealer level or at authorised HSRP fitting centres recognised by the state transport department.</p>
-
-      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">How Road Tax Is Calculated in Manipur</h2>
-      <p>Manipur follows a flat-rate road tax structure, meaning the tax is a fixed percentage of the vehicle's ex-showroom price regardless of the vehicle's cost bracket. For petrol and CNG vehicles, the road tax is set at 5% of the ex-showroom price. Diesel vehicles are taxed slightly higher at 6%, reflecting the central government's policy of discouraging diesel usage due to its higher emission levels. Electric vehicles enjoy a full road tax exemption at 0%, making Manipur an attractive destination for EV adoption. Commercial vehicles, including goods carriers and passenger transport vehicles, are taxed at 6% of the ex-showroom price.</p>
-
-      <p>To calculate the road tax for a petrol car priced at ₹10,00,000 in Manipur, you simply multiply the ex-showroom price by 5%: ₹10,00,000 × 5% = ₹50,000. Add to this the registration fee of ₹600 and HSRP charges of ₹400, bringing the total RTO charges to ₹51,000. For a diesel vehicle of the same price, the tax would be ₹10,00,000 × 6% = ₹60,000, plus ₹600 registration and ₹400 HSRP, totalling ₹61,000. This straightforward calculation makes it easy for buyers to estimate their on-road price before visiting the dealer.</p>
-
-      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Electric Vehicle (EV) Exemption Policy</h2>
-      <p>Manipur has aligned with the central government's FAME II scheme by offering a full road tax exemption for electric vehicles. This means EV buyers in Manipur pay 0% road tax on the ex-showroom price of their electric cars, scooters, or bikes. Only the standard registration fee of ₹600 and HSRP charges of ₹400 apply. This exemption is part of a broader push to encourage zero-emission mobility in the state, which is particularly relevant for Manipur's environmentally sensitive hill ecosystems. The EV exemption applies to all categories of electric vehicles, including two-wheelers, three-wheelers, and four-wheelers.</p>
-
-      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Required Documents for Vehicle Registration</h2>
-      <p>When registering a vehicle in Manipur, the following documents are required: Form 20 (application for registration), Form 21 (sale certificate from the dealer), Form 22 (road worthiness certificate), valid insurance policy, address proof (Aadhaar, Voter ID, Passport, or utility bill), PAN card or Form 60, passport-size photographs, and the temporary registration number (TR) if applicable. All documents must be self-attested and submitted in both original and photocopy form to the concerned RTO.</p>
-
-          </section>
-
-      <section class="mt-10 max-w-2xl">
-        <h2 class="text-lg font-bold mb-3">FAQs</h2>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>Can I get a permanent registration number immediately in Manipur?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">No, temporary registration is valid for one month. Permanent registration is issued after the RTO verifies all documents and completes the vehicle inspection.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>Is road tax refundable if I sell my vehicle?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">Road tax paid in Manipur is generally non-refundable and non-transferable, though the vehicle can be re-registered in a new owner's name with a fresh tax payment as applicable.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>Do electric vehicles need to pay any road tax?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">No, EVs are fully exempt from road tax in Manipur as of 2026. Only the registration fee and HSRP charges apply.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>What is the validity of registration in Manipur?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">Private vehicle registration is valid for 15 years from the date of issue. After that, renewal is required every five years.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>Are there any concessions for hill area vehicles?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">Currently, there are no special concessions for hill area vehicles in Manipur. All vehicles are taxed at the same flat rate regardless of the district of registration.</div>
-        </div>
-      </section>
-  
-    <section class="mt-12">
-      <h2 class="text-lg font-bold mb-3">All States</h2>
-      <div class="states-grid-footer">
-        <a href="andhrapradesh">Andhra Pradesh</a>
-        <a href="arunachalpradesh">Arunachal Pradesh</a>
-        <a href="assam">Assam</a>
-        <a href="bihar">Bihar</a>
-        <a href="chhattisgarh">Chhattisgarh</a>
-        <a href="delhi">Delhi (NCT)</a>
-        <a href="goa">Goa</a>
-        <a href="gujarat">Gujarat</a>
-        <a href="haryana">Haryana</a>
-        <a href="himachalpradesh">Himachal Pradesh</a>
-        <a href="jharkhand">Jharkhand</a>
-        <a href="karnataka">Karnataka</a>
-        <a href="kerala">Kerala</a>
-        <a href="madhyapradesh">Madhya Pradesh</a>
-        <a href="maharashtra">Maharashtra</a>
-        <a href="manipur" class="current">Manipur</a>
-        <a href="meghalaya">Meghalaya</a>
-        <a href="mizoram">Mizoram</a>
-        <a href="nagaland">Nagaland</a>
-        <a href="odisha">Odisha</a>
-        <a href="punjab">Punjab</a>
-        <a href="rajasthan">Rajasthan</a>
-        <a href="sikkim">Sikkim</a>
-        <a href="tamilnadu">Tamil Nadu</a>
-        <a href="telangana">Telangana</a>
-        <a href="tripura">Tripura</a>
-        <a href="uttarpradesh">Uttar Pradesh</a>
-        <a href="uttarakhand">Uttarakhand</a>
-        <a href="westbengal">West Bengal</a>
+    <section class="mb-8">
+      <h2 class="text-lg font-bold mb-3">All States Quick Access</h2>
+      <div class="flex flex-wrap gap-2">
+<a href="../andhrapradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Andhra Pradesh</span></a>
+<a href="../arunachalpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Arunachal Pradesh</span></a>
+<a href="../assam.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Assam</span></a>
+<a href="../bihar.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Bihar</span></a>
+<a href="../chhattisgarh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Chhattisgarh</span></a>
+<a href="../delhi.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Delhi (NCT)</span></a>
+<a href="../goa.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Goa</span></a>
+<a href="../gujarat.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Gujarat</span></a>
+<a href="../haryana.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Haryana</span></a>
+<a href="../himachalpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Himachal Pradesh</span></a>
+<a href="../jharkhand.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Jharkhand</span></a>
+<a href="../karnataka.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Karnataka</span></a>
+<a href="../kerala.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Kerala</span></a>
+<a href="../madhyapradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Madhya Pradesh</span></a>
+<a href="../maharashtra.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Maharashtra</span></a>
+<a href="../manipur.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs border-amber-400 bg-amber-50 font-medium"><span class="font-medium text-stone-900">Manipur</span></a>
+<a href="../meghalaya.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Meghalaya</span></a>
+<a href="../mizoram.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Mizoram</span></a>
+<a href="../nagaland.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Nagaland</span></a>
+<a href="../odisha.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Odisha</span></a>
+<a href="../punjab.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Punjab</span></a>
+<a href="../rajasthan.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Rajasthan</span></a>
+<a href="../sikkim.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Sikkim</span></a>
+<a href="../tamilnadu.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Tamil Nadu</span></a>
+<a href="../telangana.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Telangana</span></a>
+<a href="../tripura.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Tripura</span></a>
+<a href="../uttarpradesh.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Uttar Pradesh</span></a>
+<a href="../uttarakhand.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Uttarakhand</span></a>
+<a href="../westbengal.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">West Bengal</span></a>
       </div>
     </section>
-</main>
+  </main>
 
   <section class="ad-slot-footer mb-4" data-ad-slot="footer_main"></section>
 
   <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
-    <div class="max-w-5xl mx-auto px-4">&copy; 2026 DesiCalc. Free Indian tax calculators.</div>
+    <div class="max-w-5xl mx-auto px-4"><span class="text-stone-900 font-semibold">DesiCalc</span> &copy; 2026. Free Indian tax calculators.</div>
   </footer>
   <script src="../../assets/js/ad.js"></script>
 </body>
