@@ -72,8 +72,8 @@ ${STATES.map((state, i) => `      { "@type": "ListItem", "position": ${i + 1}, "
     ]
   }
   </script>
-  <link rel="stylesheet" href="../../assets/css/tailwind.css">
-  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/tailwind.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
@@ -195,8 +195,8 @@ ${STATES.map((state, i) => `      { "@type": "ListItem", "position": ${i + 1}, "
     ]
   }
   </script>
-  <link rel="stylesheet" href="../../assets/css/tailwind.css">
-  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/tailwind.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
@@ -308,9 +308,9 @@ function generateStampDutyStatePage(slug) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="../../assets/css/tailwind.css">
-  <link rel="stylesheet" href="../../assets/css/style.css">
-  <script src="../../assets/js/calc-core.js"></script>
+  <link rel="stylesheet" href="/assets/css/tailwind.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/calc-core.js"></script>
   <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
@@ -474,9 +474,9 @@ function generateRTOStatePage(slug) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="../../assets/css/tailwind.css">
-  <link rel="stylesheet" href="../../assets/css/style.css">
-  <script src="../../assets/js/calc-core.js"></script>
+  <link rel="stylesheet" href="/assets/css/tailwind.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/calc-core.js"></script>
   <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
