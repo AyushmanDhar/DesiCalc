@@ -352,6 +352,13 @@ function generateStampDutyStatePage(slug) {
     </div>
     ` : ''}
 
+    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
+      <div id="calc-placeholder" class="text-center py-8">
+        <p class="text-stone-500 mb-4">Use our interactive calculator for ${state.name}</p>
+        <a href="../../../tools/stamp-duty?state=${slug}" class="btn btn-primary">Open Calculator</a>
+      </div>
+    </div>
+
     <section class="mb-8">
       <h2 class="text-2xl font-bold text-stone-900 mb-4">${state.name} Stamp Duty Rates 2026</h2>
       <div class="overflow-x-auto bg-white rounded-xl border border-stone-200">
@@ -399,13 +406,6 @@ function generateStampDutyStatePage(slug) {
         </table>
       </div>
     </section>
-
-    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
-      <div id="calc-placeholder" class="text-center py-8">
-        <p class="text-stone-500 mb-4">Use our interactive calculator for ${state.name}</p>
-        <a href="../../../tools/stamp-duty?state=${slug}" class="btn btn-primary">Open Calculator</a>
-      </div>
-    </div>
 
     <section class="mb-8">
       <h2 class="text-lg font-bold mb-3">All States Quick Access</h2>
@@ -519,17 +519,17 @@ function generateRTOStatePage(slug) {
     </div>
     ` : ''}
 
-    <section class="mb-8">
-      <h2 class="text-2xl font-bold text-stone-900 mb-4">${state.name} RTO Road Tax Rates 2026</h2>
-      <p class="text-stone-600 mb-4">Estimated range: <strong class="text-stone-900">${rate}</strong> (varies by vehicle type, fuel, price, and category). Use the calculator above for exact figures.</p>
-    </section>
-
     <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
       <div id="calc-placeholder" class="text-center py-8">
         <p class="text-stone-500 mb-4">Use our interactive RTO tax calculator for ${state.name}</p>
         <a href="../../../tools/rto-tax?state=${slug}" class="btn btn-primary">Open Calculator &rarr;</a>
       </div>
     </div>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold text-stone-900 mb-4">${state.name} RTO Road Tax Rates 2026</h2>
+      <p class="text-stone-600 mb-4">Estimated range: <strong class="text-stone-900">${rate}</strong> (varies by vehicle type, fuel, price, and category). Use the calculator above for exact figures.</p>
+    </section>
 
     <section class="mb-8">
       <h2 class="text-lg font-bold mb-3">All States Quick Access</h2>
