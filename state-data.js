@@ -1,4 +1,6 @@
-// State data for programmatic pages
+// State data reference — no longer used for page generation.
+// State pages in public/stamp-duty/ and public/rto-tax/ are standalone static HTML files.
+// Edit those HTML files directly to update any state's content.
 const STATES = [
   { slug: 'andhrapradesh', name: 'Andhra Pradesh', short: 'AP', region: 'South', neighbors: ['telangana', 'tamilnadu', 'karnataka', 'odisha', 'chhattisgarh'] },
   { slug: 'arunachalpradesh', name: 'Arunachal Pradesh', short: 'AR', region: 'Northeast', neighbors: ['assam', 'nagaland'] },
