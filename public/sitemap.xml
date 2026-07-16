@@ -5,8 +5,8 @@
   <url><loc>https://desicalc.in/tools/stamp-duty</loc><lastmod>2026-04-01</lastmod><priority>1.0</priority></url>
   <url><loc>https://desicalc.in/tools/rto-tax</loc><lastmod>2026-04-01</lastmod><priority>1.0</priority></url>
 
-  <url><loc>https://desicalc.in/stamp-duty/</loc><lastmod>2026-07-11</lastmod><priority>0.9</priority></url>
-  <url><loc>https://desicalc.in/rto-tax/</loc><lastmod>2026-07-11</lastmod><priority>0.9</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/</loc><lastmod>2026-07-11</lastmod><priority>0.9</priority></url>
+  <url><loc>https://desicalc.in/programmatic/rto-tax/</loc><lastmod>2026-07-11</lastmod><priority>0.9</priority></url>
 
   <url><loc>https://desicalc.in/comparisons/old-vs-new-tax-regime</loc><lastmod>2026-04-01</lastmod><priority>0.8</priority></url>
   <url><loc>https://desicalc.in/comparisons/stamp-duty-rates-all-states</loc><lastmod>2026-04-01</lastmod><priority>0.8</priority></url>
@@ -18,65 +18,65 @@
   <url><loc>https://desicalc.in/guides/section-87a-rebate-explained</loc><lastmod>2026-04-01</lastmod><priority>0.8</priority></url>
   <url><loc>https://desicalc.in/guides/capital-gains-tax-changes-2026</loc><lastmod>2026-04-01</lastmod><priority>0.8</priority></url>
 
-  <url><loc>https://desicalc.in/stamp-duty/andhrapradesh</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/stamp-duty/arunachalpradesh</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/stamp-duty/assam</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/stamp-duty/bihar</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/stamp-duty/chhattisgarh</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/stamp-duty/delhi</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/stamp-duty/goa</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/stamp-duty/gujarat</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/stamp-duty/haryana</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/stamp-duty/himachalpradesh</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/stamp-duty/jharkhand</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/stamp-duty/karnataka</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/stamp-duty/kerala</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/stamp-duty/madhyapradesh</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/stamp-duty/maharashtra</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/stamp-duty/manipur</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/stamp-duty/meghalaya</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/stamp-duty/mizoram</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/stamp-duty/nagaland</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/stamp-duty/odisha</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/stamp-duty/punjab</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/stamp-duty/rajasthan</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/stamp-duty/sikkim</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/stamp-duty/tamilnadu</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/stamp-duty/telangana</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/stamp-duty/tripura</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/stamp-duty/uttarpradesh</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/stamp-duty/uttarakhand</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/stamp-duty/westbengal</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/andhrapradesh</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/arunachalpradesh</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/assam</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/bihar</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/chhattisgarh</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/delhi</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/goa</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/gujarat</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/haryana</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/himachalpradesh</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/jharkhand</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/karnataka</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/kerala</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/madhyapradesh</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/maharashtra</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/manipur</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/meghalaya</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/mizoram</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/nagaland</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/odisha</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/punjab</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/rajasthan</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/sikkim</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/tamilnadu</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/telangana</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/tripura</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/uttarpradesh</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/uttarakhand</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/westbengal</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
 
-  <url><loc>https://desicalc.in/rto-tax/andhrapradesh</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/rto-tax/arunachalpradesh</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/rto-tax/assam</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/rto-tax/bihar</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/rto-tax/chhattisgarh</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/rto-tax/delhi</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/rto-tax/goa</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/rto-tax/gujarat</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/rto-tax/haryana</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/rto-tax/himachalpradesh</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/rto-tax/jharkhand</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/rto-tax/karnataka</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/rto-tax/kerala</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/rto-tax/madhyapradesh</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/rto-tax/maharashtra</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/rto-tax/manipur</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/rto-tax/meghalaya</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/rto-tax/mizoram</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/rto-tax/nagaland</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/rto-tax/odisha</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/rto-tax/punjab</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/rto-tax/rajasthan</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/rto-tax/sikkim</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/rto-tax/tamilnadu</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/rto-tax/telangana</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/rto-tax/tripura</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/rto-tax/uttarpradesh</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/rto-tax/uttarakhand</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/rto-tax/westbengal</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/rto-tax/andhrapradesh</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/rto-tax/arunachalpradesh</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/rto-tax/assam</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/rto-tax/bihar</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/rto-tax/chhattisgarh</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/rto-tax/delhi</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/rto-tax/goa</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/rto-tax/gujarat</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/rto-tax/haryana</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/rto-tax/himachalpradesh</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/rto-tax/jharkhand</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/rto-tax/karnataka</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/rto-tax/kerala</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/rto-tax/madhyapradesh</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/rto-tax/maharashtra</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/rto-tax/manipur</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/rto-tax/meghalaya</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/rto-tax/mizoram</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/rto-tax/nagaland</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/rto-tax/odisha</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/rto-tax/punjab</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/rto-tax/rajasthan</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/rto-tax/sikkim</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/rto-tax/tamilnadu</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/rto-tax/telangana</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/rto-tax/tripura</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/rto-tax/uttarpradesh</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/rto-tax/uttarakhand</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/rto-tax/westbengal</loc><lastmod>2026-07-16</lastmod><priority>0.7</priority></url>
 
   <url><loc>https://desicalc.in/about</loc><lastmod>2026-04-01</lastmod><priority>0.5</priority></url>
   <url><loc>https://desicalc.in/privacy</loc><lastmod>2026-04-01</lastmod><priority>0.3</priority></url>

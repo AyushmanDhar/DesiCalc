@@ -16,7 +16,7 @@ const APIS = [
     id: 'stampDuty',
     name: 'Stamp Duty Calculator',
     description: 'Calculate Indian stamp duty rates by state and property value',
-    anchor: 'https://desicalc.in/stamp-duty/{state}',
+    anchor: 'https://desicalc.in/programmatic/stamp-duty/{state}',
     serviceDoc: 'https://desicalc.in/tools/stamp-duty',
     serviceDesc: 'https://desicalc.in/openapi/stamp-duty.json',
     inputSchema: {
@@ -43,7 +43,7 @@ const APIS = [
     id: 'rtoTax',
     name: 'RTO Tax Calculator',
     description: 'Calculate Indian RTO road tax by state and vehicle price',
-    anchor: 'https://desicalc.in/rto-tax/{state}',
+    anchor: 'https://desicalc.in/programmatic/rto-tax/{state}',
     serviceDoc: 'https://desicalc.in/tools/rto-tax',
     serviceDesc: 'https://desicalc.in/openapi/rto-tax.json',
     inputSchema: {

@@ -30,8 +30,7 @@ desicalc/
 │   │   ├── income-tax.html      # Self-contained calculator
 │   │   ├── stamp-duty.html
 │   │   └── rto-tax.html
-│   ├── stamp-duty/              # State-level stamp duty pages (static)
-│   ├── rto-tax/                 # State-level RTO tax pages (static)
+│   ├── programmatic/            # Programmatic state pages
 │   │   ├── stamp-duty/
 │   │   │   ├── maharashtra.html
 │   │   │   ├── karnataka.html

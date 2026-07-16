@@ -91,14 +91,13 @@ Add translations in both files with key prefix `gst.*`:
   - `data-i18n="gst.result.{field}"` on labels
   - Use `staggerReveal('resultBox')` to animate
 
-## Step 4: State-level static pages (if applicable)
+## Step 4: Programmatic state pages (if applicable)
 
-State pages are now **static, standalone HTML files** — no generator dependency.
-
-- [ ] Create `public/gst-calculator/index.html` — All-states index page with state cards
-- [ ] For each state, create `public/gst-calculator/{slug}.html` — Self-contained page with all data hardcoded
-- [ ] Copy structure from an existing stamp-duty state page, swap in GST-specific content
-- [ ] Each page is fully independent — edit any state without affecting others
+- [ ] **`generate-programmatic.js`** — Add `generateGstIndex()`, `generateGstStatePage(slug)` functions following the stamp-duty/rto-tax pattern
+- [ ] **`generate-programmatic.js`** — Add write logic at bottom for `public/programmatic/gst-calculator/` directory
+- [ ] **`surgical-edit.js`** (or inline in generator) — Add neighbor compare box, all-states grid footer, breadcrumb "All States" link
+- [ ] Run generator: `node generate-programmatic.js`
+- [ ] Run surgical edits: `node surgical-edit.js`
 
 ## Step 5: Homepage & navigation
 
@@ -125,7 +124,7 @@ State pages are now **static, standalone HTML files** — no generator dependenc
 ## Step 9: Smoke test
 
 - [ ] Run `npm run generate-discovery` — verify no errors
-- [ ] Open a few state pages in browser — content renders, links work
+- [ ] Run `node generate-programmatic.js` — verify state pages generated (if applicable)
 - [ ] Validate `public/sitemap.xml` — all new URLs present
 - [ ] Validate `public/_headers` — Link header includes new tool
 - [ ] Open tool page in browser — form renders, calculation works, i18n toggle works
@@ -149,6 +148,6 @@ State pages are now **static, standalone HTML files** — no generator dependenc
 | `public/_headers` | Append Link header |
 | `public/sw.js` | Add new assets |
 | `public/assets/img/og-gst-calculator.png` | **Create** OG image |
-| `public/gst-calculator/{slug}.html` | Create per-state page (if state-level) |
+| `generate-programmatic.js` | Add generators (if state-level) |
 | `state-data.js` | Add rates (if state-level) |
 | `public/assets/js/state-rates.js` | Add full data (if state-level) |

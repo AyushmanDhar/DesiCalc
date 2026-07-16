@@ -73,14 +73,14 @@ desicalc.in/
 │   ├── section-87a-rebate-explained
 │   └── capital-gains-tax-changes-2026
 │
-├── /stamp-duty             # 28 state pages (static HTML, editable)
+├── /programmatic/stamp-duty             # 28 state pages (auto-generated template)
 │   ├── maharashtra
 │   ├── karnataka
 │   ├── tamil-nadu
 │   ├── ...
 │   └── uttar-pradesh
 │
-└── /rto-tax                # 28 state pages (static HTML, editable)
+└── /programmatic/rto-tax                # 28 state pages (auto-generated template)
     ├── maharashtra
     ├── karnataka
     ├── tamil-nadu
@@ -90,10 +90,10 @@ desicalc.in/
 
 ### Programmatic Page Pattern
 
-Each `stamp-duty/{state}.html` follows template:
+Each `programmatic/stamp-duty/{state}.html` follows template:
 
 ```html
-<!-- /stamp-duty/maharashtra.html -->
+<!-- /programmatic/stamp-duty/maharashtra.html -->
 <html>
   <head>
     <title>Stamp Duty Calculator Maharashtra 2026 | DesiCalc</title>
@@ -128,7 +128,7 @@ Each `stamp-duty/{state}.html` follows template:
 </html>
 ```
 
-Each state page has 500+ words unique content (rate tables, how-to, FAQ). Pages are standalone static HTML — edit any state directly.
+Each state page has 500+ words unique content (rate tables, how-to, FAQ). Generated programmatically from `state-rates.js` data + templates.
 
 ---
 
@@ -275,8 +275,8 @@ Each state page has 500+ words unique content (rate tables, how-to, FAQ). Pages 
   <url><loc>https://desicalc.in/comparisons/stamp-duty-rates-all-states</loc><priority>0.8</priority></url>
 
   <!-- Programmatic state pages -->
-  <url><loc>https://desicalc.in/stamp-duty/maharashtra</loc><priority>0.7</priority></url>
-  <url><loc>https://desicalc.in/stamp-duty/karnataka</loc><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/maharashtra</loc><priority>0.7</priority></url>
+  <url><loc>https://desicalc.in/programmatic/stamp-duty/karnataka</loc><priority>0.7</priority></url>
   <!-- ... 54 more -->
 </urlset>
 ```

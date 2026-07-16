@@ -1,7 +1,7 @@
 {
   "linkset": [
     {
-      "anchor": "https://desicalc.in/stamp-duty/{state}",
+      "anchor": "https://desicalc.in/programmatic/stamp-duty/{state}",
       "service-desc": [
         {
           "href": "https://desicalc.in/openapi/stamp-duty.json",
@@ -22,7 +22,7 @@
       ]
     },
     {
-      "anchor": "https://desicalc.in/rto-tax/{state}",
+      "anchor": "https://desicalc.in/programmatic/rto-tax/{state}",
       "service-desc": [
         {
           "href": "https://desicalc.in/openapi/rto-tax.json",

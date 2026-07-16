@@ -9,7 +9,7 @@
     "stampDuty": {
       "name": "Stamp Duty Calculator",
       "description": "Calculate Indian stamp duty rates by state and property value",
-      "url": "https://desicalc.in/stamp-duty/{state}",
+      "url": "https://desicalc.in/programmatic/stamp-duty/{state}",
       "inputSchema": {
         "type": "object",
         "properties": {
@@ -64,7 +64,7 @@
     "rtoTax": {
       "name": "RTO Tax Calculator",
       "description": "Calculate Indian RTO road tax by state and vehicle price",
-      "url": "https://desicalc.in/rto-tax/{state}",
+      "url": "https://desicalc.in/programmatic/rto-tax/{state}",
       "inputSchema": {
         "type": "object",
         "properties": {
