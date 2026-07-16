@@ -48,7 +48,7 @@ function generateStampDutyStatePage(slug) {
   const extra = STATE_EXTRA[slug];
   
   const neighborLinks = neighbors.map(n => 
-    `<a href="../${n.slug}.html" class="neighbor-link no-underline" title="Compare with ${n.name}">${n.name}</a>`
+    `<a href="../${n.slug}" class="neighbor-link no-underline" title="Compare with ${n.name}">${n.name}</a>`
   ).join('');
 
   const pageTitle = extra ? extra.title : `Stamp Duty Calculator ${state.name} 2026 | DesiCalc`;
@@ -239,7 +239,7 @@ function generateStampDutyStatePage(slug) {
     <section class="mt-10 mb-8">
       <h2 class="text-lg font-bold mb-3">All States Quick Access</h2>
       <div class="flex flex-wrap gap-2">
-${STATES.map(s => `<a href="../${s.slug}.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs ${s.slug === slug ? 'border-amber-400 bg-amber-50 font-medium' : 'no-underline'}"><span class="font-medium text-stone-900">${s.name}</span></a>`).join('\n')}
+${STATES.map(s => `<a href="../${s.slug}" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs ${s.slug === slug ? 'border-amber-400 bg-amber-50 font-medium' : 'no-underline'}"><span class="font-medium text-stone-900">${s.name}</span></a>`).join('\n')}
       </div>
     </section>
   </main>

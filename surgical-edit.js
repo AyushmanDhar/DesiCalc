@@ -80,7 +80,7 @@ function surgicalUpdate(filePath, slug, category) {
   // Find: <p class="text-stone-500 mb-8">...</p> followed by calculator div
   if (!content.includes('Compare with Neighboring States') && neighbors.length > 0) {
     const neighborLinks = neighbors.map(n => 
-      `<a href="../${n.slug}.html" class="neighbor-link" title="Compare with ${n.name}">${n.name}</a>`
+      `<a href="../${n.slug}" class="neighbor-link" title="Compare with ${n.name}">${n.name}</a>`
     ).join('\n        ');
     
     const compareBox = `
@@ -97,10 +97,10 @@ function surgicalUpdate(filePath, slug, category) {
     content = content.replace(subtitleRegex, (match) => match + compareBox);
   }
 
-  // 5. Add "All States" footer grid before </main>
-  if (!content.includes('states-grid-footer">')) {
+  // 5. Add "All States" footer grid before </main> (skip if generator already has "All States Quick Access")
+  if (!content.includes('states-grid-footer">') && !content.includes('All States Quick Access')) {
     const allStatesLinks = STATES.map(s => 
-      `<a href="../${s.slug}.html"${s.slug === slug ? ' class="current"' : ''}>${s.name}</a>`
+      `<a href="../${s.slug}"${s.slug === slug ? ' class="current"' : ''}>${s.name}</a>`
     ).join('\n        ');
     
     const footerGrid = `

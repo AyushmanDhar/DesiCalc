@@ -8,7 +8,7 @@ const STAMP_DIR = path.join(__dirname, '..', 'public', 'programmatic', 'stamp-du
 function generateStampDutyIndex() {
   const statesHtml = STATES.map(state => {
     const rates = STAMP_DUTY_RATES[state.slug];
-    return `<a href="${state.slug}.html" class="state-card no-underline">
+    return `<a href="${state.slug}" class="state-card no-underline">
       <div class="state-name">${state.name}</div>
       <div class="state-rates">
         <span class="rate-badge male" title="Male">\u2642 ${rates.male}</span>

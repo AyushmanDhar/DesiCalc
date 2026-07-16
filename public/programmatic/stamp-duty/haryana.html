@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stamp Duty Calculator Haryana 2026 | DesiCalc</title>
-  <meta name="description" content="Calculate stamp duty and registration charges for property in Haryana. Urban: Male 7%, Female 5%, Joint 6%. Rural: Male 5%, Female 3%, Joint 4%. Free calculator.">
-  <link rel="canonical" href="https://desicalc.in/programmatic/stamp-duty/haryana" />
+  <meta name="description" content="Calculate stamp duty and registration charges for property in Haryana. Male 6%, Female 5%, Joint 5.5%. Registration 1%. Free calculator.">
+  <link rel="canonical" href="https://desicalc.in/programmatic/stamp-duty/haryana">
   <link rel="alternate" hreflang="en" href="https://desicalc.in/programmatic/stamp-duty/haryana" />
   <link rel="alternate" hreflang="x-default" href="https://desicalc.in/programmatic/stamp-duty/haryana" />
   <meta property="og:title" content="Stamp Duty Calculator Haryana 2026 | DesiCalc">
-  <meta property="og:description" content="Calculate stamp duty in Haryana. Urban rates: Male 7%, Female 5%, Joint 6%. Rural rates: Male 5%, Female 3%, Joint 4%. Free online calculator.">
+  <meta property="og:description" content="Calculate stamp duty in Haryana. Male 6%, Female 5%, Joint 5.5%. Free online calculator.">
   <meta property="og:url" content="https://desicalc.in/programmatic/stamp-duty/haryana">
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://desicalc.in/assets/img/og-stamp-duty.png">
@@ -22,11 +22,11 @@
     "@context": "https://schema.org",
     "@type": ["WebApplication", "SoftwareApplication"],
     "name": "Stamp Duty Calculator Haryana",
-    "url": "https://desicalc.in/programmatic/stamp-duty/haryana",
+    "url": "https://desicalc.in/tools/stamp-duty?state=haryana",
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "All",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-    "description": "Free stamp duty calculator for Haryana property registration. Calculate urban and rural stamp duty rates, female concession, circle rate."
+    "description": "Free stamp duty calculator for Haryana property registration. Calculate stamp duty rates, registration charges, female concession, circle rate."
   }
   </script>
   <script type="application/ld+json">
@@ -41,306 +41,175 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="../../assets/css/tailwind.css">
-  <link rel="stylesheet" href="../../assets/css/style.css">
-  <script src="../../assets/js/common.js"></script>
-  <script src="../../assets/js/calc-core.js"></script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the stamp duty rate in Gurugram?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Gurugram is classified as an urban area and attracts the urban stamp duty rates: 7% for males, 5% for females, and 6% for all joint ownership categories. Registration charges of 1% are additional. This makes Gurugram one of the most expensive NCR cities for property registration."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How is rural vs urban classification determined in Haryana?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The classification is based on the official designation of the area by the Haryana government. Municipal corporation areas, municipal council areas, and notified urban areas are classified as urban. All other areas, including villages and gram panchayat areas, are classified as rural for stamp duty purposes."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Are there any additional charges on property registration in Haryana?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "In addition to stamp duty and registration charges, buyers may need to pay a development fee or external development charges (EDC) to the concerned development authority (HUDA, HSVP, etc.). These charges vary by project and location and are separate from stamp duty."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the collector rate in Haryana and how does it affect stamp duty?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Collector rates (also called circle rates or minimum value rates) are determined by the district collector and vary by location. Stamp duty is calculated on the higher of the transaction value or the collector rate. Collector rates in Haryana are revised periodically and are available on the HARIS portal."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is there any rebate on stamp duty for first-time buyers in Haryana?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Currently, Haryana does not offer a specific first-time buyer rebate on stamp duty. However, the female concession (2% in urban and rural areas) provides significant savings for women buyers. Some housing board schemes may offer concessions on applicable fees."
-      }
-    }
-  ]
-}
-  </script>
-
+  <link rel="stylesheet" href="/assets/css/tailwind.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/calc-core.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
+  <style>
+    .neighbor-states { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+    .neighbor-link { display: inline-flex; align-items: center; padding: 0.35rem 0.75rem; background: white; border: 1px solid #e7e5e4; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #78716c; transition: all 0.2s; }
+    .neighbor-link:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .compare-box { background: #fefce8; border: 1px solid #fde047; border-radius: 12px; padding: 1rem; margin: 1.5rem 0; }
+    .compare-box h3 { font-size: 0.875rem; font-weight: 600; color: #92400e; margin-bottom: 0.5rem; }
+  </style>
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="DesiCalc" />
   <link rel="manifest" href="/site.webmanifest" />
-
-  <style>
-    .neighbor-states { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.75rem 0; }
-    .neighbor-link { display: inline-flex; align-items: center; padding: 0.35rem 0.75rem; background: white; border: 1px solid #e7e5e4; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #78716c; transition: all 0.2s; text-decoration: none; }
-    .neighbor-link:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
-    .neighbor-link.current { border-color: #f59e0b; background: #fffbeb; color: #92400e; }
-    .compare-box { background: #fefce8; border: 1px solid #fde047; border-radius: 12px; padding: 1rem; margin: 1.5rem 0; }
-    .compare-box h2 { font-size: 0.875rem; font-weight: 600; color: #92400e; margin-bottom: 0.75rem; }
-    .states-grid-footer { display: flex; flex-wrap: wrap; gap: 0.35rem; }
-    .states-grid-footer a { display: inline-block; padding: 0.2rem 0.55rem; background: white; border: 1px solid #e7e5e4; border-radius: 4px; font-size: 0.7rem; color: #78716c; text-decoration: none; transition: all 0.15s; }
-    .states-grid-footer a:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
-    .states-grid-footer a.current { border-color: #f59e0b; background: #fefce8; color: #92400e; font-weight: 600; }
-  </style>
-
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2207525036040634"
      crossorigin="anonymous"></script>
 </head>
 <body class="bg-stone-50">
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
     <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
-      <a href="../../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
+      <a href="../../../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
     </div>
   </header>
 
   <main class="max-w-4xl mx-auto px-4 py-8">
     <nav class="text-sm text-stone-500 mb-4">
-      <a href="../../" class="hover:text-amber-600">Home</a> / <a href="../../tools/stamp-duty" class="hover:text-amber-600">Stamp Duty</a> / <a href="../" class="hover:text-amber-600">All States</a> / <span class="text-stone-900">Haryana</span>
+      <a href="../../../" class="hover:text-amber-600">Home</a> / 
+      <a href="../../../tools/stamp-duty" class="hover:text-amber-600">Stamp Duty</a> / 
+      <a href="../" class="hover:text-amber-600">All States</a> / 
+      <span class="text-stone-900">Haryana</span>
     </nav>
 
     <h1 class="text-3xl font-bold text-stone-900 mb-2">Stamp Duty Calculator Haryana 2026</h1>
     <p class="text-stone-500 mb-8">Calculate property registration charges, stamp duty rates, and total cost for buying property in Haryana. Updated for 2026.</p>
 
-
+    
     <div class="compare-box">
-      <h2>Check neighboring state rates</h2>
+      <h3>🔗 Compare with Neighboring States</h3>
       <div class="neighbor-states">
-        <a href="punjab" class="neighbor-link">Punjab</a>
-        <a href="himachalpradesh" class="neighbor-link">Himachal Pradesh</a>
-        <a href="uttarpradesh" class="neighbor-link">Uttar Pradesh</a>
-        <a href="rajasthan" class="neighbor-link">Rajasthan</a>
-        <a href="delhi" class="neighbor-link">Delhi (NCT)</a>
+        <a href="../punjab" class="neighbor-link no-underline" title="Compare with Punjab">Punjab</a><a href="../himachalpradesh" class="neighbor-link no-underline" title="Compare with Himachal Pradesh">Himachal Pradesh</a><a href="../uttarpradesh" class="neighbor-link no-underline" title="Compare with Uttar Pradesh">Uttar Pradesh</a><a href="../rajasthan" class="neighbor-link no-underline" title="Compare with Rajasthan">Rajasthan</a><a href="../delhi" class="neighbor-link no-underline" title="Compare with Delhi (NCT)">Delhi (NCT)</a>
+      </div>
+      <p class="text-xs text-stone-600 mt-2 mb-0">Click any state to compare stamp duty rates side-by-side.</p>
+    </div>
+    
+
+    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
+      <div id="calc-placeholder" class="text-center py-8">
+        <p class="text-stone-500 mb-4">Use our interactive calculator for Haryana</p>
+        <a href="../../../tools/stamp-duty?state=haryana" class="btn btn-primary">Open Calculator</a>
       </div>
     </div>
 
     <section class="mb-8">
-      <h2 class="text-2xl font-bold text-stone-900 mb-4">Haryana Stamp Duty Rates 2026</h2>
-
-      <h3 class="text-lg font-bold text-stone-900 mb-2">Urban Areas</h3>
-      <div class="overflow-x-auto bg-white rounded-xl border border-stone-200 mb-4">
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="bg-stone-100 border-b border-stone-200">
-              <th class="text-left p-3 font-semibold text-stone-900">Category</th>
-              <th class="text-left p-3 font-semibold text-stone-900">Stamp Duty Rate</th>
-              <th class="text-left p-3 font-semibold text-stone-900">Registration Charge</th>
-              <th class="text-left p-3 font-semibold text-stone-900">Total Cost</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-b border-stone-100">
-              <td class="p-3 text-stone-900">Male (individual)</td>
-              <td class="p-3 text-stone-900">7%</td>
-              <td class="p-3 text-stone-900">1%</td>
-              <td class="p-3 text-stone-900">8%</td>
-            </tr>
-            <tr class="border-b border-stone-100">
-              <td class="p-3 text-stone-900">Female (individual)</td>
-              <td class="p-3 text-stone-900">5%</td>
-              <td class="p-3 text-stone-900">1%</td>
-              <td class="p-3 text-stone-900">6%</td>
-            </tr>
-            <tr class="border-b border-stone-100">
-              <td class="p-3 text-stone-900">Joint - Both Female</td>
-              <td class="p-3 text-stone-900">6%</td>
-              <td class="p-3 text-stone-900">1%</td>
-              <td class="p-3 text-stone-900">7%</td>
-            </tr>
-            <tr class="border-b border-stone-100">
-              <td class="p-3 text-stone-900">Joint - Both Male</td>
-              <td class="p-3 text-stone-900">6%</td>
-              <td class="p-3 text-stone-900">1%</td>
-              <td class="p-3 text-stone-900">7%</td>
-            </tr>
-            <tr class="border-b border-stone-100">
-              <td class="p-3 text-stone-900">Joint - Male + Female</td>
-              <td class="p-3 text-stone-900">6%</td>
-              <td class="p-3 text-stone-900">1%</td>
-              <td class="p-3 text-stone-900">7%</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h3 class="text-lg font-bold text-stone-900 mb-2">Rural Areas</h3>
+      <h2 class="text-2xl font-bold text-stone-900 mb-4">Haryana Stamp Duty &amp; Registry Charges 2026</h2>
       <div class="overflow-x-auto bg-white rounded-xl border border-stone-200">
         <table class="w-full text-sm">
           <thead>
             <tr class="bg-stone-100 border-b border-stone-200">
               <th class="text-left p-3 font-semibold text-stone-900">Category</th>
               <th class="text-left p-3 font-semibold text-stone-900">Stamp Duty Rate</th>
-              <th class="text-left p-3 font-semibold text-stone-900">Registration Charge</th>
+              <th class="text-left p-3 font-semibold text-stone-900">Registration / Registry Charge</th>
               <th class="text-left p-3 font-semibold text-stone-900">Total Cost</th>
             </tr>
           </thead>
           <tbody>
             <tr class="border-b border-stone-100">
               <td class="p-3 text-stone-900">Male (individual)</td>
-              <td class="p-3 text-stone-900">5%</td>
-              <td class="p-3 text-stone-900">1%</td>
               <td class="p-3 text-stone-900">6%</td>
+              <td class="p-3 text-stone-900">1%</td>
+              <td class="p-3 text-stone-900 font-medium">7%</td>
             </tr>
             <tr class="border-b border-stone-100">
               <td class="p-3 text-stone-900">Female (individual)</td>
-              <td class="p-3 text-stone-900">3%</td>
+              <td class="p-3 text-stone-900">5%</td>
               <td class="p-3 text-stone-900">1%</td>
-              <td class="p-3 text-stone-900">4%</td>
+              <td class="p-3 text-stone-900 font-medium">6%</td>
             </tr>
             <tr class="border-b border-stone-100">
               <td class="p-3 text-stone-900">Joint - Both Female</td>
-              <td class="p-3 text-stone-900">4%</td>
+              <td class="p-3 text-stone-900">5.5%</td>
               <td class="p-3 text-stone-900">1%</td>
-              <td class="p-3 text-stone-900">5%</td>
+              <td class="p-3 text-stone-900 font-medium">6.5%</td>
             </tr>
             <tr class="border-b border-stone-100">
               <td class="p-3 text-stone-900">Joint - Both Male</td>
-              <td class="p-3 text-stone-900">4%</td>
+              <td class="p-3 text-stone-900">6%</td>
               <td class="p-3 text-stone-900">1%</td>
-              <td class="p-3 text-stone-900">5%</td>
+              <td class="p-3 text-stone-900 font-medium">7%</td>
             </tr>
             <tr class="border-b border-stone-100">
               <td class="p-3 text-stone-900">Joint - Male + Female</td>
-              <td class="p-3 text-stone-900">4%</td>
+              <td class="p-3 text-stone-900">5.5%</td>
               <td class="p-3 text-stone-900">1%</td>
-              <td class="p-3 text-stone-900">5%</td>
+              <td class="p-3 text-stone-900 font-medium">6.5%</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p class="text-xs text-stone-500 mt-2 px-3">Haryana has significant rate differences between urban and rural areas. Gurugram falls under urban rates. All joint ownership in Haryana is charged at a uniform rate per zone.</p>
     </section>
 
-    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
-      <div id="calc-placeholder" class="text-center py-8">
-        <p class="text-stone-500 mb-4">Use our interactive calculator for Haryana</p>
-        <a href="../../tools/stamp-duty?state=haryana" class="btn btn-primary">Open Calculator</a>
-      </div>
-    </div>
-
+    
     <section class="prose max-w-none mb-8">
       <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Overview of Real Estate in Haryana</h2>
-      <p>Haryana's real estate market is uniquely positioned due to its proximity to Delhi and the presence of Gurugram, one of India's largest corporate and commercial hubs. The state's real estate dynamics differ significantly between the National Capital Region (NCR) districts bordering Delhi and the non-NCR districts. Gurugram, Faridabad, Sonipat, Panipat, and Karnal fall within the NCR and have real estate markets heavily influenced by Delhi's demand spillover.</p>
-      <p>Gurugram, the Millennium City, is the crown jewel of Haryana's real estate market. It hosts the headquarters of numerous Fortune 500 companies and has India's largest concentration of Grade-A office space. Residential areas like DLF phases, Golf Course Road, Sohna Road, Dwarka Expressway, and New Gurugram command premium prices. Faridabad, another major NCR city, offers relatively more affordable housing with good connectivity to Delhi through the Metro and the Delhi-Mathura highway. Other important real estate markets include Panchkula (adjoining Chandigarh), Ambala, Kurukshetra, Hisar, and Rohtak.</p>
-      <p>Haryana's stamp duty structure is unique because it differentiates between urban and rural areas. Urban areas have higher rates reflecting the higher property values and better infrastructure. The urban stamp duty rates are among the highest in India at 7% for males, while rural rates are more moderate. The state also offers a 2% female concession in urban areas and a 2% concession in rural areas, making it advantageous for women to own property.</p>
+      <p>Haryana has a diverse real estate market...</p>
+    </section>
+    
 
-      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">How Stamp Duty is Calculated in Haryana</h2>
-      <p>Stamp duty in Haryana is calculated on the higher of the transaction value or the collector rate (circle rate). The critical distinction is between urban and rural areas. In urban areas, the stamp duty is 7% for individual male buyers and 5% for individual female buyers. All joint ownership types (both female, both male, or mixed) are charged at a uniform 6% in urban areas. In rural areas, the rates are lower: 5% for individual males, 3% for individual females, and 4% for all joint ownership categories.</p>
-      <p>Registration charges are 1% of the property value with no upper cap across both urban and rural categories. The total cost thus ranges from 4% to 8% depending on the location and buyer category. The collector rates vary by district, tehsil, and locality and are revised periodically by the state government. For Gurugram, collector rates are among the highest in the state, particularly for properties in DLF, Golf Course Road, and other premium sectors.</p>
+    <section class="mt-10 max-w-2xl">
+      <h2 class="text-lg font-bold mb-3">FAQs</h2>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>What is the stamp duty rate for women in Haryana?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Women in Haryana pay 5% stamp duty, which is 1% lower than the 6% rate for men. This concession is available for individual female buyers and joint ownership where all owners are women.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>What are the total registry charges in Haryana?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer">The total cost of property registration in Haryana includes stamp duty (6% for men, 5% for women) plus 1% registry charges. Additional costs include document writer fees, encumbrance certificate, and legal fees.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>Is e-stamping available in Haryana?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Yes, e-stamping is widely available and is the preferred method for stamp duty payment in Haryana. E-stamp certificates can be obtained from authorised banks including SBI, PNB, and Axis Bank.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>What additional costs apply when buying property in Haryana?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Besides stamp duty and registry charges, buyers should budget for legal fees, document writer charges, encumbrance certificate fees, mutation charges, and GST on under-construction properties. These typically add 1-2% to the total cost.</div>
+      </div>
+      
+    </section>
 
-      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Property Registration Process in Haryana</h2>
-      <p>The registration process in Haryana is managed through the IGRS Haryana (HARIS) portal. Here are the steps:</p>
-      <ul>
-        <li><strong>Step 1:</strong> Draft the sale deed with a registered deed writer. Upload the draft on the HARIS portal for approval.</li>
-        <li><strong>Step 2:</strong> Pay stamp duty online through the e-stamping portal. E-stamp certificates can be obtained from authorised banks.</li>
-        <li><strong>Step 3:</strong> Book an appointment at the Sub-Registrar office. The HARIS portal provides real-time slot availability.</li>
-        <li><strong>Step 4:</strong> Both parties appear at the Sub-Registrar office with original documents and witnesses. Biometric data and photographs are captured.</li>
-        <li><strong>Step 5:</strong> The Sub-Registrar verifies and registers the deed. The registered document is available for download on the portal.</li>
-      </ul>
-
-      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Documents Required</h2>
-      <ul>
-        <li>Sale deed on e-stamp paper</li>
-        <li>Previous title documents (chain of ownership)</li>
-        <li>Encumbrance certificate</li>
-        <li>Jamabandi (land record) for rural properties</li>
-        <li>Property tax receipts</li>
-        <li>Aadhaar card and PAN card</li>
-        <li>Photographs of both parties</li>
-        <li>Two witnesses with ID proof</li>
-      </ul>
-
-          </section>
-
-      <section class="mt-10 max-w-2xl">
-        <h2 class="text-lg font-bold mb-3">FAQs</h2>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>What is the stamp duty rate in Gurugram?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">Gurugram is classified as an urban area and attracts the urban stamp duty rates: 7% for males, 5% for females, and 6% for all joint ownership categories. Registration charges of 1% are additional. This makes Gurugram one of the most expensive NCR cities for property registration.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>How is rural vs urban classification determined in Haryana?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">The classification is based on the official designation of the area by the Haryana government. Municipal corporation areas, municipal council areas, and notified urban areas are classified as urban. All other areas, including villages and gram panchayat areas, are classified as rural for stamp duty purposes.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>Are there any additional charges on property registration in Haryana?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">In addition to stamp duty and registration charges, buyers may need to pay a development fee or external development charges (EDC) to the concerned development authority (HUDA, HSVP, etc.). These charges vary by project and location and are separate from stamp duty.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>What is the collector rate in Haryana and how does it affect stamp duty?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">Collector rates (also called circle rates or minimum value rates) are determined by the district collector and vary by location. Stamp duty is calculated on the higher of the transaction value or the collector rate. Collector rates in Haryana are revised periodically and are available on the HARIS portal.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)"><span>Is there any rebate on stamp duty for first-time buyers in Haryana?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">Currently, Haryana does not offer a specific first-time buyer rebate on stamp duty. However, the female concession (2% in urban and rural areas) provides significant savings for women buyers. Some housing board schemes may offer concessions on applicable fees.</div>
-        </div>
-      </section>
-  
-    <section class="mt-12">
-      <h2 class="text-lg font-bold mb-3">All States</h2>
-      <div class="states-grid-footer">
-        <a href="andhrapradesh">Andhra Pradesh</a>
-        <a href="arunachalpradesh">Arunachal Pradesh</a>
-        <a href="assam">Assam</a>
-        <a href="bihar">Bihar</a>
-        <a href="chhattisgarh">Chhattisgarh</a>
-        <a href="delhi">Delhi (NCT)</a>
-        <a href="goa">Goa</a>
-        <a href="gujarat">Gujarat</a>
-        <a href="haryana" class="current">Haryana</a>
-        <a href="himachalpradesh">Himachal Pradesh</a>
-        <a href="jharkhand">Jharkhand</a>
-        <a href="karnataka">Karnataka</a>
-        <a href="kerala">Kerala</a>
-        <a href="madhyapradesh">Madhya Pradesh</a>
-        <a href="maharashtra">Maharashtra</a>
-        <a href="manipur">Manipur</a>
-        <a href="meghalaya">Meghalaya</a>
-        <a href="mizoram">Mizoram</a>
-        <a href="nagaland">Nagaland</a>
-        <a href="odisha">Odisha</a>
-        <a href="punjab">Punjab</a>
-        <a href="rajasthan">Rajasthan</a>
-        <a href="sikkim">Sikkim</a>
-        <a href="tamilnadu">Tamil Nadu</a>
-        <a href="telangana">Telangana</a>
-        <a href="tripura">Tripura</a>
-        <a href="uttarpradesh">Uttar Pradesh</a>
-        <a href="uttarakhand">Uttarakhand</a>
-        <a href="westbengal">West Bengal</a>
+    <section class="mt-10 mb-8">
+      <h2 class="text-lg font-bold mb-3">All States Quick Access</h2>
+      <div class="flex flex-wrap gap-2">
+<a href="../andhrapradesh" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Andhra Pradesh</span></a>
+<a href="../arunachalpradesh" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Arunachal Pradesh</span></a>
+<a href="../assam" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Assam</span></a>
+<a href="../bihar" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Bihar</span></a>
+<a href="../chhattisgarh" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Chhattisgarh</span></a>
+<a href="../delhi" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Delhi (NCT)</span></a>
+<a href="../goa" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Goa</span></a>
+<a href="../gujarat" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Gujarat</span></a>
+<a href="../haryana" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs border-amber-400 bg-amber-50 font-medium"><span class="font-medium text-stone-900">Haryana</span></a>
+<a href="../himachalpradesh" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Himachal Pradesh</span></a>
+<a href="../jharkhand" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Jharkhand</span></a>
+<a href="../karnataka" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Karnataka</span></a>
+<a href="../kerala" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Kerala</span></a>
+<a href="../madhyapradesh" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Madhya Pradesh</span></a>
+<a href="../maharashtra" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Maharashtra</span></a>
+<a href="../manipur" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Manipur</span></a>
+<a href="../meghalaya" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Meghalaya</span></a>
+<a href="../mizoram" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Mizoram</span></a>
+<a href="../nagaland" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Nagaland</span></a>
+<a href="../odisha" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Odisha</span></a>
+<a href="../punjab" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Punjab</span></a>
+<a href="../rajasthan" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Rajasthan</span></a>
+<a href="../sikkim" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Sikkim</span></a>
+<a href="../tamilnadu" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Tamil Nadu</span></a>
+<a href="../telangana" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Telangana</span></a>
+<a href="../tripura" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Tripura</span></a>
+<a href="../uttarpradesh" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Uttar Pradesh</span></a>
+<a href="../uttarakhand" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">Uttarakhand</span></a>
+<a href="../westbengal" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline"><span class="font-medium text-stone-900">West Bengal</span></a>
       </div>
     </section>
-</main>
+  </main>
 
   <ins class="adsbygoogle ad-slot-footer mb-4" style="display:block;min-height:90px" data-ad-client="ca-pub-2207525036040634" data-ad-slot="4037844123" data-ad-format="auto" data-full-width-responsive="true"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
@@ -348,6 +217,6 @@
   <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
     <div class="max-w-5xl mx-auto px-4"><span class="text-stone-900 font-semibold">DesiCalc</span> &copy; 2026. Free Indian tax calculators.</div>
   </footer>
-  <script src="../../assets/js/ad.js"></script>
+  <script src="/assets/js/ad.js"></script>
 </body>
 </html>
