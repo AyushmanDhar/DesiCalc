@@ -629,19 +629,20 @@ fs.writeFileSync(path.join(STAMP_DIR, 'index.html'), generateStampDutyIndex());
 fs.writeFileSync(path.join(RTO_DIR, 'index.html'), generateRTOIndex());
 console.log('Created index pages for stamp-duty and rto-tax');
 
-// Update state pages with cross-links
+// Generate/update state pages — only overwrite if new file or has custom content in STATE_EXTRA
+// (Otherwise existing rich content added by surgical-edit.js would be lost)
 STATES.forEach(state => {
   const stampPath = path.join(STAMP_DIR, `${state.slug}.html`);
   const rtoPath = path.join(RTO_DIR, `${state.slug}.html`);
   
-  if (fs.existsSync(stampPath)) {
+  if (!fs.existsSync(stampPath) || STATE_EXTRA[state.slug]) {
     fs.writeFileSync(stampPath, generateStampDutyStatePage(state.slug));
-    console.log(`Updated stamp-duty/${state.slug}.html`);
+    console.log(`Generated stamp-duty/${state.slug}.html`);
   }
   
-  if (fs.existsSync(rtoPath)) {
+  if (!fs.existsSync(rtoPath) || STATE_EXTRA[state.slug]) {
     fs.writeFileSync(rtoPath, generateRTOStatePage(state.slug));
-    console.log(`Updated rto-tax/${state.slug}.html`);
+    console.log(`Generated rto-tax/${state.slug}.html`);
   }
 });
 
