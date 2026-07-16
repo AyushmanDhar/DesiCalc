@@ -49,7 +49,8 @@ public/
 ├── tools/                  # Calculator pages (income-tax, stamp-duty, rto-tax)
 ├── guides/                 # How-to articles
 ├── comparisons/            # Side-by-side comparisons
-└── programmatic/           # State-specific deep pages (28 states each for stamp-duty + rto-tax)
+├── stamp-duty/              # 28 state-specific stamp duty pages
+└── rto-tax/                 # 28 state-specific RTO tax pages
 src/
 └── tailwind.css            # Tailwind source (input)
 tailwind.config.js          # Tailwind content paths
