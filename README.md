@@ -3,7 +3,6 @@
 Indian tax, stamp duty, and RTO road tax calculators. No login. No data leaves your device.
 
 **Live at [desicalc.in](https://desicalc.in)**
-**Develop branch**: [develop.desicalc.in](https://develop.desicalc.in)
 
 ## Tools
 
@@ -26,7 +25,7 @@ Indian tax, stamp duty, and RTO road tax calculators. No login. No data leaves y
 |-------|--------|
 | Hosting | Cloudflare Pages (global edge CDN) |
 | Frontend | Vanilla JS + Tailwind CSS (build-time) |
-| Ad network | Adsterra (via `data527.click`) |
+| Ad network | Google AdSense (AdSense Auto Ads + manual placements) |
 | PWA | Custom service worker, cache-first for assets, network-first for pages |
 | i18n | Client-side JSON-based translation |
 | Deployment | Git push → Cloudflare auto-deploy |
@@ -38,19 +37,21 @@ public/
 ├── index.html              # Home page
 ├── sw.js                   # Service worker (offline caching)
 ├── site.webmanifest        # PWA manifest
-├── _headers                # Security headers (CSP)
-├── _redirects
+├── sitemap.xml             # XML sitemap with hreflang annotations
+├── robots.txt              # Crawler directives with Content-Signals
+├── _headers                # Security & CORS headers (CSP, HSTS, MCP)
+├── _redirects              # URL redirects (old /programmatic/ → clean paths)
 ├── assets/
 │   ├── css/
 │   │   ├── style.css       # Hand-written custom styles
 │   │   └── tailwind.css    # Generated (purged Tailwind utilities)
-│   ├── js/                 # calc-core, i18n, state-rates, slabs, ad
-│   └── img/                # Open Graph images
+│   ├── js/                 # calc-core, i18n (en/hi), state-rates, slabs
+│   └── img/                # Open Graph images (1200×630)
 ├── tools/                  # Calculator pages (income-tax, stamp-duty, rto-tax)
-├── guides/                 # How-to articles
-├── comparisons/            # Side-by-side comparisons
-├── stamp-duty/              # 28 state-specific stamp duty pages
-└── rto-tax/                 # 28 state-specific RTO tax pages
+├── guides/                 # 5 how-to articles (ITR, stamp duty, RTO, 87A, capital gains)
+├── comparisons/            # 3 side-by-side comparisons
+├── stamp-duty/              # Index + 28 state-specific stamp duty pages
+└── rto-tax/                 # Index + 28 state-specific RTO tax pages
 src/
 └── tailwind.css            # Tailwind source (input)
 tailwind.config.js          # Tailwind content paths
@@ -80,3 +81,4 @@ Contributions welcome! Open an issue or submit a PR.
 - Add or update state-wise rates in `public/assets/js/state-rates.js`
 - Add translations in `public/assets/js/lang-en.js` / `lang-hi.js`
 - Calculator logic lives in `public/assets/js/calc-core.js`
+- State-specific pages are under `public/stamp-duty/` and `public/rto-tax/`
