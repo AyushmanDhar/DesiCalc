@@ -78,7 +78,7 @@ function applyI18n() {
       if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
         el.setAttribute('placeholder', val);
       } else {
-        el.innerHTML = val;
+        el.textContent = val;
       }
     }
   });

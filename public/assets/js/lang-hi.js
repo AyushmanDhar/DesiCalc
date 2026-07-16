@@ -176,7 +176,7 @@ window.DESICALC_LANG = {
   'contact.email.title': 'Email',
   'contact.email.desc': 'Seedha likhein:',
   'contact.github.title': 'GitHub',
-  'contact.github.desc': 'Hamaare <a href="https://github.com/AyushmanDhar/DesiCalc" class="text-amber-600 underline hover:text-amber-700">GitHub bhandar</a> par bugs report karein ya features sujhaayein.',
+  'contact.github.desc': 'Hamaare GitHub bhandar par bugs report karein ya features sujhaayein.',
 
   'onboarding.title': 'DesiCalc mein aapka swaagat hai',
   'onboarding.step1': 'Apne numbers bharein — parinaam turant update hote hain',
