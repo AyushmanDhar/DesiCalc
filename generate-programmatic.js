@@ -485,7 +485,7 @@ function generateStampDutyStatePage(slug) {
     <section class="mt-10 mb-8">
       <h2 class="text-lg font-bold mb-3">All States Quick Access</h2>
       <div class="flex flex-wrap gap-2">
-${STATES.map(s => `<a href="/programmatic/stamp-duty/${s.slug}" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs ${s.slug === slug ? 'border-amber-400 bg-amber-50 font-medium' : 'no-underline'}"><span class="font-medium text-stone-900">${s.name}</span></a>`).join('\n')}
+${STATES.map(s => `<a href="/programmatic/stamp-duty/${s.slug}" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline ${s.slug === slug ? 'border-amber-500 bg-amber-50 font-semibold' : 'border-stone-200'}"><span class="font-medium text-stone-900">${s.name}</span></a>`).join('\n')}
       </div>
     </section>
   </main>
@@ -610,7 +610,7 @@ function generateRTOStatePage(slug) {
     <section class="mb-8">
       <h2 class="text-lg font-bold mb-3">All States Quick Access</h2>
       <div class="flex flex-wrap gap-2">
-${STATES.map(s => `<a href="/programmatic/rto-tax/${s.slug}" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs ${s.slug === slug ? 'border-amber-400 bg-amber-50 font-medium' : 'no-underline'}"><span class="font-medium text-stone-900">${s.name}</span></a>`).join('\n')}
+${STATES.map(s => `<a href="/programmatic/rto-tax/${s.slug}" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline ${s.slug === slug ? 'border-amber-500 bg-amber-50 font-semibold' : 'border-stone-200'}"><span class="font-medium text-stone-900">${s.name}</span></a>`).join('\n')}
       </div>
     </section>
   </main>
