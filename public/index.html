@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
   <title data-i18n="home.title">DesiCalc — Free Indian Calculators</title>
   <meta name="description" content="Free Indian tax calculators. Income Tax FY 2026-27, Stamp Duty all 28 states, RTO Road Tax. No login. Instant results.">
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -14,6 +15,7 @@
   <link rel="canonical" href="https://desicalc.in/" />
   <link rel="alternate" hreflang="en" href="https://desicalc.in/" />
   <link rel="alternate" hreflang="x-default" href="https://desicalc.in/" />
+  <link rel="alternate" hreflang="hi" href="https://desicalc.in/" />
   <meta property="og:title" content="DesiCalc — Free Indian Calculators">
   <meta property="og:description" content="Free Indian tax calculators. Income Tax FY 2026-27, Stamp Duty all 28 states, RTO Road Tax. No login. Instant results.">
   <meta property="og:url" content="https://desicalc.in/">
@@ -73,19 +75,19 @@
 
     <section class="tool-grid mb-12 scroll-entrance">
       <div class="tool-card text-center">
-        <div class="text-4xl mb-3">💰</div>
+        <div class="text-4xl mb-3" aria-hidden="true">💰</div>
         <h2 class="text-lg font-bold mb-1" data-i18n="home.tax.title">Income Tax Calculator</h2>
         <p class="text-sm text-stone-500 mb-4" data-i18n="home.tax.desc">FY 2026-27 — Old vs New regime</p>
         <a href="tools/income-tax" class="btn btn-primary" data-i18n="home.cta">Calculate Now</a>
       </div>
       <div class="tool-card text-center">
-        <div class="text-4xl mb-3">🏠</div>
+        <div class="text-4xl mb-3" aria-hidden="true">🏠</div>
         <h2 class="text-lg font-bold mb-1" data-i18n="home.stamp.title">Stamp Duty Calculator</h2>
         <p class="text-sm text-stone-500 mb-4" data-i18n="home.stamp.desc">All 28 states</p>
         <a href="tools/stamp-duty" class="btn btn-primary" data-i18n="home.cta">Calculate Now</a>
       </div>
       <div class="tool-card text-center">
-        <div class="text-4xl mb-3">🚗</div>
+        <div class="text-4xl mb-3" aria-hidden="true">🚗</div>
         <h2 class="text-lg font-bold mb-1" data-i18n="home.rto.title">RTO Tax Calculator</h2>
         <p class="text-sm text-stone-500 mb-4" data-i18n="home.rto.desc">All states, all vehicle types</p>
         <a href="tools/rto-tax" class="btn btn-primary" data-i18n="home.cta">Calculate Now</a>
@@ -136,11 +138,11 @@
     <section class="mb-12 scroll-entrance">
       <h2 class="text-xl font-bold mb-4 text-center">All State Pages</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md mx-auto">
-        <a href="programmatic/stamp-duty/" class="card text-center hover:shadow-md transition-shadow no-underline border-l-4 border-amber-500">
+        <a href="stamp-duty/" class="card text-center hover:shadow-md transition-shadow no-underline border-l-4 border-amber-500">
           <div class="font-semibold text-stone-900">🏠 Stamp Duty — All 28 States</div>
           <div class="text-sm text-stone-500">Browse state-wise stamp duty calculators & rates</div>
         </a>
-        <a href="programmatic/rto-tax/" class="card text-center hover:shadow-md transition-shadow no-underline border-l-4 border-emerald-500">
+        <a href="rto-tax/" class="card text-center hover:shadow-md transition-shadow no-underline border-l-4 border-emerald-500">
           <div class="font-semibold text-stone-900">🚗 RTO Tax — All 28 States</div>
           <div class="text-sm text-stone-500">Browse state-wise RTO road tax calculators & rates</div>
         </a>
