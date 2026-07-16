@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RTO Tax Calculator Andhra Pradesh 2026 | DesiCalc</title>
   <meta name="description" content="Calculate RTO road tax and registration charges for vehicles in Andhra Pradesh. Car, bike, EV, commercial rates. Updated 2026.">
-  <link rel="canonical" href="https://desicalc.in/programmatic/rto-tax/andhrapradesh">
+  <link rel="canonical" href="https://desicalc.in/programmatic/rto-tax/andhrapradesh" />
+  <link rel="alternate" hreflang="en" href="https://desicalc.in/programmatic/rto-tax/andhrapradesh" />
+  <link rel="alternate" hreflang="x-default" href="https://desicalc.in/programmatic/rto-tax/andhrapradesh" />
   <meta property="og:title" content="RTO Tax Calculator Andhra Pradesh 2026 | DesiCalc">
   <meta property="og:description" content="Calculate RTO road tax in Andhra Pradesh. Car, bike, EV rates. Free calculator.">
   <meta property="og:url" content="https://desicalc.in/programmatic/rto-tax/andhrapradesh">
@@ -20,7 +22,7 @@
     "@context": "https://schema.org",
     "@type": ["WebApplication", "SoftwareApplication"],
     "name": "RTO Tax Calculator Andhra Pradesh",
-    "url": "https://desicalc.in/tools/rto-tax?state=andhrapradesh",
+    "url": "https://desicalc.in/programmatic/rto-tax/andhrapradesh",
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "All",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
@@ -41,98 +43,293 @@
   </script>
   <link rel="stylesheet" href="/assets/css/tailwind.css">
   <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/common.js"></script>
   <script src="/assets/js/calc-core.js"></script>
-  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
-  <link rel="icon" href="/favicon.ico" sizes="48x48">
-  <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the RTO code for Andhra Pradesh?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Andhra Pradesh uses the AP prefix for all vehicle registrations. Major RTO codes include AP-39 (Visakhapatnam Urban), AP-37 (Guntur), AP-40 (Vijayawada Urban), AP-41 (Kakinada), AP-42 (Tirupati), and AP-43 (Nellore). The state completed reorganisation in 2024 with new RTO codes allocated after the bifurcation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much is road tax for a ₹10 lakh car in AP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a ₹10 lakh petrol car in Andhra Pradesh, the road tax is 12% (₹1,20,000) plus 10% Safety Cess (₹12,000), totalling ₹1,32,000. For a diesel car at the same price, the tax structure is identical at 12% plus cess."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are electric vehicles exempt from road tax in AP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, electric vehicles are fully exempt from road tax in Andhra Pradesh under the state EV policy. This applies to all categories including cars, two-wheelers, and three-wheelers. The exemption is valid for the first registration period."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Safety Cess in Andhra Pradesh?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Safety Cess is an additional 10% charge levied on the road tax amount in Andhra Pradesh. It was introduced to fund road safety initiatives, infrastructure improvements, and accident prevention measures across the state. The cess applies to all vehicle types except EVs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I buy a used vehicle from another state and register it in AP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can transfer a used vehicle from another state to Andhra Pradesh. You need to obtain Form 27 from the original RTO, submit Form 28 for NOC (No Objection Certificate), and then apply for re-registration at the local AP RTO. Road tax is recalculated based on the depreciated value and the applicable AP rates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the HSRP number plate cost in AP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "High-Security Registration Plates (HSRP) in Andhra Pradesh cost ₹400 for four-wheelers and ₹200 for two-wheelers. These plates come with a unique laser-etched code and are mandatory for all vehicles registered after April 2019."
+      }
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="DesiCalc" />
+  <link rel="manifest" href="/site.webmanifest" />
+
   <style>
-    .neighbor-states { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
-    .neighbor-link { display: inline-flex; align-items: center; padding: 0.35rem 0.75rem; background: white; border: 1px solid #e7e5e4; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #78716c; transition: all 0.2s; }
+    .neighbor-states { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.75rem 0; }
+    .neighbor-link { display: inline-flex; align-items: center; padding: 0.35rem 0.75rem; background: white; border: 1px solid #e7e5e4; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #78716c; transition: all 0.2s; text-decoration: none; }
     .neighbor-link:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .neighbor-link.current { border-color: #f59e0b; background: #fffbeb; color: #92400e; }
     .compare-box { background: #fefce8; border: 1px solid #fde047; border-radius: 12px; padding: 1rem; margin: 1.5rem 0; }
-    .compare-box h3 { font-size: 0.875rem; font-weight: 600; color: #92400e; margin-bottom: 0.5rem; }
+    .compare-box h2 { font-size: 0.875rem; font-weight: 600; color: #92400e; margin-bottom: 0.75rem; }
+    .states-grid-footer { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .states-grid-footer a { display: inline-block; padding: 0.2rem 0.55rem; background: white; border: 1px solid #e7e5e4; border-radius: 4px; font-size: 0.7rem; color: #78716c; text-decoration: none; transition: all 0.15s; }
+    .states-grid-footer a:hover { border-color: #f59e0b; color: #92400e; background: #fefce8; }
+    .states-grid-footer a.current { border-color: #f59e0b; background: #fefce8; color: #92400e; font-weight: 600; }
   </style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2207525036040634"
+     crossorigin="anonymous"></script>
 </head>
 <body class="bg-stone-50">
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
     <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
-      <a href="../../../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
+      <a href="/" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
     </div>
   </header>
 
   <main class="max-w-4xl mx-auto px-4 py-8">
     <nav class="text-sm text-stone-500 mb-4">
-      <a href="../../../" class="hover:text-amber-600">Home</a> / 
-      <a href="../../../tools/rto-tax" class="hover:text-amber-600">RTO Tax</a> / 
-      <a href="/programmatic/rto-tax/" class="hover:text-amber-600">All States</a> / 
-      <span class="text-stone-900">Andhra Pradesh</span>
+      <a href="/" class="hover:text-amber-600">Home</a> / <a href="/tools/rto-tax" class="hover:text-amber-600">RTO Tax</a> / <a href="/programmatic/rto-tax/" class="hover:text-amber-600">All States</a> / <span class="text-stone-900">Andhra Pradesh</span>
     </nav>
 
     <h1 class="text-3xl font-bold text-stone-900 mb-2">RTO Tax Calculator Andhra Pradesh 2026</h1>
     <p class="text-stone-500 mb-8">Calculate road tax, registration charges, and on-road price for vehicles in Andhra Pradesh. Updated for 2026.</p>
 
-    
-    <div class="compare-box">
-      <h3>🔗 Compare with Neighboring States</h3>
-      <div class="neighbor-states">
-        <a href="/programmatic/rto-tax/telangana" class="neighbor-link no-underline" title="Compare with Telangana">Telangana</a><a href="/programmatic/rto-tax/tamilnadu" class="neighbor-link no-underline" title="Compare with Tamil Nadu">Tamil Nadu</a><a href="/programmatic/rto-tax/karnataka" class="neighbor-link no-underline" title="Compare with Karnataka">Karnataka</a><a href="/programmatic/rto-tax/odisha" class="neighbor-link no-underline" title="Compare with Odisha">Odisha</a><a href="/programmatic/rto-tax/chhattisgarh" class="neighbor-link no-underline" title="Compare with Chhattisgarh">Chhattisgarh</a>
-      </div>
-      <p class="text-xs text-stone-600 mt-2 mb-0">Click any state to compare RTO road tax rates side-by-side.</p>
-    </div>
-    
 
-    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
-      <div id="calc-placeholder" class="text-center py-8">
-        <p class="text-stone-500 mb-4">Use our interactive RTO tax calculator for Andhra Pradesh</p>
-        <a href="../../../tools/rto-tax?state=andhrapradesh" class="btn btn-primary">Open Calculator &rarr;</a>
+
+    <div class="compare-box">
+      <h3>Compare with Neighboring States</h3>
+      <div class="neighbor-states">
+        <a href="/programmatic/rto-tax/telangana" class="neighbor-link" title="Compare with Telangana">Telangana</a>
+        <a href="/programmatic/rto-tax/tamilnadu" class="neighbor-link" title="Compare with Tamil Nadu">Tamil Nadu</a>
+        <a href="/programmatic/rto-tax/karnataka" class="neighbor-link" title="Compare with Karnataka">Karnataka</a>
+        <a href="/programmatic/rto-tax/odisha" class="neighbor-link" title="Compare with Odisha">Odisha</a>
+        <a href="/programmatic/rto-tax/chhattisgarh" class="neighbor-link" title="Compare with Chhattisgarh">Chhattisgarh</a>
       </div>
+      <p class="text-xs text-stone-600" style="margin:0">Click any state to compare rto tax rates side-by-side.</p>
+    </div>
     </div>
 
     <section class="mb-8">
       <h2 class="text-2xl font-bold text-stone-900 mb-4">Andhra Pradesh RTO Road Tax Rates 2026</h2>
-      <p class="text-stone-600 mb-4">Estimated range: <strong class="text-stone-900">12-14%</strong> (varies by vehicle type, fuel, price, and category). Use the calculator above for exact figures.</p>
-    </section>
-
-    <section class="mb-8">
-      <h2 class="text-lg font-bold mb-3">All States Quick Access</h2>
-      <div class="flex flex-wrap gap-2">
-<a href="/programmatic/rto-tax/andhrapradesh" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline border-amber-500 bg-amber-50 font-semibold"><span class="font-medium text-stone-900">Andhra Pradesh</span></a>
-<a href="/programmatic/rto-tax/arunachalpradesh" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline border-stone-200"><span class="font-medium text-stone-900">Arunachal Pradesh</span></a>
-<a href="/programmatic/rto-tax/assam" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline border-stone-200"><span class="font-medium text-stone-900">Assam</span></a>
-<a href="/programmatic/rto-tax/bihar" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline border-stone-200"><span class="font-medium text-stone-900">Bihar</span></a>
-<a href="/programmatic/rto-tax/chhattisgarh" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline border-stone-200"><span class="font-medium text-stone-900">Chhattisgarh</span></a>
-<a href="/programmatic/rto-tax/delhi" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline border-stone-200"><span class="font-medium text-stone-900">Delhi (NCT)</span></a>
-<a href="/programmatic/rto-tax/goa" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline border-stone-200"><span class="font-medium text-stone-900">Goa</span></a>
-<a href="/programmatic/rto-tax/gujarat" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline border-stone-200"><span class="font-medium text-stone-900">Gujarat</span></a>
-<a href="/programmatic/rto-tax/haryana" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline border-stone-200"><span class="font-medium text-stone-900">Haryana</span></a>
-<a href="/programmatic/rto-tax/himachalpradesh" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline border-stone-200"><span class="font-medium text-stone-900">Himachal Pradesh</span></a>
-<a href="/programmatic/rto-tax/jharkhand" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline border-stone-200"><span class="font-medium text-stone-900">Jharkhand</span></a>
-<a href="/programmatic/rto-tax/karnataka" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline border-stone-200"><span class="font-medium text-stone-900">Karnataka</span></a>
-<a href="/programmatic/rto-tax/kerala" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline border-stone-200"><span class="font-medium text-stone-900">Kerala</span></a>
-<a href="/programmatic/rto-tax/madhyapradesh" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline border-stone-200"><span class="font-medium text-stone-900">Madhya Pradesh</span></a>
-<a href="/programmatic/rto-tax/maharashtra" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline border-stone-200"><span class="font-medium text-stone-900">Maharashtra</span></a>
-<a href="/programmatic/rto-tax/manipur" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline border-stone-200"><span class="font-medium text-stone-900">Manipur</span></a>
-<a href="/programmatic/rto-tax/meghalaya" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline border-stone-200"><span class="font-medium text-stone-900">Meghalaya</span></a>
-<a href="/programmatic/rto-tax/mizoram" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline border-stone-200"><span class="font-medium text-stone-900">Mizoram</span></a>
-<a href="/programmatic/rto-tax/nagaland" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline border-stone-200"><span class="font-medium text-stone-900">Nagaland</span></a>
-<a href="/programmatic/rto-tax/odisha" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline border-stone-200"><span class="font-medium text-stone-900">Odisha</span></a>
-<a href="/programmatic/rto-tax/punjab" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline border-stone-200"><span class="font-medium text-stone-900">Punjab</span></a>
-<a href="/programmatic/rto-tax/rajasthan" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline border-stone-200"><span class="font-medium text-stone-900">Rajasthan</span></a>
-<a href="/programmatic/rto-tax/sikkim" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline border-stone-200"><span class="font-medium text-stone-900">Sikkim</span></a>
-<a href="/programmatic/rto-tax/tamilnadu" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline border-stone-200"><span class="font-medium text-stone-900">Tamil Nadu</span></a>
-<a href="/programmatic/rto-tax/telangana" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline border-stone-200"><span class="font-medium text-stone-900">Telangana</span></a>
-<a href="/programmatic/rto-tax/tripura" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline border-stone-200"><span class="font-medium text-stone-900">Tripura</span></a>
-<a href="/programmatic/rto-tax/uttarpradesh" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline border-stone-200"><span class="font-medium text-stone-900">Uttar Pradesh</span></a>
-<a href="/programmatic/rto-tax/uttarakhand" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline border-stone-200"><span class="font-medium text-stone-900">Uttarakhand</span></a>
-<a href="/programmatic/rto-tax/westbengal" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline border-stone-200"><span class="font-medium text-stone-900">West Bengal</span></a>
+      <div class="overflow-x-auto bg-white rounded-xl border border-stone-200">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-stone-100 text-stone-700">
+              <th class="text-left p-3 font-semibold">Vehicle Type</th>
+              <th class="text-left p-3 font-semibold">Tax Rate</th>
+              <th class="text-left p-3 font-semibold">Registration Fee</th>
+              <th class="text-left p-3 font-semibold">HSRP Charge</th>
+              <th class="text-left p-3 font-semibold">Safety Cess</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">Petrol/CNG &le; 10 Lakh</td>
+              <td class="p-3">12%</td>
+              <td class="p-3">₹600</td>
+              <td class="p-3">₹400</td>
+              <td class="p-3">10%</td>
+            </tr>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">Petrol/CNG &gt; 10 Lakh</td>
+              <td class="p-3">14%</td>
+              <td class="p-3">₹600</td>
+              <td class="p-3">₹400</td>
+              <td class="p-3">10%</td>
+            </tr>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">Diesel &le; 10 Lakh</td>
+              <td class="p-3">12%</td>
+              <td class="p-3">₹600</td>
+              <td class="p-3">₹400</td>
+              <td class="p-3">10%</td>
+            </tr>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">Diesel &gt; 10 Lakh</td>
+              <td class="p-3">14%</td>
+              <td class="p-3">₹600</td>
+              <td class="p-3">₹400</td>
+              <td class="p-3">10%</td>
+            </tr>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">Electric Vehicle (EV)</td>
+              <td class="p-3">Full Exemption (0%)</td>
+              <td class="p-3">₹600</td>
+              <td class="p-3">₹400</td>
+              <td class="p-3">N/A</td>
+            </tr>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">Two-Wheeler &le; 2 Lakh</td>
+              <td class="p-3">8%</td>
+              <td class="p-3">₹300</td>
+              <td class="p-3">₹200</td>
+              <td class="p-3">10%</td>
+            </tr>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">Two-Wheeler &gt; 2 Lakh</td>
+              <td class="p-3">10%</td>
+              <td class="p-3">₹300</td>
+              <td class="p-3">₹200</td>
+              <td class="p-3">10%</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
-  </main>
 
-  <section class="ad-slot-footer mb-4" data-ad-slot="footer_main"></section>
+    <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
+      <div id="calc-placeholder" class="text-center py-8">
+        <p class="text-stone-500 mb-4">Use our interactive RTO tax calculator for Andhra Pradesh</p>
+        <a href="/tools/rto-tax?state=andhrapradesh" class="btn btn-primary">Open Calculator &rarr;</a>
+      </div>
+    </div>
+
+    <section class="prose max-w-none mb-8">
+      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Vehicle Registration Process in Andhra Pradesh</h2>
+      <p>Registering a vehicle in Andhra Pradesh involves several steps handled by the State Transport Department (AP RTO). Whether you purchase a new car, bike, or commercial vehicle, you must complete registration within 30 days of purchase to avoid penalties.</p>
+      <p>The process begins with the dealer submitting Form 20 on your behalf for temporary registration. You then visit the nearest RTO office with the required documents for permanent registration. The RTO verifies the vehicle, assigns a registration number (AP-XX-XXXX format), and issues the Registration Certificate (RC).</p>
+
+      <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Required Documents for Registration</h3>
+      <ul>
+        <li>Form 20 (Application for Registration)</li>
+        <li>Form 21 (Certificate of Sale from Dealer)</li>
+        <li>Form 22 (Roadworthiness Certificate)</li>
+        <li>Valid Insurance Policy (Third-party or Comprehensive)</li>
+        <li>Address Proof (Aadhaar, Voter ID, Passport, Utility Bill)</li>
+        <li>Age Proof (Aadhaar, PAN, Birth Certificate)</li>
+        <li>Invoice and Sales Receipt from Dealer</li>
+        <li>PUC (Pollution Under Control) Certificate</li>
+        <li>HSRP number plate order confirmation</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">How Road Tax Is Calculated in Andhra Pradesh</h2>
+      <p>Andhra Pradesh uses a slab-based road tax system for both petrol and diesel vehicles. If the ex-showroom price is under ₹10 lakh, the tax is 12% of the vehicle cost. For vehicles priced above ₹10 lakh, the tax rate increases to 14%. An additional Safety Cess of 10% is levied on the total tax amount. This makes AP one of the higher-tax states in India for vehicle registration.</p>
+      <p>For example, a petrol car priced at ₹8 lakh attracts 12% tax (₹96,000) plus 10% Safety Cess (₹9,600), totaling ₹1,05,600 in road tax alone. A ₹15 lakh car attracts 14% tax (₹2,10,000) plus ₹21,000 Safety Cess, totaling ₹2,31,000.</p>
+
+      <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">EV Exemption in Andhra Pradesh</h3>
+      <p>Andhra Pradesh offers a full road tax exemption for electric vehicles (EVs) as part of its EV policy to promote green mobility. This includes battery electric cars, two-wheelers, and three-wheelers. Buyers of EVs in AP save significantly on upfront costs since no life tax is payable. The EV policy also supports charging infrastructure development across major cities like Visakhapatnam, Vijayawada, Guntur, and Tirupati.</p>
+
+      <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Two-Wheeler Tax Rates</h3>
+      <p>Motorcycles and scooters in Andhra Pradesh are taxed at a lower rate. Bikes priced up to ₹2 lakh attract 8% road tax, while those above ₹2 lakh are taxed at 10%. The Safety Cess of 10% applies to two-wheelers as well. This makes AP two-wheeler registration moderately expensive compared to other states.</p>
+
+          </section>
+
+      <section class="mt-10 max-w-2xl">
+        <h2 class="text-lg font-bold mb-3">FAQs</h2>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>What is the RTO code for Andhra Pradesh?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">Andhra Pradesh uses the AP prefix for all vehicle registrations. Major RTO codes include AP-39 (Visakhapatnam Urban), AP-37 (Guntur), AP-40 (Vijayawada Urban), AP-41 (Kakinada), AP-42 (Tirupati), and AP-43 (Nellore). The state completed reorganisation in 2024 with new RTO codes allocated after the bifurcation.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>How much is road tax for a ₹10 lakh car in AP?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">For a ₹10 lakh petrol car in Andhra Pradesh, the road tax is 12% (₹1,20,000) plus 10% Safety Cess (₹12,000), totalling ₹1,32,000. For a diesel car at the same price, the tax structure is identical at 12% plus cess.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>Are electric vehicles exempt from road tax in AP?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">Yes, electric vehicles are fully exempt from road tax in Andhra Pradesh under the state EV policy. This applies to all categories including cars, two-wheelers, and three-wheelers. The exemption is valid for the first registration period.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>What is Safety Cess in Andhra Pradesh?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">Safety Cess is an additional 10% charge levied on the road tax amount in Andhra Pradesh. It was introduced to fund road safety initiatives, infrastructure improvements, and accident prevention measures across the state. The cess applies to all vehicle types except EVs.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>Can I buy a used vehicle from another state and register it in AP?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">Yes, you can transfer a used vehicle from another state to Andhra Pradesh. You need to obtain Form 27 from the original RTO, submit Form 28 for NOC (No Objection Certificate), and then apply for re-registration at the local AP RTO. Road tax is recalculated based on the depreciated value and the applicable AP rates.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>What is the HSRP number plate cost in AP?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">High-Security Registration Plates (HSRP) in Andhra Pradesh cost ₹400 for four-wheelers and ₹200 for two-wheelers. These plates come with a unique laser-etched code and are mandatory for all vehicles registered after April 2019.</div>
+        </div>
+      </section>
+  
+    <section class="mt-12">
+      <h2 class="text-lg font-bold mb-3">All States</h2>
+      <div class="states-grid-footer">
+        <a href="andhrapradesh" class="current">Andhra Pradesh</a>
+        <a href="arunachalpradesh">Arunachal Pradesh</a>
+        <a href="assam">Assam</a>
+        <a href="bihar">Bihar</a>
+        <a href="chhattisgarh">Chhattisgarh</a>
+        <a href="delhi">Delhi (NCT)</a>
+        <a href="goa">Goa</a>
+        <a href="gujarat">Gujarat</a>
+        <a href="haryana">Haryana</a>
+        <a href="himachalpradesh">Himachal Pradesh</a>
+        <a href="jharkhand">Jharkhand</a>
+        <a href="karnataka">Karnataka</a>
+        <a href="kerala">Kerala</a>
+        <a href="madhyapradesh">Madhya Pradesh</a>
+        <a href="maharashtra">Maharashtra</a>
+        <a href="manipur">Manipur</a>
+        <a href="meghalaya">Meghalaya</a>
+        <a href="mizoram">Mizoram</a>
+        <a href="nagaland">Nagaland</a>
+        <a href="odisha">Odisha</a>
+        <a href="punjab">Punjab</a>
+        <a href="rajasthan">Rajasthan</a>
+        <a href="sikkim">Sikkim</a>
+        <a href="tamilnadu">Tamil Nadu</a>
+        <a href="telangana">Telangana</a>
+        <a href="tripura">Tripura</a>
+        <a href="uttarpradesh">Uttar Pradesh</a>
+        <a href="uttarakhand">Uttarakhand</a>
+        <a href="westbengal">West Bengal</a>
+      </div>
+    </section>
+</main>
+
+  <ins class="adsbygoogle ad-slot-footer mb-4" style="display:block;min-height:90px" data-ad-client="ca-pub-2207525036040634" data-ad-slot="4037844123" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
   <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
-    <div class="max-w-5xl mx-auto px-4"><span class="text-stone-900 font-semibold">DesiCalc</span> &copy; 2026. Free Indian tax calculators.</div>
+    <div class="max-w-5xl mx-auto px-4">&copy; 2026 DesiCalc. Free Indian tax calculators.</div>
   </footer>
+  <script src="/assets/js/ad.js"></script>
 </body>
 </html>

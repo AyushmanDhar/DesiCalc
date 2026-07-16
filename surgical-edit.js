@@ -94,7 +94,7 @@ function surgicalUpdate(filePath, slug, category) {
     </div>`;
 
     // Insert after the subtitle paragraph (mb-8 class)
-    const subtitleRegex = /<p class="text-stone-500 mb-8">[^<]*<\/p>\s*\n/;
+    const subtitleRegex = /<p class="text-stone-500 mb-8">[\s\S]*?<\/p>\s*\n/;
     content = content.replace(subtitleRegex, (match) => match + compareBox);
   }
 
