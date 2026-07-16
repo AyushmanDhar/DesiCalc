@@ -1,2 +1,5 @@
+# Redirect old /programmatic/ URLs to new clean paths
+/programmatic/* /:splat 301
+
 # Redirect HTTP to HTTPS
 http://desicalc.in/* https://desicalc.in/:splat 301
