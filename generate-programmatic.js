@@ -22,7 +22,7 @@ function getNeighbors(slug) {
 function generateStampDutyIndex() {
   const statesHtml = STATES.map(state => {
     const rates = STAMP_DUTY_RATES[state.slug];
-    return `<a href="${state.slug}.html" class="state-card no-underline">
+    return `<a href="/programmatic/stamp-duty/${state.slug}" class="state-card no-underline">
       <div class="state-name">${state.name}</div>
       <div class="state-rates">
         <span class="rate-badge male" title="Male">♂ ${rates.male}</span>
@@ -150,7 +150,7 @@ ${statesHtml}
 function generateRTOIndex() {
   const statesHtml = STATES.map(state => {
     const rate = RTO_RATES[state.slug];
-    return `<a href="${state.slug}.html" class="state-card no-underline">
+    return `<a href="/programmatic/rto-tax/${state.slug}" class="state-card no-underline">
       <div class="state-name">${state.name}</div>
       <div class="state-rate">${rate}</div>
     </a>`;
@@ -289,7 +289,7 @@ function generateStampDutyStatePage(slug) {
   const extra = STATE_EXTRA[slug];
   
   const neighborLinks = neighbors.map(n => 
-    `<a href="../${n.slug}.html" class="neighbor-link no-underline" title="Compare with ${n.name}">${n.name}</a>`
+    `<a href="/programmatic/stamp-duty/${n.slug}" class="neighbor-link no-underline" title="Compare with ${n.name}">${n.name}</a>`
   ).join('');
 
   const pageTitle = extra ? extra.title : `Stamp Duty Calculator ${state.name} 2026 | DesiCalc`;
@@ -382,7 +382,7 @@ function generateStampDutyStatePage(slug) {
     <nav class="text-sm text-stone-500 mb-4">
       <a href="../../../" class="hover:text-amber-600">Home</a> / 
       <a href="../../../tools/stamp-duty" class="hover:text-amber-600">Stamp Duty</a> / 
-      <a href="../" class="hover:text-amber-600">All States</a> / 
+      <a href="/programmatic/stamp-duty/" class="hover:text-amber-600">All States</a> / 
       <span class="text-stone-900">${state.name}</span>
     </nav>
 
@@ -485,7 +485,7 @@ function generateStampDutyStatePage(slug) {
     <section class="mt-10 mb-8">
       <h2 class="text-lg font-bold mb-3">All States Quick Access</h2>
       <div class="flex flex-wrap gap-2">
-${STATES.map(s => `<a href="../${s.slug}.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs ${s.slug === slug ? 'border-amber-400 bg-amber-50 font-medium' : 'no-underline'}"><span class="font-medium text-stone-900">${s.name}</span></a>`).join('\n')}
+${STATES.map(s => `<a href="/programmatic/stamp-duty/${s.slug}" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline ${s.slug === slug ? 'border-amber-500 bg-amber-50 font-semibold' : 'border-stone-200'}"><span class="font-medium text-stone-900">${s.name}</span></a>`).join('\n')}
       </div>
     </section>
   </main>
@@ -509,7 +509,7 @@ function generateRTOStatePage(slug) {
   const neighbors = getNeighbors(slug);
   
   const neighborLinks = neighbors.map(n => 
-    `<a href="../${n.slug}.html" class="neighbor-link no-underline" title="Compare with ${n.name}">${n.name}</a>`
+    `<a href="/programmatic/rto-tax/${n.slug}" class="neighbor-link no-underline" title="Compare with ${n.name}">${n.name}</a>`
   ).join('');
 
   return `<!DOCTYPE html>
@@ -578,7 +578,7 @@ function generateRTOStatePage(slug) {
     <nav class="text-sm text-stone-500 mb-4">
       <a href="../../../" class="hover:text-amber-600">Home</a> / 
       <a href="../../../tools/rto-tax" class="hover:text-amber-600">RTO Tax</a> / 
-      <a href="../" class="hover:text-amber-600">All States</a> / 
+      <a href="/programmatic/rto-tax/" class="hover:text-amber-600">All States</a> / 
       <span class="text-stone-900">${state.name}</span>
     </nav>
 
@@ -610,7 +610,7 @@ function generateRTOStatePage(slug) {
     <section class="mb-8">
       <h2 class="text-lg font-bold mb-3">All States Quick Access</h2>
       <div class="flex flex-wrap gap-2">
-${STATES.map(s => `<a href="../${s.slug}.html" class="inline-flex items-center gap-1.5 bg-white rounded-full border border-stone-200 px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs ${s.slug === slug ? 'border-amber-400 bg-amber-50 font-medium' : 'no-underline'}"><span class="font-medium text-stone-900">${s.name}</span></a>`).join('\n')}
+${STATES.map(s => `<a href="/programmatic/rto-tax/${s.slug}" class="inline-flex items-center gap-1.5 bg-white rounded-full border px-3 py-1.5 hover:border-amber-300 hover:bg-amber-50 transition text-xs no-underline ${s.slug === slug ? 'border-amber-500 bg-amber-50 font-semibold' : 'border-stone-200'}"><span class="font-medium text-stone-900">${s.name}</span></a>`).join('\n')}
       </div>
     </section>
   </main>
@@ -629,19 +629,20 @@ fs.writeFileSync(path.join(STAMP_DIR, 'index.html'), generateStampDutyIndex());
 fs.writeFileSync(path.join(RTO_DIR, 'index.html'), generateRTOIndex());
 console.log('Created index pages for stamp-duty and rto-tax');
 
-// Update state pages with cross-links
+// Generate/update state pages — only overwrite if new file or has custom content in STATE_EXTRA
+// (Otherwise existing rich content added by surgical-edit.js would be lost)
 STATES.forEach(state => {
   const stampPath = path.join(STAMP_DIR, `${state.slug}.html`);
   const rtoPath = path.join(RTO_DIR, `${state.slug}.html`);
   
-  if (fs.existsSync(stampPath)) {
+  if (!fs.existsSync(stampPath) || STATE_EXTRA[state.slug]) {
     fs.writeFileSync(stampPath, generateStampDutyStatePage(state.slug));
-    console.log(`Updated stamp-duty/${state.slug}.html`);
+    console.log(`Generated stamp-duty/${state.slug}.html`);
   }
   
-  if (fs.existsSync(rtoPath)) {
+  if (!fs.existsSync(rtoPath) || STATE_EXTRA[state.slug]) {
     fs.writeFileSync(rtoPath, generateRTOStatePage(state.slug));
-    console.log(`Updated rto-tax/${state.slug}.html`);
+    console.log(`Generated rto-tax/${state.slug}.html`);
   }
 });
 

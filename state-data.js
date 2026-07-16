@@ -59,7 +59,7 @@ const STAMP_DUTY_RATES = {
   tamilnadu: { male: '6%', female: '6%', joint: '6%', reg: '4%' },
   telangana: { male: '6%', female: '5%', joint: '5.5%', reg: '1%' },
   tripura: { male: '5%', female: '4%', joint: '4.5%', reg: '1%' },
-  uttarpradesh: { male: '7%', female: '6%', joint: '6.5%', reg: '1%' } // Note: female cap up to 1Cr,
+  uttarpradesh: { male: '7%', female: '6%', joint: '6.5%', reg: '1%' }, // Note: female cap up to 1Cr
   uttarakhand: { male: '6%', female: '5%', joint: '5.5%', reg: '1%' },
   westbengal: { male: '6%', female: '5%', joint: '5.5%', reg: '1.5% (+1.5% cess)' },
 };

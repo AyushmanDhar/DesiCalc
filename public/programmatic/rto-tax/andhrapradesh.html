@@ -41,10 +41,10 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="../../assets/css/tailwind.css">
-  <link rel="stylesheet" href="../../assets/css/style.css">
-  <script src="../../assets/js/common.js"></script>
-  <script src="../../assets/js/calc-core.js"></script>
+  <link rel="stylesheet" href="/assets/css/tailwind.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/common.js"></script>
+  <script src="/assets/js/calc-core.js"></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -128,28 +128,31 @@
 <body class="bg-stone-50">
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
     <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
-      <a href="../../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
+      <a href="/" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
     </div>
   </header>
 
   <main class="max-w-4xl mx-auto px-4 py-8">
     <nav class="text-sm text-stone-500 mb-4">
-      <a href="../../" class="hover:text-amber-600">Home</a> / <a href="../../tools/rto-tax" class="hover:text-amber-600">RTO Tax</a> / <a href="../" class="hover:text-amber-600">All States</a> / <span class="text-stone-900">Andhra Pradesh</span>
+      <a href="/" class="hover:text-amber-600">Home</a> / <a href="/tools/rto-tax" class="hover:text-amber-600">RTO Tax</a> / <a href="/programmatic/rto-tax/" class="hover:text-amber-600">All States</a> / <span class="text-stone-900">Andhra Pradesh</span>
     </nav>
 
     <h1 class="text-3xl font-bold text-stone-900 mb-2">RTO Tax Calculator Andhra Pradesh 2026</h1>
     <p class="text-stone-500 mb-8">Calculate road tax, registration charges, and on-road price for vehicles in Andhra Pradesh. Updated for 2026.</p>
 
 
+
     <div class="compare-box">
-      <h2>Check neighboring state rates</h2>
+      <h3>Compare with Neighboring States</h3>
       <div class="neighbor-states">
-        <a href="telangana" class="neighbor-link">Telangana</a>
-        <a href="tamilnadu" class="neighbor-link">Tamil Nadu</a>
-        <a href="karnataka" class="neighbor-link">Karnataka</a>
-        <a href="odisha" class="neighbor-link">Odisha</a>
-        <a href="chhattisgarh" class="neighbor-link">Chhattisgarh</a>
+        <a href="/programmatic/rto-tax/telangana" class="neighbor-link" title="Compare with Telangana">Telangana</a>
+        <a href="/programmatic/rto-tax/tamilnadu" class="neighbor-link" title="Compare with Tamil Nadu">Tamil Nadu</a>
+        <a href="/programmatic/rto-tax/karnataka" class="neighbor-link" title="Compare with Karnataka">Karnataka</a>
+        <a href="/programmatic/rto-tax/odisha" class="neighbor-link" title="Compare with Odisha">Odisha</a>
+        <a href="/programmatic/rto-tax/chhattisgarh" class="neighbor-link" title="Compare with Chhattisgarh">Chhattisgarh</a>
       </div>
+      <p class="text-xs text-stone-600" style="margin:0">Click any state to compare rto tax rates side-by-side.</p>
+    </div>
     </div>
 
     <section class="mb-8">
@@ -223,7 +226,7 @@
     <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
       <div id="calc-placeholder" class="text-center py-8">
         <p class="text-stone-500 mb-4">Use our interactive RTO tax calculator for Andhra Pradesh</p>
-        <a href="../../tools/rto-tax?state=andhrapradesh" class="btn btn-primary">Open Calculator &rarr;</a>
+        <a href="/tools/rto-tax?state=andhrapradesh" class="btn btn-primary">Open Calculator &rarr;</a>
       </div>
     </div>
 
@@ -327,6 +330,6 @@
   <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
     <div class="max-w-5xl mx-auto px-4">&copy; 2026 DesiCalc. Free Indian tax calculators.</div>
   </footer>
-  <script src="../../assets/js/ad.js"></script>
+  <script src="/assets/js/ad.js"></script>
 </body>
 </html>
