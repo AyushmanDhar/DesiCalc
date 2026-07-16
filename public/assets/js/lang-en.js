@@ -176,7 +176,7 @@ window.DESICALC_LANG = {
   'contact.email.title': 'Email',
   'contact.email.desc': 'Write to us directly:',
   'contact.github.title': 'GitHub',
-  'contact.github.desc': 'Report bugs or suggest features on our GitHub repository.',
+  'contact.github.desc': 'Report bugs or suggest features on our <a href="https://github.com/AyushmanDhar/DesiCalc" class="text-amber-600 underline hover:text-amber-700">GitHub repository</a>.',
 
   'onboarding.title': 'Welcome to DesiCalc',
   'onboarding.step1': 'Fill in your numbers — results update instantly',
