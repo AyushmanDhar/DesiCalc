@@ -78,8 +78,8 @@ const STAMP_DUTY_RATES = {
   },
   madhyapradesh: {
     name: 'Madhya Pradesh',
-    rate: { male: 5, female: 4, joint_ff: 4, joint_mm: 5, joint_mf: 4.5 },
-    registration: { rate: 1, cap: null },
+    rate: { male: 7.5, female: 7.5, joint_ff: 7.5, joint_mm: 7.5, joint_mf: 7.5 },
+    registration: { rate: 3, cap: null },
   },
   maharashtra: {
     name: 'Maharashtra',
@@ -130,7 +130,7 @@ const STAMP_DUTY_RATES = {
   },
   tamilnadu: {
     name: 'Tamil Nadu',
-    rate: { male: 7, female: 7, joint_ff: 7, joint_mm: 7, joint_mf: 7 },
+    rate: { male: 7, female: 6, joint_ff: 6, joint_mm: 7, joint_mf: 6.5 },
     registration: { rate: 4, cap: null },
     registrationWomen: { rate: 3, maxPropertyValue: 1000000 },
   },
