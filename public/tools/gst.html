@@ -239,12 +239,12 @@
         <h2 class="text-base font-bold mb-2">Result</h2>
 
         <div id="resultRegular" class="result-card fade-in" aria-live="polite">
-          <div class="result-row" id="rRegBaseRow"><span class="result-label">Base Amount</span><span class="result-value" id="rRegBase">₹0</span></div>
-          <div class="result-row"><span class="result-label">GST Amount</span><span class="result-value" id="rRegGst">₹0</span></div>
+          <div class="result-row" id="rRegFirstRow"><span class="result-label" id="rRegFirstLabel">Base Amount</span><span class="result-value" id="rRegFirst">₹0</span></div>
+          <div class="result-row"><span class="result-label" id="rRegGstLabel">GST Amount</span><span class="result-value" id="rRegGst">₹0</span></div>
           <div class="result-row" id="rRegCgstRow"><span class="result-label">CGST</span><span class="result-value" id="rRegCgst">₹0</span></div>
           <div class="result-row" id="rRegSgstRow"><span class="result-label">SGST</span><span class="result-value" id="rRegSgst">₹0</span></div>
           <div class="result-row" id="rRegIgstRow" style="display:none"><span class="result-label">IGST</span><span class="result-value" id="rRegIgst">₹0</span></div>
-          <div class="result-row total"><span class="result-label">Total Amount (incl. GST)</span><span class="result-value" id="rRegTotal">₹0</span></div>
+          <div class="result-row total" id="rRegLastRow"><span class="result-label" id="rRegLastLabel">Total Amount (incl. GST)</span><span class="result-value" id="rRegLast">₹0</span></div>
         </div>
 
         <div id="resultComposition" class="result-card fade-in" aria-live="polite" style="display:none">
@@ -453,8 +453,10 @@
       var sgst = isIntra ? gst / 2 : 0;
       var igst = isIntra ? 0 : gst;
 
-      document.getElementById('rRegBaseRow').querySelector('.result-label').innerText = calcType === 'add' ? 'Base Amount' : 'Base Amount (before GST)';
-      animateValue(document.getElementById('rRegBase'), Math.round(base));
+      document.getElementById('rRegFirstLabel').innerText = calcType === 'add' ? 'Base Amount' : 'Total Amount entered';
+      animateValue(document.getElementById('rRegFirst'), calcType === 'add' ? Math.round(base) : Math.round(total));
+
+      document.getElementById('rRegGstLabel').innerText = calcType === 'add' ? 'GST Amount' : 'GST Amount included';
       animateValue(document.getElementById('rRegGst'), Math.round(gst));
 
       var cgstRow = document.getElementById('rRegCgstRow');
@@ -470,9 +472,8 @@
         animateValue(document.getElementById('rRegIgst'), Math.round(igst));
       }
 
-      var totalLabel = document.getElementById('rRegTotal').parentElement.querySelector('.result-label');
-      totalLabel.innerText = calcType === 'add' ? 'Total Amount (incl. GST)' : 'Total Amount entered';
-      animateValue(document.getElementById('rRegTotal'), Math.round(total));
+      document.getElementById('rRegLastLabel').innerText = calcType === 'add' ? 'Total Amount (incl. GST)' : 'Base Amount (before GST)';
+      animateValue(document.getElementById('rRegLast'), calcType === 'add' ? Math.round(total) : Math.round(base));
 
       staggerReveal('resultRegular');
       syncUrlParams({ gstAmount: amount, gstRate: rate, gstCalcType: calcType, gstTxType: txType });
