@@ -146,8 +146,8 @@
         <p class="text-stone-500 text-sm mb-6">Calculate GST at updated 2026 rates (0%, 5%, 18%, 40%). Includes Composition Scheme calculator for small businesses.</p>
 
         <div class="flex gap-1 bg-stone-100 rounded-lg p-1 mb-6">
-          <button id="tabRegular" class="flex-1 px-4 py-2 text-sm font-medium rounded-md border-none cursor-pointer transition-all duration-150 bg-white text-amber-600 shadow-sm" onclick="switchMode('regular')">Regular GST</button>
-          <button id="tabComposition" class="flex-1 px-4 py-2 text-sm font-medium rounded-md border-none cursor-pointer transition-all duration-150 bg-transparent text-stone-500 hover:text-stone-900" onclick="switchMode('composition')">Composition Scheme</button>
+          <button id="tabRegular" class="flex-1 px-4 py-2 text-sm font-medium rounded-md border-none cursor-pointer transition-all duration-150 bg-white text-amber-600 shadow-sm" onclick="switchMode('regular')">🧾 Regular GST</button>
+          <button id="tabComposition" class="flex-1 px-4 py-2 text-sm font-medium rounded-md border-none cursor-pointer transition-all duration-150 bg-transparent text-stone-500 hover:text-stone-900" onclick="switchMode('composition')">🏪 Composition Scheme</button>
         </div>
 
         <form id="calc-form" onsubmit="return false" class="space-y-4">
@@ -421,19 +421,31 @@
 
     function switchMode(mode) {
       currentMode = mode;
+      var section = document.getElementById(mode === 'regular' ? 'regularSection' : 'compositionSection');
+      var result = document.getElementById(mode === 'regular' ? 'resultRegular' : 'resultComposition');
       document.getElementById('regularSection').style.display = mode === 'regular' ? 'block' : 'none';
       document.getElementById('compositionSection').style.display = mode === 'composition' ? 'block' : 'none';
       document.getElementById('resultRegular').style.display = mode === 'regular' ? 'block' : 'none';
       document.getElementById('resultComposition').style.display = mode === 'composition' ? 'block' : 'none';
       document.getElementById('compCallouts').style.display = mode === 'composition' ? 'block' : 'none';
+      section.classList.remove('fade-in');
+      void section.offsetWidth;
+      section.classList.add('fade-in');
+      result.classList.remove('fade-in');
+      void result.offsetWidth;
+      result.classList.add('fade-in');
       var tabR = document.getElementById('tabRegular');
       var tabC = document.getElementById('tabComposition');
       if (mode === 'regular') {
         tabR.className = 'flex-1 px-4 py-2 text-sm font-medium rounded-md border-none cursor-pointer transition-all duration-150 bg-white text-amber-600 shadow-sm';
         tabC.className = 'flex-1 px-4 py-2 text-sm font-medium rounded-md border-none cursor-pointer transition-all duration-150 bg-transparent text-stone-500 hover:text-stone-900';
+        tabR.style.transform = 'scale(0.96)';
+        setTimeout(function(){ tabR.style.transform = ''; }, 100);
       } else {
         tabC.className = 'flex-1 px-4 py-2 text-sm font-medium rounded-md border-none cursor-pointer transition-all duration-150 bg-white text-amber-600 shadow-sm';
         tabR.className = 'flex-1 px-4 py-2 text-sm font-medium rounded-md border-none cursor-pointer transition-all duration-150 bg-transparent text-stone-500 hover:text-stone-900';
+        tabC.style.transform = 'scale(0.96)';
+        setTimeout(function(){ tabC.style.transform = ''; }, 100);
       }
       if (mode === 'regular') calcRegular(); else calcComposition();
     }
