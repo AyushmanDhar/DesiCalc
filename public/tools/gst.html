@@ -254,7 +254,11 @@
           <div class="result-row"><span class="result-label">Quarterly Tax Payable</span><span class="result-value" id="rCompQuarterly">₹0</span></div>
           <div class="result-row"><span class="result-label">CGST Component</span><span class="result-value" id="rCompCgst">₹0</span></div>
           <div class="result-row"><span class="result-label">SGST Component</span><span class="result-value" id="rCompSgst">₹0</span></div>
-          <div class="result-row" id="rCompComparisonRow" style="display:none"><span class="result-label">Comparison with Regular GST</span><span class="result-value" id="rCompComparison"></span></div>
+        </div>
+
+        <div id="rCompComparisonBlock" style="display:none">
+          <h3 class="text-sm font-bold mb-1 mt-4">Composition vs Regular GST</h3>
+          <p class="text-sm text-stone-700" id="rCompComparisonText"></p>
         </div>
 
         <ins class="adsbygoogle ad-slot-in-content mt-4" style="display:block;min-height:90px" data-ad-client="ca-pub-2207525036040634" data-ad-slot="4037844123" data-ad-format="auto" data-full-width-responsive="true"></ins>
@@ -414,6 +418,7 @@
       document.getElementById('resultRegular').style.display = mode === 'regular' ? 'block' : 'none';
       document.getElementById('resultComposition').style.display = mode === 'composition' ? 'block' : 'none';
       document.getElementById('compCallouts').style.display = mode === 'composition' ? 'block' : 'none';
+      document.getElementById('rCompComparisonBlock').style.display = 'none';
       section.classList.remove('fade-in');
       void section.offsetWidth;
       section.classList.add('fade-in');
@@ -524,22 +529,22 @@
       animateValue(document.getElementById('rCompCgst'), Math.round(halfCgst));
       animateValue(document.getElementById('rCompSgst'), Math.round(halfSgst));
 
-      var cmpRow = document.getElementById('rCompComparisonRow');
-      var cmpEl = document.getElementById('rCompComparison');
+      var cmpBlock = document.getElementById('rCompComparisonBlock');
+      var cmpText = document.getElementById('rCompComparisonText');
       if (eligible && business === 'trader') {
         var regularGstRate = 18;
         var regularAnnual = turnover * (regularGstRate / 100);
         var savings = regularAnnual - annualTax;
-        cmpEl.innerHTML = 'Under regular GST at ' + regularGstRate + '%, you would pay <strong>' + formatINR(Math.round(regularAnnual)) + '</strong> annually. Composition scheme saves you <strong>' + formatINR(Math.round(savings)) + '</strong>.';
-        cmpRow.style.display = '';
+        cmpText.innerHTML = 'Under regular GST you would pay <strong>' + formatINR(Math.round(regularAnnual)) + '</strong> on taxable value. Composition saves you <strong>' + formatINR(Math.round(savings)) + '</strong> annually on tax — but you lose ITC on purchases and cannot make inter-state sales. Best if you sell to end consumers.';
+        cmpBlock.style.display = 'block';
       } else if (eligible && business === 'restaurant') {
-        cmpEl.innerHTML = 'Both regular GST and composition charge restaurants 5% — no tax saving. Composition benefit here is compliance only: quarterly filing (CMP-08) instead of monthly GSTR-1 and GSTR-3B.';
-        cmpRow.style.display = '';
+        cmpText.innerHTML = 'Both regular GST and composition charge restaurants 5% — no tax saving. Composition benefit here is compliance only: quarterly CMP-08 filing instead of monthly GSTR-1 and GSTR-3B.';
+        cmpBlock.style.display = 'block';
       } else if (eligible && business === 'service') {
-        cmpEl.innerHTML = 'Composition cuts your rate from 18% to 6%, but most B2B clients need a tax invoice to claim ITC — composition dealers cannot issue one. Clients may refuse or demand an equivalent discount, erasing the saving. Also: 6% applies to full turnover, not profit, and you lose ITC on your own expenses. Suits B2C service providers only.';
-        cmpRow.style.display = '';
+        cmpText.innerHTML = 'Composition cuts your rate from 18% to 6%, but most B2B clients need a tax invoice to claim ITC — composition dealers cannot issue one. Clients may refuse or demand an equivalent discount, erasing the saving. 6% applies to full turnover, not profit, and you lose ITC on your own expenses. Suits B2C service providers only.';
+        cmpBlock.style.display = 'block';
       } else {
-        cmpRow.style.display = 'none';
+        cmpBlock.style.display = 'none';
       }
 
       staggerReveal('resultComposition');
