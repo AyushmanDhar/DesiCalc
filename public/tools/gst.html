@@ -55,7 +55,7 @@
         "name": "What are the GST rates in India in 2026?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "As of 2026, GST rates are: 0% (essential goods like fresh produce, milk, health insurance, life-saving medicines), 5% (everyday goods like packaged food, toothpaste, soap, transport services), 18% (standard rate for electronics, consumer goods, IT services, telecom), 40% (luxury and sin goods like tobacco, aerated drinks, online gaming, luxury vehicles), 3% (gold and silver), and 0.25% (rough diamonds)."
+          "text": "As of 2026, India has six GST rates: 0% (essential goods like fresh produce, milk, health/life insurance, life-saving medicines), 5% (everyday goods like packaged food, toothpaste, soap, transport), 18% (standard rate for electronics, consumer goods, IT services, telecom), 40% (luxury/sin goods like tobacco, aerated drinks, online gaming, luxury vehicles), 3% (gold, silver, precious metals), and 0.25% (rough diamonds). The old 12% and 28% slabs were removed under GST 2.0 effective September 22, 2025."
         }
       },
       {
@@ -63,7 +63,7 @@
         "name": "How do I calculate GST on an amount?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "To add GST: GST Amount = Base Amount × (Rate/100), Total = Base Amount + GST Amount. To extract GST from an inclusive amount: GST Amount = Total × (Rate/(100+Rate)), Base Amount = Total - GST Amount. For intra-state transactions, GST is split equally as CGST + SGST. For inter-state transactions, full GST is charged as IGST."
+          "text": "To add GST (exclusive calculation): Multiply the base amount by the GST rate divided by 100. For example, ₹10,000 at 18% = ₹1,800 GST, total ₹11,800. To extract GST (inclusive calculation): Divide the total by (100 + rate) and multiply by rate. For example, ₹11,800 at 18%: GST = ₹11,800 × 18/118 = ₹1,800, base = ₹10,000. Use the calculator above with the \"Add GST\" or \"Extract GST\" mode."
         }
       },
       {
@@ -71,7 +71,7 @@
         "name": "What is the difference between CGST, SGST and IGST?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "CGST (Central GST) is collected by the central government, SGST (State GST) by the state government. For intra-state supplies (within same state), GST is split equally as CGST + SGST. For inter-state supplies (different states), the full GST is charged as IGST (Integrated GST) and collected by the central government. The total tax rate is the same either way."
+          "text": "CGST (Central GST) is collected by the central government. SGST (State GST) is collected by the state government. For intra-state supplies (within the same state), GST is split equally — half as CGST and half as SGST. For inter-state supplies (different states), the full GST is charged as IGST (Integrated GST) and collected by the central government. The total tax rate is identical — only the collection mechanism differs."
         }
       },
       {
@@ -79,7 +79,7 @@
         "name": "Who is eligible for the GST Composition Scheme?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The Composition Scheme is for small taxpayers with turnover up to ₹1.5 crore (regular states) or ₹75 lakh (special category states for goods, ₹50 lakh for services in all states). Traders/manufacturers pay 1% of turnover, restaurants (non-alcohol) pay 5%, service providers pay 6%. Composition dealers cannot collect GST from customers, claim ITC, or make inter-state sales."
+          "text": "Small taxpayers with annual turnover up to ₹1.5 crore (regular states for goods) or ₹75 lakh (special category states for goods) can opt for the Composition Scheme. For service providers, the limit is ₹50 lakh in all states. The scheme is available to traders, manufacturers, restaurants (not serving alcohol), and service providers. Composition dealers cannot collect GST from customers, claim Input Tax Credit, or make inter-state sales."
         }
       },
       {
@@ -87,7 +87,7 @@
         "name": "Can a composition dealer issue a tax invoice?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. Composition dealers cannot issue a tax invoice. They must issue a Bill of Supply instead, which does not show any GST charged separately. The Bill of Supply should mention 'Composition taxable person, not eligible to collect tax on supplies'."
+          "text": "No. Composition dealers cannot issue a tax invoice. They must issue a Bill of Supply instead. The Bill of Supply does not show GST separately and must include the declaration: \"Composition taxable person, not eligible to collect tax on supplies.\" This is because composition dealers pay tax from their own pocket and cannot pass it on to customers."
         }
       },
       {
@@ -95,7 +95,7 @@
         "name": "What is the GST rate on professional services and freelancing?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Professional services, freelancing, and IT services fall under 18% GST under the regular scheme. However, if you are a service provider with annual turnover below ₹50 lakh, you may opt for the Composition Scheme where you pay 6% GST (3% CGST + 3% SGST) on turnover. You cannot charge GST to clients or claim ITC under composition."
+          "text": "Under the regular GST scheme, professional services, freelancing, IT services, and consulting are taxed at 18% (9% CGST + 9% SGST for intra-state). However, if you are a service provider with annual turnover below ₹50 lakh, you may opt for the Composition Scheme where you pay 6% (3% CGST + 3% SGST) on your turnover. Under composition, you cannot charge GST to clients or claim Input Tax Credit on your expenses."
         }
       }
     ]
@@ -144,6 +144,7 @@
       <div>
         <h1 class="text-2xl sm:text-3xl font-bold text-stone-900 mb-1">GST Calculator 2026</h1>
         <p class="text-stone-500 text-sm mb-6">Calculate GST at updated 2026 rates (0%, 5%, 18%, 40%). Includes Composition Scheme calculator for small businesses.</p>
+        <p class="text-sm text-stone-500">Last updated: July 2026</p>
 
         <div class="flex gap-1 bg-stone-100 rounded-lg p-1 mb-6">
           <button id="tabRegular" class="flex-1 px-4 py-2 text-sm font-medium rounded-md border-none cursor-pointer transition-all duration-150 bg-white text-amber-600 shadow-sm" onclick="switchMode('regular')">🧾 Regular GST</button>
