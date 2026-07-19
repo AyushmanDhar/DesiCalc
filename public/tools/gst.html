@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <title>GST Calculator 2026 — Regular & Composition Scheme | DesiCalc</title>
+  <meta name="description" content="Free GST calculator for India 2026. Add or extract GST at 0%, 5%, 18%, 40% rates with CGST/SGST/IGST split. Includes Composition Scheme calculator for traders, restaurants, and service providers.">
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="DesiCalc" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="canonical" href="https://desicalc.in/tools/gst" />
+  <link rel="alternate" hreflang="en" href="https://desicalc.in/tools/gst" />
+  <link rel="alternate" hreflang="x-default" href="https://desicalc.in/tools/gst" />
+  <link rel="alternate" hreflang="hi" href="https://desicalc.in/tools/gst" />
+  <meta property="og:title" content="GST Calculator 2026 — Regular & Composition Scheme | DesiCalc">
+  <meta property="og:description" content="Free GST calculator for India 2026. Add or extract GST at 0%, 5%, 18%, 40% rates with CGST/SGST/IGST split. Includes Composition Scheme calculator for small businesses.">
+  <meta property="og:url" content="https://desicalc.in/tools/gst">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://desicalc.in/assets/img/og-home.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["WebApplication", "SoftwareApplication"],
+    "name": "GST Calculator India 2026",
+    "url": "https://desicalc.in/tools/gst",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "JavaScript",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+    "description": "Free GST Calculator for India 2026. Updated for GST 2.0 rates (0%, 5%, 18%, 40%). Regular and Composition Scheme calculators. CGST/SGST/IGST split.",
+    "featureList": [
+      "GST 2.0 Rates (2026)",
+      "Add GST / Extract GST",
+      "CGST + SGST Split",
+      "IGST for Inter-State",
+      "Composition Scheme Calculator"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What are the GST rates in India in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "As of 2026, India has six GST rates: 0% (essential goods like fresh produce, milk, health/life insurance, life-saving medicines), 5% (everyday goods like packaged food, toothpaste, soap, transport), 18% (standard rate for electronics, consumer goods, IT services, telecom), 40% (luxury/sin goods like tobacco, aerated drinks, online gaming, luxury vehicles), 3% (gold, silver, precious metals), and 0.25% (rough diamonds). The old 12% and 28% slabs were removed under GST 2.0 effective September 22, 2025."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate GST on an amount?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To add GST (exclusive calculation): Multiply the base amount by the GST rate divided by 100. For example, ₹10,000 at 18% = ₹1,800 GST, total ₹11,800. To extract GST (inclusive calculation): Divide the total by (100 + rate) and multiply by rate. For example, ₹11,800 at 18%: GST = ₹11,800 × 18/118 = ₹1,800, base = ₹10,000. Use the calculator above with the \"Add GST\" or \"Extract GST\" mode."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between CGST, SGST and IGST?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CGST (Central GST) is collected by the central government. SGST (State GST) is collected by the state government. For intra-state supplies (within the same state), GST is split equally — half as CGST and half as SGST. For inter-state supplies (different states), the full GST is charged as IGST (Integrated GST) and collected by the central government. The total tax rate is identical — only the collection mechanism differs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who is eligible for the GST Composition Scheme?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Small taxpayers with annual turnover up to ₹1.5 crore (regular states for goods) or ₹75 lakh (special category states for goods) can opt for the Composition Scheme. For service providers, the limit is ₹50 lakh in all states. The scheme is available to traders, manufacturers, restaurants (not serving alcohol), and service providers. Composition dealers cannot collect GST from customers, claim Input Tax Credit, or make inter-state sales."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can a composition dealer issue a tax invoice?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Composition dealers cannot issue a tax invoice. They must issue a Bill of Supply instead. The Bill of Supply does not show GST separately and must include the declaration: \"Composition taxable person, not eligible to collect tax on supplies.\" This is because composition dealers pay tax from their own pocket and cannot pass it on to customers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the GST rate on professional services and freelancing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Under the regular GST scheme, professional services, freelancing, IT services, and consulting are taxed at 18% (9% CGST + 9% SGST for intra-state). However, if you are a service provider with annual turnover below ₹50 lakh, you may opt for the Composition Scheme where you pay 6% (3% CGST + 3% SGST) on your turnover. Under composition, you cannot charge GST to clients or claim Input Tax Credit on your expenses."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://desicalc.in" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://desicalc.in/tools" },
+      { "@type": "ListItem", "position": 3, "name": "GST Calculator", "item": "https://desicalc.in/tools/gst" }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="../assets/css/tailwind.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/calc-core.js"></script>
+  <script src="../assets/js/lang-en.js"></script>
+  <script src="../assets/js/ad.js"></script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2207525036040634"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+  <a href="#calc-form" class="sr-only focus:not-sr-only focus:absolute focus:p-2 focus:bg-white focus:z-50">Skip to calculator</a>
+
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
+    <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="../" class="text-sm text-stone-500 hover:text-stone-900 no-underline">← Back</a>
+        <a href="../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
+        <span id="greeting" class="greeting-text hidden sm:inline" aria-live="polite"></span>
+      </div>
+      <div class="lang-toggle" role="group" aria-label="Language toggle">
+        <button onclick="setLang('en')" class="active" data-lang-btn="en">EN</button>
+        <button onclick="setLang('hi')" data-lang-btn="hi">Hing</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="max-w-5xl mx-auto px-4 py-6">
+    <div class="two-col">
+      <div>
+        <h1 class="text-2xl sm:text-3xl font-bold text-stone-900 mb-1">GST Calculator 2026</h1>
+        <p class="text-stone-500 text-sm mb-6">Calculate GST at updated 2026 rates (0%, 5%, 18%, 40%). Includes Composition Scheme calculator for small businesses.</p>
+        <p class="text-sm text-stone-500">Last updated: July 2026</p>
+
+        <div class="flex gap-1 bg-stone-100 rounded-lg p-1 mb-6">
+          <button id="tabRegular" class="flex-1 px-4 py-2 text-sm font-medium rounded-md border-none cursor-pointer transition-all duration-150 bg-white text-amber-600 shadow-sm" onclick="switchMode('regular')">🧾 Regular GST</button>
+          <button id="tabComposition" class="flex-1 px-4 py-2 text-sm font-medium rounded-md border-none cursor-pointer transition-all duration-150 bg-transparent text-stone-500 hover:text-stone-900" onclick="switchMode('composition')">🏪 Composition Scheme</button>
+        </div>
+
+        <form id="calc-form" onsubmit="return false" class="space-y-4">
+
+          <div id="regularSection">
+            <div>
+              <label for="gstAmount">Amount (₹) <span class="text-red-500">*</span></label>
+              <input type="text" id="gstAmount" inputmode="numeric" value="10000" oninput="calcRegular()">
+            </div>
+            <div>
+              <label for="gstRate">GST Rate</label>
+              <select id="gstRate" onchange="calcRegular()">
+                <option value="0">0% — Exempt/Essential</option>
+                <option value="5">5% — Everyday Goods</option>
+                <option value="18" selected>18% — Standard Rate</option>
+                <option value="40">40% — Luxury/Sin Goods</option>
+                <option value="3">3% — Gold/Silver</option>
+                <option value="0.25">0.25% — Rough Diamonds</option>
+              </select>
+            </div>
+            <div>
+              <label>Calculation Type</label>
+              <div class="flex flex-wrap gap-x-4 gap-y-2">
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="gstCalcType" value="add" checked onchange="calcRegular()">
+                  <span>Add GST to amount</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="gstCalcType" value="extract" onchange="calcRegular()">
+                  <span>Extract GST from amount</span>
+                </label>
+              </div>
+            </div>
+            <div>
+              <label>Transaction Type</label>
+              <div class="flex flex-wrap gap-x-4 gap-y-2">
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="gstTxType" value="intra" checked onchange="calcRegular()">
+                  <span>Intra-state (CGST + SGST)</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="gstTxType" value="inter" onchange="calcRegular()">
+                  <span>Inter-state (IGST)</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div id="compositionSection" style="display:none">
+            <div class="bg-amber-50 border-l-4 border-amber-500 p-3 mb-4 text-sm text-stone-700 rounded-r">
+              <strong>Composition Scheme:</strong> For small taxpayers. Lower tax rate, but cannot collect GST from customers, claim ITC, or make inter-state sales. See details below.
+            </div>
+            <div>
+              <label for="compTurnover">Annual Turnover (₹) <span class="text-red-500">*</span></label>
+              <input type="text" id="compTurnover" inputmode="numeric" value="5000000" oninput="calcComposition()">
+            </div>
+            <div>
+              <label for="compBusiness">Business Type</label>
+              <select id="compBusiness" onchange="calcComposition()">
+                <option value="trader">Trader / Retailer / Manufacturer (1% of turnover)</option>
+                <option value="restaurant">Restaurant — not serving alcohol (5% of turnover)</option>
+                <option value="service">Service Provider (6% of turnover)</option>
+              </select>
+            </div>
+            <div>
+              <label for="compStateType">State Type</label>
+              <select id="compStateType" onchange="calcComposition()">
+                <option value="regular">Regular State (limit: ₹1.5 crore)</option>
+                <option value="special">Special Category State <span class="tooltip-trigger" data-tooltip="Arunachal Pradesh, Assam, Manipur, Meghalaya, Mizoram, Nagaland, Sikkim, Tripura, Himachal Pradesh, Uttarakhand">(limit varies — see info)</span></option>
+              </select>
+              <p class="text-xs text-stone-400 mt-1">Special category states: Arunachal Pradesh, Assam, Manipur, Meghalaya, Mizoram, Nagaland, Sikkim, Tripura, Himachal Pradesh, Uttarakhand</p>
+            </div>
+          </div>
+
+          <div class="flex gap-2 pt-2">
+            <button type="button" class="btn btn-outline flex-1" onclick="resetForm()">Reset</button>
+          </div>
+        </form>
+      </div>
+
+      <div>
+        <ins class="adsbygoogle ad-slot-sidebar-top mb-4" style="display:block;min-height:250px" data-ad-client="ca-pub-2207525036040634" data-ad-slot="2724762457" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+        <div class="flex gap-2 mb-3">
+          <button class="btn btn-outline btn-sm flex-1" onclick="shareUrl()">Share</button>
+          <button class="btn btn-outline btn-sm flex-1" onclick="copyUrl()">Copy Link</button>
+        </div>
+        <h2 class="text-base font-bold mb-2">Result</h2>
+
+        <div id="resultRegular" class="result-card fade-in" aria-live="polite">
+          <div class="result-row" id="rRegFirstRow"><span class="result-label" id="rRegFirstLabel">Base Amount</span><span class="result-value" id="rRegFirst">₹0</span></div>
+          <div class="result-row"><span class="result-label" id="rRegGstLabel">GST Amount</span><span class="result-value" id="rRegGst">₹0</span></div>
+          <div class="result-row" id="rRegCgstRow"><span class="result-label">CGST</span><span class="result-value" id="rRegCgst">₹0</span></div>
+          <div class="result-row" id="rRegSgstRow"><span class="result-label">SGST</span><span class="result-value" id="rRegSgst">₹0</span></div>
+          <div class="result-row" id="rRegIgstRow" style="display:none"><span class="result-label">IGST</span><span class="result-value" id="rRegIgst">₹0</span></div>
+          <div class="result-row total" id="rRegLastRow"><span class="result-label" id="rRegLastLabel">Total Amount (incl. GST)</span><span class="result-value" id="rRegLast">₹0</span></div>
+        </div>
+
+        <div id="resultComposition" class="result-card fade-in" aria-live="polite" style="display:none">
+          <div class="result-row" id="rCompEligibility" style="display:block"></div>
+          <div class="result-row"><span class="result-label">Annual Turnover</span><span class="result-value" id="rCompTurnover">₹0</span></div>
+          <div class="result-row"><span class="result-label">Annual Tax Payable</span><span class="result-value" id="rCompAnnual">₹0</span></div>
+          <div class="result-row"><span class="result-label">Quarterly Tax Payable</span><span class="result-value" id="rCompQuarterly">₹0</span></div>
+          <div class="result-row"><span class="result-label">CGST Component</span><span class="result-value" id="rCompCgst">₹0</span></div>
+          <div class="result-row"><span class="result-label">SGST Component</span><span class="result-value" id="rCompSgst">₹0</span></div>
+        </div>
+
+        <div id="rCompComparisonBlock" style="display:none">
+          <h3 class="text-sm font-bold mb-1 mt-4">📊 Composition vs Regular GST</h3>
+          <p class="text-sm text-stone-700" id="rCompComparisonText"></p>
+        </div>
+
+        <ins class="adsbygoogle ad-slot-in-content mt-4" style="display:block;min-height:90px" data-ad-client="ca-pub-2207525036040634" data-ad-slot="4037844123" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+    </div>
+
+    <div id="compCallouts" class="mt-4 border-l-4 border-stone-400 bg-stone-50 p-3 text-sm text-stone-700 rounded-r" style="display:none;max-width:672px">
+      ⚠ Composition dealers cannot collect GST from customers (tax paid from own pocket) · cannot claim ITC on purchases · cannot make inter-state sales · must issue Bill of Supply (not tax invoice) with the text "Composition taxable person, not eligible to collect tax on supplies." To opt in: file Form CMP-02 on the GST portal before 31 March of the preceding financial year.
+    </div>
+
+    <section class="mt-10 max-w-2xl">
+      <h2 class="text-lg font-bold mb-3">GST Rates in India 2026 — What Changed</h2>
+      <p class="text-sm text-stone-600 mb-3">The 56th GST Council meeting (September 3, 2025) simplified the rate structure effective September 22, 2025 — often called <strong>GST 2.0</strong>. The old 12% and 28% slabs were removed. The new structure has four main rates: 0%, 5%, 18%, and 40%, plus special rates for precious metals.</p>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm text-stone-700 border-collapse">
+          <thead>
+            <tr class="bg-stone-100 border-b border-stone-200">
+              <th class="text-left py-2 px-3 font-semibold">Rate</th>
+              <th class="text-left py-2 px-3 font-semibold">Category</th>
+              <th class="text-left py-2 px-3 font-semibold">Common Examples</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-stone-200">
+              <td class="py-2 px-3 font-medium">0%</td>
+              <td class="py-2 px-3">Exempt / Essential</td>
+              <td class="py-2 px-3">Fresh produce, unpackaged food, milk, health & life insurance premiums, life-saving medicines, bread</td>
+            </tr>
+            <tr class="border-b border-stone-200">
+              <td class="py-2 px-3 font-medium">5%</td>
+              <td class="py-2 px-3">Everyday Goods</td>
+              <td class="py-2 px-3">Packaged food items, toothpaste, soap, transport services, economy restaurants</td>
+            </tr>
+            <tr class="border-b border-stone-200">
+              <td class="py-2 px-3 font-medium">18%</td>
+              <td class="py-2 px-3">Standard Rate</td>
+              <td class="py-2 px-3">Electronics, consumer goods, IT & professional services, telecom, compact cars, most manufactured goods</td>
+            </tr>
+            <tr class="border-b border-stone-200">
+              <td class="py-2 px-3 font-medium">40%</td>
+              <td class="py-2 px-3">Sin / Luxury</td>
+              <td class="py-2 px-3">Tobacco, pan masala, aerated/caffeinated beverages, motorcycles above 350cc, online gaming, casinos, luxury vehicles, yachts, personal aircraft</td>
+            </tr>
+            <tr class="border-b border-stone-200">
+              <td class="py-2 px-3 font-medium">3%</td>
+              <td class="py-2 px-3">Special</td>
+              <td class="py-2 px-3">Gold, silver, precious metals</td>
+            </tr>
+            <tr class="border-b border-stone-200">
+              <td class="py-2 px-3 font-medium">0.25%</td>
+              <td class="py-2 px-3">Special</td>
+              <td class="py-2 px-3">Rough diamonds</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mt-10 max-w-2xl">
+      <h2 class="text-lg font-bold mb-3">CGST, SGST and IGST — What's the Difference?</h2>
+      <p class="text-sm text-stone-600 mb-3">GST is a unified tax, but how it's collected depends on whether the transaction is within the same state or across states:</p>
+      <ul class="list-disc list-inside space-y-2 text-sm text-stone-700 mb-3">
+        <li><strong>Intra-state supply</strong> (seller and buyer in the same state): GST is split equally — <strong>CGST</strong> (Central GST, goes to the central government) + <strong>SGST</strong> (State GST, goes to the state government). For example, at 18%, you pay 9% CGST + 9% SGST.</li>
+        <li><strong>Inter-state supply</strong> (seller and buyer in different states): Full GST is charged as <strong>IGST</strong> (Integrated GST) and collected by the central government.</li>
+      </ul>
+      <p class="text-sm text-stone-600">The total tax rate is the same regardless — only the split changes. Your business location and customer location determine whether GST is intra-state or inter-state.</p>
+    </section>
+
+    <section class="mt-10 max-w-2xl">
+      <h2 class="text-lg font-bold mb-3">What is the GST Composition Scheme?</h2>
+      <p class="text-sm text-stone-600 mb-3">The Composition Scheme is a simpler, lower-tax option for small businesses registered under GST. Instead of charging GST to customers and claiming input credits, you pay a fixed percentage of your turnover as tax — from your own pocket.</p>
+      <div class="space-y-2 text-sm text-stone-700 mb-3">
+        <p><strong>Who is it for?</strong> Small traders (kirana stores, retailers), small manufacturers, restaurants (non-alcohol), and service providers with limited turnover.</p>
+        <p><strong>Tax rates:</strong> Traders/Manufacturers: 1% (0.5% CGST + 0.5% SGST) | Restaurants: 5% (2.5% + 2.5%) | Service Providers: 6% (3% + 3%)</p>
+        <p><strong>Turnover limits:</strong> ₹1.5 crore for regular states (goods), ₹75 lakh for special category states (goods), ₹50 lakh for services in all states.</p>
+        <p><strong>Key restrictions:</strong> Cannot collect GST from customers, cannot claim Input Tax Credit (ITC), cannot make inter-state supplies, must issue Bill of Supply instead of tax invoice.</p>
+      </div>
+      <p class="text-sm text-stone-600">This scheme is ideal if you sell to end consumers who don't need ITC, have limited turnover, and want to reduce compliance burden.</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-lg font-bold mb-3">Related Pages</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <a href="../tools/income-tax" class="card text-sm hover:shadow-md transition-shadow no-underline">
+          <span class="font-semibold text-stone-900">Income Tax Calculator</span>
+          <span class="text-stone-500 block">FY 2026-27 — Old vs New regime</span>
+        </a>
+        <a href="../tools/hra" class="card text-sm hover:shadow-md transition-shadow no-underline">
+          <span class="font-semibold text-stone-900">HRA Exemption Calculator</span>
+          <span class="text-stone-500 block">Section 10(13A) — Metro/Non-Metro</span>
+        </a>
+        <a href="../comparisons/old-vs-new-tax-regime" class="card text-sm hover:shadow-md transition-shadow no-underline">
+          <span class="font-semibold text-stone-900">Old vs New Tax Regime</span>
+          <span class="text-stone-500 block">Which regime saves more?</span>
+        </a>
+        <a href="../guides/gst-for-freelancers-india" class="card text-sm hover:shadow-md transition-shadow no-underline">
+          <span class="font-semibold text-stone-900">GST for Freelancers</span>
+          <span class="text-stone-500 block">Registration, invoicing and returns explained</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="mt-10 max-w-2xl">
+      <h2 class="text-lg font-bold mb-3">FAQs</h2>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>What are the GST rates in India in 2026?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer">As of 2026, India has six GST rates: <strong>0%</strong> (essential goods like fresh produce, milk, health/life insurance, life-saving medicines), <strong>5%</strong> (everyday goods like packaged food, toothpaste, soap, transport), <strong>18%</strong> (standard rate for electronics, consumer goods, IT services, telecom), <strong>40%</strong> (luxury/sin goods like tobacco, aerated drinks, online gaming, luxury vehicles), <strong>3%</strong> (gold, silver, precious metals), and <strong>0.25%</strong> (rough diamonds). The old 12% and 28% slabs were removed under GST 2.0 effective September 22, 2025.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>How do I calculate GST on an amount?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><strong>To add GST</strong> (exclusive calculation): Multiply the base amount by the GST rate divided by 100. For example, ₹10,000 at 18% = ₹1,800 GST, total ₹11,800. <strong>To extract GST</strong> (inclusive calculation): Divide the total by (100 + rate) and multiply by rate. For example, ₹11,800 at 18%: GST = ₹11,800 × 18/118 = ₹1,800, base = ₹10,000. Use the calculator above with the "Add GST" or "Extract GST" mode.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>What is the difference between CGST, SGST and IGST?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><strong>CGST</strong> (Central GST) is collected by the central government. <strong>SGST</strong> (State GST) is collected by the state government. For <strong>intra-state</strong> supplies (within the same state), GST is split equally — half as CGST and half as SGST. For <strong>inter-state</strong> supplies (different states), the full GST is charged as <strong>IGST</strong> (Integrated GST) and collected by the central government. The total tax rate is identical — only the collection mechanism differs.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>Who is eligible for the GST Composition Scheme?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Small taxpayers with annual turnover up to <strong>₹1.5 crore</strong> (regular states for goods) or <strong>₹75 lakh</strong> (special category states for goods) can opt for the Composition Scheme. For <strong>service providers</strong>, the limit is ₹50 lakh in all states. The scheme is available to traders, manufacturers, restaurants (not serving alcohol), and service providers. Composition dealers <strong>cannot</strong> collect GST from customers, claim Input Tax Credit, or make inter-state sales.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>Can a composition dealer issue a tax invoice?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer">No. Composition dealers cannot issue a tax invoice. They must issue a <strong>Bill of Supply</strong> instead. The Bill of Supply does not show GST separately and must include the declaration: "Composition taxable person, not eligible to collect tax on supplies." This is because composition dealers pay tax from their own pocket and cannot pass it on to customers.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>What is the GST rate on professional services and freelancing?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Under the <strong>regular GST scheme</strong>, professional services, freelancing, IT services, and consulting are taxed at <strong>18%</strong> (9% CGST + 9% SGST for intra-state). However, if you are a service provider with annual turnover below <strong>₹50 lakh</strong>, you may opt for the <strong>Composition Scheme</strong> where you pay <strong>6%</strong> (3% CGST + 3% SGST) on your turnover. Under composition, you cannot charge GST to clients or claim Input Tax Credit on your expenses.</div>
+      </div>
+    </section>
+  </div>
+
+  <ins class="adsbygoogle ad-slot-footer mb-4" style="display:block;min-height:90px" data-ad-client="ca-pub-2207525036040634" data-ad-slot="4037844123" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
+    <div class="max-w-5xl mx-auto px-4 flex justify-center gap-x-6 gap-y-2 flex-wrap">
+      <a href="../about">About</a>
+      <a href="../privacy">Privacy</a>
+      <a href="../contact">Contact</a>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast"></div>
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+  <script>
+    function getVal(id) { return parseFloat(document.getElementById(id).value.replace(/,/g, '')) || 0; }
+    function getChecked(id) { return document.getElementById(id).checked; }
+    function setText(id, val) { document.getElementById(id).innerText = val; }
+
+    var currentMode = 'regular';
+
+    function switchMode(mode) {
+      currentMode = mode;
+      var section = document.getElementById(mode === 'regular' ? 'regularSection' : 'compositionSection');
+      var result = document.getElementById(mode === 'regular' ? 'resultRegular' : 'resultComposition');
+      document.getElementById('regularSection').style.display = mode === 'regular' ? 'block' : 'none';
+      document.getElementById('compositionSection').style.display = mode === 'composition' ? 'block' : 'none';
+      document.getElementById('resultRegular').style.display = mode === 'regular' ? 'block' : 'none';
+      document.getElementById('resultComposition').style.display = mode === 'composition' ? 'block' : 'none';
+      document.getElementById('compCallouts').style.display = mode === 'composition' ? 'block' : 'none';
+      document.getElementById('rCompComparisonBlock').style.display = 'none';
+      section.classList.remove('fade-in');
+      void section.offsetWidth;
+      section.classList.add('fade-in');
+      result.classList.remove('fade-in');
+      void result.offsetWidth;
+      result.classList.add('fade-in');
+      var tabR = document.getElementById('tabRegular');
+      var tabC = document.getElementById('tabComposition');
+      if (mode === 'regular') {
+        tabR.className = 'flex-1 px-4 py-2 text-sm font-medium rounded-md border-none cursor-pointer transition-all duration-150 bg-white text-amber-600 shadow-sm';
+        tabC.className = 'flex-1 px-4 py-2 text-sm font-medium rounded-md border-none cursor-pointer transition-all duration-150 bg-transparent text-stone-500 hover:text-stone-900';
+        tabR.style.transform = 'scale(0.96)';
+        setTimeout(function(){ tabR.style.transform = ''; }, 100);
+      } else {
+        tabC.className = 'flex-1 px-4 py-2 text-sm font-medium rounded-md border-none cursor-pointer transition-all duration-150 bg-white text-amber-600 shadow-sm';
+        tabR.className = 'flex-1 px-4 py-2 text-sm font-medium rounded-md border-none cursor-pointer transition-all duration-150 bg-transparent text-stone-500 hover:text-stone-900';
+        tabC.style.transform = 'scale(0.96)';
+        setTimeout(function(){ tabC.style.transform = ''; }, 100);
+      }
+      if (mode === 'regular') calcRegular(); else calcComposition();
+    }
+
+    function calcRegular() {
+      var amount = getVal('gstAmount');
+      var rate = parseFloat(document.getElementById('gstRate').value) || 0;
+      var calcType = document.querySelector('input[name="gstCalcType"]:checked').value;
+      var txType = document.querySelector('input[name="gstTxType"]:checked').value;
+      var isIntra = txType === 'intra';
+
+      var base, gst, total;
+      if (calcType === 'add') {
+        base = amount;
+        gst = base * (rate / 100);
+        total = base + gst;
+      } else {
+        total = amount;
+        gst = total * (rate / (100 + rate));
+        base = total - gst;
+      }
+
+      var cgst = isIntra ? gst / 2 : 0;
+      var sgst = isIntra ? gst / 2 : 0;
+      var igst = isIntra ? 0 : gst;
+
+      document.getElementById('rRegFirstLabel').innerText = calcType === 'add' ? 'Base Amount' : 'Total Amount entered';
+      animateValue(document.getElementById('rRegFirst'), calcType === 'add' ? Math.round(base) : Math.round(total));
+
+      document.getElementById('rRegGstLabel').innerText = calcType === 'add' ? 'GST Amount' : 'GST Amount included';
+      animateValue(document.getElementById('rRegGst'), Math.round(gst));
+
+      var cgstRow = document.getElementById('rRegCgstRow');
+      var sgstRow = document.getElementById('rRegSgstRow');
+      var igstRow = document.getElementById('rRegIgstRow');
+      cgstRow.style.display = isIntra ? '' : 'none';
+      sgstRow.style.display = isIntra ? '' : 'none';
+      igstRow.style.display = isIntra ? 'none' : '';
+      if (isIntra) {
+        animateValue(document.getElementById('rRegCgst'), Math.round(cgst));
+        animateValue(document.getElementById('rRegSgst'), Math.round(sgst));
+      } else {
+        animateValue(document.getElementById('rRegIgst'), Math.round(igst));
+      }
+
+      document.getElementById('rRegLastLabel').innerText = calcType === 'add' ? 'Total Amount (incl. GST)' : 'Base Amount (before GST)';
+      animateValue(document.getElementById('rRegLast'), calcType === 'add' ? Math.round(total) : Math.round(base));
+
+      staggerReveal('resultRegular');
+      syncUrlParams({ gstAmount: amount, gstRate: rate, gstCalcType: calcType, gstTxType: txType });
+      saveLastInputs('gst', { amount: amount, rate: rate, calcType: calcType, txType: txType, mode: 'regular' });
+    }
+
+    var SPECIAL_STATES = ['Arunachal Pradesh', 'Assam', 'Manipur', 'Meghalaya', 'Mizoram', 'Nagaland', 'Sikkim', 'Tripura', 'Himachal Pradesh', 'Uttarakhand'];
+
+    function calcComposition() {
+      var turnover = getVal('compTurnover');
+      var business = document.getElementById('compBusiness').value;
+      var isSpecial = document.getElementById('compStateType').value === 'special';
+
+      var ratePct;
+      var rateLabel;
+      if (business === 'trader') { ratePct = 1; rateLabel = '1% (0.5% CGST + 0.5% SGST)'; }
+      else if (business === 'restaurant') { ratePct = 5; rateLabel = '5% (2.5% CGST + 2.5% SGST)'; }
+      else { ratePct = 6; rateLabel = '6% (3% CGST + 3% SGST)'; }
+
+      var goodsLimit = isSpecial ? 7500000 : 15000000;
+      var serviceLimit = 5000000;
+      var limit = business === 'service' ? serviceLimit : goodsLimit;
+
+      var eligible = turnover <= limit;
+
+      var elElig = document.getElementById('rCompEligibility');
+      if (eligible) {
+        elElig.innerHTML = '<span class="text-emerald-700 font-medium">✓ Eligible for Composition Scheme</span>';
+        elElig.className = 'result-row';
+      } else {
+        elElig.innerHTML = '<span class="text-red-700 font-medium">✗ Exceeds composition scheme limit — must register under regular GST</span>';
+        elElig.className = 'result-row';
+      }
+
+      var annualTax = turnover * (ratePct / 100);
+      var quarterlyTax = annualTax / 4;
+      var halfCgst = annualTax / 2;
+      var halfSgst = annualTax / 2;
+
+      animateValue(document.getElementById('rCompTurnover'), Math.round(turnover));
+      animateValue(document.getElementById('rCompAnnual'), Math.round(annualTax));
+      animateValue(document.getElementById('rCompQuarterly'), Math.round(quarterlyTax));
+      animateValue(document.getElementById('rCompCgst'), Math.round(halfCgst));
+      animateValue(document.getElementById('rCompSgst'), Math.round(halfSgst));
+
+      var cmpBlock = document.getElementById('rCompComparisonBlock');
+      var cmpText = document.getElementById('rCompComparisonText');
+      if (eligible && business === 'trader') {
+        var regularGstRate = 18;
+        var regularAnnual = turnover * (regularGstRate / 100);
+        var savings = regularAnnual - annualTax;
+        cmpText.innerHTML = 'Under regular GST you would pay <strong>' + formatINR(Math.round(regularAnnual)) + '</strong> on taxable value. Composition saves you <strong>' + formatINR(Math.round(savings)) + '</strong> annually on tax — but you lose ITC on purchases and cannot make inter-state sales. Best if you sell to end consumers. Your wallet thanks you. 💰';
+        cmpBlock.style.display = 'block';
+      } else if (eligible && business === 'restaurant') {
+        cmpText.innerHTML = 'Both regular GST and composition charge restaurants 5% — no tax saving. Composition benefit here is compliance only: quarterly CMP-08 filing instead of monthly GSTR-1 and GSTR-3B. Less paperwork, more cooking! 🍳';
+        cmpBlock.style.display = 'block';
+      } else if (eligible && business === 'service') {
+        cmpText.innerHTML = 'Composition cuts your rate from 18% to 6%, but most B2B clients need a tax invoice to claim ITC — composition dealers cannot issue one. Clients may refuse or demand an equivalent discount, erasing the saving. 6% applies to full turnover, not profit, and you lose ITC on your own expenses. Suits B2C service providers only. Know your clients before you opt in. 🎯';
+        cmpBlock.style.display = 'block';
+      } else {
+        cmpBlock.style.display = 'none';
+      }
+
+      staggerReveal('resultComposition');
+      syncUrlParams({ compTurnover: turnover, compBusiness: business, compStateType: isSpecial ? 'special' : 'regular' });
+      saveLastInputs('gst', { turnover: turnover, business: business, stateType: isSpecial ? 'special' : 'regular', mode: 'composition' });
+    }
+
+    function resetForm() {
+      document.getElementById('gstAmount').value = '10000';
+      document.getElementById('gstRate').value = '18';
+      document.querySelector('input[name="gstCalcType"][value="add"]').checked = true;
+      document.querySelector('input[name="gstTxType"][value="intra"]').checked = true;
+      document.getElementById('compTurnover').value = '5000000';
+      document.getElementById('compBusiness').value = 'trader';
+      document.getElementById('compStateType').value = 'regular';
+      switchMode(currentMode);
+    }
+
+    initLang();
+    initScrollReveal();
+    initTooltips();
+    initOnboarding();
+    initGreeting();
+    initBackToTop();
+    document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('[data-lang-btn]').forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+      });
+    });
+    onLangChange(function() {
+      document.querySelectorAll('[data-lang-btn]').forEach(function(b) {
+        b.classList.toggle('active', b.getAttribute('data-lang-btn') === getLang());
+      });
+    });
+    applyUrlParams();
+    calcRegular();
+  </script>
+</body>
+</html>

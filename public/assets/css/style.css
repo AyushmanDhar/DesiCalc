@@ -33,6 +33,7 @@ label { display: block; font-size: 0.875rem; font-weight: 500; color: #78716C; m
 .tool-card:hover { box-shadow: 0 8px 24px rgba(217,119,6,0.15); transform: translateY(-4px) scale(1.02); }
 .tool-card:hover .text-4xl { animation: emojiWiggle 0.4s ease; }
 @keyframes emojiWiggle { 0%, 100% { transform: rotate(0deg); } 25% { transform: rotate(-6deg) scale(1.1); } 75% { transform: rotate(6deg) scale(1.1); } }
+.tool-card p.text-sm { min-height: 2.5rem; display: flex; align-items: flex-start; justify-content: center; }
 .two-col { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
 .two-col > * { min-width: 0; }
 @media (min-width: 1024px) { .two-col { grid-template-columns: 1fr 320px; } }
