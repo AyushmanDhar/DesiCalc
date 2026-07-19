@@ -584,6 +584,7 @@
       document.querySelectorAll('[data-lang-btn]').forEach(function(b) {
         b.classList.toggle('active', b.getAttribute('data-lang-btn') === getLang());
       });
+      if (currentMode === 'composition') calcComposition();
     });
     applyUrlParams();
     calcRegular();
