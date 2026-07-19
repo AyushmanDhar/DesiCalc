@@ -77,6 +77,8 @@ function applyI18n() {
     if (val !== key) {
       if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
         el.setAttribute('placeholder', val);
+      } else if (el.hasAttribute('data-i18n-html')) {
+        el.innerHTML = val;
       } else {
         el.textContent = val;
       }
