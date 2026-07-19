@@ -49,6 +49,30 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://desicalc.in/tools/hra</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://desicalc.in/tools/hra" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://desicalc.in/tools/hra" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://desicalc.in/tools/hra" />
+    <lastmod>2026-07-19</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://desicalc.in/guides/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://desicalc.in/guides/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://desicalc.in/guides/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://desicalc.in/guides/" />
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://desicalc.in/guides/hra-exemption-explained</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://desicalc.in/guides/hra-exemption-explained" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://desicalc.in/guides/hra-exemption-explained" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://desicalc.in/guides/hra-exemption-explained" />
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://desicalc.in/comparisons/old-vs-new-tax-regime</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://desicalc.in/comparisons/old-vs-new-tax-regime" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://desicalc.in/comparisons/old-vs-new-tax-regime" />
