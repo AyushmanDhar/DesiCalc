@@ -257,7 +257,7 @@
         </div>
 
         <div id="rCompComparisonBlock" style="display:none">
-          <h3 class="text-sm font-bold mb-1 mt-4">Composition vs Regular GST</h3>
+          <h3 class="text-sm font-bold mb-1 mt-4">📊 Composition vs Regular GST</h3>
           <p class="text-sm text-stone-700" id="rCompComparisonText"></p>
         </div>
 
@@ -535,13 +535,13 @@
         var regularGstRate = 18;
         var regularAnnual = turnover * (regularGstRate / 100);
         var savings = regularAnnual - annualTax;
-        cmpText.innerHTML = 'Under regular GST you would pay <strong>' + formatINR(Math.round(regularAnnual)) + '</strong> on taxable value. Composition saves you <strong>' + formatINR(Math.round(savings)) + '</strong> annually on tax — but you lose ITC on purchases and cannot make inter-state sales. Best if you sell to end consumers.';
+        cmpText.innerHTML = 'Under regular GST you would pay <strong>' + formatINR(Math.round(regularAnnual)) + '</strong> on taxable value. Composition saves you <strong>' + formatINR(Math.round(savings)) + '</strong> annually on tax — but you lose ITC on purchases and cannot make inter-state sales. Best if you sell to end consumers. Your wallet thanks you. 💰';
         cmpBlock.style.display = 'block';
       } else if (eligible && business === 'restaurant') {
-        cmpText.innerHTML = 'Both regular GST and composition charge restaurants 5% — no tax saving. Composition benefit here is compliance only: quarterly CMP-08 filing instead of monthly GSTR-1 and GSTR-3B.';
+        cmpText.innerHTML = 'Both regular GST and composition charge restaurants 5% — no tax saving. Composition benefit here is compliance only: quarterly CMP-08 filing instead of monthly GSTR-1 and GSTR-3B. Less paperwork, more cooking! 🍳';
         cmpBlock.style.display = 'block';
       } else if (eligible && business === 'service') {
-        cmpText.innerHTML = 'Composition cuts your rate from 18% to 6%, but most B2B clients need a tax invoice to claim ITC — composition dealers cannot issue one. Clients may refuse or demand an equivalent discount, erasing the saving. 6% applies to full turnover, not profit, and you lose ITC on your own expenses. Suits B2C service providers only.';
+        cmpText.innerHTML = 'Composition cuts your rate from 18% to 6%, but most B2B clients need a tax invoice to claim ITC — composition dealers cannot issue one. Clients may refuse or demand an equivalent discount, erasing the saving. 6% applies to full turnover, not profit, and you lose ITC on your own expenses. Suits B2C service providers only. Know your clients before you opt in. 🎯';
         cmpBlock.style.display = 'block';
       } else {
         cmpBlock.style.display = 'none';
