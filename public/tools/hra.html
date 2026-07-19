@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <title>HRA Exemption Calculator FY 2026-27 — DesiCalc</title>
+  <meta name="description" content="Calculate HRA tax exemption under Section 10(13A). Metro/non-metro, all three conditions shown. Free, instant, no login. FY 2026-27.">
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="DesiCalc" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="canonical" href="https://desicalc.in/tools/hra" />
+  <link rel="alternate" hreflang="en" href="https://desicalc.in/tools/hra" />
+  <link rel="alternate" hreflang="x-default" href="https://desicalc.in/tools/hra" />
+  <link rel="alternate" hreflang="hi" href="https://desicalc.in/tools/hra" />
+  <meta property="og:title" content="HRA Exemption Calculator FY 2026-27 — DesiCalc">
+  <meta property="og:description" content="Calculate HRA tax exemption under Section 10(13A). Metro/non-metro, all three conditions shown. Free, instant, no login. FY 2026-27.">
+  <meta property="og:url" content="https://desicalc.in/tools/hra">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://desicalc.in/assets/img/og-hra.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["WebApplication", "SoftwareApplication"],
+    "name": "HRA Exemption Calculator India 2026",
+    "url": "https://desicalc.in/tools/hra",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "JavaScript",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+    "description": "Free HRA Exemption Calculator for India FY 2026-27. Calculate tax-free HRA under Section 10(13A). Three-condition rule with metro/non-metro rates.",
+    "featureList": [
+      "Section 10(13A) Calculation",
+      "Metro & Non-Metro Support",
+      "All Three Conditions Shown",
+      "Taxable HRA Computation",
+      "Section 80GG Reference"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Which cities are metro for HRA purposes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Only four cities are classified as metro under the Income Tax Act for HRA: Mumbai, Delhi, Kolkata, and Chennai. Bengaluru, Hyderabad, Pune, and other cities are treated as non-metro regardless of cost of living."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I claim HRA under the new tax regime?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. HRA exemption under Section 10(13A) is available only under the Old Tax Regime. If you opt for the New Tax Regime, you cannot claim HRA exemption."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if my rent is less than 10% of basic salary?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If rent paid is less than 10% of your basic salary plus DA, Condition 2 becomes negative. In that case, no exemption is available from Condition 2 — it is treated as ₹0."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is Section 80GG and who can claim it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Section 80GG is for salaried individuals who do not receive HRA from their employer but pay rent for accommodation. The deduction is the least of: (a) ₹5,000 per month (₹60,000/year), (b) 25% of total adjusted income, or (c) actual rent minus 10% of total income."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need rent receipts to claim HRA exemption?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. If your rent exceeds ₹3,000 per month, you need rent receipts to substantiate your claim. If rent exceeds ₹1,00,000 per year, you also need the landlord's PAN details."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://desicalc.in" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://desicalc.in/tools" },
+      { "@type": "ListItem", "position": 3, "name": "HRA Exemption Calculator", "item": "https://desicalc.in/tools/hra" }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="../assets/css/tailwind.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/calc-core.js"></script>
+  <script src="../assets/js/lang-en.js"></script>
+  <script src="../assets/js/ad.js"></script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2207525036040634"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+  <a href="#calc-form" class="sr-only focus:not-sr-only focus:absolute focus:p-2 focus:bg-white focus:z-50">Skip to calculator</a>
+
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
+    <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="../" class="text-sm text-stone-500 hover:text-stone-900 no-underline">← Back</a>
+        <a href="../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
+        <span id="greeting" class="greeting-text hidden sm:inline" aria-live="polite"></span>
+      </div>
+      <div class="lang-toggle" role="group" aria-label="Language toggle">
+        <button onclick="setLang('en')" class="active" data-lang-btn="en">EN</button>
+        <button onclick="setLang('hi')" data-lang-btn="hi">Hing</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="max-w-5xl mx-auto px-4 py-6">
+    <div class="two-col">
+      <div>
+        <h1 class="text-2xl sm:text-3xl font-bold text-stone-900 mb-1">HRA Exemption Calculator FY 2026-27</h1>
+        <p class="text-stone-500 text-sm mb-6">Calculate tax-free HRA under Section 10(13A). Metro/non-metro rules applied automatically.</p>
+
+        <div class="bg-amber-50 border-l-4 border-amber-500 p-3 mb-4 text-sm text-stone-700 rounded-r">
+          <strong>Note:</strong> HRA exemption is available only under the <strong>Old Tax Regime</strong>. Not available under the New Tax Regime.
+        </div>
+
+        <form id="calc-form" onsubmit="return false" class="space-y-4">
+          <div>
+            <label for="fy">Financial Year</label>
+            <select id="fy" onchange="calcHRA()">
+              <option value="2025-26">FY 2025-26</option>
+              <option value="2026-27" selected>FY 2026-27</option>
+            </select>
+          </div>
+          <div>
+            <label for="basicSalary">Basic Salary (₹/month)</label>
+            <input type="text" id="basicSalary" inputmode="numeric" value="50000" oninput="calcHRA()">
+          </div>
+          <div>
+            <label for="dearnessAllowance">Dearness Allowance / DA (₹/month) <span class="text-stone-400 text-xs">(optional)</span></label>
+            <input type="text" id="dearnessAllowance" inputmode="numeric" value="0" oninput="calcHRA()">
+          </div>
+          <div>
+            <label for="hraReceived">HRA Received from Employer (₹/month)</label>
+            <input type="text" id="hraReceived" inputmode="numeric" value="20000" oninput="calcHRA()">
+          </div>
+          <div>
+            <label for="rentPaid">Actual Rent Paid (₹/month)</label>
+            <input type="text" id="rentPaid" inputmode="numeric" value="18000" oninput="calcHRA()">
+          </div>
+          <div>
+            <label for="cityType">City Type</label>
+            <select id="cityType" onchange="calcHRA()">
+              <option value="nonmetro">Non-Metro</option>
+              <option value="metro">Metro (Mumbai, Delhi, Kolkata, Chennai)</option>
+            </select>
+          </div>
+
+          <div class="bg-blue-50 border-l-4 border-blue-400 p-3 text-sm text-stone-700 rounded-r">
+            <strong>Metro cities only:</strong> Mumbai, Delhi, Kolkata, Chennai. Bengaluru, Hyderabad, Pune are <strong>not</strong> metro under the Income Tax Act.
+          </div>
+
+          <div class="flex gap-2 pt-2">
+            <button type="button" class="btn btn-outline flex-1" onclick="resetForm()">Reset</button>
+          </div>
+        </form>
+      </div>
+
+      <div>
+        <ins class="adsbygoogle ad-slot-sidebar-top mb-4" style="display:block;min-height:250px" data-ad-client="ca-pub-2207525036040634" data-ad-slot="2724762457" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+        <div class="flex gap-2 mb-3">
+          <button class="btn btn-outline btn-sm flex-1" onclick="shareUrl()">Share</button>
+          <button class="btn btn-outline btn-sm flex-1" onclick="copyUrl()">Copy Link</button>
+        </div>
+        <h2 class="text-base font-bold mb-2">Result</h2>
+        <div id="resultBox" class="result-card fade-in" aria-live="polite">
+          <div class="result-row"><span class="result-label">Condition 1: HRA Received (Annual)</span><span class="result-value" id="rCond1">₹0</span></div>
+          <div class="result-row"><span class="result-label">Condition 2: Rent Paid − 10% of (Basic+DA)</span><span class="result-value" id="rCond2">₹0</span></div>
+          <div class="result-row"><span class="result-label">Condition 3: <span id="rCond3Label">40%</span> of (Basic+DA)</span><span class="result-value" id="rCond3">₹0</span></div>
+          <div class="result-row total" id="rExemptionRow"><span class="result-label">HRA Exemption <span class="text-xs font-normal text-stone-400">(minimum of above)</span></span><span class="result-value" id="rExemption">₹0</span></div>
+          <div class="result-row"><span class="result-label">Taxable HRA</span><span class="result-value" id="rTaxable">₹0</span></div>
+        </div>
+
+        <div class="bg-red-50 border-l-4 border-red-400 p-3 mt-3 text-sm text-stone-700 rounded-r">
+          <strong>Regime notice:</strong> HRA exemption is available only under the <strong>Old Tax Regime</strong>. If you have opted for the New Tax Regime, you cannot claim HRA exemption under Section 10(13A).
+        </div>
+
+        <div class="bg-stone-50 border-l-4 border-stone-400 p-3 mt-3 text-sm text-stone-600 rounded-r">
+          <strong>Don't receive HRA?</strong> If you don't receive HRA but pay rent, you may be eligible for deduction under <strong>Section 80GG</strong> (max ₹60,000/year). Consult a Chartered Accountant to check eligibility.
+        </div>
+
+        <ins class="adsbygoogle ad-slot-in-content mt-4" style="display:block;min-height:90px" data-ad-client="ca-pub-2207525036040634" data-ad-slot="4037844123" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+    </div>
+
+    <section class="mt-10 max-w-2xl">
+      <h2 class="text-lg font-bold mb-3">How HRA Exemption is Calculated</h2>
+      <p class="text-sm text-stone-600 mb-3">Under Section 10(13A) of the Income Tax Act, HRA exemption is the <strong>minimum of three conditions</strong>:</p>
+      <ol class="list-decimal list-inside space-y-2 text-sm text-stone-700 mb-4">
+        <li><strong>Condition 1:</strong> Actual HRA received from employer (annual)</li>
+        <li><strong>Condition 2:</strong> Actual rent paid minus 10% of (Basic Salary + Dearness Allowance) — annual (if negative, treated as ₹0)</li>
+        <li><strong>Condition 3:</strong> 50% of (Basic Salary + DA) for metro cities <em>or</em> 40% for non-metro cities — annual</li>
+      </ol>
+      <p class="text-sm text-stone-600">The least of these three amounts is your <strong>tax-free HRA exemption</strong>. The remaining HRA is added to your taxable income.</p>
+
+      <div class="bg-stone-50 border border-stone-200 p-4 rounded mt-4">
+        <h3 class="font-bold text-sm mb-2">Worked Example</h3>
+        <p class="text-xs text-stone-500 mb-2">Basic Salary: ₹50,000/mo | DA: ₹0 | HRA Received: ₹20,000/mo | Rent Paid: ₹18,000/mo | Non-Metro</p>
+        <table class="w-full text-xs text-stone-700">
+          <tr class="border-b border-stone-200">
+            <td class="py-1 pr-2">Condition 1</td>
+            <td class="py-1">₹20,000 × 12 = <strong>₹2,40,000</strong></td>
+          </tr>
+          <tr class="border-b border-stone-200">
+            <td class="py-1 pr-2">Condition 2</td>
+            <td class="py-1">(₹18,000 × 12) − 10% of (₹50,000 × 12) = ₹2,16,000 − ₹60,000 = <strong>₹1,56,000</strong></td>
+          </tr>
+          <tr class="border-b border-stone-200">
+            <td class="py-1 pr-2">Condition 3</td>
+            <td class="py-1">40% of ₹6,00,000 = <strong>₹2,40,000</strong></td>
+          </tr>
+          <tr class="font-bold">
+            <td class="py-1 pr-2">HRA Exemption</td>
+            <td class="py-1">Minimum(₹2,40,000, ₹1,56,000, ₹2,40,000) = <strong>₹1,56,000</strong></td>
+          </tr>
+          <tr>
+            <td class="py-1 pr-2">Taxable HRA</td>
+            <td class="py-1">₹2,40,000 − ₹1,56,000 = <strong>₹84,000</strong></td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-lg font-bold mb-3">Related Pages</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <a href="../tools/income-tax" class="card text-sm hover:shadow-md transition-shadow no-underline">
+          <span class="font-semibold text-stone-900">Income Tax Calculator</span>
+          <span class="text-stone-500 block">FY 2026-27 — Old vs New regime</span>
+        </a>
+        <a href="../comparisons/old-vs-new-tax-regime" class="card text-sm hover:shadow-md transition-shadow no-underline">
+          <span class="font-semibold text-stone-900">Old vs New Tax Regime</span>
+          <span class="text-stone-500 block">Which regime saves more?</span>
+        </a>
+        <a href="../guides/section-87a-rebate-explained" class="card text-sm hover:shadow-md transition-shadow no-underline">
+          <span class="font-semibold text-stone-900">Section 87A Rebate Guide</span>
+          <span class="text-stone-500 block">Tax-free income up to ₹12L</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="mt-10 max-w-2xl">
+      <h2 class="text-lg font-bold mb-3">FAQs</h2>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>Which cities are metro for HRA purposes?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Only four cities are classified as metro under the Income Tax Act for HRA: <strong>Mumbai, Delhi, Kolkata, and Chennai</strong>. Bengaluru, Hyderabad, Pune, Ahmedabad, and other cities are treated as non-metro regardless of cost of living. For non-metro cities, the exemption is 40% of basic salary + DA instead of 50%.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>Can I claim HRA under the new tax regime?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer">No. HRA exemption under Section 10(13A) is available only under the <strong>Old Tax Regime</strong>. If you opt for the New Tax Regime, you cannot claim HRA exemption. However, if you are a salaried employee living in rented accommodation, you may want to evaluate which regime is more beneficial overall.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>What if my rent is less than 10% of basic salary?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer">If the actual rent paid is less than 10% of your basic salary plus dearness allowance, Condition 2 becomes negative. In that case, no exemption is available from Condition 2 — it is treated as <strong>₹0</strong>. Your exemption will then be the minimum of the remaining two conditions.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>What is Section 80GG and who can claim it?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><strong>Section 80GG</strong> is for individuals who do not receive HRA from their employer but pay rent for accommodation. The deduction is the least of: (a) ₹5,000 per month (₹60,000 per year maximum), (b) 25% of total adjusted income, or (c) actual rent paid minus 10% of total adjusted income. You must file a declaration in Form 10BA. Consult a CA for proper claim.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>Do I need rent receipts to claim HRA exemption?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Yes. If your monthly rent exceeds ₹3,000, you need <strong>rent receipts</strong> to substantiate your HRA claim. If your annual rent exceeds ₹1,00,000, you also need to provide the <strong>landlord's PAN details</strong>. Your employer may ask for these documents during proof submission.</div>
+      </div>
+    </section>
+  </div>
+
+  <ins class="adsbygoogle ad-slot-footer mb-4" style="display:block;min-height:90px" data-ad-client="ca-pub-2207525036040634" data-ad-slot="4037844123" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
+    <div class="max-w-5xl mx-auto px-4 flex justify-center gap-x-6 gap-y-2 flex-wrap">
+      <a href="../about">About</a>
+      <a href="../privacy">Privacy</a>
+      <a href="../contact">Contact</a>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast"></div>
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+  <script>
+    function getVal(id) { return parseFloat(document.getElementById(id).value.replace(/,/g, '')) || 0; }
+    function getChecked(id) { return document.getElementById(id).checked; }
+    function setText(id, val) { document.getElementById(id).innerText = val; }
+
+    function calcHRA() {
+      var basic = getVal('basicSalary');
+      var da = getVal('dearnessAllowance');
+      var hra = getVal('hraReceived');
+      var rent = getVal('rentPaid');
+      var isMetro = document.getElementById('cityType').value === 'metro';
+
+      var basicAnnual = basic * 12;
+      var daAnnual = da * 12;
+      var hraAnnual = hra * 12;
+      var rentAnnual = rent * 12;
+      var basicDaAnnual = basicAnnual + daAnnual;
+
+      var cond1 = hraAnnual;
+
+      var cond2 = rentAnnual - (0.1 * basicDaAnnual);
+      if (cond2 < 0) cond2 = 0;
+
+      var cond3Pct = isMetro ? 0.5 : 0.4;
+      var cond3 = cond3Pct * basicDaAnnual;
+
+      var exemption = Math.min(cond1, cond2, cond3);
+      if (exemption < 0) exemption = 0;
+      var taxable = hraAnnual - exemption;
+      if (taxable < 0) taxable = 0;
+
+      var cond3Label = document.getElementById('rCond3Label');
+      cond3Label.innerText = isMetro ? '50%' : '40%';
+
+      animateValue(document.getElementById('rCond1'), cond1);
+      animateValue(document.getElementById('rCond2'), cond2);
+      animateValue(document.getElementById('rCond3'), cond3);
+
+      var rExemption = document.getElementById('rExemption');
+      animateValue(rExemption, exemption);
+      rExemption.parentElement.classList.add('highlight-row');
+
+      animateValue(document.getElementById('rTaxable'), taxable);
+
+      staggerReveal('resultBox');
+      syncUrlParams({
+        basicSalary: basic,
+        dearnessAllowance: da,
+        hraReceived: hra,
+        rentPaid: rent,
+        cityType: isMetro ? 'metro' : 'nonmetro',
+        fy: document.getElementById('fy').value
+      });
+      saveLastInputs('hra', { basic: basic, da: da, hra: hra, rent: rent, metro: isMetro });
+    }
+
+    function resetForm() {
+      document.getElementById('basicSalary').value = '50000';
+      document.getElementById('dearnessAllowance').value = '0';
+      document.getElementById('hraReceived').value = '20000';
+      document.getElementById('rentPaid').value = '18000';
+      document.getElementById('cityType').value = 'nonmetro';
+      document.getElementById('fy').value = '2026-27';
+      calcHRA();
+    }
+
+    initLang();
+    initScrollReveal();
+    initTooltips();
+    initOnboarding();
+    initGreeting();
+    initBackToTop();
+    document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('[data-lang-btn]').forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+      });
+    });
+    onLangChange(function() {
+      document.querySelectorAll('[data-lang-btn]').forEach(function(b) {
+        b.classList.toggle('active', b.getAttribute('data-lang-btn') === getLang());
+      });
+    });
+    applyUrlParams();
+    calcHRA();
+  </script>
+</body>
+</html>
