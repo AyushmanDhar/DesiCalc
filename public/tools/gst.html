@@ -257,22 +257,12 @@
           <div class="result-row" id="rCompComparisonRow" style="display:none"><span class="result-label">Comparison with Regular GST</span><span class="result-value" id="rCompComparison"></span></div>
         </div>
 
-        <div id="compCallouts" class="mt-3 space-y-2" style="display:none">
-          <div class="bg-red-50 border-l-4 border-red-400 p-3 text-sm text-stone-700 rounded-r">
-            <strong>⚠ Cannot collect GST:</strong> Composition dealers CANNOT collect GST from customers — tax is paid from own pocket.
-          </div>
-          <div class="bg-red-50 border-l-4 border-red-400 p-3 text-sm text-stone-700 rounded-r">
-            <strong>⚠ No ITC:</strong> Composition dealers CANNOT claim Input Tax Credit (ITC) on purchases.
-          </div>
-          <div class="bg-red-50 border-l-4 border-red-400 p-3 text-sm text-stone-700 rounded-r">
-            <strong>⚠ No inter-state sales:</strong> Composition dealers CANNOT make inter-state supplies.
-          </div>
-          <div class="bg-yellow-50 border-l-4 border-yellow-400 p-3 text-sm text-stone-700 rounded-r">
-            <strong>📄 Bill of Supply required:</strong> Issue Bill of Supply (not a tax invoice). Mention "Composition taxable person, not eligible to collect tax on supplies."
-          </div>
-          <div class="bg-blue-50 border-l-4 border-blue-400 p-3 text-sm text-stone-700 rounded-r">
-            <strong>📋 To opt in:</strong> File Form CMP-02 on the GST portal before March 31 of the preceding financial year.
-          </div>
+        <div id="compCallouts" class="mt-3 border-l-4 border-stone-400 bg-stone-50 p-3 text-sm text-stone-700 rounded-r" style="display:none">
+          <strong>⚠ Cannot collect GST:</strong> Composition dealers CANNOT collect GST from customers — tax is paid from own pocket.<br>
+          <strong>⚠ No ITC:</strong> Composition dealers CANNOT claim Input Tax Credit (ITC) on purchases.<br>
+          <strong>⚠ No inter-state sales:</strong> Composition dealers CANNOT make inter-state supplies.<br>
+          <strong>📄 Bill of Supply required:</strong> Issue Bill of Supply (not a tax invoice). Mention "Composition taxable person, not eligible to collect tax on supplies."<br>
+          <strong>📋 To opt in:</strong> File Form CMP-02 on the GST portal before March 31 of the preceding financial year.
         </div>
 
         <ins class="adsbygoogle ad-slot-in-content mt-4" style="display:block;min-height:90px" data-ad-client="ca-pub-2207525036040634" data-ad-slot="4037844123" data-ad-format="auto" data-full-width-responsive="true"></ins>
@@ -540,11 +530,17 @@
 
       var cmpRow = document.getElementById('rCompComparisonRow');
       var cmpEl = document.getElementById('rCompComparison');
-      if (eligible && (business === 'trader' || business === 'restaurant')) {
-        var regularGstRate = business === 'trader' ? 18 : 5;
+      if (eligible && business === 'trader') {
+        var regularGstRate = 18;
         var regularAnnual = turnover * (regularGstRate / 100);
         var savings = regularAnnual - annualTax;
         cmpEl.innerHTML = 'Under regular GST at ' + regularGstRate + '%, you would pay <strong>' + formatINR(Math.round(regularAnnual)) + '</strong> annually. Composition scheme saves you <strong>' + formatINR(Math.round(savings)) + '</strong>.';
+        cmpRow.style.display = '';
+      } else if (eligible && business === 'restaurant') {
+        cmpEl.innerHTML = 'Restaurants pay 5% GST under both the regular scheme and the Composition Scheme — there is no tax rate saving. However, composition still reduces compliance burden: quarterly CMP-08 filing instead of monthly GSTR-1 and GSTR-3B, and simpler bookkeeping. Choose composition if lower compliance cost matters more than claiming Input Tax Credit.';
+        cmpRow.style.display = '';
+      } else if (eligible && business === 'service') {
+        cmpEl.innerHTML = 'Service providers pay 6% under composition vs 18% under regular GST — but the saving is rarely real. Most B2B clients need a tax invoice to claim Input Tax Credit (ITC) on your fees; composition dealers cannot issue one. Clients either refuse to engage or demand a discount equal to their lost 18% ITC, wiping out your rate advantage. Additionally, the 6% is on your full turnover — not profit — and you cannot claim ITC on your own expenses (software, equipment, office). Composition works for service providers only if you serve end consumers exclusively and your turnover is comfortably under ₹50 lakh.';
         cmpRow.style.display = '';
       } else {
         cmpRow.style.display = 'none';
