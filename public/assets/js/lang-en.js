@@ -135,7 +135,7 @@ window.DESICALC_LANG = {
   'rto.result.regFee': 'Registration Fee',
   'rto.result.hsrp': 'HSRP Fee',
   'rto.result.total': 'Total On-Road Cost (ex-showroom + taxes)',
-  'rto.result.effective': 'Effective Tax Rate',
+  'rto.result.effective': 'Effective Tax Rate *',
   'rto.result.effectiveNote': '* Life tax only (excludes registration & HSRP fees)',
   'rto.faq.title': 'FAQs',
   'rto.faq.q1': 'What is RTO road tax?',

@@ -135,7 +135,7 @@ window.DESICALC_LANG = {
   'rto.result.regFee': 'Panjikaran shulk',
   'rto.result.hsrp': 'HSRP shulk',
   'rto.result.total': 'Kul on-road laagat (ex-showroom + tax)',
-  'rto.result.effective': 'Prabhaavi tax dar',
+  'rto.result.effective': 'Prabhaavi tax dar *',
   'rto.result.effectiveNote': '* Sirf life tax (registration aur HSRP shulk shamil nahi)',
   'rto.faq.title': 'Savaal',
   'rto.faq.q1': 'RTO road tax kya hai?',
