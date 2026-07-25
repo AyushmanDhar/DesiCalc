@@ -22,8 +22,8 @@ const STAMP_DUTY_RATES = {
   },
   chhattisgarh: {
     name: 'Chhattisgarh',
-    rate: { male: 5, female: 4, joint_ff: 4, joint_mm: 5, joint_mf: 4.5 },
-    registration: { rate: 1, cap: null },
+    rate: { male: 5, female: 4, joint_ff: 4, joint_mm: 5, joint_mf: 4 },
+    registration: { rate: 4, cap: null },
   },
   delhi: {
     name: 'Delhi',
