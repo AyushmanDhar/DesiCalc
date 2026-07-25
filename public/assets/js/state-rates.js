@@ -736,6 +736,243 @@ const RTO_RATES = {
   },
 };
 
+const TWO_WHEELER_RTO_RATES = {
+  andhrapradesh: {
+    name: 'Andhra Pradesh',
+    type: 'flat_percent',
+    rate: 9,
+    evExemption: { lifeTax: 'full' },
+  },
+  arunachalpradesh: {
+    name: 'Arunachal Pradesh',
+    type: 'slab_percent',
+    slabs: [
+      { min: 0, max: 100000, rate: 3 },
+      { min: 100001, max: 200000, rate: 4 },
+      { min: 200001, max: Infinity, rate: 5 },
+    ],
+  },
+  assam: {
+    name: 'Assam',
+    type: 'slab_percent',
+    slabs: [
+      { min: 0, max: 100000, rate: 4 },
+      { min: 100001, max: 300000, rate: 5 },
+      { min: 300001, max: Infinity, rate: 6 },
+    ],
+  },
+  bihar: {
+    name: 'Bihar',
+    type: 'slab_percent',
+    slabs: [
+      { min: 0, max: 100000, rate: 8 },
+      { min: 100001, max: Infinity, rate: 9 },
+    ],
+  },
+  chhattisgarh: {
+    name: 'Chhattisgarh',
+    type: 'flat_percent',
+    rate: 4,
+  },
+  delhi: {
+    name: 'Delhi',
+    type: 'slab_percent',
+    slabs: [
+      { min: 0, max: 40000, rate: 4 },
+      { min: 40001, max: Infinity, rate: 8 },
+    ],
+    evExemption: { lifeTax: 'full' },
+  },
+  goa: {
+    name: 'Goa',
+    type: 'slab_percent',
+    slabs: [
+      { min: 0, max: 150000, rate: 9 },
+      { min: 150001, max: 300000, rate: 12 },
+      { min: 300001, max: Infinity, rate: 15 },
+    ],
+  },
+  gujarat: {
+    name: 'Gujarat',
+    type: 'pre_gst_percent',
+    rate: 6,
+  },
+  haryana: {
+    name: 'Haryana',
+    type: 'slab_percent',
+    slabs: [
+      { min: 0, max: 75000, rate: 4 },
+      { min: 75001, max: 200000, rate: 6 },
+      { min: 200001, max: Infinity, rate: 8 },
+    ],
+  },
+  himachalpradesh: {
+    name: 'Himachal Pradesh',
+    type: 'slab_percent',
+    slabs: [
+      { min: 0, max: 100000, rate: 4 },
+      { min: 100001, max: Infinity, rate: 5 },
+    ],
+  },
+  jharkhand: {
+    name: 'Jharkhand',
+    type: 'flat_percent',
+    rate: 6,
+  },
+  karnataka: {
+    name: 'Karnataka',
+    type: 'slab_percent',
+    slabs: [
+      { min: 0, max: 50000, rate: 10 },
+      { min: 50001, max: 100000, rate: 12 },
+      { min: 100001, max: Infinity, rate: 18 },
+    ],
+    cesses: [
+      { type: 'percent_on_tax', rate: 11, label: 'Infrastructure & Road Safety Cess' },
+    ],
+    evExemption: { lifeTax: 'full' },
+  },
+  kerala: {
+    name: 'Kerala',
+    type: 'slab_percent',
+    slabs: [
+      { min: 0, max: 100000, rate: 8 },
+      { min: 100001, max: 200000, rate: 10 },
+      { min: 200001, max: Infinity, rate: 21 },
+    ],
+  },
+  madhyapradesh: {
+    name: 'Madhya Pradesh',
+    type: 'flat_percent',
+    rate: 8,
+  },
+  maharashtra: {
+    name: 'Maharashtra',
+    type: 'slab_percent',
+    slabs: [
+      { min: 0, max: 100000, rate: 10 },
+      { min: 100001, max: 300000, rate: 11 },
+      { min: 300001, max: Infinity, rate: 12 },
+    ],
+    cesses: [
+      { type: 'percent_on_tax', rate: 2, label: 'Road Safety Cess' },
+    ],
+  },
+  manipur: {
+    name: 'Manipur',
+    type: 'slab_cc',
+    slabs: [
+      { min: 0, max: 100, amount: 1700 },
+      { min: 101, max: 200, amount: 2700 },
+      { min: 201, max: Infinity, amount: 3000 },
+    ],
+  },
+  meghalaya: {
+    name: 'Meghalaya',
+    type: 'slab_weight',
+    slabs: [
+      { min: 0, max: 65, amount: 1100 },
+      { min: 66, max: 90, amount: 1800 },
+      { min: 91, max: 135, amount: 2500 },
+      { min: 136, max: Infinity, amount: 2990 },
+    ],
+    fallbackPercent: 4,
+  },
+  mizoram: {
+    name: 'Mizoram',
+    type: 'flat_percent',
+    rate: 4,
+  },
+  nagaland: {
+    name: 'Nagaland',
+    type: 'flat_percent',
+    rate: 5,
+  },
+  odisha: {
+    name: 'Odisha',
+    type: 'slab_percent',
+    slabs: [
+      { min: 0, max: 50000, rate: 6 },
+      { min: 50001, max: 100000, rate: 8 },
+      { min: 100001, max: Infinity, rate: 10 },
+    ],
+  },
+  punjab: {
+    name: 'Punjab',
+    type: 'slab_percent',
+    slabs: [
+      { min: 0, max: 100000, rate: 7 },
+      { min: 100001, max: 200000, rate: 8 },
+      { min: 200001, max: Infinity, rate: 9 },
+    ],
+  },
+  rajasthan: {
+    name: 'Rajasthan',
+    type: 'slab_percent',
+    slabs: [
+      { min: 0, max: 40000, rate: 6 },
+      { min: 40001, max: 150000, rate: 8 },
+      { min: 150001, max: Infinity, rate: 10 },
+    ],
+    cesses: [
+      { type: 'percent_on_tax', rate: 12.5, label: 'Surcharge' },
+    ],
+  },
+  sikkim: {
+    name: 'Sikkim',
+    type: 'slab_percent',
+    slabs: [
+      { min: 0, max: 100000, rate: 3 },
+      { min: 100001, max: Infinity, rate: 4 },
+    ],
+  },
+  tamilnadu: {
+    name: 'Tamil Nadu',
+    type: 'slab_percent',
+    slabs: [
+      { min: 0, max: 100000, rate: 10 },
+      { min: 100001, max: Infinity, rate: 12 },
+    ],
+  },
+  telangana: {
+    name: 'Telangana',
+    type: 'flat_percent',
+    rate: 9,
+    evExemption: { lifeTax: 'full' },
+  },
+  tripura: {
+    name: 'Tripura',
+    type: 'flat_percent',
+    rate: 4,
+  },
+  uttarakhand: {
+    name: 'Uttarakhand',
+    type: 'slab_percent',
+    slabs: [
+      { min: 0, max: 75000, rate: 4 },
+      { min: 75001, max: Infinity, rate: 6 },
+    ],
+  },
+  uttarpradesh: {
+    name: 'Uttar Pradesh',
+    type: 'slab_percent',
+    slabs: [
+      { min: 0, max: 100000, rate: 7 },
+      { min: 100001, max: Infinity, rate: 8 },
+    ],
+  },
+  westbengal: {
+    name: 'West Bengal',
+    type: 'slab_cc',
+    slabs: [
+      { min: 0, max: 80, amount: 1560 },
+      { min: 81, max: 170, amount: 3125 },
+      { min: 171, max: 250, amount: 4685 },
+      { min: 251, max: Infinity, amount: 6250 },
+    ],
+  },
+};
+
 function calcStampDuty(state, propertyValue, gender, location, isFirstTime) {
   const s = STAMP_DUTY_RATES[state];
   if (!s) return null;
@@ -822,17 +1059,95 @@ function calcStampDuty(state, propertyValue, gender, location, isFirstTime) {
   };
 }
 
-function calcRTO(state, vehicleType, fuelType, exShowroomPrice, engineCC, isUsed, age, seats) {
+function calcRTO(state, vehicleType, fuelType, exShowroomPrice, engineCC, isUsed, age, seats, vehicleWeight) {
   const s = RTO_RATES[state];
   if (!s) return null;
   const isEV = fuelType === 'ev' || vehicleType === 'ev';
   const isCommercial = vehicleType === 'commercial';
+  const vehicleCategory = (vehicleType === 'two_wheeler' || vehicleType === '2w') ? 'two_wheeler' : 'four_wheeler';
+  const tw = (vehicleCategory === 'two_wheeler') ? TWO_WHEELER_RTO_RATES[state] : null;
   let lifeTax = 0;
   let taxRate = 0;
   let cessTotal = 0;
   let annualTax = 0;
   let commercialPeriod = null;
   let calculated = false;
+
+  // ---- Two-wheeler: use TWO_WHEELER_RTO_RATES ----
+  if (!calculated && tw) {
+    const isEV2W = fuelType === 'ev';
+
+    // EV exemption for 2W
+    if (isEV2W && tw.evExemption) {
+      if (tw.evExemption.lifeTax === 'full') {
+        lifeTax = 0;
+        taxRate = 0;
+        calculated = true;
+      }
+    }
+
+    if (!calculated) {
+      if (tw.type === 'flat_percent') {
+        taxRate = tw.rate;
+        lifeTax = exShowroomPrice * taxRate / 100;
+        calculated = true;
+      } else if (tw.type === 'slab_percent') {
+        for (const slab of tw.slabs) {
+          if (exShowroomPrice >= slab.min && exShowroomPrice <= slab.max) {
+            taxRate = slab.rate;
+            break;
+          }
+        }
+        lifeTax = exShowroomPrice * taxRate / 100;
+        calculated = true;
+      } else if (tw.type === 'pre_gst_percent') {
+        // Calculate on pre-GST price (remove 28% GST for >10L, 18% otherwise)
+        const gstRate = exShowroomPrice > 1000000 ? 1.28 : 1.18;
+        const preGstPrice = exShowroomPrice / gstRate;
+        taxRate = tw.rate;
+        lifeTax = preGstPrice * taxRate / 100;
+        calculated = true;
+      } else if (tw.type === 'slab_cc') {
+        // engineCC must be passed in; fall back to 150cc if not provided
+        const cc = engineCC || 150;
+        for (const slab of tw.slabs) {
+          if (cc >= slab.min && cc <= slab.max) {
+            lifeTax = slab.amount;
+            taxRate = exShowroomPrice > 0 ? (lifeTax / exShowroomPrice * 100) : 0;
+            break;
+          }
+        }
+        calculated = true;
+      } else if (tw.type === 'slab_weight') {
+        // vehicleWeight param used if available; fall back to fallbackPercent
+        if (typeof vehicleWeight === 'number' && vehicleWeight > 0) {
+          for (const slab of tw.slabs) {
+            if (vehicleWeight >= slab.min && vehicleWeight <= slab.max) {
+              lifeTax = slab.amount;
+              taxRate = exShowroomPrice > 0 ? (lifeTax / exShowroomPrice * 100) : 0;
+              break;
+            }
+          }
+        } else if (tw.fallbackPercent) {
+          taxRate = tw.fallbackPercent;
+          lifeTax = exShowroomPrice * taxRate / 100;
+        }
+        calculated = true;
+      }
+    }
+
+    // Apply 2W cesses if defined (e.g. Karnataka, Maharashtra, Rajasthan)
+    if (calculated && tw.cesses) {
+      for (const cess of tw.cesses) {
+        if (cess.type === 'percent_on_tax') {
+          cessTotal += lifeTax * cess.rate / 100;
+        } else if (cess.type === 'fixed') {
+          cessTotal += cess.amount;
+        }
+      }
+      lifeTax += cessTotal;
+    }
+  }
 
   // ---- Commercial vehicle: seating-based tax ----
   if (isCommercial && s.commercial && s.commercial.brackets) {
@@ -910,7 +1225,7 @@ function calcRTO(state, vehicleType, fuelType, exShowroomPrice, engineCC, isUsed
 
   // ---- Commercial path complete - skip cesses, surcharge, cap ----
   if (!isCommercial) {
-    if (s.cesses) {
+    if (s.cesses && vehicleCategory !== 'two_wheeler') {
       for (const cess of s.cesses) {
         if (cess.fuel && cess.fuel !== fuelType) continue;
         if (cess.type === 'percent') {
@@ -920,7 +1235,9 @@ function calcRTO(state, vehicleType, fuelType, exShowroomPrice, engineCC, isUsed
         }
       }
     }
-    lifeTax += cessTotal;
+    if (vehicleCategory !== 'two_wheeler') {
+      lifeTax += cessTotal;
+    }
 
     if (isUsed && s.usedVehicleSurcharge) {
       lifeTax += lifeTax * s.usedVehicleSurcharge / 100;
@@ -929,8 +1246,14 @@ function calcRTO(state, vehicleType, fuelType, exShowroomPrice, engineCC, isUsed
     if (s.taxCap) lifeTax = Math.min(lifeTax, s.taxCap);
   }
 
-  const hsrpFee = s.hsrpFee || 500;
-  const registrationFee = s.registrationFee || 600;
+  // 2W registration and HSRP fees are typically lower than 4W
+  // Default 2W fees: registrationFee ₹300, hsrpFee ₹200 (national standard)
+  const hsrpFee = vehicleCategory === 'two_wheeler'
+    ? (s.hsrpFee_2w != null ? s.hsrpFee_2w : 200)
+    : (s.hsrpFee || 500);
+  const registrationFee = vehicleCategory === 'two_wheeler'
+    ? (s.registrationFee_2w != null ? s.registrationFee_2w : 300)
+    : (s.registrationFee || 600);
 
   const taxModel = isCommercial
     ? (commercialPeriod === 'lifetime' ? 'lifetime' : (commercialPeriod || 'lifetime'))
