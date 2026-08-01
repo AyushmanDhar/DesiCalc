@@ -29,11 +29,7 @@ const STAMP_DUTY_RATES = {
     name: 'Delhi',
     rate: { male: 6, female: 4, joint_ff: 4, joint_mm: 6, joint_mf: 5 },
     registration: { rate: 1, cap: null },
-    transferDuty: {
-      threshold: 2500000,
-      below: { male: 3, female: 2, joint_ff: 2, joint_mm: 3, joint_mf: 3 },
-      atOrAbove: { male: 4, female: 3, joint_ff: 3, joint_mm: 4, joint_mf: 4 },
-    },
+    firstTimeRebate: { female: 1 },
   },
   goa: {
     name: 'Goa',
@@ -45,7 +41,7 @@ const STAMP_DUTY_RATES = {
       { min: 10000001, max: 50000000, rate: 5 },
       { min: 50000001, max: Infinity, rate: 6 },
     ],
-    registration: { rate: 3, cap: null, threshold: 7500000, rateAbove: 3.5 },
+    registration: { rate: 3, cap: null },
   },
   gujarat: {
     name: 'Gujarat',
@@ -126,7 +122,7 @@ const STAMP_DUTY_RATES = {
   },
   meghalaya: {
     name: 'Meghalaya',
-    rate: { male: 9.9, female: 9.9, joint_ff: 9.9, joint_mm: 9.9, joint_mf: 9.9 },
+    rate: { male: 10, female: 8, joint_ff: 8, joint_mm: 10, joint_mf: 9 },
     registration: { rate: 1, cap: null },
   },
   mizoram: {
@@ -1172,7 +1168,7 @@ function calcStampDuty(state, propertyValue, gender, location, isFirstTime) {
   if (s.rateSlabs) {
     let slabs;
 
-    // State-wide slab array (e.g. Karnataka)
+    // State-wide slab array (e.g. Karnataka, Goa)
     if (Array.isArray(s.rateSlabs)) {
       slabs = s.rateSlabs;
     }
@@ -1198,6 +1194,21 @@ function calcStampDuty(state, propertyValue, gender, location, isFirstTime) {
     if (rate == null) {
       return null;
     }
+  } else if (s.rateSlabsByGender) {
+    // Gender-based slabs (e.g. Himachal Pradesh, Uttarakhand)
+    const slabs = s.rateSlabsByGender[gender] || s.rateSlabsByGender.male;
+    if (!slabs) {
+      return null;
+    }
+    for (const slab of slabs) {
+      if (propertyValue >= slab.min && propertyValue <= slab.max) {
+        rate = slab.rate;
+        break;
+      }
+    }
+    if (rate == null) {
+      return null;
+    }
   } else {
     let rateData = s.rate;
     if (location && s.rate[location] && typeof s.rate[location] === 'object') {
@@ -1212,9 +1223,19 @@ function calcStampDuty(state, propertyValue, gender, location, isFirstTime) {
   }
 
   const sdAmount = propertyValue * rate / 100;
-  const regRate = s.registration.rate || 1;
+  let regRate = s.registration.rate || 1;
+  if (typeof regRate === 'object') {
+    regRate = regRate[location] ?? regRate.urban;
+  }
   let regAmount = propertyValue * regRate / 100;
-  const transferAmount = s.transferDuty ? propertyValue * s.transferDuty.rate / 100 : 0;
+  let transferRate = 0;
+  if (s.transferDuty) {
+    transferRate = s.transferDuty.rate;
+    if (typeof transferRate === 'object') {
+      transferRate = transferRate[location] ?? transferRate.urban;
+    }
+  }
+  const transferAmount = propertyValue * transferRate / 100;
   if (s.registration.cap) regAmount = Math.min(regAmount, s.registration.cap);
 
   if (s.registrationWomen && gender === 'female' && (!s.registrationWomen.maxPropertyValue || propertyValue <= s.registrationWomen.maxPropertyValue)) {
@@ -1223,7 +1244,11 @@ function calcStampDuty(state, propertyValue, gender, location, isFirstTime) {
 
   let cessAmount = 0;
   if (s.stampDutySurcharge && s.stampDutySurcharge.type === 'percent_of_sd') {
-    cessAmount = sdAmount * s.stampDutySurcharge.rate / 100;
+    let surchargeRate = s.stampDutySurcharge.rate;
+    if (typeof surchargeRate === 'object') {
+      surchargeRate = surchargeRate[location] ?? surchargeRate.urban;
+    }
+    cessAmount = sdAmount * surchargeRate / 100;
   }
   if (s.surcharge && (!s.surcharge.minPropertyValue || propertyValue > s.surcharge.minPropertyValue)) {
     cessAmount += sdAmount * s.surcharge.rate / 100;
@@ -1233,6 +1258,9 @@ function calcStampDuty(state, propertyValue, gender, location, isFirstTime) {
   }
   if (s.lbc) {
     cessAmount += sdAmount * s.lbc.rate / 100;
+  }
+  if (s.additionalDuty && (!s.additionalDuty.minPropertyValue || propertyValue > s.additionalDuty.minPropertyValue)) {
+    cessAmount += propertyValue * s.additionalDuty.rate / 100;
   }
 
   const total = sdAmount + regAmount + transferAmount + cessAmount + (s.otherCharges || 0);
