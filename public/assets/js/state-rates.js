@@ -1,7 +1,7 @@
 const STAMP_DUTY_RATES = {
   andhrapradesh: {
     name: 'Andhra Pradesh',
-    rate: { male: 5, female: 4, joint_ff: 4, joint_mm: 5, joint_mf: 4.5 },
+    rate: { male: 5, female: 5, joint_ff: 5, joint_mm: 5, joint_mf: 5 },
     registration: { rate: 1, cap: null },
 	transferDuty: { rate: 1.5 },
   },
@@ -12,13 +12,13 @@ const STAMP_DUTY_RATES = {
   },
   assam: {
     name: 'Assam',
-    rate: {male: 8.25, female: 8.25, joint_ff: 8.25, joint_mm: 8.25, joint_mf: 8.25,},
-    registration: { rate: 1, cap: null },
+    rate: { male: 6, female: 5, joint_ff: 5, joint_mm: 6, joint_mf: 5.5 },
+    registration: { rate: 8.5, cap: null, minPropertyValue: 500000 },
   },
   bihar: {
     name: 'Bihar',
-    rate: { male: 6, female: 5, joint_ff: 5, joint_mm: 6, joint_mf: 5.5 },
-    registration: { rate: 1, cap: null },
+    rate: { male: 6, female: 6, joint_ff: 6, joint_mm: 6, joint_mf: 6 },
+    registration: { rate: 2, cap: null },
   },
   chhattisgarh: {
     name: 'Chhattisgarh',
@@ -29,12 +29,23 @@ const STAMP_DUTY_RATES = {
     name: 'Delhi',
     rate: { male: 6, female: 4, joint_ff: 4, joint_mm: 6, joint_mf: 5 },
     registration: { rate: 1, cap: null },
-    firstTimeRebate: { female: 1 },
+    transferDuty: {
+      threshold: 2500000,
+      below: { male: 3, female: 2, joint_ff: 2, joint_mm: 3, joint_mf: 3 },
+      atOrAbove: { male: 4, female: 3, joint_ff: 3, joint_mm: 4, joint_mf: 4 },
+    },
   },
   goa: {
     name: 'Goa',
-    rate: { male: 5, female: 4, joint_ff: 4, joint_mm: 5, joint_mf: 4.5 },
-    registration: { rate: 1, cap: null },
+    rate: null,
+    rateSlabs: [
+      { min: 0, max: 5000000, rate: 3 },
+      { min: 5000001, max: 7500000, rate: 4 },
+      { min: 7500001, max: 10000000, rate: 4.5 },
+      { min: 10000001, max: 50000000, rate: 5 },
+      { min: 50000001, max: Infinity, rate: 6 },
+    ],
+    registration: { rate: 3, cap: null, threshold: 7500000, rateAbove: 3.5 },
   },
   gujarat: {
     name: 'Gujarat',
@@ -51,13 +62,35 @@ const STAMP_DUTY_RATES = {
   },
   himachalpradesh: {
     name: 'Himachal Pradesh',
-    rate: { male: 5, female: 4, joint_ff: 4, joint_mm: 5, joint_mf: 4.5 },
-    registration: { rate: 1, cap: null },
+    rate: null,
+    rateSlabsByGender: {
+      male: [
+        { min: 0, max: 5000000, rate: 6 },
+        { min: 5000001, max: Infinity, rate: 8 },
+      ],
+      female: [
+        { min: 0, max: 8000000, rate: 4 },
+        { min: 8000001, max: Infinity, rate: 8 },
+      ],
+      joint_ff: [
+        { min: 0, max: 8000000, rate: 4 },
+        { min: 8000001, max: Infinity, rate: 8 },
+      ],
+      joint_mm: [
+        { min: 0, max: 5000000, rate: 6 },
+        { min: 5000001, max: Infinity, rate: 8 },
+      ],
+      joint_mf: [
+        { min: 0, max: 5000000, rate: 6 },
+        { min: 5000001, max: Infinity, rate: 8 },
+      ],
+    },
+    registration: { rate: 2, cap: 25000 },
   },
   jharkhand: {
     name: 'Jharkhand',
-    rate: { male: 5, female: 4, joint_ff: 4, joint_mm: 5, joint_mf: 4.5 },
-    registration: { rate: 1, cap: null },
+    rate: { male: 4, female: 4, joint_ff: 4, joint_mm: 4, joint_mf: 4 },
+    registration: { rate: 3, cap: null },
   },
   karnataka: {
     name: 'Karnataka',
@@ -68,13 +101,12 @@ const STAMP_DUTY_RATES = {
 	  { min: 4500001, max: Infinity, rate: 5 },
   ],
     registration: { rate: 2, cap: null },
-    stampDutySurcharge: { rate: 10, type: 'percent_of_sd' },
+    stampDutySurcharge: { rate: { urban: 12, rural: 13 }, type: 'percent_of_sd' },
   },
   kerala: {
     name: 'Kerala',
     rate: { male: 8, female: 8, joint_ff: 8, joint_mm: 8, joint_mf: 8 },
-    registration: { rate: 1, cap: null },
-    surcharge: { rate: 2, type: 'percent_of_sd' },
+    registration: { rate: 2, cap: null },
   },
   madhyapradesh: {
     name: 'Madhya Pradesh',
@@ -83,35 +115,34 @@ const STAMP_DUTY_RATES = {
   },
   maharashtra: {
     name: 'Maharashtra',
-    rate: { male: 6, female: 5, joint_ff: 5, joint_mm: 6, joint_mf: 5 },
+    rate: { male: 5, female: 4, joint_ff: 4, joint_mm: 5, joint_mf: 4.5 },
     registration: { rate: 1, cap: 30000 },
     metroCess: { rate: 1 },
-    lbc: { rate: 1 },
   },
   manipur: {
     name: 'Manipur',
-    rate: { male: 5, female: 4, joint_ff: 4, joint_mm: 5, joint_mf: 4.5 },
-    registration: { rate: 1, cap: null },
+    rate: { male: 7, female: 7, joint_ff: 7, joint_mm: 7, joint_mf: 7 },
+    registration: { rate: 3, cap: 250000 },
   },
   meghalaya: {
     name: 'Meghalaya',
-    rate: { male: 10, female: 8, joint_ff: 8, joint_mm: 10, joint_mf: 9 },
+    rate: { male: 9.9, female: 9.9, joint_ff: 9.9, joint_mm: 9.9, joint_mf: 9.9 },
     registration: { rate: 1, cap: null },
   },
   mizoram: {
     name: 'Mizoram',
-    rate: { male: 6, female: 5, joint_ff: 5, joint_mm: 6, joint_mf: 5.5 },
+    rate: { male: 3, female: 3, joint_ff: 3, joint_mm: 3, joint_mf: 3 },
     registration: { rate: 1, cap: null },
   },
   nagaland: {
     name: 'Nagaland',
-    rate: { male: 5, female: 4, joint_ff: 4, joint_mm: 5, joint_mf: 4.5 },
+    rate: { male: 8.25, female: 8.25, joint_ff: 8.25, joint_mm: 8.25, joint_mf: 8.25 },
     registration: { rate: 1, cap: null },
   },
   odisha: {
     name: 'Odisha',
-    rate: { male: 5, female: 4, joint_ff: 4, joint_mm: 5, joint_mf: 4.5 },
-    registration: { rate: 1, cap: null },
+    rate: { male: 5, female: 4, joint_ff: 4, joint_mm: 5, joint_mf: 4 },
+    registration: { rate: 2, cap: null },
   },
   punjab: {
     name: 'Punjab',
@@ -125,23 +156,24 @@ const STAMP_DUTY_RATES = {
   },
   sikkim: {
     name: 'Sikkim',
-    rate: { male: 5, female: 4, joint_ff: 4, joint_mm: 5, joint_mf: 4.5 },
-    registration: { rate: 1, cap: null },
+    rate: { male: 1, female: 1, joint_ff: 1, joint_mm: 1, joint_mf: 1 },
+    registration: { rate: 5, cap: null },
   },
   tamilnadu: {
     name: 'Tamil Nadu',
-    rate: { male: 7, female: 6, joint_ff: 6, joint_mm: 7, joint_mf: 6.5 },
+    rate: { male: 7, female: 7, joint_ff: 7, joint_mm: 7, joint_mf: 7 },
     registration: { rate: 4, cap: null },
     registrationWomen: { rate: 3, maxPropertyValue: 1000000 },
   },
   telangana: {
     name: 'Telangana',
-    rate: { male: 5, female: 4, joint_ff: 4, joint_mm: 5, joint_mf: 4.5 },
-    registration: { rate: 1, cap: null },
+    rate: { male: 5.5, female: 5.5, joint_ff: 5.5, joint_mm: 5.5, joint_mf: 5.5 },
+    registration: { rate: { urban: 0.5, rural: 2 }, cap: null },
+    transferDuty: { rate: { urban: 1.5, rural: 0 } },
   },
   tripura: {
     name: 'Tripura',
-    rate: { male: 5, female: 4, joint_ff: 4, joint_mm: 5, joint_mf: 4.5 },
+    rate: { male: 5, female: 5, joint_ff: 5, joint_mm: 5, joint_mf: 5 },
     registration: { rate: 1, cap: null },
   },
   uttarpradesh: {
@@ -151,22 +183,38 @@ const STAMP_DUTY_RATES = {
   },
   uttarakhand: {
     name: 'Uttarakhand',
-    rate: { male: 5, female: 4, joint_ff: 4, joint_mm: 5, joint_mf: 4.5 },
-    registration: { rate: 1, cap: null },
+    rate: null,
+    rateSlabsByGender: {
+      male: [{ min: 0, max: Infinity, rate: 5 }],
+      female: [
+        { min: 0, max: 2500000, rate: 3.75 },
+        { min: 2500001, max: Infinity, rate: 5 },
+      ],
+      joint_ff: [
+        { min: 0, max: 2500000, rate: 3.75 },
+        { min: 2500001, max: Infinity, rate: 5 },
+      ],
+      joint_mm: [{ min: 0, max: Infinity, rate: 5 }],
+      joint_mf: [
+        { min: 0, max: 2500000, rate: 4.37 },
+        { min: 2500001, max: Infinity, rate: 5 },
+      ],
+    },
+    registration: { rate: 2, cap: 25000 },
   },
   westbengal: {
     name: 'West Bengal',
     rate: null,
     registration: { rate: 1, cap: null },
-    surcharge: { rate: 1, type: 'percent_of_sd', minPropertyValue: 10000000 },
+    additionalDuty: { rate: 1, minPropertyValue: 10000000 },
     rateSlabs: {
       urban: [
-        { min: 0, max: 10000000, rate: 6 },
-        { min: 10000001, max: Infinity, rate: 7 },
+        { min: 0, max: 10000000, rate: 4 },
+        { min: 10000001, max: Infinity, rate: 5 },
       ],
       rural: [
-        { min: 0, max: 10000000, rate: 5 },
-        { min: 10000001, max: Infinity, rate: 6 },
+        { min: 0, max: 10000000, rate: 3 },
+        { min: 10000001, max: Infinity, rate: 4 },
       ],
     },
   },
