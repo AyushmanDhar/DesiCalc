@@ -5,7 +5,8 @@
   "scripts": {
     "build": "npx tailwindcss -i ./src/tailwind.css -o ./public/assets/css/tailwind.css --minify",
     "dev": "npx tailwindcss -i ./src/tailwind.css -o ./public/assets/css/tailwind.css --watch",
-    "generate-discovery": "node generate-discovery.js"
+    "generate-discovery": "node generate-discovery.js",
+    "test": "node tests/state-rates.test.js"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.17"
