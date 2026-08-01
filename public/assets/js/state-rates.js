@@ -196,7 +196,7 @@ const STAMP_DUTY_RATES = {
         { min: 2500001, max: Infinity, rate: 5 },
       ],
     },
-    registration: { rate: 2, cap: 25000 },
+    registration: { rate: 2, cap: 50000 },
   },
   westbengal: {
     name: 'West Bengal',
@@ -1254,7 +1254,7 @@ function calcStampDuty(state, propertyValue, gender, location, isFirstTime) {
     cessAmount += sdAmount * s.surcharge.rate / 100;
   }
   if (s.metroCess) {
-    cessAmount += sdAmount * s.metroCess.rate / 100;
+    cessAmount += propertyValue * s.metroCess.rate / 100;
   }
   if (s.lbc) {
     cessAmount += sdAmount * s.lbc.rate / 100;
