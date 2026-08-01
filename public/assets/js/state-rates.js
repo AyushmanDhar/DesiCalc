@@ -1046,6 +1046,7 @@ const TWO_WHEELER_RTO_RATES = {
       { min: 201, max: 500, rate: 13 },
       { min: 501, max: Infinity, rate: 15 },
     ],
+    evExemption: { lifeTax: 'full' },
     cesses: [
       { type: 'percent_on_tax', rate: 12.5, label: 'Surcharge' },
     ],
@@ -1066,6 +1067,7 @@ const TWO_WHEELER_RTO_RATES = {
       { min: 0, max: 100000, rate: 10 },
       { min: 100001, max: Infinity, rate: 12 },
     ],
+    evExemption: { lifeTax: 'full' },
   },
   telangana: {
     name: 'Telangana',
