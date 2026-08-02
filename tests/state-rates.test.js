@@ -203,20 +203,30 @@ check('Bihar stamp 50L (6% + 2%)', stamp('bihar', 5000000), 400000);
 check('Chhattisgarh stamp male 50L (5% + 4%)', stamp('chhattisgarh', 5000000), 450000);
 check('Chhattisgarh stamp female 50L (4% + 4%)', stamp('chhattisgarh', 5000000, 'female'), 400000);
 check('Gujarat stamp 50L (4.9% + 1%)', stamp('gujarat', 5000000), 295000);
-check('Haryana stamp urban male 50L (7% + 1%)', stamp('haryana', 5000000, 'male', 'urban'), 400000);
-check('Haryana stamp urban female 50L (5% + 1%)', stamp('haryana', 5000000, 'female', 'urban'), 300000);
-check('Haryana stamp rural male 50L (5% + 1%)', stamp('haryana', 5000000, 'male', 'rural'), 300000);
+check('Gujarat stamp female 50L (4.9% + 0% reg exempt)', stamp('gujarat', 5000000, 'female'), 245000);
+check('Haryana stamp urban male 50L (7% + reg slab 25000)', stamp('haryana', 5000000, 'male', 'urban'), 375000);
+check('Haryana stamp urban female 50L (5% + reg slab 25000)', stamp('haryana', 5000000, 'female', 'urban'), 275000);
+check('Haryana stamp rural male 50L (5% + reg slab 25000)', stamp('haryana', 5000000, 'male', 'rural'), 275000);
+check('Haryana reg 2L slab 1000', stampField('haryana', 'registrationAmount', 200000, 'male', 'urban'), 1000);
+check('Haryana reg 20L slab 10000', stampField('haryana', 'registrationAmount', 2000000, 'male', 'urban'), 10000);
+check('Haryana reg 30L slab 20000', stampField('haryana', 'registrationAmount', 3000000, 'male', 'urban'), 20000);
+check('Haryana reg 95L slab 50000', stampField('haryana', 'registrationAmount', 9500000, 'male', 'urban'), 50000);
 check('Jharkhand stamp 50L (4% + 3%)', stamp('jharkhand', 5000000), 350000);
 check('Kerala stamp 50L (8% + 2%)', stamp('kerala', 5000000), 500000);
 check('MP stamp 50L (7.5% + 3%)', stamp('madhyapradesh', 5000000), 525000);
-check('Maharashtra stamp male 50L (5% + 1% metro of value + 1% reg capped)', stamp('maharashtra', 5000000), 330000);
-check('Maharashtra stamp female 50L (4% + 1% metro + 1% reg capped)', stamp('maharashtra', 5000000, 'female'), 280000);
-check('Maharashtra stamp joint_mf 50L (4.5% + 1% metro + reg capped)', stamp('maharashtra', 5000000, 'joint_mf'), 305000);
-check('Manipur stamp 50L (7% + 3% reg)', stamp('manipur', 5000000), 500000);
-check('Meghalaya stamp male 50L (10% + 1%)', stamp('meghalaya', 5000000), 550000);
-check('Meghalaya stamp female 50L (8% + 1%)', stamp('meghalaya', 5000000, 'female'), 450000);
-check('Meghalaya stamp joint_mf 50L (9% + 1%)', stamp('meghalaya', 5000000, 'joint_mf'), 500000);
-check('Mizoram stamp 50L (3% + 1%)', stamp('mizoram', 5000000), 200000);
+check('Maharashtra stamp mumbai male 50L (5% + 1% metro of value + 1% reg capped)', stamp('maharashtra', 5000000, 'male', 'mumbai'), 330000);
+check('Maharashtra stamp mumbai female 50L (4% + 1% metro + 1% reg capped)', stamp('maharashtra', 5000000, 'female', 'mumbai'), 280000);
+check('Maharashtra stamp mumbai joint_mf 50L (4.5% + 1% metro + reg capped)', stamp('maharashtra', 5000000, 'joint_mf', 'mumbai'), 305000);
+check('Maharashtra stamp pune male 50L (7% + reg capped)', stamp('maharashtra', 5000000, 'male', 'pune'), 380000);
+check('Maharashtra stamp pune female 50L (6% + reg capped)', stamp('maharashtra', 5000000, 'female', 'pune'), 330000);
+check('Maharashtra stamp nagpur male 50L (7%)', stamp('maharashtra', 5000000, 'male', 'nagpur'), 380000);
+check('Maharashtra stamp municipal male 50L (4% + reg capped)', stamp('maharashtra', 5000000, 'male', 'municipal'), 230000);
+check('Maharashtra stamp grampanchayat female 50L (2% + reg capped)', stamp('maharashtra', 5000000, 'female', 'grampanchayat'), 130000);
+check('Manipur stamp 50L (7% + 3% reg capped 25k)', stamp('manipur', 5000000), 375000);
+check('Meghalaya stamp male 50L (9.9% + 1.5%)', stamp('meghalaya', 5000000), 570000);
+check('Meghalaya stamp female 50L (9.9% + 1.5%)', stamp('meghalaya', 5000000, 'female'), 570000);
+check('Meghalaya stamp joint_mf 50L (9.9% + 1.5%)', stamp('meghalaya', 5000000, 'joint_mf'), 570000);
+check('Mizoram stamp 50L (3% + 0.5% reg)', stamp('mizoram', 5000000), 175000);
 check('Nagaland stamp 50L (8.25% + 1%)', stamp('nagaland', 5000000), 462500);
 check('Odisha stamp male 50L (5% + 2%)', stamp('odisha', 5000000), 350000);
 check('Odisha stamp female 50L (4% + 2%)', stamp('odisha', 5000000, 'female'), 300000);
@@ -224,33 +234,43 @@ check('Odisha stamp joint_ff 50L (4% + 2%)', stamp('odisha', 5000000, 'joint_ff'
 check('Punjab stamp male 50L (7% + 1%)', stamp('punjab', 5000000), 400000);
 check('Punjab stamp female 50L (5% + 1%)', stamp('punjab', 5000000, 'female'), 300000);
 check('Punjab stamp joint_mf 50L (6% + 1%)', stamp('punjab', 5000000, 'joint_mf'), 350000);
-check('Rajasthan stamp male 50L (6% + 1%)', stamp('rajasthan', 5000000), 350000);
-check('Rajasthan stamp female 50L (5% + 1%)', stamp('rajasthan', 5000000, 'female'), 300000);
-check('Sikkim stamp 50L (1% + 5%)', stamp('sikkim', 5000000), 300000);
+check('Punjab stamp male 5Cr (reg capped 2L)', stamp('punjab', 50000000), 3700000);
+check('Rajasthan stamp male 50L (6% + 33% surcharge + 1%)', stamp('rajasthan', 5000000), 449000);
+check('Rajasthan stamp female 50L (5% + 33% surcharge + 1%)', stamp('rajasthan', 5000000, 'female'), 382500);
+check('Rajasthan stamp joint_mf 50L (6% + 33% + 1%)', stamp('rajasthan', 5000000, 'joint_mf'), 449000);
+check('Sikkim stamp 50L urban (1% + 5%)', stamp('sikkim', 5000000), 300000);
+check('Sikkim stamp 50L rural (1% + 4%)', stamp('sikkim', 5000000, 'male', 'rural'), 250000);
+check('Sikkim stamp female 50L urban (1% + 4% women reg)', stamp('sikkim', 5000000, 'female'), 250000);
 check('TN stamp male 50L (7% + 4%)', stamp('tamilnadu', 5000000), 550000);
 check('TN stamp female 8L (7% + 3% women reg)', stamp('tamilnadu', 800000, 'female'), 80000);
 check('TN stamp female 20L (7% + 4%, women reg only <=10L)', stamp('tamilnadu', 2000000, 'female'), 220000);
-check('Tripura stamp 50L (5% + 1%)', stamp('tripura', 5000000), 300000);
+check('Tripura stamp 50L (5% + 1.5% + 78 fixed)', stamp('tripura', 5000000), 325078);
 check('UP stamp male 50L (7% + 1%)', stamp('uttarpradesh', 5000000), 400000);
 check('UP stamp female 50L (6% + 1%)', stamp('uttarpradesh', 5000000, 'female'), 350000);
 check('UP stamp joint_mf 50L (6.5% + 1%)', stamp('uttarpradesh', 5000000, 'joint_mf'), 375000);
+check('UP stamp female 2Cr (7% above 1Cr + 1%)', stamp('uttarpradesh', 20000000, 'female'), 1600000);
+check('UP stamp female 1Cr boundary (6%)', stamp('uttarpradesh', 10000000, 'female'), 700000);
 
-// ---------- STAMP DUTY: DELHI REBATES ----------
-check('Delhi stamp male 50L (6% + 1%)', stamp('delhi', 5000000), 350000);
-check('Delhi stamp female 50L (4% + 1%)', stamp('delhi', 5000000, 'female'), 250000);
-check('Delhi stamp joint_mf 50L (5% + 1%)', stamp('delhi', 5000000, 'joint_mf'), 300000);
-check('Delhi stamp female first-time 30L (3% rebate)', stamp('delhi', 3000000, 'female', 'urban', true), 120000);
+// ---------- STAMP DUTY: DELHI REBATES + TRANSFER DUTY ----------
+check('Delhi stamp male 50L (6% + 1% + 4% TD)', stamp('delhi', 5000000), 550000);
+check('Delhi stamp female 50L (4% + 1% + 3% TD)', stamp('delhi', 5000000, 'female'), 400000);
+check('Delhi stamp joint_mf 50L (5% + 1% + 4% TD)', stamp('delhi', 5000000, 'joint_mf'), 500000);
+check('Delhi stamp female first-time 30L (3% rebate + TD)', stamp('delhi', 3000000, 'female', 'urban', true), 210000);
 check('Delhi stamp female first-time 30L rate 3', stampField('delhi', 'stampDutyRate', 3000000, 'female', 'urban', true), 3);
-check('Delhi stamp male first-time 30L (no rebate)', stamp('delhi', 3000000, 'male', 'urban', true), 210000);
+check('Delhi stamp male first-time 30L (no rebate + TD)', stamp('delhi', 3000000, 'male', 'urban', true), 330000);
+check('Delhi stamp male 20L TD 3%', stampField('delhi', 'transferDutyAmount', 2000000, 'male'), 60000);
+check('Delhi stamp male 30L TD 4%', stampField('delhi', 'transferDutyAmount', 3000000, 'male'), 120000);
+check('Delhi stamp female 20L TD 2%', stampField('delhi', 'transferDutyAmount', 2000000, 'female'), 40000);
+check('Delhi stamp female 30L TD 3%', stampField('delhi', 'transferDutyAmount', 3000000, 'female'), 90000);
 
 // ---------- STAMP DUTY: VALUE SLABS ----------
 check('Goa stamp 40L (3% + 3%)', stamp('goa', 4000000), 240000);
 check('Goa stamp 50L boundary (3% + 3%)', stamp('goa', 5000000), 300000);
 check('Goa stamp 60L (4% + 3%)', stamp('goa', 6000000), 420000);
-check('Goa stamp 90L (4.5% + 3%)', stamp('goa', 9000000), 675000);
-check('Goa stamp 2Cr (5% + 3%)', stamp('goa', 20000000), 1600000);
-check('Goa stamp 6Cr (6% + 3%)', stamp('goa', 60000000), 5400000);
-check('Goa stamp 6Cr effective rate 9%', stampField('goa', 'effectiveRate', 60000000), 9);
+check('Goa stamp 90L (4.5% + 3.5%)', stamp('goa', 9000000), 720000);
+check('Goa stamp 2Cr (5% + 3.5%)', stamp('goa', 20000000), 1700000);
+check('Goa stamp 6Cr (6% + 3.5%)', stamp('goa', 60000000), 5700000);
+check('Goa stamp 6Cr effective rate 9.5%', stampField('goa', 'effectiveRate', 60000000), 9.5);
 check('Karnataka stamp 15L (2% + 2% + 12% cess)', stamp('karnataka', 1500000), 63600);
 check('Karnataka stamp 20L boundary (2% slab)', stamp('karnataka', 2000000), 84800);
 check('Karnataka stamp 40L (3% + 2% + 12% cess)', stamp('karnataka', 4000000), 214400);
@@ -260,12 +280,12 @@ check('Karnataka stamp rural 50L (5% + 2% + 13% cess)', stamp('karnataka', 50000
 check('Karnataka stamp urban 50L rate 5', stampField('karnataka', 'stampDutyRate', 5000000, 'male', 'urban'), 5);
 check('Karnataka stamp urban 50L cess 30000', stampField('karnataka', 'cessAmount', 5000000, 'male', 'urban'), 30000);
 check('Karnataka stamp rural 50L cess 32500', stampField('karnataka', 'cessAmount', 5000000, 'male', 'rural'), 32500);
-check('WB stamp urban 90L (4% + 1%)', stamp('westbengal', 9000000, 'male', 'urban'), 450000);
-check('WB stamp urban 1Cr boundary (4%, no addl duty)', stamp('westbengal', 10000000, 'male', 'urban'), 500000);
-check('WB stamp urban 1.5Cr (5% + 1% + 1% addl)', stamp('westbengal', 15000000, 'male', 'urban'), 1050000);
-check('WB stamp urban 1.5Cr addl duty 150000', stampField('westbengal', 'cessAmount', 15000000, 'male', 'urban'), 150000);
-check('WB stamp rural 90L (3% + 1%)', stamp('westbengal', 9000000, 'male', 'rural'), 360000);
-check('WB stamp rural 1.1Cr (4% + 1% + 1% addl)', stamp('westbengal', 11000000, 'male', 'rural'), 660000);
+check('WB stamp urban 90L (6% + 1%)', stamp('westbengal', 9000000, 'male', 'urban'), 630000);
+check('WB stamp urban 1Cr boundary (6%, no addl duty)', stamp('westbengal', 10000000, 'male', 'urban'), 700000);
+check('WB stamp urban 1.5Cr (7% + 1%)', stamp('westbengal', 15000000, 'male', 'urban'), 1200000);
+check('WB stamp urban 1.5Cr rate 7', stampField('westbengal', 'stampDutyRate', 15000000, 'male', 'urban'), 7);
+check('WB stamp rural 90L (5% + 1%)', stamp('westbengal', 9000000, 'male', 'rural'), 540000);
+check('WB stamp rural 1.1Cr (6% + 1%)', stamp('westbengal', 11000000, 'male', 'rural'), 770000);
 
 // ---------- STAMP DUTY: GENDER SLABS (HP/UK) ----------
 check('HP stamp male 40L (6% + 2% reg capped)', stamp('himachalpradesh', 4000000), 265000);
@@ -275,7 +295,7 @@ check('HP stamp male 60L (8% + reg capped 25k)', stamp('himachalpradesh', 600000
 check('HP stamp female 70L (4% + reg capped)', stamp('himachalpradesh', 7000000, 'female'), 305000);
 check('HP stamp female 80L boundary (4%)', stamp('himachalpradesh', 8000000, 'female'), 345000);
 check('HP stamp female 90L (8%)', stamp('himachalpradesh', 9000000, 'female'), 745000);
-check('HP stamp joint_mf 40L (6%)', stamp('himachalpradesh', 4000000, 'joint_mf'), 265000);
+check('HP stamp joint_mf 40L (5% lower slab)', stamp('himachalpradesh', 4000000, 'joint_mf'), 225000);
 check('UK stamp male 20L (5% + 2%)', stamp('uttarakhand', 2000000), 140000);
 check('UK stamp male 30L (5% + reg capped 50k)', stamp('uttarakhand', 3000000), 200000);
 check('UK stamp male 30L reg amount 50000', stampField('uttarakhand', 'registrationAmount', 3000000, 'male'), 50000);
@@ -294,8 +314,9 @@ check('TG stamp rural 50L TD 0', stampField('telangana', 'transferDutyAmount', 5
 
 // ---------- STAMP DUTY: FIELD CHECKS ----------
 check('TN stamp female 8L reg amount 24000', stampField('tamilnadu', 'registrationAmount', 800000, 'female'), 24000);
-check('Maharashtra stamp male 50L reg capped 30000', stampField('maharashtra', 'registrationAmount', 5000000, 'male'), 30000);
-check('Maharashtra stamp male 50L base rate 5', stampField('maharashtra', 'stampDutyRate', 5000000, 'male'), 5);
+check('Maharashtra stamp mumbai male 50L reg capped 30000', stampField('maharashtra', 'registrationAmount', 5000000, 'male', 'mumbai'), 30000);
+check('Maharashtra stamp mumbai male 50L base rate 5', stampField('maharashtra', 'stampDutyRate', 5000000, 'male', 'mumbai'), 5);
+check('Maharashtra stamp pune male 50L base rate 7', stampField('maharashtra', 'stampDutyRate', 5000000, 'male', 'pune'), 7);
 
 console.log(`\n${passed} passed, ${failed} failed`);
 if (failed > 0) {

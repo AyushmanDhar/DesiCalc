@@ -143,10 +143,7 @@
           </div>
           <div>
             <label for="location" data-i18n="stamp.label.location">Location</label>
-            <select id="location" onchange="calcStamp()">
-              <option value="urban" data-i18n="stamp.location.urban">Urban</option>
-              <option value="rural" data-i18n="stamp.location.rural">Rural</option>
-            </select>
+            <select id="location" onchange="calcStamp()"></select>
           </div>
           <div>
             <label class="flex items-center gap-2 cursor-pointer">
@@ -249,7 +246,37 @@
       });
     }
 
+    var STAMP_LOCATIONS = {
+      default: [['urban', 'Urban'], ['rural', 'Rural']],
+      maharashtra: [
+        ['mumbai', 'Mumbai'],
+        ['pune', 'Pune'],
+        ['thane', 'Thane'],
+        ['nagpur', 'Nagpur'],
+        ['navimumbai', 'Navi Mumbai'],
+        ['pimprichinchwad', 'Pimpri-Chinchwad'],
+        ['municipal', 'Municipal Council'],
+        ['grampanchayat', 'Gram Panchayat']
+      ]
+    };
+
+    function populateLocation(state) {
+      var sel = document.getElementById('location');
+      var prev = sel.value;
+      var opts = STAMP_LOCATIONS[state] || STAMP_LOCATIONS.default;
+      sel.innerHTML = '';
+      opts.forEach(function(o) {
+        var opt = document.createElement('option');
+        opt.value = o[0];
+        opt.textContent = o[1];
+        sel.appendChild(opt);
+      });
+      var stillValid = opts.some(function(o) { return o[0] === prev; });
+      sel.value = stillValid ? prev : opts[0][0];
+    }
+
     function calcStamp() {
+      populateLocation(document.getElementById('state').value);
       var state = document.getElementById('state').value;
       var value = getVal('propertyValue');
       var gender = document.getElementById('gender').value;
@@ -302,7 +329,7 @@
     function resetForm() {
       document.getElementById('propertyValue').value = '5000000';
       document.getElementById('gender').value = 'male';
-      document.getElementById('location').value = 'urban';
+      populateLocation(document.getElementById('state').value);
       document.getElementById('isFirstTime').checked = false;
       calcStamp();
     }

@@ -30,6 +30,30 @@ const STAMP_DUTY_RATES = {
     rate: { male: 6, female: 4, joint_ff: 4, joint_mm: 6, joint_mf: 5 },
     registration: { rate: 1, cap: null },
     firstTimeRebate: { female: 1 },
+    transferDuty: {
+      byGender: {
+        male: [
+          { min: 0, max: 2500000, rate: 3 },
+          { min: 2500001, max: Infinity, rate: 4 },
+        ],
+        female: [
+          { min: 0, max: 2500000, rate: 2 },
+          { min: 2500001, max: Infinity, rate: 3 },
+        ],
+        joint_ff: [
+          { min: 0, max: 2500000, rate: 2 },
+          { min: 2500001, max: Infinity, rate: 3 },
+        ],
+        joint_mm: [
+          { min: 0, max: 2500000, rate: 3 },
+          { min: 2500001, max: Infinity, rate: 4 },
+        ],
+        joint_mf: [
+          { min: 0, max: 2500000, rate: 3 },
+          { min: 2500001, max: Infinity, rate: 4 },
+        ],
+      },
+    },
   },
   goa: {
     name: 'Goa',
@@ -41,12 +65,13 @@ const STAMP_DUTY_RATES = {
       { min: 10000001, max: 50000000, rate: 5 },
       { min: 50000001, max: Infinity, rate: 6 },
     ],
-    registration: { rate: 3, cap: null },
+    registration: { rate: 3, tiers: [{ min: 7500001, rate: 3.5 }], cap: null },
   },
   gujarat: {
     name: 'Gujarat',
     rate: { male: 4.9, female: 4.9, joint_ff: 4.9, joint_mm: 4.9, joint_mf: 4.9 },
     registration: { rate: 1, cap: null },
+    registrationWomen: { rate: 0 },
   },
   haryana: {
     name: 'Haryana',
@@ -54,7 +79,24 @@ const STAMP_DUTY_RATES = {
       urban: { male: 7, female: 5, joint_ff: 6, joint_mm: 6, joint_mf: 6 },
       rural: { male: 5, female: 3, joint_ff: 4, joint_mm: 4, joint_mf: 4 },
     },
-    registration: { rate: 1, cap: null },
+    registration: {
+      rate: 1,
+      cap: null,
+      slabs: [
+        { min: 0, max: 50000, amount: 100 },
+        { min: 50001, max: 500000, amount: 1000 },
+        { min: 500001, max: 1000000, amount: 5000 },
+        { min: 1000001, max: 2000000, amount: 10000 },
+        { min: 2000001, max: 2500000, amount: 12500 },
+        { min: 2500001, max: 4000000, amount: 20000 },
+        { min: 4000001, max: 5000000, amount: 25000 },
+        { min: 5000001, max: 6000000, amount: 30000 },
+        { min: 6000001, max: 7000000, amount: 35000 },
+        { min: 7000001, max: 8000000, amount: 40000 },
+        { min: 8000001, max: 9000000, amount: 45000 },
+        { min: 9000001, max: Infinity, amount: 50000 },
+      ],
+    },
   },
   himachalpradesh: {
     name: 'Himachal Pradesh',
@@ -77,7 +119,7 @@ const STAMP_DUTY_RATES = {
         { min: 5000001, max: Infinity, rate: 8 },
       ],
       joint_mf: [
-        { min: 0, max: 5000000, rate: 6 },
+        { min: 0, max: 5000000, rate: 5 },
         { min: 5000001, max: Infinity, rate: 8 },
       ],
     },
@@ -111,24 +153,33 @@ const STAMP_DUTY_RATES = {
   },
   maharashtra: {
     name: 'Maharashtra',
-    rate: { male: 5, female: 4, joint_ff: 4, joint_mm: 5, joint_mf: 4.5 },
+    rate: {
+      mumbai: { male: 5, female: 4, joint_ff: 4, joint_mm: 5, joint_mf: 4.5 },
+      pune: { male: 7, female: 6, joint_ff: 6, joint_mm: 7, joint_mf: 6.5 },
+      thane: { male: 7, female: 6, joint_ff: 6, joint_mm: 7, joint_mf: 6.5 },
+      nagpur: { male: 7, female: 6, joint_ff: 6, joint_mm: 7, joint_mf: 6.5 },
+      navimumbai: { male: 7, female: 6, joint_ff: 6, joint_mm: 7, joint_mf: 6.5 },
+      pimprichinchwad: { male: 7, female: 6, joint_ff: 6, joint_mm: 7, joint_mf: 6.5 },
+      municipal: { male: 4, female: 3, joint_ff: 3, joint_mm: 4, joint_mf: 3.5 },
+      grampanchayat: { male: 3, female: 2, joint_ff: 2, joint_mm: 3, joint_mf: 2.5 },
+    },
     registration: { rate: 1, cap: 30000 },
-    metroCess: { rate: 1 },
+    metroCess: { rate: { mumbai: 1 } },
   },
   manipur: {
     name: 'Manipur',
     rate: { male: 7, female: 7, joint_ff: 7, joint_mm: 7, joint_mf: 7 },
-    registration: { rate: 3, cap: 250000 },
+    registration: { rate: 3, cap: 25000 },
   },
   meghalaya: {
     name: 'Meghalaya',
-    rate: { male: 10, female: 8, joint_ff: 8, joint_mm: 10, joint_mf: 9 },
-    registration: { rate: 1, cap: null },
+    rate: { male: 9.9, female: 9.9, joint_ff: 9.9, joint_mm: 9.9, joint_mf: 9.9 },
+    registration: { rate: 1.5, cap: null },
   },
   mizoram: {
     name: 'Mizoram',
     rate: { male: 3, female: 3, joint_ff: 3, joint_mm: 3, joint_mf: 3 },
-    registration: { rate: 1, cap: null },
+    registration: { rate: 0.5, cap: 30000 },
   },
   nagaland: {
     name: 'Nagaland',
@@ -143,17 +194,19 @@ const STAMP_DUTY_RATES = {
   punjab: {
     name: 'Punjab',
     rate: { male: 7, female: 5, joint_ff: 5, joint_mm: 7, joint_mf: 6 },
-    registration: { rate: 1, cap: null },
+    registration: { rate: 1, cap: 200000 },
   },
   rajasthan: {
     name: 'Rajasthan',
-    rate: { male: 6, female: 5, joint_ff: 5, joint_mm: 6, joint_mf: 5.5 },
+    rate: { male: 6, female: 5, joint_ff: 5, joint_mm: 6, joint_mf: 6 },
     registration: { rate: 1, cap: null },
+    stampDutySurcharge: { rate: 33, type: 'percent_of_sd' },
   },
   sikkim: {
     name: 'Sikkim',
     rate: { male: 1, female: 1, joint_ff: 1, joint_mm: 1, joint_mf: 1 },
-    registration: { rate: 5, cap: null },
+    registration: { rate: { urban: 5, rural: 4 }, cap: null },
+    registrationWomen: { rate: { urban: 4, rural: 3 } },
   },
   tamilnadu: {
     name: 'Tamil Nadu',
@@ -170,11 +223,25 @@ const STAMP_DUTY_RATES = {
   tripura: {
     name: 'Tripura',
     rate: { male: 5, female: 5, joint_ff: 5, joint_mm: 5, joint_mf: 5 },
-    registration: { rate: 1, cap: null },
+    registration: { rate: 1.5, cap: null },
+    otherCharges: 78,
   },
   uttarpradesh: {
     name: 'Uttar Pradesh',
-    rate: { male: 7, female: 6, joint_ff: 6, joint_mm: 7, joint_mf: 6.5 },
+    rate: null,
+    rateSlabsByGender: {
+      male: [{ min: 0, max: Infinity, rate: 7 }],
+      female: [
+        { min: 0, max: 10000000, rate: 6 },
+        { min: 10000001, max: Infinity, rate: 7 },
+      ],
+      joint_ff: [
+        { min: 0, max: 10000000, rate: 6 },
+        { min: 10000001, max: Infinity, rate: 7 },
+      ],
+      joint_mm: [{ min: 0, max: Infinity, rate: 7 }],
+      joint_mf: [{ min: 0, max: Infinity, rate: 6.5 }],
+    },
     registration: { rate: 1, cap: null },
   },
   uttarakhand: {
@@ -202,15 +269,14 @@ const STAMP_DUTY_RATES = {
     name: 'West Bengal',
     rate: null,
     registration: { rate: 1, cap: null },
-    additionalDuty: { rate: 1, minPropertyValue: 10000000 },
     rateSlabs: {
       urban: [
-        { min: 0, max: 10000000, rate: 4 },
-        { min: 10000001, max: Infinity, rate: 5 },
+        { min: 0, max: 10000000, rate: 6 },
+        { min: 10000001, max: Infinity, rate: 7 },
       ],
       rural: [
-        { min: 0, max: 10000000, rate: 3 },
-        { min: 10000001, max: Infinity, rate: 4 },
+        { min: 0, max: 10000000, rate: 5 },
+        { min: 10000001, max: Infinity, rate: 6 },
       ],
     },
   },
@@ -1223,23 +1289,54 @@ function calcStampDuty(state, propertyValue, gender, location, isFirstTime) {
   }
 
   const sdAmount = propertyValue * rate / 100;
-  let regRate = s.registration.rate || 1;
-  if (typeof regRate === 'object') {
-    regRate = regRate[location] ?? regRate.urban;
+  let regRate = null;
+  let regAmount = 0;
+  if (s.registration.slabs) {
+    for (const slab of s.registration.slabs) {
+      if (propertyValue >= slab.min && propertyValue <= slab.max) {
+        regAmount = slab.amount;
+        break;
+      }
+    }
+  } else {
+    regRate = s.registration.rate || 1;
+    if (typeof regRate === 'object') {
+      regRate = regRate[location] ?? regRate.urban;
+    }
+    if (s.registration.tiers) {
+      for (const tier of s.registration.tiers) {
+        if (propertyValue >= tier.min) regRate = tier.rate;
+      }
+    }
+    regAmount = propertyValue * regRate / 100;
+    if (s.registration.cap) regAmount = Math.min(regAmount, s.registration.cap);
   }
-  let regAmount = propertyValue * regRate / 100;
   let transferRate = 0;
   if (s.transferDuty) {
-    transferRate = s.transferDuty.rate;
-    if (typeof transferRate === 'object') {
-      transferRate = transferRate[location] ?? transferRate.urban;
+    if (s.transferDuty.byGender) {
+      const tdSlabs = s.transferDuty.byGender[gender] || s.transferDuty.byGender.male || [];
+      for (const slab of tdSlabs) {
+        if (propertyValue >= slab.min && propertyValue <= slab.max) {
+          transferRate = slab.rate;
+          break;
+        }
+      }
+    } else {
+      transferRate = s.transferDuty.rate;
+      if (typeof transferRate === 'object') {
+        transferRate = transferRate[location] ?? transferRate.urban;
+      }
     }
   }
   const transferAmount = propertyValue * transferRate / 100;
-  if (s.registration.cap) regAmount = Math.min(regAmount, s.registration.cap);
 
   if (s.registrationWomen && gender === 'female' && (!s.registrationWomen.maxPropertyValue || propertyValue <= s.registrationWomen.maxPropertyValue)) {
-    regAmount = propertyValue * s.registrationWomen.rate / 100;
+    let wr = s.registrationWomen.rate;
+    if (typeof wr === 'object') {
+      wr = wr[location] ?? wr.urban;
+    }
+    regAmount = propertyValue * wr / 100;
+    regRate = wr;
   }
 
   let cessAmount = 0;
@@ -1254,7 +1351,11 @@ function calcStampDuty(state, propertyValue, gender, location, isFirstTime) {
     cessAmount += sdAmount * s.surcharge.rate / 100;
   }
   if (s.metroCess) {
-    cessAmount += propertyValue * s.metroCess.rate / 100;
+    let mRate = s.metroCess.rate;
+    if (typeof mRate === 'object') {
+      mRate = mRate[location] ?? mRate.urban ?? 0;
+    }
+    cessAmount += propertyValue * mRate / 100;
   }
   if (s.lbc) {
     cessAmount += sdAmount * s.lbc.rate / 100;
@@ -1266,7 +1367,7 @@ function calcStampDuty(state, propertyValue, gender, location, isFirstTime) {
   const total = sdAmount + regAmount + transferAmount + cessAmount + (s.otherCharges || 0);
   return {
     stampDutyRate: rate,
-    registrationRate: regRate,
+    registrationRate: regRate == null ? (propertyValue > 0 ? Math.round(regAmount / propertyValue * 10000) / 100 : 0) : regRate,
     stampDutyAmount: Math.round(sdAmount),
     registrationAmount: Math.round(regAmount),
     cessAmount: Math.round(cessAmount),
