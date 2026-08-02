@@ -12,7 +12,7 @@ function dates(file) {
 
 function sitemap() {
   const prefixes = [
-    '/about', '/privacy', '/contact',
+    '/', '/about', '/privacy', '/contact',
     '/tools/gst', '/tools/hra', '/tools/income-tax', '/tools/rto-tax', '/tools/stamp-duty',
     '/guides/capital-gains-tax-changes-2026', '/guides/gst-for-freelancers-india',
     '/guides/how-to-calculate-stamp-duty', '/guides/how-to-file-itr-2026',
