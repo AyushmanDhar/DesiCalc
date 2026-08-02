@@ -160,6 +160,7 @@ window.DESICALC_LANG = {
   'about.verify.desc': 'Har stamp duty aur RTO tax rate ko official state government publications, transport department notifications aur Income Tax Department of India ke against check kiya jaata hai. Har state page par Sources & References diye hain. Jab bhi koi state nayi notification jaari karti hai, rates dobara verify kiye jaate hain.',
   'about.standards.title': 'Editorial Standards',
   'about.standards.desc': 'DesiCalc independent taur par chalaya jaata hai aur jaan-boojh kar anonymous rehta hai. Hum financial advice nahi dete aur kabhi jhoothi credentials nahi dikhate. Agar aapko koi galti mile, to desicalc@gmail.com par contact karein — hum turant sudhaar karke page update kar denge.',
+  'about.copyright.desc': 'Site ki content aur code © 2026 DesiCalc. Stamp duty, RTO tax aur income-tax figures official government publications se liye gaye hain.',
 
   'privacy.title': 'Gopaneeyata neeti',
   'privacy.desc': 'DesiCalc gopaneeyata ko pahle rakhta hai. Sabhi calculators pooree tarah aapke browser mein chalte hain — koi bhi data server ko nahi bheja jaata.',
