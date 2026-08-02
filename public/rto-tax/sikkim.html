@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#ffffff">
-  <title>RTO Tax Calculator Sikkim 2026 | DesiCalc</title>
-  <meta name="description" content="Calculate RTO road tax and registration charges for vehicles in Sikkim. Car, bike, EV, commercial rates. Updated 2026.">
+  <title>Sikkim RTO Road Tax Calculator 2026 — Car, Bike, EV & Commercial | DesiCalc</title>
+  <meta name="description" content="Calculate Sikkim road tax instantly. Just 1% up to ₹2 lakh, 4% from ₹2 lakh to ₹2 crore, 5% above. EVs pay a reduced 1%. Get exact charges for car, bike, and commercial vehicles.">
   <link rel="canonical" href="https://desicalc.in/rto-tax/sikkim" />
   <link rel="alternate" hreflang="en" href="https://desicalc.in/rto-tax/sikkim" />
   <link rel="alternate" hreflang="x-default" href="https://desicalc.in/rto-tax/sikkim" />
   <link rel="alternate" hreflang="hi" href="https://desicalc.in/rto-tax/sikkim" />
   <meta property="og:title" content="RTO Tax Calculator Sikkim 2026 | DesiCalc">
-  <meta property="og:description" content="Calculate RTO road tax in Sikkim. Free online calculator.">
+  <meta property="og:description" content="Calculate RTO road tax in Sikkim. Car, bike, EV rates. Free calculator.">
   <meta property="og:url" content="https://desicalc.in/rto-tax/sikkim">
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://desicalc.in/assets/img/og-rto-tax.png">
@@ -28,7 +28,7 @@
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "All",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-    "description": "Free RTO road tax calculator for Sikkim."
+    "description": "Free RTO road tax calculator for Sikkim. Calculate life tax, registration, HSRP."
   }
   </script>
   <script type="application/ld+json">
@@ -47,11 +47,37 @@
   <link rel="stylesheet" href="/assets/css/style.css">
   <script src="/assets/js/common.js"></script>
   <script src="/assets/js/calc-core.js"></script>
+  <script src="/assets/js/lang-en.js"></script>
+  <script src="/assets/js/lang-hi.js"></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much is road tax for a ₹10 lakh car in Sikkim?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A car with an ex-showroom price of ₹10 lakh falls in the ₹2 lakh–2 crore slab and pays 4% one-time road tax, i.e. ₹40,000. The registration fee is ₹600 (non-transport LMV) and HSRP is ₹400, so total RTO charges come to ₹41,000."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the road tax for two-wheelers in Sikkim?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Two-wheelers in Sikkim pay one-time road tax of 3% for models up to ₹1 lakh and 4% above ₹1 lakh. The registration fee for a motorcycle is ₹300 and HSRP is ₹200."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do electric vehicles pay road tax in Sikkim?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, EVs in Sikkim are not fully exempt — they pay a reduced road tax of 1% of the ex-showroom price (for example ₹10,000 on a ₹10 lakh EV), instead of the standard 4%."
+      }
+    },
     {
       "@type": "Question",
       "name": "Do I need a special permit to drive a vehicle in Sikkim as a tourist?",
@@ -73,7 +99,7 @@
       "name": "Are electric vehicles more popular in Sikkim than in other states?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "EV adoption in Sikkim is growing steadily, particularly for two-wheelers and small cars, driven by the full tax exemption and lower running costs in hilly terrain."
+        "text": "EV adoption in Sikkim is growing steadily, particularly for two-wheelers and small cars, driven by the reduced 1% road tax and lower running costs in hilly terrain."
       }
     },
     {
@@ -132,7 +158,7 @@
     </nav>
 
     <h1 class="text-3xl font-bold text-stone-900 mb-2">RTO Tax Calculator Sikkim 2026</h1>
-    <p class="text-stone-500 mb-8">Calculate road tax, registration charges, and on-road price for vehicles in Sikkim.</p>
+    <p class="text-stone-500 mb-8">Calculate road tax, registration charges, and on-road price for vehicles in Sikkim. Updated for 2026.</p>
 
 
 
@@ -143,19 +169,123 @@
       </div>
       <p class="text-xs text-stone-600" style="margin:0">Click any state to compare rto tax rates side-by-side.</p>
     </div>
-    </div>
 
     <section class="mb-8">
-      <h2 class="text-2xl font-bold text-stone-900 mb-4">Sikkim RTO Road Tax Rates 2026</h2>
+      <h2 class="text-2xl font-bold text-stone-900 mb-4">Sikkim RTO Road Tax Rates 2026 — Four-Wheelers</h2>
       <div class="overflow-x-auto bg-white rounded-xl border border-stone-200">
         <table class="w-full text-sm">
-          <thead><tr class="bg-stone-100 border-b border-stone-200"><th class="text-left p-3 font-semibold text-stone-900">Vehicle Type</th><th class="text-left p-3 font-semibold text-stone-900">Road Tax Rate</th><th class="text-left p-3 font-semibold text-stone-900">Registration Fee</th><th class="text-left p-3 font-semibold text-stone-900">HSRP</th></tr></thead>
+          <thead>
+            <tr class="bg-stone-100 text-stone-700">
+              <th class="text-left p-3 font-semibold">Vehicle Type</th>
+              <th class="text-left p-3 font-semibold">Price Range</th>
+              <th class="text-left p-3 font-semibold">Tax Rate</th>
+              <th class="text-left p-3 font-semibold">Reg Fee</th>
+              <th class="text-left p-3 font-semibold">HSRP</th>
+            </tr>
+          </thead>
           <tbody>
-            <tr class="border-b border-stone-100"><td class="p-3">Petrol Vehicles</td><td class="p-3">5% of ex-showroom price</td><td class="p-3">₹600</td><td class="p-3">₹400</td></tr>
-            <tr class="border-b border-stone-100"><td class="p-3">Diesel Vehicles</td><td class="p-3">6% of ex-showroom price</td><td class="p-3">₹600</td><td class="p-3">₹400</td></tr>
-            <tr class="border-b border-stone-100"><td class="p-3">CNG Vehicles</td><td class="p-3">5% of ex-showroom price</td><td class="p-3">₹600</td><td class="p-3">₹400</td></tr>
-            <tr class="border-b border-stone-100"><td class="p-3">Electric Vehicles (EV)</td><td class="p-3">Exempt (0%)</td><td class="p-3">₹600</td><td class="p-3">₹400</td></tr>
-            <tr><td class="p-3">Commercial Vehicles</td><td class="p-3">6% of ex-showroom price</td><td class="p-3">₹600</td><td class="p-3">₹400</td></tr>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">Car / LMV (all fuels)</td>
+              <td class="p-3">Up to ₹2 Lakh</td>
+              <td class="p-3">1%</td>
+              <td class="p-3">₹600</td>
+              <td class="p-3">₹400</td>
+            </tr>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">Car / LMV (all fuels)</td>
+              <td class="p-3">₹2 Lakh – ₹2 Crore</td>
+              <td class="p-3">4%</td>
+              <td class="p-3">₹600</td>
+              <td class="p-3">₹400</td>
+            </tr>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">Car / LMV (all fuels)</td>
+              <td class="p-3">Above ₹2 Crore</td>
+              <td class="p-3">5%</td>
+              <td class="p-3">₹600</td>
+              <td class="p-3">₹400</td>
+            </tr>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">Electric Vehicle (EV)</td>
+              <td class="p-3">All Prices</td>
+              <td class="p-3">1%*</td>
+              <td class="p-3">₹600</td>
+              <td class="p-3">₹400</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-stone-500 mt-2">* Electric vehicles in Sikkim are not fully exempt — they pay a reduced road tax of 1% of the ex-showroom price.</p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold text-stone-900 mb-4">Sikkim RTO Road Tax Rates 2026 — Two-Wheelers</h2>
+      <div class="overflow-x-auto bg-white rounded-xl border border-stone-200">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-stone-100 text-stone-700">
+              <th class="text-left p-3 font-semibold">Vehicle Type</th>
+              <th class="text-left p-3 font-semibold">Price Range</th>
+              <th class="text-left p-3 font-semibold">Tax Rate</th>
+              <th class="text-left p-3 font-semibold">Reg Fee</th>
+              <th class="text-left p-3 font-semibold">HSRP</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">Two-Wheeler</td>
+              <td class="p-3">Up to ₹1 Lakh</td>
+              <td class="p-3">3%</td>
+              <td class="p-3">₹300</td>
+              <td class="p-3">₹200</td>
+            </tr>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">Two-Wheeler</td>
+              <td class="p-3">Above ₹1 Lakh</td>
+              <td class="p-3">4%</td>
+              <td class="p-3">₹300</td>
+              <td class="p-3">₹200</td>
+            </tr>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">Two-Wheeler EV</td>
+              <td class="p-3">All Prices</td>
+              <td class="p-3">1%*</td>
+              <td class="p-3">₹300</td>
+              <td class="p-3">₹200</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-stone-500 mt-2">* Electric two-wheelers in Sikkim pay a reduced road tax of 1% of the ex-showroom price.</p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold text-stone-900 mb-4">Sikkim Commercial Vehicle Tax 2026</h2>
+      <div class="overflow-x-auto bg-white rounded-xl border border-stone-200">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-stone-100 text-stone-700">
+              <th class="text-left p-3 font-semibold">Seating Capacity</th>
+              <th class="text-left p-3 font-semibold">Tax Type</th>
+              <th class="text-left p-3 font-semibold">Rate</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">1–6 seats</td>
+              <td class="p-3">One-time</td>
+              <td class="p-3">₹3,000</td>
+            </tr>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">7–12 seats</td>
+              <td class="p-3">Per seat, per year</td>
+              <td class="p-3">₹1,000</td>
+            </tr>
+            <tr class="border-t border-stone-200">
+              <td class="p-3">13 seats and above</td>
+              <td class="p-3">Per seat, per year</td>
+              <td class="p-3">₹1,800</td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -169,26 +299,95 @@
     </div>
 
     <section class="prose max-w-none mb-8">
-      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Vehicle Registration Process in Sikkim</h2>
-      <p>Sikkim, India's least populous state and a biodiversity hotspot in the Eastern Himalayas, has a unique vehicle registration system managed by the Sikkim Transport Department. The state has three main RTO offices located in Gangtok (SK 01), Namchi (SK 02), and Mangan (SK 03), corresponding to the East, South, and North districts respectively. The Gangtok RTO handles the majority of registrations given the capital's urban concentration. Sikkim's vehicle registration process is distinctive because the state has special constitutional protections under Article 371F, which also influences certain transport regulations.</p>
+      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Vehicle Registration Process in Sikkim — Step by Step</h2>
+      <p>Vehicle registration in Sikkim is administered by the <strong>Sikkim Transport Department</strong> through three Regional Transport Offices located in Gangtok (SK 01), Namchi (SK 02) and Mangan (SK 03), running on the national VAHAN platform. Non-transport vehicles (private cars and two-wheelers) pay a <strong>one-time motor vehicle tax</strong> at registration — there is no annual road tax for private vehicles in Sikkim. Tax for a new vehicle is payable at the time of registration.</p>
+      <ol>
+        <li><strong>Buy the vehicle and get a temporary registration.</strong> The dealer issues a temporary registration (application in Form 20) at the time of purchase. A temporary registration is valid for a maximum of <strong>one month</strong> (Rule 47, Central Motor Vehicles Rules, 1989), within which the permanent registration must be completed.</li>
+        <li><strong>Submit the registration application.</strong> Form 20 (application for registration), Form 21 (sale certificate from the dealer/manufacturer), Form 22 (certificate of roadworthiness), valid insurance, and proof of address and identity are filed — normally by the dealer for new vehicles. For Sikkimese residents, the Sikkim Subject Certificate (SSC) serves as a primary identity document.</li>
+        <li><strong>Pay road tax and registration fee.</strong> Road tax is a one-time payment calculated on the ex-showroom price. The registration fee under Rule 81 of CMVR 1989 is ₹300 for a motorcycle and ₹600 for a non-transport light motor vehicle. HSRP is ₹400 for four-wheelers and ₹200 for two-wheelers.</li>
+        <li><strong>Registration number is allotted.</strong> On verification of documents and tax payment, VAHAN allots a permanent number in the SK-XX-XXXX format and the RC is issued to the owner.</li>
+      </ol>
 
-      <p>The mountainous terrain of Sikkim, with roads that navigate steep inclines and hairpin bends through the Himalayas, makes vehicle choice and registration particularly important. SUVs and 4x4 vehicles are the most common categories, especially for residents in North Sikkim districts like Mangan and Chungthang where road conditions can be challenging. All vehicles in Sikkim require an additional state-specific permit for plying in restricted and protected areas near the international border. Tourist vehicles registered in Sikkim must also comply with specific guidelines for entering protected zones like Nathu La and Tsomgo Lake.</p>
+      <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Required Documents for Registration</h3>
+      <ul>
+        <li>Form 20 (duly filled application form)</li>
+        <li>Form 21 (Sale Certificate from authorised dealer)</li>
+        <li>Form 22 (Certificate of Roadworthiness)</li>
+        <li>Insurance Certificate (Third-party or Comprehensive)</li>
+        <li>Address Proof (Aadhaar, Sikkim Subject Certificate, Voter ID, Utility Bill)</li>
+        <li>Identity Proof (Aadhaar, PAN, Driving Licence)</li>
+        <li>Original Invoice and Delivery Challan</li>
+        <li>PUC Certificate</li>
+        <li>Passport-size photographs (2 copies)</li>
+      </ul>
 
-      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">How Road Tax Is Calculated in Sikkim</h2>
-      <p>Sikkim follows the standard flat-rate road tax structure common to most northeastern states. Petrol and CNG vehicles attract a 5% road tax on their ex-showroom price, while diesel vehicles are taxed at 6%. Electric vehicles are fully exempt from road tax, consistent with the national FAME II framework. Commercial vehicles, including taxis and goods carriers, are taxed at 6%. The flat-rate system ensures that buyers can easily compute their total RTO liability without the complexity of slab-based calculations.</p>
+      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Sikkim RTO Offices and District Codes</h2>
+      <p>All Sikkim registration numbers carry the <strong>SK</strong> prefix followed by a two-digit district code:</p>
+      <div class="overflow-x-auto bg-white rounded-xl border border-stone-200 mt-4">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-stone-100 text-stone-700">
+              <th class="text-left p-3 font-semibold">RTO Code</th>
+              <th class="text-left p-3 font-semibold">Office / City</th>
+              <th class="text-left p-3 font-semibold">District</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-stone-200"><td class="p-3">SK-01</td><td class="p-3">Gangtok</td><td class="p-3">East Sikkim</td></tr>
+            <tr class="border-t border-stone-200"><td class="p-3">SK-02</td><td class="p-3">Namchi</td><td class="p-3">South Sikkim</td></tr>
+            <tr class="border-t border-stone-200"><td class="p-3">SK-03</td><td class="p-3">Mangan</td><td class="p-3">North Sikkim</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-stone-500 mt-2">Note: Codes are as per the standard RTO code list for Sikkim; verify your office at the Sikkim Transport Department before visiting.</p>
 
-      <p>For a typical petrol SUV popular in Sikkim with an ex-showroom price of ₹16,00,000, the road tax works out to ₹16,00,000 × 5% = ₹80,000. Adding the registration fee of ₹600 and HSRP cost of ₹400, the total RTO outlay is ₹81,000. A diesel equivalent would cost ₹16,00,000 × 6% = ₹96,000 in road tax, totalling ₹97,000 with fees. An electric SUV priced similarly would incur just ₹1,000 in registration and HSRP charges, offering a saving of ₹80,000 or more compared to ICE vehicles. This significant saving makes EV adoption particularly attractive in Sikkim's eco-sensitive Himalayan ecosystem.</p>
+      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">How Sikkim Road Tax is Calculated</h2>
+      <p>Formula: Ex-showroom price of the vehicle × applicable slab rate % = one-time road tax payable. Sikkim uses the same slab structure for petrol, diesel and CNG vehicles — the fuel does not change the rate. The slab rate applies to the full ex-showroom price of the vehicle.</p>
+      <p>Example: A car priced at ₹10 lakh (ex-showroom) falls in the ₹2 lakh–2 crore slab → 4% → Road tax = ₹40,000. Add ₹600 registration fee and ₹400 HSRP, and total RTO charges come to ₹41,000.</p>
+      <p>The official slab structure for non-transport vehicles in Sikkim (one-time tax):</p>
+      <ul>
+        <li><strong>Cars up to ₹2 lakh:</strong> 1%</li>
+        <li><strong>Cars ₹2 lakh – ₹2 crore:</strong> 4%</li>
+        <li><strong>Cars above ₹2 crore:</strong> 5%</li>
+        <li><strong>Two-wheelers up to ₹1 lakh:</strong> 3%</li>
+        <li><strong>Two-wheelers above ₹1 lakh:</strong> 4%</li>
+        <li><strong>Electric vehicles:</strong> 1% (reduced rate, all categories)</li>
+      </ul>
 
-      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Electric Vehicle (EV) Exemption Policy</h2>
-      <p>Sikkim has fully exempted electric vehicles from road tax as part of its green state initiative. Given that Sikkim is India's first fully organic state and deeply committed to environmental conservation, the EV tax exemption aligns perfectly with its policy goals. The exemption applies to all EV categories — two-wheelers, three-wheelers, and four-wheelers — with no price cap. The state has also been proactive in setting up EV charging infrastructure in Gangtok and along key tourist routes, recognising that tourism — the state's primary industry — can benefit significantly from cleaner transportation options.</p>
+      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">EV Policy: What Sikkim EV Buyers Save</h2>
+      <p>Unlike most states, Sikkim does not fully exempt electric vehicles from road tax. Instead, EVs get a <strong>reduced rate of 1% of the ex-showroom price</strong> — across two-wheelers, three-wheelers and four-wheelers — compared with the standard rates of 3–4% (or up to 5% for premium cars).</p>
+      <p>Example: an electric car priced at ₹15 lakh pays 1% = ₹15,000 road tax (instead of ₹60,000 at the 4% standard rate), plus ₹600 registration and ₹400 HSRP — a saving of ₹45,000 over a petrol car of the same price. An electric two-wheeler priced at ₹1.5 lakh pays ₹1,500 instead of ₹6,000.</p>
+      <p>Note: The reduced rate applies to vehicles purchased and registered in Sikkim. Always confirm the current notification with the Sikkim Transport Department before you finalise a purchase.</p>
 
-      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Required Documents for Vehicle Registration</h2>
-      <p>The documents needed for vehicle registration in Sikkim include: Form 20 (duly filled application for registration), Form 21 (certificate of sale from the authorised dealer), Form 22 (road worthiness certificate from the manufacturer), valid insurance certificate, address proof (Aadhaar, Sikkim Subject Certificate, or utility bill), identity proof, PAN card, and passport-size photographs. For non-Sikkimese residents owning vehicles in the state, additional documentation such as a valid work permit or property ownership proof may be required.</p>
+      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Where to Pay Sikkim Road Tax Online</h2>
+      <p>You can pay motor vehicle tax online on the official portals:</p>
+      <ol>
+        <li><strong>VAHAN (vahan.parivahan.gov.in):</strong> Enter the vehicle registration number → Online Services → Pay Vehicle Tax → enter the last 5 digits of the chassis number and validate → generate OTP (sent to the registered mobile number) → update insurance details → review the fee panel → pay. A payment receipt is generated immediately.</li>
+        <li><strong>State services:</strong> Sikkim runs on the national VAHAN platform, and most transport services are available online through the Parivahan portal.</li>
+      </ol>
 
-          </section>
+      <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Sources</h2>
+      <ul>
+        <li>Government of Sikkim — Transport Department: <a class="text-amber-600 hover:text-amber-700 hover:underline" href="https://sikkim.gov.in/" rel="nofollow" target="_blank">sikkim.gov.in</a></li>
+        <li>Parivahan Sewa — Pay Vehicle Tax Online and Temporary Registration: <a class="text-amber-600 hover:text-amber-700 hover:underline" href="https://vahan.parivahan.gov.in" rel="nofollow" target="_blank">vahan.parivahan.gov.in</a></li>
+        <li>Sikkim RTO code list (reference): <a class="text-amber-600 hover:text-amber-700 hover:underline" href="https://en.wikipedia.org/wiki/List_of_Regional_Transport_Office_districts_in_India" rel="nofollow" target="_blank">Wikipedia</a></li>
+      </ul>
+    </section>
 
       <section class="mt-10 max-w-2xl">
         <h2 class="text-lg font-bold mb-3">FAQs</h2>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>How much is road tax for a ₹10 lakh car in Sikkim?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">A car with an ex-showroom price of ₹10 lakh falls in the ₹2 lakh–2 crore slab and pays 4% one-time road tax, i.e. ₹40,000. The registration fee is ₹600 (non-transport LMV) and HSRP is ₹400, so total RTO charges come to ₹41,000.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>What is the road tax for two-wheelers in Sikkim?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">Two-wheelers in Sikkim pay one-time road tax of 3% for models up to ₹1 lakh and 4% above ₹1 lakh. The registration fee for a motorcycle is ₹300 and HSRP is ₹200.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)"><span>Do electric vehicles pay road tax in Sikkim?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer">Yes, EVs in Sikkim are not fully exempt — they pay a reduced road tax of 1% of the ex-showroom price (for example ₹10,000 on a ₹10 lakh EV), instead of the standard 4%.</div>
+        </div>
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)"><span>Do I need a special permit to drive a vehicle in Sikkim as a tourist?</span><span class="faq-icon">+</span></button>
           <div class="faq-answer">Yes, tourist vehicles entering Sikkim require an inner line permit and must register with the local transport office upon entry.</div>
@@ -199,7 +398,7 @@
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)"><span>Are electric vehicles more popular in Sikkim than in other states?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer">EV adoption in Sikkim is growing steadily, particularly for two-wheelers and small cars, driven by the full tax exemption and lower running costs in hilly terrain.</div>
+          <div class="faq-answer">EV adoption in Sikkim is growing steadily, particularly for two-wheelers and small cars, driven by the reduced 1% road tax and lower running costs in hilly terrain.</div>
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)"><span>What is the validity of a driving licence in Sikkim?</span><span class="faq-icon">+</span></button>

@@ -5,7 +5,7 @@ window.DESICALC_LANG = {
   'home.tax.title': 'Income Tax Calculator',
   'home.tax.desc': 'FY 2026-27 — Old vs New regime',
   'home.stamp.title': 'Stamp Duty Calculator',
-  'home.stamp.desc': 'All 28 states',
+  'home.stamp.desc': 'All 29 states',
   'home.rto.title': 'RTO Tax Calculator',
   'home.rto.desc': 'All states, all vehicle types',
   'home.why.title': 'Why DesiCalc?',
