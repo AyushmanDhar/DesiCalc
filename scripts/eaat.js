@@ -24,8 +24,8 @@ function sitemap() {
   const states = ['andhrapradesh','arunachalpradesh','assam','bihar','chhattisgarh','delhi','goa','gujarat','haryana','himachalpradesh','jharkhand','karnataka','kerala','madhyapradesh','maharashtra','manipur','meghalaya','mizoram','nagaland','odisha','punjab','rajasthan','sikkim','tamilnadu','telangana','tripura','uttarakhand','uttarpradesh','westbengal'];
   states.forEach(s => { prefixes.push('/stamp-duty/' + s); prefixes.push('/rto-tax/' + s); });
   const xml = fs.readFileSync('public/sitemap.xml', 'utf8');
-  const out = xml.replace(/(<loc>https:\/\/desicalc\.in)([^<]+)(<\/loc>\s*<lastmod>)[^<]*(<\/lastmod>)/g, (m, a, loc, b, c) =>
-    prefixes.some(p => loc === p || loc.startsWith(p + '/')) ? `${a}${loc}${b}${MODIFIED}${c}` : m
+  const out = xml.replace(/(<loc>https:\/\/desicalc\.in)([^<]+)(<\/loc>)([\s\S]*?)(<lastmod>)[^<]*(<\/lastmod>)/g, (m, a, loc, b, links, d, e) =>
+    prefixes.some(p => loc === p || loc.startsWith(p + '/')) ? `${a}${loc}${b}${links}${d}${MODIFIED}${e}` : m
   );
   fs.writeFileSync('public/sitemap.xml', out);
   console.log('sitemap lastmod updated to ' + MODIFIED);
