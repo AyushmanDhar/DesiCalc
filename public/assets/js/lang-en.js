@@ -156,6 +156,10 @@ window.DESICALC_LANG = {
   'about.sources.desc': 'All tax rates are sourced from respective state government publications, transport department notifications, and the Income Tax Department of India. Rates are updated for FY 2026-27. State stamp duty and RTO tax rates are verified against official government sources.',
   'about.disclaimer.title': 'Disclaimer',
   'about.disclaimer.desc': 'The calculations provided are indicative and for reference only. Actual tax liability may vary based on specific circumstances, local circle rates, and government notifications. Please verify with your CA, tax consultant, or relevant government authority before making financial decisions.',
+  'about.verify.title': 'How We Verify Our Rates',
+  'about.verify.desc': 'Every stamp duty and RTO tax rate is checked against official state government publications, transport department notifications, and the Income Tax Department of India. Each state page links to its Sources & References. Rates are re-verified whenever a state government issues a new notification.',
+  'about.standards.title': 'Editorial Standards',
+  'about.standards.desc': 'DesiCalc is run independently and stays intentionally anonymous. We do not provide financial advice and we never invent credentials. If you spot an error, contact us at desicalc@gmail.com and we will correct it and update the page promptly.',
 
   'privacy.title': 'Privacy Policy',
   'privacy.desc': 'DesiCalc is designed with privacy first. All calculators run entirely in your browser — no data is sent to any server.',
