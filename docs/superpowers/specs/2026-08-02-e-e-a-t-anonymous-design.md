@@ -20,7 +20,7 @@
   - `dateModified` = last commit date for the file (`git log -1 --format=%aI`)
 - All dates truthful and recent (site launched 2026-07-05; pages touched through 2026-08-02).
 - Visible **"Last updated: <date>"** line under the H1 on guides and comparisons.
-- State pages get a **"Rates verified <month> <year>"** line: stamp-duty pages say "August 2026" (verification completed this session); rto-tax pages say "July 2026" (verification completed in the earlier July sessions). Both truthful, strong freshness signals.
+- State pages get a **"Rates verified <month> <year>"** line: stamp-duty pages say "August 2026" (verification completed this session); rto-tax pages say "August 2026" (rates applied/verified in the 2026-08-01 rewrite). Both truthful, strong freshness signals.
 - Keep `public/sitemap.xml` lastmod in sync with dateModified.
 
 ## 3. About Page Expansion (no new page)

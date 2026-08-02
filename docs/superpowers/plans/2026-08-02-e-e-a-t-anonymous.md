@@ -14,7 +14,7 @@
 - `@id` of the organization is ALWAYS `https://desicalc.in/#organization` (functional identifier; no visible element needed).
 - **No invented credentials** — never claim "reviewed by CA", "expert", or similar anywhere.
 - All dates come from the dates script (`node scripts/eaat.js dates <path>`); `dateModified` in JSON-LD = `2026-08-02` (rollout commit date) for every page touched.
-- Visible state-page line: stamp-duty pages say `Rates verified August 2026`; rto-tax pages say `Rates verified July 2026`.
+- Visible state-page line: stamp-duty pages say `Rates verified August 2026`; rto-tax pages say `Rates verified August 2026`.
 - Visible lines on state/guide pages are **static English** (those pages do not use `data-i18n` for body content); the About page uses `data-i18n` keys — every new key must be added to BOTH `lang-en.js` and `lang-hi.js`.
 - `sameAs` omitted; no new URLs, no new pages, no new assets; `logo` = `https://desicalc.in/apple-touch-icon.png`.
 - `npm test` must end with `260 passed, 0 failed`; every JSON-LD block must parse.
@@ -384,7 +384,7 @@ For EACH file in your list, make exactly these 3 changes (read the file first):
    <h1 class="text-3xl font-bold text-stone-900 mb-2">...</h1>
    Insert immediately after the closing </h1>:
      STAMP pages: <p class="text-sm text-stone-500 mb-4">Rates verified August 2026</p>
-     RTO pages:   <p class="text-sm text-stone-500 mb-4">Rates verified July 2026</p>
+     RTO pages:   <p class="text-sm text-stone-500 mb-4">Rates verified August 2026</p>
 
 3. Author meta. If the page has <meta name="author" content="DesiCalc"> change it to
    content="DesiCalc Editorial Team". If missing, add
