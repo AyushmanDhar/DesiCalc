@@ -100,6 +100,22 @@ function applyUrlParams() {
   return true;
 }
 
+function isEmbedMode() {
+  if (document.body.classList.contains('embed-mode')) return true;
+  try {
+    return new URLSearchParams(window.location.search).get('embed') === '1';
+  } catch (e) { return false; }
+}
+
+function initEmbedMode() {
+  if (!isEmbedMode()) return;
+  document.body.classList.add('embed-mode');
+  var strip = document.createElement('div');
+  strip.className = 'embed-footer';
+  strip.innerHTML = '<span data-i18n="embed.poweredBy" data-i18n-html>Powered by <a href="https://desicalc.in" target="_blank" rel="noopener">DesiCalc</a></span>';
+  document.body.appendChild(strip);
+}
+
 function saveLastInputs(toolKey, data) {
   try {
     localStorage.setItem('desicalc_' + toolKey + '_last', JSON.stringify(data));
@@ -208,6 +224,7 @@ function copyUrlFallback(url) {
 }
 
 function initOnboarding() {
+  if (isEmbedMode()) return;
   if (/bot|crawl|spider|slurp|googlebot|bing|duckduckgo|yandex/i.test(navigator.userAgent)) return;
   var key = 'desicalc_onboarded_v1';
   try {

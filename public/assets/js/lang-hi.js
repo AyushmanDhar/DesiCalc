@@ -30,6 +30,7 @@ window.DESICALC_LANG = {
   'footer.about': 'Hamaare baare mein',
   'footer.privacy': 'Privacy',
   'footer.contact': 'Sampark karein',
+  'footer.embed': 'Embed',
 
   'tax.title': 'Income Tax Calculator FY 2026-27',
   'tax.subtitle': 'FY 2026-27 | Purani vs Nai Vyavastha tulna',
@@ -342,4 +343,15 @@ window.DESICALC_LANG = {
   'greeting.afternoon': 'Shubh dopahar',
   'greeting.evening': 'Shubh sandhya',
   'greeting.night': 'Shubh ratri',
+
+  'embed.title': 'DesiCalc Calculators Apni Website Par Lagayein',
+  'embed.subtitle': 'Ek line ka code likhkar apni website par muft bhartiya tax aur finance calculators jod lein. Koi signup nahi, koi API key nahi, embed mein koi ads nahi.',
+  'embed.toolLabel': 'Calculator chunein',
+  'embed.stateLabel': 'Rajya chunein',
+  'embed.previewLabel': 'Live preview',
+  'embed.snippetLabel': 'Copy-paste embed code',
+  'embed.copyButton': 'Code copy karein',
+  'embed.copied': 'Code copy ho gaya!',
+  'embed.link': 'Embed karein',
+  'embed.poweredBy': 'Powered by <a href="https://desicalc.in" target="_blank" rel="noopener">DesiCalc</a>',
 };
