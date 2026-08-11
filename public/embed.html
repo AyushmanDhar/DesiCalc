@@ -155,7 +155,9 @@
     }
 
     function buildEmbed() {
-      var tool = document.querySelector('input[name="embedTool"]:checked').value;
+      var selectedTool = document.querySelector('input[name="embedTool"]:checked').value;
+      var allowedTools = ['income-tax', 'stamp-duty', 'rto-tax', 'hra', 'gst'];
+      var tool = allowedTools.indexOf(selectedTool) !== -1 ? selectedTool : 'income-tax';
       var stateSel = document.getElementById('embedState');
       var isStateTool = tool === 'stamp-duty' || tool === 'rto-tax';
       document.getElementById('stateWrap').style.display = isStateTool ? 'block' : 'none';
