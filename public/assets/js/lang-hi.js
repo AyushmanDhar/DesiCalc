@@ -31,7 +31,7 @@ window.DESICALC_LANG = {
   'footer.privacy': 'Privacy',
   'footer.contact': 'Sampark karein',
 
-  'tax.title': 'Income Tax Calculator',
+  'tax.title': 'Income Tax Calculator FY 2026-27',
   'tax.subtitle': 'FY 2026-27 | Purani vs Nai Vyavastha tulna',
   'tax.section.income': 'Aay',
   'tax.section.regime': 'Vyavastha chunein',
@@ -82,7 +82,7 @@ window.DESICALC_LANG = {
   'tax.label.hraDA': 'Mahangaai bhatta (₹)',
   'tax.label.hraMetro': 'Metro shahar',
 
-  'stamp.title': 'Stamp Duty Calculator',
+  'stamp.title': 'Stamp Duty Calculator 2026',
   'stamp.subtitle': 'Sabhi 29 rajyon ke liye sampatti panjikaran shulk ganana',
   'stamp.label.state': 'Rajya chunein',
   'stamp.label.value': 'Sampatti moolya (₹)',
@@ -112,7 +112,7 @@ window.DESICALC_LANG = {
   'stamp.faq.q3': 'Circle rate kya hai?',
   'stamp.faq.a3': 'Circle rate sarkaar dvaara nirdhaarit nyuntam moolya hai. Stamp duty agreement value ya circle rate mein se jo adhik ho, us par ganana ki jaati hai.',
 
-  'rto.title': 'RTO Tax Calculator',
+  'rto.title': 'RTO Road Tax Calculator 2026',
   'rto.subtitle': 'Kisi bhi rajya ke liye road tax aur panjikaran shulk ganana',
   'rto.label.state': 'Rajya chunein',
   'rto.label.vehicle': 'Vahan prakar',
