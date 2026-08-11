@@ -30,6 +30,7 @@ window.DESICALC_LANG = {
   'footer.about': 'Hamaare baare mein',
   'footer.privacy': 'Privacy',
   'footer.contact': 'Sampark karein',
+  'footer.embed': 'Embed',
 
   'tax.title': 'Income Tax Calculator FY 2026-27',
   'tax.subtitle': 'FY 2026-27 | Purani vs Nai Vyavastha tulna',

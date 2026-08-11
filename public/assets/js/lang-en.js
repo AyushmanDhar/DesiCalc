@@ -30,6 +30,7 @@ window.DESICALC_LANG = {
   'footer.about': 'About',
   'footer.privacy': 'Privacy',
   'footer.contact': 'Contact',
+  'footer.embed': 'Embed',
 
   'tax.title': 'Income Tax Calculator FY 2026-27',
   'tax.subtitle': 'FY 2026-27 | Compare Old vs New Regime',
