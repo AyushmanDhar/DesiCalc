@@ -343,4 +343,15 @@ window.DESICALC_LANG = {
   'greeting.afternoon': 'Good afternoon',
   'greeting.evening': 'Good evening',
   'greeting.night': 'Good night',
+
+  'embed.title': 'Embed DesiCalc Calculators on Your Site',
+  'embed.subtitle': 'Add free Indian tax and finance calculators to your website with a single line of code. No signup, no API key, no ads in the embed.',
+  'embed.toolLabel': 'Choose a calculator',
+  'embed.stateLabel': 'Select state',
+  'embed.previewLabel': 'Live preview',
+  'embed.snippetLabel': 'Copy-paste embed code',
+  'embed.copyButton': 'Copy Code',
+  'embed.copied': 'Code copied!',
+  'embed.link': 'Embed',
+  'embed.poweredBy': 'Powered by <a href="https://desicalc.in" target="_blank" rel="noopener">DesiCalc</a>',
 };

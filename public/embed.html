@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <title>Embed DesiCalc Calculators on Your Site — DesiCalc</title>
+  <meta name="description" content="Embed free Indian tax and finance calculators (income tax, stamp duty, RTO tax, HRA, GST) on your website with a single line of iframe code. No signup, no API key.">
+  <meta name="author" content="DesiCalc Editorial Team">
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="DesiCalc" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="canonical" href="https://desicalc.in/embed" />
+  <meta property="og:title" content="Embed DesiCalc Calculators on Your Site">
+  <meta property="og:description" content="Embed free Indian tax and finance calculators on your website with a single line of iframe code. No signup, no API key.">
+  <meta property="og:url" content="https://desicalc.in/embed">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://desicalc.in/assets/img/og-tax-calculator.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["WebApplication", "SoftwareApplication"],
+    "name": "Embed DesiCalc Calculators",
+    "url": "https://desicalc.in/embed",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "JavaScript",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+    "description": "Free embeddable Indian tax and finance calculators — income tax, stamp duty, RTO road tax, HRA exemption and GST. Add to any website with a single iframe snippet.",
+    "publisher": { "@type": "Organization", "@id": "https://desicalc.in/#organization", "name": "DesiCalc" },
+    "featureList": [
+      "Income Tax Calculator Embed",
+      "Stamp Duty Calculator Embed",
+      "RTO Road Tax Calculator Embed",
+      "HRA Exemption Calculator Embed",
+      "GST Calculator Embed"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://desicalc.in" },
+      { "@type": "ListItem", "position": 2, "name": "Embed DesiCalc Calculators", "item": "https://desicalc.in/embed" }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="./assets/css/tailwind.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./assets/js/common.js"></script>
+  <script src="./assets/js/calc-core.js"></script>
+  <script src="./assets/js/lang-en.js"></script>
+  <script src="./assets/js/ad.js"></script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2207525036040634"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+  <a href="#embed-tools" class="sr-only focus:not-sr-only focus:absolute focus:p-2 focus:bg-white focus:z-50">Skip to embed builder</a>
+
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
+    <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="./" class="text-sm text-stone-500 hover:text-stone-900 no-underline" data-i18n="header.back">← Back</a>
+        <a href="./" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
+        <span id="greeting" class="greeting-text hidden sm:inline" aria-live="polite"></span>
+      </div>
+      <div class="lang-toggle" role="group" aria-label="Language toggle">
+        <button onclick="setLang('en')" class="active" data-lang-btn="en" data-i18n="header.lang.en">EN</button>
+        <button onclick="setLang('hi')" data-lang-btn="hi" data-i18n="header.lang.hi">Hing</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="max-w-5xl mx-auto px-4 py-6">
+    <h1 class="text-2xl sm:text-3xl font-bold text-stone-900 mb-1" data-i18n="embed.title">Embed DesiCalc Calculators on Your Site</h1>
+    <p class="text-stone-500 text-sm mb-6" data-i18n="embed.subtitle">Add free Indian tax and finance calculators to your website with a single line of code. No signup, no API key, no ads in the embed.</p>
+
+    <div id="embed-tools" class="card mb-6">
+      <h2 class="text-base font-bold mb-3" data-i18n="embed.toolLabel">Choose a calculator</h2>
+      <div class="flex flex-wrap gap-x-4 gap-y-2 mb-4">
+        <label class="flex items-center gap-2 cursor-pointer">
+          <input type="radio" name="embedTool" value="income-tax" checked onchange="buildEmbed()">
+          <span data-i18n="home.tax.title">Income Tax Calculator</span>
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer">
+          <input type="radio" name="embedTool" value="stamp-duty" onchange="buildEmbed()">
+          <span data-i18n="home.stamp.title">Stamp Duty Calculator</span>
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer">
+          <input type="radio" name="embedTool" value="rto-tax" onchange="buildEmbed()">
+          <span data-i18n="home.rto.title">RTO Tax Calculator</span>
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer">
+          <input type="radio" name="embedTool" value="hra" onchange="buildEmbed()">
+          <span data-i18n="hra.title">HRA Exemption Calculator</span>
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer">
+          <input type="radio" name="embedTool" value="gst" onchange="buildEmbed()">
+          <span data-i18n="gst.h1">GST Calculator</span>
+        </label>
+      </div>
+      <div id="stateWrap" style="display:none">
+        <label for="embedState" data-i18n="embed.stateLabel">Select state</label>
+        <select id="embedState" onchange="buildEmbed()"></select>
+      </div>
+    </div>
+
+    <h2 class="text-base font-bold mb-2" data-i18n="embed.previewLabel">Live preview</h2>
+    <iframe id="previewFrame" title="DesiCalc calculator preview" style="width:100%;height:1000px;border:1px solid #E7E5E4;border-radius:8px;background:#fff;" loading="lazy"></iframe>
+
+    <div class="card mt-6">
+      <div class="flex items-center justify-between gap-2 mb-3">
+        <h2 class="text-base font-bold" data-i18n="embed.snippetLabel">Copy-paste embed code</h2>
+        <button type="button" class="btn btn-outline btn-sm" onclick="copySnippet()" data-i18n="embed.copyButton">Copy Code</button>
+      </div>
+      <textarea id="snippetBox" readonly rows="3" class="font-mono text-xs bg-stone-50" style="width:100%;padding:0.75rem;border:1px solid #E7E5E4;border-radius:0.5rem;background:#FAFAF9;color:#1C1917;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:0.75rem;resize:vertical;"></textarea>
+      <p class="text-xs text-stone-400 mt-2">Paste this anywhere in your page where you want the calculator to appear. The embed works on any site — no signup or API key needed.</p>
+    </div>
+  </div>
+
+  <ins class="adsbygoogle ad-slot-footer mb-4" style="display:block;min-height:90px" data-ad-client="ca-pub-2207525036040634" data-ad-slot="4037844123" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>if (!isEmbedMode()) { (adsbygoogle = window.adsbygoogle || []).push({}); }</script>
+
+  <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
+    <div class="max-w-5xl mx-auto px-4 flex justify-center gap-x-6 gap-y-2 flex-wrap">
+      <a href="about" data-i18n="footer.about">About</a>
+      <a href="privacy" data-i18n="footer.privacy">Privacy</a>
+      <a href="contact" data-i18n="footer.contact">Contact</a>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast"></div>
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+  <script>
+    function populateEmbedStates() {
+      var sel = document.getElementById('embedState');
+      getStateList().forEach(function(s) {
+        var opt = document.createElement('option');
+        opt.value = s.id;
+        opt.textContent = s.name;
+        sel.appendChild(opt);
+      });
+      sel.value = 'maharashtra';
+    }
+
+    function buildEmbed() {
+      var tool = document.querySelector('input[name="embedTool"]:checked').value;
+      var stateSel = document.getElementById('embedState');
+      var isStateTool = tool === 'stamp-duty' || tool === 'rto-tax';
+      document.getElementById('stateWrap').style.display = isStateTool ? 'block' : 'none';
+      var state = isStateTool ? stateSel.value : '';
+      var qs = state ? 'state=' + encodeURIComponent(state) + '&embed=1' : 'embed=1';
+      var path = '/tools/' + tool + '?' + qs;
+      document.getElementById('previewFrame').src = window.location.origin + path;
+      document.getElementById('snippetBox').value =
+        '<iframe src="https://desicalc.in' + path + '" style="width:100%;height:1000px;border:1px solid #ddd;border-radius:8px;" loading="lazy"></iframe>';
+    }
+
+    function copySnippet() {
+      var text = document.getElementById('snippetBox').value;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () { showToast(t('embed.copied')); }).catch(function () { copySnippetFallback(text); });
+      } else {
+        copySnippetFallback(text);
+      }
+    }
+
+    function copySnippetFallback(text) {
+      var ta = document.createElement('textarea');
+      ta.value = text; ta.style.position = 'fixed'; ta.style.left = '-9999px';
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); showToast(t('embed.copied')); } catch (e) {}
+      document.body.removeChild(ta);
+    }
+
+    initLang();
+    initScrollReveal();
+    initTooltips();
+    initOnboarding();
+    initGreeting();
+    initBackToTop();
+    document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('[data-lang-btn]').forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+      });
+    });
+    onLangChange(function() {
+      document.querySelectorAll('[data-lang-btn]').forEach(function(b) {
+        b.classList.toggle('active', b.getAttribute('data-lang-btn') === getLang());
+      });
+    });
+    populateEmbedStates();
+    buildEmbed();
+  </script>
+</body>
+</html>

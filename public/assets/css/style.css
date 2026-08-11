@@ -154,3 +154,47 @@ label { display: block; font-size: 0.875rem; font-weight: 500; color: #78716C; m
   .toast.show { animation: none; }
   .toast { transition: opacity 0.15s, transform 0.15s; }
 }
+
+/* ===== EMBED MODE (?embed=1) ===== */
+
+/* Chromeless: hide chrome, ads, and content sections flagged for embed hiding */
+body.embed-mode > header,
+body.embed-mode > footer,
+body.embed-mode #backToTop,
+body.embed-mode .adsbygoogle,
+body.embed-mode [data-embed-hide] {
+  display: none !important;
+}
+
+/* Single-column layout inside embeds */
+.embed-mode .two-col { grid-template-columns: 1fr; }
+
+/* Keep content clear of the fixed powered-by strip */
+.embed-mode .max-w-5xl { padding-bottom: 3.5rem; }
+
+/* "Powered by DesiCalc" strip injected by initEmbedMode() */
+.embed-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 28px;
+  font-size: 12px;
+  line-height: 28px;
+  text-align: center;
+  background: #fff;
+  border-top: 1px solid #E7E5E4;
+  z-index: 50;
+}
+.embed-footer a { color: #D97706; font-weight: 600; text-decoration: none; }
+.embed-footer a:hover { text-decoration: underline; }
+
+/* Small code glyph used on "Embed" links next to Share/Copy buttons */
+.embed-icon {
+  font-style: normal;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-weight: 700;
+  font-size: 0.75rem;
+  margin-right: 0.25rem;
+  color: #D97706;
+}
