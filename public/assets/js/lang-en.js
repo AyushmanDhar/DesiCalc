@@ -31,7 +31,7 @@ window.DESICALC_LANG = {
   'footer.privacy': 'Privacy',
   'footer.contact': 'Contact',
 
-  'tax.title': 'Income Tax Calculator',
+  'tax.title': 'Income Tax Calculator FY 2026-27',
   'tax.subtitle': 'FY 2026-27 | Compare Old vs New Regime',
   'tax.section.income': 'Income',
   'tax.section.regime': 'Select Regime',
@@ -82,7 +82,7 @@ window.DESICALC_LANG = {
   'tax.label.hraDA': 'Dearness Allowance (₹)',
   'tax.label.hraMetro': 'Metro City',
 
-  'stamp.title': 'Stamp Duty Calculator',
+  'stamp.title': 'Stamp Duty Calculator 2026',
   'stamp.subtitle': 'Calculate property registration charges for all 28 states',
   'stamp.label.state': 'Select State',
   'stamp.label.value': 'Property Value (₹)',
@@ -112,7 +112,7 @@ window.DESICALC_LANG = {
   'stamp.faq.q3': 'What is circle rate?',
   'stamp.faq.a3': 'Circle rate is minimum value set by government. Stamp duty is calculated on higher of agreement value or circle rate.',
 
-  'rto.title': 'RTO Tax Calculator',
+  'rto.title': 'RTO Road Tax Calculator 2026',
   'rto.subtitle': 'Calculate road tax & registration charges for any state',
   'rto.label.state': 'Select State',
   'rto.label.vehicle': 'Vehicle Type',
