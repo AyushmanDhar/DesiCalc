@@ -83,7 +83,7 @@ window.DESICALC_LANG = {
   'tax.label.hraMetro': 'Metro City',
 
   'stamp.title': 'Stamp Duty Calculator',
-  'stamp.subtitle': 'Calculate property registration charges for all 28 states',
+  'stamp.subtitle': 'Calculate property registration charges for 28 states + Delhi',
   'stamp.label.state': 'Select State',
   'stamp.label.value': 'Property Value (₹)',
   'stamp.label.gender': 'Gender / Ownership',
@@ -176,8 +176,6 @@ window.DESICALC_LANG = {
   'contact.desc': 'Have feedback, found an error, or need help? Reach out to us.',
   'contact.email.title': 'Email',
   'contact.email.desc': 'Write to us directly:',
-  'contact.github.title': 'GitHub',
-  'contact.github.desc': 'Report bugs or suggest features on our GitHub repository.',
 
   'hra.title': 'HRA Exemption Calculator FY 2026-27 — DesiCalc',
   'hra.h1': 'HRA Exemption Calculator FY 2026-27',

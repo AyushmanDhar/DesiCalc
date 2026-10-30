@@ -176,8 +176,6 @@ window.DESICALC_LANG = {
   'contact.desc': 'Pratikriya hai, koi error mila, ya sahayata chahiye? Hamase sampark karein.',
   'contact.email.title': 'Email',
   'contact.email.desc': 'Seedha likhein:',
-  'contact.github.title': 'GitHub',
-  'contact.github.desc': 'Hamaare GitHub bhandar par bugs report karein ya features sujhaayein.',
 
   'hra.title': 'HRA Chhoot Calculator FY 2026-27 — DesiCalc',
   'hra.h1': 'HRA Chhoot Calculator FY 2026-27',
