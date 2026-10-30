@@ -239,6 +239,20 @@ for (const state of stampTier1) {
   checkTrue(`${name} FAQPage`, /"@type":\s*"FAQPage"/.test(html));
 }
 
+const editorialPages = [
+  'comparisons/old-vs-new-tax-regime.html',
+  'comparisons/ev-vs-petrol-road-tax.html',
+  'guides/how-to-file-itr-2026.html',
+  'guides/section-87a-rebate-explained.html',
+  'guides/how-to-calculate-stamp-duty.html',
+];
+for (const relPath of editorialPages) {
+  const html = read(path.join(PUBLIC, relPath));
+  checkTrue(`${relPath} byline`, html.includes('DesiCalc Editorial Team'));
+  checkTrue(`${relPath} last updated`, /Last updated/i.test(html));
+  checkTrue(`${relPath} sources section`, /<h2[^>]*>\s*Sources/i.test(html));
+}
+
 if (failed) {
   console.error(failures.join('\n'));
   console.error(`\n${failed} failed, ${passed} passed`);
