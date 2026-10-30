@@ -15,7 +15,6 @@ Indian tax, stamp duty, and RTO road tax calculators. No login. No data leaves y
 
 - **Fully client-side** — all calculation runs in browser, no server round-trip
 - **Offline-capable** — PWA service worker caches assets and pages
-- **Dual language** — English and Hindi with client-side toggle
 - **Mobile-first** — responsive layout with Tailwind CSS
 - **Privacy-first** — zero tracking cookies, no data collection
 - **Tasteful whimsy** — time-based greetings, animated result counters, subtle card hover effects, back-to-top button
@@ -28,7 +27,6 @@ Indian tax, stamp duty, and RTO road tax calculators. No login. No data leaves y
 | Frontend | Vanilla JS + Tailwind CSS (build-time) |
 | Ad network | Google AdSense (AdSense Auto Ads + manual placements) |
 | PWA | Custom service worker, cache-first for assets, network-first for pages |
-| i18n | Client-side JSON-based translation |
 | Deployment | Git push → Cloudflare auto-deploy |
 
 ## Project Structure
@@ -46,7 +44,7 @@ public/
 │   ├── css/
 │   │   ├── style.css       # Hand-written custom styles
 │   │   └── tailwind.css    # Generated (purged Tailwind utilities)
-│   ├── js/                 # calc-core, i18n (en/hi), state-rates, slabs
+│   ├── js/                 # calc-core, state-rates, slabs
 │   └── img/                # Open Graph images (1200×630)
 ├── tools/                  # Calculator pages (income-tax, stamp-duty, rto-tax)
 ├── guides/                 # 5 how-to articles (ITR, stamp duty, RTO, 87A, capital gains)
@@ -80,6 +78,6 @@ To auto-rebuild on file changes, run `npm run dev` (watches for changes) in a se
 Contributions welcome! Open an issue or submit a PR.
 
 - Add or update state-wise rates in `public/assets/js/state-rates.js`
-- Add translations in `public/assets/js/lang-en.js` / `lang-hi.js`
 - Calculator logic lives in `public/assets/js/calc-core.js`
 - State-specific pages are under `public/stamp-duty/` and `public/rto-tax/`
+- SEO measurement docs live in `docs/seo/`: `weekly-log.md` for weekly metrics and `outreach.md` for the link outreach tracker

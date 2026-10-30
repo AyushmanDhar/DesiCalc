@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-lang="en">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#ffffff">
-  <title data-i18n="home.title">DesiCalc — Free Indian Calculators</title>
+  <title>DesiCalc — Free Indian Calculators</title>
   <meta name="description" content="Free Indian tax calculators. Income Tax FY 2026-27, Stamp Duty all 29 states, RTO Road Tax. No login. Instant results.">
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -58,11 +58,9 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/common.js"></script>
   <script src="assets/js/calc-core.js"></script>
-  <script src="assets/js/lang-en.js"></script>
-  <script src="assets/js/ad.js"></script>
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2207525036040634"
-     crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","url":"https://desicalc.in/","dateModified":"2026-10-30"}
+  </script>
 </head>
 <body>
   <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:p-2 focus:bg-white focus:z-50">Skip to content</a>
@@ -71,57 +69,50 @@
     <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
       <a href="/" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
       <span id="greeting" class="greeting-text hidden sm:inline ml-2" aria-live="polite"></span>
-      <div class="lang-toggle" role="group" aria-label="Language toggle">
-        <button onclick="setLang('en')" class="active" data-lang-btn="en" data-i18n="header.lang.en">EN</button>
-        <button onclick="setLang('hi')" data-lang-btn="hi" data-i18n="header.lang.hi">Hing</button>
-      </div>
-    </div>
+</div>
   </header>
 
   <main id="main-content" class="max-w-5xl mx-auto px-4 py-8">
     <section class="text-center mb-10 scroll-entrance">
-      <h1 class="text-3xl sm:text-4xl font-bold text-stone-900 mb-3" data-i18n="home.h1">Free Indian Calculators</h1>
-      <p class="text-lg text-stone-500" data-i18n="home.subtitle">No login needed. Just calculate.</p>
+      <h1 class="text-3xl sm:text-4xl font-bold text-stone-900 mb-3">Free Indian Calculators</h1>
+      <p class="text-lg text-stone-500">No login needed. Just calculate.</p>
     </section>
 
     <section class="tool-grid mb-12 scroll-entrance">
       <div class="tool-card text-center">
         <div class="text-4xl mb-3" aria-hidden="true">💰</div>
-        <h2 class="text-lg font-bold mb-1" data-i18n="home.tax.title">Income Tax Calculator</h2>
-        <p class="text-sm text-stone-500 mb-4" data-i18n="home.tax.desc">FY 2026-27 — Old vs New regime</p>
-        <a href="tools/income-tax" class="btn btn-primary" data-i18n="home.cta">Calculate Now</a>
+        <h2 class="text-lg font-bold mb-1">Income Tax Calculator</h2>
+        <p class="text-sm text-stone-500 mb-4">FY 2026-27 — Old vs New regime</p>
+        <a href="tools/income-tax" class="btn btn-primary">Calculate Now</a>
       </div>
       <div class="tool-card text-center">
         <div class="text-4xl mb-3" aria-hidden="true">🏠</div>
-        <h2 class="text-lg font-bold mb-1" data-i18n="home.stamp.title">Stamp Duty Calculator</h2>
-        <p class="text-sm text-stone-500 mb-4" data-i18n="home.stamp.desc">All 29 states</p>
-        <a href="tools/stamp-duty" class="btn btn-primary" data-i18n="home.cta">Calculate Now</a>
+        <h2 class="text-lg font-bold mb-1">Stamp Duty Calculator</h2>
+        <p class="text-sm text-stone-500 mb-4">All 29 states</p>
+        <a href="tools/stamp-duty" class="btn btn-primary">Calculate Now</a>
       </div>
       <div class="tool-card text-center">
         <div class="text-4xl mb-3" aria-hidden="true">🚗</div>
-        <h2 class="text-lg font-bold mb-1" data-i18n="home.rto.title">RTO Tax Calculator</h2>
-        <p class="text-sm text-stone-500 mb-4" data-i18n="home.rto.desc">All states, all vehicle types</p>
-        <a href="tools/rto-tax" class="btn btn-primary" data-i18n="home.cta">Calculate Now</a>
+        <h2 class="text-lg font-bold mb-1">RTO Tax Calculator</h2>
+        <p class="text-sm text-stone-500 mb-4">All states, all vehicle types</p>
+        <a href="tools/rto-tax" class="btn btn-primary">Calculate Now</a>
       </div>
       <div class="tool-card text-center">
         <div class="text-4xl mb-3" aria-hidden="true">🏢</div>
         <h2 class="text-lg font-bold mb-1">HRA Exemption Calculator</h2>
         <p class="text-sm text-stone-500 mb-4">Section 10(13A) — Metro/Non-Metro</p>
-        <a href="tools/hra" class="btn btn-primary" data-i18n="home.cta">Calculate Now</a>
+        <a href="tools/hra" class="btn btn-primary">Calculate Now</a>
       </div>
       <div class="tool-card text-center">
         <div class="text-4xl mb-3" aria-hidden="true">🧾</div>
         <h2 class="text-lg font-bold mb-1">GST Calculator</h2>
         <p class="text-sm text-stone-500 mb-4">2026 rates — Regular & Composition Scheme</p>
-        <a href="tools/gst" class="btn btn-primary" data-i18n="home.cta">Calculate Now</a>
+        <a href="tools/gst" class="btn btn-primary">Calculate Now</a>
       </div>
     </section>
 
-    <ins class="adsbygoogle ad-slot-in-content mb-8" style="display:block;min-height:90px" data-ad-client="ca-pub-2207525036040634" data-ad-slot="4037844123" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-
-    <section class="mb-12 scroll-entrance">
-      <h2 class="text-xl font-bold mb-4 text-center" data-i18n="home.resources.title">Guides & Comparisons</h2>
+<section class="mb-12 scroll-entrance">
+      <h2 class="text-xl font-bold mb-4 text-center">Guides & Comparisons</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <a href="comparisons/old-vs-new-tax-regime" class="card text-center hover:shadow-md transition-shadow no-underline">
           <div class="font-semibold text-stone-900">Old vs New Tax Regime</div>
@@ -160,17 +151,17 @@
     </section>
 
     <section class="max-w-2xl mx-auto text-center mb-12 scroll-entrance">
-      <h2 class="text-xl font-bold mb-4" data-i18n="home.why.title">Why DesiCalc?</h2>
+      <h2 class="text-xl font-bold mb-4">Why DesiCalc?</h2>
       <ul class="text-left space-y-2 text-stone-600">
-        <li class="flex items-start gap-2"><span class="text-emerald-600 mt-0.5">✓</span> <span data-i18n="home.why.accurate">Accurate FY 2026-27 rates</span></li>
-        <li class="flex items-start gap-2"><span class="text-emerald-600 mt-0.5">✓</span> <span data-i18n="home.why.updated">Updated for Budget 2026</span></li>
-        <li class="flex items-start gap-2"><span class="text-emerald-600 mt-0.5">✓</span> <span data-i18n="home.why.private">Private — no data leaves your device</span></li>
-        <li class="flex items-start gap-2"><span class="text-emerald-600 mt-0.5">✓</span> <span data-i18n="home.why.free">Free forever</span></li>
+        <li class="flex items-start gap-2"><span class="text-emerald-600 mt-0.5">✓</span> <span>Accurate FY 2026-27 rates</span></li>
+        <li class="flex items-start gap-2"><span class="text-emerald-600 mt-0.5">✓</span> <span>Updated for Budget 2026</span></li>
+        <li class="flex items-start gap-2"><span class="text-emerald-600 mt-0.5">✓</span> <span>Private — no data leaves your device</span></li>
+        <li class="flex items-start gap-2"><span class="text-emerald-600 mt-0.5">✓</span> <span>Free forever</span></li>
       </ul>
     </section>
 
     <section class="text-center mb-12 scroll-entrance">
-      <button class="btn btn-outline" onclick="shareUrl()" data-i18n="common.share">Share DesiCalc</button>
+      <button class="btn btn-outline" onclick="shareUrl()">Share DesiCalc</button>
     </section>
 
     <section class="mb-12 scroll-entrance">
@@ -182,39 +173,26 @@
     </section>
   </main>
 
-  <ins class="adsbygoogle ad-slot-footer mb-4" style="display:block;min-height:90px" data-ad-client="ca-pub-2207525036040634" data-ad-slot="4037844123" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-
-  <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
+<footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
     <div class="max-w-5xl mx-auto px-4 flex justify-center gap-x-6 gap-y-2 flex-wrap">
-      <a href="about" data-i18n="footer.about">About</a>
-      <a href="privacy" data-i18n="footer.privacy">Privacy</a>
-      <a href="contact" data-i18n="footer.contact">Contact</a>
-      <a href="embed" data-i18n="footer.embed">Embed</a>
+      <a href="/methodology">Methodology</a>
+      <a href="/rate-tracker">Rate Tracker</a>
+      <a href="/editorial-policy">Editorial Policy</a>
+      <a href="about">About</a>
+      <a href="privacy">Privacy</a>
+      <a href="contact">Contact</a>
+      <a href="embed">Embed</a>
     </div>
   </footer>
 
   <div id="toast" class="toast"></div>
   <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
 
-  <script>
-    initLang();
-    initScrollReveal();
+  <script>    initScrollReveal();
     initTooltips();
     initOnboarding();
     initGreeting();
     initBackToTop();
-    document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        document.querySelectorAll('[data-lang-btn]').forEach(function(b) { b.classList.remove('active'); });
-        this.classList.add('active');
-      });
-    });
-    onLangChange(function() {
-      document.querySelectorAll('[data-lang-btn]').forEach(function(b) {
-        b.classList.toggle('active', b.getAttribute('data-lang-btn') === getLang());
-      });
-    });
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js');
     }

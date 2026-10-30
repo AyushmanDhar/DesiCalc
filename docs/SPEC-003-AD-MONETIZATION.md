@@ -34,7 +34,7 @@
 ```
 ┌─────────────────────────────────────────┐
 │  HEADER                                  │
-│  [Logo] [Language Toggle] [Search]       │
+│  [Logo] [Search]       │
 │  ─────────────────────────────────────   │
 │  [PropellerAds Push Notification Opt-in] │
 ├────────────────┬────────────────────────┤

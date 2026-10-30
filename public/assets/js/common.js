@@ -30,74 +30,6 @@ function throttle(fn, limit) {
   };
 }
 
-let _currentLang = 'en';
-const _langCallbacks = [];
-
-function t(key) {
-  const map = window['DESICALC_LANG'] || {};
-  return map[key] || key;
-}
-
-function setLang(lang) {
-  _currentLang = lang;
-  try { localStorage.setItem('desicalc_lang', lang); } catch (e) {}
-  document.documentElement.setAttribute('data-lang', lang);
-  loadLangFile(lang);
-}
-
-function getLang() {
-  return _currentLang;
-}
-
-function loadLangFile(lang) {
-  const scriptId = 'desicalc-lang-script';
-  const old = document.getElementById(scriptId);
-  if (old) old.remove();
-  const s = document.createElement('script');
-  s.id = scriptId;
-  var path = window.location.pathname;
-  var prefix = '';
-  if (/\/tools\/|\/guides\/|\/comparisons\//.test(path)) {
-    prefix = '../';
-  } else if (/\/programmatic\//.test(path)) {
-    prefix = '../../';
-  }
-  s.src = prefix + 'assets/js/lang-' + lang + '.js';
-  s.onload = () => {
-    applyI18n();
-    _langCallbacks.forEach(cb => cb(lang));
-  };
-  document.head.appendChild(s);
-}
-
-function applyI18n() {
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    const val = t(key);
-    if (val !== key) {
-      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-        el.setAttribute('placeholder', val);
-      } else if (el.hasAttribute('data-i18n-html')) {
-        el.innerHTML = val;
-      } else {
-        el.textContent = val;
-      }
-    }
-  });
-}
-
-function onLangChange(cb) {
-  _langCallbacks.push(cb);
-}
-
-function initLang() {
-  try {
-    const saved = localStorage.getItem('desicalc_lang');
-    if (saved === 'hi' || saved === 'en') _currentLang = saved;
-  } catch (e) {}
-  setLang(_currentLang);
-}
-
 function initScrollReveal() {
   if ('IntersectionObserver' in window) {
     var obs = new IntersectionObserver(function(entries) {
@@ -127,11 +59,10 @@ function initGreeting() {
   var el = document.getElementById('greeting');
   if (!el) return;
   var h = new Date().getHours();
-  var text = '';
-  if (h >= 5 && h < 12) { text = '🌅 ' + (window.DESICALC_LANG && window.DESICALC_LANG['greeting.morning'] ? window.DESICALC_LANG['greeting.morning'] : 'Good morning'); }
-  else if (h >= 12 && h < 17) { text = '☀️ ' + (window.DESICALC_LANG && window.DESICALC_LANG['greeting.afternoon'] ? window.DESICALC_LANG['greeting.afternoon'] : 'Good afternoon'); }
-  else if (h >= 17 && h < 21) { text = '🌅 ' + (window.DESICALC_LANG && window.DESICALC_LANG['greeting.evening'] ? window.DESICALC_LANG['greeting.evening'] : 'Good evening'); }
-  else { text = '🌙 ' + (window.DESICALC_LANG && window.DESICALC_LANG['greeting.night'] ? window.DESICALC_LANG['greeting.night'] : 'Good night'); }
+  var text = h >= 5 && h < 12 ? '🌅 Good morning'
+    : h >= 12 && h < 17 ? '☀️ Good afternoon'
+    : h >= 17 && h < 21 ? '🌅 Good evening'
+    : '🌙 Good night';
   el.textContent = text;
 }
 

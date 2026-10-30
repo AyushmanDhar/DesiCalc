@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-lang="en">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#ffffff">
-  <title data-i18n="stamp.title">Stamp Duty Calculator 2026 — All 29 Indian States | DesiCalc</title>
+  <title>Stamp Duty Calculator 2026 — All 29 Indian States | DesiCalc</title>
   <meta name="description" content="Calculate stamp duty and registration charges for all 29 Indian states. Female concession, circle rate, first-time buyer benefits.">
   <meta name="author" content="DesiCalc Editorial Team">
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -91,11 +91,9 @@
   <script src="../assets/js/common.js"></script>
   <script src="../assets/js/calc-core.js"></script>
   <script src="../assets/js/state-rates.js"></script>
-  <script src="../assets/js/lang-en.js"></script>
-  <script src="../assets/js/ad.js"></script>
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2207525036040634"
-     crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","url":"https://desicalc.in/tools/stamp-duty","dateModified":"2026-10-30"}
+  </script>
 </head>
 <body>
   <a href="#calc-form" class="sr-only focus:not-sr-only focus:absolute focus:p-2 focus:bg-white focus:z-50">Skip to calculator</a>
@@ -103,59 +101,55 @@
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
     <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <a href="../" class="text-sm text-stone-500 hover:text-stone-900 no-underline" data-i18n="header.back">← Back</a>
+        <a href="../" class="text-sm text-stone-500 hover:text-stone-900 no-underline">← Back</a>
         <a href="../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
         <span id="greeting" class="greeting-text hidden sm:inline" aria-live="polite"></span>
       </div>
-      <div class="lang-toggle" role="group" aria-label="Language toggle">
-        <button onclick="setLang('en')" class="active" data-lang-btn="en" data-i18n="header.lang.en">EN</button>
-        <button onclick="setLang('hi')" data-lang-btn="hi" data-i18n="header.lang.hi">Hing</button>
-      </div>
-    </div>
+</div>
   </header>
 
   <div class="max-w-5xl mx-auto px-4 py-6">
     <div class="two-col">
       <div>
-        <h1 class="text-2xl sm:text-3xl font-bold text-stone-900 mb-1" data-i18n="stamp.title">Stamp Duty Calculator</h1>
-        <p class="text-stone-500 text-sm mb-6" data-i18n="stamp.subtitle">Calculate property registration charges for all 29 states</p>
+        <h1 class="text-2xl sm:text-3xl font-bold text-stone-900 mb-1">Stamp Duty Calculator</h1>
+        <p class="text-stone-500 text-sm mb-6">Calculate property registration charges for all 29 states</p>
 
         <form id="calc-form" onsubmit="return false" class="space-y-4">
           <div>
-            <label for="state" data-i18n="stamp.label.state">Select State</label>
+            <label for="state">Select State</label>
             <select id="state" onchange="calcStamp()">
             </select>
           </div>
           <div>
-            <label for="propertyValue"><span data-i18n="stamp.label.value">Property Value (₹)</span> <span class="tooltip-trigger" data-tooltip="Agreement value or circle rate — whichever is higher">?</span></label>
+            <label for="propertyValue"><span>Property Value (₹)</span> <span class="tooltip-trigger" data-tooltip="Agreement value or circle rate — whichever is higher">?</span></label>
             <input type="text" id="propertyValue" inputmode="numeric" value="5000000" oninput="calcStamp()">
           </div>
           <div>
-            <label for="gender"><span data-i18n="stamp.label.gender">Gender / Ownership</span> <span class="tooltip-trigger" data-tooltip="Many states offer lower stamp duty for female buyers">?</span></label>
+            <label for="gender"><span>Gender / Ownership</span> <span class="tooltip-trigger" data-tooltip="Many states offer lower stamp duty for female buyers">?</span></label>
             <select id="gender" onchange="calcStamp()">
-              <option value="male" data-i18n="stamp.gender.male">Male</option>
-              <option value="female" data-i18n="stamp.gender.female">Female</option>
-              <option value="joint_ff" data-i18n="stamp.gender.joint_ff">Joint (Female + Female)</option>
-              <option value="joint_mm" data-i18n="stamp.gender.joint_mm">Joint (Male + Male)</option>
-              <option value="joint_mf" data-i18n="stamp.gender.joint_mf">Joint (Male + Female)</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="joint_ff">Joint (Female + Female)</option>
+              <option value="joint_mm">Joint (Male + Male)</option>
+              <option value="joint_mf">Joint (Male + Female)</option>
             </select>
           </div>
           <div id="sellerGenderWrap" style="display:none">
-            <label for="sellerGender" data-i18n="stamp.label.sellerGender">Seller Gender (Bihar)</label>
+            <label for="sellerGender">Seller Gender (Bihar)</label>
             <select id="sellerGender" onchange="calcStamp()">
-              <option value="" data-i18n="stamp.seller.unspecified">Not specified</option>
-              <option value="male" data-i18n="stamp.gender.male">Male</option>
-              <option value="female" data-i18n="stamp.gender.female">Female</option>
+              <option value="">Not specified</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
             </select>
           </div>
           <div>
-            <label for="location" data-i18n="stamp.label.location">Location</label>
+            <label for="location">Location</label>
             <select id="location" onchange="calcStamp()"></select>
           </div>
           <div id="firstSaleFlatWrap" style="display:none">
             <label class="flex items-center gap-2 cursor-pointer">
               <input type="checkbox" id="isFirstSaleFlat" onchange="calcStamp()">
-              <span data-i18n="stamp.label.firstSaleFlat">First sale of flat/apartment? (Karnataka)</span>
+              <span>First sale of flat/apartment? (Karnataka)</span>
             </label>
           </div>
           <div id="residencyWrap" style="display:none">
@@ -167,36 +161,31 @@
           </div>
 
           <div class="flex gap-2 pt-2">
-            <button type="button" class="btn btn-outline flex-1" onclick="resetForm()" data-i18n="common.reset">Reset</button>
+            <button type="button" class="btn btn-outline flex-1" onclick="resetForm()">Reset</button>
           </div>
         </form>
       </div>
 
       <div>
-        <ins class="adsbygoogle ad-slot-sidebar-top mb-4" style="display:block;min-height:250px" data-ad-client="ca-pub-2207525036040634" data-ad-slot="2724762457" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>if (!isEmbedMode()) { (adsbygoogle = window.adsbygoogle || []).push({}); }</script>
-
-        <div class="flex gap-2 mb-3">
-          <button class="btn btn-outline btn-sm flex-1" onclick="shareUrl()" data-i18n="common.share">Share</button>
-          <button class="btn btn-outline btn-sm flex-1" onclick="copyUrl()" data-i18n="common.copy">Copy Link</button>
-          <a class="btn btn-outline btn-sm flex-1 no-underline" href="/embed"><i class="embed-icon" aria-hidden="true">&lt;/&gt;</i><span data-i18n="embed.link">Embed</span></a>
+<div class="flex gap-2 mb-3">
+          <button class="btn btn-outline btn-sm flex-1" onclick="shareUrl()">Share</button>
+          <button class="btn btn-outline btn-sm flex-1" onclick="copyUrl()">Copy Link</button>
+          <a class="btn btn-outline btn-sm flex-1 no-underline" href="/embed"><i class="embed-icon" aria-hidden="true">&lt;/&gt;</i><span>Embed</span></a>
         </div>
-        <h2 class="text-base font-bold mb-2" data-i18n="common.result">Result</h2>
+        <h2 class="text-base font-bold mb-2">Result</h2>
         <div id="resultBox" class="result-card fade-in" aria-live="polite">
-          <div class="result-row"><span class="result-label" data-i18n="stamp.result.sdRate">Stamp Duty Rate</span><span class="result-value" id="rSdRate">0%</span></div>
-          <div class="result-row"><span class="result-label" data-i18n="stamp.result.regRate">Registration Rate</span><span class="result-value" id="rRegRate">0%</span></div>
-          <div class="result-row"><span class="result-label" data-i18n="stamp.result.sd">Stamp Duty</span><span class="result-value" id="rSd">₹0</span></div>
-          <div class="result-row"><span class="result-label" data-i18n="stamp.result.reg">Registration Charges</span><span class="result-value" id="rReg">₹0</span></div>
-          <div class="result-row" id="transferDutyRow"><span class="result-label" data-i18n="stamp.result.transfer">Transfer / Municipal Duty</span><span class="result-value" id="rTransfer">₹0</span></div>
-          <div class="result-row"><span class="result-label" data-i18n="stamp.result.cess">Cess / Surcharge</span><span class="result-value" id="rCess">₹0</span></div>
-          <div class="result-row"><span class="result-label" data-i18n="stamp.result.other">Other Charges</span><span class="result-value" id="rOther">₹0</span></div>
-          <div class="result-row total"><span class="result-label" data-i18n="stamp.result.total">Total Cost</span><span class="result-value" id="rTotal">₹0</span></div>
-          <div class="result-row"><span class="result-label" data-i18n="stamp.result.effective">Effective Rate</span><span class="result-value" id="rEffective">0.00%</span></div>
+          <div class="result-row"><span class="result-label">Stamp Duty Rate</span><span class="result-value" id="rSdRate">0%</span></div>
+          <div class="result-row"><span class="result-label">Registration Rate</span><span class="result-value" id="rRegRate">0%</span></div>
+          <div class="result-row"><span class="result-label">Stamp Duty</span><span class="result-value" id="rSd">₹0</span></div>
+          <div class="result-row"><span class="result-label">Registration Charges</span><span class="result-value" id="rReg">₹0</span></div>
+          <div class="result-row" id="transferDutyRow"><span class="result-label">Transfer / Municipal Duty</span><span class="result-value" id="rTransfer">₹0</span></div>
+          <div class="result-row"><span class="result-label">Cess / Surcharge</span><span class="result-value" id="rCess">₹0</span></div>
+          <div class="result-row"><span class="result-label">Other Charges</span><span class="result-value" id="rOther">₹0</span></div>
+          <div class="result-row total"><span class="result-label">Total Cost</span><span class="result-value" id="rTotal">₹0</span></div>
+          <div class="result-row"><span class="result-label">Effective Rate</span><span class="result-value" id="rEffective">0.00%</span></div>
         </div>
 
-        <ins class="adsbygoogle ad-slot-in-content mt-4" style="display:block;min-height:90px" data-ad-client="ca-pub-2207525036040634" data-ad-slot="4037844123" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>if (!isEmbedMode()) { (adsbygoogle = window.adsbygoogle || []).push({}); }</script>
-      </div>
+</div>
     </div>
 
     <section class="mt-10" data-embed-hide>
@@ -218,32 +207,33 @@
     </section>
 
     <section class="mt-10 max-w-2xl" data-embed-hide>
-      <h2 class="text-lg font-bold mb-3" data-i18n="stamp.faq.title">FAQs</h2>
+      <h2 class="text-lg font-bold mb-3">FAQs</h2>
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)"><span data-i18n="stamp.faq.q1">What is stamp duty?</span><span class="faq-icon">+</span></button>
-        <div class="faq-answer" data-i18n="stamp.faq.a1">Stamp duty is tax paid to state government on property registration. Rate varies by state, gender, and property type.</div>
+        <button class="faq-question" onclick="toggleFaq(this)"><span>What is stamp duty?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Stamp duty is tax paid to state government on property registration. Rate varies by state, gender, and property type.</div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)"><span data-i18n="stamp.faq.q2">Do women get concession?</span><span class="faq-icon">+</span></button>
-        <div class="faq-answer" data-i18n="stamp.faq.a2">Yes, many states offer 1-2% lower stamp duty for female buyers. Joint ownership with female also gets partial benefit.</div>
+        <button class="faq-question" onclick="toggleFaq(this)"><span>Do women get concession?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Yes, many states offer 1-2% lower stamp duty for female buyers. Joint ownership with female also gets partial benefit.</div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)"><span data-i18n="stamp.faq.q3">What is circle rate?</span><span class="faq-icon">+</span></button>
-        <div class="faq-answer" data-i18n="stamp.faq.a3">Circle rate is minimum value set by government. Stamp duty is calculated on higher of agreement value or circle rate.</div>
+        <button class="faq-question" onclick="toggleFaq(this)"><span>What is circle rate?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Circle rate is minimum value set by government. Stamp duty is calculated on higher of agreement value or circle rate.</div>
       </div>
     </section>
   </div>
 
-  <ins class="adsbygoogle ad-slot-footer mb-4" style="display:block;min-height:90px" data-ad-client="ca-pub-2207525036040634" data-ad-slot="4037844123" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>if (!isEmbedMode()) { (adsbygoogle = window.adsbygoogle || []).push({}); }</script>
-
-  <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
+<footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
     <div class="max-w-5xl mx-auto px-4 flex justify-center gap-x-6 gap-y-2 flex-wrap">
-      <a href="../about" data-i18n="footer.about">About</a>
-      <a href="../privacy" data-i18n="footer.privacy">Privacy</a>
-      <a href="../contact" data-i18n="footer.contact">Contact</a>
+      <a href="../about">About</a>
+      <a href="../privacy">Privacy</a>
+      <a href="../contact">Contact</a>
     </div>
-  </footer>
+    <div class="footer-trust">
+      <a href="/methodology">Methodology</a>
+      <a href="/editorial-policy">Editorial Policy</a>
+    </div>
+</footer>
 
   <div id="toast" class="toast"></div>
   <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
@@ -332,24 +322,11 @@
     }
 
     populateStates();
-    var STASH_LOCATION = new URLSearchParams(window.location.search).get('location');
-    initLang();
-    initScrollReveal();
+    var STASH_LOCATION = new URLSearchParams(window.location.search).get('location');    initScrollReveal();
     initTooltips();
     initOnboarding();
     initGreeting();
     initBackToTop();
-    document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        document.querySelectorAll('[data-lang-btn]').forEach(function(b) { b.classList.remove('active'); });
-        this.classList.add('active');
-      });
-    });
-    onLangChange(function() {
-      document.querySelectorAll('[data-lang-btn]').forEach(function(b) {
-        b.classList.toggle('active', b.getAttribute('data-lang-btn') === getLang());
-      });
-    });
     function resetForm() {
       document.getElementById('propertyValue').value = '5000000';
       document.getElementById('gender').value = 'male';

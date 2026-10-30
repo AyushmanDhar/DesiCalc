@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <title>Methodology — How DesiCalc Verifies Tax Rates</title>
+  <meta name="description" content="How DesiCalc sources, verifies and updates income tax slabs, stamp duty rates and RTO road tax rates, with source hierarchy and changelog.">
+  <link rel="canonical" href="https://desicalc.in/methodology" />
+  <link rel="alternate" hreflang="en" href="https://desicalc.in/methodology" />
+  <link rel="alternate" hreflang="x-default" href="https://desicalc.in/methodology" />
+  <meta property="og:title" content="Methodology — How DesiCalc Verifies Tax Rates">
+  <meta property="og:description" content="How DesiCalc sources, verifies and updates income tax slabs, stamp duty rates and RTO road tax rates, with source hierarchy and changelog.">
+  <meta property="og:url" content="https://desicalc.in/methodology">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="assets/css/tailwind.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/common.js"></script>
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="DesiCalc" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://desicalc.in" },
+      { "@type": "ListItem", "position": 2, "name": "Methodology", "item": "https://desicalc.in/methodology" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","url":"https://desicalc.in/methodology","dateModified":"2026-10-30"}
+  </script>
+</head>
+<body class="bg-stone-50">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:p-2 focus:bg-white focus:z-50">Skip to content</a>
+
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
+    <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="./" class="text-sm text-stone-500 hover:text-stone-900 no-underline">← Back</a>
+        <a href="./" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
+        <span id="greeting" class="greeting-text hidden sm:inline" aria-live="polite"></span>
+      </div>
+</div>
+  </header>
+
+  <main id="main-content" class="max-w-3xl mx-auto px-4 py-12">
+    <h1 class="text-3xl font-bold text-stone-900 mb-6">Methodology — How DesiCalc Verifies Tax Rates</h1>
+
+    <p class="text-sm text-stone-500 mb-6">Published by the DesiCalc Editorial Team. Last reviewed 2026-10-30.</p>
+
+    <div class="prose prose-stone max-w-none">
+      <p class="text-lg text-stone-600 leading-relaxed mb-6">
+        This page explains where the numbers inside every DesiCalc calculator come from, how they are checked before publication, and what we do when a rate changes. It is a description of our internal process, not tax or legal advice.
+      </p>
+
+      <h2 class="text-xl font-bold text-stone-900 mt-8 mb-3">What we cover</h2>
+      <p class="text-stone-600 leading-relaxed mb-3">
+        DesiCalc publishes calculators for the taxes and fees that ordinary Indian households and small businesses meet most often:
+      </p>
+      <ul class="space-y-2 text-stone-600 mb-4">
+        <li><strong>Income Tax</strong> for FY 2026-27, across the old and new regimes, including rebate and surcharge steps. Rates are anchored to the Income Tax Department at <a href="https://www.incometax.gov.in" rel="noopener">incometax.gov.in</a>.</li>
+        <li><strong>Stamp Duty</strong> for 28 states plus Delhi, including gender and joint-ownership concessions where the state provides them.</li>
+        <li><strong>RTO Road Tax</strong> for 28 states plus Delhi, covering private cars, two-wheelers, and commercial seating brackets. Vehicle and registration rules are tracked through the Ministry of Road Transport and Highways at <a href="https://morth.nic.in" rel="noopener">morth.nic.in</a> and the Parivahan portal at <a href="https://parivahan.gov.in" rel="noopener">parivahan.gov.in</a>.</li>
+        <li><strong>HRA exemption</strong> under the Income Tax Act, and <strong>GST</strong> splits tracked through the Central Board of Indirect Taxes and Customs at <a href="https://www.cbic.gov.in" rel="noopener">cbic.gov.in</a>.</li>
+      </ul>
+
+      <h2 class="text-xl font-bold text-stone-900 mt-8 mb-3">Source hierarchy</h2>
+      <p class="text-stone-600 leading-relaxed mb-3">
+        When two sources disagree, the one higher in this list wins:
+      </p>
+      <ol class="list-decimal pl-6 space-y-2 text-stone-600 mb-4">
+        <li>A central or state gazette notification. This is the legal instrument that actually sets a rate.</li>
+        <li>The official website of the department that administers the tax or fee.</li>
+        <li>An official notification PDF published by that department.</li>
+        <li>Secondary financial publications, used only to cross-check a reading and never as the sole basis for a rate.</li>
+      </ol>
+      <p class="text-stone-600 leading-relaxed">
+        If we cannot reach a primary source for a figure, we leave that figure out rather than publishing a secondary-only number.
+      </p>
+
+      <h2 class="text-xl font-bold text-stone-900 mt-8 mb-3">How rates are verified</h2>
+      <p class="text-stone-600 leading-relaxed">
+        Every stored rate is checked against its primary source, then compared with the value already in our data files. A value is changed only when the primary source itself changed. We do not adjust a rate because a secondary article reports a different number. Verification dates are recorded in the page changelog below and in the page's dateModified value; the current review date for the full dataset is 2026-10-30. Where a state levies additional charges such as registration fees, metro cess, or surcharges, each component is sourced separately rather than bundled into one unverified total.
+      </p>
+
+      <h2 class="text-xl font-bold text-stone-900 mt-8 mb-3">When we update</h2>
+      <ul class="space-y-2 text-stone-600">
+        <li>After the Union Budget, when income tax slabs, rebates, or surcharge thresholds are announced.</li>
+        <li>After a state government issues a stamp duty or transport notification.</li>
+        <li>On a monthly audit of all 58 state pages, whether or not a notification has been published.</li>
+      </ul>
+
+      <h2 class="text-xl font-bold text-stone-900 mt-8 mb-3">Corrections</h2>
+      <p class="text-stone-600 leading-relaxed">
+        If a rate looks wrong, email <a href="mailto:desicalc@gmail.com">desicalc@gmail.com</a> with the calculator, the state, and the official source you are comparing against. Errors we can verify are fixed within 48 hours and recorded in the changelog below so the change is visible.
+      </p>
+
+      <h2 class="text-xl font-bold text-stone-900 mt-8 mb-3">Limitations</h2>
+      <p class="text-stone-600 leading-relaxed">
+        The calculators are estimates. The registration authority's final demand is authoritative, and circle rates vary by locality within a state, so a district-level rate may differ from the state-level figure we use. Income tax outcomes also depend on deductions and exemptions that a calculator cannot see. Treat every result as a planning aid and confirm the final amount with the relevant department or a qualified professional.
+      </p>
+
+      <h2 class="text-xl font-bold text-stone-900 mt-8 mb-3">Changelog</h2>
+      <ul class="space-y-2 text-stone-600">
+        <li>2026-10-30 — Full re-verification of RTO and stamp duty rates; trust pages published.</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
+    <div class="max-w-5xl mx-auto px-4 flex justify-center gap-x-6 gap-y-2 flex-wrap">
+      <a href="/methodology">Methodology</a>
+      <a href="/editorial-policy">Editorial Policy</a>
+      <a href="about">About</a>
+      <a href="privacy">Privacy</a>
+      <a href="contact">Contact</a>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast"></div>
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+  <script>
+    initScrollReveal();
+    initGreeting();
+    initBackToTop();
+  </script>
+</body>
+</html>

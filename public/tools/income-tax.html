@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-lang="en">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#ffffff">
-  <title data-i18n="tax.title">Income Tax Calculator FY 2026-27 — Old vs New Regime | DesiCalc</title>
+  <title>Income Tax Calculator FY 2026-27 — Old vs New Regime | DesiCalc</title>
   <meta name="description" content="Calculate income tax for FY 2026-27. Compare Old vs New tax regime side-by-side. Section 87A rebate, surcharge, cess, HRA exemptions. Free, no login.">
   <meta name="author" content="DesiCalc Editorial Team">
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -15,7 +15,7 @@
   <link rel="manifest" href="/site.webmanifest" />
   <link rel="canonical" href="https://desicalc.in/tools/income-tax" />
   <meta property="og:title" content="Income Tax Calculator FY 2026-27 — Old vs New Regime | DesiCalc">
-  <meta property="og:description" content="Calculate income tax for FY 2026-27. Compare Old vs New regime. Updated for FY 2026-27. Free, no login.">
+  <meta property="og:description" content="Calculate income tax for FY 2026-27. Compare Old vs New tax regime side-by-side. Section 87A rebate, surcharge, cess, HRA exemptions. Free, no login.">
   <meta property="og:url" content="https://desicalc.in/tools/income-tax">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://desicalc.in/assets/img/og-tax-calculator.png">
@@ -92,11 +92,9 @@
   <script src="../assets/js/common.js"></script>
   <script src="../assets/js/calc-core.js"></script>
   <script src="../assets/js/slabs-2026.js"></script>
-  <script src="../assets/js/lang-en.js"></script>
-  <script src="../assets/js/ad.js"></script>
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2207525036040634"
-     crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","url":"https://desicalc.in/tools/income-tax","dateModified":"2026-10-30"}
+  </script>
 </head>
 <body>
   <a href="#calc-form" class="sr-only focus:not-sr-only focus:absolute focus:p-2 focus:bg-white focus:z-50">Skip to calculator</a>
@@ -104,165 +102,156 @@
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
     <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <a href="../" class="text-sm text-stone-500 hover:text-stone-900 no-underline" data-i18n="header.back">← Back</a>
+        <a href="../" class="text-sm text-stone-500 hover:text-stone-900 no-underline">← Back</a>
         <a href="../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
         <span id="greeting" class="greeting-text hidden sm:inline" aria-live="polite"></span>
       </div>
-      <div class="lang-toggle" role="group" aria-label="Language toggle">
-        <button onclick="setLang('en')" class="active" data-lang-btn="en" data-i18n="header.lang.en">EN</button>
-        <button onclick="setLang('hi')" data-lang-btn="hi" data-i18n="header.lang.hi">Hing</button>
-      </div>
-    </div>
+</div>
   </header>
 
   <div class="max-w-5xl mx-auto px-4 py-6">
     <div class="two-col">
       <div>
-        <h1 class="text-2xl sm:text-3xl font-bold text-stone-900 mb-1" data-i18n="tax.title">Income Tax Calculator</h1>
-        <p class="text-stone-500 text-sm mb-6" data-i18n="tax.subtitle">FY 2026-27 | Compare Old vs New Regime</p>
+        <h1 class="text-2xl sm:text-3xl font-bold text-stone-900 mb-1">Income Tax Calculator</h1>
+        <p class="text-stone-500 text-sm mb-6">FY 2026-27 | Compare Old vs New Regime</p>
 
         <form id="calc-form" onsubmit="return false" class="space-y-4">
           <div>
-            <div class="section-title" data-i18n="tax.section.income">Income</div>
+            <div class="section-title">Income</div>
             <div class="space-y-3">
               <div>
-                <label for="incomeSalary"><span data-i18n="tax.label.salary">Salary Income (₹)</span> <span class="tooltip-trigger" data-tooltip="Includes basic, HRA, allowances, bonuses, commissions">?</span></label>
+                <label for="incomeSalary"><span>Salary Income (₹)</span> <span class="tooltip-trigger" data-tooltip="Includes basic, HRA, allowances, bonuses, commissions">?</span></label>
                 <input type="text" id="incomeSalary" inputmode="numeric" value="1200000" oninput="calcTax()">
               </div>
               <div>
-                <label for="incomeOther"><span data-i18n="tax.label.other">Other Income (₹)</span> <span class="tooltip-trigger" data-tooltip="Interest from savings accounts, FDs, rental income, freelance income">?</span></label>
+                <label for="incomeOther"><span>Other Income (₹)</span> <span class="tooltip-trigger" data-tooltip="Interest from savings accounts, FDs, rental income, freelance income">?</span></label>
                 <input type="text" id="incomeOther" inputmode="numeric" value="0" oninput="calcTax()">
               </div>
               <div>
-                <label for="incomeBusiness" data-i18n="tax.label.business">Business Income (₹)</label>
+                <label for="incomeBusiness">Business Income (₹)</label>
                 <input type="text" id="incomeBusiness" inputmode="numeric" value="0" oninput="calcTax()">
               </div>
               <div>
-                <label for="employerNps"><span data-i18n="tax.label.employerNps">Employer NPS 80CCD(2) (₹)</span> <span class="tooltip-trigger" data-tooltip="Employer NPS: new regime up to 14% of basic+DA; old regime up to 10% for non-government employers (14% for government).">?</span></label>
+                <label for="employerNps"><span>Employer NPS 80CCD(2) (₹)</span> <span class="tooltip-trigger" data-tooltip="Employer NPS: new regime up to 14% of basic+DA; old regime up to 10% for non-government employers (14% for government).">?</span></label>
                 <input type="text" id="employerNps" inputmode="numeric" value="0" oninput="calcTax()">
               </div>
               <div>
-                <label for="employerNpsBasicDA" data-i18n="tax.label.employerNpsBasic">Basic + DA for employer NPS</label>
+                <label for="employerNpsBasicDA">Basic + DA for employer NPS</label>
                 <input type="text" id="employerNpsBasicDA" inputmode="numeric" value="0" oninput="calcTax()">
               </div>
               <div>
                 <label class="flex items-center gap-2 cursor-pointer">
                   <input type="checkbox" id="employerIsGovernment" onchange="calcTax()">
-                  <span data-i18n="tax.label.employerGovt">Government employer</span>
+                  <span>Government employer</span>
                 </label>
               </div>
               <div>
-                <label for="ltcg" data-i18n="tax.label.ltcg">LTCG (₹)</label>
+                <label for="ltcg">LTCG (₹)</label>
                 <input type="text" id="ltcg" inputmode="numeric" value="0" oninput="calcTax()">
               </div>
               <div>
-                <label for="stcg" data-i18n="tax.label.stcg">STCG (₹)</label>
+                <label for="stcg">STCG (₹)</label>
                 <input type="text" id="stcg" inputmode="numeric" value="0" oninput="calcTax()">
               </div>
               <div>
-                <label for="age" data-i18n="tax.label.age">Your Age</label>
+                <label for="age">Your Age</label>
                 <input type="text" id="age" inputmode="numeric" value="30" oninput="calcTax()">
               </div>
             </div>
           </div>
 
           <div>
-            <div class="section-title" data-i18n="tax.section.regime">Select Regime</div>
+            <div class="section-title">Select Regime</div>
             <div class="flex flex-wrap gap-x-4 gap-y-2">
               <label class="flex items-center gap-2 cursor-pointer">
                 <input type="radio" name="regime" value="new" checked onchange="calcTax()">
-                <span data-i18n="tax.label.regime.new">New Regime (default)</span>
+                <span>New Regime (default)</span>
               </label>
               <label class="flex items-center gap-2 cursor-pointer">
                 <input type="radio" name="regime" value="old" onchange="calcTax()">
-                <span data-i18n="tax.label.regime.old">Old Regime</span>
+                <span>Old Regime</span>
               </label>
             </div>
           </div>
 
           <div id="oldDeductions" class="space-y-3" style="display:none">
-            <div class="section-title" data-i18n="tax.section.deductions">Deductions (Old Regime)</div>
+            <div class="section-title">Deductions (Old Regime)</div>
             <div>
-              <label for="deductions80C"><span data-i18n="tax.label.deductions80c">80C Investments (₹)</span> <span class="tooltip-trigger" data-tooltip="PPF, EPF, ELSS, NSC, life insurance premiums, tuition fees — max ₹1.5L">?</span></label>
+              <label for="deductions80C"><span>80C Investments (₹)</span> <span class="tooltip-trigger" data-tooltip="PPF, EPF, ELSS, NSC, life insurance premiums, tuition fees — max ₹1.5L">?</span></label>
               <input type="text" id="deductions80C" inputmode="numeric" value="0" oninput="calcTax()">
             </div>
             <div>
-              <label for="deductions80D"><span data-i18n="tax.label.deductions80d">80D Health Insurance (₹)</span> <span class="tooltip-trigger" data-tooltip="Health insurance premiums for self, family, parents. Max ₹25K (self), ₹50K (senior parents)">?</span></label>
+              <label for="deductions80D"><span>80D Health Insurance (₹)</span> <span class="tooltip-trigger" data-tooltip="Health insurance premiums for self, family, parents. Max ₹25K (self), ₹50K (senior parents)">?</span></label>
               <input type="text" id="deductions80D" inputmode="numeric" value="0" oninput="calcTax()">
             </div>
             <div>
-              <label for="deductions80CCD" data-i18n="tax.label.deductions80ccd">80CCD(1B) NPS (₹)</label>
+              <label for="deductions80CCD">80CCD(1B) NPS (₹)</label>
               <input type="text" id="deductions80CCD" inputmode="numeric" value="0" oninput="calcTax()">
             </div>
             <div>
-              <label for="homeLoanInterest" data-i18n="tax.label.homeLoan">Home Loan Interest (₹)</label>
+              <label for="homeLoanInterest">Home Loan Interest (₹)</label>
               <input type="text" id="homeLoanInterest" inputmode="numeric" value="0" oninput="calcTax()">
             </div>
             <div>
-              <div class="section-title" data-i18n="tax.hra.title">HRA Details</div>
-              <button type="button" class="btn btn-outline btn-sm w-full" onclick="toggleHRA(this)" data-i18n="tax.hra.show">Show HRA</button>
+              <div class="section-title">HRA Details</div>
+              <button type="button" id="hraToggle" class="btn btn-outline btn-sm w-full" onclick="toggleHRA(this)">Show HRA</button>
               <div id="hraSection" style="display:none" class="space-y-3 mt-3">
                 <div>
-                  <label for="hraActual" data-i18n="tax.label.hraActual">HRA Received (₹)</label>
+                  <label for="hraActual">HRA Received (₹)</label>
                   <input type="text" id="hraActual" inputmode="numeric" value="0" oninput="calcTax()">
                 </div>
                 <div>
-                  <label for="hraRent" data-i18n="tax.label.hraRent">Rent Paid (₹)</label>
+                  <label for="hraRent">Rent Paid (₹)</label>
                   <input type="text" id="hraRent" inputmode="numeric" value="0" oninput="calcTax()">
                 </div>
                 <div>
-                  <label for="hraBasic" data-i18n="tax.label.hraBasic">Basic Salary (₹)</label>
+                  <label for="hraBasic">Basic Salary (₹)</label>
                   <input type="text" id="hraBasic" inputmode="numeric" value="0" oninput="calcTax()">
                 </div>
                 <div>
-                  <label for="hraDA" data-i18n="tax.label.hraDA">Dearness Allowance (₹)</label>
+                  <label for="hraDA">Dearness Allowance (₹)</label>
                   <input type="text" id="hraDA" inputmode="numeric" value="0" oninput="calcTax()">
                 </div>
                 <label class="flex items-center gap-2 cursor-pointer">
                   <input type="checkbox" id="hraMetro" onchange="calcTax()">
-                  <span data-i18n="tax.label.hraMetro">Metro City</span>
+                  <span>Metro City</span>
                 </label>
               </div>
             </div>
           </div>
 
           <div class="flex gap-2 pt-2">
-            <button type="button" class="btn btn-outline flex-1" onclick="resetForm()" data-i18n="common.reset">Reset</button>
+            <button type="button" class="btn btn-outline flex-1" onclick="resetForm()">Reset</button>
           </div>
         </form>
       </div>
 
       <div>
-        <ins class="adsbygoogle ad-slot-sidebar-top mb-4" style="display:block;min-height:250px" data-ad-client="ca-pub-2207525036040634" data-ad-slot="2724762457" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>if (!isEmbedMode()) { (adsbygoogle = window.adsbygoogle || []).push({}); }</script>
-
-        <div class="flex gap-2 mb-3">
-          <button class="btn btn-outline btn-sm flex-1" onclick="shareUrl()" data-i18n="common.share">Share</button>
-          <button class="btn btn-outline btn-sm flex-1" onclick="copyUrl()" data-i18n="common.copy">Copy Link</button>
-          <a class="btn btn-outline btn-sm flex-1 no-underline" href="/embed"><i class="embed-icon" aria-hidden="true">&lt;/&gt;</i><span data-i18n="embed.link">Embed</span></a>
+<div class="flex gap-2 mb-3">
+          <button class="btn btn-outline btn-sm flex-1" onclick="shareUrl()">Share</button>
+          <button class="btn btn-outline btn-sm flex-1" onclick="copyUrl()">Copy Link</button>
+          <a class="btn btn-outline btn-sm flex-1 no-underline" href="/embed"><i class="embed-icon" aria-hidden="true">&lt;/&gt;</i><span>Embed</span></a>
         </div>
-        <h2 class="text-base font-bold mb-2" data-i18n="common.result">Result</h2>
+        <h2 class="text-base font-bold mb-2">Result</h2>
         <div id="resultBox" class="result-card fade-in" aria-live="polite">
           <div id="rComparison" class="mb-3 p-2 bg-amber-50 rounded text-sm text-center font-medium" style="display:none"></div>
           <div id="rRecommend" class="mb-3 p-2 bg-emerald-50 rounded text-sm text-center font-medium" style="display:none"></div>
-          <div class="result-row"><span class="result-label" data-i18n="tax.result.gross">Gross Total Income</span><span class="result-value" id="rGross">₹0</span></div>
-          <div class="result-row"><span class="result-label" data-i18n="tax.result.sd">Standard Deduction</span><span class="result-value" id="rSD">₹0</span></div>
-          <div class="result-row"><span class="result-label" data-i18n="tax.result.net">Net Taxable Income</span><span class="result-value" id="rNetTaxable">₹0</span></div>
-          <div class="result-row"><span class="result-label" data-i18n="tax.result.deductions">Deductions</span><span class="result-value" id="rDeductions">₹0</span></div>
-          <div class="result-row"><span class="result-label" data-i18n="tax.result.tax">Tax Before Rebate</span><span class="result-value" id="rTax">₹0</span></div>
-          <div class="result-row"><span class="result-label" data-i18n="tax.result.stcgTax">Equity STCG Tax (20%)</span><span class="result-value" id="rStcgTax">₹0</span></div>
-          <div class="result-row"><span class="result-label" data-i18n="tax.result.ltcgTax">Equity LTCG Tax (12.5%)</span><span class="result-value" id="rLtcgTax">₹0</span></div>
-          <div class="result-row"><span class="result-label" data-i18n="tax.result.rebate">87A Rebate</span><span class="result-value" id="rRebate">₹0</span></div>
-          <div class="result-row"><span class="result-label" data-i18n="tax.result.marginalRelief">Marginal Relief</span><span class="result-value" id="rMarginalRelief">₹0</span></div>
-          <div class="result-row"><span class="result-label" data-i18n="tax.result.surcharge">Surcharge</span><span class="result-value" id="rSurcharge">₹0</span></div>
-          <div class="result-row"><span class="result-label" data-i18n="tax.result.cess">Health & Education Cess</span><span class="result-value" id="rCess">₹0</span></div>
-          <div class="result-row total"><span class="result-label" data-i18n="tax.result.total">Total Tax Payable</span><span class="result-value" id="rTotalTax">₹0</span></div>
-          <div class="result-row"><span class="result-label" data-i18n="tax.result.effective">Effective Tax Rate</span><span class="result-value" id="rEffective">0.00%</span></div>
+          <div class="result-row"><span class="result-label">Gross Total Income</span><span class="result-value" id="rGross">₹0</span></div>
+          <div class="result-row"><span class="result-label">Standard Deduction</span><span class="result-value" id="rSD">₹0</span></div>
+          <div class="result-row"><span class="result-label">Net Taxable Income</span><span class="result-value" id="rNetTaxable">₹0</span></div>
+          <div class="result-row"><span class="result-label">Deductions</span><span class="result-value" id="rDeductions">₹0</span></div>
+          <div class="result-row"><span class="result-label">Tax Before Rebate</span><span class="result-value" id="rTax">₹0</span></div>
+          <div class="result-row"><span class="result-label">Equity STCG Tax (20%)</span><span class="result-value" id="rStcgTax">₹0</span></div>
+          <div class="result-row"><span class="result-label">Equity LTCG Tax (12.5%)</span><span class="result-value" id="rLtcgTax">₹0</span></div>
+          <div class="result-row"><span class="result-label">87A Rebate</span><span class="result-value" id="rRebate">₹0</span></div>
+          <div class="result-row"><span class="result-label">Marginal Relief</span><span class="result-value" id="rMarginalRelief">₹0</span></div>
+          <div class="result-row"><span class="result-label">Surcharge</span><span class="result-value" id="rSurcharge">₹0</span></div>
+          <div class="result-row"><span class="result-label">Health & Education Cess</span><span class="result-value" id="rCess">₹0</span></div>
+          <div class="result-row total"><span class="result-label">Total Tax Payable</span><span class="result-value" id="rTotalTax">₹0</span></div>
+          <div class="result-row"><span class="result-label">Effective Tax Rate</span><span class="result-value" id="rEffective">0.00%</span></div>
         </div>
 
-        <ins class="adsbygoogle ad-slot-in-content mt-4" style="display:block;min-height:90px" data-ad-client="ca-pub-2207525036040634" data-ad-slot="4037844123" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>if (!isEmbedMode()) { (adsbygoogle = window.adsbygoogle || []).push({}); }</script>
-      </div>
+</div>
     </div>
 
     <section class="mt-10" data-embed-hide>
@@ -296,32 +285,33 @@
     </section>
 
     <section class="mt-10 max-w-2xl" data-embed-hide>
-      <h2 class="text-lg font-bold mb-3" data-i18n="tax.faq.title">FAQs</h2>
+      <h2 class="text-lg font-bold mb-3">FAQs</h2>
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)"><span data-i18n="tax.faq.q1">What income is tax-free in new regime?</span><span class="faq-icon">+</span></button>
-        <div class="faq-answer" data-i18n="tax.faq.a1">Under new regime, no tax up to ₹12L net taxable income due to 87A rebate and ₹75K standard deduction. Effective tax-free salary: up to ₹12.75L. This excludes special-rate capital gains (equity STCG/LTCG), which remain taxable.</div>
+        <button class="faq-question" onclick="toggleFaq(this)"><span>What income is tax-free in new regime?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Under new regime, no tax up to ₹12L net taxable income due to 87A rebate and ₹75K standard deduction. Effective tax-free salary: up to ₹12.75L. This excludes special-rate capital gains (equity STCG/LTCG), which remain taxable.</div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)"><span data-i18n="tax.faq.q2">Is old regime better with home loan?</span><span class="faq-icon">+</span></button>
-        <div class="faq-answer" data-i18n="tax.faq.a2">Old regime allows up to ₹2L home loan interest deduction under Section 24(b). If you pay significant interest, old regime may be better.</div>
+        <button class="faq-question" onclick="toggleFaq(this)"><span>Is old regime better with home loan?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Old regime allows up to ₹2L home loan interest deduction under Section 24(b). If you pay significant interest, old regime may be better.</div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)"><span data-i18n="tax.faq.q3">How is 87A rebate calculated?</span><span class="faq-icon">+</span></button>
-        <div class="faq-answer" data-i18n="tax.faq.a3">87A rebate reduces tax to zero if net taxable income ≤ ₹12L (new regime) or ≤ ₹5L (old regime). Max rebate: ₹60K (new) / ₹12.5K (old). The rebate applies only against tax on slab-rate income; it cannot reduce tax on equity STCG/LTCG.</div>
+        <button class="faq-question" onclick="toggleFaq(this)"><span>How is 87A rebate calculated?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer">87A rebate reduces tax to zero if net taxable income ≤ ₹12L (new regime) or ≤ ₹5L (old regime). Max rebate: ₹60K (new) / ₹12.5K (old). The rebate applies only against tax on slab-rate income; it cannot reduce tax on equity STCG/LTCG.</div>
       </div>
     </section>
   </div>
 
-  <ins class="adsbygoogle ad-slot-footer mb-4" style="display:block;min-height:90px" data-ad-client="ca-pub-2207525036040634" data-ad-slot="4037844123" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>if (!isEmbedMode()) { (adsbygoogle = window.adsbygoogle || []).push({}); }</script>
-
-  <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
+<footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
     <div class="max-w-5xl mx-auto px-4 flex justify-center gap-x-6 gap-y-2 flex-wrap">
-      <a href="../about" data-i18n="footer.about">About</a>
-      <a href="../privacy" data-i18n="footer.privacy">Privacy</a>
-      <a href="../contact" data-i18n="footer.contact">Contact</a>
+      <a href="../about">About</a>
+      <a href="../privacy">Privacy</a>
+      <a href="../contact">Contact</a>
     </div>
-  </footer>
+    <div class="footer-trust">
+      <a href="/methodology">Methodology</a>
+      <a href="/editorial-policy">Editorial Policy</a>
+    </div>
+</footer>
 
   <div id="toast" class="toast"></div>
   <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
@@ -336,7 +326,6 @@
       var isHidden = section.style.display === 'none';
       section.style.display = isHidden ? 'block' : 'none';
       btn.innerText = isHidden ? 'Hide HRA' : 'Show HRA';
-      btn.setAttribute('data-i18n', isHidden ? 'tax.hra.hide' : 'tax.hra.show');
     }
 
     function calcTax() {
@@ -388,45 +377,31 @@
 
       var cmp = document.getElementById('rComparison');
       var diff = resultNew.totalTax - resultOld.totalTax;
-      var rNew = t('tax.result.regime.new'), rOld = t('tax.result.regime.old');
+      var rNew = "New Regime", rOld = "Old Regime";
       if (diff > 0) {
-        cmp.innerHTML = rNew + ': <strong>' + formatINR(resultNew.totalTax) + '</strong> | ' + rOld + ': <strong>' + formatINR(resultOld.totalTax) + '</strong> | ' + rOld + ' ' + t('tax.result.save') + ' <strong>' + formatINR(diff) + '</strong>';
+        cmp.innerHTML = rNew + ': <strong>' + formatINR(resultNew.totalTax) + '</strong> | ' + rOld + ': <strong>' + formatINR(resultOld.totalTax) + '</strong> | ' + rOld + ' ' + "You Save" + ' <strong>' + formatINR(diff) + '</strong>';
         cmp.style.display = 'block';
       } else if (diff < 0) {
-        cmp.innerHTML = rNew + ': <strong>' + formatINR(resultNew.totalTax) + '</strong> | ' + rOld + ': <strong>' + formatINR(resultOld.totalTax) + '</strong> | ' + rNew + ' ' + t('tax.result.save') + ' <strong>' + formatINR(Math.abs(diff)) + '</strong>';
+        cmp.innerHTML = rNew + ': <strong>' + formatINR(resultNew.totalTax) + '</strong> | ' + rOld + ': <strong>' + formatINR(resultOld.totalTax) + '</strong> | ' + rNew + ' ' + "You Save" + ' <strong>' + formatINR(Math.abs(diff)) + '</strong>';
         cmp.style.display = 'block';
       } else {
         cmp.style.display = 'none';
       }
       var recommend = document.getElementById('rRecommend');
       if (recommend) {
-        if (diff > 0) recommend.innerHTML = '🏆 ' + t('tax.result.recommend') + ': ' + rOld;
-        else if (diff < 0) recommend.innerHTML = '🏆 ' + t('tax.result.recommend') + ': ' + rNew;
+        if (diff > 0) recommend.innerHTML = '🏆 ' + "Recommended" + ': ' + rOld;
+        else if (diff < 0) recommend.innerHTML = '🏆 ' + "Recommended" + ': ' + rNew;
         else recommend.style.display = 'none';
       }
 
       staggerReveal('resultBox');
       syncUrlParams({ ...inputs, regime: regime });
       saveLastInputs('incometax', inputs);
-    }
-
-    initLang();
-    initScrollReveal();
+    }    initScrollReveal();
     initTooltips();
     initOnboarding();
     initGreeting();
     initBackToTop();
-    document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        document.querySelectorAll('[data-lang-btn]').forEach(function(b) { b.classList.remove('active'); });
-        this.classList.add('active');
-      });
-    });
-    onLangChange(function() {
-      document.querySelectorAll('[data-lang-btn]').forEach(function(b) {
-        b.classList.toggle('active', b.getAttribute('data-lang-btn') === getLang());
-      });
-    });
     function resetForm() {
       document.getElementById('incomeSalary').value = '1200000';
       document.getElementById('incomeOther').value = '0';
@@ -449,14 +424,14 @@
       document.getElementById('hraMetro').checked = false;
       document.getElementById('hraSection').style.display = 'none';
       document.getElementById('oldDeductions').style.display = 'none';
-      document.querySelector('[data-i18n="tax.hra.show"]').innerText = t('tax.hra.show');
+      document.getElementById('hraToggle').innerText = 'Show HRA';
       calcTax();
     }
     applyUrlParams();
     initEmbedMode();
     var urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has('hraActual') || urlParams.has('hraRent')) {
-      toggleHRA(document.querySelector('[data-i18n="tax.hra.show"]'));
+      toggleHRA(document.getElementById('hraToggle'));
     }
     calcTax();
   </script>

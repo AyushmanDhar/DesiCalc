@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-lang="en">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,8 +14,8 @@
   <meta name="apple-mobile-web-app-title" content="DesiCalc" />
   <link rel="manifest" href="/site.webmanifest" />
   <link rel="canonical" href="https://desicalc.in/embed" />
-  <meta property="og:title" content="Embed DesiCalc Calculators on Your Site">
-  <meta property="og:description" content="Embed free Indian tax and finance calculators on your website with a single line of iframe code. No signup, no API key.">
+  <meta property="og:title" content="Embed DesiCalc Calculators on Your Site — DesiCalc">
+  <meta property="og:description" content="Embed free Indian tax and finance calculators (income tax, stamp duty, RTO tax, HRA, GST) on your website with a single line of iframe code. No signup, no API key.">
   <meta property="og:url" content="https://desicalc.in/embed">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://desicalc.in/assets/img/og-tax-calculator.png">
@@ -58,11 +58,9 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <script src="./assets/js/common.js"></script>
   <script src="./assets/js/calc-core.js"></script>
-  <script src="./assets/js/lang-en.js"></script>
-  <script src="./assets/js/ad.js"></script>
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2207525036040634"
-     crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","url":"https://desicalc.in/embed","dateModified":"2026-10-30"}
+  </script>
 </head>
 <body>
   <a href="#embed-tools" class="sr-only focus:not-sr-only focus:absolute focus:p-2 focus:bg-white focus:z-50">Skip to embed builder</a>
@@ -70,72 +68,67 @@
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
     <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <a href="./" class="text-sm text-stone-500 hover:text-stone-900 no-underline" data-i18n="header.back">← Back</a>
+        <a href="./" class="text-sm text-stone-500 hover:text-stone-900 no-underline">← Back</a>
         <a href="./" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
         <span id="greeting" class="greeting-text hidden sm:inline" aria-live="polite"></span>
       </div>
-      <div class="lang-toggle" role="group" aria-label="Language toggle">
-        <button onclick="setLang('en')" class="active" data-lang-btn="en" data-i18n="header.lang.en">EN</button>
-        <button onclick="setLang('hi')" data-lang-btn="hi" data-i18n="header.lang.hi">Hing</button>
-      </div>
-    </div>
+</div>
   </header>
 
   <div class="max-w-5xl mx-auto px-4 py-6">
-    <h1 class="text-2xl sm:text-3xl font-bold text-stone-900 mb-1" data-i18n="embed.title">Embed DesiCalc Calculators on Your Site</h1>
-    <p class="text-stone-500 text-sm mb-6" data-i18n="embed.subtitle">Add free Indian tax and finance calculators to your website with a single line of code. No signup, no API key, no ads in the embed.</p>
+    <h1 class="text-2xl sm:text-3xl font-bold text-stone-900 mb-1">Embed DesiCalc Calculators on Your Site</h1>
+    <p class="text-stone-500 text-sm mb-6">Add free Indian tax and finance calculators to your website with a single line of code. No signup, no API key, no ads in the embed.</p>
 
     <div id="embed-tools" class="card mb-6">
-      <h2 class="text-base font-bold mb-3" data-i18n="embed.toolLabel">Choose a calculator</h2>
+      <h2 class="text-base font-bold mb-3">Choose a calculator</h2>
       <div class="flex flex-wrap gap-x-4 gap-y-2 mb-4">
         <label class="flex items-center gap-2 cursor-pointer">
           <input type="radio" name="embedTool" value="income-tax" checked onchange="buildEmbed()">
-          <span data-i18n="home.tax.title">Income Tax Calculator</span>
+          <span>Income Tax Calculator</span>
         </label>
         <label class="flex items-center gap-2 cursor-pointer">
           <input type="radio" name="embedTool" value="stamp-duty" onchange="buildEmbed()">
-          <span data-i18n="home.stamp.title">Stamp Duty Calculator</span>
+          <span>Stamp Duty Calculator</span>
         </label>
         <label class="flex items-center gap-2 cursor-pointer">
           <input type="radio" name="embedTool" value="rto-tax" onchange="buildEmbed()">
-          <span data-i18n="home.rto.title">RTO Tax Calculator</span>
+          <span>RTO Tax Calculator</span>
         </label>
         <label class="flex items-center gap-2 cursor-pointer">
           <input type="radio" name="embedTool" value="hra" onchange="buildEmbed()">
-          <span data-i18n="hra.h1">HRA Exemption Calculator FY 2026-27</span>
+          <span>HRA Exemption Calculator FY 2026-27</span>
         </label>
         <label class="flex items-center gap-2 cursor-pointer">
           <input type="radio" name="embedTool" value="gst" onchange="buildEmbed()">
-          <span data-i18n="gst.h1">GST Calculator</span>
+          <span>GST Calculator</span>
         </label>
       </div>
       <div id="stateWrap" style="display:none">
-        <label for="embedState" data-i18n="embed.stateLabel">Select state</label>
+        <label for="embedState">Select state</label>
         <select id="embedState" onchange="buildEmbed()"></select>
       </div>
     </div>
 
-    <h2 class="text-base font-bold mb-2" data-i18n="embed.previewLabel">Live preview</h2>
+    <h2 class="text-base font-bold mb-2">Live preview</h2>
     <iframe id="previewFrame" title="DesiCalc calculator preview" style="width:100%;height:1000px;border:1px solid #E7E5E4;border-radius:8px;background:#fff;" loading="lazy"></iframe>
 
     <div class="card mt-6">
       <div class="flex items-center justify-between gap-2 mb-3">
-        <h2 class="text-base font-bold" data-i18n="embed.snippetLabel">Copy-paste embed code</h2>
-        <button type="button" class="btn btn-outline btn-sm" onclick="copySnippet()" data-i18n="embed.copyButton">Copy Code</button>
+        <h2 class="text-base font-bold">Copy-paste embed code</h2>
+        <button type="button" class="btn btn-outline btn-sm" onclick="copySnippet()">Copy Code</button>
       </div>
       <textarea id="snippetBox" readonly rows="3" class="font-mono text-xs bg-stone-50" style="width:100%;padding:0.75rem;border:1px solid #E7E5E4;border-radius:0.5rem;background:#FAFAF9;color:#1C1917;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:0.75rem;resize:vertical;"></textarea>
       <p class="text-xs text-stone-400 mt-2">Paste this anywhere in your page where you want the calculator to appear. The embed works on any site — no signup or API key needed.</p>
     </div>
   </div>
 
-  <ins class="adsbygoogle ad-slot-footer mb-4" style="display:block;min-height:90px" data-ad-client="ca-pub-2207525036040634" data-ad-slot="4037844123" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>if (!isEmbedMode()) { (adsbygoogle = window.adsbygoogle || []).push({}); }</script>
-
-  <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
+<footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
     <div class="max-w-5xl mx-auto px-4 flex justify-center gap-x-6 gap-y-2 flex-wrap">
-      <a href="about" data-i18n="footer.about">About</a>
-      <a href="privacy" data-i18n="footer.privacy">Privacy</a>
-      <a href="contact" data-i18n="footer.contact">Contact</a>
+      <a href="/methodology">Methodology</a>
+      <a href="/editorial-policy">Editorial Policy</a>
+      <a href="about">About</a>
+      <a href="privacy">Privacy</a>
+      <a href="contact">Contact</a>
     </div>
   </footer>
 
@@ -172,7 +165,7 @@
     function copySnippet() {
       var text = document.getElementById('snippetBox').value;
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(text).then(function () { showToast(t('embed.copied')); }).catch(function () { copySnippetFallback(text); });
+        navigator.clipboard.writeText(text).then(function () { showToast("Code copied!"); }).catch(function () { copySnippetFallback(text); });
       } else {
         copySnippetFallback(text);
       }
@@ -182,27 +175,14 @@
       var ta = document.createElement('textarea');
       ta.value = text; ta.style.position = 'fixed'; ta.style.left = '-9999px';
       document.body.appendChild(ta); ta.select();
-      try { document.execCommand('copy'); showToast(t('embed.copied')); } catch (e) {}
+      try { document.execCommand('copy'); showToast("Code copied!"); } catch (e) {}
       document.body.removeChild(ta);
     }
-
-    initLang();
     initScrollReveal();
     initTooltips();
     initOnboarding();
     initGreeting();
     initBackToTop();
-    document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        document.querySelectorAll('[data-lang-btn]').forEach(function(b) { b.classList.remove('active'); });
-        this.classList.add('active');
-      });
-    });
-    onLangChange(function() {
-      document.querySelectorAll('[data-lang-btn]').forEach(function(b) {
-        b.classList.toggle('active', b.getAttribute('data-lang-btn') === getLang());
-      });
-    });
     populateEmbedStates();
     buildEmbed();
   </script>
