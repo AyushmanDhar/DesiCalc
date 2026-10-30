@@ -81,7 +81,7 @@ ${STATES.map((state, i) => `      { "@type": "ListItem", "position": ${i + 1}, "
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
     <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <a href="../../../" class="text-sm text-stone-500 hover:text-stone-900 no-underline" data-i18n="header.back">\u2190 Back</a>
+        <a href="../../../" class="text-sm text-stone-500 hover:text-stone-900 no-underline">\u2190 Back</a>
         <a href="../../../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
       </div>
     </div>

@@ -1,11 +1,9 @@
-const CACHE_STATIC = 'desicalc-static-v4'
-const CACHE_PAGES = 'desicalc-pages-v4'
+const CACHE_STATIC = 'desicalc-static-v5'
+const CACHE_PAGES = 'desicalc-pages-v5'
 
 const STATIC_ASSETS = [
   '/assets/css/style.css',
   '/assets/js/calc-core.js',
-  '/assets/js/lang-en.js',
-  '/assets/js/lang-hi.js',
   '/assets/js/slabs-2026.js',
   '/assets/js/state-rates.js',
   '/assets/img/og-home.png',

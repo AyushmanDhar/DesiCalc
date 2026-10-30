@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-lang="en">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,86 +34,69 @@
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
     <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <a href="./" class="text-sm text-stone-500 hover:text-stone-900 no-underline" data-i18n="header.back">← Back</a>
+        <a href="./" class="text-sm text-stone-500 hover:text-stone-900 no-underline">← Back</a>
         <a href="./" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
         <span id="greeting" class="greeting-text hidden sm:inline" aria-live="polite"></span>
       </div>
-      <div class="lang-toggle" role="group" aria-label="Language toggle">
-        <button onclick="setLang('en')" class="active" data-lang-btn="en">EN</button>
-        <button onclick="setLang('hi')" data-lang-btn="hi">Hing</button>
-      </div>
-    </div>
+</div>
   </header>
 
   <main id="main-content" class="max-w-3xl mx-auto px-4 py-12">
-    <h1 class="text-3xl font-bold text-stone-900 mb-6" data-i18n="privacy.title">Privacy Policy</h1>
+    <h1 class="text-3xl font-bold text-stone-900 mb-6">Privacy Policy</h1>
 
     <div class="prose prose-stone max-w-none">
-      <p class="text-stone-600 leading-relaxed mb-6" data-i18n="privacy.desc">
+      <p class="text-stone-600 leading-relaxed mb-6">
         DesiCalc is designed with privacy first. All calculators run entirely in your browser — no data is sent to any server.
       </p>
 
-      <h2 class="text-xl font-bold text-stone-900 mt-8 mb-3" data-i18n="privacy.collect.title">What We Collect</h2>
-      <p class="text-stone-600 leading-relaxed" data-i18n="privacy.collect.desc">
+      <h2 class="text-xl font-bold text-stone-900 mt-8 mb-3">What We Collect</h2>
+      <p class="text-stone-600 leading-relaxed">
         <strong>Nothing.</strong> We do not collect, store, or transmit any personal information. All calculation inputs (property value, income, vehicle price, etc.) remain on your device and are never sent to our servers.
       </p>
 
-      <h2 class="text-xl font-bold text-stone-900 mt-8 mb-3" data-i18n="privacy.storage.title">Local Storage</h2>
-      <p class="text-stone-600 leading-relaxed" data-i18n="privacy.storage.desc">
-        We use your browser's local storage solely to remember your language preference (English/Hinglish) and the last calculator inputs you entered, so you don't have to re-enter them on your next visit. This data never leaves your browser.
+      <h2 class="text-xl font-bold text-stone-900 mt-8 mb-3">Local Storage</h2>
+      <p class="text-stone-600 leading-relaxed">
+        We use your browser's local storage solely to remember the last calculator inputs you entered, so you don't have to re-enter them on your next visit. This data never leaves your browser.
       </p>
 
-      <h2 class="text-xl font-bold text-stone-900 mt-8 mb-3" data-i18n="privacy.thirdparty.title">Third-Party Services</h2>
-      <p class="text-stone-600 leading-relaxed" data-i18n="privacy.thirdparty.desc1">
+      <h2 class="text-xl font-bold text-stone-900 mt-8 mb-3">Third-Party Services</h2>
+      <p class="text-stone-600 leading-relaxed">
         DesiCalc does not display advertisements and does not use advertising or tracking cookies. No ad networks, remarketing pixels, or data brokers are used on this site.
       </p>
-      <p class="text-stone-600 leading-relaxed mt-3" data-i18n="privacy.thirdparty.desc2">
+      <p class="text-stone-600 leading-relaxed mt-3">
         The site is hosted on Cloudflare Pages and all CSS and JavaScript are self-hosted. Cloudflare may process standard request data such as IP address and browser agent to deliver the site and protect it from abuse.
       </p>
 
-      <h2 class="text-xl font-bold text-stone-900 mt-8 mb-3" data-i18n="privacy.analytics.title">Analytics</h2>
-      <p class="text-stone-600 leading-relaxed" data-i18n="privacy.analytics.desc">
+      <h2 class="text-xl font-bold text-stone-900 mt-8 mb-3">Analytics</h2>
+      <p class="text-stone-600 leading-relaxed">
         We use Cloudflare Web Analytics, a cookieless analytics service that reports aggregate page views and performance data. It does not set cookies, fingerprint visitors, or track individuals across sites.
       </p>
 
-      <h2 class="text-xl font-bold text-stone-900 mt-8 mb-3" data-i18n="privacy.contact.title">Contact</h2>
-      <p class="text-stone-600 leading-relaxed" data-i18n="privacy.contact.desc">
+      <h2 class="text-xl font-bold text-stone-900 mt-8 mb-3">Contact</h2>
+      <p class="text-stone-600 leading-relaxed">
         Reach us at <a href="https://desicalc.in/contact" class="text-amber-600 underline hover:text-amber-700">desicalc.in/contact</a> or email <a href="mailto:desicalc@gmail.com" class="text-amber-600 underline hover:text-amber-700">desicalc@gmail.com</a>.
       </p>
 
-      <p class="text-stone-400 text-sm mt-10" data-i18n="privacy.updated"><em>Last updated: 30 October 2026</em></p>
+      <p class="text-stone-400 text-sm mt-10"><em>Last updated: 30 October 2026</em></p>
     </div>
   </main>
 
   <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
     <div class="max-w-5xl mx-auto px-4 flex justify-center gap-x-6 gap-y-2 flex-wrap">
-      <a href="/methodology" data-i18n="footer.methodology">Methodology</a>
-      <a href="/editorial-policy" data-i18n="footer.editorial">Editorial Policy</a>
-      <a href="about" data-i18n="footer.about">About</a>
-      <a href="privacy" class="text-amber-600" data-i18n="footer.privacy">Privacy</a>
-      <a href="contact" data-i18n="footer.contact">Contact</a>
+      <a href="/methodology">Methodology</a>
+      <a href="/editorial-policy">Editorial Policy</a>
+      <a href="about">About</a>
+      <a href="privacy" class="text-amber-600">Privacy</a>
+      <a href="contact">Contact</a>
     </div>
   </footer>
 
   <div id="toast" class="toast"></div>
   <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
 
-  <script>
-    initLang();
-    initScrollReveal();
+  <script>    initScrollReveal();
     initGreeting();
     initBackToTop();
-    document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        document.querySelectorAll('[data-lang-btn]').forEach(function(b) { b.classList.remove('active'); });
-        this.classList.add('active');
-      });
-    });
-    onLangChange(function() {
-      document.querySelectorAll('[data-lang-btn]').forEach(function(b) {
-        b.classList.toggle('active', b.getAttribute('data-lang-btn') === getLang());
-      });
-    });
   </script>
 </body>
 </html>

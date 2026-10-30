@@ -4,8 +4,8 @@ const path = require('path');
 const PUBLIC = path.join(__dirname, '..', 'public');
 
 const TRUST_LINKS = {
-  methodology: '<a href="/methodology" data-i18n="footer.methodology">Methodology</a>',
-  editorial: '<a href="/editorial-policy" data-i18n="footer.editorial">Editorial Policy</a>',
+  methodology: '<a href="/methodology">Methodology</a>',
+  editorial: '<a href="/editorial-policy">Editorial Policy</a>',
 };
 
 function walk(dir, out = []) {

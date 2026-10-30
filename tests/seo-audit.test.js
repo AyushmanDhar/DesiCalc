@@ -373,6 +373,28 @@ for (const page of pages) {
   checkTrue(`${rel(page)} links style.css`, /href="[^"]*assets\/css\/style\.css"/.test(html));
 }
 
+const i18nTokens = ['data-i18n', 'lang-toggle', 'setLang', 'initLang', 'onLangChange', 'lang-hi.js', 'lang-en.js', 'DESICALC_LANG'];
+for (const page of pages) {
+  const html = read(page);
+  for (const token of i18nTokens) {
+    checkTrue(`${rel(page)} no i18n token ${token}`, !html.includes(token));
+  }
+}
+checkTrue('lang-en.js removed', !fs.existsSync(path.join(PUBLIC, 'assets', 'js', 'lang-en.js')));
+checkTrue('lang-hi.js removed', !fs.existsSync(path.join(PUBLIC, 'assets', 'js', 'lang-hi.js')));
+
+for (const page of pages) {
+  const html = read(page);
+  const scripts = [...html.matchAll(/<script(?![^>]*\bsrc=)(?![^>]*application\/ld\+json)[^>]*>([\s\S]*?)<\/script>/gi)];
+  for (const [index, match] of scripts.entries()) {
+    try {
+      new Function(match[1]);
+    } catch (error) {
+      checkTrue(`${rel(page)} inline script ${index + 1} parses`, false, error.message);
+    }
+  }
+}
+
 if (failed) {
   console.error(failures.join('\n'));
   console.error(`\n${failed} failed, ${passed} passed`);

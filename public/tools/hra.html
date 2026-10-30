@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-lang="en">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -115,8 +115,7 @@
   <link rel="stylesheet" href="../assets/css/style.css">
   <script src="../assets/js/common.js"></script>
   <script src="../assets/js/calc-core.js"></script>
-  <script src="../assets/js/lang-en.js"></script>
-  <script type="application/ld+json">
+<script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebPage","url":"https://desicalc.in/tools/hra","dateModified":"2026-10-30"}
   </script>
 </head>
@@ -126,22 +125,18 @@
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
     <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <a href="../" class="text-sm text-stone-500 hover:text-stone-900 no-underline" data-i18n="header.back">← Back</a>
+        <a href="../" class="text-sm text-stone-500 hover:text-stone-900 no-underline">← Back</a>
         <a href="../" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
         <span id="greeting" class="greeting-text hidden sm:inline" aria-live="polite"></span>
       </div>
-      <div class="lang-toggle" role="group" aria-label="Language toggle">
-        <button onclick="setLang('en')" class="active" data-lang-btn="en">EN</button>
-        <button onclick="setLang('hi')" data-lang-btn="hi">Hing</button>
-      </div>
-    </div>
+</div>
   </header>
 
   <div class="max-w-5xl mx-auto px-4 py-6">
     <div class="two-col">
       <div>
-        <h1 class="text-2xl sm:text-3xl font-bold text-stone-900 mb-1" data-i18n="hra.h1">HRA Exemption Calculator FY 2026-27</h1>
-        <p class="text-stone-500 text-sm mb-6" data-i18n="hra.subtitle">Calculate tax-free HRA under Section 10(13A). Metro/non-metro rules applied automatically.</p>
+        <h1 class="text-2xl sm:text-3xl font-bold text-stone-900 mb-1">HRA Exemption Calculator FY 2026-27</h1>
+        <p class="text-stone-500 text-sm mb-6">Calculate tax-free HRA under Section 10(13A). Metro/non-metro rules applied automatically.</p>
         <p class="text-sm text-stone-500">Last updated 30 October 2026 · Reviewed by DesiCalc Editorial Team</p>
 
         <div class="bg-amber-50 border-l-4 border-amber-500 p-3 mb-4 text-sm text-stone-700 rounded-r">
@@ -150,58 +145,58 @@
 
         <form id="calc-form" onsubmit="return false" class="space-y-4">
           <div>
-            <label for="fy" data-i18n="hra.label.fy">Financial Year</label>
+            <label for="fy">Financial Year</label>
             <select id="fy" onchange="calcHRA()">
               <option value="2025-26">FY 2025-26</option>
               <option value="2026-27" selected>FY 2026-27</option>
             </select>
           </div>
           <div>
-            <label for="basicSalary" data-i18n="hra.label.basic">Basic Salary (₹/month)</label>
+            <label for="basicSalary">Basic Salary (₹/month)</label>
             <input type="text" id="basicSalary" inputmode="numeric" value="50000" oninput="calcHRA()">
           </div>
           <div>
-            <label for="dearnessAllowance"><span data-i18n="hra.label.da">Dearness Allowance / DA (₹/month)</span> <span class="text-stone-400 text-xs" data-i18n="hra.label.da.optional">(optional)</span></label>
+            <label for="dearnessAllowance"><span>Dearness Allowance / DA (₹/month)</span> <span class="text-stone-400 text-xs">(optional)</span></label>
             <input type="text" id="dearnessAllowance" inputmode="numeric" value="0" oninput="calcHRA()">
           </div>
           <div>
-            <label for="hraReceived" data-i18n="hra.label.hra">HRA Received from Employer (₹/month)</label>
+            <label for="hraReceived">HRA Received from Employer (₹/month)</label>
             <input type="text" id="hraReceived" inputmode="numeric" value="20000" oninput="calcHRA()">
           </div>
           <div>
-            <label for="rentPaid" data-i18n="hra.label.rent">Actual Rent Paid (₹/month)</label>
+            <label for="rentPaid">Actual Rent Paid (₹/month)</label>
             <input type="text" id="rentPaid" inputmode="numeric" value="18000" oninput="calcHRA()">
           </div>
           <div>
-            <label for="cityType" data-i18n="hra.label.city">City Type</label>
+            <label for="cityType">City Type</label>
             <select id="cityType" onchange="calcHRA()">
-              <option value="nonmetro" data-i18n="hra.city.nonmetro">Non-Metro</option>
-              <option value="metro" data-i18n="hra.city.metro">Metro (Mumbai, Delhi, Kolkata, Chennai)</option>
+              <option value="nonmetro">Non-Metro</option>
+              <option value="metro">Metro (Mumbai, Delhi, Kolkata, Chennai)</option>
             </select>
           </div>
 
           <div class="bg-blue-50 border-l-4 border-blue-400 p-3 text-sm text-stone-700 rounded-r">
-            <strong>Metro cities only:</strong> <span data-i18n="hra.note.metro">Mumbai, Delhi, Kolkata, Chennai. Bengaluru, Hyderabad, Pune are not metro under the Income Tax Act.</span>
+            <strong>Metro cities only:</strong> <span>Mumbai, Delhi, Kolkata, Chennai. Bengaluru, Hyderabad, Pune are not metro under the Income Tax Act.</span>
           </div>
 
           <div class="flex gap-2 pt-2">
-            <button type="button" class="btn btn-outline flex-1" onclick="resetForm()" data-i18n="common.reset">Reset</button>
+            <button type="button" class="btn btn-outline flex-1" onclick="resetForm()">Reset</button>
           </div>
         </form>
       </div>
 
       <div>
 <div class="flex gap-2 mb-3">
-          <button class="btn btn-outline btn-sm flex-1" onclick="shareUrl()" data-i18n="common.share">Share</button>
-          <button class="btn btn-outline btn-sm flex-1" onclick="copyUrl()" data-i18n="common.copy">Copy Link</button>
+          <button class="btn btn-outline btn-sm flex-1" onclick="shareUrl()">Share</button>
+          <button class="btn btn-outline btn-sm flex-1" onclick="copyUrl()">Copy Link</button>
         </div>
-        <h2 class="text-base font-bold mb-2" data-i18n="common.result">Result</h2>
+        <h2 class="text-base font-bold mb-2">Result</h2>
         <div id="resultBox" class="result-card fade-in" aria-live="polite">
-          <div class="result-row"><span class="result-label" data-i18n="hra.result.cond1">Condition 1: HRA Received (Annual)</span><span class="result-value" id="rCond1">₹0</span></div>
-          <div class="result-row"><span class="result-label" data-i18n="hra.result.cond2">Condition 2: Rent Paid − 10% of (Basic+DA)</span><span class="result-value" id="rCond2">₹0</span></div>
+          <div class="result-row"><span class="result-label">Condition 1: HRA Received (Annual)</span><span class="result-value" id="rCond1">₹0</span></div>
+          <div class="result-row"><span class="result-label">Condition 2: Rent Paid − 10% of (Basic+DA)</span><span class="result-value" id="rCond2">₹0</span></div>
           <div class="result-row"><span class="result-label">Condition 3: <span id="rCond3Label">40%</span> of (Basic+DA)</span><span class="result-value" id="rCond3">₹0</span></div>
-          <div class="result-row total" id="rExemptionRow"><span class="result-label"><span data-i18n="hra.result.exemption">HRA Exemption</span> <span class="text-xs font-normal text-stone-400" data-i18n="hra.result.exemption.hint">(minimum of above)</span></span><span class="result-value" id="rExemption">₹0</span></div>
-          <div class="result-row"><span class="result-label" data-i18n="hra.result.taxable">Taxable HRA</span><span class="result-value" id="rTaxable">₹0</span></div>
+          <div class="result-row total" id="rExemptionRow"><span class="result-label"><span>HRA Exemption</span> <span class="text-xs font-normal text-stone-400">(minimum of above)</span></span><span class="result-value" id="rExemption">₹0</span></div>
+          <div class="result-row"><span class="result-label">Taxable HRA</span><span class="result-value" id="rTaxable">₹0</span></div>
         </div>
 
         <div class="bg-red-50 border-l-4 border-red-400 p-3 mt-3 text-sm text-stone-700 rounded-r">
@@ -291,7 +286,7 @@
     </article>
 
     <section class="mt-10">
-      <h2 class="text-lg font-bold mb-3" data-i18n="hra.related.title">Related Pages</h2>
+      <h2 class="text-lg font-bold mb-3">Related Pages</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="../tools/income-tax" class="card text-sm hover:shadow-md transition-shadow no-underline">
           <span class="font-semibold text-stone-900">Income Tax Calculator</span>
@@ -320,13 +315,13 @@
 
 <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
     <div class="max-w-5xl mx-auto px-4 flex justify-center gap-x-6 gap-y-2 flex-wrap">
-      <a href="../about" data-i18n="footer.about">About</a>
-      <a href="../privacy" data-i18n="footer.privacy">Privacy</a>
-      <a href="../contact" data-i18n="footer.contact">Contact</a>
+      <a href="../about">About</a>
+      <a href="../privacy">Privacy</a>
+      <a href="../contact">Contact</a>
     </div>
     <div class="footer-trust">
-      <a href="/methodology" data-i18n="footer.methodology">Methodology</a>
-      <a href="/editorial-policy" data-i18n="footer.editorial">Editorial Policy</a>
+      <a href="/methodology">Methodology</a>
+      <a href="/editorial-policy">Editorial Policy</a>
     </div>
 </footer>
 
@@ -398,24 +393,11 @@
       document.getElementById('fy').value = '2026-27';
       calcHRA();
     }
-
-    initLang();
     initScrollReveal();
     initTooltips();
     initOnboarding();
     initGreeting();
     initBackToTop();
-    document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        document.querySelectorAll('[data-lang-btn]').forEach(function(b) { b.classList.remove('active'); });
-        this.classList.add('active');
-      });
-    });
-    onLangChange(function() {
-      document.querySelectorAll('[data-lang-btn]').forEach(function(b) {
-        b.classList.toggle('active', b.getAttribute('data-lang-btn') === getLang());
-      });
-    });
     applyUrlParams();
     calcHRA();
   </script>

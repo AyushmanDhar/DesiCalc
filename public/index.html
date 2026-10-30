@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-lang="en">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,8 +46,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/common.js"></script>
   <script src="assets/js/calc-core.js"></script>
-  <script src="assets/js/lang-en.js"></script>
-  <script type="application/ld+json">
+<script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebPage","url":"https://desicalc.in/","dateModified":"2026-10-30"}
   </script>
   <script type="application/ld+json">
@@ -61,11 +60,7 @@
     <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
       <a href="/" class="text-xl font-bold no-underline"><span class="text-stone-900">Desi</span><span class="text-amber-600">Calc</span></a>
       <span id="greeting" class="greeting-text hidden sm:inline ml-2" aria-live="polite"></span>
-      <div class="lang-toggle" role="group" aria-label="Language toggle">
-        <button onclick="setLang('en')" class="active" data-lang-btn="en" data-i18n="header.lang.en">EN</button>
-        <button onclick="setLang('hi')" data-lang-btn="hi" data-i18n="header.lang.hi">Hing</button>
-      </div>
-    </div>
+</div>
   </header>
 
   <main id="main-content" class="max-w-5xl mx-auto px-4 py-8">
@@ -83,33 +78,33 @@
     <section class="tool-grid mb-12 scroll-entrance">
       <div class="tool-card text-center">
         <div class="text-4xl mb-3" aria-hidden="true">💰</div>
-        <h2 class="text-lg font-bold mb-1" data-i18n="home.tax.title">Income Tax Calculator</h2>
-        <p class="text-sm text-stone-500 mb-4" data-i18n="home.tax.desc">FY 2026-27 — Old vs New regime</p>
-        <a href="tools/income-tax" class="btn btn-primary" data-i18n="home.cta">Calculate Now</a>
+        <h2 class="text-lg font-bold mb-1">Income Tax Calculator</h2>
+        <p class="text-sm text-stone-500 mb-4">FY 2026-27 — Old vs New regime</p>
+        <a href="tools/income-tax" class="btn btn-primary">Calculate Now</a>
       </div>
       <div class="tool-card text-center">
         <div class="text-4xl mb-3" aria-hidden="true">🏠</div>
-        <h2 class="text-lg font-bold mb-1" data-i18n="home.stamp.title">Stamp Duty Calculator</h2>
-        <p class="text-sm text-stone-500 mb-4" data-i18n="home.stamp.desc">28 states + Delhi</p>
-        <a href="tools/stamp-duty" class="btn btn-primary" data-i18n="home.cta">Calculate Now</a>
+        <h2 class="text-lg font-bold mb-1">Stamp Duty Calculator</h2>
+        <p class="text-sm text-stone-500 mb-4">28 states + Delhi</p>
+        <a href="tools/stamp-duty" class="btn btn-primary">Calculate Now</a>
       </div>
       <div class="tool-card text-center">
         <div class="text-4xl mb-3" aria-hidden="true">🚗</div>
-        <h2 class="text-lg font-bold mb-1" data-i18n="home.rto.title">RTO Tax Calculator</h2>
-        <p class="text-sm text-stone-500 mb-4" data-i18n="home.rto.desc">All states, all vehicle types</p>
-        <a href="tools/rto-tax" class="btn btn-primary" data-i18n="home.cta">Calculate Now</a>
+        <h2 class="text-lg font-bold mb-1">RTO Tax Calculator</h2>
+        <p class="text-sm text-stone-500 mb-4">All states, all vehicle types</p>
+        <a href="tools/rto-tax" class="btn btn-primary">Calculate Now</a>
       </div>
       <div class="tool-card text-center">
         <div class="text-4xl mb-3" aria-hidden="true">🏢</div>
         <h2 class="text-lg font-bold mb-1">HRA Exemption Calculator</h2>
         <p class="text-sm text-stone-500 mb-4">Section 10(13A) — Metro/Non-Metro</p>
-        <a href="tools/hra" class="btn btn-primary" data-i18n="home.cta">Calculate Now</a>
+        <a href="tools/hra" class="btn btn-primary">Calculate Now</a>
       </div>
       <div class="tool-card text-center">
         <div class="text-4xl mb-3" aria-hidden="true">🧾</div>
         <h2 class="text-lg font-bold mb-1">GST Calculator</h2>
         <p class="text-sm text-stone-500 mb-4">2026 rates — Regular & Composition Scheme</p>
-        <a href="tools/gst" class="btn btn-primary" data-i18n="home.cta">Calculate Now</a>
+        <a href="tools/gst" class="btn btn-primary">Calculate Now</a>
       </div>
     </section>
 
@@ -209,7 +204,7 @@
     </section>
 
     <section class="mb-12 scroll-entrance">
-      <h2 class="text-xl font-bold mb-4 text-center" data-i18n="home.resources.title">Guides and comparisons</h2>
+      <h2 class="text-xl font-bold mb-4 text-center">Guides and comparisons</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <a href="comparisons/old-vs-new-tax-regime" class="card text-center hover:shadow-md transition-shadow no-underline">
           <div class="font-semibold text-stone-900">Old vs New Tax Regime</div>
@@ -241,42 +236,29 @@
     </section>
 
     <section class="text-center mb-12 scroll-entrance">
-      <button class="btn btn-outline" onclick="shareUrl()" data-i18n="common.share">Share DesiCalc</button>
+      <button class="btn btn-outline" onclick="shareUrl()">Share DesiCalc</button>
     </section>
   </main>
 
 <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
     <div class="max-w-5xl mx-auto px-4 flex justify-center gap-x-6 gap-y-2 flex-wrap">
-      <a href="/methodology" data-i18n="footer.methodology">Methodology</a>
-      <a href="/editorial-policy" data-i18n="footer.editorial">Editorial Policy</a>
+      <a href="/methodology">Methodology</a>
+      <a href="/editorial-policy">Editorial Policy</a>
       <a href="/rate-tracker">Rate Tracker</a>
-      <a href="about" data-i18n="footer.about">About</a>
-      <a href="privacy" data-i18n="footer.privacy">Privacy</a>
-      <a href="contact" data-i18n="footer.contact">Contact</a>
+      <a href="about">About</a>
+      <a href="privacy">Privacy</a>
+      <a href="contact">Contact</a>
     </div>
   </footer>
 
   <div id="toast" class="toast"></div>
   <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
 
-  <script>
-    initLang();
-    initScrollReveal();
+  <script>    initScrollReveal();
     initTooltips();
     initOnboarding();
     initGreeting();
     initBackToTop();
-    document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        document.querySelectorAll('[data-lang-btn]').forEach(function(b) { b.classList.remove('active'); });
-        this.classList.add('active');
-      });
-    });
-    onLangChange(function() {
-      document.querySelectorAll('[data-lang-btn]').forEach(function(b) {
-        b.classList.toggle('active', b.getAttribute('data-lang-btn') === getLang());
-      });
-    });
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js');
     }

@@ -183,18 +183,6 @@ Save to localStorage (throttled 2s)
 
 - **No "Calculate" button for most fields** — results update live. BUT on mobile, due to virtual keyboard occlusion, add a prominent "Calculate" button for first calculation. After that, live.
 
-### Language Toggle UX
-
-```
-[EN] [●HI]
-
-On tap:
-  1. Show brief overlay "Switch to Hinglish?"
-  2. On confirm → swap data-i18n attributes
-  3. Persist choice in localStorage
-  4. Announce change with toast "अब हिंग्लिश में"
-```
-
 ### Input components
 
 | Component | Usage | Behavior |
@@ -224,7 +212,6 @@ On tap:
 |-------|-----------|----------|
 | Input changed | Result card slide-up + opacity | 200ms ease |
 | Regime switch | Cross-fade results card | 250ms ease |
-| Language toggle | Toast "Language changed" slide-down | 3s display |
 | Copy/share URL | `✨ Copied!` toast with pop-in bounce + sparkle prefix | 2.5s |
 | Ad load | Placeholder skeleton | Instant no-CLS container |
 | New visitor | Brief tooltip "Try typing your salary" | 5s delay, auto-dismiss |

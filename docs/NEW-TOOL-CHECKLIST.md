@@ -8,11 +8,11 @@ Pick these upfront — they're referenced everywhere:
 
 | Property | Example | Convention |
 |----------|---------|------------|
-| **Tool key** | `gst` | Short snake_case, used in i18n, ad slots, localStorage |
+| **Tool key** | `gst` | Short snake_case identifier used in localStorage |
 | **Tool slug** | `gst-calculator` | kebab-case URL path under `/tools/` |
 | **Tool name** | `GST Calculator` | Human-readable, used in titles & headings |
 | **OG image name** | `og-gst-calculator.png` | Must match Open Graph meta tag |
-| **Has state pages?** | yes/no | If yes, step 4 adds ~60 files |
+| **Has state pages?** | yes/no | If yes, the state-page step adds ~60 files |
 | **Neighbors concept?** | yes/no | Only if state pages reference neighboring states |
 
 ## Step 1: Central data & constants
@@ -23,32 +23,15 @@ Pick these upfront — they're referenced everywhere:
 - [ ] **`public/assets/js/calc-core.js`** — Add `calcGst()` function with full calculation logic
 - [ ] **`public/assets/js/ad.js`** — Add ad slots: `sidebar_top_gst` and `in_content_gst` to `AD_TAGS` and `PAGE_SLOTS`; add `gst-calculator` to `getPageKey()`
 
-## Step 2: i18n strings
-
-Add translations in both files with key prefix `gst.*`:
-
-| Key pattern | Purpose | Count |
-|-------------|---------|-------|
-| `gst.title` | Page title + H1 | 1 |
-| `gst.subtitle` | Subtitle paragraph | 1 |
-| `gst.label.*` | Form field labels | per-field |
-| `gst.result.*` | Result row labels | per-row |
-| `gst.faq.title` | FAQ section heading | 1 |
-| `gst.faq.q1..q3` | FAQ questions | 3 |
-| `gst.faq.a1..a3` | FAQ answers | 3 |
-
-- [ ] **`public/assets/js/lang-en.js`** — Add all English translations
-- [ ] **`public/assets/js/lang-hi.js`** — Add all Hindi/Hinglish translations
-
-## Step 3: Tool HTML page
+## Step 2: Tool HTML page
 
 - [ ] **`public/tools/gst-calculator.html`** — Create tool page following this skeleton:
 
   ```
-  DOCTYPE html<html lang="en" data-lang="en">
+  DOCTYPE html<html lang="en">
   <head>
     Meta charset + viewport
-    i18n title + meta description
+    Static English title + meta description
     Favicons (4x link tags + apple-mobile-web-app-title + manifest)
     Canonical + hreflang (en + x-default)
     Open Graph (title, description, url, image: 1200x630 png, twitter:card)
@@ -56,11 +39,11 @@ Add translations in both files with key prefix `gst.*`:
     JSON-LD: FAQPage (3 Q&A)
     JSON-LD: BreadcrumbList (Home / Tool)
     CSS: tailwind.css, style.css
-    JS: common.js, calc-core.js, lang-en.js, ad.js  (+ state-rates.js / slabs-*.js if needed)
+    JS: common.js, calc-core.js, ad.js  (+ state-rates.js / slabs-*.js if needed)
   </head>
   <body>
     Skip link → #calc-form
-    Sticky header (Back link + logo + greeting + lang toggle)
+    Sticky header (Back link + logo + greeting)
     Two-column layout:
       LEFT: H1 + subtitle + form (label + input pairs, reset button)
       RIGHT: ad sidebar_top_gst + share/copy buttons + result card (staggerReveal) + ad in_content_gst
@@ -74,7 +57,7 @@ Add translations in both files with key prefix `gst.*`:
       calcGst() to gather inputs → call shared calc → setText results
       populateStates() if dropdown
       resetForm()
-      initLang(), initScrollReveal(), initTooltips(), initOnboarding(), initGreeting(), initBackToTop()
+      initScrollReveal(), initTooltips(), initOnboarding(), initGreeting(), initBackToTop()
       applyUrlParams(), then calcGst()
   </body>
   ```
@@ -83,15 +66,14 @@ Add translations in both files with key prefix `gst.*`:
   - `type="text" inputmode="numeric"` for numbers
   - `<select>` for enums (state, type, etc.)
   - IDs: camelCase like `gstRate`, `invoiceValue`
-  - Labels wrapped in `<span data-i18n="gst.label.{field}">` with optional `?` tooltip
+  - Labels wrapped in `<span>` with optional `?` tooltip
 
   **Result card conventions:**
   - IDs: prefix `r` + PascalCase — `rTotal`, `rGstAmount`
   - Classes: `result-row`, `result-row total` for the total row
-  - `data-i18n="gst.result.{field}"` on labels
   - Use `staggerReveal('resultBox')` to animate
 
-## Step 4: State-level static pages (if applicable)
+## Step 3: State-level static pages (if applicable)
 
 State pages are now **static, standalone HTML files** — no generator dependency.
 
@@ -100,35 +82,34 @@ State pages are now **static, standalone HTML files** — no generator dependenc
 - [ ] Copy structure from an existing stamp-duty state page, swap in GST-specific content
 - [ ] Each page is fully independent — edit any state without affecting others
 
-## Step 5: Homepage & navigation
+## Step 4: Homepage & navigation
 
 - [ ] **`public/index.html`** — Add tool card to `.tool-grid` (icon, name, description, Calculate link)
-- [ ] **`public/index.html`** — Add `home.gst.*` i18n keys inline or via lang files
 
-## Step 6: Sitemap, discovery & headers
+## Step 5: Sitemap, discovery & headers
 
 - [ ] **`public/sitemap.xml`** — Add `<url>` entries: tool page + state-level pages + guides/comparisons
 - [ ] **`public/_headers`** — Append `</tools/gst-calculator>; rel="service-doc"; type="text/html"` to the `Link:` header
 - [ ] **`api-config.js`** — Already added in Step 1; run `npm run generate-discovery` to regenerate `api-catalog` + `agent-card.json`
 - [ ] **`public/sw.js`** — Add new asset paths to `STATIC_ASSETS` array (OG image, new JS files, etc.)
 
-## Step 7: Assets
+## Step 6: Assets
 
 - [ ] **`public/assets/img/og-gst-calculator.png`** — Create OG image, 1200×630px PNG
 
-## Step 8: Optional pages (if applicable)
+## Step 7: Optional pages (if applicable)
 
 - [ ] `public/comparisons/gst-comparison.html` — Comparison article
 - [ ] `public/guides/how-to-calculate-gst.html` — Guide article
 - [ ] `public/openapi/gst-calculator.json` — OpenAPI 3.1 spec for the API
 
-## Step 9: Smoke test
+## Step 8: Smoke test
 
 - [ ] Run `npm run generate-discovery` — verify no errors
 - [ ] Open a few state pages in browser — content renders, links work
 - [ ] Validate `public/sitemap.xml` — all new URLs present
 - [ ] Validate `public/_headers` — Link header includes new tool
-- [ ] Open tool page in browser — form renders, calculation works, i18n toggle works
+- [ ] Open tool page in browser — form renders, calculation works, layout renders
 - [ ] Share/copy URL round-trips correctly (URL params → form state)
 - [ ] Check no console errors
 
@@ -139,8 +120,6 @@ State pages are now **static, standalone HTML files** — no generator dependenc
 | File | Action |
 |------|--------|
 | `api-config.js` | Add API entry |
-| `public/assets/js/lang-en.js` | Add `gst.*` keys |
-| `public/assets/js/lang-hi.js` | Add `gst.*` keys |
 | `public/assets/js/calc-core.js` | Add `calcGst()` function |
 | `public/assets/js/ad.js` | Add ad slots + page key |
 | `public/tools/gst-calculator.html` | **Create** main tool page |

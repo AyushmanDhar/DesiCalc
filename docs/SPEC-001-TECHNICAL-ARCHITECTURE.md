@@ -51,8 +51,6 @@ desicalc/
 │   │       ├── calc-core.js     # Shared helpers: formatINR, clamp, debounce
 │   │       ├── slabs-2026.js    # Tax slabs, rebates, cess rates
 │   │       ├── state-rates.js   # 28-state stamp duty + RTO rate table
-│   │       └── lang-en.js       # English UI strings
-│   │       └── lang-hi.js       # Hinglish UI strings
 │   ├── sw.js                     # PWA offline cache (service worker)
 │   ├── site.webmanifest          # Web app manifest (PWA)
 │   ├── sitemap.xml               # Full site XML sitemap
@@ -113,30 +111,6 @@ Each tool is a self-contained HTML file. State is managed via:
 
 URL pattern: `desicalc.in/tools/income-tax?regime=new&income=1200000&age=30`
 → On page load, parse params. If absent, check localStorage. If absent, use defaults.
-
----
-
-## Language Toggle Mechanism
-
-```
-English ↔ Hinglish
-     │
-     ▼
-Switch `data-lang` attribute on `<html>`:
-  <html data-lang="en"> ...
-  <html data-lang="hi"> ...
-     │
-     ▼
-JS reads all elements with `data-i18n="key"`:
-  <label data-i18n="tax.label.income">Income (₹)</label>
-     │
-     ▼
-Lookup key in lang-{en,hi}.js → replace innerText
-```
-
-- No i18n library. Plain object lookup: `strings[key]`
-- ~300 keys total for 3 tools. ~50 shared, ~250 tool-specific
-- Toggle persists to localStorage (`desicalc_lang`)
 
 ---
 
