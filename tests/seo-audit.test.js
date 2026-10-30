@@ -183,6 +183,22 @@ for (const page of pages) {
 checkTrue('sitemap no hreflang hi', !/hreflang="hi"/i.test(sitemap));
 check(`sitemap URL count`, locs.length, pages.length);
 
+for (const trust of ['methodology', 'editorial-policy']) {
+  const file = path.join(PUBLIC, `${trust}.html`);
+  checkTrue(`${trust}.html exists`, fs.existsSync(file));
+  if (fs.existsSync(file)) {
+    const html = read(file);
+    checkTrue(`${trust} min words`, wordCount(html) >= 400, `${wordCount(html)} words`);
+    check(`${trust} h1`, h1Count(html), 1);
+  }
+}
+
+for (const page of pages) {
+  const html = read(page);
+  checkTrue(`${rel(page)} footer methodology link`, /href="\/methodology"/.test(html));
+  checkTrue(`${rel(page)} footer editorial link`, /href="\/editorial-policy"/.test(html));
+}
+
 if (failed) {
   console.error(failures.join('\n'));
   console.error(`\n${failed} failed, ${passed} passed`);

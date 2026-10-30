@@ -43,6 +43,13 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://desicalc.in/editorial-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://desicalc.in/editorial-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://desicalc.in/editorial-policy" />
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://desicalc.in/guides/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://desicalc.in/guides/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://desicalc.in/guides/" />
@@ -95,6 +102,13 @@
     <loc>https://desicalc.in/guides/section-87a-rebate-explained</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://desicalc.in/guides/section-87a-rebate-explained" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://desicalc.in/guides/section-87a-rebate-explained" />
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://desicalc.in/methodology</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://desicalc.in/methodology" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://desicalc.in/methodology" />
     <lastmod>2026-10-30</lastmod>
     <priority>0.8</priority>
   </url>
