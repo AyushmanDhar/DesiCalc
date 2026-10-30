@@ -59,10 +59,10 @@ function initGreeting() {
   var el = document.getElementById('greeting');
   if (!el) return;
   var h = new Date().getHours();
-  var text = h >= 5 && h < 12 ? 'Good morning'
-    : h >= 12 && h < 17 ? 'Good afternoon'
-    : h >= 17 && h < 21 ? 'Good evening'
-    : 'Good night';
+  var text = h >= 5 && h < 12 ? '🌅 Good morning'
+    : h >= 12 && h < 17 ? '☀️ Good afternoon'
+    : h >= 17 && h < 21 ? '🌅 Good evening'
+    : '🌙 Good night';
   el.textContent = text;
 }
 
