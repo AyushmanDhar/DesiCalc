@@ -133,6 +133,15 @@ state-data.js                     # Legacy state reference data (no longer used 
 | Custom CSS | `public/assets/css/style.css` | Overrides, ad spacing |
 | Tailwind source | `src/tailwind.css` | CSS input (build → `assets/css/tailwind.css`) |
 
+### SEO and content standards
+
+- Run `npm test` before every content commit. It includes `tests/seo-audit.test.js`.
+- Titles ≤ 60 characters, meta descriptions ≤ 155, one h1 per page.
+- Every rate claim needs an official source link.
+- Byline is `DesiCalc Editorial Team`; no personal names.
+- After adding or renaming pages, run `node scripts/generate-sitemap.js`.
+- Weekly metrics log: `docs/seo/weekly-log.md`.
+
 ### SEO Patterns
 
 Each HTML page follows a consistent SEO template:

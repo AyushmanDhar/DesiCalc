@@ -83,3 +83,4 @@ Contributions welcome! Open an issue or submit a PR.
 - Add translations in `public/assets/js/lang-en.js` / `lang-hi.js`
 - Calculator logic lives in `public/assets/js/calc-core.js`
 - State-specific pages are under `public/stamp-duty/` and `public/rto-tax/`
+- SEO measurement docs live in `docs/seo/`: `weekly-log.md` for weekly metrics and `outreach.md` for the link outreach tracker
