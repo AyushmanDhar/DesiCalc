@@ -367,6 +367,12 @@ if (fs.existsSync(trackerFile)) {
 }
 checkTrue('CSV exists', fs.existsSync(path.join(PUBLIC, 'assets', 'data', 'rates-2026.csv')));
 
+for (const page of pages) {
+  const html = read(page);
+  checkTrue(`${rel(page)} links tailwind.css`, /href="[^"]*assets\/css\/tailwind\.css"/.test(html));
+  checkTrue(`${rel(page)} links style.css`, /href="[^"]*assets\/css\/style\.css"/.test(html));
+}
+
 if (failed) {
   console.error(failures.join('\n'));
   console.error(`\n${failed} failed, ${passed} passed`);
