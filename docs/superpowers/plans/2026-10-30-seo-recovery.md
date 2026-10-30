@@ -546,20 +546,20 @@ Apply the Tier 1 values below exactly. For every other page, shorten the existin
 | `tools/hra.html` | `HRA Exemption Calculator FY 2026-27 — Section 10(13A)` | `Calculate your HRA exemption under Section 10(13A) for metro and non-metro cities, with worked examples and rules.` |
 | `tools/gst.html` | `GST Calculator 2026 — Regular & Composition Scheme` | `Calculate GST for goods and services at 2026 rates. Regular and composition schemes, inclusive and exclusive amounts.` |
 | `rto-tax/haryana.html` | `Haryana Road Tax Calculator 2026 — Car, Bike & EV` | `Haryana road tax rates for 2026: cars 5–10%, bikes 4–8%, EVs exempt up to ₹30 lakh. Tax, registration and HSRP.` |
-| `rto-tax/andhrapradesh.html` | `Andhra Pradesh Road Tax Calculator 2026 — Car & Bike` | `Andhra Pradesh road tax 2026: cars 12–14%, bikes 9–12%, plus safety cess. Life tax, registration and on-road price.` |
+| `rto-tax/andhrapradesh.html` | `Andhra Pradesh Road Tax Calculator 2026 — Car & Bike` | `Andhra Pradesh road tax 2026: cars 12–14% by price, bikes 9%, plus safety cess. Life tax, registration and on-road price.` |
 | `rto-tax/maharashtra.html` | `Maharashtra Road Tax Calculator 2026 — Car & Bike` | `Maharashtra road tax 2026: petrol cars 11–13%, diesel 13–15%, plus 2% road safety cess. Tax and registration charges.` |
-| `rto-tax/tamilnadu.html` | `Tamil Nadu Road Tax Calculator 2026 — Car & EV` | `Tamil Nadu road tax 2026: cars 10–20% by price, bikes 8–12%, EVs exempt. Life tax, registration fee and HSRP.` |
-| `rto-tax/kerala.html` | `Kerala Road Tax Calculator 2026 — Car, Bike & EV` | `Kerala road tax 2026: cars 9–21% by price, bikes 8–12%, EVs 5%. Life tax, registration fee and on-road price.` |
+| `rto-tax/tamilnadu.html` | `Tamil Nadu Road Tax Calculator 2026 — Car & EV` | `Tamil Nadu road tax 2026: cars 12–20% by price, bikes 10–12%, EVs exempt. Life tax, registration fee and HSRP.` |
+| `rto-tax/kerala.html` | `Kerala Road Tax Calculator 2026 — Car, Bike & EV` | `Kerala road tax 2026: cars 10–22% by price, bikes 13–21%, EV concession. Life tax, registration fee and on-road price.` |
 | `rto-tax/himachalpradesh.html` | `Himachal Pradesh Road Tax Calculator 2026` | `Himachal Pradesh road tax 2026 by price slab for cars, bikes and EVs. Calculate life tax, registration fee and HSRP.` |
-| `rto-tax/karnataka.html` | `Karnataka Road Tax Calculator 2026 — Car & Bike` | `Karnataka road tax 2026: cars 10–18% by price, bikes 8–12%, EVs exempt. Life tax, registration fee and HSRP.` |
-| `rto-tax/uttarpradesh.html` | `Uttar Pradesh Road Tax Calculator 2026 — Car & Bike` | `Uttar Pradesh road tax 2026: cars 8–10%, bikes 8%, plus registration. Includes Noida and Ghaziabad charges.` |
-| `rto-tax/delhi.html` | `Delhi Road Tax Calculator 2026 — Car, Bike & EV` | `Delhi road tax 2026: petrol cars 4–10%, diesel 5–12%, EVs exempt. Calculate tax, registration and HSRP charges.` |
-| `rto-tax/punjab.html` | `Punjab Road Tax Calculator 2026 — Car, Bike & EV` | `Punjab road tax 2026: cars 8–13% by price, bikes 7–9%, EVs exempt. Calculate life tax, registration and HSRP.` |
+| `rto-tax/karnataka.html` | `Karnataka Road Tax Calculator 2026 — Car & Bike` | `Karnataka road tax 2026: cars 13–18% by price, bikes 10–18%, EVs 5–10%. Life tax, registration fee and HSRP.` |
+| `rto-tax/uttarpradesh.html` | `Uttar Pradesh Road Tax Calculator 2026 — Car & Bike` | `Uttar Pradesh road tax 2026: cars 9–11%, bikes 7–10%, plus registration. Includes Noida and Ghaziabad charges.` |
+| `rto-tax/delhi.html` | `Delhi Road Tax Calculator 2026 — Car, Bike & EV` | `Delhi road tax 2026: petrol cars 4–10%, diesel 5–12.5%, EVs exempt. Calculate tax, registration and HSRP charges.` |
+| `rto-tax/punjab.html` | `Punjab Road Tax Calculator 2026 — Car, Bike & EV` | `Punjab road tax 2026: cars 9.5–13% by price, bikes 7.5–11%, EVs exempt. Calculate life tax, registration and HSRP.` |
 | `stamp-duty/punjab.html` | `Punjab Stamp Duty Calculator 2026 — Rates & Charges` | `Punjab stamp duty 2026: 7% for men, 5% for women and joint female ownership, 1% registration capped at ₹2 lakh.` |
-| `stamp-duty/maharashtra.html` | `Maharashtra Stamp Duty Calculator 2026 — Rates` | `Maharashtra stamp duty 2026: 5% in Mumbai, 7% in Pune and rest of state, plus metro cess. Total charges.` |
-| `stamp-duty/uttarpradesh.html` | `Uttar Pradesh Stamp Duty Calculator 2026 — Rates` | `Uttar Pradesh stamp duty 2026: 7% for men, 6% for women, 1% registration. Noida and Ghaziabad rates included.` |
+| `stamp-duty/maharashtra.html` | `Maharashtra Stamp Duty Calculator 2026 — Rates` | `Maharashtra stamp duty 2026: 5% Mumbai, 7% Pune, 4% municipal, 3% gram panchayat, plus metro cess. Total charges.` |
+| `stamp-duty/uttarpradesh.html` | `Uttar Pradesh Stamp Duty Calculator 2026 — Rates` | `Uttar Pradesh stamp duty 2026: 7% men, 6% women up to ₹1 crore, 1% registration. Noida and Ghaziabad rates included.` |
 | `stamp-duty/delhi.html` | `Delhi Stamp Duty Calculator 2026 — Circle Rates` | `Delhi stamp duty 2026: 6% for men, 4% for women, plus 1% registration. Circle-rate based calculation for MCD areas.` |
-| `stamp-duty/karnataka.html` | `Karnataka Stamp Duty Calculator 2026 — Rates` | `Karnataka stamp duty 2026: 5% plus surcharge and cess, 1% registration. Calculate total property registration charges.` |
+| `stamp-duty/karnataka.html` | `Karnataka Stamp Duty Calculator 2026 — Rates` | `Karnataka stamp duty 2026: 2–5% by property value, plus 2% registration. Calculate total property registration charges.` |
 
 - [ ] **Step 7: Run tests**
 
@@ -966,7 +966,7 @@ Add at least 600 more words with these sections:
 - [ ] **Step 3: Expand GST page**
 
 Add at least 600 more words with these sections:
-1. `h2 GST rates in 2026` — table of the main slabs (0%, 5%, 12%, 18%, 28%) and typical goods in each.
+1. `h2 GST rates in 2026` — table of the GST 2.0 slabs (0%, 5%, 18%, 40%, plus 3% on gold/silver and 0.25% on rough diamonds) and typical goods in each. Do not use the removed 12% and 28% slabs.
 2. `h2 Inclusive vs exclusive GST` — formulas: exclusive = price × (1 + rate); inclusive = price ÷ (1 + rate).
 3. `h3 Worked example` — ₹10,000 service at 18%: GST ₹1,800, total ₹11,800.
 4. `h2 Composition scheme` — turnover limits, flat rates, and who cannot opt in.
@@ -1048,10 +1048,10 @@ Keep the existing FAQPage JSON-LD, add questions to match the visible FAQ, and k
 
 State-specific facts to verify before writing, from the current page and official sources:
 - Haryana: EV exemption up to ₹30 lakh, CNG 20% rebate, women 1% rebate up to ₹20 lakh.
-- Andhra Pradesh: 12%/14% car slabs and safety cess.
+- Andhra Pradesh: 12%/14% car slabs, bikes flat 9%, and safety cess.
 - Maharashtra: petrol 11–13%, diesel 13–15%, 2% road safety cess.
-- Tamil Nadu: 10–20% car slabs, EV exemption.
-- Kerala: 9–21% car slabs, EV 5%.
+- Tamil Nadu: 12–20% car slabs, bikes 10/12, EV exemption.
+- Kerala: 10–22% car slabs, bikes 13–21, EV concession.
 
 Do not write a fact that is not in the current page or an official source you have opened.
 
@@ -1086,10 +1086,10 @@ Use the Task 10 structure exactly: `h1`, intro, rate table, vehicle-type `h3`s, 
 
 State-specific facts to verify:
 - Himachal Pradesh: price-slab car rates; confirm the current page values.
-- Karnataka: 10–18% car slabs, EV exemption.
-- Uttar Pradesh: 8–10% car rates; include Noida and Ghaziabad registration charges, since those are real search queries.
+- Karnataka: 13–18% car slabs, bikes 10–18, EV 5–10.
+- Uttar Pradesh: 9–11% car rates, bikes 7–10; include Noida and Ghaziabad registration charges, since those are real search queries.
 - Delhi: petrol 4–10%, diesel 5–12%, EV exemption; note Delhi's EPCA and MCD context only if sourced.
-- Punjab: 8–13% car rates, EV exemption.
+- Punjab: 9.5–13% car rates, bikes 7.5–11, EV exemption.
 
 Do not change any rate already verified on the page.
 
@@ -1159,10 +1159,10 @@ Expected: FAIL on word/h3 for these pages.
 
 State facts to verify:
 - Punjab: male 7%, female 5%, joint 5–7%, registration 1% capped at ₹2 lakh.
-- Maharashtra: Mumbai 5%, Pune and rest 7%, metro cess, female concession.
-- Uttar Pradesh: male 7%, female 6%, registration 1%; Noida/Ghaziabad rates.
+- Maharashtra: Mumbai 5%, Pune 7%, municipal 4%, gram panchayat 3%, metro cess, female concession.
+- Uttar Pradesh: male 7%, female 6% up to ₹1 crore, registration 1%; Noida/Ghaziabad rates.
 - Delhi: male 6%, female 4%, registration 1%; circle-rate based.
-- Karnataka: 5% plus surcharge and cess, 1% registration.
+- Karnataka: 2/3/5% slabs by property value, registration 2%.
 
 Keep FAQPage JSON-LD valid and in sync.
 

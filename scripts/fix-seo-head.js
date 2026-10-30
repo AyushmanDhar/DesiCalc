@@ -64,7 +64,7 @@ for (const file of walk(PUBLIC)) {
   if (relPath === 'index.html' && !html.includes('"@type": "Organization"')) {
     const block =
       `  <script type="application/ld+json">\n` +
-      `  {"@context":"https://schema.org","@type": "Organization","name":"DesiCalc","url":"https://desicalc.in","logo":"https://desicalc.in/assets/img/og-home.png","sameAs":["https://github.com/AyushmanDhar/desicalc"]}\n` +
+      `  {"@context":"https://schema.org","@type": "Organization","name":"DesiCalc","url":"https://desicalc.in","logo":"https://desicalc.in/assets/img/og-home.png"}\n` +
       `  </script>\n`;
     html = html.replace(/<\/head>/i, `${block}</head>`);
   }
