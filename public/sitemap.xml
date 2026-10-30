@@ -50,6 +50,13 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://desicalc.in/embed</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://desicalc.in/embed" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://desicalc.in/embed" />
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://desicalc.in/guides/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://desicalc.in/guides/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://desicalc.in/guides/" />
@@ -340,7 +347,7 @@
     <loc>https://desicalc.in/stamp-duty/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://desicalc.in/stamp-duty/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://desicalc.in/stamp-duty/" />
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -438,7 +445,7 @@
     <loc>https://desicalc.in/stamp-duty/madhyapradesh</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://desicalc.in/stamp-duty/madhyapradesh" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://desicalc.in/stamp-duty/madhyapradesh" />
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <priority>0.8</priority>
   </url>
   <url>

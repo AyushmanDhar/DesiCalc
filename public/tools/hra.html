@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#ffffff">
-  <title>HRA Exemption Calculator FY 2026-27 — Section 10(13A)</title>
-  <meta name="description" content="Calculate your HRA exemption under Section 10(13A) for metro and non-metro cities, with worked examples and rules.">
+  <title>HRA Exemption Calculator FY 2026-27 — DesiCalc</title>
+  <meta name="description" content="Calculate HRA tax exemption under Section 10(13A). Metro/non-metro, all three conditions shown. Free, instant, no login. FY 2026-27.">
+  <meta name="author" content="DesiCalc Editorial Team">
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="shortcut icon" href="/favicon.ico" />
@@ -13,10 +14,8 @@
   <meta name="apple-mobile-web-app-title" content="DesiCalc" />
   <link rel="manifest" href="/site.webmanifest" />
   <link rel="canonical" href="https://desicalc.in/tools/hra" />
-  <link rel="alternate" hreflang="en" href="https://desicalc.in/tools/hra" />
-  <link rel="alternate" hreflang="x-default" href="https://desicalc.in/tools/hra" />
-  <meta property="og:title" content="HRA Exemption Calculator FY 2026-27 — Section 10(13A)">
-  <meta property="og:description" content="Calculate your HRA exemption under Section 10(13A) for metro and non-metro cities, with worked examples and rules.">
+  <meta property="og:title" content="HRA Exemption Calculator FY 2026-27 — DesiCalc">
+  <meta property="og:description" content="Calculate HRA tax exemption under Section 10(13A). Metro/non-metro, all three conditions shown. Free, instant, no login. FY 2026-27.">
   <meta property="og:url" content="https://desicalc.in/tools/hra">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://desicalc.in/assets/img/og-hra-calculator.png">
@@ -35,6 +34,7 @@
     "browserRequirements": "JavaScript",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
     "description": "Free HRA Exemption Calculator for India FY 2026-27. Calculate tax-free HRA under Section 10(13A). Three-condition rule with metro/non-metro rates.",
+    "publisher": { "@type": "Organization", "@id": "https://desicalc.in/#organization", "name": "DesiCalc" },
     "featureList": [
       "Section 10(13A) Calculation",
       "Metro & Non-Metro Support",
@@ -54,7 +54,7 @@
         "name": "Which cities are metro for HRA purposes?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Only Delhi, Mumbai, Kolkata and Chennai are metro under Rule 2A. The 50% limit applies only there. Bengaluru, Hyderabad, Pune and every other city use the 40% limit, regardless of living costs."
+          "text": "Only four cities are classified as metro under the Income Tax Act for HRA: Mumbai, Delhi, Kolkata, and Chennai. Bengaluru, Hyderabad, Pune, Ahmedabad, and other cities are treated as non-metro regardless of cost of living. For non-metro cities, the exemption is 40% of basic salary + DA instead of 50%."
         }
       },
       {
@@ -62,7 +62,7 @@
         "name": "Can I claim HRA under the new tax regime?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. Section 10(13A) HRA exemption is available only under the old regime. The new regime allows the ₹75,000 standard deduction and employer NPS under Section 80CCD(2), but not HRA, 80C, 80D or home loan interest."
+          "text": "No. HRA exemption under Section 10(13A) is available only under the Old Tax Regime. If you opt for the New Tax Regime, you cannot claim HRA exemption. However, if you are a salaried employee living in rented accommodation, you may want to evaluate which regime is more beneficial overall."
         }
       },
       {
@@ -70,7 +70,7 @@
         "name": "What if my rent is less than 10% of basic salary?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The third limit, rent paid minus 10% of salary, becomes negative and is treated as zero. In that case no exemption comes from that limit, and the exemption is the lower of the HRA received and the 50% or 40% salary limit."
+          "text": "If the actual rent paid is less than 10% of your basic salary plus dearness allowance, Condition 2 becomes negative. In that case, no exemption is available from Condition 2 — it is treated as ₹0. Your exemption will then be the minimum of the remaining two conditions."
         }
       },
       {
@@ -78,7 +78,7 @@
         "name": "What is Section 80GG and who can claim it?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Section 80GG is for people who pay rent but do not receive HRA. The deduction is the least of ₹5,000 a month (₹60,000 a year), 25% of adjusted total income, and rent paid minus 10% of adjusted total income. Form 10BA is required."
+          "text": "Section 80GG is for individuals who do not receive HRA from their employer but pay rent for accommodation. The deduction is the least of: (a) ₹5,000 per month (₹60,000 per year maximum), (b) 25% of total adjusted income, or (c) actual rent paid minus 10% of total adjusted income. You must file a declaration in Form 10BA. Consult a CA for proper claim."
         }
       },
       {
@@ -86,15 +86,7 @@
         "name": "Do I need rent receipts to claim HRA exemption?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Employers ask for rent receipts showing the landlord's name, address, rent period, amount and signature. When annual rent exceeds ₹1,00,000, the landlord's PAN is also required. Keep the rental agreement and bank payment proof."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can self-employed people claim HRA exemption?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. Section 10(13A) applies only to salaried taxpayers who receive HRA. Self-employed professionals and business owners can instead examine the Section 80GG deduction if they pay rent and meet its conditions."
+          "text": "Yes. If your monthly rent exceeds ₹3,000, you need rent receipts to substantiate your HRA claim. If your annual rent exceeds ₹1,00,000, you also need to provide the landlord's PAN details. Your employer may ask for these documents during proof submission."
         }
       }
     ]
@@ -115,7 +107,7 @@
   <link rel="stylesheet" href="../assets/css/style.css">
   <script src="../assets/js/common.js"></script>
   <script src="../assets/js/calc-core.js"></script>
-<script type="application/ld+json">
+  <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebPage","url":"https://desicalc.in/tools/hra","dateModified":"2026-10-30"}
   </script>
 </head>
@@ -137,7 +129,7 @@
       <div>
         <h1 class="text-2xl sm:text-3xl font-bold text-stone-900 mb-1">HRA Exemption Calculator FY 2026-27</h1>
         <p class="text-stone-500 text-sm mb-6">Calculate tax-free HRA under Section 10(13A). Metro/non-metro rules applied automatically.</p>
-        <p class="text-sm text-stone-500">Last updated 30 October 2026 · Reviewed by DesiCalc Editorial Team</p>
+        <p class="text-sm text-stone-500">Last updated: July 2026</p>
 
         <div class="bg-amber-50 border-l-4 border-amber-500 p-3 mb-4 text-sm text-stone-700 rounded-r">
           <strong>Note:</strong> HRA exemption is available only under the <strong>Old Tax Regime</strong>. Not available under the New Tax Regime.
@@ -189,6 +181,7 @@
 <div class="flex gap-2 mb-3">
           <button class="btn btn-outline btn-sm flex-1" onclick="shareUrl()">Share</button>
           <button class="btn btn-outline btn-sm flex-1" onclick="copyUrl()">Copy Link</button>
+          <a class="btn btn-outline btn-sm flex-1 no-underline" href="/embed"><i class="embed-icon" aria-hidden="true">&lt;/&gt;</i><span>Embed</span></a>
         </div>
         <h2 class="text-base font-bold mb-2">Result</h2>
         <div id="resultBox" class="result-card fade-in" aria-live="polite">
@@ -210,82 +203,45 @@
 </div>
     </div>
 
-    <article class="mt-10 max-w-3xl">
-      <h2 class="text-2xl font-bold text-stone-900 mb-4">How HRA exemption works</h2>
-      <p class="text-stone-600 mb-4">House Rent Allowance (HRA) is part of your salary, but Section 10(13A) of the Income Tax Act lets you exclude the portion that pays for rented accommodation. The exemption is not the full rent and it is not the full HRA. It is the least of three annual amounts:</p>
-      <ol class="list-decimal list-inside space-y-2 text-stone-700 mb-4">
-        <li><strong>Actual HRA received</strong> from your employer for the year.</li>
-        <li><strong>50% of salary in a metro city, or 40% outside a metro city.</strong> For this rule, salary means basic salary plus dearness allowance that forms part of retirement benefits, plus any commission fixed as a percentage of turnover.</li>
-        <li><strong>Actual rent paid minus 10% of salary.</strong> If this figure is negative, it is treated as zero, because a negative limit cannot increase your exemption.</li>
+    <section class="mt-10 max-w-2xl">
+      <h2 class="text-lg font-bold mb-3">How HRA Exemption is Calculated</h2>
+      <p class="text-sm text-stone-600 mb-3">Under Section 10(13A) of the Income Tax Act, HRA exemption is the minimum of three conditions:</p>
+      <ol class="list-decimal list-inside space-y-2 text-sm text-stone-700 mb-4">
+        <li><strong>Condition 1:</strong> Actual HRA received from employer (annual)</li>
+        <li><strong>Condition 2:</strong> Actual rent paid minus 10% of (Basic Salary + Dearness Allowance) — annual (if negative, treated as ₹0)</li>
+        <li><strong>Condition 3:</strong> 50% of (Basic Salary + DA) for metro cities <em>or</em> 40% for non-metro cities — annual</li>
       </ol>
-      <p class="text-stone-600 mb-4">The smallest of the three is your tax-free HRA. The remaining HRA is added to taxable salary. The calculator uses basic salary plus DA as the salary base because that is what most employers report in Part B of Form 16. If HRA is not a separate component of your salary structure, there is nothing to exempt under Section 10(13A).</p>
-      <p class="text-stone-600 mb-4">Dearness allowance counts only when it forms part of retirement benefits; a DA that is fully consolidated and never counts for provident fund or pension is usually excluded by employers. Your salary certificate should show basic, DA, HRA and other allowances separately, because the exemption is worked out on those components and not on gross salary. Enter the monthly basic and DA exactly as they appear in your salary slip so the result matches Form 16.</p>
+      <p class="text-sm text-stone-600">The least of these three amounts is your tax-free HRA exemption. The remaining HRA is added to your taxable income.</p>
 
-      <h3 class="text-xl font-bold text-stone-900 mt-8 mb-3">Metro city definition</h3>
-      <p class="text-stone-600 mb-4">For HRA only four cities count as metro: <strong>Delhi, Mumbai, Kolkata and Chennai</strong>. The 50% limit applies only in these four. Bengaluru, Hyderabad, Pune, Ahmedabad, Gurugram, Noida and every other city fall in the 40% bucket, however high the rent. This comes from Rule 2A of the Income Tax Rules and is unchanged for FY 2026-27. Selecting "Metro" in the calculator for a Bengaluru address would overstate the exemption and is one of the most common filing mistakes.</p>
-
-      <h2 class="text-2xl font-bold text-stone-900 mt-10 mb-4">Worked example: Bengaluru rent of ₹25,000 a month</h2>
-      <p class="text-stone-600 mb-4">Take a non-metro employee in Bengaluru with basic salary of ₹50,000 a month, no DA, HRA of ₹20,000 a month and rent of ₹25,000 a month. For the year, basic salary is ₹6,00,000, HRA received is ₹2,40,000 and rent paid is ₹3,00,000. The three limits are:</p>
-      <table class="w-full border-collapse mb-6 text-sm">
-        <thead>
-          <tr class="bg-stone-100">
-            <th class="border border-stone-300 px-3 py-2 text-left">Limit</th>
-            <th class="border border-stone-300 px-3 py-2 text-left">Calculation</th>
-            <th class="border border-stone-300 px-3 py-2 text-left">Amount</th>
+      <div class="bg-stone-50 border border-stone-200 p-4 rounded mt-4">
+        <h3 class="font-bold text-sm mb-2">Worked Example</h3>
+        <p class="text-xs text-stone-500 mb-2">Basic Salary: ₹50,000/mo | DA: ₹0 | HRA Received: ₹20,000/mo | Rent Paid: ₹18,000/mo | Non-Metro</p>
+        <table class="w-full text-xs text-stone-700">
+          <tr class="border-b border-stone-200">
+            <td class="py-1 pr-2">Condition 1</td>
+            <td class="py-1">₹20,000 × 12 = <strong>₹2,40,000</strong></td>
           </tr>
-        </thead>
-        <tbody>
-          <tr><td class="border border-stone-300 px-3 py-2">1. HRA received</td><td class="border border-stone-300 px-3 py-2">₹20,000 × 12</td><td class="border border-stone-300 px-3 py-2">₹2,40,000</td></tr>
-          <tr><td class="border border-stone-300 px-3 py-2">2. 40% of salary (non-metro)</td><td class="border border-stone-300 px-3 py-2">40% × ₹6,00,000</td><td class="border border-stone-300 px-3 py-2">₹2,40,000</td></tr>
-          <tr><td class="border border-stone-300 px-3 py-2">3. Rent minus 10% of salary</td><td class="border border-stone-300 px-3 py-2">₹3,00,000 − (10% × ₹6,00,000)</td><td class="border border-stone-300 px-3 py-2">₹2,40,000</td></tr>
-          <tr class="font-bold"><td class="border border-stone-300 px-3 py-2">HRA exemption</td><td class="border border-stone-300 px-3 py-2">Least of the three</td><td class="border border-stone-300 px-3 py-2">₹2,40,000</td></tr>
-          <tr><td class="border border-stone-300 px-3 py-2">Taxable HRA</td><td class="border border-stone-300 px-3 py-2">₹2,40,000 − ₹2,40,000</td><td class="border border-stone-300 px-3 py-2">₹0</td></tr>
-        </tbody>
-      </table>
-      <p class="text-stone-600 mb-4">All three limits meet at ₹2,40,000, so the full HRA is exempt and taxable HRA is zero. The rent of ₹25,000 is high enough that the 10% salary floor does not bite, but the exemption still cannot exceed the HRA actually received. In Delhi the 50% limit would be ₹3,00,000 and the answer would remain ₹2,40,000, capped by the HRA component of salary.</p>
-
-      <h3 class="text-xl font-bold text-stone-900 mt-8 mb-3">Documents required</h3>
-      <p class="text-stone-600 mb-4">Employers ask for rent receipts showing the landlord's name, address, the period covered, the amount paid and the landlord's signature. When annual rent crosses ₹1,00,000, the landlord's PAN is also required, and the rental agreement and bank transfer records should be kept ready for assessment. If monthly rent exceeds ₹50,000, tax is deducted at source under Section 194-IB at 2% of the rent, so the landlord's PAN is needed for that reason as well. Claim only rent that you actually pay; a rent receipt created without a real tenancy is a misrepresentation.</p>
-
-      <h3 class="text-xl font-bold text-stone-900 mt-8 mb-3">HRA under the new regime</h3>
-      <p class="text-stone-600 mb-4">HRA exemption is available only under the <strong>old tax regime</strong>. The new regime under Section 115BAC does not allow HRA, Section 80C, Section 80D or home loan interest. It does keep the ₹75,000 standard deduction and the employer NPS contribution under Section 80CCD(2). If your HRA and other old-regime deductions are large, the old regime can still win; otherwise the lower new-regime slabs usually cost less. Compare both results in the <a href="../tools/income-tax" class="text-amber-700 underline">income tax calculator</a> before choosing.</p>
-
-      <h2 class="text-2xl font-bold text-stone-900 mt-10 mb-4">Frequently asked questions</h2>
-      <div class="space-y-4">
-        <div class="faq-item">
-          <h3 class="text-lg font-bold text-stone-900 mb-1">Which cities are metro for HRA purposes?</h3>
-          <p class="text-sm text-stone-600">Only Delhi, Mumbai, Kolkata and Chennai are metro under Rule 2A. The 50% limit applies only there. Bengaluru, Hyderabad, Pune and every other city use the 40% limit, regardless of living costs.</p>
-        </div>
-        <div class="faq-item">
-          <h3 class="text-lg font-bold text-stone-900 mb-1">Can I claim HRA under the new tax regime?</h3>
-          <p class="text-sm text-stone-600">No. Section 10(13A) HRA exemption is available only under the old regime. The new regime allows the ₹75,000 standard deduction and employer NPS under Section 80CCD(2), but not HRA, 80C, 80D or home loan interest.</p>
-        </div>
-        <div class="faq-item">
-          <h3 class="text-lg font-bold text-stone-900 mb-1">What if my rent is less than 10% of basic salary?</h3>
-          <p class="text-sm text-stone-600">The third limit, rent paid minus 10% of salary, becomes negative and is treated as zero. In that case no exemption comes from that limit, and the exemption is the lower of the HRA received and the 50% or 40% salary limit.</p>
-        </div>
-        <div class="faq-item">
-          <h3 class="text-lg font-bold text-stone-900 mb-1">What is Section 80GG and who can claim it?</h3>
-          <p class="text-sm text-stone-600">Section 80GG is for people who pay rent but do not receive HRA. The deduction is the least of ₹5,000 a month (₹60,000 a year), 25% of adjusted total income, and rent paid minus 10% of adjusted total income. Form 10BA is required.</p>
-        </div>
-        <div class="faq-item">
-          <h3 class="text-lg font-bold text-stone-900 mb-1">Do I need rent receipts to claim HRA exemption?</h3>
-          <p class="text-sm text-stone-600">Yes. Employers ask for rent receipts showing the landlord's name, address, rent period, amount and signature. When annual rent exceeds ₹1,00,000, the landlord's PAN is also required. Keep the rental agreement and bank payment proof.</p>
-        </div>
-        <div class="faq-item">
-          <h3 class="text-lg font-bold text-stone-900 mb-1">Can self-employed people claim HRA exemption?</h3>
-          <p class="text-sm text-stone-600">No. Section 10(13A) applies only to salaried taxpayers who receive HRA. Self-employed professionals and business owners can instead examine the Section 80GG deduction if they pay rent and meet its conditions.</p>
-        </div>
+          <tr class="border-b border-stone-200">
+            <td class="py-1 pr-2">Condition 2</td>
+            <td class="py-1">(₹18,000 × 12) − 10% of (₹50,000 × 12) = ₹2,16,000 − ₹60,000 = <strong>₹1,56,000</strong></td>
+          </tr>
+          <tr class="border-b border-stone-200">
+            <td class="py-1 pr-2">Condition 3</td>
+            <td class="py-1">40% of ₹6,00,000 = <strong>₹2,40,000</strong></td>
+          </tr>
+          <tr class="font-bold">
+            <td class="py-1 pr-2">HRA Exemption</td>
+            <td class="py-1">Minimum(₹2,40,000, ₹1,56,000, ₹2,40,000) = <strong>₹1,56,000</strong></td>
+          </tr>
+          <tr>
+            <td class="py-1 pr-2">Taxable HRA</td>
+            <td class="py-1">₹2,40,000 − ₹1,56,000 = <strong>₹84,000</strong></td>
+          </tr>
+        </table>
       </div>
+    </section>
 
-      <h2 class="text-2xl font-bold text-stone-900 mt-10 mb-4">Sources</h2>
-      <ul class="list-disc list-inside text-stone-600 space-y-2 mb-6">
-        <li><a href="https://www.incometax.gov.in" class="text-amber-700 underline" rel="noopener">Income Tax Department e-filing portal</a> — Section 10(13A), Rule 2A and Form 16 guidance.</li>
-        <li><a href="https://www.indiabudget.gov.in" class="text-amber-700 underline" rel="noopener">Union Budget portal</a> — Finance Act documents for the current financial year.</li>
-      </ul>
-    </article>
-
-    <section class="mt-10">
+    <section class="mt-10" data-embed-hide>
       <h2 class="text-lg font-bold mb-3">Related Pages</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="../tools/income-tax" class="card text-sm hover:shadow-md transition-shadow no-underline">
@@ -311,6 +267,29 @@
       </div>
     </section>
 
+    <section class="mt-10 max-w-2xl" data-embed-hide>
+      <h2 class="text-lg font-bold mb-3">FAQs</h2>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>Which cities are metro for HRA purposes?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Only four cities are classified as metro under the Income Tax Act for HRA: <strong>Mumbai, Delhi, Kolkata, and Chennai</strong>. Bengaluru, Hyderabad, Pune, Ahmedabad, and other cities are treated as non-metro regardless of cost of living. For non-metro cities, the exemption is 40% of basic salary + DA instead of 50%.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>Can I claim HRA under the new tax regime?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer">No. HRA exemption under Section 10(13A) is available only under the <strong>Old Tax Regime</strong>. If you opt for the New Tax Regime, you cannot claim HRA exemption. However, if you are a salaried employee living in rented accommodation, you may want to evaluate which regime is more beneficial overall.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>What if my rent is less than 10% of basic salary?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer">If the actual rent paid is less than 10% of your basic salary plus dearness allowance, Condition 2 becomes negative. In that case, no exemption is available from Condition 2 — it is treated as <strong>₹0</strong>. Your exemption will then be the minimum of the remaining two conditions.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>What is Section 80GG and who can claim it?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><strong>Section 80GG</strong> is for individuals who do not receive HRA from their employer but pay rent for accommodation. The deduction is the least of: (a) ₹5,000 per month (₹60,000 per year maximum), (b) 25% of total adjusted income, or (c) actual rent paid minus 10% of total adjusted income. You must file a declaration in Form 10BA. Consult a CA for proper claim.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>Do I need rent receipts to claim HRA exemption?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Yes. If your monthly rent exceeds ₹3,000, you need <strong>rent receipts</strong> to substantiate your HRA claim. If your annual rent exceeds ₹1,00,000, you also need to provide the <strong>landlord's PAN details</strong>. Your employer may ask for these documents during proof submission.</div>
+      </div>
+    </section>
   </div>
 
 <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
@@ -399,6 +378,7 @@
     initGreeting();
     initBackToTop();
     applyUrlParams();
+    initEmbedMode();
     calcHRA();
   </script>
 </body>

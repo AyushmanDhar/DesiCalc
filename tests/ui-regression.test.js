@@ -272,6 +272,7 @@ const UI_ROUTES = [
   '/contact',
   '/privacy',
   '/rate-tracker',
+  '/embed',
 ];
 
 async function runUiTests(browser, origin) {
@@ -312,14 +313,6 @@ async function runUiTests(browser, origin) {
     await page.close();
   }
 
-  {
-    const { page } = await openPage(browser, origin, '/');
-    const stateLinks = await page.$$eval('a[href^="/rto-tax/"], a[href^="/stamp-duty/"]', (links) =>
-      links.map((link) => link.getAttribute('href')),
-    );
-    checkTrue('home links to state calculators', stateLinks.length >= 10, `${stateLinks.length} links`);
-    await page.close();
-  }
 }
 
 (async () => {

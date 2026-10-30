@@ -9,7 +9,7 @@ function walk(dir, out = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) walk(full, out);
-    else if (entry.name.endsWith('.html')) out.push(full);
+    else if (entry.name.endsWith('.html') && !entry.name.startsWith('startupranking')) out.push(full);
   }
   return out;
 }

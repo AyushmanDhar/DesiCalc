@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#ffffff">
-  <title>RTO Road Tax Calculator 2026 — All States, Cars & Bikes</title>
-  <meta name="description" content="Calculate road tax, registration fee and HSRP for any Indian state. Cars, bikes, EVs and commercial vehicles.">
+  <title>RTO Road Tax Calculator 2026 — All Indian States | DesiCalc</title>
+  <meta name="description" content="Calculate RTO road tax and registration charges for all Indian states. Car, bike, EV, commercial. State-wise rates updated.">
+  <meta name="author" content="DesiCalc Editorial Team">
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="shortcut icon" href="/favicon.ico" />
@@ -13,10 +14,8 @@
   <meta name="apple-mobile-web-app-title" content="DesiCalc" />
   <link rel="manifest" href="/site.webmanifest" />
   <link rel="canonical" href="https://desicalc.in/tools/rto-tax" />
-  <link rel="alternate" hreflang="en" href="https://desicalc.in/tools/rto-tax" />
-  <link rel="alternate" hreflang="x-default" href="https://desicalc.in/tools/rto-tax" />
-  <meta property="og:title" content="RTO Road Tax Calculator 2026 — All States, Cars & Bikes">
-  <meta property="og:description" content="Calculate road tax, registration fee and HSRP for any Indian state. Cars, bikes, EVs and commercial vehicles.">
+  <meta property="og:title" content="RTO Road Tax Calculator 2026 — All Indian States | DesiCalc">
+  <meta property="og:description" content="Calculate RTO road tax and registration charges for all Indian states. Car, bike, EV, commercial. State-wise rates updated.">
   <meta property="og:url" content="https://desicalc.in/tools/rto-tax">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://desicalc.in/assets/img/og-rto-tax.png">
@@ -35,6 +34,7 @@
     "browserRequirements": "JavaScript",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
     "description": "Free RTO road tax calculator for all Indian states. Calculate one-time tax, registration fee, HSRP for car, bike, EV, commercial vehicles.",
+    "publisher": { "@type": "Organization", "@id": "https://desicalc.in/#organization", "name": "DesiCalc" },
     "featureList": [
       "All States Road Tax Rates",
       "Car, Bike, EV, Commercial",
@@ -51,50 +51,26 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What is road tax?",
+        "name": "What is RTO road tax?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Road tax is a state levy on the registration and use of a motor vehicle. For private cars and two-wheelers it is usually paid once for the registration period. For commercial vehicles it is paid annually or quarterly. The rate depends on the state, the vehicle type, the fuel and, in several states, the engine capacity or price."
+          "text": "Road tax is one-time tax paid to state RTO when registering vehicle. Rate varies by state, vehicle type, and fuel."
         }
       },
       {
         "@type": "Question",
-        "name": "Is road tax refundable when I sell or transfer my vehicle?",
+        "name": "Are EVs exempt from road tax?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "In most states the one-time road tax is not refunded when you sell the vehicle within the same state. The tax stays with the vehicle and the new owner does not pay it again. If you move the vehicle permanently to another state, that state can charge road tax for the remaining life, and the old state may refund or adjust the unused portion under its own rules. Confirm the position with both RTOs before you transfer."
+          "text": "Most states offer full or partial road tax exemption for electric vehicles to promote green mobility."
         }
       },
       {
         "@type": "Question",
-        "name": "How long is road tax valid?",
+        "name": "What is HSRP?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "For a private car or two-wheeler the tax is normally paid for the 15-year registration period and is renewed when the vehicle is re-registered. Private vehicles are usually one-time, though Madhya Pradesh uses quarterly road tax; commercial vehicles show annual amounts."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do electric vehicles pay road tax?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "It depends on the state. In the 2026 rate file, 17 jurisdictions offer full exemption for private electric cars, nine offer a reduced rate or a concession, and Arunachal Pradesh, Mizoram and Nagaland have no EV entry, so the standard rate applies. Delhi and Haryana limit full exemption to EVs priced up to ₹30 lakh. Always confirm the current notification before purchase."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What does HSRP cost?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A High Security Registration Plate is mandatory. In the 2026 rate file, car HSRP charges range from ₹400 to ₹1,100, while two-wheeler charges range from ₹191 to ₹500. The exact amount depends on the state, the vehicle class and the vendor appointed by the transport department. The calculator adds the state HSRP fee to the result."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What happens to road tax when I move to another state?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Apply for a no-objection certificate from the old RTO, then register the vehicle in the new state. The new state can charge road tax for the remaining life of the vehicle, usually after adjusting the tax already paid, but the method varies. Some states ask for the difference, others charge a fresh life tax and refund the old state's unused portion. Keep the old tax receipt and confirm both states' rules before you move."
+          "text": "High Security Registration Plate is mandatory tamper-proof number plate. Cost: ₹400-₹600 for new vehicles."
         }
       }
     ]
@@ -115,7 +91,7 @@
   <script src="../assets/js/common.js"></script>
   <script src="../assets/js/calc-core.js"></script>
   <script src="../assets/js/state-rates.js"></script>
-<script type="application/ld+json">
+  <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebPage","url":"https://desicalc.in/tools/rto-tax","dateModified":"2026-10-30"}
   </script>
 </head>
@@ -170,6 +146,12 @@
             <label for="engineCC"><span>Engine Capacity (CC)</span> <span class="tooltip-trigger" data-tooltip="Higher engine capacity often means higher road tax">?</span></label>
             <input type="text" id="engineCC" inputmode="numeric" value="1500" oninput="calcRTOForm()">
           </div>
+          <div id="acWrap" style="display:none">
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" id="isAC" checked onchange="calcRTOForm()">
+              <span>Air-conditioned car (Uttar Pradesh)</span>
+            </label>
+          </div>
           <div>
             <label for="seats">Seating Capacity</label>
             <input type="text" id="seats" inputmode="numeric" value="5" oninput="calcRTOForm()">
@@ -196,6 +178,7 @@
 <div class="flex gap-2 mb-3">
           <button class="btn btn-outline btn-sm flex-1" onclick="shareUrl()">Share</button>
           <button class="btn btn-outline btn-sm flex-1" onclick="copyUrl()">Copy Link</button>
+          <a class="btn btn-outline btn-sm flex-1 no-underline" href="/embed"><i class="embed-icon" aria-hidden="true">&lt;/&gt;</i><span>Embed</span></a>
         </div>
         <h2 class="text-base font-bold mb-2">Result</h2>
         <div id="resultBox" class="result-card fade-in" aria-live="polite">
@@ -211,152 +194,11 @@
 </div>
     </div>
 
-    <article class="mt-10 max-w-3xl">
-      <p class="text-sm text-stone-500 mb-6">Last updated 30 October 2026 · Reviewed by DesiCalc Editorial Team</p>
-
-      <h2 class="text-2xl font-bold text-stone-900 mb-4">What road tax includes</h2>
-      <p class="text-stone-600 mb-6">Road tax is the state charge for registering a vehicle and using it on public roads. It is separate from the price you pay the dealer, from insurance and from the central registration fee. The calculator adds the ex-showroom price to the tax, the registration fee and the High Security Registration Plate to show an estimated on-road total, so you can see what the vehicle costs before insurance and dealer extras are added. Every figure below comes from the same 2026 rate file that drives the result panel.</p>
-
-      <h3 class="text-xl font-bold text-stone-900 mt-8 mb-3">One-time road tax</h3>
-      <p class="text-stone-600 mb-4">Private cars and two-wheelers usually pay a one-time life tax when the vehicle is first registered. The tax is calculated on the ex-showroom price, and most states apply a percentage that rises with the price band. Maharashtra, for example, charges 11% up to ₹10,00,000, 12% from ₹10,00,001 to ₹20,00,000 and 13% above that for petrol cars. Commercial vehicles work differently: they pay annually, quarterly or monthly, depending on the seating bracket and the state schedule. Private vehicles are usually one-time, though Madhya Pradesh uses quarterly road tax; commercial vehicles show annual amounts.</p>
-
-      <h3 class="text-xl font-bold text-stone-900 mt-8 mb-3">Registration fee</h3>
-      <p class="text-stone-600 mb-4">The registration fee is charged to record the vehicle and issue the certificate of registration. It is fixed by vehicle class rather than by price. In the 2026 rate file the private car fee is ₹600 and the default two-wheeler fee is ₹300, which follows the central fee schedule used by the states. Some states waive the fee for electric vehicles, and the calculator applies that waiver only where the rate file records it. The fee is small compared with road tax on an expensive car, but it is a separate line and should not be left out of the on-road budget.</p>
-
-      <h3 class="text-xl font-bold text-stone-900 mt-8 mb-3">HSRP</h3>
-      <p class="text-stone-600 mb-4">A High Security Registration Plate is the tamper-proof number plate fitted at registration. It carries a unique laser-etched code and is mandatory for new vehicles. The rate file puts car HSRP charges between ₹400 and ₹1,100, with Delhi and Uttar Pradesh at the top of that range. Two-wheeler plates are cheaper, ranging from ₹191 in Punjab to ₹500 in Kerala, with a default of ₹200 where the state does not record a separate two-wheeler fee. The exact amount depends on the vehicle class and the vendor appointed by the transport department, so treat the figure as the state-level estimate used by the calculator.</p>
-
-      <h3 class="text-xl font-bold text-stone-900 mt-8 mb-3">On-road price</h3>
-      <p class="text-stone-600 mb-4">The full on-road price is the ex-showroom price plus road tax, registration fee, HSRP, insurance and any state cess. The calculator adds the ex-showroom price to the first three items to show an estimated on-road total. Insurance is quoted by the insurer and varies with the vehicle, the owner's profile and the add-ons chosen, so it is not estimated here. Dealer handling charges, accessories, extended warranty and state-specific green tax are also outside the result. Add the insurance quote and dealer charges to the on-road total to reach the final amount payable.</p>
-
-      <h2 class="text-2xl font-bold text-stone-900 mt-10 mb-4">How road tax is calculated by state</h2>
-      <p class="text-stone-600 mb-4">The calculator handles three broad structures. The first is a percentage slab by price, used by most states: the rate steps up as the ex-showroom price crosses a threshold. The second is a flat percentage on the price, used by Nagaland and, on the pre-GST value, by Gujarat and Mizoram. The third is an engine-capacity charge, used for two-wheelers in Maharashtra and for some cars and two-wheelers in Rajasthan and West Bengal. A few states use variants of these three: Jharkhand applies marginal slabs, Tripura uses fixed amounts by price band, and West Bengal uses fixed car amounts by engine capacity with a minimum percentage of price.</p>
-      <p class="text-stone-600 mb-4">The table maps every entry in the rate file to the structure used for a private car. Two-wheelers follow a separate table and can use different structures, including weight bands in Arunachal Pradesh and Meghalaya.</p>
-      <div class="overflow-x-auto mb-6">
-        <table class="w-full border-collapse text-sm">
-          <thead>
-            <tr class="bg-stone-100">
-              <th class="border border-stone-300 px-3 py-2 text-left">State or union territory</th>
-              <th class="border border-stone-300 px-3 py-2 text-left">Structure in the rate file</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td class="border border-stone-300 px-3 py-2">Andhra Pradesh</td><td class="border border-stone-300 px-3 py-2">Percentage slabs by price</td></tr>
-            <tr><td class="border border-stone-300 px-3 py-2">Arunachal Pradesh</td><td class="border border-stone-300 px-3 py-2">Percentage slabs by price</td></tr>
-            <tr><td class="border border-stone-300 px-3 py-2">Assam</td><td class="border border-stone-300 px-3 py-2">Percentage slabs by price</td></tr>
-            <tr><td class="border border-stone-300 px-3 py-2">Bihar</td><td class="border border-stone-300 px-3 py-2">Percentage slabs by price</td></tr>
-            <tr><td class="border border-stone-300 px-3 py-2">Chhattisgarh</td><td class="border border-stone-300 px-3 py-2">Percentage slabs by price</td></tr>
-            <tr><td class="border border-stone-300 px-3 py-2">Delhi</td><td class="border border-stone-300 px-3 py-2">Percentage slabs by price and fuel</td></tr>
-            <tr><td class="border border-stone-300 px-3 py-2">Goa</td><td class="border border-stone-300 px-3 py-2">Percentage slabs by price</td></tr>
-            <tr><td class="border border-stone-300 px-3 py-2">Gujarat</td><td class="border border-stone-300 px-3 py-2">Flat percentage on pre-GST price</td></tr>
-            <tr><td class="border border-stone-300 px-3 py-2">Haryana</td><td class="border border-stone-300 px-3 py-2">Percentage slabs by price</td></tr>
-            <tr><td class="border border-stone-300 px-3 py-2">Himachal Pradesh</td><td class="border border-stone-300 px-3 py-2">Percentage slabs by price</td></tr>
-            <tr><td class="border border-stone-300 px-3 py-2">Jharkhand</td><td class="border border-stone-300 px-3 py-2">Marginal percentage slabs</td></tr>
-            <tr><td class="border border-stone-300 px-3 py-2">Karnataka</td><td class="border border-stone-300 px-3 py-2">Percentage slabs by price</td></tr>
-            <tr><td class="border border-stone-300 px-3 py-2">Kerala</td><td class="border border-stone-300 px-3 py-2">Percentage slabs by price</td></tr>
-            <tr><td class="border border-stone-300 px-3 py-2">Madhya Pradesh</td><td class="border border-stone-300 px-3 py-2">Percentage slabs by price and fuel</td></tr>
-            <tr><td class="border border-stone-300 px-3 py-2">Maharashtra</td><td class="border border-stone-300 px-3 py-2">Percentage slabs by price and fuel</td></tr>
-            <tr><td class="border border-stone-300 px-3 py-2">Manipur</td><td class="border border-stone-300 px-3 py-2">Percentage slabs by price</td></tr>
-            <tr><td class="border border-stone-300 px-3 py-2">Meghalaya</td><td class="border border-stone-300 px-3 py-2">Percentage slabs by price</td></tr>
-            <tr><td class="border border-stone-300 px-3 py-2">Mizoram</td><td class="border border-stone-300 px-3 py-2">Flat percentage on pre-GST price</td></tr>
-            <tr><td class="border border-stone-300 px-3 py-2">Nagaland</td><td class="border border-stone-300 px-3 py-2">Flat percentage</td></tr>
-            <tr><td class="border border-stone-300 px-3 py-2">Odisha</td><td class="border border-stone-300 px-3 py-2">Percentage slabs by price</td></tr>
-            <tr><td class="border border-stone-300 px-3 py-2">Punjab</td><td class="border border-stone-300 px-3 py-2">Percentage slabs by price</td></tr>
-            <tr><td class="border border-stone-300 px-3 py-2">Rajasthan</td><td class="border border-stone-300 px-3 py-2">Percentage by engine capacity and fuel</td></tr>
-            <tr><td class="border border-stone-300 px-3 py-2">Sikkim</td><td class="border border-stone-300 px-3 py-2">Percentage slabs by price</td></tr>
-            <tr><td class="border border-stone-300 px-3 py-2">Tamil Nadu</td><td class="border border-stone-300 px-3 py-2">Percentage slabs by price</td></tr>
-            <tr><td class="border border-stone-300 px-3 py-2">Telangana</td><td class="border border-stone-300 px-3 py-2">Percentage slabs by price</td></tr>
-            <tr><td class="border border-stone-300 px-3 py-2">Tripura</td><td class="border border-stone-300 px-3 py-2">Fixed amount by price band</td></tr>
-            <tr><td class="border border-stone-300 px-3 py-2">Uttar Pradesh</td><td class="border border-stone-300 px-3 py-2">Percentage slabs by price</td></tr>
-            <tr><td class="border border-stone-300 px-3 py-2">Uttarakhand</td><td class="border border-stone-300 px-3 py-2">Percentage slabs by price</td></tr>
-            <tr><td class="border border-stone-300 px-3 py-2">West Bengal</td><td class="border border-stone-300 px-3 py-2">Fixed amount by engine capacity, with a minimum percentage</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="text-stone-600 mb-4">Two factors can change the amount after the headline rate is applied. First, several states add a cess: Andhra Pradesh adds 10% of the tax as a safety cess, Karnataka adds 11% of the tax plus a fixed ₹1,000, Maharashtra adds 2% of the tax, Punjab adds a fixed ₹1,000, Rajasthan adds 12.5% of the tax and Telangana adds a fixed ₹5,000. Second, Goa and Maharashtra cap the tax amount, at ₹15,00,000 and ₹30,00,000 respectively. The calculator applies both the cess and the cap, which is why the result can differ from a simple price multiplied by the headline rate.</p>
-
-      <h2 class="text-2xl font-bold text-stone-900 mt-10 mb-4">Worked example: ₹10,00,000 petrol car in Maharashtra</h2>
-      <p class="text-stone-600 mb-4">Take a new petrol private car with an ex-showroom price of ₹10,00,000 in Maharashtra. The petrol slab up to ₹10,00,000 carries an 11% rate, so the base road tax is ₹1,10,000. Maharashtra adds a Road Safety Cess of 2% of the tax, which is ₹2,200. The one-time road tax therefore comes to ₹1,12,200. The registration fee is ₹600 and the HSRP fee is ₹400. The road tax alone is 11.22% of the ex-showroom price; including registration and HSRP, the government charges of ₹1,13,200 are 11.32% of the ex-showroom price. The estimated on-road total is ₹11,13,200 before insurance and dealer charges. The ₹30,00,000 tax cap does not apply at this price.</p>
-      <table class="w-full border-collapse mb-6 text-sm">
-        <thead>
-          <tr class="bg-stone-100">
-            <th class="border border-stone-300 px-3 py-2 text-left">Charge</th>
-            <th class="border border-stone-300 px-3 py-2 text-left">Arithmetic</th>
-            <th class="border border-stone-300 px-3 py-2 text-left">Amount</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="border border-stone-300 px-3 py-2">Base road tax</td><td class="border border-stone-300 px-3 py-2">₹10,00,000 × 11%</td><td class="border border-stone-300 px-3 py-2">₹1,10,000</td></tr>
-          <tr><td class="border border-stone-300 px-3 py-2">Road Safety Cess</td><td class="border border-stone-300 px-3 py-2">₹1,10,000 × 2%</td><td class="border border-stone-300 px-3 py-2">₹2,200</td></tr>
-          <tr><td class="border border-stone-300 px-3 py-2">One-time road tax</td><td class="border border-stone-300 px-3 py-2">₹1,10,000 + ₹2,200</td><td class="border border-stone-300 px-3 py-2">₹1,12,200</td></tr>
-          <tr><td class="border border-stone-300 px-3 py-2">Registration fee</td><td class="border border-stone-300 px-3 py-2">Fixed for a private car</td><td class="border border-stone-300 px-3 py-2">₹600</td></tr>
-          <tr><td class="border border-stone-300 px-3 py-2">HSRP</td><td class="border border-stone-300 px-3 py-2">State four-wheeler fee</td><td class="border border-stone-300 px-3 py-2">₹400</td></tr>
-          <tr class="bg-stone-50"><td class="border border-stone-300 px-3 py-2 font-semibold">Government charges</td><td class="border border-stone-300 px-3 py-2">₹1,12,200 + ₹600 + ₹400</td><td class="border border-stone-300 px-3 py-2 font-semibold">₹1,13,200</td></tr>
-        </tbody>
-      </table>
-      <p class="text-stone-600 mb-4">The same car with a diesel engine would move to the 13% diesel slab and pay a higher cess in rupees, while a CNG car would use the 8% CNG slab. The calculator applies the fuel-specific slab automatically. Insurance, dealer handling charges and any green tax are still outside the ₹1,13,200 figure.</p>
-
-      <h2 class="text-2xl font-bold text-stone-900 mt-10 mb-4">EV road tax exemptions</h2>
-      <p class="text-stone-600 mb-4">Electric vehicle concessions are recorded state by state in the rate file. Some states waive the one-time tax completely, some charge a lower rate, and some give a percentage concession on the standard tax. The lists below cover private electric cars. Two-wheelers are listed separately in the rate file and do not always follow the car rule.</p>
-
-      <h3 class="text-xl font-bold text-stone-900 mt-8 mb-3">Full exemption states</h3>
-      <p class="text-stone-600 mb-4">Full exemption from the one-time tax for private electric cars appears in 17 jurisdictions: Andhra Pradesh, Assam, Bihar, Delhi, Goa, Haryana, Himachal Pradesh, Maharashtra, Meghalaya, Odisha, Punjab, Rajasthan, Tamil Nadu, Telangana, Uttar Pradesh, Uttarakhand and West Bengal. Delhi and Haryana apply the full exemption only up to an ex-showroom price of ₹30 lakh. Seven of these jurisdictions also waive the registration fee for EVs: Andhra Pradesh, Bihar, Delhi, Meghalaya, Odisha, Punjab and West Bengal.</p>
-
-      <h3 class="text-xl font-bold text-stone-900 mt-8 mb-3">Partial exemption states</h3>
-      <p class="text-stone-600 mb-4">Reduced rates and concessions appear in nine jurisdictions. Gujarat charges 1% of the pre-GST price and Sikkim charges 1% of the ex-showroom price. Madhya Pradesh charges 4%. Karnataka uses EV slabs of 5%, 8% and 10%, and Kerala uses 3%, 5%, 10% and 15%. Chhattisgarh, Jharkhand and Tripura reduce the standard tax by 25%, and Manipur reduces it by 20%. Arunachal Pradesh, Mizoram and Nagaland have no EV entry in the rate file, so the standard rate applies.</p>
-
-      <h3 class="text-xl font-bold text-stone-900 mt-8 mb-3">Price caps</h3>
-      <p class="text-stone-600 mb-4">Delhi and Haryana set a ₹30 lakh ex-showroom cap. Delhi charges the standard rate above the cap. Haryana charges 50% of the standard rate above the cap. Do not confuse these with the tax caps in Goa and Maharashtra: those limit the rupee amount of tax, not the price of the EV. Goa caps road tax at ₹15,00,000 and Maharashtra at ₹30,00,000. Two-wheeler policy is not identical either. Meghalaya, Uttarakhand and West Bengal give private electric cars a full exemption but have no two-wheeler EV entry, while Karnataka gives two-wheelers a full exemption even though its cars use EV slabs. Kerala charges two-wheelers a flat 5% instead of the car slabs. Use the vehicle type selector to see the rule that applies.</p>
-
-      <h2 class="text-2xl font-bold text-stone-900 mt-10 mb-4">Commercial vehicle road tax</h2>
-      <p class="text-stone-600 mb-4">Commercial rates in the file are seating-based. Small vehicles usually pay a one-time amount: Maharashtra charges ₹2,500 for 1-2 seats, ₹3,850 for 3-4 seats and ₹7,150 for 5-6 seats. Larger vehicles pay per seat: Maharashtra charges ₹1,700 per seat per year for 7-12 seats, ₹3,000 for 13-24 seats and ₹5,000 for 25 or more. Delhi charges ₹5,000 for 1-4 seats and ₹8,000 for 5-6 seats one-time, then ₹2,000 per seat per year from 7 seats. Kerala charges ₹3,000 one-time for 1-3 seats and quarterly per-seat rates above that. The calculator converts quarterly and monthly brackets into an annual figure, so the result panel can show a one-time line and an annual line separately.</p>
-      <p class="text-stone-600 mb-4">Permit fees, fitness fees and green tax are separate from road tax. A national permit or state permit is charged by the transport department, and the amount depends on the permit type and the vehicle. These charges are not part of this calculator, so add them from the department's current fee notification. The same applies to any municipal or state green tax on older commercial vehicles.</p>
-
-      <h2 class="text-2xl font-bold text-stone-900 mt-10 mb-4">Frequently asked questions</h2>
-      <div class="space-y-4">
-        <div class="faq-item">
-          <h3 class="text-lg font-bold text-stone-900 mb-1">What is road tax?</h3>
-          <p class="text-sm text-stone-600">Road tax is a state levy on the registration and use of a motor vehicle. For private cars and two-wheelers it is usually paid once for the registration period. For commercial vehicles it is paid annually or quarterly. The rate depends on the state, the vehicle type, the fuel and, in several states, the engine capacity or price.</p>
-        </div>
-        <div class="faq-item">
-          <h3 class="text-lg font-bold text-stone-900 mb-1">Is road tax refundable when I sell or transfer my vehicle?</h3>
-          <p class="text-sm text-stone-600">In most states the one-time road tax is not refunded when you sell the vehicle within the same state. The tax stays with the vehicle and the new owner does not pay it again. If you move the vehicle permanently to another state, that state can charge road tax for the remaining life, and the old state may refund or adjust the unused portion under its own rules. Confirm the position with both RTOs before you transfer.</p>
-        </div>
-        <div class="faq-item">
-          <h3 class="text-lg font-bold text-stone-900 mb-1">How long is road tax valid?</h3>
-          <p class="text-sm text-stone-600">For a private car or two-wheeler the tax is normally paid for the 15-year registration period and is renewed when the vehicle is re-registered. Private vehicles are usually one-time, though Madhya Pradesh uses quarterly road tax; commercial vehicles show annual amounts.</p>
-        </div>
-        <div class="faq-item">
-          <h3 class="text-lg font-bold text-stone-900 mb-1">Do electric vehicles pay road tax?</h3>
-          <p class="text-sm text-stone-600">It depends on the state. In the 2026 rate file, 17 jurisdictions offer full exemption for private electric cars, nine offer a reduced rate or a concession, and Arunachal Pradesh, Mizoram and Nagaland have no EV entry, so the standard rate applies. Delhi and Haryana limit full exemption to EVs priced up to ₹30 lakh. Always confirm the current notification before purchase.</p>
-        </div>
-        <div class="faq-item">
-          <h3 class="text-lg font-bold text-stone-900 mb-1">What does HSRP cost?</h3>
-          <p class="text-sm text-stone-600">A High Security Registration Plate is mandatory. In the 2026 rate file, car HSRP charges range from ₹400 to ₹1,100, while two-wheeler charges range from ₹191 to ₹500. The exact amount depends on the state, the vehicle class and the vendor appointed by the transport department. The calculator adds the state HSRP fee to the result.</p>
-        </div>
-        <div class="faq-item">
-          <h3 class="text-lg font-bold text-stone-900 mb-1">What happens to road tax when I move to another state?</h3>
-          <p class="text-sm text-stone-600">Apply for a no-objection certificate from the old RTO, then register the vehicle in the new state. The new state can charge road tax for the remaining life of the vehicle, usually after adjusting the tax already paid, but the method varies. Some states ask for the difference, others charge a fresh life tax and refund the old state's unused portion. Keep the old tax receipt and confirm both states' rules before you move.</p>
-        </div>
-      </div>
-
-      <h2 class="text-2xl font-bold text-stone-900 mt-10 mb-4">Sources</h2>
-      <p class="text-stone-600 mb-4">The rate file behind this calculator follows the fee schedules published by the state transport departments. The portals below are the official sources for the ministry and the states named, and they are where a buyer should confirm the current notification before registration.</p>
-      <ul class="list-disc list-inside text-stone-600 space-y-2 mb-6">
-        <li><a href="https://morth.nic.in" class="text-amber-700 underline" rel="noopener">Ministry of Road Transport and Highways</a> — central motor vehicle rules, registration fees and HSRP standards.</li>
-        <li><a href="https://parivahan.gov.in/parivahan/" class="text-amber-700 underline" rel="noopener">Parivahan Sewa</a> — national vehicle registration and transport services portal.</li>
-        <li><a href="https://transport.maharashtra.gov.in/1035/Home" class="text-amber-700 underline" rel="noopener">Maharashtra Motor Vehicle Department</a> — Maharashtra road tax, cess and registration.</li>
-        <li><a href="https://transport.delhi.gov.in" class="text-amber-700 underline" rel="noopener">Delhi Transport Department</a> — Delhi road tax and EV exemption.</li>
-        <li><a href="https://transport.karnataka.gov.in" class="text-amber-700 underline" rel="noopener">Karnataka Transport Department</a> — Karnataka road tax, cess and EV slabs.</li>
-        <li><a href="https://uptransport.upsdc.gov.in/" class="text-amber-700 underline" rel="noopener">Uttar Pradesh Transport Department</a> — Uttar Pradesh road tax and EV exemption.</li>
-      </ul>
-    </article>
-
-    <section class="mt-10">
+    <section class="mt-10" data-embed-hide>
       <h2 class="text-lg font-bold mb-3">Related Pages</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="../programmatic/rto-tax/" class="card text-sm hover:shadow-md transition-shadow no-underline border-l-4 border-emerald-500">
-          <span class="font-semibold text-stone-900">All 28 States Index</span>
+          <span class="font-semibold text-stone-900">All 29 States Index</span>
           <span class="text-stone-500 block">Browse all state RTO calculators & rates</span>
         </a>
         <a href="../comparisons/ev-vs-petrol-road-tax" class="card text-sm hover:shadow-md transition-shadow no-underline">
@@ -370,6 +212,21 @@
       </div>
     </section>
 
+    <section class="mt-10 max-w-2xl" data-embed-hide>
+      <h2 class="text-lg font-bold mb-3">FAQs</h2>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>What is RTO road tax?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Road tax is one-time tax paid to state RTO when registering vehicle. Rate varies by state, vehicle type, and fuel.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>Are EVs exempt from road tax?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Most states offer full or partial road tax exemption for electric vehicles to promote green mobility.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>What is HSRP?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer">High Security Registration Plate is mandatory tamper-proof number plate. Cost: ₹400-₹600 for new vehicles.</div>
+      </div>
+    </section>
   </div>
 
 <footer class="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
@@ -409,12 +266,14 @@
       var engineCC = getVal('engineCC');
       var seats = getVal('seats');
       var isUsed = document.getElementById('isUsed').checked;
+      var isAC = document.getElementById('isAC').checked;
+      document.getElementById('acWrap').style.display = state === 'uttarpradesh' ? '' : 'none';
       var age = getVal('vehicleAge');
 
       var usedAgeGroup = document.getElementById('usedAgeGroup');
       usedAgeGroup.style.display = isUsed ? 'block' : 'none';
 
-      var result = calcRTO(state, vehicleType, fuelType, price, engineCC, isUsed, age, seats);
+      var result = calcRTO(state, vehicleType, fuelType, price, engineCC, isUsed, age, seats, undefined, isAC);
       if (!result) return;
 
       animateValue(document.getElementById('rLifeTax'), result.lifeTax);
@@ -446,11 +305,13 @@
       document.getElementById('engineCC').value = '1500';
       document.getElementById('seats').value = '5';
       document.getElementById('isUsed').checked = false;
+      document.getElementById('isAC').checked = true;
       document.getElementById('usedAgeGroup').style.display = 'none';
       document.getElementById('vehicleAge').value = '5';
       calcRTOForm();
     }
     applyUrlParams();
+    initEmbedMode();
     calcRTOForm();
 
   </script>
