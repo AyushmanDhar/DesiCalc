@@ -318,6 +318,14 @@ check('Maharashtra stamp mumbai male 50L reg capped 30000', stampField('maharash
 check('Maharashtra stamp mumbai male 50L base rate 5', stampField('maharashtra', 'stampDutyRate', 5000000, 'male', 'mumbai'), 5);
 check('Maharashtra stamp pune male 50L base rate 7', stampField('maharashtra', 'stampDutyRate', 5000000, 'male', 'pune'), 7);
 
+// ---------- RTO: ON-ROAD TOTAL ----------
+function rtoTotal(state, vtype, fuel, price, cc, seats) {
+  const r = calcRTO(state, vtype, fuel, price, cc, false, 0, seats || 5);
+  return r ? r.totalOnRoadDelta : NaN;
+}
+check('WB 2W 95k on-road total includes ex-showroom', rtoTotal('westbengal', '2w', 'petrol', 95000, 125), 98625);
+check('Haryana car 10L on-road total includes ex-showroom', rtoTotal('haryana', 'car', 'petrol', 1000000, 1200), 1081200);
+
 console.log(`\n${passed} passed, ${failed} failed`);
 if (failed > 0) {
   console.log('\nFailures:');

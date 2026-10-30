@@ -1702,7 +1702,7 @@ function calcRTO(state, vehicleType, fuelType, exShowroomPrice, engineCC, isUsed
     registrationFee,
     hsrpFee,
     cessTotal: Math.round(cessTotal),
-    totalOnRoadDelta: Math.round(lifeTax + registrationFee + hsrpFee),
+    totalOnRoadDelta: Math.round(exShowroomPrice + lifeTax + registrationFee + hsrpFee),
     effectiveTaxRate: exShowroomPrice > 0 ? (lifeTax / exShowroomPrice * 100) : 0,
   };
 }
