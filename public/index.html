@@ -30,7 +30,7 @@
     "@type": "WebSite",
     "name": "DesiCalc",
     "url": "https://desicalc.in",
-    "description": "Free Indian tax calculators. Income Tax FY 2026-27, Stamp Duty all 29 states, RTO Road Tax."
+    "description": "Free Indian tax calculators. Income Tax FY 2026-27, Stamp Duty 28 states and Delhi, RTO Road Tax."
   }
   </script>
   <script type="application/ld+json">
@@ -90,7 +90,7 @@
       <div class="tool-card text-center">
         <div class="text-4xl mb-3" aria-hidden="true">🏠</div>
         <h2 class="text-lg font-bold mb-1" data-i18n="home.stamp.title">Stamp Duty Calculator</h2>
-        <p class="text-sm text-stone-500 mb-4" data-i18n="home.stamp.desc">All 29 states</p>
+        <p class="text-sm text-stone-500 mb-4" data-i18n="home.stamp.desc">28 states + Delhi</p>
         <a href="tools/stamp-duty" class="btn btn-primary" data-i18n="home.cta">Calculate Now</a>
       </div>
       <div class="tool-card text-center">
@@ -149,13 +149,13 @@
         <div>
           <h3 class="font-semibold text-stone-900 mb-1">HRA exemption</h3>
           <p>
-            The HRA calculator applies the Section 10(13A) rule to salaried employees: the exempt amount is the least of the HRA actually received, rent paid minus 10% of basic salary, and 50% of basic salary in metro cities or 40% elsewhere. Enter your salary structure and rent to see which of the three limits applies and how much of your HRA becomes taxable.
+            The HRA calculator applies the Section 10(13A) rule to salaried employees: the exempt amount is the least of the HRA actually received, rent paid minus 10% of basic salary plus dearness allowance, and 50% of basic salary plus dearness allowance in metro cities or 40% elsewhere. Enter your salary structure and rent to see which of the three limits applies and how much of your HRA becomes taxable.
           </p>
         </div>
         <div>
           <h3 class="font-semibold text-stone-900 mb-1">GST</h3>
           <p>
-            The GST calculator handles the 2026 GST 2.0 rates of 0%, 5%, 18% and 40% for both regular and composition schemes. You can add GST to a base amount or extract it from an inclusive price, and the breakdown shows the CGST, SGST or IGST split so the invoice total is easy to check.
+            GST regular rates are 0%, 5%, 18% and 40%, with 3% on gold and silver and 0.25% on rough diamonds. The composition scheme uses flat rates of 1% for traders, 5% for restaurants and 6% for service providers. You can add GST to a base amount or extract it from an inclusive price, and the breakdown shows the CGST, SGST or IGST split so the invoice total is easy to check.
           </p>
         </div>
       </div>
@@ -202,7 +202,8 @@
           <div class="font-semibold text-stone-900">RTO Tax — Delhi</div>
         </a>
       </div>
-      <div class="text-center mt-6">
+      <div class="text-center mt-6 flex flex-wrap justify-center gap-3">
+        <a href="stamp-duty/" class="btn btn-outline">Browse all state stamp duty pages →</a>
         <a href="rto-tax/" class="btn btn-outline">Browse all state RTO pages →</a>
       </div>
     </section>
