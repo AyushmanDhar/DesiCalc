@@ -3,3 +3,7 @@ Allow: /
 Allow: /.well-known/
 
 Sitemap: https://desicalc.in/sitemap.xml
+
+Content-Signal: ai-train=no
+Content-Signal: search=yes
+Content-Signal: ai-input=no

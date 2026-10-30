@@ -16,10 +16,13 @@ for (const file of walk(PUBLIC)) {
   let html = fs.readFileSync(file, 'utf8');
   const before = html;
   html = html.replace(/[ \t]*<script[^>]*adsbygoogle\.js[^>]*><\/script>\s*/gi, '');
-  html = html.replace(/[ \t]*<script[^>]*src="[^"]*ad\.js"[^>]*><\/script>\s*/gi, '');
+  html = html.replace(
+    /[ \t]*<script[^>]*src=(["'])(?:[^"']*[/\\])?ad\.js(?:\?[^"']*)?\1[^>]*><\/script>\s*/gi,
+    '',
+  );
   html = html.replace(/[ \t]*<ins[^>]*adsbygoogle[\s\S]*?<\/ins>\s*/gi, '');
-  html = html.replace(/[ \t]*<script>\s*\(adsbygoogle[\s\S]*?<\/script>\s*/gi, '');
-  html = html.replace(/[ \t]*<script[^>]*>[\s\S]*?adsbygoogle[\s\S]*?<\/script>\s*/gi, '');
+  html = html.replace(/[ \t]*<script>\s*\(adsbygoogle[^<]*<\/script>\s*/gi, '');
+  html = html.replace(/[ \t]*<script[^>]*>[^<]*adsbygoogle[^<]*<\/script>\s*/gi, '');
   if (html !== before) {
     fs.writeFileSync(file, html);
     console.log(`cleaned ${path.relative(PUBLIC, file)}`);

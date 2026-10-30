@@ -106,11 +106,29 @@ checkTrue(
   locs.every((url) => url.startsWith('https://desicalc.in')),
 );
 
-const adTokens = ['adsbygoogle', 'googlesyndication', 'fundingchoicesmessages', 'assets/js/ad.js'];
+const adTokens = [
+  'adsbygoogle',
+  'googlesyndication',
+  'fundingchoicesmessages',
+  'assets/js/ad.js',
+  'ca-pub',
+  'data-ad-',
+  'doubleclick',
+  'pagead2',
+  'adtrafficquality',
+  'ad-slot',
+];
 for (const page of pages) {
   const html = read(page).toLowerCase();
   for (const token of adTokens) {
     checkTrue(`${rel(page)} no ad token ${token}`, !html.includes(token));
+  }
+}
+
+for (const asset of ['_headers', 'assets/css/style.css', 'sitemap.xml']) {
+  const content = read(path.join(PUBLIC, asset)).toLowerCase();
+  for (const token of adTokens) {
+    checkTrue(`${asset} no ad token ${token}`, !content.includes(token));
   }
 }
 
