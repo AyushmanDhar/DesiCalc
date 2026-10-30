@@ -206,7 +206,7 @@ checkTrue('home min words', wordCount(homeHtml) >= 600, `${wordCount(homeHtml)} 
 checkTrue('home last updated', /Last updated/i.test(homeHtml));
 checkTrue('home links methodology', /href="\/methodology"/.test(homeHtml));
 
-const toolNames = ['income-tax', 'stamp-duty', 'rto-tax'];
+const toolNames = ['income-tax', 'stamp-duty', 'rto-tax', 'hra', 'gst'];
 for (const tool of toolNames) {
   const file = path.join(PUBLIC, 'tools', `${tool}.html`);
   const html = read(file);
