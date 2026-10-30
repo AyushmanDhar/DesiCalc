@@ -31,8 +31,27 @@ const count = (html, re) => (html.match(re) || []).length;
 const h1Count = (html) => count(html, /<h1\b/gi);
 const h3Count = (html) => count(html, /<h3\b/gi);
 const titleOf = (html) => (html.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [])[1] || '';
-const descOf = (html) => (html.match(/<meta\s+name="description"\s+content="([^"]*)"/i) || [])[1] || '';
-const canonOf = (html) => (html.match(/<link\s+rel="canonical"\s+href="([^"]*)"/i) || [])[1] || '';
+const attr = (tag, name) => {
+  const re = new RegExp(`(?:^|\\s)${name}\\s*=\\s*(?:"([^"]*)"|'([^']*)'|([^\\s"'>]+))`, 'i');
+  const match = tag.match(re);
+  return match ? match[1] ?? match[2] ?? match[3] ?? '' : '';
+};
+const tags = (html, tagName) => html.match(new RegExp(`<${tagName}\\b[^>]*>`, 'gi')) || [];
+const descOf = (html) => {
+  for (const tag of tags(html, 'meta')) {
+    if (attr(tag, 'name').toLowerCase() === 'description') return attr(tag, 'content');
+  }
+  return '';
+};
+const canonOf = (html) => {
+  for (const tag of tags(html, 'link')) {
+    const rels = attr(tag, 'rel').toLowerCase().split(/\s+/);
+    if (rels.includes('canonical')) return attr(tag, 'href');
+  }
+  return '';
+};
+const canonHostOk = (canon) => canon === 'https://desicalc.in' || canon.startsWith('https://desicalc.in/');
+const canonHasHtmlSuffix = (canon) => /\.html\/?$/i.test(canon.split(/[?#]/)[0]);
 
 let passed = 0;
 let failed = 0;
@@ -62,8 +81,8 @@ for (const page of pages) {
   checkTrue(`${name} viewport`, /<meta\s+name="viewport"/i.test(html));
 
   const canon = canonOf(html);
-  checkTrue(`${name} canonical exists`, canon.startsWith('https://desicalc.in'), canon);
-  checkTrue(`${name} canonical has no .html`, !canon.endsWith('.html'), canon);
+  checkTrue(`${name} canonical exists`, canonHostOk(canon), canon);
+  checkTrue(`${name} canonical has no .html`, !canonHasHtmlSuffix(canon), canon);
 
   const jsonLd = [...html.matchAll(/<script[^>]*application\/ld\+json[^>]*>([\s\S]*?)<\/script>/gi)];
   for (const block of jsonLd) {
@@ -80,6 +99,7 @@ checkTrue('titles unique', new Set(titles).size === titles.length);
 
 const sitemap = read(path.join(PUBLIC, 'sitemap.xml'));
 const locs = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+checkTrue('sitemap has locs', locs.length > 0, `${locs.length} locs`);
 checkTrue('sitemap locs unique', new Set(locs).size === locs.length);
 checkTrue(
   'sitemap absolute URLs',
