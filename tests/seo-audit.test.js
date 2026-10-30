@@ -195,8 +195,10 @@ for (const trust of ['methodology', 'editorial-policy']) {
 
 for (const page of pages) {
   const html = read(page);
-  checkTrue(`${rel(page)} footer methodology link`, /href="\/methodology"/.test(html));
-  checkTrue(`${rel(page)} footer editorial link`, /href="\/editorial-policy"/.test(html));
+  const footer = (html.match(/<footer[\s\S]*?<\/footer>/i) || [''])[0];
+  checkTrue(`${rel(page)} has footer block`, footer.length > 0);
+  checkTrue(`${rel(page)} footer methodology link`, /href="\/methodology"/.test(footer));
+  checkTrue(`${rel(page)} footer editorial link`, /href="\/editorial-policy"/.test(footer));
 }
 
 if (failed) {
