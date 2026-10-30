@@ -228,6 +228,17 @@ for (const state of rtoTier1) {
   checkTrue(`${name} FAQPage`, /"@type":\s*"FAQPage"/.test(html));
 }
 
+const stampTier1 = ['punjab', 'maharashtra', 'uttarpradesh', 'delhi', 'karnataka'];
+for (const state of stampTier1) {
+  const name = `stamp-duty/${state}`;
+  const html = read(path.join(PUBLIC, 'stamp-duty', `${state}.html`));
+  checkTrue(`${name} min words`, wordCount(html) >= 1800, `${wordCount(html)} words`);
+  checkTrue(`${name} min h3`, h3Count(html) >= 8, `${h3Count(html)} h3`);
+  checkTrue(`${name} gov sources`, count(html, /\.gov\.in/gi) >= 2);
+  checkTrue(`${name} last updated`, /Last updated/i.test(html));
+  checkTrue(`${name} FAQPage`, /"@type":\s*"FAQPage"/.test(html));
+}
+
 if (failed) {
   console.error(failures.join('\n'));
   console.error(`\n${failed} failed, ${passed} passed`);
