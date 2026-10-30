@@ -217,8 +217,8 @@ for (const tool of toolNames) {
   checkTrue(`${name} official source`, /\.gov\.in|incometax\.gov\.in|gst\.gov\.in/i.test(html));
 }
 
-const rtoTier1GroupA = ['haryana', 'andhrapradesh', 'maharashtra', 'tamilnadu', 'kerala', 'himachalpradesh', 'karnataka', 'uttarpradesh', 'delhi', 'punjab'];
-for (const state of rtoTier1GroupA) {
+const rtoTier1 = ['haryana', 'andhrapradesh', 'maharashtra', 'tamilnadu', 'kerala', 'himachalpradesh', 'karnataka', 'uttarpradesh', 'delhi', 'punjab'];
+for (const state of rtoTier1) {
   const name = `rto-tax/${state}`;
   const html = read(path.join(PUBLIC, 'rto-tax', `${state}.html`));
   checkTrue(`${name} min words`, wordCount(html) >= 1800, `${wordCount(html)} words`);
