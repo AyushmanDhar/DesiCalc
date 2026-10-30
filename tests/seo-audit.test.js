@@ -253,6 +253,17 @@ for (const relPath of editorialPages) {
   checkTrue(`${relPath} sources section`, /<h2[^>]*>\s*Sources/i.test(html));
 }
 
+for (const folder of ['rto-tax', 'stamp-duty']) {
+  for (const page of pages.filter((p) => rel(p).startsWith(`${folder}/`) && !rel(p).endsWith('index.html'))) {
+    const html = read(page);
+    const name = rel(page);
+    checkTrue(`${name} min words`, wordCount(html) >= 800, `${wordCount(html)} words`);
+    checkTrue(`${name} min h3`, h3Count(html) >= 5, `${h3Count(html)} h3`);
+    checkTrue(`${name} has dateModified`, html.includes('"dateModified"'));
+    checkTrue(`${name} has FAQPage`, /"@type":\s*"FAQPage"/.test(html));
+  }
+}
+
 if (failed) {
   console.error(failures.join('\n'));
   console.error(`\n${failed} failed, ${passed} passed`);
