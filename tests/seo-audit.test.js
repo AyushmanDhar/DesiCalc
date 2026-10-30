@@ -206,6 +206,17 @@ checkTrue('home min words', wordCount(homeHtml) >= 600, `${wordCount(homeHtml)} 
 checkTrue('home last updated', /Last updated/i.test(homeHtml));
 checkTrue('home links methodology', /href="\/methodology"/.test(homeHtml));
 
+const toolNames = ['income-tax'];
+for (const tool of toolNames) {
+  const file = path.join(PUBLIC, 'tools', `${tool}.html`);
+  const html = read(file);
+  const name = `tools/${tool}`;
+  checkTrue(`${name} min words`, wordCount(html) >= 1200, `${wordCount(html)} words`);
+  checkTrue(`${name} min h3`, h3Count(html) >= 6, `${h3Count(html)} h3`);
+  checkTrue(`${name} has FAQPage`, /"@type":\s*"FAQPage"/.test(html));
+  checkTrue(`${name} official source`, /\.gov\.in|incometax\.gov\.in|gst\.gov\.in/i.test(html));
+}
+
 if (failed) {
   console.error(failures.join('\n'));
   console.error(`\n${failed} failed, ${passed} passed`);
