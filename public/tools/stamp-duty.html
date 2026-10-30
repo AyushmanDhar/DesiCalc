@@ -140,15 +140,30 @@
               <option value="joint_mf" data-i18n="stamp.gender.joint_mf">Joint (Male + Female)</option>
             </select>
           </div>
+          <div id="sellerGenderWrap" style="display:none">
+            <label for="sellerGender" data-i18n="stamp.label.sellerGender">Seller Gender (Bihar)</label>
+            <select id="sellerGender" onchange="calcStamp()">
+              <option value="" data-i18n="stamp.seller.unspecified">Not specified</option>
+              <option value="male" data-i18n="stamp.gender.male">Male</option>
+              <option value="female" data-i18n="stamp.gender.female">Female</option>
+            </select>
+          </div>
           <div>
             <label for="location" data-i18n="stamp.label.location">Location</label>
             <select id="location" onchange="calcStamp()"></select>
           </div>
-          <div>
+          <div id="firstSaleFlatWrap" style="display:none">
             <label class="flex items-center gap-2 cursor-pointer">
-              <input type="checkbox" id="isFirstTime" onchange="calcStamp()">
-              <span data-i18n="stamp.label.firstTime">First-time buyer?</span>
+              <input type="checkbox" id="isFirstSaleFlat" onchange="calcStamp()">
+              <span data-i18n="stamp.label.firstSaleFlat">First sale of flat/apartment? (Karnataka)</span>
             </label>
+          </div>
+          <div id="residencyWrap" style="display:none">
+            <label for="residency">Buyer residency (Sikkim)</label>
+            <select id="residency" onchange="calcStamp()">
+              <option value="ssc">Sikkim Subject / COI holder</option>
+              <option value="rc">Non-Sikkim RC holder</option>
+            </select>
           </div>
 
           <div class="flex gap-2 pt-2">
@@ -172,6 +187,7 @@
           <div class="result-row"><span class="result-label" data-i18n="stamp.result.regRate">Registration Rate</span><span class="result-value" id="rRegRate">0%</span></div>
           <div class="result-row"><span class="result-label" data-i18n="stamp.result.sd">Stamp Duty</span><span class="result-value" id="rSd">₹0</span></div>
           <div class="result-row"><span class="result-label" data-i18n="stamp.result.reg">Registration Charges</span><span class="result-value" id="rReg">₹0</span></div>
+          <div class="result-row" id="transferDutyRow"><span class="result-label" data-i18n="stamp.result.transfer">Transfer / Municipal Duty</span><span class="result-value" id="rTransfer">₹0</span></div>
           <div class="result-row"><span class="result-label" data-i18n="stamp.result.cess">Cess / Surcharge</span><span class="result-value" id="rCess">₹0</span></div>
           <div class="result-row"><span class="result-label" data-i18n="stamp.result.other">Other Charges</span><span class="result-value" id="rOther">₹0</span></div>
           <div class="result-row total"><span class="result-label" data-i18n="stamp.result.total">Total Cost</span><span class="result-value" id="rTotal">₹0</span></div>
@@ -281,9 +297,14 @@
       var value = getVal('propertyValue');
       var gender = document.getElementById('gender').value;
       var location = document.getElementById('location').value;
-      var firstTime = document.getElementById('isFirstTime').checked;
+      var sellerGender = document.getElementById('sellerGender').value;
+      var firstSaleFlat = document.getElementById('isFirstSaleFlat').checked;
+      var residency = document.getElementById('residency').value;
+      document.getElementById('sellerGenderWrap').style.display = state === 'bihar' ? '' : 'none';
+      document.getElementById('firstSaleFlatWrap').style.display = state === 'karnataka' ? '' : 'none';
+      document.getElementById('residencyWrap').style.display = state === 'sikkim' ? '' : 'none';
 
-      var result = calcStampDuty(state, value, gender, location, firstTime);
+      var result = calcStampDuty(state, value, gender, location, false, sellerGender, firstSaleFlat, residency);
       if (!result) return;
 
       var rSdRate = document.getElementById('rSdRate');
@@ -294,6 +315,8 @@
       flashValue(rRegRate);
       animateValue(document.getElementById('rSd'), result.stampDutyAmount);
       animateValue(document.getElementById('rReg'), result.registrationAmount);
+      animateValue(document.getElementById('rTransfer'), result.transferDutyAmount);
+      document.getElementById('transferDutyRow').style.display = result.transferDutyAmount > 0 ? '' : 'none';
       animateValue(document.getElementById('rCess'), result.cessAmount);
       var rOther = document.getElementById('rOther');
       animateValue(rOther, result.otherCharges);
@@ -304,8 +327,8 @@
       flashValue(rEff);
       staggerReveal('resultBox');
 
-      syncUrlParams({ state: state, propertyValue: value, gender: gender, location: location, isFirstTime: firstTime });
-      saveLastInputs('stampduty', { state: state, value: value, gender: gender, location: location, firstTime: firstTime });
+      syncUrlParams({ state: state, propertyValue: value, gender: gender, location: location, sellerGender: sellerGender, firstSaleFlat: firstSaleFlat });
+      saveLastInputs('stampduty', { state: state, value: value, gender: gender, location: location, sellerGender: sellerGender, firstSaleFlat: firstSaleFlat });
     }
 
     populateStates();
@@ -330,8 +353,10 @@
     function resetForm() {
       document.getElementById('propertyValue').value = '5000000';
       document.getElementById('gender').value = 'male';
+      document.getElementById('sellerGender').value = '';
+      document.getElementById('isFirstSaleFlat').checked = false;
+      document.getElementById('residency').value = 'ssc';
       populateLocation(document.getElementById('state').value);
-      document.getElementById('isFirstTime').checked = false;
       calcStamp();
     }
     applyUrlParams();
