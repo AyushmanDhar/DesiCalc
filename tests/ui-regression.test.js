@@ -25,7 +25,12 @@ function createServer() {
   return http.createServer((req, res) => {
     let pathname = decodeURIComponent(req.url.split('?')[0]);
     if (pathname.endsWith('/')) pathname += 'index.html';
-    let file = path.join(ROOT, pathname);
+    let file = path.resolve(ROOT, '.' + pathname);
+    if (!file.startsWith(ROOT + path.sep)) {
+      res.writeHead(403, { 'Content-Type': 'text/plain' });
+      res.end('forbidden');
+      return;
+    }
     if (!fs.existsSync(file) && fs.existsSync(`${file}.html`)) file += '.html';
     fs.readFile(file, (error, data) => {
       if (error) {

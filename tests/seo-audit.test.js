@@ -116,7 +116,7 @@ const sitemap = read(path.join(PUBLIC, 'sitemap.xml'));
 const locs = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
 const locSet = new Set(locs.map((url) => url.replace(/\/$/, '')));
 checkTrue('sitemap locs unique', new Set(locs).size === locs.length);
-checkTrue('sitemap absolute URLs', locs.every((url) => url.startsWith('https://desicalc.in')));
+checkTrue('sitemap absolute URLs', locs.every((url) => { try { return new URL(url).origin === 'https://desicalc.in'; } catch { return false; } }));
 checkTrue('sitemap no hreflang hi', !/hreflang="hi"/i.test(sitemap));
 check(`sitemap URL count`, locs.length, pages.length);
 for (const page of pages) {
