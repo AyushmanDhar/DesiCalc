@@ -152,6 +152,12 @@
             <label for="engineCC"><span data-i18n="rto.label.engine">Engine Capacity (CC)</span> <span class="tooltip-trigger" data-tooltip="Higher engine capacity often means higher road tax">?</span></label>
             <input type="text" id="engineCC" inputmode="numeric" value="1500" oninput="calcRTOForm()">
           </div>
+          <div id="acWrap" style="display:none">
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" id="isAC" checked onchange="calcRTOForm()">
+              <span>Air-conditioned car (Uttar Pradesh)</span>
+            </label>
+          </div>
           <div>
             <label for="seats" data-i18n="rto.label.seats">Seating Capacity</label>
             <input type="text" id="seats" inputmode="numeric" value="5" oninput="calcRTOForm()">
@@ -203,7 +209,7 @@
       <h2 class="text-lg font-bold mb-3">Related Pages</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a href="../programmatic/rto-tax/" class="card text-sm hover:shadow-md transition-shadow no-underline border-l-4 border-emerald-500">
-          <span class="font-semibold text-stone-900">All 28 States Index</span>
+          <span class="font-semibold text-stone-900">All 29 States Index</span>
           <span class="text-stone-500 block">Browse all state RTO calculators & rates</span>
         </a>
         <a href="../comparisons/ev-vs-petrol-road-tax" class="card text-sm hover:shadow-md transition-shadow no-underline">
@@ -270,12 +276,14 @@
       var engineCC = getVal('engineCC');
       var seats = getVal('seats');
       var isUsed = document.getElementById('isUsed').checked;
+      var isAC = document.getElementById('isAC').checked;
+      document.getElementById('acWrap').style.display = state === 'uttarpradesh' ? '' : 'none';
       var age = getVal('vehicleAge');
 
       var usedAgeGroup = document.getElementById('usedAgeGroup');
       usedAgeGroup.style.display = isUsed ? 'block' : 'none';
 
-      var result = calcRTO(state, vehicleType, fuelType, price, engineCC, isUsed, age, seats);
+      var result = calcRTO(state, vehicleType, fuelType, price, engineCC, isUsed, age, seats, undefined, isAC);
       if (!result) return;
 
       animateValue(document.getElementById('rLifeTax'), result.lifeTax);
@@ -320,6 +328,7 @@
       document.getElementById('engineCC').value = '1500';
       document.getElementById('seats').value = '5';
       document.getElementById('isUsed').checked = false;
+      document.getElementById('isAC').checked = true;
       document.getElementById('usedAgeGroup').style.display = 'none';
       document.getElementById('vehicleAge').value = '5';
       calcRTOForm();

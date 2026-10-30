@@ -108,6 +108,41 @@ function calcSurcharge(tax, netTaxableIncome, regime, age) {
   return surcharge;
 }
 
+function getSurchargeRate(totalIncome, regime) {
+  if (totalIncome <= 5000000) return 0;
+  if (totalIncome <= 10000000) return 10;
+  if (totalIncome <= 20000000) return 15;
+  if (regime === 'new') return 25;
+  if (totalIncome <= 50000000) return 25;
+  return 37;
+}
+
+function calcSurchargeSplit(slabTax, specialTax, totalIncome, regime, age) {
+  const rate = getSurchargeRate(totalIncome, regime);
+  if (rate === 0) return 0;
+  const slabSurcharge = calcSurcharge(slabTax, totalIncome, regime, age);
+  const specialSurcharge = specialTax * Math.min(rate, 15) / 100;
+
+  const brackets = regime === 'new'
+    ? [5000000, 10000000, 20000000]
+    : [5000000, 10000000, 20000000, 50000000];
+  const rates = regime === 'new' ? [10, 15, 25] : [10, 15, 25, 37];
+  const idx = rates.indexOf(rate);
+  if (idx < 0) return slabSurcharge + specialSurcharge;
+
+  const boundary = brackets[idx];
+  const prevRate = idx === 0 ? 0 : rates[idx - 1];
+  const taxAtBoundary = calcTaxSlabs(boundary, regime, age);
+  const totalAtBoundary = taxAtBoundary * (1 + prevRate / 100)
+    + specialTax * (1 + Math.min(prevRate, 15) / 100);
+  const maxTotal = totalAtBoundary + (totalIncome - boundary);
+  const actualTotal = slabTax + specialTax + slabSurcharge + specialSurcharge;
+  if (actualTotal > maxTotal) {
+    return Math.max(0, maxTotal - slabTax - specialTax);
+  }
+  return slabSurcharge + specialSurcharge;
+}
+
 function calcIncomeTax(inputs) {
   const regime = inputs.regime || 'new';
   const age = inputs.age || 30;
@@ -120,10 +155,16 @@ function calcIncomeTax(inputs) {
     + (inputs.incomeBusiness || 0)
     + equityLtcg + equityStcg;
 
-  const sd = (inputs.incomeSalary > 0) ? STANDARD_DEDUCTION[regime] : 0;
+  const salary = inputs.incomeSalary || 0;
+  const sd = salary > 0 ? Math.min(salary, STANDARD_DEDUCTION[regime]) : 0;
 
-  // 80CCD(2) employer NPS contribution — allowed in both regimes (up to 14% of basic+DA)
-  const employerNpsDeduction = inputs.employerNps || 0;
+  const npsBasicDA = inputs.employerNpsBasicDA || 0;
+  const npsRate = regime === 'new'
+    ? 0.14
+    : (inputs.employerIsGovernment ? 0.14 : 0.10);
+  const employerNpsDeduction = npsBasicDA > 0
+    ? Math.min(inputs.employerNps || 0, npsBasicDA * npsRate)
+    : 0;
 
   let deductions = 0;
   if (regime === 'old') {
@@ -149,30 +190,46 @@ function calcIncomeTax(inputs) {
   const regularIncome = Math.max(0, grossTotalIncome - equityLtcg - equityStcg - sd - deductions - employerNpsDeduction);
   const totalIncome = grossTotalIncome - sd - deductions - employerNpsDeduction;
 
-  let taxBeforeRebate = calcTaxSlabs(regularIncome, regime, age);
+  const slabTax = calcTaxSlabs(regularIncome, regime, age);
 
-  const stcgTax = equityStcg * 0.20;
-  const taxableLtcg = Math.max(0, equityLtcg - 125000);
-  const ltcgTax = taxableLtcg * 0.125;
-  taxBeforeRebate += stcgTax + ltcgTax;
+  const basicExemption = regime === 'new'
+    ? 400000
+    : (age >= 80 ? 500000 : age >= 60 ? 300000 : 250000);
+  const unusedBasicExemption = Math.max(0, basicExemption - regularIncome);
+  const stcgExempt = Math.min(unusedBasicExemption, equityStcg);
+  const stcgAdjusted = Math.max(0, equityStcg - stcgExempt);
+  const ltcgAfterExemption = Math.max(0, equityLtcg - 125000);
+  const unusedAfterStcg = Math.max(0, unusedBasicExemption - stcgExempt);
+  const ltcgAdjusted = Math.max(0, ltcgAfterExemption - unusedAfterStcg);
+
+  const stcgTax = stcgAdjusted * 0.20;
+  const ltcgTax = ltcgAdjusted * 0.125;
+  const specialTax = stcgTax + ltcgTax;
+  const taxBeforeRebate = slabTax + specialTax;
 
   let rebate87A = 0;
-  if (totalIncome <= REBATE_THRESHOLD[regime]) {
-    rebate87A = Math.min(taxBeforeRebate, REBATE_87A[regime]);
+  if (regime === 'new') {
+    if (regularIncome <= REBATE_THRESHOLD.new) {
+      rebate87A = Math.min(slabTax, REBATE_87A.new);
+    }
+  } else if (totalIncome <= REBATE_THRESHOLD.old) {
+    rebate87A = Math.min(slabTax, REBATE_87A.old);
   }
 
-  let taxAfterRebate = Math.max(0, taxBeforeRebate - rebate87A);
+  let slabTaxAfterRebate = Math.max(0, slabTax - rebate87A);
+  const specialTaxAfterRebate = specialTax;
 
   let marginalRelief = 0;
-  if (regime === 'new' && totalIncome > REBATE_THRESHOLD.new) {
-    const excess = totalIncome - REBATE_THRESHOLD.new;
-    if (taxAfterRebate > excess) {
-      marginalRelief = taxAfterRebate - excess;
-      taxAfterRebate = excess;
+  if (regime === 'new' && regularIncome > REBATE_THRESHOLD.new) {
+    const excess = regularIncome - REBATE_THRESHOLD.new;
+    if (slabTaxAfterRebate > excess) {
+      marginalRelief = slabTaxAfterRebate - excess;
+      slabTaxAfterRebate = excess;
     }
   }
 
-  const surcharge = calcSurcharge(taxAfterRebate, totalIncome, regime, age);
+  const taxAfterRebate = slabTaxAfterRebate + specialTaxAfterRebate;
+  const surcharge = calcSurchargeSplit(slabTaxAfterRebate, specialTaxAfterRebate, totalIncome, regime, age);
   const healthCess = (taxAfterRebate + surcharge) * 0.04;
   const totalTax = Math.round(taxAfterRebate + surcharge + healthCess);
 
