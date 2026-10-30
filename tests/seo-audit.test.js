@@ -106,6 +106,17 @@ checkTrue(
   locs.every((url) => url.startsWith('https://desicalc.in')),
 );
 
+const adTokens = ['adsbygoogle', 'googlesyndication', 'fundingchoicesmessages', 'assets/js/ad.js'];
+for (const page of pages) {
+  const html = read(page).toLowerCase();
+  for (const token of adTokens) {
+    checkTrue(`${rel(page)} no ad token ${token}`, !html.includes(token));
+  }
+}
+
+const robots = read(path.join(PUBLIC, 'robots.txt'));
+checkTrue('robots is plain ASCII', /^[\x00-\x7F]*$/.test(robots));
+
 if (failed) {
   console.error(failures.join('\n'));
   console.error(`\n${failed} failed, ${passed} passed`);
