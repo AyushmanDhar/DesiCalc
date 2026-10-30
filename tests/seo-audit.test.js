@@ -266,6 +266,16 @@ for (const folder of ['rto-tax', 'stamp-duty']) {
   }
 }
 
+const trackerFile = path.join(PUBLIC, 'rate-tracker.html');
+checkTrue('rate tracker exists', fs.existsSync(trackerFile));
+if (fs.existsSync(trackerFile)) {
+  const html = read(trackerFile);
+  checkTrue('rate tracker min words', wordCount(html) >= 1500, `${wordCount(html)} words`);
+  checkTrue('rate tracker CSV link', /rates-2026\.csv/.test(html));
+  checkTrue('rate tracker changelog', /changelog/i.test(html));
+}
+checkTrue('CSV exists', fs.existsSync(path.join(PUBLIC, 'assets', 'data', 'rates-2026.csv')));
+
 if (failed) {
   console.error(failures.join('\n'));
   console.error(`\n${failed} failed, ${passed} passed`);
