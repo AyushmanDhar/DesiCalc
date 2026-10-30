@@ -5,6 +5,7 @@ Update every Monday from Google Search Console (last 7 days) and Cloudflare Web 
 | Week ending | Impressions | Clicks | CTR | Avg position | Indexed pages | Notes |
 |-------------|-------------|--------|-----|--------------|---------------|-------|
 | 2026-10-30  | 702 (90d)   | 3 (90d) | 0.4% | 39          | 73            | Baseline |
+| 2026-10-31  | —           | —      | —   | —            | —             | Production deploy of SEO recovery. GSC and Bing sitemaps resubmitted. Requested indexing: `/`, `/tools/income-tax`, `/tools/stamp-duty`, `/tools/rto-tax`, `/rate-tracker`. GSC not indexed: 6 crawled, 2 discovered. |
 
 ## Weekly checklist
 
