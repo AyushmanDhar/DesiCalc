@@ -201,6 +201,11 @@ for (const page of pages) {
   checkTrue(`${rel(page)} footer editorial link`, /href="\/editorial-policy"/.test(footer));
 }
 
+const homeHtml = read(path.join(PUBLIC, 'index.html'));
+checkTrue('home min words', wordCount(homeHtml) >= 600, `${wordCount(homeHtml)} words`);
+checkTrue('home last updated', /Last updated/i.test(homeHtml));
+checkTrue('home links methodology', /href="\/methodology"/.test(homeHtml));
+
 if (failed) {
   console.error(failures.join('\n'));
   console.error(`\n${failed} failed, ${passed} passed`);
