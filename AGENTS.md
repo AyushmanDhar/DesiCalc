@@ -42,6 +42,8 @@ npx serve public
 
 Run `npm test` before every commit that changes content, rates, or page structure.
 
+Run `npm run test:ui` for the browser regression suite: calculator behaviour plus UI rendering across all main screens at desktop and mobile widths. It uses the installed Edge or Chrome through `puppeteer-core`.
+
 ## Architecture
 
 ### Stack
