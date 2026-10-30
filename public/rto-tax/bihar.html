@@ -157,6 +157,7 @@
 
     <section class="mb-8">
       <h2 class="text-2xl font-bold text-stone-900 mb-4">Bihar RTO Road Tax Rates 2026</h2>
+      <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Car and SUV rates</h3>
       <div class="overflow-x-auto bg-white rounded-xl border border-stone-200">
         <table class="w-full text-sm">
           <thead>
@@ -275,6 +276,7 @@
 
     <section class="prose max-w-none mb-8">
       <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Vehicle Registration Process in Bihar</h2>
+      <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Where to register</h3>
       <p>Vehicle registration in Bihar is handled by the Bihar State Transport Department with RTO offices in all 38 districts. Key RTO locations include Patna (BR-01), Gaya (BR-02), Muzaffarpur (BR-03), Bhagalpur (BR-04), Darbhanga (BR-05), and Purnia (BR-06). The process is standardised through the national VAHAN portal, making it largely digital.</p>
       <p>When you purchase a new vehicle from a dealership in Bihar, the dealer issues a temporary registration valid for 30 days. You must apply for permanent registration at the RTO within this window. The application is submitted through Form 20 along with the required fee. The RTO verifies the vehicle, and once approved, the registration number is issued in the BR-XX-XXXX format. The smart card RC is delivered to your registered address.</p>
 
@@ -305,19 +307,31 @@
           </section>
 
       <section class="mt-10 max-w-2xl">
-        <h2 class="text-2xl font-bold text-stone-900 mb-4">Frequently asked questions</h2>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">What is the RTO code for Bihar?</h3>
-        <p>Bihar's registration code is BR. Major RTO codes include BR-01 (Patna), BR-02 (Gaya), BR-03 (Muzaffarpur), BR-04 (Bhagalpur), BR-05 (Darbhanga), BR-06 (Purnia), BR-07 (Saharsa), BR-08 (Motihari), BR-09 (Munger), and BR-10 (Sitamarhi).</p>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">How much is road tax for a ₹10 lakh car in Bihar?</h3>
-        <p>A ₹10 lakh car in Bihar falls in the up-to-₹10 lakh slab and pays 8% one-time road tax, i.e. ₹80,000. Petrol, diesel and CNG cars all pay the same rates — Bihar does not differentiate by fuel. Above ₹10 lakh the rate rises to 9% (up to ₹80 lakh), 10% (up to ₹1.5 crore) and 13% above. Registration and HSRP charges are additional.</p>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Is road tax different for CNG vehicles in Bihar?</h3>
-        <p>No. Petrol, diesel and CNG vehicles all pay the same slab-based road tax in Bihar: 8% up to ₹10 lakh, 9% up to ₹80 lakh, 10% up to ₹1.5 crore and 13% above ₹1.5 crore. There is no fuel-based differentiation.</p>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Are EVs exempt from road tax in Bihar?</h3>
-        <p>Yes, electric vehicles are fully exempt from road tax in Bihar, and the registration fee is also waived (₹0). The exemption applies to all categories of EVs including cars, two-wheelers, three-wheelers, and commercial EVs for first registration.</p>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">What is the penalty for driving without registration in Bihar?</h3>
-        <p>Driving an unregistered vehicle in Bihar attracts a fine of up to ₹5,000 under Section 39 of the Motor Vehicle Act. If caught multiple times, the vehicle can be impounded. Always use the temporary registration provided by the dealer while your permanent registration is being processed.</p>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Can I register my vehicle online in Bihar?</h3>
-        <p>Yes, Bihar RTO offers online registration services through the VAHAN portal. You can book appointments, upload documents, and track your application status online. However, physical verification of the vehicle at the RTO is still required.</p>
+      <h2 class="text-lg font-bold mb-3">Frequently asked questions</h2>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>What is the RTO code for Bihar?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Bihar's registration code is BR. Major RTO codes include BR-01 (Patna), BR-02 (Gaya), BR-03 (Muzaffarpur), BR-04 (Bhagalpur), BR-05 (Darbhanga), BR-06 (Purnia), BR-07 (Saharsa), BR-08 (Motihari), BR-09 (Munger), and BR-10 (Sitamarhi).</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>How much is road tax for a ₹10 lakh car in Bihar?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">A ₹10 lakh car in Bihar falls in the up-to-₹10 lakh slab and pays 8% one-time road tax, i.e. ₹80,000. Petrol, diesel and CNG cars all pay the same rates — Bihar does not differentiate by fuel. Above ₹10 lakh the rate rises to 9% (up to ₹80 lakh), 10% (up to ₹1.5 crore) and 13% above. Registration and HSRP charges are additional.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>Is road tax different for CNG vehicles in Bihar?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">No. Petrol, diesel and CNG vehicles all pay the same slab-based road tax in Bihar: 8% up to ₹10 lakh, 9% up to ₹80 lakh, 10% up to ₹1.5 crore and 13% above ₹1.5 crore. There is no fuel-based differentiation.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>Are EVs exempt from road tax in Bihar?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Yes, electric vehicles are fully exempt from road tax in Bihar, and the registration fee is also waived (₹0). The exemption applies to all categories of EVs including cars, two-wheelers, three-wheelers, and commercial EVs for first registration.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>What is the penalty for driving without registration in Bihar?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Driving an unregistered vehicle in Bihar attracts a fine of up to ₹5,000 under Section 39 of the Motor Vehicle Act. If caught multiple times, the vehicle can be impounded. Always use the temporary registration provided by the dealer while your permanent registration is being processed.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>Can I register my vehicle online in Bihar?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Yes, Bihar RTO offers online registration services through the VAHAN portal. You can book appointments, upload documents, and track your application status online. However, physical verification of the vehicle at the RTO is still required.</div>
+      </div>
       </section>
 
     <section class="mt-10 max-w-2xl">

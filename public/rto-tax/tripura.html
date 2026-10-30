@@ -164,6 +164,7 @@
 
     <section class="mb-8">
       <h2 class="text-2xl font-bold text-stone-900 mb-4">Tripura RTO Road Tax Rates 2026</h2>
+      <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Car and SUV rates</h3>
       <div class="overflow-x-auto bg-white rounded-xl border border-stone-200">
         <table class="w-full text-sm">
           <thead>
@@ -287,10 +288,12 @@
       </ul>
 
       <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Electric Vehicle (EV) Policy</h2>
+      <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">EV exemption</h3>
       <p>Under the current state policy used by our calculator, electric vehicles in Tripura receive a <strong>25% rebate on road tax</strong> rather than a full exemption — for both cars and two-wheelers. For example, a car in the ₹5–10 lakh band pays ₹6,900 × 75% = ₹5,175 instead of ₹6,900. We note that some older material on Tripura's EV incentives cites a full exemption; sources conflict on this point, so confirm the current notification with the Tripura Transport Department before finalising a purchase. Registration fee and HSRP are not waived for EVs.</p>
       <p>Given the state's relatively small geographical area, EVs are particularly well-suited for intra-city commuting in Tripura, and the state has been working with central agencies to set up EV charging stations in Agartala and other major urban centres.</p>
 
       <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Where to Pay Tripura Road Tax Online</h2>
+      <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Online payment</h3>
       <p>Road tax can be paid online on <strong>VAHAN (vahan.parivahan.gov.in)</strong>: enter the vehicle registration number → Online Services → Pay Vehicle Tax → validate with the last 5 digits of the chassis number → enter the OTP sent to your registered mobile number → update insurance details → review the fee panel → pay. For new vehicles, the dealer point or RTO collects the tax during registration itself.</p>
 
       <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Required Documents for Vehicle Registration</h2>
@@ -315,21 +318,35 @@
     </section>
 
       <section class="mt-10 max-w-2xl">
-        <h2 class="text-2xl font-bold text-stone-900 mb-4">Frequently asked questions</h2>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">How much road tax does a ₹7.5 lakh car pay in Tripura?</h3>
-        <p>Cars in Tripura pay a fixed one-time amount by price band, not a percentage. A car with ex-showroom price up to ₹10 lakh (₹5,00,001–₹10,00,000 band) pays a flat ₹6,900 road tax, plus ₹600 registration fee and ₹400 HSRP — ₹7,900 in total.</p>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Are electric vehicles fully exempt from road tax in Tripura?</h3>
-        <p>Under the current state policy used by our calculator, EVs get a 25% rebate on road tax rather than a full exemption — for example, a car in the ₹5–10 lakh band pays ₹6,900 × 75% = ₹5,175. Some older notifications cite full exemption, so confirm the current order with the Tripura Transport Department before purchase.</p>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">What are the car road tax slabs in Tripura for 2026?</h3>
-        <p>Tripura charges a fixed one-time amount by ex-showroom price band: ₹4,100 up to ₹3 lakh, ₹4,800 for ₹3–5 lakh, ₹6,900 for ₹5–10 lakh, ₹7,550 for ₹10–15 lakh and ₹8,250 above ₹15 lakh. Two-wheelers pay a flat 4% of the ex-showroom price.</p>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">What is the registration fee for two-wheelers in Tripura?</h3>
-        <p>The registration fee for a motorcycle is ₹300 (the national standard under Rule 81 of CMVR 1989), with HSRP of roughly ₹200–₹400. Cars pay ₹600 registration fee and ₹400 HSRP.</p>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Is it mandatory to have HSRP in Tripura?</h3>
-        <p>Yes, High-Security Registration Plates are mandatory for all new vehicles in Tripura at a cost of ₹400 per set for four-wheelers.</p>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Can I drive my Tripura-registered vehicle in Bangladesh?</h3>
-        <p>Cross-border vehicle movement is governed by bilateral agreements and requires special permits beyond standard registration.</p>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">How do I transfer vehicle ownership in Tripura?</h3>
-        <p>Ownership transfer requires Form 31 (notice of transfer), the original RC, insurance transfer, and payment of the transfer fee at the RTO.</p>
+      <h2 class="text-lg font-bold mb-3">Frequently asked questions</h2>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>How much road tax does a ₹7.5 lakh car pay in Tripura?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Cars in Tripura pay a fixed one-time amount by price band, not a percentage. A car with ex-showroom price up to ₹10 lakh (₹5,00,001–₹10,00,000 band) pays a flat ₹6,900 road tax, plus ₹600 registration fee and ₹400 HSRP — ₹7,900 in total.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>Are electric vehicles fully exempt from road tax in Tripura?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Under the current state policy used by our calculator, EVs get a 25% rebate on road tax rather than a full exemption — for example, a car in the ₹5–10 lakh band pays ₹6,900 × 75% = ₹5,175. Some older notifications cite full exemption, so confirm the current order with the Tripura Transport Department before purchase.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>What are the car road tax slabs in Tripura for 2026?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Tripura charges a fixed one-time amount by ex-showroom price band: ₹4,100 up to ₹3 lakh, ₹4,800 for ₹3–5 lakh, ₹6,900 for ₹5–10 lakh, ₹7,550 for ₹10–15 lakh and ₹8,250 above ₹15 lakh. Two-wheelers pay a flat 4% of the ex-showroom price.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>What is the registration fee for two-wheelers in Tripura?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">The registration fee for a motorcycle is ₹300 (the national standard under Rule 81 of CMVR 1989), with HSRP of roughly ₹200–₹400. Cars pay ₹600 registration fee and ₹400 HSRP.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>Is it mandatory to have HSRP in Tripura?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Yes, High-Security Registration Plates are mandatory for all new vehicles in Tripura at a cost of ₹400 per set for four-wheelers.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>Can I drive my Tripura-registered vehicle in Bangladesh?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Cross-border vehicle movement is governed by bilateral agreements and requires special permits beyond standard registration.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>How do I transfer vehicle ownership in Tripura?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Ownership transfer requires Form 31 (notice of transfer), the original RC, insurance transfer, and payment of the transfer fee at the RTO.</div>
+      </div>
       </section>
 
     <section class="mt-12">

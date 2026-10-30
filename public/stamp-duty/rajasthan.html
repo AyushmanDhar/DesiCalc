@@ -152,6 +152,7 @@
 
     <section class="mb-8">
       <h2 class="text-2xl font-bold text-stone-900 mb-4">Rajasthan Stamp Duty Rates 2026</h2>
+      <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Stamp duty by buyer category</h3>
       <div class="overflow-x-auto bg-white rounded-xl border border-stone-200">
         <table class="w-full text-sm">
           <thead>
@@ -202,6 +203,7 @@
           </tbody>
         </table>
       </div>
+      <p class="text-xs text-stone-500 mt-2">A 33% surcharge on stamp duty applies to all categories (20% labour cess + 13% infrastructure surcharge). Totals shown = stamp duty + surcharge + 1% registration (min ₹100).</p>
     </section>
 
     <div class="bg-white rounded-xl border border-stone-200 p-6 mb-8">
@@ -213,11 +215,13 @@
 
     <section class="prose max-w-none mb-8">
       <h2 class="text-2xl font-bold text-stone-900">Rajasthan Property Market Overview</h2>
+      <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Local property market</h3>
       <p>Rajasthan, India's largest state by area, has a diverse real estate market spanning its capital Jaipur, the industrial hub Kota, the Pink City's heritage properties, and emerging centers like Udaipur and Jodhpur. Jaipur has seen remarkable real estate growth with the development of areas like Vaishali Nagar, Mansarovar, and the upcoming Jaipur Metro project. The state's tourism-driven economy creates demand for heritage properties, hotels, and vacation homes. Rajasthan has also emerged as a manufacturing and logistics hub, with industrial corridors driving commercial real estate demand. The state's NRI population, particularly in the UK and USA, invests significantly in Rajasthan's property market.</p>
 
       <h2 class="text-2xl font-bold text-stone-900">How Stamp Duty is Calculated in Rajasthan</h2>
       <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Circle rate vs agreement value</h3>
       <p>Stamp duty in Rajasthan is calculated on the higher of the DLC rate (District Level Committee rate — what other states call circle rate or guideline value) or the actual sale price. The DLC rate is set by the Collector of each district and revised periodically. You can check current DLC rates on the Epanjiyan portal (epanjiyan.raj.nic.in).</p>
+      <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Registration charges</h3>
       <p>The state offers a 1% concession for women: female buyers pay 5% compared to 6% for men, while SC/ST/BPL women pay 4%. Joint ownership with all female co-owners also gets 5%. Mixed-gender joint ownership is charged at 6%. On top of stamp duty, a 33% surcharge applies (20% labour cess + 13% infrastructure surcharge, raised from 10% in the February 2026 budget). Registration charge is 1% with a ₹100 minimum, plus a fixed ₹300 CSI charge where applicable.</p>
       <p><strong>Worked example:</strong> For a ₹50 lakh flat in Jaipur, a male buyer pays ₹3 lakh stamp duty (6%) + ₹99,000 surcharge (33% of stamp duty) + ₹50,000 registration (1%) = <strong>₹4.49 lakh total (~8.98%)</strong>. A female buyer pays ₹2.5 lakh (5%) + ₹82,500 surcharge + ₹50,000 registration = <strong>₹3.83 lakh total</strong>, saving ₹66,500.</p>
 
@@ -249,17 +253,27 @@
           </section>
 
       <section class="mt-10 max-w-2xl">
-        <h2 class="text-2xl font-bold text-stone-900 mb-4">Frequently asked questions</h2>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">What is the stamp duty rate for women in Rajasthan?</h3>
-        <p>Women in Rajasthan pay a concessional stamp duty of 5% compared to 6% for men, with SC/ST/BPL women paying 4%. This 1% concession applies to sole ownership by women and joint ownership where all co-owners are female. Mixed-gender joint ownership is charged at 6%. A 33% surcharge on stamp duty (20% labour cess + 13% infrastructure surcharge) applies to all categories.</p>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">How do I check the guideline value in Rajasthan?</h3>
-        <p>Rajasthan has an online portal where the guideline value (circle rate) for any area can be checked. The guideline value is updated periodically by the state government and varies by location, property type, and land use. Buyers should verify the applicable guideline value before finalizing a property transaction.</p>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">What are the additional costs involved in buying property in Rajasthan?</h3>
-        <p>Beyond stamp duty (4-6%), the 33% surcharge on stamp duty, and the registration fee (1%, minimum ₹100), buyers should budget for lawyer fees for title verification (typically 0.5-1% of the property value), notary charges, and potential society transfer fees for apartments. A fixed ₹300 charge applies for CSI (Certified Standing Instruction) services where applicable.</p>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Can NRIs buy agricultural land in Rajasthan?</h3>
-        <p>Under FEMA regulations, NRIs cannot directly purchase agricultural land, plantation property, or farmhouses in India, including Rajasthan. However, NRIs can inherit agricultural land or receive it as a gift. For residential and commercial properties, NRIs have the same rights as Indian citizens in Rajasthan, subject to certain documentation requirements.</p>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">What is the mutation process after registration in Rajasthan?</h3>
-        <p>After property registration in Rajasthan, the buyer must apply for mutation (Dakhil Kharij) at the local tehsil office. The mutation process typically takes 30 to 45 days. Once completed, the buyer's name is entered in the revenue records, establishing legal ownership. The status can be tracked online through the Apna Khata portal.</p>
+      <h2 class="text-lg font-bold mb-3">Frequently asked questions</h2>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>What is the stamp duty rate for women in Rajasthan?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Women in Rajasthan pay a concessional stamp duty of 5% compared to 6% for men, with SC/ST/BPL women paying 4%. This 1% concession applies to sole ownership by women and joint ownership where all co-owners are female. Mixed-gender joint ownership is charged at 6%. A 33% surcharge on stamp duty (20% labour cess + 13% infrastructure surcharge) applies to all categories.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>How do I check the guideline value in Rajasthan?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Rajasthan has an online portal where the guideline value (circle rate) for any area can be checked. The guideline value is updated periodically by the state government and varies by location, property type, and land use. Buyers should verify the applicable guideline value before finalizing a property transaction.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>What are the additional costs involved in buying property in Rajasthan?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Beyond stamp duty (4-6%), the 33% surcharge on stamp duty, and the registration fee (1%, minimum ₹100), buyers should budget for lawyer fees for title verification (typically 0.5-1% of the property value), notary charges, and potential society transfer fees for apartments. A fixed ₹300 charge applies for CSI (Certified Standing Instruction) services where applicable.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>Can NRIs buy agricultural land in Rajasthan?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Under FEMA regulations, NRIs cannot directly purchase agricultural land, plantation property, or farmhouses in India, including Rajasthan. However, NRIs can inherit agricultural land or receive it as a gift. For residential and commercial properties, NRIs have the same rights as Indian citizens in Rajasthan, subject to certain documentation requirements.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>What is the mutation process after registration in Rajasthan?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">After property registration in Rajasthan, the buyer must apply for mutation (Dakhil Kharij) at the local tehsil office. The mutation process typically takes 30 to 45 days. Once completed, the buyer's name is entered in the revenue records, establishing legal ownership. The status can be tracked online through the Apna Khata portal.</div>
+      </div>
       </section>
   
     <section class="mt-12 mb-8">

@@ -164,6 +164,7 @@
 
     <section class="mb-8">
       <h2 class="text-2xl font-bold text-stone-900 mb-4">Goa RTO Road Tax Rates 2026</h2>
+      <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Car and SUV rates</h3>
       <div class="overflow-x-auto bg-white rounded-xl border border-stone-200">
         <table class="w-full text-sm">
           <thead>
@@ -325,21 +326,35 @@
     </section>
 
       <section class="mt-10 max-w-2xl">
-        <h2 class="text-2xl font-bold text-stone-900 mb-4">Frequently asked questions</h2>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">What is the RTO code for Goa?</h3>
-        <p>Goa's vehicle registration code is GA. The main RTO codes are GA-01 (Panaji - North Goa) and GA-02 (Margao - South Goa). GA-03 was introduced for Mapusa and GA-04 for Vasco da Gama.</p>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">How much is road tax for a ₹10 lakh car in Goa?</h3>
-        <p>A car with an ex-showroom price of ₹10 lakh falls in the up-to-₹10 lakh slab and pays 9% one-time road tax, i.e. ₹90,000. Petrol, diesel and CNG cars all pay the same rate. Registration fee (₹600) and HSRP (₹400) are additional.</p>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Is there a cap on road tax in Goa?</h3>
-        <p>Yes. The total one-time life tax for a private vehicle in Goa is capped at ₹15,00,000 regardless of the vehicle price. For example, a ₹1.2 crore car computes to 15% (₹18 lakh) but the payable tax is capped at ₹15 lakh. Vehicles below roughly ₹1 crore are unaffected by the cap.</p>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Are EVs exempt from road tax in Goa?</h3>
-        <p>Yes, electric vehicles are fully exempt from road tax (life tax) in Goa under the state EV policy. The exemption covers first registration for all EV categories. Registration fee (₹600 for cars, ₹300 for two-wheelers) and HSRP are still payable.</p>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">What is the road tax for two-wheelers in Goa?</h3>
-        <p>Two-wheelers in Goa pay one-time road tax of 9% for models up to ₹1.5 lakh, 12% for models between ₹1.5 lakh and ₹3 lakh, and 15% for models above ₹3 lakh. Electric two-wheelers are fully exempt. Registration fee is ₹300 and HSRP is ₹200.</p>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Can tourists buy and register vehicles in Goa?</h3>
-        <p>Yes, but you need a valid Goa address proof for registration. Many tourists who own holiday homes in Goa register vehicles there. Non-residents can register vehicles if they provide proof of residence in Goa, such as a rental agreement or property ownership documents.</p>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">What is the process for vehicle transfer to Goa from another state?</h3>
-        <p>To transfer a vehicle to Goa, obtain NOC (Form 28) from the original RTO, submit Form 27 at the Goa RTO, and pay the applicable road tax on depreciated value. You will receive a new GA registration number. This is common among people relocating to Goa.</p>
+      <h2 class="text-lg font-bold mb-3">Frequently asked questions</h2>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>What is the RTO code for Goa?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Goa's vehicle registration code is GA. The main RTO codes are GA-01 (Panaji - North Goa) and GA-02 (Margao - South Goa). GA-03 was introduced for Mapusa and GA-04 for Vasco da Gama.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>How much is road tax for a ₹10 lakh car in Goa?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">A car with an ex-showroom price of ₹10 lakh falls in the up-to-₹10 lakh slab and pays 9% one-time road tax, i.e. ₹90,000. Petrol, diesel and CNG cars all pay the same rate. Registration fee (₹600) and HSRP (₹400) are additional.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>Is there a cap on road tax in Goa?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Yes. The total one-time life tax for a private vehicle in Goa is capped at ₹15,00,000 regardless of the vehicle price. For example, a ₹1.2 crore car computes to 15% (₹18 lakh) but the payable tax is capped at ₹15 lakh. Vehicles below roughly ₹1 crore are unaffected by the cap.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>Are EVs exempt from road tax in Goa?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Yes, electric vehicles are fully exempt from road tax (life tax) in Goa under the state EV policy. The exemption covers first registration for all EV categories. Registration fee (₹600 for cars, ₹300 for two-wheelers) and HSRP are still payable.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>What is the road tax for two-wheelers in Goa?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Two-wheelers in Goa pay one-time road tax of 9% for models up to ₹1.5 lakh, 12% for models between ₹1.5 lakh and ₹3 lakh, and 15% for models above ₹3 lakh. Electric two-wheelers are fully exempt. Registration fee is ₹300 and HSRP is ₹200.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>Can tourists buy and register vehicles in Goa?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Yes, but you need a valid Goa address proof for registration. Many tourists who own holiday homes in Goa register vehicles there. Non-residents can register vehicles if they provide proof of residence in Goa, such as a rental agreement or property ownership documents.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>What is the process for vehicle transfer to Goa from another state?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">To transfer a vehicle to Goa, obtain NOC (Form 28) from the original RTO, submit Form 27 at the Goa RTO, and pay the applicable road tax on depreciated value. You will receive a new GA registration number. This is common among people relocating to Goa.</div>
+      </div>
       </section>
   
     <section class="mt-12">

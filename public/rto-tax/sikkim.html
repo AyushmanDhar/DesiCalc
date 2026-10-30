@@ -173,6 +173,7 @@
 
     <section class="mb-8">
       <h2 class="text-2xl font-bold text-stone-900 mb-4">Sikkim RTO Road Tax Rates 2026 — Four-Wheelers</h2>
+      <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Car and SUV rates</h3>
       <div class="overflow-x-auto bg-white rounded-xl border border-stone-200">
         <table class="w-full text-sm">
           <thead>
@@ -363,6 +364,7 @@
       <p>Note: The reduced rate applies to vehicles purchased and registered in Sikkim. Always confirm the current notification with the Sikkim Transport Department before you finalise a purchase.</p>
 
       <h2 class="text-2xl font-bold text-stone-900 mt-8 mb-4">Where to Pay Sikkim Road Tax Online</h2>
+      <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Online payment</h3>
       <p>You can pay motor vehicle tax online on the official portals:</p>
       <ol>
         <li><strong>VAHAN (vahan.parivahan.gov.in):</strong> Enter the vehicle registration number → Online Services → Pay Vehicle Tax → enter the last 5 digits of the chassis number and validate → generate OTP (sent to the registered mobile number) → update insurance details → review the fee panel → pay. A payment receipt is generated immediately.</li>
@@ -378,23 +380,39 @@
     </section>
 
       <section class="mt-10 max-w-2xl">
-        <h2 class="text-2xl font-bold text-stone-900 mb-4">Frequently asked questions</h2>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">How much is road tax for a ₹10 lakh car in Sikkim?</h3>
-        <p>A car with an ex-showroom price of ₹10 lakh falls in the ₹2 lakh–2 crore slab and pays 4% one-time road tax, i.e. ₹40,000. The registration fee is ₹600 (non-transport LMV) and HSRP is ₹400, so total RTO charges come to ₹41,000.</p>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">What is the road tax for two-wheelers in Sikkim?</h3>
-        <p>Two-wheelers in Sikkim pay one-time road tax of 3% for models up to ₹1 lakh and 4% above ₹1 lakh. The registration fee for a motorcycle is ₹300 and HSRP is ₹200.</p>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Do electric vehicles pay road tax in Sikkim?</h3>
-        <p>Yes, EVs in Sikkim are not fully exempt — they pay a reduced road tax of 1% of the ex-showroom price (for example ₹10,000 on a ₹10 lakh EV), instead of the standard 4%.</p>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Do I need a special permit to drive a vehicle in Sikkim as a tourist?</h3>
-        <p>Yes, tourist vehicles entering Sikkim require an inner line permit and must register with the local transport office upon entry.</p>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">What is Sikkim Subject Certificate and is it mandatory for vehicle registration?</h3>
-        <p>The Sikkim Subject Certificate (SSC) is a unique domicile document. For Sikkimese residents, it serves as a primary identity document for vehicle registration.</p>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Are electric vehicles more popular in Sikkim than in other states?</h3>
-        <p>EV adoption in Sikkim is growing steadily, particularly for two-wheelers and small cars, driven by the reduced 1% road tax and lower running costs in hilly terrain.</p>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">What is the validity of a driving licence in Sikkim?</h3>
-        <p>Driving licences issued in Sikkim follow the same national validity norms — 20 years or until the age of 50 for non-commercial licences.</p>
-        <h3 class="text-xl font-semibold text-stone-900 mt-6 mb-3">Is HSRP mandatory in Sikkim?</h3>
-        <p>Yes, High-Security Registration Plates are mandatory for all new vehicles registered in Sikkim, costing ₹400 per set.</p>
+      <h2 class="text-lg font-bold mb-3">Frequently asked questions</h2>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>How much is road tax for a ₹10 lakh car in Sikkim?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">A car with an ex-showroom price of ₹10 lakh falls in the ₹2 lakh–2 crore slab and pays 4% one-time road tax, i.e. ₹40,000. The registration fee is ₹600 (non-transport LMV) and HSRP is ₹400, so total RTO charges come to ₹41,000.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>What is the road tax for two-wheelers in Sikkim?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Two-wheelers in Sikkim pay one-time road tax of 3% for models up to ₹1 lakh and 4% above ₹1 lakh. The registration fee for a motorcycle is ₹300 and HSRP is ₹200.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>Do electric vehicles pay road tax in Sikkim?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Yes, EVs in Sikkim are not fully exempt — they pay a reduced road tax of 1% of the ex-showroom price (for example ₹10,000 on a ₹10 lakh EV), instead of the standard 4%.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>Do I need a special permit to drive a vehicle in Sikkim as a tourist?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Yes, tourist vehicles entering Sikkim require an inner line permit and must register with the local transport office upon entry.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>What is Sikkim Subject Certificate and is it mandatory for vehicle registration?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">The Sikkim Subject Certificate (SSC) is a unique domicile document. For Sikkimese residents, it serves as a primary identity document for vehicle registration.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>Are electric vehicles more popular in Sikkim than in other states?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">EV adoption in Sikkim is growing steadily, particularly for two-wheelers and small cars, driven by the reduced 1% road tax and lower running costs in hilly terrain.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>What is the validity of a driving licence in Sikkim?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Driving licences issued in Sikkim follow the same national validity norms — 20 years or until the age of 50 for non-commercial licences.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><h3 class="text-base font-semibold text-left"><span>Is HSRP mandatory in Sikkim?</span></h3><span class="faq-icon">+</span></button>
+        <div class="faq-answer">Yes, High-Security Registration Plates are mandatory for all new vehicles registered in Sikkim, costing ₹400 per set.</div>
+      </div>
       </section>
   
     <section class="mt-12">

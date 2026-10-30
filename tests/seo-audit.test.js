@@ -257,8 +257,10 @@ for (const folder of ['rto-tax', 'stamp-duty']) {
   for (const page of pages.filter((p) => rel(p).startsWith(`${folder}/`) && !rel(p).endsWith('index.html'))) {
     const html = read(page);
     const name = rel(page);
+    const faqHeadingIndex = html.search(/<h2[^>]*>[^<]*Frequently asked/i);
+    const bodyHtml = faqHeadingIndex === -1 ? html : html.slice(0, faqHeadingIndex);
     checkTrue(`${name} min words`, wordCount(html) >= 800, `${wordCount(html)} words`);
-    checkTrue(`${name} min h3`, h3Count(html) >= 5, `${h3Count(html)} h3`);
+    checkTrue(`${name} min body h3`, h3Count(bodyHtml) >= 5, `${h3Count(bodyHtml)} body h3`);
     checkTrue(`${name} has dateModified`, html.includes('"dateModified"'));
     checkTrue(`${name} has FAQPage`, /"@type":\s*"FAQPage"/.test(html));
   }
