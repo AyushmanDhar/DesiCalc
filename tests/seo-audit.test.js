@@ -161,6 +161,19 @@ for (const page of pages) {
   check(`${name} og:type`, og, expectedType(name));
 }
 
+const ogAttr = (html, prop) => {
+  for (const tag of tags(html, 'meta')) {
+    if (attr(tag, 'property').toLowerCase() === prop) return attr(tag, 'content');
+  }
+  return '';
+};
+for (const page of pages) {
+  const name = rel(page);
+  const html = read(page);
+  check(`${name} og:title matches title`, ogAttr(html, 'og:title'), titleOf(html).trim());
+  check(`${name} og:description matches description`, ogAttr(html, 'og:description'), descOf(html));
+}
+
 const canonUrls = new Set(pages.map((p) => canonOf(read(p)).replace(/\/$/, '') || ''));
 const locSet = new Set(locs.map((u) => u.replace(/\/$/, '')));
 for (const page of pages) {

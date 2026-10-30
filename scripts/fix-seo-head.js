@@ -25,15 +25,32 @@ for (const file of walk(PUBLIC)) {
   let html = fs.readFileSync(file, 'utf8');
   const relPath = path.relative(PUBLIC, file).replace(/\\/g, '/');
 
-  html = html.replace(/[ \t]*<link\s+rel="alternate"\s+hreflang="hi"[^>]*>\s*/gi, '');
+  html = html.replace(/[ \t]*<link\s+rel="alternate"\s+hreflang="hi"[^>]*>[ \t]*\r?\n?/gi, '');
+
+  const titleMatch = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
+  const descMatch = html.match(/<meta\s+name="description"\s+content="([^"]*)"/i);
+  for (const [prop, value] of [
+    ['og:title', titleMatch && titleMatch[1]],
+    ['og:description', descMatch && descMatch[1]],
+  ]) {
+    if (value == null) continue;
+    const tag = `<meta property="${prop}" content="${value}">`;
+    const tagRe = new RegExp(`^[ \\t]*<meta\\s+property="${prop}"[^>]*>`, 'im');
+    if (tagRe.test(html)) {
+      html = html.replace(tagRe, () => `  ${tag}`);
+    } else {
+      html = html.replace(/<\/head>/i, () => `  ${tag}\n</head>`);
+    }
+  }
 
   const ogType = relPath.startsWith('guides/') || relPath.startsWith('comparisons/') ? 'article' : 'website';
-  const ogRe = /<meta\s+property="og:type"\s+content="[^"]*"\s*\/?>\s*>?/i;
+  const ogRe = /<meta\s+property="og:type"\s+content="[^"]*"\s*\/?>>?/i;
   if (ogRe.test(html)) {
     html = html.replace(ogRe, `<meta property="og:type" content="${ogType}">`);
   } else {
     html = html.replace(/<\/head>/i, `  <meta property="og:type" content="${ogType}">\n</head>`);
   }
+  html = html.replace(/(<meta\s+property="og:type"[^>]*>)(?=<meta\b)/gi, '$1\n  ');
 
   if (!html.includes('"dateModified"')) {
     const url = cleanUrl(file);
