@@ -380,6 +380,13 @@ for (const page of pages) {
     checkTrue(`${rel(page)} no i18n token ${token}`, !html.includes(token));
   }
 }
+for (const page of pages) {
+  checkTrue(`${rel(page)} no t() i18n call`, !/\bt\('/.test(read(page)));
+}
+for (const file of fs.readdirSync(path.join(PUBLIC, 'assets', 'js')).filter((f) => f.endsWith('.js'))) {
+  checkTrue(`assets/js/${file} no t() i18n call`, !/\bt\('/.test(read(path.join(PUBLIC, 'assets', 'js', file))));
+}
+
 checkTrue('lang-en.js removed', !fs.existsSync(path.join(PUBLIC, 'assets', 'js', 'lang-en.js')));
 checkTrue('lang-hi.js removed', !fs.existsSync(path.join(PUBLIC, 'assets', 'js', 'lang-hi.js')));
 

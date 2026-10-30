@@ -193,7 +193,7 @@ function shareUrl() {
 function copyUrl() {
   var url = window.location.href;
   if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(url).then(function () { showToast(t('common.copied')); }).catch(function(){ copyUrlFallback(url); });
+    navigator.clipboard.writeText(url).then(function () { showToast("Copied!"); }).catch(function(){ copyUrlFallback(url); });
   } else {
     copyUrlFallback(url);
   }
@@ -203,7 +203,7 @@ function copyUrlFallback(url) {
   var ta = document.createElement('textarea');
   ta.value = url; ta.style.position = 'fixed'; ta.style.left = '-9999px';
   document.body.appendChild(ta); ta.select();
-  try { document.execCommand('copy'); showToast(t('common.copied')); } catch (e) {}
+  try { document.execCommand('copy'); showToast("Copied!"); } catch (e) {}
   document.body.removeChild(ta);
 }
 
@@ -221,13 +221,13 @@ function initOnboarding() {
     '<div class="onboarding-card">' +
     '<button class="onboarding-close" onclick="dismissOnboarding()" aria-label="Close">&times;</button>' +
     '<div class="onboarding-icon">🧮</div>' +
-    '<h3 class="onboarding-title">' + t('onboarding.title') + '</h3>' +
+    '<h3 class="onboarding-title">' + "Welcome to DesiCalc" + '</h3>' +
     '<ul class="onboarding-list">' +
-    '<li>' + t('onboarding.step1') + '</li>' +
-    '<li>' + t('onboarding.step2') + '</li>' +
-    '<li>' + t('onboarding.step3') + '</li>' +
+    '<li>' + "Fill in your numbers — results update instantly" + '</li>' +
+    '<li>' + "Compare Old vs New tax regime side-by-side" + '</li>' +
+    '<li>' + "Share results with your CA or family" + '</li>' +
     '</ul>' +
-    '<button class="btn btn-primary" onclick="dismissOnboarding()">' + t('onboarding.cta') + '</button>' +
+    '<button class="btn btn-primary" onclick="dismissOnboarding()">' + "Got it, start calculating!" + '</button>' +
     '</div>';
   document.body.appendChild(overlay);
   setTimeout(function () { overlay.classList.add('active'); }, 100);

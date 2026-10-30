@@ -515,20 +515,20 @@
 
       var cmp = document.getElementById('rComparison');
       var diff = resultNew.totalTax - resultOld.totalTax;
-      var rNew = t('tax.result.regime.new'), rOld = t('tax.result.regime.old');
+      var rNew = "New Regime", rOld = "Old Regime";
       if (diff > 0) {
-        cmp.innerHTML = rNew + ': <strong>' + formatINR(resultNew.totalTax) + '</strong> | ' + rOld + ': <strong>' + formatINR(resultOld.totalTax) + '</strong> | ' + rOld + ' ' + t('tax.result.save') + ' <strong>' + formatINR(diff) + '</strong>';
+        cmp.innerHTML = rNew + ': <strong>' + formatINR(resultNew.totalTax) + '</strong> | ' + rOld + ': <strong>' + formatINR(resultOld.totalTax) + '</strong> | ' + rOld + ' ' + "You Save" + ' <strong>' + formatINR(diff) + '</strong>';
         cmp.style.display = 'block';
       } else if (diff < 0) {
-        cmp.innerHTML = rNew + ': <strong>' + formatINR(resultNew.totalTax) + '</strong> | ' + rOld + ': <strong>' + formatINR(resultOld.totalTax) + '</strong> | ' + rNew + ' ' + t('tax.result.save') + ' <strong>' + formatINR(Math.abs(diff)) + '</strong>';
+        cmp.innerHTML = rNew + ': <strong>' + formatINR(resultNew.totalTax) + '</strong> | ' + rOld + ': <strong>' + formatINR(resultOld.totalTax) + '</strong> | ' + rNew + ' ' + "You Save" + ' <strong>' + formatINR(Math.abs(diff)) + '</strong>';
         cmp.style.display = 'block';
       } else {
         cmp.style.display = 'none';
       }
       var recommend = document.getElementById('rRecommend');
       if (recommend) {
-        if (diff > 0) recommend.innerHTML = '🏆 ' + t('tax.result.recommend') + ': ' + rOld;
-        else if (diff < 0) recommend.innerHTML = '🏆 ' + t('tax.result.recommend') + ': ' + rNew;
+        if (diff > 0) recommend.innerHTML = '🏆 ' + "Recommended" + ': ' + rOld;
+        else if (diff < 0) recommend.innerHTML = '🏆 ' + "Recommended" + ': ' + rNew;
         else recommend.style.display = 'none';
       }
 

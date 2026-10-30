@@ -489,10 +489,10 @@
       var sgst = isIntra ? gst / 2 : 0;
       var igst = isIntra ? 0 : gst;
 
-      document.getElementById('rRegFirstLabel').innerText = calcType === 'add' ? t('gst.result.baseAmount') : t('gst.result.totalEntered');
+      document.getElementById('rRegFirstLabel').innerText = calcType === 'add' ? "Base Amount" : "Total Amount entered";
       animateValue(document.getElementById('rRegFirst'), calcType === 'add' ? Math.round(base) : Math.round(total));
 
-      document.getElementById('rRegGstLabel').innerText = calcType === 'add' ? t('gst.result.gstAmount') : t('gst.result.gstIncluded');
+      document.getElementById('rRegGstLabel').innerText = calcType === 'add' ? "GST Amount" : "GST Amount included";
       animateValue(document.getElementById('rRegGst'), Math.round(gst));
 
       var cgstRow = document.getElementById('rRegCgstRow');
@@ -508,7 +508,7 @@
         animateValue(document.getElementById('rRegIgst'), Math.round(igst));
       }
 
-      document.getElementById('rRegLastLabel').innerText = calcType === 'add' ? t('gst.result.totalIncl') : t('gst.result.baseBefore');
+      document.getElementById('rRegLastLabel').innerText = calcType === 'add' ? "Total Amount (incl. GST)" : "Base Amount (before GST)";
       animateValue(document.getElementById('rRegLast'), calcType === 'add' ? Math.round(total) : Math.round(base));
 
       staggerReveal('resultRegular');
@@ -537,10 +537,10 @@
 
       var elElig = document.getElementById('rCompEligibility');
       if (eligible) {
-        elElig.innerHTML = '<span class="text-emerald-700 font-medium">' + t('gst.result.eligible') + '</span>';
+        elElig.innerHTML = '<span class="text-emerald-700 font-medium">' + "✓ Eligible for Composition Scheme" + '</span>';
         elElig.className = 'result-row';
       } else {
-        elElig.innerHTML = '<span class="text-red-700 font-medium">' + t('gst.result.notEligible') + '</span>';
+        elElig.innerHTML = '<span class="text-red-700 font-medium">' + "✗ Exceeds composition scheme limit — must register under regular GST" + '</span>';
         elElig.className = 'result-row';
       }
 
@@ -561,13 +561,13 @@
         var regularGstRate = 18;
         var regularAnnual = turnover * (regularGstRate / 100);
         var savings = regularAnnual - annualTax;
-        cmpText.innerHTML = t('gst.result.compTraderText').replace('{regular}', formatINR(Math.round(regularAnnual))).replace('{savings}', formatINR(Math.round(savings)));
+        cmpText.innerHTML = "Under regular GST you would pay <strong>{regular}</strong> on taxable value. Composition saves you <strong>{savings}</strong> annually on tax — but you lose ITC on purchases and cannot make inter-state sales. Best if you sell to end consumers. Your wallet thanks you. 💰".replace('{regular}', formatINR(Math.round(regularAnnual))).replace('{savings}', formatINR(Math.round(savings)));
         cmpBlock.style.display = 'block';
       } else if (eligible && business === 'restaurant') {
-        cmpText.innerHTML = t('gst.result.compRestaurantText');
+        cmpText.innerHTML = "Both regular GST and composition charge restaurants 5% — no tax saving. Composition benefit here is compliance only: quarterly CMP-08 filing instead of monthly GSTR-1 and GSTR-3B. Less paperwork, more cooking! 🍳";
         cmpBlock.style.display = 'block';
       } else if (eligible && business === 'service') {
-        cmpText.innerHTML = t('gst.result.compServiceText');
+        cmpText.innerHTML = "Composition cuts your rate from 18% to 6%, but most B2B clients need a tax invoice to claim ITC — composition dealers cannot issue one. Clients may refuse or demand an equivalent discount, erasing the saving. 6% applies to full turnover, not profit, and you lose ITC on your own expenses. Suits B2C service providers only. Know your clients before you opt in. 🎯";
         cmpBlock.style.display = 'block';
       } else {
         cmpBlock.style.display = 'none';
