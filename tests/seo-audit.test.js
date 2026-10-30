@@ -135,6 +135,41 @@ for (const asset of ['_headers', 'assets/css/style.css', 'sitemap.xml']) {
 const robots = read(path.join(PUBLIC, 'robots.txt'));
 checkTrue('robots is plain ASCII', /^[\x00-\x7F]*$/.test(robots));
 
+const longTitles = [];
+const longDescs = [];
+for (const page of pages) {
+  const name = rel(page);
+  const html = read(page);
+  const title = titleOf(html).trim();
+  const desc = descOf(html);
+  checkTrue(`${name} title length`, title.length >= 15 && title.length <= 60, `${title.length} chars`);
+  checkTrue(`${name} description length`, desc.length >= 50 && desc.length <= 155, `${desc.length} chars`);
+  if (title.length > 60) longTitles.push(name);
+  if (desc.length > 155) longDescs.push(name);
+  checkTrue(`${name} no hreflang hi`, !/hreflang="hi"/i.test(html));
+  checkTrue(`${name} has dateModified`, html.includes('"dateModified"'));
+}
+
+const home = read(path.join(PUBLIC, 'index.html'));
+checkTrue('home has Organization schema', home.includes('"@type": "Organization"'));
+
+const expectedType = (name) => (name.startsWith('guides/') || name.startsWith('comparisons/') ? 'article' : 'website');
+for (const page of pages) {
+  const name = rel(page);
+  const html = read(page);
+  const og = (html.match(/<meta\s+property="og:type"\s+content="([^"]*)"/i) || [])[1];
+  check(`${name} og:type`, og, expectedType(name));
+}
+
+const canonUrls = new Set(pages.map((p) => canonOf(read(p)).replace(/\/$/, '') || ''));
+const locSet = new Set(locs.map((u) => u.replace(/\/$/, '')));
+for (const page of pages) {
+  const canon = canonOf(read(page));
+  checkTrue(`${rel(page)} in sitemap`, locSet.has(canon.replace(/\/$/, '')), canon);
+}
+checkTrue('sitemap no hreflang hi', !/hreflang="hi"/i.test(sitemap));
+check(`sitemap URL count`, locs.length, pages.length);
+
 if (failed) {
   console.error(failures.join('\n'));
   console.error(`\n${failed} failed, ${passed} passed`);
